@@ -77,7 +77,7 @@
             ]
           },
           "hologram": [
-            "",
+            "&c&lP4 FREE",
             "&c{server_online_player_count} jogando...",
             "{server_state}"
           ]
