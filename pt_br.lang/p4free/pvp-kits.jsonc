@@ -1,0 +1,24 @@
+{
+  "plugins": {
+    "pvp-kits": {
+      "title": "Itens de combate",
+      "berserker": {
+        "display-name": "Berserker",
+        "name": "&bBerserker &7({seconds}s)",
+        "lore": [
+          "&7Força II e Velocidade II",
+          "&7Duração: {seconds} segundos."
+        ]
+      },
+      "messages": {
+        "wrong-world": "&cVocê não pode pegar kits neste mundo.",
+        "full": "&cLibere espaço no inventário para receber os itens.",
+        "given": "&aSeu inventário foi preenchido com o kit PvP.",
+        "usage": "&eUse /kit para pegar peças ou /kit pvp para preencher o inventário.",
+        "give-usage": "&eUse /givekit <pvp|gladiador|clanfight|fastglad> <jogador>.",
+        "offline": "&cO jogador precisa estar neste servidor.",
+        "unavailable": "&cNão foi possível carregar seu kit agora. Tente novamente."
+      }
+    }
+  }
+}

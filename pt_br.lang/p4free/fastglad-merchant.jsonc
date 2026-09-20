@@ -1,0 +1,68 @@
+{
+  "plugins": {
+    "fastglad-merchant": {
+      "title": "Mercador | {credits} moedas",
+      "price": "&7Custo: {cost} moeda(s)",
+      "products": {
+        "energy": "&5Energético",
+        "berserker": "&5Berserker",
+        "slowness": "&5Lentidão Arremessável",
+        "flashbang": "&5Flashbang",
+        "pearl": "&5Pérola da Fuga",
+        "web_projectile": "&5Projétil de Teia",
+        "armor_forgery": "&5Forja de Armadura",
+        "dark_hand": "&5Mão Sombria",
+        "neutralizer": "&5Neutralizador",
+        "antidote": "&5Antídoto",
+        "switcher": "&5Switcher",
+        "golden_head": "&5Cabeça Dourada"
+      },
+      "description": {
+        "energy": [
+          "&7Força III por 10 segundos."
+        ],
+        "berserker": [
+          "&7Força II e velocidade II por 3 minutos."
+        ],
+        "slowness": [
+          "&7Arremesse para reduzir a velocidade dos inimigos próximos."
+        ],
+        "flashbang": [
+          "&7Arremesse para cegar inimigos próximos."
+        ],
+        "pearl": [
+          "&7Use para escapar de obstáculos."
+        ],
+        "web_projectile": [
+          "&7Cria uma área de teias por 10 segundos."
+        ],
+        "armor_forgery": [
+          "&7Repara sua armadura automaticamente após um abate."
+        ],
+        "dark_hand": [
+          "&7Clique em um inimigo para roubar um item aleatório."
+        ],
+        "neutralizer": [
+          "&7Remove efeitos dos inimigos na área atingida."
+        ],
+        "antidote": [
+          "&7Anula automaticamente um neutralizador."
+        ],
+        "switcher": [
+          "&7Acerte um inimigo para trocar de lugar com ele."
+        ],
+        "golden_head": [
+          "&7Concede regeneração, absorção, resistência e proteção contra fogo."
+        ]
+      },
+      "closed": "&cO mercador não está disponível agora.",
+      "insufficient": "&cVocê não tem moedas suficientes.",
+      "full": "&cLibere espaço no inventário.",
+      "bought": "&aItem comprado.",
+      "repaired": "&aSua forja reparou a armadura.",
+      "antidote": "&bSeu antídoto bloqueou o neutralizador.",
+      "neutralized": "&cSeus efeitos foram removidos pelo neutralizador.",
+      "stolen": "&5Um item do seu inventário foi roubado pela Mão Sombria."
+    }
+  }
+}

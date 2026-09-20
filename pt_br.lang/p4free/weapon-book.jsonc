@@ -1,0 +1,9 @@
+{
+  "plugins": {
+    "weapons": {
+      "enchant-book": {
+        "display-name": "Livro de encantamento"
+      }
+    }
+  }
+}

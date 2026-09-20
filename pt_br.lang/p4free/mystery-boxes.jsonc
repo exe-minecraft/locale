@@ -1,0 +1,31 @@
+{
+  "plugins": {
+    "mystery-boxes": {
+      "types": {
+        "basic": "&eCaixa Misteriosa Básica"
+      },
+      "rarities": {
+        "common": "Comum",
+        "rare": "Rara",
+        "legendary": "Lendária",
+        "mystic": "Mística"
+      },
+      "item-lore": [
+        "&7Clique direito para abrir.",
+        "&7Agache e clique direito para ver os prêmios."
+      ],
+      "unavailable": "&cAs caixas estão indisponíveis no momento.",
+      "failed": "&cNão foi possível entregar o prêmio. Sua caixa foi devolvida.",
+      "won": "&aVocê recebeu {amount}x {reward} &7({rarity}).",
+      "preview-title": "Prêmios da caixa",
+      "result-title": "Seu prêmio",
+      "chance": "&7Chance: {chance}% | Raridade: {rarity}",
+      "top-empty": "&7Nenhuma caixa foi aberta ainda.",
+      "top-entry": "&e{position}. &f{player}: &7{amount} caixas",
+      "no-permission": "&cVocê não pode entregar caixas.",
+      "given": "&aCaixas entregues.",
+      "full": "&cO inventário do jogador está cheio.",
+      "usage": "&eUse /caixas ver <tipo>, /caixas top ou /caixas dar <jogador> <tipo> <quantidade>."
+    }
+  }
+}
