@@ -4,20 +4,29 @@
       "commands": {
         "world": {
           "list": "&7Mundos: &f{world_names}",
+          "list-title": "&bMundos disponíveis &8({count})",
+          "list-entry": " &8- &a{world_name}",
+          "list-current": " &8- &a{world_name} &8(atual)",
+          "list-empty": " &7Nenhum mundo carregado.",
+          "list-hover": "&aClique para teleportar para &f{world_name}&a.",
+          "list-footer": "&7Clique em um mundo para entrar. &8| &b/world ajuda",
+          "list-footer-console": "&7Use &b/world ajuda &7para ver os comandos.",
+          "help-hover": "&bClique para ver os comandos de mundos.",
           "help": [
-            "&a/world &f<nome> &8- &7Teleportar",
-            "&a/world list &8- &7Listar mundos",
-            "&a/world criar &f<nome> [vazio|plano]",
-            "&7Cria um mundo. Padrão: &fvazio&7.",
-            "&a/world importar &f<nome> [vazio|plano]",
-            "&7Carrega uma pasta de mundo existente.",
-            "&7Alias: &a/mundo&7. Criar/importar: &fGerente+&7."
+            "&bComandos de mundos &8(/mundo)",
+            " &b/world &f<nome> &8- &7Teleportar",
+            " &b/world list &8- &7Ver os mundos"
           ],
-          "not-loaded": "Esse mundo não está carregado. Consulte /world list ou importe a pasta com /world importar.",
-          "player-only": "Entre no servidor para teleportar para um mundo.",
-          "teleported": "Você foi teleportado para {world_name}.",
-          "teleport-failed": "O teleporte foi cancelado. Tente novamente quando puder se teleportar.",
-          "loading": "Preparando o mundo {world_name}...",
+          "help-manage": [
+            " &b/world criar &f<nome> [vazio|plano]",
+            " &b/world importar &f<nome> [vazio|plano]",
+            " &8Tipo padrão: vazio."
+          ],
+          "not-loaded": "&cEsse mundo não está carregado. Use &f/world &cpara ver a lista.",
+          "player-only": "&cEntre no servidor para teleportar para um mundo.",
+          "teleported": "&aTeleportado para &f{world_name}&a.",
+          "teleport-failed": "&cO teleporte foi cancelado. Tente novamente.",
+          "loading": "&7Preparando &f{world_name}&7...",
           "invalid-name": "Use um nome de até 48 caracteres, com letras, números, hífen ou sublinhado, começando por letra ou número.",
           "invalid-type": "Tipo inválido. Este servidor suporta os tipos vazio e plano.",
           "already-exists": "Já existe um mundo ou uma pasta com esse nome. Para carregar uma pasta existente, use /world importar.",
@@ -29,14 +38,14 @@
               "name": {"name": "nome", "description": "Nome do novo mundo"},
               "type": {"name": "vazio|plano", "description": "Tipo de geração, vazio por padrão"}
             },
-            "success": "Mundo {world_name} criado e registrado. Use /world {world_name} para entrar."
+            "success": "&aMundo &f{world_name} &acriado. Use &f/world {world_name} &apara entrar."
           },
           "import": {
             "arguments": {
               "name": {"name": "nome", "description": "Nome da pasta do mundo neste servidor"},
               "type": {"name": "vazio|plano", "description": "Gerador dos chunks novos, vazio por padrão"}
             },
-            "success": "Mundo {world_name} carregado e registrado para os próximos reinícios."
+            "success": "&aMundo &f{world_name} &acarregado. Use &f/world {world_name} &apara entrar."
           }
         }
       }
