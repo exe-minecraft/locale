@@ -2,6 +2,8 @@
   "plugins": {
     "essentials": {
       "scoreboards": {
+        "group-loading": "&7-",
+        "group-duration": "{group} &8({days}d)",
         "title": [
           "&c&lP4 FREE",
           "&f&lP&c&l4 FREE",
