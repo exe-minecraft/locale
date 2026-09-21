@@ -7,8 +7,8 @@
           "help": [
             "/world <nome> ou /world tp <nome>: teleportar para um mundo.",
             "/world list: listar os mundos carregados.",
-            "/world criar <nome> [vazio|normal|plano]: criar um mundo (padrão: vazio).",
-            "/world importar <nome> [normal|vazio|plano]: carregar uma pasta de mundo existente.",
+            "/world criar <nome> [vazio|plano]: criar um mundo (padrão: vazio).",
+            "/world importar <nome> [vazio|plano]: carregar uma pasta de mundo existente.",
             "Você também pode usar /mundo. Criar e importar exige Gerente ou superior."
           ],
           "not-loaded": "Esse mundo não está carregado. Consulte /world list ou importe a pasta com /world importar.",
@@ -17,7 +17,7 @@
           "teleport-failed": "O teleporte foi cancelado. Tente novamente quando puder se teleportar.",
           "loading": "Preparando o mundo {world_name}...",
           "invalid-name": "Use um nome de até 48 caracteres, com letras, números, hífen ou sublinhado, começando por letra ou número.",
-          "invalid-type": "Tipo inválido. Use vazio, normal ou plano.",
+          "invalid-type": "Tipo inválido. Este servidor suporta os tipos vazio e plano.",
           "already-exists": "Já existe um mundo ou uma pasta com esse nome. Para carregar uma pasta existente, use /world importar.",
           "not-on-disk": "Não foi encontrada uma pasta de mundo com level.dat para esse nome neste servidor.",
           "busy": "O world-manager ainda está carregando ou já existe uma operação para esse mundo. Aguarde a conclusão.",
@@ -25,14 +25,14 @@
           "create": {
             "arguments": {
               "name": {"name": "nome", "description": "Nome do novo mundo"},
-              "type": {"name": "vazio|normal|plano", "description": "Tipo de geração, vazio por padrão"}
+              "type": {"name": "vazio|plano", "description": "Tipo de geração, vazio por padrão"}
             },
             "success": "Mundo {world_name} criado e registrado. Use /world {world_name} para entrar."
           },
           "import": {
             "arguments": {
               "name": {"name": "nome", "description": "Nome da pasta do mundo neste servidor"},
-              "type": {"name": "normal|vazio|plano", "description": "Tipo de geração do mundo importado"}
+              "type": {"name": "vazio|plano", "description": "Gerador dos chunks novos, vazio por padrão"}
             },
             "success": "Mundo {world_name} carregado e registrado para os próximos reinícios."
           }
