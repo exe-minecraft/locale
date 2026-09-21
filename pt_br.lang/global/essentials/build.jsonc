@@ -7,15 +7,25 @@
           "&a/build &f<jogador> &8- &7Alternar para outro staff",
           "&a/build list &8- &7Ver construtores ativos"
         ],
-        "enabled": "&aConstrução ativada por &f{minutes} minutos&a neste mundo. Use &f/build &apara desativar.",
-        "disabled": "&7Construção desativada.",
-        "expired": "&7A autorização de construção terminou. Use &a/build &7para ativar novamente.",
+        "enabled": "&aModo construção ativado!",
+        "disabled": "&cModo construção desativado!",
+        "expired": [
+          "&e ",
+          "&e[AVISO] Você não pode mais construir!",
+          "&c "
+        ],
         "world-changed": "&7Construção desativada ao mudar de mundo.",
-        "enabled-other": "&aConstrução ativada para &f{player}&a por 30 minutos.",
-        "disabled-other": "&7Construção desativada para &f{player}&7.",
-        "list": "&7Construtores ativos: &f{players}",
-        "list-empty": "&7Nenhum jogador está no modo construção.",
-        "not-online": "&cEsse jogador não está online neste servidor.",
+        "enabled-other": "&aVocê ativou o modo construção para {player}!",
+        "disabled-other": "&aVocê desativou o modo construção para {player}!",
+        "list": [
+          "",
+          "&eLista de todos os jogadores no modo construção:",
+          "",
+          "&e • {players}",
+          ""
+        ],
+        "list-empty": "&cNão há jogadores no modo construção no momento.",
+        "not-online": "&cJogador não encontrado!",
         "target-group": "&cO jogador precisa ser Administrador ou superior para construir.",
         "saving": "&cAguarde a conclusão do salvamento desse jogador.",
         "protected": "&cConstrução protegida. A equipe precisa ativar &f/build&c para editar."

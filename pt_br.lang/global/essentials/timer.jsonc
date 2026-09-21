@@ -2,28 +2,74 @@
   "plugins": {
     "essentials": {
       "timer": {
-        "usage": [
-          "&a/timer &f<1-60> &8- &7Iniciar contagem no servidor",
-          "&a/timer cancel &8- &7Cancelar a contagem atual"
+        "usage": "&cUso correto: /timer <segundos> ou /timer cancel",
+        "invalid-time": "&cInsira um número de 1 a 60 segundos.",
+        "not-running": "&cNão há nenhum timer em andamento.",
+        "cancel-confirmed": "&aTimer cancelado com sucesso!",
+        "started": [
+          "&c ",
+          "",
+          " &d&lTIMER INICIADO",
+          " &fTimer de &5{time}&f foi iniciado!",
+          "",
+          "&c "
         ],
-        "invalid-time": "&cInforme um número inteiro de 1 a 60 segundos.",
-        "not-running": "&7Nenhuma contagem está em andamento.",
-        "cancel-confirmed": "&7Contagem cancelada.",
-        "started": "&7Contagem iniciada: &f{seconds}s&7.",
         "remaining": {
-          "chat": "&7Restam &f{seconds}s&7.",
+          "chat": [
+            "&c ",
+            " &d&lTIMER",
+            " &f{verb} {time}.",
+            "&c "
+          ],
           "title": "&a{seconds}",
           "subtitle": "&7Prepare-se!"
         },
         "finished": {
-          "chat": "&aTempo esgotado!",
-          "title": "&aValendo!",
-          "subtitle": "&7A contagem terminou."
+          "chat": [
+            "&c ",
+            " &d&lTIMER FINALIZADO",
+            " &fO timer terminou!",
+            "&c "
+          ],
+          "title": "&cTimer Finalizado!",
+          "subtitle": "&fO tempo acabou!"
         },
         "cancelled": {
-          "chat": "&7A contagem foi cancelada.",
-          "title": "&cCancelado",
-          "subtitle": "&7Aguarde uma nova contagem."
+          "chat": [
+            "&c ",
+            " &d&lTIMER CANCELADO",
+            " &fO timer foi cancelado por um administrador!",
+            "&c "
+          ],
+          "title": "&cTimer Cancelado!",
+          "subtitle": "&fPor um administrador"
+        },
+        "time-one": "1 segundo",
+        "time-seconds": "{seconds} segundos",
+        "time-minute": "1 minuto",
+        "remaining-one": "Resta",
+        "remaining-many": "Restam",
+        "countdown": {
+          "5": {
+            "title": "&a➎",
+            "subtitle": "&fSegundos restantes"
+          },
+          "4": {
+            "title": "&f➍",
+            "subtitle": "&fSegundos restantes"
+          },
+          "3": {
+            "title": "&6➌",
+            "subtitle": "&fSegundos restantes"
+          },
+          "2": {
+            "title": "&c➋",
+            "subtitle": "&fSegundos restantes"
+          },
+          "1": {
+            "title": "&4➊",
+            "subtitle": "&fSegundo restante"
+          }
         }
       }
     }

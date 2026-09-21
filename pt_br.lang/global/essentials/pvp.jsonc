@@ -2,15 +2,20 @@
   "plugins": {
     "essentials": {
       "pvp": {
-        "usage": [
-          "&a/pvp on &8- &7Ativar PvP no mundo atual",
-          "&a/pvp off &8- &7Proteger jogadores de todo dano",
-          "&a/pvp status &8- &7Consultar o mundo atual"
+        "usage": "&cUso correto: /pvp <on/off>",
+        "status-on": "&eO PvP está habilitado nesse mundo.",
+        "status-off": "&eO PvP está desabilitado nesse mundo.",
+        "enabled": [
+          "&c ",
+          "&4&l  PVP &fVocê &a&lhabilitou&f o PvP no mundo {world}!",
+          "&c "
         ],
-        "status-on": "&7PvP ativado em &f{world}&7.",
-        "status-off": "&7PvP desativado em &f{world}&7. Jogadores protegidos de todo dano.",
-        "enabled": "&aPvP ativado em &f{world}&a. As demais proteções continuam valendo.",
-        "disabled": "&7PvP desativado em &f{world}&7. Jogadores protegidos de todo dano."
+        "disabled": [
+          "&c ",
+          "&4&l  PVP &fVocê &c&ldesabilitou&f o PvP no mundo {world}!",
+          "&c "
+        ],
+        "denied": "&c&lEXE &cNão é permitido PvP nessa área."
       }
     }
   }

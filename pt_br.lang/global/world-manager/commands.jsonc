@@ -4,27 +4,26 @@
       "commands": {
         "world": {
           "list": "&7Mundos: &f{world_names}",
-          "list-title": "&bMundos disponíveis &8({count})",
-          "list-entry": " &8- &a{world_name}",
-          "list-current": " &8- &a{world_name} &8(atual)",
+          "list-title": "&bMundos disponíveis:",
+          "list-entry": "&a- {world_name}",
+          "list-current": "&a- {world_name} &8(atual)",
           "list-empty": " &7Nenhum mundo carregado.",
-          "list-hover": "&aClique para teleportar para &f{world_name}&a.",
+          "list-hover": "&eClique para teleportar",
           "list-footer": "&7Clique em um mundo para entrar. &8| &b/world ajuda",
           "list-footer-console": "&7Use &b/world ajuda &7para ver os comandos.",
           "help-hover": "&bClique para ver os comandos de mundos.",
           "help": [
-            "&bComandos de mundos &8(/mundo)",
-            " &b/world &f<nome> &8- &7Teleportar",
-            " &b/world list &8- &7Ver os mundos"
+            "&eUso: /world <nome>",
+            "&e/world tp <nome> &7- Teleporta para um mundo",
+            "&e/world list &7- Lista os mundos"
           ],
           "help-manage": [
-            " &b/world criar &f<nome> [vazio|plano]",
-            " &b/world importar &f<nome> [vazio|plano]",
-            " &8Tipo padrão: vazio."
+            "&e/world criar <nome> [vazio|plano] &7- Cria um mundo",
+            "&e/world importar <nome> [vazio|plano] &7- Carrega um mundo"
           ],
-          "not-loaded": "&cEsse mundo não está carregado. Use &f/world &cpara ver a lista.",
+          "not-loaded": "&cMundo não encontrado ou não carregado.",
           "player-only": "&cEntre no servidor para teleportar para um mundo.",
-          "teleported": "&aTeleportado para &f{world_name}&a.",
+          "teleported": "&aTeleportado para o mundo {world_name}.",
           "teleport-failed": "&cO teleporte foi cancelado. Tente novamente.",
           "loading": "&7Preparando &f{world_name}&7...",
           "invalid-name": "Use um nome de até 48 caracteres, com letras, números, hífen ou sublinhado, começando por letra ou número.",
@@ -35,18 +34,37 @@
           "error": "Não foi possível concluir a operação do mundo. A falha foi registrada para a equipe técnica.",
           "create": {
             "arguments": {
-              "name": {"name": "nome", "description": "Nome do novo mundo"},
-              "type": {"name": "vazio|plano", "description": "Tipo de geração, vazio por padrão"}
+              "name": {
+                "name": "nome",
+                "description": "Nome do novo mundo"
+              },
+              "type": {
+                "name": "vazio|plano",
+                "description": "Tipo de geração, vazio por padrão"
+              }
             },
             "success": "&aMundo &f{world_name} &acriado. Use &f/world {world_name} &apara entrar."
           },
           "import": {
             "arguments": {
-              "name": {"name": "nome", "description": "Nome da pasta do mundo neste servidor"},
-              "type": {"name": "vazio|plano", "description": "Gerador dos chunks novos, vazio por padrão"}
+              "name": {
+                "name": "nome",
+                "description": "Nome da pasta do mundo neste servidor"
+              },
+              "type": {
+                "name": "vazio|plano",
+                "description": "Gerador dos chunks novos, vazio por padrão"
+              }
             },
             "success": "&aMundo &f{world_name} &acarregado. Use &f/world {world_name} &apara entrar."
           }
+        },
+        "border": {
+          "usage": "&cUso correto: /borda <tamanho> [tempo]",
+          "main-world": "&cNão é possível usar este comando no mundo principal!",
+          "instant": "&aBorda definida para {size} blocos!",
+          "timed": "&aBorda definida para {size} blocos em {seconds} segundos!",
+          "invalid": "&cInsira um tamanho entre 1 e 60000000 e um tempo entre 0 e 86400 segundos."
         }
       }
     }
