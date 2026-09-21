@@ -51,7 +51,36 @@
               }
             },
             "success": "Item renomeado com sucesso!"
-          }
+          },
+          "help": [
+            "&bEditor de itens &8(/item)",
+            " &b/item rename &f<nome>",
+            " &b/item addlore &f<texto>",
+            " &b/item edit &f<linha> <texto>",
+            " &b/item removelore &f<linha>",
+            " &b/item copy &8- &7Copiar lore",
+            " &b/item paste &8- &7Colar lore",
+            " &b/item hideflags &8- &7Esconder atributos",
+            " &b/item glow &8- &7Alternar brilho",
+            " &b/item copylore &8- &7Exportar para pastes.dev",
+            "&8Linhas começam em 1. Cores: & seguido do código."
+          ],
+          "usage": "&cUso inválido. Consulte &f/item help&c.",
+          "saving": "&cAguarde o salvamento do inventário.",
+          "no-item": "&cSegure o item que deseja editar.",
+          "updated": "&aItem atualizado.",
+          "copied": "&aLore copiada. Use &f/item paste&a em outro item. Disponível por 30 minutos.",
+          "no-lore": "&cEsse item não possui lore.",
+          "invalid-line": "&cLinha inválida. Use o número de uma linha existente, começando em 1.",
+          "clipboard-empty": "&cNenhuma lore copiada. Use &f/item copy&c primeiro.",
+          "text-limit": "&cUse até 512 caracteres por texto, sem quebras de linha.",
+          "lore-limit": "&cO limite é de 64 linhas de lore.",
+          "enchanted": "&7Esse item já brilha por seus encantamentos. Eles serão preservados.",
+          "export-pending": "&7A exportação anterior ainda está em andamento.",
+          "export-started": "&7Exportando nome e lore para pastes.dev...",
+          "export-failed": "&cNão foi possível exportar a lore. Tente novamente.",
+          "export-link": "&aLore exportada: &f{url}",
+          "export-hover": "&aClique para abrir a lore exportada."
         }
       }
     }
