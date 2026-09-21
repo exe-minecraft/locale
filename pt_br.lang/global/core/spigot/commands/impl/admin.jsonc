@@ -18,7 +18,7 @@
                 "description": "O motivo da punição"
               }
             },
-            "usage": "Uso correto: /admin ban jogador tempo motivo",
+            "usage": "Uso correto: /infra ban jogador tempo motivo",
             "invalid-duration": "Duração inválida. Use por exemplo 7d, 1h30m ou permanent.",
             "error": "Não foi possível aplicar a punição.",
             "success": "{target_name} foi banido com sucesso."
@@ -38,7 +38,7 @@
                 "description": "O motivo da punição"
               }
             },
-            "usage": "Uso correto: /admin mute jogador tempo motivo",
+            "usage": "Uso correto: /infra mute jogador tempo motivo",
             "invalid-duration": "Duração inválida. Use por exemplo 7d, 1h30m ou permanent.",
             "error": "Não foi possível aplicar a punição.",
             "success": "{target_name} foi silenciado com sucesso."
@@ -58,7 +58,7 @@
                 "description": "O motivo da punição"
               }
             },
-            "usage": "Uso correto: /admin ip-ban jogador tempo motivo",
+            "usage": "Uso correto: /infra ip-ban jogador tempo motivo",
             "invalid-duration": "Duração inválida. Use por exemplo 7d, 1h30m ou permanent.",
             "error": "Não foi possível aplicar a punição.",
             "success": "{target_name} teve o IP banido com sucesso."
@@ -113,14 +113,14 @@
                 "description": "A nova senha da conta"
               }
             },
-            "usage": "Uso correto: /admin cracked jogador senha",
+            "usage": "Uso correto: /infra cracked jogador senha",
             "dont-have-original": "{target_name} não possui uma conta original.",
             "password-invalid": "Senha inválida. Use de 5 a 32 caracteres.",
             "error": "Não foi possível atualizar a senha de {target_name}.",
             "success": "{target_name} agora é pirata."
           },
           "reload": {
-            "usage": "Uso correto: /admin reload <--app | --server | --global>",
+            "usage": "Uso correto: /infra reload <--app | --server | --global>",
             "success-app": "Reload de configs solicitado para este app ({app_id}).",
             "no-server": "Este app não pertence a um server.",
             "success-server": "Reload de configs solicitado para {app_amount} app(s) do server '{server_id}'.",
@@ -134,7 +134,7 @@
                 "description": "Jogador cujo buffer de pacotes será exportado"
               }
             },
-            "usage": "Uso correto: /admin packetdump <jogador>",
+            "usage": "Uso correto: /infra packetdump <jogador>",
             "generating": "Gerando packet dump de {target_name}...",
             "no-data": "Sem pacotes em buffer para {target_name} (sem tráfego recente ou offline há mais de 1min).",
             "error": "Falha ao gerar o packet dump: {error}",
