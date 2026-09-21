@@ -3,13 +3,15 @@
     "world-manager": {
       "commands": {
         "world": {
-          "list": "Mundos carregados: {world_names}",
+          "list": "&7Mundos: &f{world_names}",
           "help": [
-            "/world <nome> ou /world tp <nome>: teleportar para um mundo.",
-            "/world list: listar os mundos carregados.",
-            "/world criar <nome> [vazio|plano]: criar um mundo (padrão: vazio).",
-            "/world importar <nome> [vazio|plano]: carregar uma pasta de mundo existente.",
-            "Você também pode usar /mundo. Criar e importar exige Gerente ou superior."
+            "&a/world &f<nome> &8- &7Teleportar",
+            "&a/world list &8- &7Listar mundos",
+            "&a/world criar &f<nome> [vazio|plano]",
+            "&7Cria um mundo. Padrão: &fvazio&7.",
+            "&a/world importar &f<nome> [vazio|plano]",
+            "&7Carrega uma pasta de mundo existente.",
+            "&7Alias: &a/mundo&7. Criar/importar: &fGerente+&7."
           ],
           "not-loaded": "Esse mundo não está carregado. Consulte /world list ou importe a pasta com /world importar.",
           "player-only": "Entre no servidor para teleportar para um mundo.",
