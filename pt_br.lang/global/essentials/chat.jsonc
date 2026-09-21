@@ -54,21 +54,21 @@
             "with-space": {
               "with-clan": [
                 "",
-                "&e[L] &f[{sender_clan_tag}] &f{sender_name_with_tag}&f: &e{chat_message}",
+                "&e[L] &f[{sender_clan_tag}] &f{sender_name_with_tag}&e: {chat_message}",
                 ""
               ],
               "without-clan": [
                 "",
-                "&e[L] &f{sender_name_with_tag}&f: &e{chat_message}",
+                "&e[L] &f{sender_name_with_tag}&e: {chat_message}",
                 ""
               ]
             },
             "without-space": {
               "with-clan": [
-                "&e[L] &f[{sender_clan_tag}] &f{sender_name_with_tag}&f: &e{chat_message}"
+                "&e[L] &f[{sender_clan_tag}] &f{sender_name_with_tag}&e: {chat_message}"
               ],
               "without-clan": [
-                "&e[L] &f{sender_name_with_tag}&f: &e{chat_message}"
+                "&e[L] &f{sender_name_with_tag}&e: {chat_message}"
               ]
             }
           }
