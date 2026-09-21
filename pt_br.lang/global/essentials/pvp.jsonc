@@ -1,0 +1,17 @@
+{
+  "plugins": {
+    "essentials": {
+      "pvp": {
+        "usage": [
+          "&a/pvp on &8- &7Ativar PvP no mundo atual",
+          "&a/pvp off &8- &7Proteger jogadores de todo dano",
+          "&a/pvp status &8- &7Consultar o mundo atual"
+        ],
+        "status-on": "&7PvP ativado em &f{world}&7.",
+        "status-off": "&7PvP desativado em &f{world}&7. Jogadores protegidos de todo dano.",
+        "enabled": "&aPvP ativado em &f{world}&a. As demais proteções continuam valendo.",
+        "disabled": "&7PvP desativado em &f{world}&7. Jogadores protegidos de todo dano."
+      }
+    }
+  }
+}

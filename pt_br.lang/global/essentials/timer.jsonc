@@ -1,0 +1,31 @@
+{
+  "plugins": {
+    "essentials": {
+      "timer": {
+        "usage": [
+          "&a/timer &f<1-60> &8- &7Iniciar contagem no servidor",
+          "&a/timer cancel &8- &7Cancelar a contagem atual"
+        ],
+        "invalid-time": "&cInforme um número inteiro de 1 a 60 segundos.",
+        "not-running": "&7Nenhuma contagem está em andamento.",
+        "cancel-confirmed": "&7Contagem cancelada.",
+        "started": "&7Contagem iniciada: &f{seconds}s&7.",
+        "remaining": {
+          "chat": "&7Restam &f{seconds}s&7.",
+          "title": "&a{seconds}",
+          "subtitle": "&7Prepare-se!"
+        },
+        "finished": {
+          "chat": "&aTempo esgotado!",
+          "title": "&aValendo!",
+          "subtitle": "&7A contagem terminou."
+        },
+        "cancelled": {
+          "chat": "&7A contagem foi cancelada.",
+          "title": "&cCancelado",
+          "subtitle": "&7Aguarde uma nova contagem."
+        }
+      }
+    }
+  }
+}
