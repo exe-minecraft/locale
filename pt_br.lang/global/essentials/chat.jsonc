@@ -18,7 +18,7 @@
             "with-space": {
               "with-clan": [
                 "",
-                "&7[G] &f[{sender_clan_tag}] &f{sender_name_with_tag}&f: &7{chat_message}",
+                "&7[G] &7[{sender_clan_tag}&7] &f{sender_name_with_tag}&f: &7{chat_message}",
                 ""
               ],
               "without-clan": [
@@ -29,7 +29,7 @@
             },
             "without-space": {
               "with-clan": [
-                "&7[G] &f[{sender_clan_tag}] &f{sender_name_with_tag}&f: &7{chat_message}"
+                "&7[G] &7[{sender_clan_tag}&7] &f{sender_name_with_tag}&f: &7{chat_message}"
               ],
               "without-clan": [
                 "&7[G] &f{sender_name_with_tag}&f: &7{chat_message}"
@@ -54,7 +54,7 @@
             "with-space": {
               "with-clan": [
                 "",
-                "&e[L] &f[{sender_clan_tag}] &f{sender_name_with_tag}&e: {chat_message}",
+                "&e[L] &7[{sender_clan_tag}&7] &f{sender_name_with_tag}&e: {chat_message}",
                 ""
               ],
               "without-clan": [
@@ -65,7 +65,7 @@
             },
             "without-space": {
               "with-clan": [
-                "&e[L] &f[{sender_clan_tag}] &f{sender_name_with_tag}&e: {chat_message}"
+                "&e[L] &7[{sender_clan_tag}&7] &f{sender_name_with_tag}&e: {chat_message}"
               ],
               "without-clan": [
                 "&e[L] &f{sender_name_with_tag}&e: {chat_message}"
