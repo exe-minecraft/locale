@@ -1,0 +1,29 @@
+{
+  "plugins": {
+    // Os baús virtuais do P4Free: o /ec (também /bau e o bloco de ender chest) e o
+    // /cofre. Cada jogador tem um de cada, guardados à parte. As mensagens que citam
+    // o baú existem uma vez por tipo; as outras valem para os dois.
+    "virtual-chests": {
+      "messages": {
+        "not-allowed-with-shift": "&cVocê não pode abrir este inventário usando shift.",
+        "not-allowed-while-inventory-open": "&cFeche o inventário atual e tente novamente.",
+        "load-failed": "&cNão foi possível abrir o baú agora. Tente novamente em instantes.",
+        "save-failed": "&cOcorreu um erro ao salvar o baú. Ele fica travado até salvar; se demorar, contate um administrador."
+      },
+      "ender-chest": {
+        "title": "Ender Chest de {owner_name}",
+        "in-use": "&cEste Ender Chest está em uso ou sendo salvo. Aguarde um momento.",
+        "cooldown": "&cAguarde {time} depois de entrar para abrir o Ender Chest.",
+        "fix-size": "&eSeu Ender Chest diminuiu com o grupo atual: o que sobrou foi para o inventário.",
+        "item-not-allowed": "&cVocê não pode guardar esse item no Ender Chest."
+      },
+      "vault": {
+        "title": "Cofre de {owner_name}",
+        "in-use": "&cEste cofre está em uso ou sendo salvo. Aguarde um momento.",
+        "cooldown": "&cAguarde {time} depois de entrar para abrir o cofre.",
+        "fix-size": "&eSeu cofre foi ajustado: o que sobrou foi para o inventário.",
+        "item-not-allowed": "&cVocê não pode guardar esse item no cofre."
+      }
+    }
+  }
+}
