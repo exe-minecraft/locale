@@ -156,7 +156,7 @@
           "message": "{message_owner_name_with_tag}&7: {message_content}"
         },
         "on-join": {
-          "user-notification": "{user_name_with_tag} &eentrou neste lobby!"
+          "user-notification": "{user_name_with_tag} &fentrou no lobby!"
         },
         "achievement-unlocked": "&a&lCONQUISTA! &fVocê desbloqueou &a{achievement_name}&f.",
         "visibility": {

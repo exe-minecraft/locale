@@ -5,7 +5,7 @@
         "account": {
           "arguments": {
             "target": {
-              "name": "mome ou uuid",
+              "name": "nome ou uuid",
               "description": "Insira o nome ou a uuid do jogador"
             }
           },
@@ -13,37 +13,40 @@
           "invalid-name-pattern": "Você precisa inserir um formato de nome válido!",
           "message": {
             "identity": [
-              "{primary}Informações da conta de &f{account_name}",
-              "&fUUID: &7{account_uuid}",
-              "&fNome: &7{account_name}"
+              "",
+              " &eConta de {primary}{account_name}&e:",
+              "",
+              "  &fUUID: &7{account_uuid}"
             ],
             "session": [
-              "&fÚltimo login: &7{account_last_login}",
-              "&fÚltima saída: &7{account_last_quit}"
+              "  &fÚltima entrada: &7{account_last_login}",
+              "  &fÚltima saída: &7{account_last_quit}"
             ],
-            "still-online": "Ainda online",
+            "still-online": "ainda online",
             "general": [
-              "&fGrupos: &7{account_groups}",
-              "&fCadastrado em: &7{account_registered}"
+              "",
+              "  &fGrupos: &7{account_groups}",
+              "  &fCadastro: &7{account_registered}"
             ],
             "network": [
-              "&fNível de rede: &7{account_level}",
-              "&fConquistas: &7{account_achievements}"
+              "  &fNível de rede: &7{account_level}",
+              "  &fConquistas: &7{account_achievements}"
             ],
             "unknown": "?",
-            "no-groups": "Nenhum.",
-            "associated": "&fContas associadas: &7{account_associated}",
+            "no-groups": "nenhum",
+            "associated": "  &fContas no mesmo IP: &7{account_associated}",
             "associated-entry": "{associated_name}",
-            "associated-empty": "Nenhuma.",
+            "associated-empty": "nenhuma",
             "status": [
-              "{primary}---- Status ----",
-              "&fProxy: &7{account_proxy}",
-              "&fLogado em: &7{account_joined}",
-              "&fVersão: &7{account_version}"
+              "",
+              " {primary}Online agora:",
+              "  &fProxy: &7{account_proxy}",
+              "  &fOnline desde: &7{account_joined}",
+              "  &fVersão: &7{account_version}"
             ],
             "status-staff": [
-              "&fServidor: &7{account_server}",
-              "&fIP: &7{account_ip}"
+              "  &fServidor: &7{account_server}",
+              "  &fIP: &7{account_ip}"
             ]
           }
         },

@@ -36,33 +36,37 @@
         "profile": {
           "message": {
             "identity": [
-              "{primary}Seu perfil, &f{profile_name}",
-              "&fUUID: &7{profile_uuid}",
-              "&fConta: &7{profile_type}",
-              "&fIdioma: &7{profile_language}",
-              "&fCadastro: &7{profile_registered}",
-              "&fGrupos: &7{profile_groups}"
+              "",
+              " &eSeu perfil:",
+              "",
+              "  &fJogador: &7{profile_name}",
+              "  &fUUID: &7{profile_uuid}",
+              "  &fConta: &7{profile_type}",
+              "  &fIdioma: &7{profile_language}",
+              "  &fGrupos: &7{profile_groups}",
+              "  &fCadastro: &7{profile_registered}"
             ],
             "balance": [
-              "{primary}---- Saldo ----",
-              "&fCash: &6{profile_cash}",
-              "&fCarteira: &7{profile_wallet}"
+              "",
+              "  &fCash: &6{profile_cash}",
+              "  &fCarteira: &7{profile_wallet}"
             ],
             "discord": [
-              "{primary}---- Discord ----",
-              "&fUsuário: &7{discord_username}",
-              "&fNome: &7{discord_name}",
-              "&fVinculado desde: &7{discord_since}"
+              "",
+              "  &fDiscord: &7{discord_name} &8(@{discord_username})",
+              "  &fVinculado desde: &7{discord_since}",
+              ""
             ],
             "discord-unlinked": [
-              "{primary}---- Discord ----",
-              "&fDiscord: &cNão vinculado"
+              "",
+              "  &fDiscord: &7não vinculado &8(use /discord)",
+              ""
             ],
-            "link": "{primary}Ver perfil no site: &b&nclique aqui",
-            "type-original": "&bOriginal",
-            "type-cracked": "&ePirata",
-            "no-groups": "Nenhum.",
-            "unavailable": "&7Indisponível"
+            "link": "  &7Ver no site: &b&nclique aqui",
+            "type-original": "Original",
+            "type-cracked": "Pirata",
+            "no-groups": "nenhum",
+            "unavailable": "indisponível"
           }
         },
         "enchantment": {
