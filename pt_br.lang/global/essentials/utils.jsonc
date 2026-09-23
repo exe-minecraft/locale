@@ -1,6 +1,11 @@
 {
   "plugins": {
     "essentials": {
+      "messages": {
+        "potion-drop": {
+          "too-fast": "&cVocê está dropando poções rápido demais. Espere um pouco entre uma e outra."
+        }
+      },
       "preferences": {
         "lantern": {
           "name": "&eLuz",

@@ -361,7 +361,8 @@
             },
             "stacked": {
               "warning": "&c[TEIA] &fO clan [{clan_tag}] atingiu {players} jogadores empilhados.",
-              "reversal": "&6VIRADA DE RUSH! &fO clan [{winner_clan}] virou contra [{loser_clan}]. &7Jogadores na teia: &f[{loser_clan}] {loser_players}."
+              "reversal": "&6VIRADA DE RUSH! &fO clan [{winner_clan}] virou contra [{loser_clan}]. &7Jogadores na teia: &f[{loser_clan}] {loser_players}.",
+              "web-wear": "&c[TEIA] &f{on_web} de {members} membros do clan [{clan_tag}] estão na teia. &cA partir de 20 s nela, a armadura de todo o clan gasta mais a cada golpe, e mais ainda com o tempo."
             },
             "title": {
               "win-event": {

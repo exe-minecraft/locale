@@ -30,7 +30,8 @@
         "tier-denied": "&cVocê não possui permissão para pegar este kit!",
         "berserker-denied": "&c&l[EXE] &cVocê não possui permissão para adquirir essa poção.",
         "berserker-cooldown": "&c&l[EXE] &cVocê precisa aguardar mais tempo para pegar outra poção!",
-        "berserker-given": "&aVocê adquiriu a Berserker com sucesso!"
+        "berserker-given": "&aVocê adquiriu a Berserker com sucesso!",
+        "berserker-removed": "&cAs Berserker mais longas do que o seu grupo libera foram tiradas do seu inventário."
       },
       "menu": {
         "main": {
