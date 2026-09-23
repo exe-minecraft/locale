@@ -23,12 +23,10 @@
     "batatadas": {
       "broadcast": "&6{player} batatou! &7Total: {amount} batatada(s).",
       "balance": "&e{player} tem {amount} batatada(s).",
-      "top-entry": "&e{position}. &f{player} &7: {amount}",
       "no-permission": "&cVocê não pode alterar as batatadas.",
       "usage": "&eUse /batatadas set <jogador> <quantidade positiva ou zero>.",
       "updated": "&aContagem atualizada.",
-      "failed": "&cNão foi possível consultar ou atualizar as batatadas agora.",
-      "top-empty": "&7Nenhuma batatada foi registrada ainda."
+      "failed": "&cNão foi possível consultar ou atualizar as batatadas agora."
     },
     "currency-boosters": {
       "types": {

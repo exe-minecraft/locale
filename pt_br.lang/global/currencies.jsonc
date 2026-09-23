@@ -126,25 +126,6 @@
             "success": "Solicitação de atualização enviada com sucesso"
           }
         }
-      },
-      "views": {
-        "currency-ranking": {
-          "title": "Ranking de {currency_plural_name}",
-          "items": {
-            "0": {
-              "name": "&f#{currency_account_ranking_position} {currency_account_name_with_tag}",
-              "lore": [
-                "&fQuantia: {currency_account_ranking_value_formatted}"
-              ]
-            },
-            "1": {
-              "name": "&f#{currency_account_ranking_position} {currency_account_name_with_tag}",
-              "lore": [
-                "&fQuantia: {currency_account_ranking_value_formatted}"
-              ]
-            }
-          }
-        }
       }
     }
   }

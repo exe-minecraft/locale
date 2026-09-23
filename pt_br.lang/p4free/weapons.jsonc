@@ -83,12 +83,6 @@
         "deleted": "&cSua arma foi excluída.",
         "free-upgrade": "&aParabéns! &f{enchant} &asubiu para o nível &f{level}&a de graça, pelo seu grupo."
       },
-      // Os filtros do ranking.
-      "tops": {
-        "kills": "Abates",
-        "prestige": "Prestígio",
-        "tokens-spent": "Investimento"
-      },
       // Os nomes dos encantamentos. Ficam aqui e nao no config.yml porque sao texto
       // visivel: no config saiam sem acento e sem cor.
       "enchants": {
@@ -250,28 +244,6 @@
         },
         "delete": {
           "title": "Excluir a arma"
-        },
-        "weapon-top": {
-          "title": "Ranking das Armas",
-          "items": {
-            "0": {
-              "name": "&8{position}º &f▸ &f{player}",
-              "lore": [
-                "",
-                "&7{stat}: &f{value}",
-                ""
-              ]
-            },
-            "1": {
-              "name": "&bEscolha o TOP",
-              "lore": [
-                "",
-                "{tops}",
-                "",
-                "&bClique para alterar."
-              ]
-            }
-          }
         }
       },
       // O livro de encantamento, o segundo caminho para subir um nível.

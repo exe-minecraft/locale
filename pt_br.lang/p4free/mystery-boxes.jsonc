@@ -20,8 +20,6 @@
       "preview-title": "Prêmios da caixa",
       "result-title": "Seu prêmio",
       "chance": "&7Chance: {chance}% | Raridade: {rarity}",
-      "top-empty": "&7Nenhuma caixa foi aberta ainda.",
-      "top-entry": "&e{position}. &f{player}: &7{amount} caixas",
       "no-permission": "&cVocê não pode entregar caixas.",
       "given": "&aCaixas entregues.",
       "full": "&cO inventário do jogador está cheio.",

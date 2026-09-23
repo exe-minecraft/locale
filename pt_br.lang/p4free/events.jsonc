@@ -165,21 +165,6 @@
             "invalid-id": "ID de edição inválido.",
             "loading": "Consultando o histórico do Gladiador..."
           },
-          "topwins": {
-            "loading": "Consultando o ranking do Gladiador..."
-          },
-          "topkills": {
-            "loading": "Consultando o ranking do Gladiador..."
-          },
-          "toprush": {
-            "loading": "Consultando o ranking do Gladiador..."
-          },
-          "topviradas": {
-            "loading": "Consultando o ranking do Gladiador..."
-          },
-          "topmyths": {
-            "loading": "Consultando o ranking de Mitos..."
-          },
           "rush-score": {
             "arguments": {
               "clan": {
@@ -636,79 +621,6 @@
                 "name": "&cVoltar",
                 "lore": [
                   "&7Volta à central do Gladiador."
-                ]
-              }
-            }
-          },
-          "ranking": {
-            "title": "Rankings do Gladiador",
-            "items": {
-              "clan-wins": {
-                "name": "&eVitórias de clans",
-                "lore": [
-                  "&7Veja os clans com mais vitórias",
-                  "&7no evento Gladiador.",
-                  "",
-                  "&eClique para consultar!"
-                ]
-              },
-              "player-kills": {
-                "name": "&eAbates de jogadores",
-                "lore": [
-                  "&7Veja os jogadores com mais",
-                  "&7abates no Gladiador.",
-                  "",
-                  "&eClique para consultar!"
-                ]
-              },
-              "rush-wins": {
-                "name": "&eVitórias em rush",
-                "lore": [
-                  "&7Veja os clans que mais",
-                  "&7venceram rushes.",
-                  "",
-                  "&eClique para consultar!"
-                ]
-              },
-              "rush-reversals": {
-                "name": "&eViradas de rush",
-                "lore": [
-                  "&7Veja os clans com mais",
-                  "&7viradas confirmadas em rush.",
-                  "",
-                  "&eClique para consultar!"
-                ]
-              },
-              "myths": {
-                "name": "&dMitos",
-                "lore": [
-                  "&7Veja os jogadores que mais",
-                  "&7terminaram o Gladiador como Mito.",
-                  "",
-                  "&dClique para consultar!"
-                ]
-              },
-              "back": {
-                "name": "&cVoltar",
-                "lore": [
-                  "&7Volta à central do Gladiador."
-                ]
-              }
-            }
-          },
-          "leaderboard": {
-            "title": "Ranking do Gladiador",
-            "items": {
-              "entry": {
-                "name": "&e#{position} &f{name}",
-                "lore": [
-                  "&7Total: &f{value}"
-                ]
-              },
-              "back": {
-                "name": "&cVoltar",
-                "lore": [
-                  "&7Volta à seleção de rankings."
                 ]
               }
             }

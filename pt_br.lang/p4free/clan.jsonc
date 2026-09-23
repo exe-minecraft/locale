@@ -740,11 +740,6 @@
           }
         },
         "clan-leaderboard": {
-          "title": "Clãs, ranking",
-          "filter": {
-            "selected": " &f► &b{statistic_name}",
-            "unselected": " &8{statistic_name}"
-          },
           "items": {
             "0": {
               "name": "{clan_position_color}{clan_position}º &7[{clan_colored_tag}&7] &f{clan_name}",
@@ -754,17 +749,6 @@
                 " &8▸ &fMembros: &7{clan_members_size}/{clan_max_members_size}",
                 "",
                 "&8Criado em {clan_created_at}"
-              ]
-            },
-            "filter": {
-              "name": "&eEscolha o filtro",
-              "lore": [
-                "&7Veja todos os tipos de ranking",
-                "&7disponíveis.",
-                "",
-                "{leaderboard_filter_entries}",
-                "",
-                "&eClique para trocar o filtro."
               ]
             }
           }
