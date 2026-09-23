@@ -22,7 +22,7 @@
       "messages": {
         "wrong-world": "&cEste comando não pode ser usado aqui.",
         "full": "&eSeu inventário está cheio!",
-        "given": "&aSeu inventário foi preenchido com o kit PvP.",
+        "given": "&aSeu inventário foi preenchido com o {kit}&a.",
         "usage": "&eUso: /kit [pvp|membro|imperial|samurai]",
         "give-usage": "&eUse /givekit <pvp|gladiador|clanfight|fastglad> <jogador>.",
         "offline": "&cO jogador precisa estar neste servidor.",
