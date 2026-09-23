@@ -1,6 +1,16 @@
 {
   "plugins": {
     "clans": {
+      // O bloco do clã nas scoreboards do P4Free ({clan_scoreboard}).
+      "scoreboard": {
+        "clan": [
+          "&f [&7{tag}&f] {name}",
+          "&f Membros: &7{members}/{max_members}"
+        ],
+        "no-clan": [
+          "&f &cVocê não tem um clã"
+        ]
+      },
       "roles": {
         "leader": {
           "name": "Líder",

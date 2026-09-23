@@ -28,19 +28,22 @@
           "&c&lP4 FREE",
           "&c&lP4 FREE"
         ],
+        "build-mode": " &4Modo Construção",
+        // As linhas do exe-scoreboard antigo. {build_mode_status} e {clan_scoreboard} são listas:
+        // o modo construção só aparece com o /build ligado, e sem clã a linha de membros sai.
         "lines": [
-          " &7{current_date}",
+          "{build_mode_status}",
           "",
-          " &fCargo: {user_group_name_with_color}",
-          " &fClã: {clan_display}",
+          "&f Cash: &6✪ {user_cash_formatted}",
+          "&f Almas: &e✝ {currency_souls_cached_account_value_formatted}",
+          "&f Tokens: &a{currency_tokens_cached_account_value_formatted}",
+          "&f Grupo: &c{user_group_name_with_color}",
           "",
-          " &fAbates: &7{weapon_kills}",
-          " &fTokens: {currency_tokens_cached_account_value_visualization}",
-          " &fCash: &6{user_cash_formatted}",
+          "{clan_scoreboard}",
           "",
-          " &fOnline: &7{server_online_count}",
+          "&f Abates: &c{weapon_kills}",
           "",
-          "&crede-exe.com"
+          "&ewww.rede-exe.com"
         ]
       }
     }

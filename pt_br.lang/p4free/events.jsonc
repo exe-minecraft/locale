@@ -20,6 +20,28 @@
         "rush-status": "Rushes ativos ({rushes}):",
         "chase-status": "&fClan alvo: &e{clan_tag}"
       },
+      // O quadro do mundo do Gladiador. Os {event_*} são listas que ficam vazias fora do evento,
+      // e levam a linha em branco de cima junto, como no exe-scoreboard.
+      "scoreboard": {
+        "title": "&c&lGLADIADOR",
+        "lines": [
+          "{build_mode_status}",
+          "{event_clans}",
+          "{event_kills}",
+          "",
+          "{clan_scoreboard}",
+          "{event_border}",
+          "{event_rushes}",
+          "",
+          "&ewww.rede-exe.com"
+        ],
+        "clans": "&f Clãs restantes: &6{clans}",
+        "kills": "&f Abates no evento: &c{kills}",
+        "border": "&f Borda estágio &c{stage}",
+        "deathmatch": "&f &4&lDEATHMATCH",
+        "rushes": " Rushes ativos ({rushes}):",
+        "rush": " {first_tag} &7{first_alive} &fvs {second_tag} &7{second_alive}"
+      },
       "stages": {
         "waiting_players": "&adisponível para entrar",
         "preparing_time": "&eem preparação",
