@@ -265,14 +265,14 @@
           "still-loading": "Suas perks ainda estão carregando. Tente de novo em instantes."
         },
         "perkadmin": {
-          "usage": [
-            "&e/perkadmin dar <jogador> <perk> <nivel>",
-            "&e/perkadmin tirar <jogador> <perk>",
-            "&e/perkadmin zerar <jogador>",
-            "&e/perkadmin cooldowns <jogador>",
-            "&e/perkadmin item <jogador> <perk> <nivel> [qtd]",
-            "&e/perkadmin slot <jogador> [qtd]"
-          ],
+          "usage": {
+            "dar": { "syntax": "dar <jogador> <perk> <nível>", "description": "dar uma perk no nível escolhido" },
+            "tirar": { "syntax": "tirar <jogador> <perk>", "description": "tirar uma perk" },
+            "zerar": { "syntax": "zerar <jogador>", "description": "zerar perks, slots extras e cooldowns" },
+            "cooldowns": { "syntax": "cooldowns <jogador>", "description": "limpar os cooldowns das perks" },
+            "item": { "syntax": "item <jogador> <perk> <nível> [quantidade]", "description": "entregar o item de uma perk" },
+            "slot": { "syntax": "slot <jogador> [quantidade]", "description": "entregar o item de slot extra" }
+          },
           "target-offline": "{name} não está online neste servidor.",
           "perk-invalid": "Perk inválida. Existem: {perks}",
           "level-invalid": "Esta perk vai até o nível {max_level}.",

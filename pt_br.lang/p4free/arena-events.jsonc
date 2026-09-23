@@ -1,7 +1,16 @@
 {
   "plugins": {
     "arena-events": {
-      "help": "&e{event}: &f/{command} entrar &7para participar, &f/{command} camarote &7para assistir e &f/{command} sair &7para sair.",
+      "arguments": {
+        "location": {
+          "name": "entry|cabin|pos1|pos2|deathmatch",
+          "description": "O ponto do mapa do evento a gravar onde você está"
+        },
+        "player": {
+          "name": "jogador",
+          "description": "Jogador a reviver no evento"
+        }
+      },
       "waiting": "&e{event} está com inscrições abertas. &f/{command} entrar",
       "round": "&e{event}: {first} enfrenta {second}. Preparem-se!",
       "round-timeout": "&cOs dois clãs da rodada foram eliminados por exceder o tempo limite.",
@@ -13,8 +22,6 @@
       "winner": "&aO clã {clan} venceu {event}!",
       "locked": "&eAs inscrições de {event} foram encerradas. Prepare-se!",
       "fight": "&cO combate de {event} foi liberado!",
-      "setloc-usage": "&eUse setloc <entry|cabin|pos1|pos2|deathmatch> no mapa do evento.",
-      "revive-usage": "&eUse reviver <jogador>.",
       "action-success": "&aAção aplicada ao evento.",
       "action-failed": "&cNão foi possível aplicar esta ação no estado atual do evento.",
       "merchant-open": "&5O Mercador Sombrio chegou! &f/fg mercador"

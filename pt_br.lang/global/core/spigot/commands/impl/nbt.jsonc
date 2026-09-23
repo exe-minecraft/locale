@@ -4,6 +4,7 @@
       "commands": {
         "nbt": {
           "set": {
+            "description": "definir uma tag NBT no item da mão",
             "arguments": {
               "key": {
                 "name": "chave",
@@ -18,6 +19,7 @@
             "success": "Tag nbt aplicada com sucesso."
           },
           "remove": {
+            "description": "remover uma tag NBT do item da mão",
             "arguments": {
               "key": {
                 "name": "chave",

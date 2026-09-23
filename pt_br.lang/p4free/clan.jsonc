@@ -152,7 +152,11 @@
           }
         },
         "clan": {
+          "usage": {
+            "chat": { "syntax": "/. <mensagem>", "description": "falar no chat do clã" }
+          },
           "create": {
+            "description": "criar um clã com tag e nome",
             "arguments": {
               "tag": {
                 "name": "tag",
@@ -174,6 +178,7 @@
             "success": "&aVocê criou o clã &7[{clan_colored_tag}&7] {clan_name}&a."
           },
           "help": {
+            "description": "abrir o guia de comandos do clã",
             "arguments": {
               "section": {
                 "name": "seção",
@@ -189,63 +194,13 @@
             "index-entry-hover": "&eClique para abrir esta seção.",
             "sections": {
               "clan-player-name": "Comandos clã, jogador",
-              "clan-player": [
-                "",
-                " &bComandos clã, jogador",
-                "",
-                "  &e/clan convidar [jogador]&7: convidar um jogador para o clã",
-                "  &e/clan promover [jogador]&7: promover um membro a capitão",
-                "  &e/clan rebaixar [jogador]&7: rebaixar um capitão a membro",
-                "  &e/clan expulsar [jogador]&7: expulsar um jogador do clã",
-                "  &e/clan transferir [jogador]&7: passar a liderança para outro membro",
-                ""
-              ],
               "player-clan-name": "Comandos jogador, clã",
-              "player-clan": [
-                "",
-                " &bComandos jogador, clã",
-                "",
-                "  &e/clan convites&7: os convites que você recebeu",
-                "  &e/clan entrar [tag]&7: aceitar um convite",
-                "  &e/clan negar [tag]&7: negar um convite",
-                "  &e/clan sair&7: sair do clã",
-                "  &e/clan info [tag]&7: informações de um clã",
-                "  &e/clan perfil [jogador]&7: informações de um jogador",
-                "  &e/clan membros [tag]&7: os membros de um clã",
-                "  &e/clan top&7: o ranking dos clãs",
-                "  &e/clan boletim&7: o histórico de mudanças do seu clã",
-                ""
-              ],
               "clan-admin-name": "Comandos clã, liderança",
-              "clan-admin": [
-                "",
-                " &bComandos clã, liderança",
-                "",
-                "  &e/clan desfazer&7: desfazer o clã",
-                "  &e/clan modtag [tag]&7: mudar as cores da tag",
-                "  &e/clan listar&7: todos os clãs criados",
-                "  &e/. [mensagem]&7: falar no chat do clã",
-                ""
-              ],
-              "admin-clan-name": "Comandos administração",
-              "admin-clan": [
-                "",
-                " &bComandos administração",
-                "",
-                "  &e/clan espiao&7: ver o chat de todos os clãs",
-                "  &e/clan autorizar [tag]&7: liberar o clã para os eventos",
-                "  &e/clan desautorizar [tag]&7: tirar o clã dos eventos",
-                "  &e/clan excluir [tag]&7: apagar um clã",
-                "  &e/clan adicionar [jogador] [tag]&7: pôr um jogador num clã",
-                "  &e/clan remover [jogador]&7: tirar um jogador do clã dele",
-                "  &e/clan setarlider [jogador]&7: pôr um jogador como líder do clã dele",
-                "  &e/clan pontos [pontos] [tag]&7: somar pontos a um clã",
-                "  &e/clan removerpontos [pontos] [tag]&7: tirar pontos de um clã",
-                ""
-              ]
+              "admin-clan-name": "Comandos administração"
             }
           },
           "info": {
+            "description": "ver as informações de um clã",
             "arguments": {
               "tag": {
                 "name": "tag",
@@ -274,6 +229,7 @@
             ]
           },
           "profile": {
+            "description": "ver as informações de um jogador",
             "arguments": {
               "name": {
                 "name": "jogador",
@@ -314,6 +270,7 @@
             ]
           },
           "members": {
+            "description": "ver os membros de um clã",
             "arguments": {
               "tag": {
                 "name": "tag",
@@ -322,6 +279,7 @@
             }
           },
           "list": {
+            "description": "listar todos os clãs criados",
             "arguments": {
               "page": {
                 "name": "página",
@@ -345,9 +303,14 @@
               ""
             ]
           },
-          "top": {},
-          "reports": {},
+          "top": {
+            "description": "ver o ranking dos clãs"
+          },
+          "reports": {
+            "description": "ver o histórico de mudanças do seu clã"
+          },
           "invite": {
+            "description": "convidar um jogador para o clã",
             "arguments": {
               "target": {
                 "name": "jogador",
@@ -362,8 +325,11 @@
             },
             "success": "&aConvite enviado para {target_name_with_tag}&a."
           },
-          "invites": {},
+          "invites": {
+            "description": "ver os convites recebidos ou enviados"
+          },
           "join": {
+            "description": "aceitar um convite",
             "arguments": {
               "tag": {
                 "name": "tag",
@@ -377,6 +343,7 @@
             "success": "&aVocê entrou no clã &7[{clan_colored_tag}&7] {clan_name}&a."
           },
           "deny": {
+            "description": "negar um convite",
             "arguments": {
               "tag": {
                 "name": "tag",
@@ -389,6 +356,7 @@
             "success": "&cVocê negou o convite do clã &7[{clan_colored_tag}&7] {clan_name}&c."
           },
           "promote": {
+            "description": "promover um membro a capitão",
             "arguments": {
               "target": {
                 "name": "jogador",
@@ -402,6 +370,7 @@
             "success": "&aVocê promoveu {target_name_with_tag} &aa &7{target_role_name}&a."
           },
           "demote": {
+            "description": "rebaixar um capitão a membro",
             "arguments": {
               "target": {
                 "name": "jogador",
@@ -415,6 +384,7 @@
             "success": "&cVocê rebaixou {target_name_with_tag} &ca &7{target_role_name}&c."
           },
           "kick": {
+            "description": "expulsar um jogador do clã",
             "arguments": {
               "target": {
                 "name": "jogador",
@@ -428,6 +398,7 @@
             "success": "&cVocê expulsou {target_name_with_tag} &cdo clã."
           },
           "transfer": {
+            "description": "passar a liderança para outro membro",
             "arguments": {
               "target": {
                 "name": "jogador",
@@ -440,12 +411,16 @@
             "success": "&aVocê transferiu a liderança do clã para {target_name_with_tag}&a."
           },
           "leave": {
+            "description": "sair do clã",
             "errors": {
               "is-leader": "&cO líder não sai do clã. Transfira a liderança, ou use /clan desfazer."
             }
           },
-          "disband": {},
+          "disband": {
+            "description": "desfazer o clã"
+          },
           "modtag": {
+            "description": "mudar as cores da tag",
             "arguments": {
               "tag": {
                 "name": "tag",
@@ -459,6 +434,7 @@
             }
           },
           "authorize": {
+            "description": "liberar o clã para os eventos",
             "arguments": {
               "tag": {
                 "name": "tag",
@@ -471,6 +447,7 @@
             "success": "&aVocê autorizou o clã &7[{clan_colored_tag}&7] {clan_name}&a nos eventos."
           },
           "unauthorize": {
+            "description": "tirar o clã dos eventos",
             "arguments": {
               "tag": {
                 "name": "tag",
@@ -483,6 +460,7 @@
             "success": "&cVocê desautorizou o clã &7[{clan_colored_tag}&7] {clan_name}&c nos eventos."
           },
           "delete": {
+            "description": "apagar um clã",
             "arguments": {
               "tag": {
                 "name": "tag",
@@ -492,6 +470,7 @@
             "success": "&cVocê apagou o clã &7[{clan_colored_tag}&7] {clan_name}&c."
           },
           "add": {
+            "description": "pôr um jogador num clã",
             "arguments": {
               "target": {
                 "name": "jogador",
@@ -508,6 +487,7 @@
             "success": "&aVocê pôs {target_name_with_tag} &ano clã &7[{clan_colored_tag}&7] {clan_name}&a."
           },
           "remove": {
+            "description": "tirar um jogador do clã dele",
             "arguments": {
               "target": {
                 "name": "jogador",
@@ -521,6 +501,7 @@
             "success": "&cVocê tirou {target_name_with_tag} &cdo clã &7[{clan_colored_tag}&7] {clan_name}&c."
           },
           "setleader": {
+            "description": "pôr um jogador como líder do clã dele",
             "arguments": {
               "target": {
                 "name": "jogador",
@@ -534,6 +515,7 @@
             "success": "&aVocê pôs {target_name_with_tag} &acomo líder do clã &7[{clan_colored_tag}&7] {clan_name}&a."
           },
           "addpoints": {
+            "description": "somar pontos a um clã",
             "arguments": {
               "points": {
                 "name": "pontos",
@@ -550,6 +532,7 @@
             "success": "&aVocê somou &6{points} &apontos ao clã &7[{clan_colored_tag}&7]&a, que agora tem &6{clan_points}&a."
           },
           "removepoints": {
+            "description": "tirar pontos de um clã",
             "arguments": {
               "points": {
                 "name": "pontos",
@@ -566,6 +549,7 @@
             "success": "&cVocê tirou &6{points} &cpontos do clã &7[{clan_colored_tag}&7]&c, que agora tem &6{clan_points}&c."
           },
           "spy": {
+            "description": "ver o chat de todos os clãs",
             "success-enabled": "&aVocê ativou o espião do chat dos clãs.",
             "success-disabled": "&cVocê desativou o espião do chat dos clãs."
           }

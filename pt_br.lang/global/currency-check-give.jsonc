@@ -1,10 +1,31 @@
 {
   "plugins": {
     "currencies": {
+      "commands": {
+        "givecheck": {
+          "arguments": {
+            "target": {
+              "name": "jogador",
+              "description": "Jogador online que recebe o cheque"
+            },
+            "currency": {
+              "name": "moeda",
+              "description": "Moeda do cheque, entre as habilitadas"
+            },
+            "value": {
+              "name": "valor",
+              "description": "Valor do cheque, maior que zero"
+            },
+            "amount": {
+              "name": "quantidade",
+              "description": "Quantos cheques, de 1 a 64"
+            }
+          }
+        }
+      },
       "check-give": {
         "success": "&aCheque entregue.",
         "full": "&cO inventário do jogador está cheio.",
-        "usage": "&eUse /givecheck <jogador online> <moeda habilitada> <valor positivo> [quantidade de 1 a 64].",
         "recovery-owner": "&cSomente o jogador que iniciou este resgate pode confirmá-lo.",
         "retry-redemption": "&eUse o cheque devolvido para confirmar o resgate pendente.",
         "redeemed": "&aVocê resgatou {amount} {currency}."

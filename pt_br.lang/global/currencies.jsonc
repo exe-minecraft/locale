@@ -48,6 +48,12 @@
       },
       "commands": {
         "currencies": {
+          "ranking": {
+            "description": "ver o ranking desta moeda"
+          },
+          "help": {
+            "description": "ver os comandos desta moeda"
+          },
           "visualize": {
             "same": {
               "success": "{currency_color}Você possui &f{currency_formatted_value} {currency_adaptively_name_lower_case}.",
@@ -59,6 +65,7 @@
             }
           },
           "add": {
+            "description": "adicionar saldo a um jogador",
             "arguments": {
               "target": {
                 "name": "jogador",
@@ -72,6 +79,7 @@
             "success": "{currency_color}Você adicionou &f{currency_formatted_value} {currency_adaptively_name} ao jogador {currency_target_name_with_color}"
           },
           "pay": {
+            "description": "enviar saldo para outro jogador",
             "arguments": {
               "target": {
                 "name": "jogador",
@@ -97,6 +105,7 @@
             "success-target": "&aVocê recebeu {currency_color}{currency_icon}{currency_formatted_value} de &a{currency_sender_name_with_color}."
           },
           "remove": {
+            "description": "remover saldo de um jogador",
             "arguments": {
               "target": {
                 "name": "jogador",
@@ -110,6 +119,7 @@
             "success": "{currency_color}Você removeu &f{currency_formatted_value} {currency_adaptively_name} do jogador {currency_target_name_with_color}"
           },
           "set": {
+            "description": "definir o saldo de um jogador",
             "arguments": {
               "target": {
                 "name": "jogador",
@@ -123,6 +133,7 @@
             "success": "{currency_color}Você definiu &f{currency_formatted_value} {currency_adaptively_name} para jogador {currency_target_name_with_color}"
           },
           "update": {
+            "description": "atualizar o ranking desta moeda",
             "success": "Solicitação de atualização enviada com sucesso"
           }
         }

@@ -51,12 +51,38 @@
       },
       "commands": {
         "glad": {
-          "cabin-join": {
-            "unavailable": "Nenhuma instância do Gladiador está disponível.",
-            "failed": "Não foi possível entrar no camarote. Tente novamente.",
-            "inventory-not-empty": "Esvazie seu inventário antes de entrar no camarote."
+          "event-start": {
+            "description": "abrir as inscrições do Gladiador"
+          },
+          "event-force-start": {
+            "description": "começar o Gladiador sem esperar"
+          },
+          "event-stop": {
+            "description": "cancelar o Gladiador"
+          },
+          "deathmatch": {
+            "description": "forçar o deathmatch"
+          },
+          "border": {
+            "description": "alternar a borda entre manual e automática"
+          },
+          "skipborder": {
+            "description": "avançar a borda para o próximo estágio"
+          },
+          "topwins": {
+            "description": "ver o ranking de vitórias dos clãs"
+          },
+          "topkills": {
+            "description": "ver o ranking de abates dos jogadores"
+          },
+          "toprush": {
+            "description": "ver o ranking de rushes vencidos"
+          },
+          "topviradas": {
+            "description": "ver o ranking de viradas em rushes"
           },
           "event-force-join": {
+            "description": "enviar um jogador ao Gladiador",
             "arguments": {
               "player": {
                 "name": "jogador",
@@ -68,32 +94,44 @@
             "failed": "Não foi possível enviar o jogador ao Gladiador."
           },
           "event-join": {
+            "description": "entrar no Gladiador com o seu clã",
             "unavailable": "Nenhuma instância do Gladiador está disponível.",
             "failed": "Não foi possível entrar no Gladiador. Tente novamente."
           },
           "event-rejoin": {
+            "description": "voltar ao Gladiador após desconectar",
             "processing": "Pedido de reentrada enviado."
           },
           "sair": {
+            "description": "sair do Gladiador",
             "not-running": "Não há um Gladiador em andamento.",
             "processing": "Processando sua saída do Gladiador..."
           },
           "camarote": {
-            "usage": "Use /glad camarote <entrar/sair>.",
+            "description": "entrar ou sair do camarote",
+            "cabin-join": {
+              "description": "entrar no camarote para assistir",
+              "unavailable": "Nenhuma instância do Gladiador está disponível.",
+              "failed": "Não foi possível entrar no camarote. Tente novamente.",
+              "inventory-not-empty": "Esvazie seu inventário antes de entrar no camarote."
+            },
             "exit": {
+              "description": "sair do camarote",
               "not-running": "Não há um Gladiador em andamento.",
               "processing": "Processando sua saída do camarote..."
             }
           },
           "status": {
+            "description": "ver o estado atual do Gladiador",
             "unavailable": "Ainda não há dados do Gladiador.",
             "message": "&eGladiador: {event_status} &8| &e{event_players} jogadores &8| &e{event_clans} clans &8| &eborda {event_border} &8| &e{event_rushes} rush(es) &8| &e{event_time}s"
           },
           "beast": {
+            "description": "ver ou definir o Mito atual",
             "arguments": {
               "action": {
-                "name": "ação",
-                "description": "top, set ou reset."
+                "name": "top|set|reset",
+                "description": "Sem ação mostra o Mito atual"
               },
               "player": {
                 "name": "jogador",
@@ -108,7 +146,6 @@
             "none": "&5Mito atual: &7nenhum",
             "message": "&5Mito atual: &d{player_name} &7({player_kills} abates)",
             "no-permission": "Você não tem permissão para alterar o Mito.",
-            "usage": "Use /mito, /mito top, /mito set <jogador> [count] ou /mito reset.",
             "user-not-found": "Jogador não encontrado.",
             "query-failed": "Não foi possível consultar esse jogador.",
             "processing": "Processando a alteração do Mito..."
@@ -118,30 +155,34 @@
             "message": "&6Teias ativas detectadas: &e{webs}"
           },
           "web-monitor": {
+            "description": "ver as teias detectadas ao vivo",
             "loading": "Consultando as teias detectadas no Gladiador..."
           },
           "reversal-monitor": {
+            "description": "ver as viradas dos rushes ativos",
             "loading": "Consultando as viradas dos rushes ativos..."
           },
           "stacked-control": {
+            "description": "ajustar a detecção de empilhados",
             "arguments": {
               "action": {
-                "name": "ação",
-                "description": "ativar, desativar ou limite."
+                "name": "on|off|limite",
+                "description": "Ligar, desligar, ou mudar o limite"
               },
               "value": {
                 "name": "valor",
                 "description": "Novo mínimo de jogadores empilhados."
               }
             },
-            "usage": "Use /stackedplayers <on/off/stackedThreshold> [valor].",
             "invalid-value": "Informe um limite inteiro de pelo menos 2 jogadores.",
             "processing": "Atualizando o sistema de jogadores empilhados..."
           },
           "rush-list": {
+            "description": "listar os rushes ativos",
             "query-failed": "Não foi possível consultar os rushes."
           },
           "rush-watch": {
+            "description": "assistir ao rush de um clã",
             "arguments": {
               "clan": {
                 "name": "clan",
@@ -156,6 +197,7 @@
             "clan-not-found": "Clan não encontrado."
           },
           "history": {
+            "description": "ver o histórico das edições",
             "arguments": {
               "id": {
                 "name": "id",
@@ -166,6 +208,7 @@
             "loading": "Consultando o histórico do Gladiador..."
           },
           "rush-score": {
+            "description": "ver o placar de rushes por confronto",
             "arguments": {
               "clan": {
                 "name": "clan ou todos",
@@ -177,9 +220,11 @@
             "query-failed": "Não foi possível consultar esse clan."
           },
           "recent-actions": {
+            "description": "ver saídas e desconexões recentes",
             "loading": "Consultando as ações recentes do Gladiador..."
           },
           "revive": {
+            "description": "reviver um jogador no evento",
             "arguments": {
               "player": {
                 "name": "jogador",
@@ -188,6 +233,7 @@
             }
           },
           "kick": {
+            "description": "expulsar um jogador do Gladiador",
             "arguments": {
               "player": {
                 "name": "jogador",
@@ -196,6 +242,7 @@
             }
           },
           "kickclan": {
+            "description": "expulsar um clã inteiro do evento",
             "arguments": {
               "clan": {
                 "name": "clan",
@@ -204,9 +251,10 @@
             }
           },
           "setrush": {
+            "description": "iniciar ou parar um rush",
             "arguments": {
               "action": {
-                "name": "iniciar/parar",
+                "name": "iniciar|parar",
                 "description": "Ação que será aplicada ao rush."
               },
               "first-clan": {
@@ -220,14 +268,16 @@
             }
           },
           "togglerejoin": {
+            "description": "ligar ou desligar a reentrada",
             "arguments": {
               "action": {
-                "name": "ativar/desativar",
+                "name": "ativar|desativar",
                 "description": "Novo estado da reentrada."
               }
             }
           },
           "maxmembers": {
+            "description": "definir o limite de membros por clã",
             "arguments": {
               "amount": {
                 "name": "quantia",
@@ -236,6 +286,7 @@
             }
           },
           "setloc": {
+            "description": "salvar entrada, camarote ou deathmatch",
             "arguments": {
               "type": {
                 "name": "tipo ou borda",
@@ -250,6 +301,7 @@
             "processing": "Salvando a localização na instância do Gladiador..."
           },
           "deaths": {
+            "description": "ver a última morte de um jogador",
             "arguments": {
               "player": {
                 "name": "jogador",
@@ -264,9 +316,85 @@
             "user-not-found": "Jogador não encontrado.",
             "clan-not-found": "Clan não encontrado.",
             "clans-not-found": "Um dos clans não foi encontrado.",
-            "toggle-usage": "Use ativar ou desativar.",
-            "rush-usage": "Use iniciar ou parar.",
             "invalid-amount": "Informe uma quantia inteira maior que zero."
+          }
+        },
+        "clanfight": {
+          // Só as descrições da lista de uso: as outras mensagens destes comandos ainda faltam.
+          "event-start": {
+            "description": "abrir as inscrições do ClanFight"
+          },
+          "event-force-start": {
+            "description": "começar o ClanFight sem esperar"
+          },
+          "event-stop": {
+            "description": "cancelar o ClanFight"
+          },
+          "event-join": {
+            "description": "entrar no ClanFight com o seu clã"
+          },
+          "event-force-join": {
+            "description": "enviar um jogador ao ClanFight"
+          },
+          "sair": {
+            "description": "sair do ClanFight"
+          },
+          "camarote": {
+            "description": "entrar ou sair do camarote",
+            "cabin-join": {
+              "description": "entrar no camarote para assistir"
+            },
+            "exit": {
+              "description": "sair do camarote"
+            }
+          },
+          "setloc": {
+            "description": "gravar um ponto do mapa onde você está"
+          },
+          "reviver": {
+            "description": "reviver um jogador no ClanFight"
+          }
+        },
+        "fastglad": {
+          // Só as descrições da lista de uso: as outras mensagens destes comandos ainda faltam.
+          "event-start": {
+            "description": "abrir as inscrições do FastGlad"
+          },
+          "event-force-start": {
+            "description": "começar o FastGlad sem esperar"
+          },
+          "event-stop": {
+            "description": "cancelar o FastGlad"
+          },
+          "event-join": {
+            "description": "entrar no FastGlad com o seu clã"
+          },
+          "event-force-join": {
+            "description": "enviar um jogador ao FastGlad"
+          },
+          "sair": {
+            "description": "sair do FastGlad"
+          },
+          "camarote": {
+            "description": "entrar ou sair do camarote",
+            "cabin-join": {
+              "description": "entrar no camarote para assistir"
+            },
+            "exit": {
+              "description": "sair do camarote"
+            }
+          },
+          "setloc": {
+            "description": "gravar um ponto do mapa onde você está"
+          },
+          "reviver": {
+            "description": "reviver um jogador no FastGlad"
+          },
+          "mercador": {
+            "description": "abrir o Mercador Sombrio"
+          },
+          "deathmatch": {
+            "description": "forçar o deathmatch do FastGlad"
           }
         }
       },

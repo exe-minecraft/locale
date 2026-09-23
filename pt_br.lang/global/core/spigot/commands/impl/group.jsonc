@@ -4,6 +4,7 @@
       "commands": {
         "group": {
           "add": {
+            "description": "dar um grupo a um jogador",
             "arguments": {
               "target": {
                 "name": "jogador",
@@ -28,6 +29,7 @@
             "success-permanent": "Você adicionou o grupo {group_id} para o jogador {target_name} no servidor {server_id} permanentemente."
           },
           "remove": {
+            "description": "tirar um grupo de um jogador",
             "arguments": {
               "target": {
                 "name": "jogador",

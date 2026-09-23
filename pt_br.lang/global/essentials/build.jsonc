@@ -2,11 +2,11 @@
   "plugins": {
     "essentials": {
       "build": {
-        "usage": [
-          "&a/build &8- &7Ativar ou desativar construção",
-          "&a/build &f<jogador> &8- &7Alternar para outro staff",
-          "&a/build list &8- &7Ver construtores ativos"
-        ],
+        "usage": {
+          "toggle": { "syntax": "", "description": "ativar ou desativar a construção" },
+          "other": { "syntax": "<jogador>", "description": "alternar a construção de outro staff" },
+          "list": { "syntax": "list", "description": "ver quem está construindo" }
+        },
         "enabled": "&aModo construção ativado!",
         "disabled": "&cModo construção desativado!",
         "expired": [

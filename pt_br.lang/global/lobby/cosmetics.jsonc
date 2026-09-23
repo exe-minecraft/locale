@@ -23,6 +23,7 @@
         "cosmetics": {
           "not-found": "&cO cosmético &f{cosmetic_id}&c não existe.",
           "give": {
+            "description": "dar um cosmético a um jogador",
             "arguments": {
               "target": {
                 "name": "jogador",
@@ -38,6 +39,7 @@
             "error": "Não foi possível dar {cosmetic_name}&c a {target_name_with_color}&c. Tente novamente."
           },
           "remove": {
+            "description": "tirar um cosmético de um jogador",
             "arguments": {
               "target": {
                 "name": "jogador",

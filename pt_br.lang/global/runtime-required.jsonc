@@ -15,8 +15,12 @@
         "head": {
           "arguments": {
             "key": {
-              "name": "jogador",
-              "description": "Jogador cuja cabeça você deseja receber"
+              "name": "jogador|textura",
+              "description": "Jogador ou textura da cabeça que você deseja receber"
+            },
+            "amount": {
+              "name": "quantidade",
+              "description": "Quantas cabeças, de 1 a 64"
             }
           }
         },

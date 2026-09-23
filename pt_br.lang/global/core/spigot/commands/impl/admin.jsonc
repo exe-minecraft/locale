@@ -3,7 +3,14 @@
     "core": {
       "commands": {
         "admin": {
+          "sound": {
+            "description": "abrir o catálogo de sons para testar"
+          },
+          "actions": {
+            "description": "abrir o menu das ações do worker"
+          },
           "ban": {
+            "description": "banir um jogador manualmente",
             "arguments": {
               "target": {
                 "name": "jogador",
@@ -18,12 +25,12 @@
                 "description": "O motivo da punição"
               }
             },
-            "usage": "Uso correto: /infra ban jogador tempo motivo",
             "invalid-duration": "Duração inválida. Use por exemplo 7d, 1h30m ou permanent.",
             "error": "Não foi possível aplicar a punição.",
             "success": "{target_name} foi banido com sucesso."
           },
           "mute": {
+            "description": "silenciar um jogador manualmente",
             "arguments": {
               "target": {
                 "name": "jogador",
@@ -38,12 +45,12 @@
                 "description": "O motivo da punição"
               }
             },
-            "usage": "Uso correto: /infra mute jogador tempo motivo",
             "invalid-duration": "Duração inválida. Use por exemplo 7d, 1h30m ou permanent.",
             "error": "Não foi possível aplicar a punição.",
             "success": "{target_name} foi silenciado com sucesso."
           },
           "ip-ban": {
+            "description": "banir o IP de um jogador manualmente",
             "arguments": {
               "target": {
                 "name": "jogador",
@@ -58,17 +65,18 @@
                 "description": "O motivo da punição"
               }
             },
-            "usage": "Uso correto: /infra ip-ban jogador tempo motivo",
             "invalid-duration": "Duração inválida. Use por exemplo 7d, 1h30m ou permanent.",
             "error": "Não foi possível aplicar a punição.",
             "success": "{target_name} teve o IP banido com sucesso."
           },
           "cuboid": {
+            "description": "selecionar dois cantos e copiar o cuboide",
             "select-first-conner": "Clique no primeiro canto!",
             "select-second-conner": "Clique no segundo canto!",
             "success": "&eClique &a&lAQUI&e para copiar."
           },
           "debug": {
+            "description": "ligar ou desligar o modo de debug",
             "update-active": "O modo de debug foi alterado para habilitado",
             "update-deactivate": "O modo de debug foi alterado para desabilitado"
           },
@@ -84,13 +92,16 @@
             "error": "Não foi possivel carregar o frame: {frame_command_error}"
           },
           "location": {
+            "description": "copiar a sua posição como código",
             "success": "&eClique &a&lAQUI&e para copiar."
           },
           "mode": {
+            "description": "ligar ou desligar o id do bloco (agachado)",
             "success-active": "O modo admin foi alterado para habilitado",
             "success-deactivate": "O modo admin foi alterado para desabilitado"
           },
           "original": {
+            "description": "marcar a conta de um jogador como original",
             "arguments": {
               "target": {
                 "name": "jogador",
@@ -103,6 +114,7 @@
             "success": "{target_name} agora é original."
           },
           "cracked": {
+            "description": "tornar pirata a conta de um jogador",
             "arguments": {
               "target": {
                 "name": "jogador",
@@ -113,28 +125,32 @@
                 "description": "A nova senha da conta"
               }
             },
-            "usage": "Uso correto: /infra cracked jogador senha",
             "dont-have-original": "{target_name} não possui uma conta original.",
             "password-invalid": "Senha inválida. Use de 5 a 32 caracteres.",
             "error": "Não foi possível atualizar a senha de {target_name}.",
             "success": "{target_name} agora é pirata."
           },
           "reload": {
-            "usage": "Uso correto: /infra reload <--app | --server | --global>",
+            "description": "recarregar as configs",
+            "arguments": {
+              "scope": {
+                "name": "--app|--server|--global",
+                "description": "Onde recarregar as configs"
+              }
+            },
             "success-app": "Reload de configs solicitado para este app ({app_id}).",
             "no-server": "Este app não pertence a um server.",
             "success-server": "Reload de configs solicitado para {app_amount} app(s) do server '{server_id}'.",
-            "success-global": "Reload de configs solicitado para {app_amount} app(s) online.",
-            "unknown-scope": "Escopo desconhecido. Use: --app | --server | --global"
+            "success-global": "Reload de configs solicitado para {app_amount} app(s) online."
           },
           "packetdump": {
+            "description": "exportar os pacotes recentes de um jogador",
             "arguments": {
               "target": {
                 "name": "jogador",
                 "description": "Jogador cujo buffer de pacotes será exportado"
               }
             },
-            "usage": "Uso correto: /infra packetdump <jogador>",
             "generating": "Gerando packet dump de {target_name}...",
             "disabled": "O packet dump está desligado nesta instância. Liga com -Dcore.packetdump.enabled=true e reinicia.",
             "no-data": "Sem pacotes em buffer para {target_name} (sem tráfego recente ou offline há mais de 1min).",
@@ -142,6 +158,7 @@
             "success": "&aPacket dump de &f{target_name} pronto! &b&nabrir no navegador"
           },
           "dump": {
+            "description": "exportar o container olhado ou o item na mão",
             "generating": "Gerando dump...",
             "no-target": "Olhe para um container (até 6 blocos) ou segure um item na mão principal.",
             "empty": "Nada para exportar (container vazio ou item inválido).",
@@ -150,6 +167,7 @@
             "item-success": "&aDump do item pronto! &b&nabrir no navegador"
           },
           "worlds": {
+            "description": "listar os mundos carregados",
             "success": "Mundos disponíveis: {world_names}"
           }
         }

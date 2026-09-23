@@ -3,7 +3,11 @@
     "core": {
       "commands": {
         "ignore": {
+          "list": {
+            "description": "abrir a sua lista de ignorados"
+          },
           "add": {
+            "description": "adicionar um jogador aos ignorados",
             "arguments": {
               "target": {
                 "name": "jogador",
@@ -14,6 +18,7 @@
             "success": "&aO jogador&a &f{target_name} &afoi adicionado da sua lista de ignorados."
           },
           "remove": {
+            "description": "tirar um jogador dos ignorados",
             "arguments": {
               "target": {
                 "name": "jogador",

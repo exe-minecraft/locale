@@ -97,12 +97,17 @@
           "gamemode-change-success-sender": "Game Mode alterado para &f{gamemode_name}"
         },
         "god": {
+          "arguments": {
+            "target": {
+              "name": "list|jogador",
+              "description": "Ver quem está em modo God, ou ligar para outro"
+            }
+          },
           "success-deactivated": "&cModo God desativado.",
           "success-activated": "&aModo God ativado.",
           "success-activated-other": "&aModo God ativado para {target_name}.",
           "success-deactivated-other": "&aModo God desativado para {target_name}.",
           "only-staff": "&c{target_name} não é da staff: o modo God só vale para a staff.",
-          "usage": "&cUso correto: /god [list|<jogador>]",
           "list-header": [
             "",
             "&eLista de todos os jogadores em modo God:"
@@ -117,9 +122,12 @@
           "not-repairable": "&cEsse item não tem durabilidade para reparar."
         },
         "head": {
-          "arguments": {
-            "name": "key"
-          }
+          "invalid-amount": "&cA quantidade vai de 1 a 64.",
+          "invalid-key": "&cUse o nick de um jogador ou uma textura em hexadecimal.",
+          "not-found": "&cNão foi encontrada a skin desse jogador.",
+          "full": "&cSeu inventário está cheio.",
+          "item-name": "&eCabeça",
+          "success": "&aCabeça entregue."
         },
         "heal": {
           "arguments": {
@@ -201,7 +209,7 @@
             }
           },
           "out-of-range": [
-            "&eUso: /speed <0-{max}> [jogador]",
+            "&cA velocidade vai de 0 a {max}.",
             "&7Use 0 para voltar à velocidade padrão."
           ],
           "success": {

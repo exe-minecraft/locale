@@ -3,7 +3,12 @@
     "essentials": {
       "staff": {
         "tpradius": {
-          "usage": "&cUso correto: /tpraio <raio>",
+          "arguments": {
+            "radius": {
+              "name": "raio",
+              "description": "Distância em blocos, até 10000"
+            }
+          },
           "invalid-number": "&cPor favor, insira um número válido para o raio.",
           "not-positive": "&cO raio deve ser maior que zero.",
           "teleported": "&eVocê foi teleportado.",
@@ -14,14 +19,32 @@
           }
         },
         "sudo": {
-          "usage": "&cUso correto: /sudo <jogador> <mensagem ou comando>",
+          "arguments": {
+            "target": {
+              "name": "jogador",
+              "description": "Jogador que vai falar ou executar"
+            },
+            "action": {
+              "name": "mensagem ou /comando",
+              "description": "O que o jogador vai falar ou executar"
+            }
+          },
           "offline": "&cO jogador {player} não está online.",
           "hierarchy": "&cVocê não pode usar o sudo em alguém do seu cargo ou acima.",
           "invalid": "&cEsse comando não pode ser executado pelo sudo.",
           "success": "&aVocê executou a mensagem/comando como {player}: {action}"
         },
         "recentcommands": {
-          "usage": "&cUso correto: &f/recentes <jogador> [página]",
+          "arguments": {
+            "target": {
+              "name": "jogador",
+              "description": "Jogador online cujos comandos você quer ver"
+            },
+            "page": {
+              "name": "página",
+              "description": "A página da lista, a partir de 1"
+            }
+          },
           "offline": "&c&lErro: &fJogador não encontrado ou offline.",
           "invalid-page": "&c&lErro: &fNúmero da página inválido.",
           "page-not-positive": "&c&lErro: &fO número da página deve ser maior que 0.",
@@ -41,7 +64,12 @@
           }
         },
         "target": {
-          "usage": "&cUso: /target <jogador> ou /target off",
+          "arguments": {
+            "target": {
+              "name": "jogador|off",
+              "description": "Jogador a observar, ou off para parar"
+            }
+          },
           "offline": "&cJogador não encontrado.",
           "self": "&cEi, este jogador é você.",
           "not-observing": "&cVocê não está observando ninguém.",

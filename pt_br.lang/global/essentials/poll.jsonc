@@ -2,17 +2,22 @@
   "plugins": {
     "essentials": {
       "poll": {
-        "usage": [
-          "&cUso: /enquete \"<opção1>\" \"<opção2>\" <duração_em_segundos>",
-          "&cOu use: /enquete cancelar"
-        ],
+        "usage": {
+          "start": { "syntax": "\"<opção 1>\" \"<opção 2>\" <segundos>", "description": "abrir uma enquete de duas opções" },
+          "cancel": { "syntax": "cancelar", "description": "encerrar a enquete sem resultado" }
+        },
         "invalid-duration": "&cA duração deve ser um número inteiro de segundos, maior que zero!",
         "already-running": "&cJá existe uma enquete em andamento!",
         "started": "&aEnquete iniciada com sucesso!",
         "cancelled": "&aA enquete foi cancelada com sucesso.",
         "nothing-to-cancel": "&cNão há nenhuma enquete ativa para cancelar!",
         "vote": {
-          "usage": "&cUso: /votar <1|2>",
+          "arguments": {
+            "option": {
+              "name": "1|2",
+              "description": "A opção em que você vota"
+            }
+          },
           "numbers-only": "&cPor favor, use 1 ou 2 para votar!",
           "invalid-option": "&cOpção inválida! Use 1 ou 2.",
           "no-active": "&cNão há nenhuma enquete ativa no momento!",

@@ -12,15 +12,10 @@
           "list-footer": "&7Clique em um mundo para entrar. &8| &b/world ajuda",
           "list-footer-console": "&7Use &b/world ajuda &7para ver os comandos.",
           "help-hover": "&bClique para ver os comandos de mundos.",
-          "help": [
-            "&eUso: /world <nome>",
-            "&e/world tp <nome> &7- Teleporta para um mundo",
-            "&e/world list &7- Lista os mundos"
-          ],
-          "help-manage": [
-            "&e/world criar <nome> [vazio|plano] &7- Cria um mundo",
-            "&e/world importar <nome> [vazio|plano] &7- Carrega um mundo"
-          ],
+          "usage": {
+            "teleport": { "syntax": "<mundo>", "description": "ir para o spawn de um mundo" },
+            "list": { "syntax": "list", "description": "listar os mundos carregados" }
+          },
           "not-loaded": "&cMundo não encontrado ou não carregado.",
           "player-only": "&cEntre no servidor para teleportar para um mundo.",
           "teleported": "&aTeleportado para o mundo {world_name}.",
@@ -33,6 +28,7 @@
           "busy": "O world-manager ainda está carregando ou já existe uma operação para esse mundo. Aguarde a conclusão.",
           "error": "Não foi possível concluir a operação do mundo. A falha foi registrada para a equipe técnica.",
           "create": {
+            "description": "criar um mundo novo",
             "arguments": {
               "name": {
                 "name": "nome",
@@ -46,6 +42,7 @@
             "success": "&aMundo &f{world_name} &acriado. Use &f/world {world_name} &apara entrar."
           },
           "import": {
+            "description": "carregar um mundo que já está no disco",
             "arguments": {
               "name": {
                 "name": "nome",
@@ -60,7 +57,16 @@
           }
         },
         "border": {
-          "usage": "&cUso correto: /borda <tamanho> [tempo]",
+          "arguments": {
+            "size": {
+              "name": "tamanho",
+              "description": "Lado da borda em blocos, de 1 a 60000000"
+            },
+            "time": {
+              "name": "segundos",
+              "description": "Tempo para a borda chegar ao tamanho, até 86400"
+            }
+          },
           "main-world": "&cNão é possível usar este comando no mundo principal!",
           "instant": "&aBorda definida para {size} blocos!",
           "timed": "&aBorda definida para {size} blocos em {seconds} segundos!",

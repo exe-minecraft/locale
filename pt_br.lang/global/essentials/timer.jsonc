@@ -2,7 +2,12 @@
   "plugins": {
     "essentials": {
       "timer": {
-        "usage": "&cUso correto: /timer <segundos> ou /timer cancel",
+        "arguments": {
+          "time": {
+            "name": "segundos|cancelar",
+            "description": "De 1 a 60 segundos, ou cancelar"
+          }
+        },
         "invalid-time": "&cInsira um número de 1 a 60 segundos.",
         "not-running": "&cNão há nenhum timer em andamento.",
         "cancel-confirmed": "&aTimer cancelado com sucesso!",

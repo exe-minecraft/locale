@@ -4,11 +4,13 @@
       "commands": {
         "skin": {
           "reset": {
+            "description": "voltar para a skin da sua conta",
             "need-equipped-skin": "Você não está com nenhuma skin equipada, se quiser atualizar utiliza /skin atualizar",
             "loading": "Buscando sua skin...",
             "success": "Skin alterada com sucesso!"
           },
           "update": {
+            "description": "atualizar a skin que você está usando",
             "loading": "Buscando sua skin...",
             "success": "Skin alterada com sucesso!"
           },

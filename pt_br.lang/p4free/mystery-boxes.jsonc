@@ -23,7 +23,15 @@
       "no-permission": "&cVocê não pode entregar caixas.",
       "given": "&aCaixas entregues.",
       "full": "&cO inventário do jogador está cheio.",
-      "usage": "&eUse /caixas ver <tipo>, /caixas top ou /caixas dar <jogador> <tipo> <quantidade>."
+      "commands": {
+        "caixas": {
+          "usage": {
+            "view": { "syntax": "ver <tipo>", "description": "ver os prêmios de uma caixa" },
+            "top": { "syntax": "top", "description": "ver o ranking de caixas abertas" },
+            "give": { "syntax": "dar <jogador> <tipo> <quantidade>", "description": "entregar caixas, de 1 a 64" }
+          }
+        }
+      }
     }
   }
 }

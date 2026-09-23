@@ -14,6 +14,7 @@
             }
           },
           "pay": {
+            "description": "enviar Cash a outro jogador (mínimo 1000)",
             "arguments": {
               "target": {
                 "name": "jogador",
@@ -29,6 +30,7 @@
             "error": "&cSua tentativa de enviar o seu saldo falhou, tente novamente mais tarde!"
           },
           "set": {
+            "description": "definir o Cash de um jogador",
             "arguments": {
               "target": {
                 "name": "jogador",
@@ -43,6 +45,7 @@
             "error": "&cSua tentativa de definir o seu saldo falhou, tente novamente mais tarde!"
           },
           "add": {
+            "description": "adicionar Cash a um jogador",
             "arguments": {
               "target": {
                 "name": "jogador",
@@ -57,6 +60,7 @@
             "error": "&cSua tentativa de definir o seu saldo falhou, tente novamente mais tarde!"
           },
           "remove": {
+            "description": "remover Cash de um jogador",
             "arguments": {
               "target": {
                 "name": "jogador",

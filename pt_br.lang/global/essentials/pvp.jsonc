@@ -2,7 +2,12 @@
   "plugins": {
     "essentials": {
       "pvp": {
-        "usage": "&cUso correto: /pvp <on/off>",
+        "arguments": {
+          "state": {
+            "name": "on|off|status",
+            "description": "Ligar, desligar ou ver o PvP do mundo"
+          }
+        },
         "status-on": "&eO PvP está habilitado nesse mundo.",
         "status-off": "&eO PvP está desabilitado nesse mundo.",
         "enabled": [
