@@ -320,6 +320,7 @@
               "combat-immunity": "Você não pode atacar esse jogador durante a imunidade!",
               "combat-leave": "Você não pode sair do Gladiador em combate.",
               "command-blocked": "Você não pode usar comandos durante o Gladiador.",
+              "drop-blocked": "Você não pode dropar este item enquanto o Gladiador não começa!",
               "removed-from-clan": "Você foi removido do clan enquanto participava de um evento de clans.",
               "rejoin-command-blocked": "Você não pode reentrar porque utilizou um comando que bloqueia a reentrada.",
               "rejoin-validation-failed": "Não foi possível validar sua reentrada. Tente novamente.",
