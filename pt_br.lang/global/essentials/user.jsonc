@@ -6,7 +6,10 @@
           "not-allowed-in-app": "OPS! Parece que você não pode mudar seu modo de vôo aqui!",
           "success-disabled": "&cModo de vôo desabilitado com sucesso!",
           "success-disable-with-gamemode": "&cModo de vôo desabilitado com sucesso, porém seu vôo não foi desabilitado por você estar no modo criativo ou espectador!",
-          "success-activated": "Modo vôo habilitado com sucesso!"
+          "success-activated": "Modo vôo habilitado com sucesso!",
+          "success-disabled-other": "&aVocê desativou o modo voo de {target_name}.",
+          "success-disable-with-gamemode-other": "&aVocê desativou o modo voo de {target_name}, mas ele continua voando por estar no modo criativo ou espectador.",
+          "success-activated-other": "&aVocê ativou o modo voo de {target_name}."
         },
         "off": {
           "already-disabled": "Todos os jogadores já estão invisíveis.",

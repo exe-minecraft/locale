@@ -1,14 +1,29 @@
 {
   "plugins": {
     "essentials": {
+      "preferences": {
+        "lantern": {
+          "name": "&eLuz",
+          "description": ["&7Visão noturna ligada pelo /luz,", "&7que volta sozinha ao entrar."]
+        }
+      },
       "commands": {
         "trash": {
-          "inventory-title": "Lixeira",
-          "chat-message": "Abrindo lixeira virtual..."
+          "inventory-title": "&8Lixeira",
+          "chat-message": "Abrindo lixeira virtual...",
+          "discarded": "&aVocê descartou {items} na lixeira.",
+          "items": {
+            "one": "1 item",
+            "many": "{count} itens"
+          }
         },
         "lantern": {
-          "success-disable": "Você desativou a lanterna.",
-          "success-enable": "Você ativou a lanterna."
+          "success-disable": "&cLuz desativada!",
+          "success-enable": "&aLuz ativada!"
+        },
+        "pot": {
+          "need-potion-in-hand": "&cVocê precisa segurar uma poção na mão para usar este comando.",
+          "success": "&aPoções foram agrupadas com sucesso!"
         },
         "repair": {
           "cannot-repair-custom-item": "Você não pode reparar um item customizado.",

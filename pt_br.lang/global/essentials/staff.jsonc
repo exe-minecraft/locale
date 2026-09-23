@@ -1,0 +1,64 @@
+{
+  "plugins": {
+    "essentials": {
+      "staff": {
+        "tpradius": {
+          "usage": "&cUso correto: /tpraio <raio>",
+          "invalid-number": "&cPor favor, insira um número válido para o raio.",
+          "not-positive": "&cO raio deve ser maior que zero.",
+          "teleported": "&eVocê foi teleportado.",
+          "success": "&aVocê teleportou {players} para você.",
+          "players": {
+            "one": "1 jogador",
+            "many": "{count} jogadores"
+          }
+        },
+        "sudo": {
+          "usage": "&cUso correto: /sudo <jogador> <mensagem ou comando>",
+          "offline": "&cO jogador {player} não está online.",
+          "hierarchy": "&cVocê não pode usar o sudo em alguém do seu cargo ou acima.",
+          "invalid": "&cEsse comando não pode ser executado pelo sudo.",
+          "success": "&aVocê executou a mensagem/comando como {player}: {action}"
+        },
+        "recentcommands": {
+          "usage": "&cUso correto: &f/recentes <jogador> [página]",
+          "offline": "&c&lErro: &fJogador não encontrado ou offline.",
+          "invalid-page": "&c&lErro: &fNúmero da página inválido.",
+          "page-not-positive": "&c&lErro: &fO número da página deve ser maior que 0.",
+          "empty": "&c&lInfo: &fNenhum comando recente para {player}.",
+          "missing-page": "&c&lErro: &fPágina {page} não existe. Total de páginas: {pages}",
+          "header": "&6&l⚡ Comandos recentes de &e{player} &6(Página {page}/{pages}):",
+          "entry": "&8{index}. &f{command} &7({time} atrás)",
+          "copy": "&7Clique para copiar",
+          "navigation": {
+            "separator": "&7&m                                                ",
+            "line": "{previous}  &7|  {next}",
+            "previous": "&a&l« Anterior",
+            "previous-disabled": "&8&l« Anterior",
+            "next": "&a&lPróxima »",
+            "next-disabled": "&8&lPróxima »",
+            "hover": "&7Ir para página {page}"
+          }
+        },
+        "target": {
+          "usage": "&cUso: /target <jogador> ou /target off",
+          "offline": "&cJogador não encontrado.",
+          "self": "&cEi, este jogador é você.",
+          "not-observing": "&cVocê não está observando ninguém.",
+          "already": "&cVocê já está observando {player}. Use /target {player} para parar.",
+          "teleport-failed": "&cNão foi possível teleportar até {player}.",
+          "started": "&aVocê agora está observando {player}.",
+          "stopped": "&eVocê parou de observar {player}.",
+          "left": "&eO jogador {player} saiu do servidor. Target desativado.",
+          "died": "&eO jogador {player} morreu. Target desativado.",
+          "alert": "&c&l[ALERTA] &r&e{player} &cestá com &f{percent}%+ &cdos ataques focados em &f{victim}&c.",
+          "actionbar": {
+            "no-data": "&e&l[TARGET] &r&f{player} &7| Ping: &f{ping}ms &7| Sem dados de combate",
+            "no-focus": "&e&l[TARGET] &r&f{player} &7| Ping: &f{ping}ms &7| Sem foco ativo",
+            "focus": "&e&l[TARGET] &r&f{player} &7→ &f{victim} &7| &f{time} &7| {color}{percent}% &7| Ping: &f{ping}ms"
+          }
+        }
+      }
+    }
+  }
+}

@@ -97,8 +97,24 @@
           "gamemode-change-success-sender": "Game Mode alterado para &f{gamemode_name}"
         },
         "god": {
-          "success-deactivated": "&cVocê desativou o modo deus.",
-          "success-activated": "&aVocê ativou o modo deus."
+          "success-deactivated": "&cModo God desativado.",
+          "success-activated": "&aModo God ativado.",
+          "success-activated-other": "&aModo God ativado para {target_name}.",
+          "success-deactivated-other": "&aModo God desativado para {target_name}.",
+          "only-staff": "&c{target_name} não é da staff: o modo God só vale para a staff.",
+          "usage": "&cUso correto: /god [list|<jogador>]",
+          "list-header": [
+            "",
+            "&eLista de todos os jogadores em modo God:"
+          ],
+          "list-entry": "&e • {player}",
+          "list-empty": "&cNão há jogadores em modo God no momento."
+        },
+        "fix": {
+          "success": "&aO item foi reparado com sucesso.",
+          "success-all": "&aTodos os itens foram reparados com sucesso.",
+          "need-item-in-hand": "&cVocê precisa estar segurando um item para reparar.",
+          "not-repairable": "&cEsse item não tem durabilidade para reparar."
         },
         "head": {
           "arguments": {
@@ -184,16 +200,18 @@
               "description": "Jogador que deseja alterar a velocidade"
             }
           },
+          "out-of-range": [
+            "&eUso: /speed <0-{max}> [jogador]",
+            "&7Use 0 para voltar à velocidade padrão."
+          ],
           "success": {
             "other": {
-              "reset": "As velocidades de {target_name} foram resetadas.",
-              "fly": "A velocidade de vôo de {target_name} foi alterada para: {speed}.",
-              "walk": "A velocidade de caminhada de {target_name} foi alterada para: {speed}."
+              "set": "&aVelocidade de &e{target_name} &adefinida para &e{speed}&a.",
+              "notify": "&aA sua velocidade foi definida para &e{speed} &apor {sender_name}."
             },
             "same": {
-              "reset": "As suas velocidades foram resetadas.",
-              "fly": "A sua velocidade de vôo foi alterada para: {speed}.",
-              "walk": "A sua velocidade de caminhada foi alterada para: {speed}."
+              "reset": "&aVelocidade restaurada ao valor padrão.",
+              "set": "&aVelocidade definida para &e{speed}&a."
             }
           }
         },

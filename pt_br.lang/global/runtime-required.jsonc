@@ -50,7 +50,8 @@
     "essentials": {
       "commands": {
         "clearlag": {
-          "request-sent": "&aSolicitação de limpeza enviada com sucesso."
+          "request-sent": "&aSolicitação de limpeza enviada com sucesso.",
+          "request-sent-silent": "&aSolicitação de limpeza silenciosa enviada com sucesso."
         },
         "compact": {
           "no-pet": "&cVocê não possui um pet ativo para compactar."

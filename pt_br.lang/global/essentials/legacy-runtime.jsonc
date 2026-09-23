@@ -18,8 +18,31 @@
           "exceeded": "&cVocê não pode construir acima da altura {limit}."
         },
         "clear-lag": {
-          "countdown": "&aO chão será limpo em &f{countdown}&a.",
-          "clean": "&aForam removidos &f{count}&a itens do chão."
+          "countdown": "&5&lLIXEIRO &f{phrase}&d{time}&f!",
+          "countdown-phrases": [
+            "Prepare-se! Vou limpar o chão em ",
+            "Hora da limpeza! Removendo itens em ",
+            "Os lixos serão removidos em ",
+            "Atenção! Itens no chão serão removidos em ",
+            "Os itens indesejados serão varridos em ",
+            "Faça suas malas, os lixos vão desaparecer em ",
+            "Última chance para pegar seus itens antes da limpeza, ",
+            "A limpeza está chegando, não deixe nada para trás, ",
+            "Os lixos estão prestes a serem removidos, prepare-se, ",
+            "O chão ficará limpo novamente em "
+          ],
+          "time": {
+            "seconds": {
+              "one": "&l1&d segundo",
+              "many": "&l{count}&d segundos"
+            },
+            "minutes": {
+              "one": "&l1&d minuto",
+              "many": "&l{count}&d minutos"
+            }
+          },
+          "clean": "&5&lLIXEIRO &fForam removidos &d&l{count}&f lixos do chão!",
+          "clean-nothing": "&5&lLIXEIRO &cNenhum item a ser removido!"
         },
         "crops": {
           "need-sneak": "&cSegure SHIFT para quebrar esta plantação."

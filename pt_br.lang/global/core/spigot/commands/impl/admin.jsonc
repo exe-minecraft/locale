@@ -136,6 +136,7 @@
             },
             "usage": "Uso correto: /infra packetdump <jogador>",
             "generating": "Gerando packet dump de {target_name}...",
+            "disabled": "O packet dump está desligado nesta instância. Liga com -Dcore.packetdump.enabled=true e reinicia.",
             "no-data": "Sem pacotes em buffer para {target_name} (sem tráfego recente ou offline há mais de 1min).",
             "error": "Falha ao gerar o packet dump: {error}",
             "success": "&aPacket dump de &f{target_name} pronto! &b&nabrir no navegador"

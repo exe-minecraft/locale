@@ -1,0 +1,70 @@
+{
+  "plugins": {
+    "essentials": {
+      "poll": {
+        "usage": [
+          "&cUso: /enquete \"<opção1>\" \"<opção2>\" <duração_em_segundos>",
+          "&cOu use: /enquete cancelar"
+        ],
+        "invalid-duration": "&cA duração deve ser um número inteiro de segundos, maior que zero!",
+        "already-running": "&cJá existe uma enquete em andamento!",
+        "started": "&aEnquete iniciada com sucesso!",
+        "cancelled": "&aA enquete foi cancelada com sucesso.",
+        "nothing-to-cancel": "&cNão há nenhuma enquete ativa para cancelar!",
+        "vote": {
+          "usage": "&cUso: /votar <1|2>",
+          "numbers-only": "&cPor favor, use 1 ou 2 para votar!",
+          "invalid-option": "&cOpção inválida! Use 1 ou 2.",
+          "no-active": "&cNão há nenhuma enquete ativa no momento!",
+          "already-voted": "&cVocê já votou nesta enquete!",
+          "voted": "&aVocê votou em: {option}",
+          "unavailable": "&cNão foi possível registrar o seu voto agora. Tente de novo em instantes."
+        },
+        "announce": {
+          "started": [
+            "&c ",
+            " &e&lNOVA ENQUETE",
+            ""
+          ],
+          "reminder": [
+            "&c ",
+            " &e&lENQUETE ROLANDO...",
+            ""
+          ],
+          "option": " &e• &6{option} &7[{votes}]",
+          "option-hover": "&eClique para votar em {option}",
+          "footer": [
+            "",
+            "&7Para votar, utilize &a/votar (sua opção <1|2>) &7ou clique na opção. A votação termina em &f{time}&7.",
+            "&c "
+          ],
+          "finished": [
+            "&c ",
+            " &e&lRESULTADO DA ENQUETE",
+            "",
+            " &e• &6{option1} &7[{votes1}]",
+            " &e• &6{option2} &7[{votes2}]",
+            "",
+            "&eA opção vencedora foi &a{winner} &ecom &a{winner_votes}&e!",
+            "&c "
+          ],
+          "cancelled": [
+            "&c ",
+            " &c&lENQUETE CANCELADA",
+            " &eA enquete foi cancelada por um administrador.",
+            "&c "
+          ],
+          "tie": "Empate",
+          "votes": {
+            "one": "{count} VOTO",
+            "many": "{count} VOTOS"
+          },
+          "result-votes": {
+            "one": "{count} voto",
+            "many": "{count} votos"
+          }
+        }
+      }
+    }
+  }
+}
