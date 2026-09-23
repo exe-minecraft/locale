@@ -1,0 +1,24 @@
+{
+  "plugins": {
+    "tops": {
+      "rankings": {
+        "clan_kills": "Clãs: abates",
+        "clan_points": "Clãs: pontos",
+        "clan_gladiator_wins": "Clãs: vitórias no Gladiador",
+        "weapon_sword_kills": "Espadas: abates",
+        "weapon_sword_prestige": "Espadas: prestígio",
+        "weapon_sword_tokens_spent": "Espadas: investimento",
+        "weapon_axe_kills": "Machados: abates",
+        "weapon_axe_prestige": "Machados: prestígio",
+        "weapon_axe_tokens_spent": "Machados: investimento",
+        "gladiator_clan_wins": "Gladiador: vitórias de clãs",
+        "gladiator_player_kills": "Gladiador: abates",
+        "gladiator_rush_wins": "Gladiador: vitórias em rush",
+        "gladiator_rush_reversals": "Gladiador: viradas de rush",
+        "gladiator_myths": "Gladiador: mitos",
+        "mystery_boxes_opened": "Caixas abertas",
+        "batatadas": "Batatadas"
+      }
+    }
+  }
+}

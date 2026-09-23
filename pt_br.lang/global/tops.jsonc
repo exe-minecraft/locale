@@ -1,0 +1,72 @@
+{
+  "plugins": {
+    "tops": {
+      "unavailable": "&cEste ranking não está disponível neste servidor.",
+      "views": {
+        "hub": {
+          "title": "Rankings",
+          "items": {
+            "entry": {
+              "name": "&e{ranking}",
+              "lore": [
+                "",
+                "&7Clique para ver o ranking."
+              ]
+            },
+            "empty": {
+              "name": "&cNenhum ranking disponível",
+              "lore": [
+                "&7Este servidor ainda não tem rankings."
+              ]
+            }
+          }
+        },
+        "top": {
+          "title": "{ranking}",
+          "filter": {
+            "selected": "&f ▶ {ranking}",
+            "unselected": "&7 ▶ {ranking}"
+          },
+          "items": {
+            "entry": {
+              "name": "&e{position}º &f{name}",
+              "lore": [
+                "",
+                "&7{ranking}: &f{value}"
+              ]
+            },
+            "self": {
+              "name": "&eSua posição: {position}º",
+              "lore": [
+                "",
+                "&7{ranking}: &f{value}"
+              ]
+            },
+            "filter": {
+              "name": "&bEscolha o ranking",
+              "lore": [
+                "",
+                "{rankings}",
+                "",
+                "&bClique para trocar."
+              ]
+            },
+            "empty": {
+              "name": "&cAinda não há dados",
+              "lore": [
+                "&7Ninguém entrou neste ranking ainda."
+              ]
+            },
+            "failed": {
+              "name": "&cRanking indisponível",
+              "lore": [
+                "&7Não foi possível carregar este ranking.",
+                "&7Tente de novo em alguns instantes."
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
