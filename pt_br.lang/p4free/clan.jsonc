@@ -190,7 +190,7 @@
               " &eEscolha a seção e clique para abrir o guia:",
               ""
             ],
-            "index-entry": " &8• &b{section_name}",
+            "index-entry": "  &8• &b{section_name}",
             "index-entry-hover": "&eClique para abrir esta seção.",
             "sections": {
               "clan-player-name": "Comandos clã, jogador",
