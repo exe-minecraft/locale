@@ -334,7 +334,13 @@
             "description": "entrar no ClanFight com o seu clã"
           },
           "event-force-join": {
-            "description": "enviar um jogador ao ClanFight"
+            "description": "enviar um jogador ao ClanFight",
+            "arguments": {
+              "player": {
+                "name": "jogador",
+                "description": "Jogador que será enviado ao ClanFight."
+              }
+            }
           },
           "sair": {
             "description": "sair do ClanFight"
@@ -370,7 +376,13 @@
             "description": "entrar no FastGlad com o seu clã"
           },
           "event-force-join": {
-            "description": "enviar um jogador ao FastGlad"
+            "description": "enviar um jogador ao FastGlad",
+            "arguments": {
+              "player": {
+                "name": "jogador",
+                "description": "Jogador que será enviado ao FastGlad."
+              }
+            }
           },
           "sair": {
             "description": "sair do FastGlad"
