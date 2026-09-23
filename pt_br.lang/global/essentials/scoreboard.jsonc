@@ -29,6 +29,8 @@
           "&c&lP4 FREE"
         ],
         "build-mode": " &4Modo Construção",
+        // O ícone da vida abaixo do nome dos jogadores.
+        "health": "&c❤",
         // As linhas do exe-scoreboard antigo. {build_mode_status} e {clan_scoreboard} são listas:
         // o modo construção só aparece com o /build ligado, e sem clã a linha de membros sai.
         "lines": [
