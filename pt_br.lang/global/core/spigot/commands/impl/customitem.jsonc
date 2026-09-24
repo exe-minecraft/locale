@@ -23,13 +23,13 @@
         },
         "custom-item-origin": {
           "no-item-in-hand": "Segure o item que você quer consultar!",
-          "no-identity": "Esse item não carrega identidade — não tem história para mostrar.",
+          "no-identity": "Esse item não carrega identidade: não tem história para mostrar.",
           "success": "A história do item {custom_item_key}: &e&n{url}"
         },
         "custom-item-restore": {
           "no-item-in-hand": "Você precisa estar segurando o item que deseja restaurar!",
           "not-unique-item": "Esse item não é um exemplar (não carrega identidade única)!",
-          "not-voided": "Esse item não está inutilizado — não há nada para restaurar.",
+          "not-voided": "Esse item não está inutilizado: não há nada para restaurar.",
           "success": "O item {custom_item_key} foi restaurado com uma identidade nova!"
         }
       }

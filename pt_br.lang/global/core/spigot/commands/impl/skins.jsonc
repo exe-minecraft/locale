@@ -20,7 +20,7 @@
               "description": "Nome do jogador com a skin que deseja"
             }
           },
-          "cannot-use-self": "Você não pode selecionar sua própria skin, para equipa-la utilize /skin resetar",
+          "cannot-use-self": "Você não pode selecionar sua própria skin, para equipá-la utilize /skin resetar",
           "need-original-account": "O jogador selecionado precisa ter um minecraft original!",
           "already-equipped": "Você já está utilizando essa skin!",
           "loading": "Buscando sua skin...",

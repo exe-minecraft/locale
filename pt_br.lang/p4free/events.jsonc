@@ -488,7 +488,7 @@
             },
             "deathmatch": "&4&lMATA-MATA INICIADO! &cO PvP será reativado em 30 segundos.",
             "pvp-enabled": "&aO PvP foi ligado!",
-            "finish-summary": "&6Gladiador finalizado! Clan vencedor: [{clan_winner}] — Mito: {event_myth} ({event_myth_kills} abates).",
+            "finish-summary": "&6Gladiador finalizado! Clan vencedor: [{clan_winner}], Mito: {event_myth} ({event_myth_kills} abates).",
             "border": {
               "eliminated": "&cO clan [{clan_tag}] foi eliminado. Restam {remaining_clans} clans."
             },
@@ -582,8 +582,8 @@
         },
         "history": {
           "title": "&6Histórico do Gladiador",
-          "entry": "&e{event_date} — [{clan_winner}]",
-          "cancelled-entry": "&c{event_date} — [cancelado]",
+          "entry": "&e{event_date}: [{clan_winner}]",
+          "cancelled-entry": "&c{event_date}: [cancelado]",
           "not-found": "&cEdição não encontrada.",
           "detail": "&6Gladiador {event_id} &8| &fVencedor: [{clan_winner}] &8| &fMito: {event_myth} ({event_myth_kills}) &8| &fParticipantes: {event_players} &8| &fMortes: {event_deaths} &8| &fSaídas: {event_exits} &8| &fRushes: {event_rushes} &8| &fEliminações: {event_eliminations}"
         },
@@ -619,7 +619,7 @@
           "player-kills": "&6Abates de jogadores",
           "rush-wins": "&6Vitórias em rush",
           "rush-reversals": "&6Viradas de rush",
-          "entry": "&e{position}º {name} — {value}"
+          "entry": "&e{position}º {name}: {value}"
         }
       },
       "views": {
@@ -771,7 +771,7 @@
             "title": "Histórico do Gladiador",
             "items": {
               "entry": {
-                "name": "&aGladiador — {event_date}",
+                "name": "&aGladiador de {event_date}",
                 "lore": [
                   "&7Data: &f{event_date}",
                   "&7Duração: &f{event_duration}",
