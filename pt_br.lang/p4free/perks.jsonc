@@ -204,6 +204,7 @@
 
       "items": {
         "perk": {
+          "display-name": "&bItem de perk",
           "name": "&bPerk {perk} {level}",
           "lore": [
             "&7Desbloqueia &f{perk} &7no nível &f{level}&7.",
@@ -212,6 +213,7 @@
           ]
         },
         "slot": {
+          "display-name": "&bSlot de Perk",
           "name": "&bSlot de Perk",
           "lore": [
             "&7Dá &f+1 &7espaço para manter mais uma perk ativa.",
