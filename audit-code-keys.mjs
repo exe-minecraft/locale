@@ -7,7 +7,7 @@ const localeRoot = path.resolve("pt_br.lang");
 
 function walk(directory, accept) {
   return fs.readdirSync(directory, { withFileTypes: true }).flatMap(entry => {
-    if ([".git", ".gradle", "build"].includes(entry.name)) return [];
+    if ([".git", ".gradle", ".claude", "build", "test"].includes(entry.name)) return [];
     const target = path.join(directory, entry.name);
     return entry.isDirectory() ? walk(target, accept) : accept(target) ? [target] : [];
   });
@@ -49,7 +49,9 @@ function reference(key, file) {
 
 const sourceFiles = walk(sourceRoot, file => /\.(java|json|ya?ml)$/.test(file));
 for (const file of sourceFiles) {
-  const source = stripComments(fs.readFileSync(file, "utf8"), path.extname(file));
+  // O prefixo de um comando não é chave: as chaves dele saem da resolução por classe, mais abaixo.
+  const source = stripComments(fs.readFileSync(file, "utf8"), path.extname(file))
+    .replace(/\bsetPrefixLangKey\(\s*"[^"]*"\s*\)/g, "");
   const expression = /["'](plugins\.[a-zA-Z0-9_.-]+)["']/g;
   for (const match of source.matchAll(expression)) {
     reference(match[1], file);
@@ -128,5 +130,16 @@ const missing = [...references].filter(([key]) =>
 for (const [key, files] of missing) {
   console.log(`${key}\t${[...files].join(",")}`);
 }
-console.error(`Checked ${references.size} code keys; ${missing.length} missing.`);
-process.exitCode = missing.length ? 1 : 0;
+
+// O caminho inverso: namespace que nenhum código cita é texto de um plugin que não existe mais.
+// O swords.jsonc do exe-p4free-core antigo passou um mês parecendo o texto da espada em jogo.
+const allSource = sourceFiles.map(file => fs.readFileSync(file, "utf8")).join("\n");
+const orphans = [...new Set([...defined].map(key => key.split(".").slice(0, 2).join(".")))]
+  .filter(namespace => !allSource.includes(`"${namespace}.`) && !allSource.includes(`"${namespace}"`))
+  .sort();
+
+for (const namespace of orphans) {
+  console.log(`${namespace}\tnamespace sem uso no código`);
+}
+console.error(`Checked ${references.size} code keys; ${missing.length} missing, ${orphans.length} unused namespaces.`);
+process.exitCode = missing.length || orphans.length ? 1 : 0;
