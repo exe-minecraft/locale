@@ -1,0 +1,29 @@
+{
+  "plugins": {
+    "batatadas": {
+      "broadcast": "&6{player} batatou! &7Total: {amount} batatada(s).",
+      "balance": "&e{player} tem {amount} batatada(s).",
+      "no-permission": "&cVocê não pode alterar as batatadas.",
+      "usage": {
+        "self": {
+          "syntax": "",
+          "description": "ver as suas batatadas"
+        },
+        "other": {
+          "syntax": "<jogador>",
+          "description": "ver as batatadas de um jogador"
+        },
+        "top": {
+          "syntax": "top",
+          "description": "ver o ranking de batatadas"
+        },
+        "set": {
+          "syntax": "set <jogador> <quantidade>",
+          "description": "definir as batatadas de um jogador, zero ou mais"
+        }
+      },
+      "updated": "&aContagem atualizada.",
+      "failed": "&cNão foi possível consultar ou atualizar as batatadas agora."
+    }
+  }
+}

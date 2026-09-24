@@ -83,8 +83,8 @@
         "deleted": "&cSua arma foi excluída.",
         "free-upgrade": "&aParabéns! &f{enchant} &asubiu para o nível &f{level}&a de graça, pelo seu grupo."
       },
-      // Os nomes dos encantamentos. Ficam aqui e nao no config.yml porque sao texto
-      // visivel: no config saiam sem acento e sem cor.
+      // Os nomes dos encantamentos. Ficam aqui e não no config.yml porque são texto
+      // visível: no config saíam sem acento e sem cor.
       "enchants": {
         "sharpening": { "name": "&bAfiação" },
         "unbreakable": { "name": "&bIndestrutível" },
@@ -206,7 +206,7 @@
                 "&cVocê não tem {enchant_currency} suficientes."
               ]
             },
-            // 10: o nivel que o grupo leva de graca (o upgrade VIP do sistema antigo).
+            // 10: o nível que o grupo leva de graça (o upgrade VIP do sistema antigo).
             "10": {
               "name": "&f{enchant_name}",
               "lore": [
@@ -248,6 +248,7 @@
       },
       // O livro de encantamento, o segundo caminho para subir um nível.
       "enchant-book": {
+        "display-name": "Livro de encantamento",
         "item": {
           "name": "&fLivro de &a{enchant}",
           "lore": [

@@ -24,6 +24,9 @@
               ""
             ]
           }
+        },
+        "fishing": {
+          "cannot-fish-on-spawn": "&cVocê não pode pescar no spawn."
         }
       }
     }

@@ -36,7 +36,10 @@
           },
           "punishment-not-found": "Não foi possível encontrar nenhuma punição para o usuário.",
           "need-highest-group": "Você não pode revogar punições de usuários com um cargo maior ou igual ao seu.",
-          "success": "Punição revogada com sucesso."
+          "success": "Punição revogada com sucesso.",
+          "dialog": {
+            "query": "&eConfirme a revogação da punição de {target_name}."
+          }
         }
       }
     }

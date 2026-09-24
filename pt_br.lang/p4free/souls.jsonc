@@ -1,0 +1,8 @@
+{
+  "plugins": {
+    "souls": {
+      "reward": "&d+{amount} almas &7pelo abate de {victim}.",
+      "streak": "&dSua sequência de abates ativou o bônus de almas!"
+    }
+  }
+}

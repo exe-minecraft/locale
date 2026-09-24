@@ -1,0 +1,44 @@
+{
+  "plugins": {
+    "essentials": {
+      "commands": {
+        "warps": {
+          "app-not-available": "&cEste warp não está disponível neste servidor.",
+          "minimum-group": "&cVocê precisa do grupo {required_group_display_tag}&c ou superior para acessar este warp."
+        }
+      },
+      "warps": {
+        "shop": {
+          "name": "&cLoja",
+          "description": [
+            "&7Acesse a loja de itens."
+          ]
+        },
+        "vip": {
+          "name": "&cÁrea VIP",
+          "description": [
+            "&7Área exclusiva para jogadores VIP."
+          ]
+        },
+        "mundo": {
+          "name": "&cMundo aberto",
+          "description": [
+            "&7Teleporta para um local aleatório."
+          ]
+        },
+        "cashshop": {
+          "name": "&6Loja de Cash",
+          "description": [
+            "&7Acesse a loja de Cash."
+          ]
+        },
+        "arena": {
+          "name": "&cArena",
+          "description": [
+            "&7Teleporta para a arena do servidor."
+          ]
+        }
+      }
+    }
+  }
+}

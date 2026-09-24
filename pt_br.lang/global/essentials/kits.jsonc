@@ -61,7 +61,8 @@
           },
           "already-have-with-id": "Já existe um kit com esse id criado!",
           "invalid-kit-id-length": "Você não pode usar um id que tem mais de 16 caracteres.",
-          "success": "Você criou o kit com sucesso!"
+          "success": "Você criou o kit com sucesso!",
+          "cannot-find-with-id": "&cNão foi possível encontrar um kit com esse ID."
         },
         "deletekit": {
           "arguments": {
@@ -130,7 +131,8 @@
                 "responses": {
                   "success": "Items do kit \"{kit_id}\" alterados."
                 }
-              }
+              },
+              "success": "&aOs itens do kit &f{kit_id}&a foram alterados."
             },
             "update-delay": {
               "conversation": {

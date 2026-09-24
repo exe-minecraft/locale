@@ -1,0 +1,14 @@
+{
+  "plugins": {
+    "essentials": {
+      "messages": {
+        "restrictions": {
+          "command-disabled": "&cEste comando está desabilitado neste servidor.",
+          "custom-item-disabled": "&cVocê não pode usar este item neste servidor.",
+          "material-disabled": "&cVocê não pode usar este material neste servidor.",
+          "action-disabled": "&cVocê não pode realizar esta ação neste servidor."
+        }
+      }
+    }
+  }
+}

@@ -4,12 +4,19 @@
       "messages": {
         "potion-drop": {
           "too-fast": "&cVocê está dropando poções rápido demais. Espere um pouco entre uma e outra."
-        }
+        },
+        "crops": {
+          "need-sneak": "&cSegure SHIFT para quebrar esta plantação."
+        },
+        "inventory-full": "&cSeu inventário está cheio. Os itens ficaram no chão."
       },
       "preferences": {
         "lantern": {
           "name": "&eLuz",
-          "description": ["&7Visão noturna ligada pelo /luz,", "&7que volta sozinha ao entrar."]
+          "description": [
+            "&7Visão noturna ligada pelo /luz,",
+            "&7que volta sozinha ao entrar."
+          ]
         }
       },
       "commands": {
@@ -24,7 +31,8 @@
         },
         "lantern": {
           "success-disable": "&cLuz desativada!",
-          "success-enable": "&aLuz ativada!"
+          "success-enable": "&aLuz ativada!",
+          "cannot-use-on-spawn": "&cVocê não pode usar a lanterna no spawn."
         },
         "pot": {
           "need-potion-in-hand": "&cVocê precisa segurar uma poção na mão para usar este comando.",
@@ -35,6 +43,9 @@
           "cannot-repair-item": "Você não pode reparar este item.",
           "dont-have-currency-value": "Você precisa de {repair_currency_value_formatted} para conseguir reparar esse item!",
           "success": "Item reparado com sucesso."
+        },
+        "compact": {
+          "no-pet": "&cVocê não possui um pet ativo para compactar."
         }
       }
     }

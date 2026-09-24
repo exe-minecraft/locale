@@ -1,0 +1,33 @@
+{
+  "plugins": {
+    // Almas e tokens só existem no P4Free, por isso o nome delas vive aqui e não no global.
+    "currencies": {
+      "types": {
+        "souls": {
+          "name": {
+            "singular": "Alma",
+            "plural": "Almas"
+          },
+          "visualization": "&d{currency_formatted_value}",
+          "features": {
+            "check": {
+              "visualization": "&d{currency_formatted_value}"
+            }
+          }
+        },
+        "tokens": {
+          "name": {
+            "singular": "Token",
+            "plural": "Tokens"
+          },
+          "features": {
+            "check": {
+              "visualization": "&b{currency_formatted_value}"
+            }
+          },
+          "visualization": "&b{currency_formatted_value}"
+        }
+      }
+    }
+  }
+}

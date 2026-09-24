@@ -1,0 +1,31 @@
+{
+  "plugins": {
+    "essentials": {
+      "commands": {
+        "redstone": {
+          "arguments": {
+            "action": {
+              "name": "ação",
+              "description": "Ação de depuração ou controle da redstone"
+            }
+          },
+          "debug": {
+            "on": "&aDepuração de redstone ativada.",
+            "off": "&cDepuração de redstone desativada."
+          },
+          "tick": {
+            "info": "&eEstado do tick de redstone: &f{redstone_tick_state}",
+            "on": "&aTick de redstone ativado.",
+            "off": "&cTick de redstone desativado.",
+            "update": "&aConfiguração do tick de redstone atualizada."
+          }
+        }
+      },
+      "messages": {
+        "redstone-limiter": {
+          "too-many-redstone-circuits": "&cHá circuitos de redstone demais neste chunk."
+        }
+      }
+    }
+  }
+}

@@ -8,6 +8,54 @@
           "",
           "&fAdquira &cVIP &fou itens acessando:",
           "&crede-exe.com"
+        ],
+        "amethyst": [
+          "&d&lAMETISTA",
+          "&fUse suas ametistas para obter recompensas."
+        ],
+        "arena-above": [
+          "&c&lARENA",
+          "&fEntre e enfrente outros jogadores."
+        ],
+        "arena-below-1": [
+          "&c&lARENA",
+          "&fPrepare-se para o combate."
+        ],
+        "arena-below-2": [
+          "&c&lARENA",
+          "&fBoa sorte!"
+        ],
+        "market-1": [
+          "&c&lMERCADO",
+          "&fCompre e venda itens aqui."
+        ],
+        "market-2": [
+          "&c&lMERCADO",
+          "&fConfira as ofertas disponíveis."
+        ],
+        "market-3": [
+          "&c&lMERCADO",
+          "&fNegocie com outros jogadores."
+        ],
+        "market-4": [
+          "&c&lMERCADO",
+          "&fEncontre o que precisa."
+        ],
+        "shop": [
+          "&c&lLOJA",
+          "&fConfira os itens disponíveis."
+        ],
+        "vault-1": [
+          "&c&lCOFRE",
+          "&fAcesse seus itens armazenados."
+        ],
+        "vault-2": [
+          "&c&lCOFRE",
+          "&fMantenha seus itens seguros."
+        ],
+        "vip": [
+          "&c&lVIP",
+          "&fConfira as vantagens disponíveis."
         ]
       }
     }

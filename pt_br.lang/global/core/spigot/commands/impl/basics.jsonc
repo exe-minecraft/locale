@@ -86,7 +86,10 @@
             "need-item-in-hand": "Você precisa estar segurando um item.",
             "enchantment-not-found": "O encantamento informado não foi encontrado.",
             "enchantment-success": "Encantamento adicionado com sucesso."
-          }
+          },
+          "need-item-in-hand": "&cVocê precisa estar segurando um item.",
+          "enchantment-not-found": "&cO encantamento informado não foi encontrado.",
+          "enchantment-success": "&aEncantamento adicionado com sucesso."
         },
         "gamemode": {
           "arguments": {
@@ -135,7 +138,17 @@
           "not-found": "&cNão foi encontrada a skin desse jogador.",
           "full": "&cSeu inventário está cheio.",
           "item-name": "&eCabeça",
-          "success": "&aCabeça entregue."
+          "success": "&aCabeça entregue.",
+          "arguments": {
+            "key": {
+              "name": "jogador|textura",
+              "description": "Jogador ou textura da cabeça que você deseja receber"
+            },
+            "amount": {
+              "name": "quantidade",
+              "description": "Quantas cabeças, de 1 a 64"
+            }
+          }
         },
         "heal": {
           "arguments": {
@@ -178,7 +191,13 @@
         },
         "ping": {
           "ping-target": "O ping de {target_name} é de {target_ping} ms.",
-          "ping-sender": "Seu ping é de {sender_ping} ms."
+          "ping-sender": "Seu ping é de {sender_ping} ms.",
+          "arguments": {
+            "name": {
+              "name": "jogador",
+              "description": "Jogador cujo ping você deseja consultar"
+            }
+          }
         },
         "plugins": {
           "message": "&fPlugins ({plugins_count}): {plugins}"

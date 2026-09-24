@@ -102,7 +102,11 @@
             },
             "without-balance": "Você não possui {currency_plural_name_lower_case} para enviar para o jogador.",
             "success-sender": "&aVocê enviou {currency_color}{currency_icon}{currency_formatted_value} &apara {currency_target_name_with_color}.",
-            "success-target": "&aVocê recebeu {currency_color}{currency_icon}{currency_formatted_value} de &a{currency_sender_name_with_color}."
+            "success-target": "&aVocê recebeu {currency_color}{currency_icon}{currency_formatted_value} de &a{currency_sender_name_with_color}.",
+            "dialog": {
+              "title": "Confirmar pagamento",
+              "body": "&eConfirme o pagamento de {currency_formatted_value} para {currency_target_name}."
+            }
           },
           "remove": {
             "description": "remover saldo de um jogador",
@@ -136,7 +140,34 @@
             "description": "atualizar o ranking desta moeda",
             "success": "Solicitação de atualização enviada com sucesso"
           }
+        },
+        "givecheck": {
+          "arguments": {
+            "target": {
+              "name": "jogador",
+              "description": "Jogador online que recebe o cheque"
+            },
+            "currency": {
+              "name": "moeda",
+              "description": "Moeda do cheque, entre as habilitadas"
+            },
+            "value": {
+              "name": "valor",
+              "description": "Valor do cheque, maior que zero"
+            },
+            "amount": {
+              "name": "quantidade",
+              "description": "Quantos cheques, de 1 a 64"
+            }
+          }
         }
+      },
+      "check-give": {
+        "success": "&aCheque entregue.",
+        "full": "&cO inventário do jogador está cheio.",
+        "recovery-owner": "&cSomente o jogador que iniciou este resgate pode confirmá-lo.",
+        "retry-redemption": "&eUse o cheque devolvido para confirmar o resgate pendente.",
+        "redeemed": "&aVocê resgatou {amount} {currency}."
       }
     }
   }

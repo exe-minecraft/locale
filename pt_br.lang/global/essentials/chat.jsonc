@@ -103,6 +103,22 @@
         }
       },
       "chat": {
+        "preferences": {
+          "global": {
+            "name": "&eChat global",
+            "description": [
+              "&7Exibe as mensagens enviadas",
+              "&7no chat global."
+            ]
+          },
+          "local": {
+            "name": "&eChat local",
+            "description": [
+              "&7Exibe as mensagens enviadas",
+              "&7por jogadores próximos."
+            ]
+          }
+        },
         // As tags clicáveis da linha de chat. O texto é a âncora que a ação procura na
         // linha, por isso tem de ser igual ao rótulo do formato acima.
         "tags": {

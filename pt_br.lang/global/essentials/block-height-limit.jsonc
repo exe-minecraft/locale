@@ -1,0 +1,11 @@
+{
+  "plugins": {
+    "essentials": {
+      "messages": {
+        "block-height-limit": {
+          "exceeded": "&cVocê não pode construir acima da altura {limit}."
+        }
+      }
+    }
+  }
+}
