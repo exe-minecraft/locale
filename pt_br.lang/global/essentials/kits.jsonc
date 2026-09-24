@@ -101,6 +101,7 @@
       "messages": {
         "kits": {
           "on-collect": {
+            "unavailable": "Este kit ainda não está disponível.",
             "dont-have-permission": "Você não possui permissão para coletar esse kit.",
             "in-delay": "Você precisa esperar mais {kit_cooldown_remaining} para coletar esse kit.",
             "success": "Kit \"&f{kit_name}\" coletado!"

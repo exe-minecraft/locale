@@ -38,7 +38,7 @@
           "need-highest-group": "Você não pode revogar punições de usuários com um cargo maior ou igual ao seu.",
           "success": "Punição revogada com sucesso.",
           "dialog": {
-            "query": "&eConfirme a revogação da punição de {target_name}."
+            "query": "&eConfirme a revogação de {punishment_category_name} ({punishment_type_name}) de {target_name}."
           }
         }
       }

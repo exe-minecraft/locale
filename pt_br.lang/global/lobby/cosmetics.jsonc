@@ -79,6 +79,7 @@
           "&7para usar o gadget."
         ],
         "messages": {
+          "purchase-unconfirmed": "Não foi possível confirmar a compra de {cosmetic_name}&c. A falha foi registrada: procure a equipe se o cosmético ou o Cash não aparecerem.",
           "equipped": "Você equipou {cosmetic_name}&a.",
           "unequipped": "Você removeu o cosmético de {category_name}.",
           "unequipped-all": "Todos os seus cosméticos foram removidos.",

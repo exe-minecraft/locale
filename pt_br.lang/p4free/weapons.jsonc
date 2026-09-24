@@ -49,6 +49,7 @@
           }
         },
         "espada": {
+          "still-loading": "Sua espada ainda está carregando. Tente de novo em instantes.",
           "inventory-full": "Libere um espaço no inventário antes de resgatar a espada.",
           "already-have": "Você já tem a espada especial na mochila.",
           "cooldown": "Aguarde para resgatar a espada de novo.",
@@ -61,6 +62,7 @@
           ]
         },
         "machado": {
+          "still-loading": "Seu machado ainda está carregando. Tente de novo em instantes.",
           "inventory-full": "Libere um espaço no inventário antes de resgatar o machado.",
           "already-have": "Você já tem o machado especial na mochila.",
           "cooldown": "Aguarde para resgatar o machado de novo.",
@@ -74,6 +76,7 @@
         }
       },
       "messages": {
+        "profile-loading": "Seu perfil ainda está carregando. Tente de novo em instantes.",
         "duplicates-removed": "Removemos {amount} arma(s) duplicada(s) do seu inventário.",
         "skull-cracker": "&6Crítico! &eQuebra-Crânio ativado.",
         "armor-breaker": {

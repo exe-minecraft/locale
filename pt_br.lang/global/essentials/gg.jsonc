@@ -3,6 +3,21 @@
     "essentials": {
       "messages": {
         "gg": {
+          "palette": [
+            "&4&lGG!",
+            "&c&lG&e&lG!",
+            "&6&lGG!",
+            "&e&lG&6&lG!",
+            "&a&lGG!",
+            "&2&lG&3&lG!",
+            "&b&lGG!",
+            "&3&lGG!",
+            "&9&lGG!",
+            "&d&lGG!",
+            "&5&lGG!",
+            "&4&lGG!",
+            "&6&lGG!"
+          ],
           "on-transaction": [
             "",
             " &a&lNova compra confirmada!",

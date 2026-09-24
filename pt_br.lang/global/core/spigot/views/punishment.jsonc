@@ -9,6 +9,7 @@
               "query": "&7Digite ou envie as &f&lprovas &7do infrator."
             },
             "punishment-apply": {
+              "error": "Não foi possível confirmar a punição. Confira no /checkpunir antes de aplicar de novo.",
               "pending": "Aplicando punição...",
               "success": "Você puniu o jogador {punishment_target_name_with_color} com sucesso!",
               "success-broadcast": [

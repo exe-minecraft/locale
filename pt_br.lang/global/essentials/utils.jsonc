@@ -11,6 +11,13 @@
         "inventory-full": "&cSeu inventário está cheio. Os itens ficaram no chão."
       },
       "preferences": {
+        "first-login": {
+          "description": [
+            "&7Marca interna: os comandos de primeiro",
+            "&7login deste modo de jogo já rodaram."
+          ],
+          "name": "&ePrimeiro login"
+        },
         "lantern": {
           "name": "&eLuz",
           "description": [

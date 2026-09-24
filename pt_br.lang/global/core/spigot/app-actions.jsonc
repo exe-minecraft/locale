@@ -6,6 +6,7 @@
           "app-action": {
             "maintenance": {
               "dialog": {
+                "error": "&cNão foi possível alterar a manutenção de: {apps}. Tente de novo.",
                 "query": "Grupo mínimo para acessar durante a manutenção",
                 "group-not-found": "&cO grupo informado não existe.",
                 "success": "&aO grupo de manutenção foi alterado com sucesso."

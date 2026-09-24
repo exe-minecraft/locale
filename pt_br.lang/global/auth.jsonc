@@ -21,7 +21,8 @@
             "Utilize /logar <senha>"
           ],
           "kick-message": [
-            "&cVocê excedeu o limite de tentativas!"
+            "&cVocê excedeu o limite de tentativas!",
+            "&cEspere 10 minutos e tente de novo."
           ],
           "too-many-logged-accounts": [
             "&cVocê está com muitas contas conectadas!"
@@ -51,7 +52,7 @@
             "Utilize /logar <senha>"
           ],
           "kick-message": [
-            "&cO codigo de login inserido é invalido."
+            "&cO código de login inserido é inválido."
           ]
         },
         "register": {

@@ -33,6 +33,7 @@
         }
       },
       "messages": {
+        "loading": "&cOs boosters ainda estão carregando. Tente de novo em instantes.",
         "different-multiplier": "&cJá existe um booster ativo com outro multiplicador. Seu item foi devolvido.",
         "failed": "&cNão foi possível ativar o booster. Seu item foi devolvido.",
         "activated": "&aBooster ativado. Boosters iguais somam duração.",

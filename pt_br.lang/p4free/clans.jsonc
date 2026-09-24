@@ -291,6 +291,7 @@
               }
             },
             "errors": {
+              "load-failed": "&cNão foi possível carregar a lista de clãs agora. Tente de novo em instantes.",
               "empty": "&cAinda não há nenhum clã criado."
             },
             "header": [

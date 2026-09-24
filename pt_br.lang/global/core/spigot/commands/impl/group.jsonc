@@ -23,12 +23,13 @@
                 "description": "Dias de duração; em branco ou 0 = permanente"
               }
             },
-            "need-highest-group": "Você só pode adicionar grupos menores ou iguais ao seu!",
+            "need-highest-group": "Você só pode adicionar grupos abaixo do seu nesse servidor!",
             "error": "Sua tentativa de adicionar o grupo falhou, tente novamente mais tarde!",
             "success": "Você adicionou o grupo {group_id} para o jogador {target_name} no servidor {server_id} por {days} dias.",
             "success-permanent": "Você adicionou o grupo {group_id} para o jogador {target_name} no servidor {server_id} permanentemente."
           },
           "remove": {
+            "need-highest-group": "Você só pode remover grupos abaixo do seu nesse servidor!",
             "description": "tirar um grupo de um jogador",
             "arguments": {
               "target": {

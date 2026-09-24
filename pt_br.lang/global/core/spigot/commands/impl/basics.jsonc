@@ -35,6 +35,7 @@
         },
         "profile": {
           "message": {
+            "wallet-value": "R$ {value}",
             "identity": [
               "",
               " &eSeu perfil:",
@@ -92,6 +93,7 @@
           "enchantment-success": "&aEncantamento adicionado com sucesso."
         },
         "gamemode": {
+          "gamemode-not-allowed-target": "{target_name} não pode ficar no modo {gamemode_name}!",
           "arguments": {
             "type": {
               "name": "gamemode",
@@ -315,6 +317,7 @@
           "success-deactivated": "&cModo vanish desabilitado com sucesso."
         },
         "vip-time": {
+          "permanent": "Permanente",
           "no-group": "Você não possui nenhum grupo vip!",
           "visualization-format": " {user_group_display_name} &8➠ &7{user_group_expire_in}",
           "visualization": [

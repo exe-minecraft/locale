@@ -116,6 +116,7 @@
             "success": "{target_name} agora é original."
           },
           "cracked": {
+            "original-error": "A senha de {target_name} foi trocada, mas a conta continua original. Rode o comando de novo.",
             "description": "tornar pirata a conta de um jogador",
             "arguments": {
               "target": {
@@ -133,6 +134,7 @@
             "success": "{target_name} agora é pirata."
           },
           "reload": {
+            "failed": "O pedido de reload falhou em {failed_amount} de {app_amount} app(s). Tente de novo.",
             "description": "recarregar as configs, ou o locale e os menus",
             "arguments": {
               "scope": {

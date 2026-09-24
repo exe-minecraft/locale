@@ -9,6 +9,14 @@
             ]
           },
           "connection": {
+            "name-owned-by-other-account": [
+              "&c&lEXE&r",
+              "",
+              "&cO nick &f{name} &cpertence a outra conta da rede.",
+              "&cSe ele é seu, procure a nossa equipe:",
+              "",
+              "&f{discord_invite_url}"
+            ],
             "name-pattern-invalid": [
               "&c&lEXE&r",
               "",

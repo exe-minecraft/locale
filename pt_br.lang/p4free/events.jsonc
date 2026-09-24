@@ -420,6 +420,7 @@
       },
       "messages": {
         "commands": {
+          "exit-failed": "Não foi possível levar você de volta ao spawn. Reconecte para sair do evento.",
           "already-stopped": "Esse evento já está parado.",
           "cant-start": "Já existe um evento ocorrendo!",
           "need-clan": "Para entrar no evento é necessário possuir um clan!",
@@ -530,7 +531,7 @@
               }
             },
             "stacked": {
-              "warning": "&c[TEIA] &fO clan [{clan_tag}] atingiu {players} jogadores empilhados.",
+              "warning": "&c[TEIA] &fO clan [{clan_tag}] atingiu {players} jogadores empilhados em &e{x} {y} {z}&f.",
               "reversal": "&6VIRADA DE RUSH! &fO clan [{winner_clan}] virou contra [{loser_clan}]. &7Jogadores na teia: &f[{loser_clan}] {loser_players}.",
               "web-wear": "&c[TEIA] &f{on_web} de {members} membros do clan [{clan_tag}] estão na teia. &cA partir de 20 s nela, a armadura de todo o clan gasta mais a cada golpe, e mais ainda com o tempo."
             },

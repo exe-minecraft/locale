@@ -3,6 +3,7 @@
     "core": {
       "messages": {
         "views": {
+          "unavailable": "Este menu está indisponível no momento.",
           "app-action": {
             "need-apps-selection": "Você precisa selecionar os servidores!",
             "maintenance": {},

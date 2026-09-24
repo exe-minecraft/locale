@@ -29,6 +29,7 @@
           "success": "Senha alterada com sucesso!"
         },
         "cracked": {
+          "original-error": "Sua senha foi salva, mas a conta continua original. Tente o comando de novo.",
           "arguments": {
             "password": {
               "name": "senha",
@@ -40,6 +41,7 @@
           "success": "Sua conta foi alterada para pirata, basta relogar para aplicar as mudanças!"
         },
         "premium": {
+          "too-many-attempts": "Muitas senhas erradas nesta conta. Espere 10 minutos e tente de novo.",
           "arguments": {
             "password": {
               "name": "senha",
