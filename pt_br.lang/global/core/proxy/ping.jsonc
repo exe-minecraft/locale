@@ -3,7 +3,8 @@
     "core": {
       "proxy": {
         "ping": {
-          "lowest-version": "&c⚠ Versão 1.8+ recomendada."
+          "lowest-version": "&c⚠ Versão 1.8+ recomendada.",
+          "maintenance": "&cManutenção"
         }
       }
     }

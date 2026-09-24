@@ -1,0 +1,9 @@
+{
+  "plugins": {
+    "player-sync": {
+      "messages": {
+        "load-failed": "&cNão foi possível carregar seus dados. Tente entrar novamente."
+      }
+    }
+  }
+}

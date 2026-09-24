@@ -64,7 +64,8 @@
             ],
             "lost-sent-to-lobby": [
               "&cO servidor em que você estava caiu, e você foi levado para o lobby."
-            ]
+            ],
+            "reconnect": "&cReconecte-se, por favor!"
           },
           "punishment": {
             "mute-message-permanent": [

@@ -1,6 +1,14 @@
 {
   "plugins": {
     "events": {
+      "types": {
+        "mini-glad": { "name": "Mini Gladiador" },
+        "gladiator": { "name": "Gladiador" },
+        "cage": { "name": "Cage" },
+        "koth": { "name": "Koth" },
+        "clan-fight": { "name": "ClanFight" },
+        "fast-glad": { "name": "FastGlad" }
+      },
       "values": {
         "none": "nenhum",
         "cancelled": "cancelado",
@@ -497,7 +505,29 @@
               "postponed": "&cA caçada não encontrou um clan elegível e foi adiada.",
               "started": "&6O clan [{target_clan}] foi marcado como alvo da caçada por {seconds} segundos!",
               "survived": "&aO clan [{target_clan}] sobreviveu à caçada e recebeu a recompensa!",
-              "reward-hover": "&7Passe o mouse aqui para ver as recompensas."
+              "reward-hover": "&7Passe o mouse aqui para ver as recompensas.",
+              "rewards": {
+                "survivor": {
+                  "items": {
+                    "helmet": {
+                      "name": "&6Capacete da Caçada"
+                    }
+                  },
+                  "description": [
+                    "&aRecompensas do clan sobrevivente"
+                  ]
+                },
+                "killer": {
+                  "items": {
+                    "chestplate": {
+                      "name": "&6Peitoral da Caçada"
+                    }
+                  },
+                  "description": [
+                    "&aRecompensas do clan caçador"
+                  ]
+                }
+              }
             },
             "stacked": {
               "warning": "&c[TEIA] &fO clan [{clan_tag}] atingiu {players} jogadores empilhados.",

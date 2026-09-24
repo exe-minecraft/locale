@@ -27,8 +27,26 @@
         "enchant-book": {
           "target-offline": "Esse jogador não está online.",
           "target-inventory-full": "O inventário desse jogador está cheio.",
-          "invalid-enchant": "Arma ou encantamento inválido. Use /darencantamento <jogador> <espada|machado> <encantamento> <niveis>",
-          "given": "Você deu um livro de {enchant} {levels} a {player}."
+          "invalid-enchant": "Arma ou encantamento inválido. Use /darencantamento <jogador> <espada|machado> <encantamento> <níveis>",
+          "given": "Você deu um livro de {enchant} {levels} a {player}.",
+          "arguments": {
+            "target": {
+              "name": "jogador",
+              "description": "Jogador online que recebe o livro"
+            },
+            "weapon": {
+              "name": "espada|machado",
+              "description": "A arma em que o encantamento entra"
+            },
+            "enchant": {
+              "name": "encantamento",
+              "description": "O id do encantamento, como sharpening ou skull-cracker"
+            },
+            "levels": {
+              "name": "níveis",
+              "description": "Quantos níveis o livro dá, de 1 em diante"
+            }
+          }
         },
         "espada": {
           "inventory-full": "Libere um espaço no inventário antes de resgatar a espada.",
@@ -52,7 +70,7 @@
             " &7Prestígio &f{prestige}&7, &f{kills}&7 abate(s).",
             " &eShift + botão direito com ele na mão abre a bancada.",
             ""
-          ],
+          ]
         }
       },
       "messages": {

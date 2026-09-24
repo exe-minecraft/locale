@@ -37,7 +37,8 @@
                 "&0você vê."
               ]
             }
-          }
+          },
+          "book-fallback": "&eO código do Discord está no livro que você recebeu."
         }
       }
     }

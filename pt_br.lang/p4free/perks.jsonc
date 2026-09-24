@@ -222,6 +222,11 @@
       },
 
       "messages": {
+        "bar": {
+          "symbol": "▋",
+          "done-color": "&a",
+          "left-color": "&c"
+        },
         "charging": "{bar} &e{perk}...",
         "in-cooldown": "Aguarde {time} para usar {perk} de novo.",
 

@@ -1,0 +1,57 @@
+{
+  "plugins": {
+    "core": {
+      "time": {
+        "second": {
+          "singular": "segundo",
+          "plural": "segundos"
+        },
+        "minute": {
+          "singular": "minuto",
+          "plural": "minutos"
+        },
+        "hour": {
+          "singular": "hora",
+          "plural": "horas"
+        },
+        "day": {
+          "singular": "dia",
+          "plural": "dias"
+        },
+        "week": {
+          "singular": "semana",
+          "plural": "semanas"
+        },
+        "month": {
+          "singular": "mês",
+          "plural": "meses"
+        },
+        "year": {
+          "singular": "ano",
+          "plural": "anos"
+        },
+        "second-simple": {
+          "singular": "s",
+          "plural": "s"
+        },
+        "minute-simple": {
+          "singular": "m",
+          "plural": "m"
+        },
+        "hour-simple": {
+          "singular": "h",
+          "plural": "h"
+        },
+        "day-simple": {
+          "singular": "d",
+          "plural": "d"
+        },
+        "separator": {
+          "singular": ",",
+          "plural": "e"
+        },
+        "date-time-pattern": "dd/MM/yyyy 'às' HH:mm"
+      }
+    }
+  }
+}

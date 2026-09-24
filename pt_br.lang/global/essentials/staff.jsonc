@@ -83,7 +83,12 @@
           "actionbar": {
             "no-data": "&e&l[TARGET] &r&f{player} &7| Ping: &f{ping}ms &7| Sem dados de combate",
             "no-focus": "&e&l[TARGET] &r&f{player} &7| Ping: &f{ping}ms &7| Sem foco ativo",
-            "focus": "&e&l[TARGET] &r&f{player} &7→ &f{victim} &7| &f{time} &7| {color}{percent}% &7| Ping: &f{ping}ms"
+            "focus": "&e&l[TARGET] &r&f{player} &7→ &f{victim} &7| &f{time} &7| {color}{percent}% &7| Ping: &f{ping}ms",
+            "percent-color": {
+              "high": "&c",
+              "medium": "&e",
+              "low": "&a"
+            }
           }
         }
       }

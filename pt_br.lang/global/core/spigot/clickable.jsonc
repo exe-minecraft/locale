@@ -1,0 +1,9 @@
+{
+  "plugins": {
+    "core": {
+      "clickable": {
+        "anchor": "AQUI"
+      }
+    }
+  }
+}

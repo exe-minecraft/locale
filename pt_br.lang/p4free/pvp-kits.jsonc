@@ -17,7 +17,12 @@
           "&b Esta vantagem funcionará",
           "&b até o fim desta temporada.",
           ""
-        ]
+        ],
+        "color": {
+          "long": "&6",
+          "medium": "&b",
+          "short": "&a"
+        }
       },
       "commands": {
         "kit": {

@@ -168,6 +168,9 @@
         "recovery-owner": "&cSomente o jogador que iniciou este resgate pode confirmá-lo.",
         "retry-redemption": "&eUse o cheque devolvido para confirmar o resgate pendente.",
         "redeemed": "&aVocê resgatou {amount} {currency}."
+      },
+      "requirement": {
+        "unknown-currency": "Moeda não registrada"
       }
     }
   }

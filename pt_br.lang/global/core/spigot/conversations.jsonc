@@ -33,6 +33,11 @@
                 "&7Você possui um minuto para responder.",
                 ""
               ]
+            },
+            "hover": {
+              "agree": "&aClique para concordar.",
+              "deny": "&cClique para negar.",
+              "cancel": "&cClique para cancelar."
             }
           }
         }

@@ -1,0 +1,9 @@
+{
+  "plugins": {
+    "essentials": {
+      "stack-drop": {
+        "display-name": "&f{amount}x {item_name}"
+      }
+    }
+  }
+}

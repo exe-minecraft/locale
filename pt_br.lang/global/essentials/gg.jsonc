@@ -13,7 +13,8 @@
             "",
             " &aClique &lAQUI para comemorar a compra!",
             ""
-          ]
+          ],
+          "on-transaction-hover": "&aClique para comemorar e receber a recompensa."
         }
       }
     }

@@ -73,7 +73,8 @@
             "description": "selecionar dois cantos e copiar o cuboide",
             "select-first-conner": "Clique no primeiro canto!",
             "select-second-conner": "Clique no segundo canto!",
-            "success": "&eClique &a&lAQUI&e para copiar."
+            "success": "&eClique &a&lAQUI&e para copiar.",
+            "hover": "&aClique para colocar no chat."
           },
           "debug": {
             "description": "ligar ou desligar o modo de debug",
@@ -93,7 +94,8 @@
           },
           "location": {
             "description": "copiar a sua posição como código",
-            "success": "&eClique &a&lAQUI&e para copiar."
+            "success": "&eClique &a&lAQUI&e para copiar.",
+            "hover": "&aClique para colocar no chat."
           },
           "mode": {
             "description": "ligar ou desligar o id do bloco (agachado)",
@@ -152,10 +154,12 @@
               }
             },
             "generating": "Gerando packet dump de {target_name}...",
-            "disabled": "O packet dump está desligado nesta instância. Liga com -Dcore.packetdump.enabled=true e reinicia.",
+            "disabled": "O packet dump está desligado nesta instância. Ligue com -Dcore.packetdump.enabled=true e reinicie.",
             "no-data": "Sem pacotes em buffer para {target_name} (sem tráfego recente ou offline há mais de 1min).",
             "error": "Falha ao gerar o packet dump: {error}",
-            "success": "&aPacket dump de &f{target_name} pronto! &b&nabrir no navegador"
+            "success": "&aPacket dump de &f{target_name} pronto! &b&nabrir no navegador",
+            "anchor": "abrir no navegador",
+            "hover": "&bClique para abrir o packet dump."
           },
           "dump": {
             "description": "exportar o container olhado ou o item na mão",
@@ -164,7 +168,9 @@
             "empty": "Nada para exportar (container vazio ou item inválido).",
             "error": "Falha ao gerar o dump: {error}",
             "container-success": "&aDump do container pronto! &b&nabrir no navegador",
-            "item-success": "&aDump do item pronto! &b&nabrir no navegador"
+            "item-success": "&aDump do item pronto! &b&nabrir no navegador",
+            "anchor": "abrir no navegador",
+            "hover": "&bClique para abrir o dump."
           },
           "worlds": {
             "description": "listar os mundos carregados",

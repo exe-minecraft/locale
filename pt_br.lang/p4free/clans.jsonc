@@ -1,6 +1,9 @@
 {
   "plugins": {
     "clans": {
+      "placeholders": {
+        "tag-brackets": "&7[{clan_colored_tag}&7]"
+      },
       // O bloco do clã nas scoreboards do P4Free ({clan_scoreboard}).
       "scoreboard": {
         "clan": [
@@ -208,6 +211,7 @@
               }
             },
             "member-format": "{target_role_prefix}&a{target_name_with_color}",
+            "member-separator": "&7, ",
             "no-online-members": "&7Nenhum",
             "success": [
               "",
@@ -724,6 +728,10 @@
           }
         },
         "clan-leaderboard": {
+          "position-color": {
+            "first": "&a",
+            "other": "&8"
+          },
           "items": {
             "0": {
               "name": "{clan_position_color}{clan_position}º &7[{clan_colored_tag}&7] &f{clan_name}",

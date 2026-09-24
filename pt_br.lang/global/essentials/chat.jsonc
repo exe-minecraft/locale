@@ -97,7 +97,7 @@
               "description": "Tipo do canal que você deseja mudar o status"
             }
           },
-          "chat-type-not-found": "Não foi possivel encontrar um chat com esse id",
+          "chat-type-not-found": "Não foi possível encontrar um chat com esse id",
           "success-locked": "O status do chat {chat_type_name} foi alterado para desabilitado.",
           "success-unlocked": "O status do chat {chat_type_name} foi alterado para habilitado."
         }
