@@ -18,7 +18,7 @@ sobrando antes de `}` não.
 
 Edite o `.jsonc` em `pt_br.lang/` e faça push no `main`. Não há build nem `dist/`: em até 1 minuto a
 plataforma baixa as fontes, monta os bundles e avisa os servidores pelo Echo, sem reiniciar nada.
-Para ser na hora, `/admin reload --content` em jogo: ele diz se o locale e os menus mudaram. Menus
+Para ser na hora, `/infra reload --content` em jogo: ele diz se o locale e os menus mudaram. Menus
 abertos, hologramas e a espada e o machado do P4Free se redesenham sozinhos; o título de um menu
 aberto só muda quando ele é reaberto.
 
