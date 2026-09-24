@@ -63,7 +63,8 @@
             "cannot-find-code": "O código que você inseriu é inválido ou expirou."
           },
           "success": {
-            "auth-confirmation": "Solicitação de login aprovada com sucesso!"
+            "auth-confirmation": "Login no site aprovado: um navegador entrou na sua conta. Se outra pessoa te passou este código, use /trocarsenha agora para derrubar esse acesso (conta original: \"Sair de todos os outros navegadores\" no /perfil do site).",
+            "auth-confirmation-origin": "O pedido veio da rede {flow_ip}."
           }
         }
       }

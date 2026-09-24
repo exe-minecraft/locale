@@ -63,6 +63,10 @@
               ""
             ],
             "link": "  &7Ver no site: &b&nclique aqui",
+            "link-hover": "&7Abre o site já logado. Não mande este link a ninguém.",
+            "link-unavailable": "Não deu para gerar o link do site agora. Tente de novo em instantes.",
+            "site": "  &7Ver no site: &b&nclique aqui",
+            "site-hover": "&7Gera um link de entrada no site, que vale por 1 minuto.",
             "type-original": "Original",
             "type-cracked": "Pirata",
             "no-groups": "nenhum",
