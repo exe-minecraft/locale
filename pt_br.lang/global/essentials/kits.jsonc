@@ -52,18 +52,6 @@
         }
       },
       "commands": {
-        "createkit": {
-          "arguments": {
-            "id": {
-              "name": "id",
-              "description": "ID do kit que será criado"
-            }
-          },
-          "already-have-with-id": "Já existe um kit com esse id criado!",
-          "invalid-kit-id-length": "Você não pode usar um id que tem mais de 16 caracteres.",
-          "success": "Você criou o kit com sucesso!",
-          "cannot-find-with-id": "&cNão foi possível encontrar um kit com esse ID."
-        },
         "deletekit": {
           "arguments": {
             "id": {

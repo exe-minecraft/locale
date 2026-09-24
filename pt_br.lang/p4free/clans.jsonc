@@ -30,31 +30,16 @@
       },
       "statistics": {
         "kills": {
-          "name": "Abates",
-          "description": "Abates somados de todos os membros"
-        },
-        "deaths": {
-          "name": "Mortes",
-          "description": "Mortes somadas de todos os membros"
-        },
-        "points": {
-          "name": "Pontos",
-          "description": "Pontos conquistados pelo clã"
-        },
-        "gladiator_wins": {
-          "name": "Vitórias no Gladiador",
-          "description": "Gladiadores conquistados pelo clã"
-        }
-      },
-      "member-statistics": {
-        "kills": {
           "name": "Abates"
         },
         "deaths": {
           "name": "Mortes"
         },
+        "points": {
+          "name": "Pontos"
+        },
         "gladiator_wins": {
-          "name": "Gladiadores conquistados"
+          "name": "Vitórias no Gladiador"
         }
       },
       "settings": {

@@ -26,8 +26,7 @@
           "link-hover": "&7Abre o site já logado. Não mande este link a ninguém.",
           "link": "A história do item {custom_item_key}: clique &e&lAQUI&a para ver no site.",
           "no-item-in-hand": "Segure o item que você quer consultar!",
-          "no-identity": "Esse item não carrega identidade: não tem história para mostrar.",
-          "success": "A história do item {custom_item_key}: &e&n{url}"
+          "no-identity": "Esse item não carrega identidade: não tem história para mostrar."
         },
         "custom-item-restore": {
           "error": "Não foi possível restaurar o item agora. Ele continua inutilizado; pode repetir o comando com segurança.",

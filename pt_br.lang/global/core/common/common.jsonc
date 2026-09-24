@@ -37,7 +37,19 @@
           "",
           "&cNão foi possível executar essa ação, entre em contato com o suporte!",
           ""
-        ]
+        ],
+        "misc": {
+          "binary-choice": {
+            "active-deactivate": {
+              "true": "&aAtivado",
+              "false": "&cDesativado"
+            },
+            "yes-no": {
+              "true": "&aSim",
+              "false": "&cNão"
+            }
+          }
+        }
       }
     }
   }

@@ -104,7 +104,6 @@
             "success-sender": "&aVocê enviou {currency_color}{currency_icon}{currency_formatted_value} &apara {currency_target_name_with_color}.",
             "success-target": "&aVocê recebeu {currency_color}{currency_icon}{currency_formatted_value} de &a{currency_sender_name_with_color}.",
             "dialog": {
-              "title": "Confirmar pagamento",
               "body": "&eConfirme o pagamento de {currency_formatted_value} para {currency_target_name}."
             }
           },

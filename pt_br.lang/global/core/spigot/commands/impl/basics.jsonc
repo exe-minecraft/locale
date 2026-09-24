@@ -204,28 +204,6 @@
         "plugins": {
           "message": "&fPlugins ({plugins_count}): {plugins}"
         },
-        "scale": {
-          "arguments": {
-            "scale": {
-              "name": "escala",
-              "description": "Insira a escala desejada (0.0625 a 16)"
-            },
-            "target": {
-              "name": "jogador",
-              "description": "Jogador que deseja alterar a escala"
-            }
-          },
-          "success": {
-            "other": {
-              "reset": "A escala de {target_name} foi resetada.",
-              "set": "A escala de {target_name} foi alterada para: {scale}."
-            },
-            "same": {
-              "reset": "A sua escala foi resetada.",
-              "set": "A sua escala foi alterada para: {scale}."
-            }
-          }
-        },
         "speed": {
           "arguments": {
             "velocity": {

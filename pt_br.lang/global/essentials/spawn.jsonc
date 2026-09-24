@@ -28,11 +28,6 @@
         "fishing": {
           "cannot-fish-on-spawn": "&cVocê não pode pescar no spawn."
         }
-      },
-      "spawn": {
-        "fleet": {
-          "display-name-suffix": " - Spawn #"
-        }
       }
     }
   }

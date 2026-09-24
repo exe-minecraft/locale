@@ -1,9 +1,6 @@
 {
   "plugins": {
     "world-manager": {
-      "messages": {
-        "world-unloaded": "&cO mundo em que você estava foi descarregado."
-      },
       "commands": {
         "world": {
           "list": "&7Mundos: &f{world_names}",
