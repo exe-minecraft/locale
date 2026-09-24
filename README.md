@@ -16,8 +16,11 @@ sobrando antes de `}` não.
 
 ## Como mudar um texto
 
-Edite o `.jsonc` em `pt_br.lang/` e faça push no `main`. Não há build nem `dist/`: em até 3 minutos a
+Edite o `.jsonc` em `pt_br.lang/` e faça push no `main`. Não há build nem `dist/`: em até 1 minuto a
 plataforma baixa as fontes, monta os bundles e avisa os servidores pelo Echo, sem reiniciar nada.
+Para ser na hora, `/admin reload --content` em jogo: ele diz se o locale e os menus mudaram. Menus
+abertos, hologramas e a espada e o machado do P4Free se redesenham sozinhos; o título de um menu
+aberto só muda quando ele é reaberto.
 
 Se um arquivo fugir da regra (namespace trocado, chave repetida, texto com quebra de linha, JSONC
 inválido), a plataforma recusa a versão inteira, o jogo continua com a anterior e o motivo aparece no

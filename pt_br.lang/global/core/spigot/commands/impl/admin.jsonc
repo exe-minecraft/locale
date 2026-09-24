@@ -133,17 +133,25 @@
             "success": "{target_name} agora é pirata."
           },
           "reload": {
-            "description": "recarregar as configs",
+            "description": "recarregar as configs, ou o locale e os menus",
             "arguments": {
               "scope": {
-                "name": "--app|--server|--global",
-                "description": "Onde recarregar as configs"
+                "name": "--app|--server|--global|--content",
+                "description": "Onde recarregar as configs; --content relê o locale e os menus do GitHub"
               }
             },
             "success-app": "Reload de configs solicitado para este app ({app_id}).",
             "no-server": "Este app não pertence a um server.",
             "success-server": "Reload de configs solicitado para {app_amount} app(s) do server '{server_id}'.",
-            "success-global": "Reload de configs solicitado para {app_amount} app(s) online."
+            "success-global": "Reload de configs solicitado para {app_amount} app(s) online.",
+            "content-requested": "Relendo o locale e os menus do GitHub...",
+            "content-result": "Locale: {lang_status}. Menus: {menu_status}.",
+            "content-status": {
+              "changed": "atualizado, os servidores recarregam agora",
+              "unchanged": "igual ao que já está em jogo",
+              "rejected": "recusado ({reason}), o jogo continua com o anterior",
+              "failed": "não deu para baixar ({reason}), tente de novo"
+            }
           },
           "packetdump": {
             "description": "exportar os pacotes recentes de um jogador",
