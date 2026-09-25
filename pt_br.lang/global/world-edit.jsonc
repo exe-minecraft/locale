@@ -8,7 +8,12 @@
         "selection-other-world": "&cSua seleção está em outro mundo.",
         "no-clipboard": "&cSeu clipboard está vazio. Use //copy ou //schematic load.",
         "too-big": "&cOperação grande demais. O máximo é {max} blocos.",
-        "out-of-range": "&c{arg} precisa estar entre {min} e {max}.",
+        "out-of-range": {
+          "distance": "&cA distância precisa estar entre {min} e {max}.",
+          "times": "&cO número de vezes precisa estar entre {min} e {max}.",
+          "iterations": "&cO número de iterações precisa estar entre {min} e {max}.",
+          "density": "&cA densidade precisa estar entre {min} e {max}."
+        },
         "invalid-block": "&cBloco inválido: &f{input}",
         "invalid-name": "&cNome inválido. Use de 1 a 64 letras minúsculas, números, hífen ou sublinhado.",
         "invalid-schematic": "&cEsse arquivo não é uma schematic válida.",
