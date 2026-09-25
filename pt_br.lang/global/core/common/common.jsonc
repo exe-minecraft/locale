@@ -21,7 +21,8 @@
           "parse-group": "Não foi possível identificar \"{group}\" como um grupo, tente novamente!",
           "parse-server": "Não foi possível identificar \"{server}\" como um servidor, tente novamente!",
           "need-positive-number": "Você precisa inserir um numero positivo!",
-          "need-integer-number": "Você preciso inserir um numero inteiro!"
+          "need-integer-number": "Você preciso inserir um numero inteiro!",
+          "mojang-unavailable": "A Mojang está indisponível no momento, tente novamente em instantes."
         },
         "player": {
           "invalid-item": "Você precisa de um item válido",
@@ -49,7 +50,8 @@
               "false": "&cNão"
             }
           }
-        }
+        },
+        "auth-busy": "O servidor de autenticação está ocupado. Tente de novo em alguns segundos."
       }
     }
   }

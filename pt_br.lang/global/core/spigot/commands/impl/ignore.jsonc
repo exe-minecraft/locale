@@ -15,7 +15,7 @@
               }
             },
             "already-ignored": "O jogador {target_name} já está em sua lista de jogadores ignorados!",
-            "success": "&aO jogador&a &f{target_name} &afoi adicionado da sua lista de ignorados."
+            "success": "&aO jogador&a &f{target_name} &afoi adicionado à sua lista de ignorados."
           },
           "remove": {
             "description": "tirar um jogador dos ignorados",

@@ -83,6 +83,7 @@
         }
       },
       "errors": {
+        "changed-meanwhile": "&cO clã mudou enquanto isso. Confira e tente de novo.",
         "without-clan": "&cVocê não faz parte de um clã.",
         "clan-load-failed": "&cNão foi possível carregar as informações do clã.",
         "clan-not-found": "&cNão existe nenhum clã com essa tag.",
@@ -218,6 +219,7 @@
             ]
           },
           "profile": {
+            "unknown-joined-clan-at": "sem registro",
             "description": "ver as informações de um jogador",
             "arguments": {
               "name": {

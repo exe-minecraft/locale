@@ -73,7 +73,28 @@
             "lost-sent-to-lobby": [
               "&cO servidor em que você estava caiu, e você foi levado para o lobby."
             ],
-            "reconnect": "&cReconecte-se, por favor!"
+            "reconnect": "&cReconecte-se, por favor!",
+            "mojang-unavailable": [
+              "&c&lEXE&r",
+              "",
+              "&cNão foi possível verificar sua conta agora.",
+              "&cTente novamente em instantes."
+            ],
+            "auth-full": [
+              "&c&lEXE&r",
+              "",
+              "&cA rede está lotada no momento.",
+              "&cTente entrar de novo em alguns instantes.",
+              "",
+              "&f{discord_invite_url}"
+            ],
+            "replaced-before-login": [
+              "&c&lEXE&r",
+              "",
+              "&cOutra conexão entrou com o seu nick",
+              "&cantes de você se autenticar.",
+              "&cSe não foi você, entre de novo e use /logar."
+            ]
           },
           "punishment": {
             "mute-message-permanent": [

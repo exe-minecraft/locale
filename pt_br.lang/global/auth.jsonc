@@ -29,6 +29,9 @@
           ],
           "reserved-name": [
             "Este nick é reservado para os bots da rede."
+          ],
+          "in-flight": [
+            "Aguarde, estamos verificando sua senha."
           ]
         },
         "loginstaff": {
@@ -94,6 +97,13 @@
           ],
           "reserved-name": [
             "Este nick é reservado para os bots da rede."
+          ],
+          "in-flight": [
+            "Aguarde, seu registro ainda está sendo processado."
+          ],
+          "not-confirmed": [
+            "Não foi possível confirmar o seu registro.",
+            "Tente de novo: /registrar <senha> <senha>"
           ]
         }
       },
@@ -118,9 +128,9 @@
               "title": "&c&lAutenticado!",
               "subtitle": "&fSeja bem-vindo!"
             },
-            "queue-wait": {
+            "queue-position": {
               "title": "&c&lEXE",
-              "subtitle": "&fAguarde, você está na fila para entrar..."
+              "subtitle": "&fVocê está na fila: &c{position}&f de &c{total}"
             }
           },
           "chat": {
@@ -161,6 +171,10 @@
               "",
               " &cNão foram encontrados lobbies para conexão, você foi colocado na lista de espera!",
               ""
+            ],
+            "kick-message": [
+              "&cTodos os servidores estão cheios ou indisponíveis agora.",
+              "&cTente entrar de novo em alguns minutos."
             ]
           }
         }

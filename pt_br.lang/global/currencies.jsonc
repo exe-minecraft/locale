@@ -78,35 +78,6 @@
             },
             "success": "{currency_color}Você adicionou &f{currency_formatted_value} {currency_adaptively_name} ao jogador {currency_target_name_with_color}"
           },
-          "pay": {
-            "description": "enviar saldo para outro jogador",
-            "arguments": {
-              "target": {
-                "name": "jogador",
-                "description": "Nome do jogador que irá receber {currency_plural_name_lower_case}"
-              },
-              "value": {
-                "name": "quantidade",
-                "description": "Quantidade de {currency_plural_name_lower_case} que o jogador irá receber"
-              }
-            },
-            "ignores": {
-              "sender": "Você não pode enviar {currency_plural_name_lower_case} para um jogador ignorado.",
-              "target": "Você não pode enviar {currency_plural_name_lower_case} para esse jogador pois ele te ignorou."
-            },
-            "preferences": {
-              "disabled": {
-                "sender": "Você não pode enviar {currency_plural_name_lower_case} pois desabilitou seu recebimento.",
-                "target": "Esse jogador desabilitou o recebimento de {currency_plural_name_lower_case}."
-              }
-            },
-            "without-balance": "Você não possui {currency_plural_name_lower_case} para enviar para o jogador.",
-            "success-sender": "&aVocê enviou {currency_color}{currency_icon}{currency_formatted_value} &apara {currency_target_name_with_color}.",
-            "success-target": "&aVocê recebeu {currency_color}{currency_icon}{currency_formatted_value} de &a{currency_sender_name_with_color}.",
-            "dialog": {
-              "body": "&eConfirme o pagamento de {currency_formatted_value} para {currency_target_name}."
-            }
-          },
           "remove": {
             "description": "remover saldo de um jogador",
             "arguments": {
@@ -138,7 +109,8 @@
           "update": {
             "description": "atualizar o ranking desta moeda",
             "success": "Solicitação de atualização enviada com sucesso"
-          }
+          },
+          "no-transfer": "Não é possível enviar moedas para outros jogadores."
         },
         "givecheck": {
           "arguments": {

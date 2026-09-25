@@ -53,6 +53,22 @@
             "&cAdquira acessando o nosso site: &frede-exe.com",
             ""
           ]
+        },
+        "p4free-events": {
+          "header": [
+            "",
+            "&c&lEXE &7{app_online_player_count} {app_online_player_label}",
+            "&frede-exe.com",
+            ""
+          ],
+          "footer": [
+            "",
+            "&cDiscord: &fdiscord.gg/exe",
+            "",
+            "    &cAjude o servidor a se manter ativo adquirindo produtos.    ",
+            "&cAdquira acessando o nosso site: &frede-exe.com",
+            ""
+          ]
         }
       }
     }

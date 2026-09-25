@@ -26,7 +26,8 @@
             "As senhas não são iguais.",
             "Confirme a senha corretamente."
           ],
-          "success": "Senha alterada com sucesso!"
+          "success": "Senha alterada com sucesso!",
+          "not-confirmed": "A troca de senha não foi confirmada. Pode repetir o comando sem problema."
         },
         "cracked": {
           "original-error": "Sua senha foi salva, mas a conta continua original. Tente o comando de novo.",

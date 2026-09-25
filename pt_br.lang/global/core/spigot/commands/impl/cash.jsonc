@@ -13,22 +13,6 @@
               "without-balance": "&cVocê não possui &6Cash&c."
             }
           },
-          "pay": {
-            "description": "enviar Cash a outro jogador (mínimo 1000)",
-            "arguments": {
-              "target": {
-                "name": "jogador",
-                "description": "O jogador que irá receber o saldo"
-              },
-              "amount": {
-                "name": "quantia",
-                "description": "A quantidade de Cash que você quer enviar"
-              }
-            },
-            "need-min-cash": "&cVocê precisa enviar um valor mínimo de &61000 Cash&c.",
-            "success": "&aVocê enviou &6{cash_formatted_value} Cash &apara {cash_target_name_with_color}&a.",
-            "error": "&cSua tentativa de enviar o seu saldo falhou, tente novamente mais tarde!"
-          },
           "set": {
             "description": "definir o Cash de um jogador",
             "arguments": {
@@ -73,7 +57,8 @@
             },
             "success": "&aVocê removeu &6{cash_formatted_value} Cash &ade {cash_target_name_with_color}&a.",
             "error": "&cSua tentativa de definir o seu saldo falhou, tente novamente mais tarde!"
-          }
+          },
+          "no-transfer": "&cNão é possível enviar &6Cash&c para outros jogadores."
         }
       }
     }
