@@ -157,7 +157,7 @@
               }
             },
             "errors": {
-              "tag-with-formatting": "&cA tag do clã pode ter cor, mas não formatação (&&l, &&k, &&m, &&n, &&o).",
+              "tag-with-formatting": "&cA tag do clã pode ter cor, mas não negrito, itálico, sublinhado, riscado nem texto mágico.",
               "tag-length": "&cA tag precisa ter exatamente 3 caracteres, sem contar as cores.",
               "name-length": "&cO nome do clã precisa ter de 5 a 16 caracteres.",
               "invalid-pattern": "&cA tag e o nome só aceitam letras e números.",
@@ -420,7 +420,7 @@
               }
             },
             "errors": {
-              "tag-with-formatting": "&cA tag do clã pode ter cor, mas não formatação (&&l, &&k, &&m, &&n, &&o).",
+              "tag-with-formatting": "&cA tag do clã pode ter cor, mas não negrito, itálico, sublinhado, riscado nem texto mágico.",
               "letters-changed": "&cAs letras da tag não mudam, só as cores.",
               "no-change": "&cNenhuma cor foi alterada."
             }
