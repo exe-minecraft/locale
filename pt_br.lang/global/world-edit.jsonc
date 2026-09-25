@@ -28,7 +28,8 @@
         "chunk-timeout": "&cUm chunk da área não carregou a tempo. Nada foi alterado depois disso; use //undo se precisar.",
         "low-memory": "&cO servidor está sem memória para essa operação.",
         "invalid-direction": "&cDireção inválida. Use north, south, east, west, up ou down.",
-        "internal": "&cNão foi possível concluir a operação. A falha foi registrada para a equipe técnica."
+        "internal": "&cNão foi possível concluir a operação. A falha foi registrada para a equipe técnica.",
+        "up-blocked": "&cNão há espaço livre nessa altura."
       },
       "commands": {
         "wand": { "help": "//wand: recebe o machado de seleção", "done": "&aMachado de seleção no inventário. Esquerdo marca a pos1, direito a pos2." },
@@ -59,7 +60,17 @@
         "sphere": { "help": "//sphere <padrão> <raio>: esfera onde você está", "done": "&a{count} blocos na esfera." },
         "setbiome": { "help": "//setbiome <bioma>: muda o bioma da seleção", "done": "&a{count} colunas de bioma alteradas." },
         "biomelist": { "help": "//biomelist [página]: lista os biomas", "page": "&eBiomas ({page}/{pages}): &f{biomes}" },
-        "biomeinfo": { "help": "//biomeinfo: mostra o bioma onde você está", "here": "&eBioma aqui: &f{biome}" }
+        "biomeinfo": { "help": "//biomeinfo: mostra o bioma onde você está", "here": "&eBioma aqui: &f{biome}" },
+        "count": { "help": "//count <bloco>: conta um bloco na seleção", "done": "&a{count} blocos de &f{input}&a na seleção." },
+        "distr": { "help": "//distr: blocos da seleção por quantidade", "header": "&eBlocos na seleção ({total}):", "line": "&f{count} &7({percent}%) &f{block}" },
+        "up": { "help": "//up <distância>: sobe e põe vidro sob os pés", "done": "&aSubiu {distance} blocos." },
+        "drain": { "help": "//drain <raio>: tira água e lava em volta", "done": "&a{count} blocos de líquido removidos." },
+        "fixwater": { "help": "//fixwater <raio>: nivela a água em volta", "done": "&a{count} blocos de água nivelados." },
+        "fixlava": { "help": "//fixlava <raio>: nivela a lava em volta", "done": "&a{count} blocos de lava nivelados." },
+        "snow": { "help": "//snow [raio]: cobre de neve em volta", "done": "&a{count} blocos de neve." },
+        "green": { "help": "//green [raio]: troca terra por grama em volta", "done": "&a{count} blocos de grama." },
+        "help": { "help": "//help: esta lista", "header": "&eComandos do WorldEdit:" },
+        "version": { "help": "//version: versão do plugin", "done": "&eworld-edit &f{version}" }
       }
     }
   }
