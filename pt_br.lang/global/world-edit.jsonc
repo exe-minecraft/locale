@@ -1,0 +1,31 @@
+{
+  "plugins": {
+    "world-edit": {
+      "errors": {
+        "busy": "&cVocê já tem uma edição em andamento. Aguarde ela terminar.",
+        "usage": "&cUso: &f{usage}",
+        "no-selection": "&cMarque as duas posições antes (//pos1 e //pos2, ou o machado de madeira).",
+        "selection-other-world": "&cSua seleção está em outro mundo.",
+        "no-clipboard": "&cSeu clipboard está vazio. Use //copy ou //schematic load.",
+        "too-big": "&cOperação grande demais. O máximo é {max} blocos.",
+        "out-of-range": "&c{arg} precisa estar entre {min} e {max}.",
+        "invalid-block": "&cBloco inválido: &f{input}",
+        "invalid-name": "&cNome inválido. Use de 1 a 64 letras minúsculas, números, hífen ou sublinhado.",
+        "invalid-schematic": "&cEsse arquivo não é uma schematic válida.",
+        "already-exists": "&cJá existe uma schematic com esse nome.",
+        "not-found": "&cNão existe schematic com esse nome.",
+        "chunk-timeout": "&cUm chunk da área não carregou a tempo. Nada foi alterado depois disso; use //undo se precisar.",
+        "low-memory": "&cO servidor está sem memória para essa operação.",
+        "invalid-direction": "&cDireção inválida. Use north, south, east, west, up ou down.",
+        "internal": "&cNão foi possível concluir a operação. A falha foi registrada para a equipe técnica."
+      },
+      "commands": {
+        "wand": { "help": "//wand: recebe o machado de seleção", "done": "&aMachado de seleção no inventário. Esquerdo marca a pos1, direito a pos2." },
+        "pos1": { "help": "//pos1: marca a primeira posição onde você está", "done": "&aPosição 1 em &f{x}, {y}, {z}&a." },
+        "pos2": { "help": "//pos2: marca a segunda posição onde você está", "done": "&aPosição 2 em &f{x}, {y}, {z}&a." },
+        "chunk": { "help": "//chunk: seleciona o chunk onde você está", "done": "&aChunk &f{cx}, {cz}&a selecionado." },
+        "sel": { "help": "//sel [cuboid]: limpa a seleção", "done": "&aSeleção limpa.", "only-cuboid": "&cSó existe seleção cuboide." }
+      }
+    }
+  }
+}
