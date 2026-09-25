@@ -74,12 +74,6 @@
               "&cO servidor em que você estava caiu, e você foi levado para o lobby."
             ],
             "reconnect": "&cReconecte-se, por favor!",
-            "mojang-unavailable": [
-              "&c&lEXE&r",
-              "",
-              "&cNão foi possível verificar sua conta agora.",
-              "&cTente novamente em instantes."
-            ],
             "auth-full": [
               "&c&lEXE&r",
               "",
