@@ -24,7 +24,15 @@
         "pos1": { "help": "//pos1: marca a primeira posição onde você está", "done": "&aPosição 1 em &f{x}, {y}, {z}&a." },
         "pos2": { "help": "//pos2: marca a segunda posição onde você está", "done": "&aPosição 2 em &f{x}, {y}, {z}&a." },
         "chunk": { "help": "//chunk: seleciona o chunk onde você está", "done": "&aChunk &f{cx}, {cz}&a selecionado." },
-        "sel": { "help": "//sel [cuboid]: limpa a seleção", "done": "&aSeleção limpa.", "only-cuboid": "&cSó existe seleção cuboide." }
+        "sel": { "help": "//sel [cuboid]: limpa a seleção", "done": "&aSeleção limpa.", "only-cuboid": "&cSó existe seleção cuboide." },
+        "set": { "help": "//set <padrão>: preenche a seleção", "done": "&a{count} blocos alterados." },
+        "replace": { "help": "//replace [de] <para>: troca blocos na seleção", "done": "&a{count} blocos trocados." },
+        "walls": { "help": "//walls <padrão>: faz as paredes da seleção", "done": "&a{count} blocos nas paredes." },
+        "move": { "help": "//move [distância] [direção]: move a seleção", "done": "&a{count} blocos movidos." },
+        "stack": { "help": "//stack [vezes] [direção]: repete a seleção", "done": "&a{count} blocos empilhados." },
+        "smooth": { "help": "//smooth [iterações]: suaviza o terreno da seleção", "done": "&aTerreno suavizado, {count} blocos alterados." },
+        "naturalize": { "help": "//naturalize: grama, terra e pedra como no terreno natural", "done": "&a{count} blocos naturalizados." },
+        "flora": { "help": "//flora [densidade]: planta grama e flores na seleção", "done": "&a{count} plantas." }
       }
     }
   }
