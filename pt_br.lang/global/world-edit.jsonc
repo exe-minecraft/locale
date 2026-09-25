@@ -13,10 +13,14 @@
           "times": "&cO número de vezes precisa estar entre {min} e {max}.",
           "iterations": "&cO número de iterações precisa estar entre {min} e {max}.",
           "density": "&cA densidade precisa estar entre {min} e {max}.",
-          "degrees": "&cOs graus precisam estar entre {min} e {max}."
+          "degrees": "&cOs graus precisam estar entre {min} e {max}.",
+          "radius": "&cO raio precisa estar entre {min} e {max}.",
+          "height": "&cA altura precisa estar entre {min} e {max}.",
+          "page": "&cA página precisa estar entre {min} e {max}."
         },
         "rotate-90": "&cGire em múltiplos de 90 graus.",
         "invalid-block": "&cBloco inválido: &f{input}",
+        "invalid-biome": "&cBioma inválido: &f{input}&c. Veja //biomelist.",
         "invalid-name": "&cNome inválido. Use de 1 a 64 letras minúsculas, números, hífen ou sublinhado.",
         "invalid-schematic": "&cEsse arquivo não é uma schematic válida.",
         "already-exists": "&cJá existe uma schematic com esse nome.",
@@ -48,7 +52,14 @@
           "help": "//schematic save|load <nome>: grava ou carrega uma schematic",
           "save": { "help": "//schematic save <nome>: grava o clipboard", "done": "&aSchematic &f{name}&a gravada." },
           "load": { "help": "//schematic load <nome>: carrega para o clipboard", "done": "&aSchematic &f{name}&a no clipboard." }
-        }
+        },
+        "undo": { "help": "//undo [vezes]: desfaz suas últimas edições", "done": "&a{count} edições desfeitas.", "nothing": "&7Nada para desfazer." },
+        "redo": { "help": "//redo [vezes]: refaz o que foi desfeito", "done": "&a{count} edições refeitas.", "nothing": "&7Nada para refazer." },
+        "cyl": { "help": "//cyl <padrão> <raio> [altura]: cilindro onde você está", "done": "&a{count} blocos no cilindro." },
+        "sphere": { "help": "//sphere <padrão> <raio>: esfera onde você está", "done": "&a{count} blocos na esfera." },
+        "setbiome": { "help": "//setbiome <bioma>: muda o bioma da seleção", "done": "&a{count} colunas de bioma alteradas." },
+        "biomelist": { "help": "//biomelist [página]: lista os biomas", "page": "&eBiomas ({page}/{pages}): &f{biomes}" },
+        "biomeinfo": { "help": "//biomeinfo: mostra o bioma onde você está", "here": "&eBioma aqui: &f{biome}" }
       }
     }
   }
