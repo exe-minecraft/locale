@@ -12,8 +12,10 @@
           "distance": "&cA distância precisa estar entre {min} e {max}.",
           "times": "&cO número de vezes precisa estar entre {min} e {max}.",
           "iterations": "&cO número de iterações precisa estar entre {min} e {max}.",
-          "density": "&cA densidade precisa estar entre {min} e {max}."
+          "density": "&cA densidade precisa estar entre {min} e {max}.",
+          "degrees": "&cOs graus precisam estar entre {min} e {max}."
         },
+        "rotate-90": "&cGire em múltiplos de 90 graus.",
         "invalid-block": "&cBloco inválido: &f{input}",
         "invalid-name": "&cNome inválido. Use de 1 a 64 letras minúsculas, números, hífen ou sublinhado.",
         "invalid-schematic": "&cEsse arquivo não é uma schematic válida.",
@@ -37,7 +39,16 @@
         "stack": { "help": "//stack [vezes] [direção]: repete a seleção", "done": "&a{count} blocos empilhados." },
         "smooth": { "help": "//smooth [iterações]: suaviza o terreno da seleção", "done": "&aTerreno suavizado, {count} blocos alterados." },
         "naturalize": { "help": "//naturalize: grama, terra e pedra como no terreno natural", "done": "&a{count} blocos naturalizados." },
-        "flora": { "help": "//flora [densidade]: planta grama e flores na seleção", "done": "&a{count} plantas." }
+        "flora": { "help": "//flora [densidade]: planta grama e flores na seleção", "done": "&a{count} plantas." },
+        "copy": { "help": "//copy: copia a seleção a partir de onde você está", "done": "&a{count} blocos copiados." },
+        "paste": { "help": "//paste [-a]: cola o clipboard onde você está (-a pula o ar)", "done": "&a{count} blocos colados." },
+        "rotate": { "help": "//rotate <graus>: gira o clipboard (múltiplos de 90)", "done": "&aClipboard girado {degrees} graus." },
+        "flip": { "help": "//flip [direção]: espelha o clipboard", "done": "&aClipboard espelhado." },
+        "schematic": {
+          "help": "//schematic save|load <nome>: grava ou carrega uma schematic",
+          "save": { "help": "//schematic save <nome>: grava o clipboard", "done": "&aSchematic &f{name}&a gravada." },
+          "load": { "help": "//schematic load <nome>: carrega para o clipboard", "done": "&aSchematic &f{name}&a no clipboard." }
+        }
       }
     }
   }
