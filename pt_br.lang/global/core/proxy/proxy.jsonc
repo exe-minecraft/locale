@@ -13,9 +13,33 @@
             },
             "actionbar": "&7Aguarde aqui: você é conectado automaticamente",
             "reason": {
-              "full": "&eA rede está cheia no momento. &7Você é conectado sozinho assim que abrir vaga, não precisa sair.",
-              "server-down": "&cO servidor em que você estava caiu. &7Você é levado de volta sozinho, não precisa sair.",
-              "restart": "&eA rede está reiniciando. &7Você é conectado sozinho em instantes, não precisa sair."
+              "full": [
+                "",
+                " &c&lEXE &8➟ &eSala de Espera",
+                "",
+                " &fA rede está &ccheia&f no momento.",
+                " &7Você entra sozinho assim que abrir uma vaga:",
+                " &7não precisa sair nem reconectar.",
+                ""
+              ],
+              "server-down": [
+                "",
+                " &c&lEXE &8➟ &eSala de Espera",
+                "",
+                " &fO servidor em que você estava &ccaiu&f.",
+                " &7Você volta sozinho para um lobby em instantes:",
+                " &7não precisa sair nem reconectar.",
+                ""
+              ],
+              "restart": [
+                "",
+                " &c&lEXE &8➟ &eSala de Espera",
+                "",
+                " &fA rede está &ereiniciando&f.",
+                " &7Você é conectado sozinho em instantes:",
+                " &7não precisa sair nem reconectar.",
+                ""
+              ]
             }
           },
           "authentication": {
