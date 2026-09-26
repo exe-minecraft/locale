@@ -1,0 +1,11 @@
+{
+  "plugins": {
+    "core": {
+      // O cargo das scoreboards do lobby e dos servidores de jogo (ScoreboardGroup, no core).
+      "scoreboard": {
+        "group-loading": "&7-",
+        "group-duration": "{group} &8({days}d)"
+      }
+    }
+  }
+}

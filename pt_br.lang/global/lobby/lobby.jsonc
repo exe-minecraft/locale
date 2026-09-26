@@ -111,18 +111,33 @@
         }
       },
       "scoreboard": {
-        "title": "&c&lEXE",
+        // A onda de vermelhos do exe-lobby-core antigo, um quadro a cada 600 ms.
+        "title": [
+          "&c&lEXE",
+          "&4&lE&c&lXE",
+          "&4&lE&4&lX&c&lE",
+          "&4&lEXE",
+          "&4&lEX&c&lE",
+          "&4&lE&c&lXE",
+          "&c&lEXE",
+          "&4&lE&c&lXE",
+          "&c&lE&4&lX&c&lE",
+          "&c&lEX&4&lE",
+          "&c&lE&4&lX&c&lE",
+          "&4&lE&c&lXE"
+        ],
+        // No desenho da scoreboard do P4Free (plugins.essentials.scoreboards.lines).
         "lines": [
-          " &7{current_date}",
           "",
-          " &f&fCargo: {user_group_name_with_color}",
-          " &f&fOnline: &7%network_online-count%",
-          " &f&fCash: &6{user_cash_formatted}",
+          "&f Cash: &6✪ {user_cash_formatted}",
+          "&f Grupo: &c{user_group_name_with_color}",
           "",
-          "  &cO P4FREE",
-          "  &cestá chegando!",
+          "&f Online: &a%network_online-count%",
           "",
-          "&crede-exe.com"
+          "&c O P4FREE",
+          "&c está chegando!",
+          "",
+          "&ewww.rede-exe.com"
         ]
       },
       "preferences": {
