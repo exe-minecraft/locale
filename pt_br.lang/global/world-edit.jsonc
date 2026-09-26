@@ -26,7 +26,6 @@
         "already-exists": "&cJá existe uma schematic com esse nome.",
         "not-found": "&cNão existe schematic com esse nome.",
         "chunk-timeout": "&cUm chunk da área não carregou a tempo. Nada foi alterado depois disso; use //undo se precisar.",
-        "low-memory": "&cO servidor está sem memória para essa operação.",
         "invalid-direction": "&cDireção inválida. Use north, south, east, west, up ou down.",
         "internal": "&cNão foi possível concluir a operação. A falha foi registrada para a equipe técnica.",
         "up-blocked": "&cNão há espaço livre nessa altura."
