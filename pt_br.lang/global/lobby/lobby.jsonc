@@ -99,14 +99,14 @@
           "name": "&fJogadores: &aON",
           "lore": [
             "&7Clique com o botão direito para",
-            "&7mostrar os jogadores do lobby."
+            "&7esconder os jogadores do lobby."
           ]
         },
         "lobby-show-players": {
           "name": "&fJogadores: &cOFF",
           "lore": [
             "&7Clique com o botão direito para",
-            "&7esconder os jogadores do lobby."
+            "&7mostrar os jogadores do lobby."
           ]
         }
       },
@@ -144,7 +144,7 @@
           "name": "&eModo vôo",
           "description": [
             "&7Voe livremente pelo lobby",
-            "&7(exclusivo PRO+)."
+            "&7(exclusivo VIP)."
           ]
         }
       },
