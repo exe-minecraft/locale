@@ -3,13 +3,19 @@
     "core": {
       "proxy": {
         "motd": {
+          // A do exe-bungee-core antigo.
           "highest-version": [
-            "&c&l    EXE &8⚡&c discord.gg/exe",
-            "&f        ᴀ ᴛᴇᴍᴘᴇsᴛᴀᴅᴇ ᴅᴇ ɴᴇᴠᴇ sᴇ ᴀᴘʀᴏxɪᴍᴀ... ❄  "
+            "&c&lEXE &7- &fServidor",
+            "&eBem-vindo &7[1.8+]"
           ],
           "lowest-version": [
             "&c&lEXE &8➠ &cdiscord.gg/exe",
             "&c         Servidor disponível apenas na 1.8+"
+          ],
+          // No lugar das de cima enquanto o global.maintenance.group for acima de membro.
+          "maintenance": [
+            "&c&lEM MANUTENÇÃO",
+            "&7Voltaremos em breve!"
           ]
         }
       }
