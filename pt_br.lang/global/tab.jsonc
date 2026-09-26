@@ -1,16 +1,14 @@
 {
   "plugins": {
     "tab": {
-      "player-label": {
-        "one": "jogador",
-        "many": "jogadores"
-      },
       "types": {
         "auth": {
           "header": [
             "",
-            "&c&lEXE &7{app_online_player_count} {app_online_player_label}",
+            "&c&lEXE",
             "&frede-exe.com",
+            "",
+            "&fJogadores online: &a{app_online_player_count}",
             ""
           ],
           "footer": [
@@ -25,8 +23,10 @@
         "lobby": {
           "header": [
             "",
-            "&c&lEXE &7{app_online_player_count} {app_online_player_label}",
+            "&c&lEXE",
             "&frede-exe.com",
+            "",
+            "&fJogadores online: &a{app_online_player_count}",
             ""
           ],
           "footer": [
@@ -41,8 +41,10 @@
         "p4free": {
           "header": [
             "",
-            "&c&lEXE &7{app_online_player_count} {app_online_player_label}",
+            "&c&lEXE",
             "&frede-exe.com",
+            "",
+            "&fJogadores online: &a{app_online_player_count}",
             ""
           ],
           "footer": [
@@ -57,8 +59,10 @@
         "p4free-events": {
           "header": [
             "",
-            "&c&lEXE &7{app_online_player_count} {app_online_player_label}",
+            "&c&lEXE",
             "&frede-exe.com",
+            "",
+            "&fJogadores online: &a{app_online_player_count}",
             ""
           ],
           "footer": [
