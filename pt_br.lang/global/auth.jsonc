@@ -131,6 +131,10 @@
             "queue-position": {
               "title": "&c&lEXE",
               "subtitle": "&fVocê está na fila: &c{position}&f de &c{total}"
+            },
+            "preparing-server": {
+              "title": "&c&lEXE",
+              "subtitle": "&fEstamos preparando um servidor para você (&c{position}&f de &c{total}&f)"
             }
           },
           "chat": {
