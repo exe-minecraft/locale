@@ -18,16 +18,6 @@
               "restart": "&eA rede está reiniciando. &7Você é conectado sozinho em instantes, não precisa sair."
             }
           },
-          "auth-queue": {
-            "queue-position": {
-              "title": "&c&lEXE",
-              "subtitle": "&fVocê está na fila: &c{position}&f de &c{total}"
-            },
-            "preparing-server": {
-              "title": "&c&lEXE",
-              "subtitle": "&fEstamos preparando um servidor para você (&c{position}&f de &c{total}&f)"
-            }
-          },
           "authentication": {
             "need-logged": [
               "&cVocê precisa estar logado para realizar essa ação!"
