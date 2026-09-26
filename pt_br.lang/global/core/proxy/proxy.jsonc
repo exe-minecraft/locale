@@ -3,6 +3,21 @@
     "core": {
       "proxy": {
         "messages": {
+          "limbo": {
+            "title": "&c&lEXE",
+            "state": {
+              "connecting": "&aConectando...",
+              "preparing": "&fPreparando um servidor para você &7({position} de {total})",
+              "full": "&fRede cheia: você é o &c{position}&f de &c{total}",
+              "restarting": "&fServidores reiniciando: você é o &c{position}&f de &c{total}"
+            },
+            "actionbar": "&7Aguarde aqui: você é conectado automaticamente",
+            "reason": {
+              "full": "&eA rede está cheia no momento. &7Você é conectado sozinho assim que abrir vaga, não precisa sair.",
+              "server-down": "&cO servidor em que você estava caiu. &7Você é levado de volta sozinho, não precisa sair.",
+              "restart": "&eA rede está reiniciando. &7Você é conectado sozinho em instantes, não precisa sair."
+            }
+          },
           "auth-queue": {
             "queue-position": {
               "title": "&c&lEXE",
