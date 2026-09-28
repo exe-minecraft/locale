@@ -11,8 +11,10 @@
           },
           "update": {
             "description": "atualizar a skin que você está usando",
+            "need-equipped-skin": "Você não está com nenhuma skin equipada para atualizar. Para escolher uma, use /skin <nick>.",
             "loading": "Buscando sua skin...",
-            "success": "Skin alterada com sucesso!"
+            "success": "Skin alterada com sucesso!",
+            "not-found": "A conta original {skin_name} não existe mais ou está sem skin na Mojang, então nada foi alterado."
           },
           "arguments": {
             "target": {

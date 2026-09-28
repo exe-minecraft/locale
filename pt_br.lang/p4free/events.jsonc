@@ -416,7 +416,8 @@
           "cant-start": "Já existe um evento ocorrendo!",
           "need-clan": "Para entrar no evento é necessário possuir um clan!",
           "clan-not-authorized": "&cO seu clã ainda não foi autorizado a entrar nos eventos.",
-          "cant-join-event": "O Gladiador não está disponível para entrada."
+          "cant-join-event": "O {event} não está disponível para entrada.",
+          "target-in-event-app": "{player_name} já está no P4Free Eventos: dê o comando de lá para colocá-lo no {event}."
         },
         "events": {
           "gladiator": {
@@ -562,6 +563,7 @@
       "queries": {
         "unavailable": "&cA instância do Gladiador não está disponível.",
         "failed": "&cNão foi possível consultar os dados do Gladiador.",
+        "empty": "Nada a mostrar: não há Gladiador rodando ou ele ainda não tem registros.",
         "action": {
           "deathmatch-success": "&aO mata-mata foi iniciado.",
           "deathmatch-failure": "&cO Gladiador não está em andamento.",
@@ -588,6 +590,7 @@
           "rush-stop-failure": "&cNão foi possível encerrar o rush.",
           "watch-rush-success": "&aModo de visualização do rush atualizado.",
           "watch-rush-failure": "&cNão foi possível assistir a esse rush.",
+          "rush-list-elsewhere": "&eHá rushes acontecendo no Gladiador. Entre no P4Free Eventos com &f/glad camarote entrar &epara vê-los.",
           "max-members-success": "&aO limite de participantes por clan foi atualizado.",
           "max-members-failure": "&cNão foi possível atualizar o limite de participantes por clan.",
           "set-location-success": "&aA localização do Gladiador foi salva.",

@@ -4,7 +4,10 @@
       "messages": {
         "connection": {
           "save-in-progress": "&cSeus dados da última sessão ainda estão sendo gravados. Entre de novo em alguns segundos.",
-          "save-failed": "&cNão foi possível gravar seus dados agora. Entre de novo para tentar outra vez."
+          "save-failed": "&cNão foi possível gravar seus dados agora. Entre de novo para tentar outra vez.",
+          "restarting": "&cEste servidor está {action_name_gerund}. Entre de novo em alguns instantes.",
+          "account-unavailable": "&cNão foi possível carregar sua conta agora. Entre de novo em alguns segundos.",
+          "maintenance": "&cEste servidor está em manutenção no momento. Volte em breve."
         }
       }
     }
