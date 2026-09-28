@@ -20,6 +20,7 @@
       "empty-inventory": "&cEntre em {event} com o inventário e a armadura vazios.",
       "combat-leave": "&cVocê não pode sair do {event} em combate.",
       "command-blocked": "&cVocê não pode usar comandos durante o {event}.",
+      "not-in-event": "&cVocê não está no {event}.",
       "cancelled": "&c{event} foi cancelado.",
       "winner": "&aO clã {clan} venceu {event}!",
       "locked": "&eAs inscrições de {event} foram encerradas. Prepare-se!",

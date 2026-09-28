@@ -51,7 +51,13 @@
       "commands": {
         "glad": {
           "event-start": {
-            "description": "abrir as inscrições do Gladiador"
+            "description": "abrir as inscrições do Gladiador num mapa",
+            "arguments": {
+              "map": {
+                "name": "mapa",
+                "description": "O mundo do P4Free Eventos onde a partida acontece."
+              }
+            }
           },
           "event-force-start": {
             "description": "começar o Gladiador sem esperar"
@@ -435,7 +441,9 @@
         "commands": {
           "exit-failed": "Não foi possível levar você de volta ao spawn. Reconecte para sair do evento.",
           "already-stopped": "Esse evento já está parado.",
-          "cant-start": "Já existe um evento ocorrendo!",
+          "cant-start": "&cJá existe um evento ocorrendo!",
+          "map-not-found": "&cO mapa {map} não existe ou não está carregado no P4Free Eventos.",
+          "start-failed": "&cNão foi possível abrir o {event}. Confira os pontos gravados com setloc.",
           "need-clan": "Para entrar no evento é necessário possuir um clan!",
           "clan-not-authorized": "&cO seu clã ainda não foi autorizado a entrar nos eventos.",
           "cant-join-event": "O {event} não está disponível para entrada.",
@@ -450,12 +458,12 @@
             "start": "&aO Evento Gladiador foi iniciado! Use &e/glad entrar.",
             "cancel": "&c[Gladiador] &fMinigame cancelado! O evento foi cancelado por falta de jogadores ou por um membro da administração.",
             "event-lock": "&c[Gladiador] &fEvento trancado! A entrada está fechada para novos guerreiros. Boa sorte aos participantes!",
-            "preparing-time": "&c[Gladiador] &fPreparem-se! O combate será liberado em &6{seconds} &fsegundos!",
+            "preparing-time": "&c[Gladiador] &fPreparem-se! O combate será liberado em &6{time}&f!",
             "allow-pvp": "&c[Gladiador] &fCombate liberado. Que vença o melhor!",
             "waiting-players": [
               "",
               "&c ⚔&c&l GLADIADOR!",
-              "&7 A batalha começa em &c{seconds} segundos&7.",
+              "&7 A batalha começa em &c{time}&7.",
               "",
               "&c 🪓 &7Participantes: &c{event_players_size}",
               "&c ✔ &7Clans confirmados: &c{event_clans_size}",
@@ -506,7 +514,7 @@
               "teleported": "&eVocê foi teleportado para o rush [{first_clan}] x [{second_clan}].",
               "watch-stopped": "&aVocê parou de assistir ao rush e voltou a ver todos os jogadores.",
               "started": "&6Rush iniciado: [{first_clan}] vs [{second_clan}].",
-              "finished": "&6Rush finalizado: [{first_clan}] {first_deaths} x {second_deaths} [{second_clan}]. &7Os clans têm {immunity_seconds} segundos de imunidade contra terceiros.",
+              "finished": "&6Rush finalizado: [{first_clan}] {first_deaths} x {second_deaths} [{second_clan}]. &7Os clans têm {immunity_time} de imunidade contra terceiros.",
               "immunity-ended": "&eA imunidade do rush entre [{first_clan}] e [{second_clan}] terminou."
             },
             "deathmatch": "&4&lMATA-MATA INICIADO! &cO PvP será reativado em 30 segundos.",
@@ -518,7 +526,7 @@
             "chase": {
               "kill": "&6O clan [{killer_clan}] eliminou um membro do alvo [{target_clan}] durante a caçada.",
               "postponed": "&cA caçada não encontrou um clan elegível e foi adiada.",
-              "started": "&6O clan [{target_clan}] foi marcado como alvo da caçada por {seconds} segundos!",
+              "started": "&6O clan [{target_clan}] foi marcado como alvo da caçada por {time}!",
               "survived": "&aO clan [{target_clan}] sobreviveu à caçada e recebeu a recompensa!",
               "reward-hover": "&7Passe o mouse aqui para ver as recompensas.",
               "rewards": {
@@ -560,11 +568,11 @@
               },
               "preparing-time": {
                 "title": "&6Preparem-se!",
-                "subtitle": "&fO combate será liberado em {seconds} segundos"
+                "subtitle": "&fO combate será liberado em {time}"
               },
               "border-warn": {
                 "title": "&cAtenção!",
-                "subtitle": "&fBorda diminuindo em {seconds} segundos!"
+                "subtitle": "&fBorda diminuindo em {time}!"
               },
               "border-change": {
                 "title": "&cAtenção!",
@@ -576,7 +584,7 @@
               },
               "cancel-event": {
                 "title": "&cAtenção!",
-                "subtitle": "&fEvento cancelando em {seconds} segundos!"
+                "subtitle": "&fEvento cancelando em {time}!"
               }
             }
           }
@@ -584,6 +592,7 @@
       },
       "queries": {
         "unavailable": "&cA instância do Gladiador não está disponível.",
+        "timeout": "&cO P4Free Eventos não respondeu. Tente de novo em instantes.",
         "failed": "&cNão foi possível consultar os dados do Gladiador.",
         "empty": "Nada a mostrar: não há Gladiador rodando ou ele ainda não tem registros.",
         "action": {
