@@ -7,6 +7,7 @@
           "already-connect-queue": "&cJá existe um pedido de teletransporte para o spawn, aguarde.",
           "cant-find-app": "&cNão foi possível encontrar um servidor de spawn aberto.",
           "void-rescue": "&cVocê caiu no vazio e voltou para o spawn.",
+          "teleported": "&aVocê foi teletransportado para o spawn.",
           "join": {
             "title": {
               "title": "&5&l????",
