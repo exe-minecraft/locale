@@ -13,7 +13,7 @@
       // Barra a cada segundo. {left_time} já vem com a unidade ("1 segundo", "30 segundos").
       "in-combat": "&c{left_time} para sair do combate com {enemy}",
       "combat-timer": {
-        "expire": "&aVocê não está mais em combate caso queria, pode deslogar sem perigo.",
+        "expire": "&aVocê não está mais em combate caso queira, pode deslogar sem perigo.",
         "enemy-death": "&aSeu inimigo foi eliminado!"
       },
       // Para todo mundo no servidor, quando um marcado desconecta e morre.
