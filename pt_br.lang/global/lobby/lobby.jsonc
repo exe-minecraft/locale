@@ -17,7 +17,7 @@
           }
         },
         "p4free": {
-          "name": "&cP4 Free",
+          "name": "&cP4Free",
           "icon": {
             "name": "{server_name}",
             "description": [
@@ -39,7 +39,7 @@
             ]
           },
           "hologram": [
-            "&c&lP4 FREE",
+            "&c&lP4FREE",
             "&c{server_online_player_count} jogando...",
             "{server_state}"
           ]
