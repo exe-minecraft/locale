@@ -22,6 +22,7 @@
       "command-blocked": "&cVocê não pode usar comandos durante o {event}.",
       "not-in-event": "&cVocê não está no {event}.",
       "already-in-event": "&cVocê já está inscrito no {event}.",
+      "stash-failed": "&cNão foi possível guardar seu inventário agora. Tente entrar em {event} de novo.",
       "cancelled": "&c{event} foi cancelado.",
       "winner": "&aO clã {clan} venceu {event}!",
       "locked": "&eAs inscrições de {event} foram encerradas. Prepare-se!",
