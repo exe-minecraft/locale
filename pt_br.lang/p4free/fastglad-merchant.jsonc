@@ -1,8 +1,8 @@
 {
   "plugins": {
     "fastglad-merchant": {
-      "title": "Mercador | {credits} moedas",
-      "price": "&7Custo: {cost} moeda(s)",
+      "title": "Mercador | {credits} {credits_unit}",
+      "price": "&7Custo: {cost} {cost_unit}",
       "products": {
         "energy": "&5Energético",
         "berserker": "&5Berserker",
