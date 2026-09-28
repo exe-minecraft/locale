@@ -613,6 +613,7 @@
         "clan-offline": "&cOs vivos desse clan estão desconectados agora.",
         "player-not-in-event": "&cEsse jogador não está no evento.",
         "no-hits": "&eNinguém acertou esse jogador nesta partida.",
+        "participant": "&cQuem está jogando o evento não pode usar este relatório.",
         "failed": "&cNão foi possível montar o relatório.",
         "armor": {
           "header": [
