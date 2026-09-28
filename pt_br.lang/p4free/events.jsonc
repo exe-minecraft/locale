@@ -113,7 +113,7 @@
           },
           "event-join": {
             "description": "entrar no Gladiador com o seu clã",
-            "unavailable": "Nenhuma instância do Gladiador está disponível.",
+            "unavailable": "&cO P4Free Eventos não está disponível agora. Tente de novo em instantes.",
             "failed": "Não foi possível entrar no Gladiador. Tente novamente."
           },
           "event-rejoin": {
@@ -129,7 +129,7 @@
             "description": "entrar ou sair do camarote",
             "cabin-join": {
               "description": "entrar no camarote para assistir",
-              "unavailable": "Nenhuma instância do Gladiador está disponível.",
+              "unavailable": "&cO P4Free Eventos não está disponível agora. Tente de novo em instantes.",
               "failed": "Não foi possível entrar no camarote. Tente novamente.",
               "inventory-not-empty": "Esvazie seu inventário antes de entrar no camarote."
             },
@@ -349,7 +349,7 @@
           },
           "event-join": {
             "description": "entrar no ClanFight com o seu clã",
-            "unavailable": "Nenhuma instância do ClanFight está disponível.",
+            "unavailable": "&cO P4Free Eventos não está disponível agora. Tente de novo em instantes.",
             "failed": "Não foi possível entrar no ClanFight. Tente novamente."
           },
           "event-force-join": {
@@ -373,7 +373,7 @@
             "description": "entrar ou sair do camarote",
             "cabin-join": {
               "description": "entrar no camarote para assistir",
-              "unavailable": "Nenhuma instância do ClanFight está disponível.",
+              "unavailable": "&cO P4Free Eventos não está disponível agora. Tente de novo em instantes.",
               "failed": "Não foi possível entrar no camarote. Tente novamente.",
               "inventory-not-empty": "Esvazie seu inventário antes de entrar no camarote."
             },
@@ -402,7 +402,7 @@
           },
           "event-join": {
             "description": "entrar no FastGlad com o seu clã",
-            "unavailable": "Nenhuma instância do FastGlad está disponível.",
+            "unavailable": "&cO P4Free Eventos não está disponível agora. Tente de novo em instantes.",
             "failed": "Não foi possível entrar no FastGlad. Tente novamente."
           },
           "event-force-join": {
@@ -426,7 +426,7 @@
             "description": "entrar ou sair do camarote",
             "cabin-join": {
               "description": "entrar no camarote para assistir",
-              "unavailable": "Nenhuma instância do FastGlad está disponível.",
+              "unavailable": "&cO P4Free Eventos não está disponível agora. Tente de novo em instantes.",
               "failed": "Não foi possível entrar no camarote. Tente novamente.",
               "inventory-not-empty": "Esvazie seu inventário antes de entrar no camarote."
             },
@@ -593,7 +593,7 @@
         }
       },
       "queries": {
-        "unavailable": "&cA instância do Gladiador não está disponível.",
+        "unavailable": "&cO P4Free Eventos não está disponível agora. Tente de novo em instantes.",
         "timeout": "&cO P4Free Eventos não respondeu. Tente de novo em instantes.",
         "failed": "&cNão foi possível consultar os dados do Gladiador.",
         "empty": "Nada a mostrar: não há Gladiador rodando ou ele ainda não tem registros.",
@@ -611,7 +611,7 @@
           "revive-failure": "&cNão foi possível reviver esse jogador.",
           "kick-player-success": "&aO jogador foi expulso.",
           "kick-player-failure": "&cEsse jogador não está no Gladiador.",
-          "leave-success": "&aVocê saiu do Gladiador.",
+          "leave-success": "&aVocê saiu do {event}.",
           "leave-failure": "&cNão foi possível sair do Gladiador.",
           "leave-not-in-event": "&cVocê não está no Gladiador.",
           "rejoin-success": "&aO pedido de reentrada foi aceito.",
