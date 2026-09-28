@@ -3,7 +3,7 @@
     "core": {
       "proxy": {
         "ping": {
-          "lowest-version": "&c⚠ Versão 1.8+ recomendada.",
+          "lowest-version": "&cVersão 1.8+ recomendada.",
           "maintenance": "&cManutenção",
           // Ao passar o rato no número de jogadores.
           "sample": "&cloja.rede-exe.com"

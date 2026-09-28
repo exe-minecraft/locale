@@ -85,7 +85,7 @@
           "chat-locked": "O chat está desabilitado!",
           "message": [
             "",
-            " &b[✉] &lTOP CHAT &fde {sender_name_with_tag}!",
+            " &b&lTOP CHAT &fde {sender_name_with_tag}!",
             " &8➟ &f{chat_message}",
             ""
           ]

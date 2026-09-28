@@ -44,14 +44,14 @@
         ],
         "build-mode": " &4Modo Construção",
         // O ícone da vida abaixo do nome dos jogadores.
-        "health": "&c❤",
+        "health": "&cHP",
         // As linhas do exe-scoreboard antigo. {build_mode_status} e {clan_scoreboard} são listas:
         // o modo construção só aparece com o /build ligado, e sem clã a linha de membros sai.
         "lines": [
           "{build_mode_status}",
           "",
-          "&f Cash: &6✪ {user_cash_formatted}",
-          "&f Almas: &e✝ {currency_souls_cached_account_value_formatted}",
+          "&f Cash: &6{user_cash_formatted}",
+          "&f Almas: &e{currency_souls_cached_account_value_formatted}",
           "&f Tokens: &a{currency_tokens_cached_account_value_formatted}",
           "&f Grupo: &c{user_group_name_with_color}",
           "",

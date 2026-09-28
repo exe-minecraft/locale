@@ -56,23 +56,23 @@
         "remaining-many": "Restam",
         "countdown": {
           "5": {
-            "title": "&a➎",
+            "title": "&a5",
             "subtitle": "&fSegundos restantes"
           },
           "4": {
-            "title": "&f➍",
+            "title": "&f4",
             "subtitle": "&fSegundos restantes"
           },
           "3": {
-            "title": "&6➌",
+            "title": "&63",
             "subtitle": "&fSegundos restantes"
           },
           "2": {
-            "title": "&c➋",
+            "title": "&c2",
             "subtitle": "&fSegundos restantes"
           },
           "1": {
-            "title": "&4➊",
+            "title": "&41",
             "subtitle": "&fSegundo restante"
           }
         }

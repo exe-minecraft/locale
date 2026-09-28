@@ -50,7 +50,7 @@
           "page-not-positive": "&c&lErro: &fO número da página deve ser maior que 0.",
           "empty": "&c&lInfo: &fNenhum comando recente para {player}.",
           "missing-page": "&c&lErro: &fPágina {page} não existe. Total de páginas: {pages}",
-          "header": "&6&l⚡ Comandos recentes de &e{player} &6(Página {page}/{pages}):",
+          "header": "&6&lComandos recentes de &e{player} &6(Página {page}/{pages}):",
           "entry": "&8{index}. &f{command} &7({time} atrás)",
           "copy": "&7Clique para copiar",
           "navigation": {
