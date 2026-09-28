@@ -42,6 +42,10 @@
             "target": {
               "name": "jogador",
               "description": "Jogador deste servidor que recebe o kit"
+            },
+            "mark": {
+              "name": "marca",
+              "description": "A marca da partida gravada em cada peça (quem manda é o evento)"
             }
           }
         }
