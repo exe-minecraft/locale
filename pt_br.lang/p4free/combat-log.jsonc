@@ -1,8 +1,25 @@
 {
   "plugins": {
-    // A marca de combate do P4Free: 15 s depois do último golpe, renovada a cada golpe.
+    // A marca de combate do P4Free: 30 s depois do último golpe, renovada a cada golpe. Os textos são os do
+    // exe-combat-log antigo.
     "combat-log": {
-      "command-blocked": "&cVocê está em combate. Esse comando volta em {seconds}s."
+      // No primeiro golpe de uma luta. {left_time} é o prazo em segundos.
+      "enter-combat": [
+        "",
+        "&c Você entrou em combate, aguarde",
+        "&c até {left_time} segundos para deslogar.",
+        ""
+      ],
+      // Barra a cada segundo. {left_time} já vem com a unidade ("1 segundo", "30 segundos").
+      "in-combat": "&c{left_time} para sair do combate com {enemy}",
+      "combat-timer": {
+        "expire": "&aVocê não está mais em combate caso queria, pode deslogar sem perigo.",
+        "enemy-death": "&aSeu inimigo foi eliminado!"
+      },
+      // Para todo mundo no servidor, quando um marcado desconecta e morre.
+      "punish": "&7{player} &cdesconectou em combate, que feio!",
+      "command-blocked": "&cEi, você não pode dar comandos em combate!",
+      "teleport-blocked": "&cVocê não pode se teleportar em combate"
     }
   }
 }
