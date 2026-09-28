@@ -1,13 +1,24 @@
 {
   "plugins": {
     "tokens": {
+      // As unidades concordam com o número pelo Plural do core: {tokens_unit} é o nome da moeda em minúsculas.
       "messages": {
         "session-summary": [
           "",
-          " &bSequência encerrada: &f+{tokens} tokens",
-          " &7{hits} golpe(s), {kills} abate(s)",
+          " &bSequência encerrada: &f+{tokens} {tokens_unit}",
+          " &7{hits} {hits_unit}, {kills} {kills_unit}",
           ""
         ]
+      },
+      "units": {
+        "hit": {
+          "singular": "golpe",
+          "plural": "golpes"
+        },
+        "kill": {
+          "singular": "abate",
+          "plural": "abates"
+        }
       }
     }
   }
