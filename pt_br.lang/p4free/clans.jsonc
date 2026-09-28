@@ -4,6 +4,10 @@
       "placeholders": {
         "tag-brackets": "&7[{clan_colored_tag}&7]"
       },
+      // As palavras que acompanham um número montado no código (o Plural do core): 1 no singular.
+      "units": {
+        "member": { "singular": "membro", "plural": "membros" }
+      },
       // O bloco do clã nas scoreboards do P4Free ({clan_scoreboard}). A linha do 1.8 tem 16 caracteres de
       // prefixo e 16 de sufixo, e o sufixo repete a cor do prefixo: a tag mais longa (§aK§bN§cN, 9) e um
       // nome de 16 letras não cabem juntos, e o nome perdia o final. Cada um na sua linha.
@@ -296,7 +300,7 @@
               " &7Clique no clã para ver as informações dele.",
               ""
             ],
-            "entry": " &7{position}º &7[{clan_colored_tag}&7] &f{clan_name} &8({clan_members_size} membros)",
+            "entry": " &7{position}º &7[{clan_colored_tag}&7] &f{clan_name} &8({clan_members_size} {clan_members_unit})",
             "entry-hover": "&e/clan info {clan_tag}",
             "footer": [
               "",

@@ -13,7 +13,9 @@
         },
         "conversation": {
           "expired": "Você demorou muito para responder, então a operação foi cancelada!",
-          "cancelled": "Você cancelou essa operação!"
+          "cancelled": "Você cancelou essa operação!",
+          // O /conversation sem pergunta aberta (a resposta clicável chega depois do prazo, ou foi digitada à mão).
+          "none": "Você não tem nenhuma pergunta aberta para responder."
         },
         "errors": {
           "parse-double": "Não foi possível identificar \"{number}\" como um número, tente novamente!",
