@@ -4,7 +4,16 @@
       "commands": {
         "clearlag": {
           "request-sent": "&aSolicitação de limpeza enviada com sucesso.",
-          "request-sent-silent": "&aSolicitação de limpeza silenciosa enviada com sucesso."
+          "request-sent-silent": "&aSolicitação de limpeza silenciosa enviada com sucesso.",
+          // O resultado do -s, só para quem pediu: os jogadores não veem anúncio.
+          "cleaned-silent": "&aLimpeza silenciosa concluída: {count} {count_unit} do chão.",
+          "cleaned-silent-nothing": "&aLimpeza silenciosa concluída: não havia itens no chão.",
+          "units": {
+            "item": {
+              "singular": "item removido",
+              "plural": "itens removidos"
+            }
+          }
         }
       },
       "messages": {
