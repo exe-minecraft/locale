@@ -21,6 +21,7 @@
       "combat-leave": "&cVocê não pode sair do {event} em combate.",
       "command-blocked": "&cVocê não pode usar comandos durante o {event}.",
       "not-in-event": "&cVocê não está no {event}.",
+      "already-in-event": "&cVocê já está inscrito no {event}.",
       "cancelled": "&c{event} foi cancelado.",
       "winner": "&aO clã {clan} venceu {event}!",
       "locked": "&eAs inscrições de {event} foram encerradas. Prepare-se!",
