@@ -24,7 +24,9 @@
         "player": { "singular": "jogador", "plural": "jogadores" },
         "participant": { "singular": "participante", "plural": "participantes" },
         "clan": { "singular": "clan", "plural": "clans" },
-        "alive-member": { "singular": "membro do clan ainda vivo", "plural": "membros do clan ainda vivos" },
+        "member": { "singular": "membro", "plural": "membros" },
+        "alive": { "singular": "vivo", "plural": "vivos" },
+        "remain": { "singular": "Resta", "plural": "Restam" },
         "kill": { "singular": "abate", "plural": "abates" },
         "rush": { "singular": "rush", "plural": "rushes" },
         "win": { "singular": "vitória", "plural": "vitórias" },
@@ -501,14 +503,12 @@
               "clan-limit": "Seu clan já atingiu o limite de participantes.",
               "removed": "{reason}"
             },
-            "kill": "&c{killer_name} eliminou {victim_name} &7({victim_clan_alive} {victim_clan_alive_unit}).",
-            // O último vivo do clã: a eliminação do clã é anunciada logo a seguir.
-            "kill-last": "&c{killer_name} eliminou {victim_name}.",
+            "kill": "&c{killer_name} eliminou {victim_name} &7({victim_clan_alive} {member_unit} do clan ainda {alive_unit}).",
             "rush": {
               "none": "Nenhum rush está acontecendo no momento.",
               "list-header": "&6Rushes ativos ({rush_count}):",
               "list-entry": "&e • [{first_clan}] {first_deaths} x {second_deaths} [{second_clan}]",
-              "spectator-required": "&cVocê precisa estar no camarote para assistir a um rush.",
+              "spectator-required": "Você precisa estar no camarote para assistir a um rush.",
               "not-active": "Esse clan não está em um rush ativo.",
               "no-online-player": "Não há jogadores online nesse rush.",
               "teleported": "&eVocê foi teleportado para o rush [{first_clan}] x [{second_clan}].",
@@ -521,9 +521,7 @@
             "pvp-enabled": "&aO PvP foi ligado!",
             "finish-summary": "&6Gladiador finalizado! Clan vencedor: [{clan_winner}], Mito: {event_myth} ({event_myth_kills} {event_myth_kills_unit}).",
             "border": {
-              "eliminated": "&cO clan [{clan_tag}] foi eliminado. Restam {remaining_clans} clans.",
-              // Sobrou um clã (ou nenhum): o anúncio seguinte é a vitória (ou o cancelamento).
-              "eliminated-last": "&cO clan [{clan_tag}] foi eliminado."
+              "eliminated": "&cO clan [{clan_tag}] foi eliminado. {remaining_verb} {remaining_clans} {remaining_clans_unit}."
             },
             "chase": {
               "kill": "&6O clan [{killer_clan}] eliminou um membro do alvo [{target_clan}] durante a caçada.",
@@ -602,7 +600,6 @@
           "deathmatch-failure": "&cO Gladiador não está em andamento.",
           "border-success": "&aO avanço da borda foi iniciado.",
           "border-failure": "&cNão há uma próxima borda ou já existe um avanço em andamento.",
-          "border-not-running": "&cA luta do Gladiador não está em andamento: a borda só se controla durante a luta.",
           "border-manual": "&aA borda passou para o modo manual.",
           "border-automatic": "&aA borda passou para o modo automático.",
           "rejoin-enabled": "&aA reentrada foi ativada.",
