@@ -30,7 +30,9 @@
         "kill": { "singular": "abate", "plural": "abates" },
         "rush": { "singular": "rush", "plural": "rushes" },
         "win": { "singular": "vitória", "plural": "vitórias" },
-        "coin": { "singular": "moeda", "plural": "moedas" }
+        "coin": { "singular": "moeda", "plural": "moedas" },
+        "set": { "singular": "set", "plural": "sets" },
+        "hit": { "singular": "hit", "plural": "hits" }
       },
       // O quadro do mundo do Gladiador. Os {event_*} são listas que ficam vazias fora do evento,
       // e levam a linha em branco de cima junto, como no exe-scoreboard.
@@ -62,6 +64,18 @@
         "finalized": "&7finalizado"
       },
       "commands": {
+        "armor": {
+          "description": "ver os sets de armadura dos vivos de um clan no evento",
+          "arguments": {
+            "clan": { "name": "clan", "description": "Tag do clan." }
+          }
+        },
+        "check-target": {
+          "description": "ver quem acertou um jogador no evento, e quantas vezes",
+          "arguments": {
+            "player": { "name": "jogador", "description": "Nome do jogador." }
+          }
+        },
         "glad": {
           "event-start": {
             "description": "abrir as inscrições do Gladiador num mapa",
@@ -590,6 +604,31 @@
               }
             }
           }
+        }
+      },
+      // O /armor e o /checktarget da staff: a prova do foco no alvo (hideclans e target).
+      "reports": {
+        "no-event": "&cNão há evento rodando agora.",
+        "clan-not-in-event": "&cEsse clan não tem ninguém vivo no evento.",
+        "clan-offline": "&cOs vivos desse clan estão desconectados agora.",
+        "player-not-in-event": "&cEsse jogador não está no evento.",
+        "no-hits": "&eNinguém acertou esse jogador nesta partida.",
+        "failed": "&cNão foi possível montar o relatório.",
+        "armor": {
+          "header": [
+            "",
+            "&eSets do clan [{clan_tag}&e]",
+            "&fEvento: &7{event} &8| &fVivos: &7{alive}",
+            "&7Só contam peças com &a{min_percent}%+ &7de durabilidade."
+          ],
+          "fewest": "&c#{position} {player_name} &7- &c{sets} {sets_unit}",
+          "entry": "&7#{position} {player_name} - {sets} {sets_unit}"
+        },
+        "hits": {
+          "header": ["", "&eHits recebidos por {player_name}"],
+          "armor": "&fArmadura vestida: &c{worn}% &7(#{position} do clan)",
+          "out-of-match": "&fArmadura: &7fora da partida",
+          "entry": "&7- &f{player_name} &7» &c{hits} {hits_unit}"
         }
       },
       "queries": {
