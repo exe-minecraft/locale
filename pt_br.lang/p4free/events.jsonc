@@ -19,6 +19,17 @@
           "hours": "{value}h"
         }
       },
+      // A palavra que acompanha um número (EventUnits): 1 no singular, 0 e o resto no plural.
+      "units": {
+        "player": { "singular": "jogador", "plural": "jogadores" },
+        "participant": { "singular": "participante", "plural": "participantes" },
+        "clan": { "singular": "clan", "plural": "clans" },
+        "alive-member": { "singular": "membro do clan ainda vivo", "plural": "membros do clan ainda vivos" },
+        "kill": { "singular": "abate", "plural": "abates" },
+        "rush": { "singular": "rush", "plural": "rushes" },
+        "win": { "singular": "vitória", "plural": "vitórias" },
+        "coin": { "singular": "moeda", "plural": "moedas" }
+      },
       // O quadro do mundo do Gladiador. Os {event_*} são listas que ficam vazias fora do evento,
       // e levam a linha em branco de cima junto, como no exe-scoreboard.
       "scoreboard": {
@@ -129,7 +140,7 @@
           "status": {
             "description": "ver o estado atual do Gladiador",
             "unavailable": "Ainda não há dados do Gladiador.",
-            "message": "&eGladiador: {event_status} &8| &e{event_players} jogadores &8| &e{event_clans} clans &8| &eborda {event_border} &8| &e{event_rushes} rush(es) &8| &e{event_time}s"
+            "message": "&eGladiador: {event_status} &8| &e{event_players} {event_players_unit} &8| &e{event_clans} {event_clans_unit} &8| &eborda {event_border} &8| &e{event_rushes} {event_rushes_unit} &8| &e{event_time}s"
           },
           "beast": {
             "description": "ver ou definir o Mito atual",
@@ -471,23 +482,10 @@
               "&c Vá para o evento agora mesmo! Clique &lAQUI!",
               ""
             ],
-            "win": [
-              "",
-              "&c ⚔&c&l GLADIADOR!",
-              "&7 O evento foi encerrado e o clan &c{clan_winner_display_name}&7 foi o",
-              "&7 vencedor com &c{clan_winner_members_alive} jogadores vivos&7.",
-              "",
-              " &cRanking de abates por clan:",
-              " {event_kills_leaderboard}",
-              "",
-              " &7Mito: &c{event_myth}",
-              ""
-            ],
             "player": {
-              "join-event": "{player_name} &eentrou no Gladiador. ({event_players} participantes)",
+              "join-event": "{player_name} &eentrou no Gladiador. ({event_players} {event_players_unit})",
               "return-event": "&e{player_name} retornou ao Gladiador.",
               "revived": "&a{player_name} foi revivido no Gladiador.",
-              "quit-warning": "&eVocê desconectou do Gladiador. Use /glad rejoin em até {seconds} segundos.",
               "combat-immunity": "Você não pode atacar esse jogador durante a imunidade!",
               "combat-leave": "Você não pode sair do Gladiador em combate.",
               "command-blocked": "Você não pode usar comandos durante o Gladiador.",
@@ -503,12 +501,14 @@
               "clan-limit": "Seu clan já atingiu o limite de participantes.",
               "removed": "{reason}"
             },
-            "kill": "&c{killer_name} eliminou {victim_name} &7({victim_clan_alive} membros do clan ainda vivos).",
+            "kill": "&c{killer_name} eliminou {victim_name} &7({victim_clan_alive} {victim_clan_alive_unit}).",
+            // O último vivo do clã: a eliminação do clã é anunciada logo a seguir.
+            "kill-last": "&c{killer_name} eliminou {victim_name}.",
             "rush": {
               "none": "Nenhum rush está acontecendo no momento.",
               "list-header": "&6Rushes ativos ({rush_count}):",
               "list-entry": "&e • [{first_clan}] {first_deaths} x {second_deaths} [{second_clan}]",
-              "spectator-required": "Você precisa estar no camarote para assistir a um rush.",
+              "spectator-required": "&cVocê precisa estar no camarote para assistir a um rush.",
               "not-active": "Esse clan não está em um rush ativo.",
               "no-online-player": "Não há jogadores online nesse rush.",
               "teleported": "&eVocê foi teleportado para o rush [{first_clan}] x [{second_clan}].",
@@ -519,9 +519,11 @@
             },
             "deathmatch": "&4&lMATA-MATA INICIADO! &cO PvP será reativado em 30 segundos.",
             "pvp-enabled": "&aO PvP foi ligado!",
-            "finish-summary": "&6Gladiador finalizado! Clan vencedor: [{clan_winner}], Mito: {event_myth} ({event_myth_kills} abates).",
+            "finish-summary": "&6Gladiador finalizado! Clan vencedor: [{clan_winner}], Mito: {event_myth} ({event_myth_kills} {event_myth_kills_unit}).",
             "border": {
-              "eliminated": "&cO clan [{clan_tag}] foi eliminado. Restam {remaining_clans} clans."
+              "eliminated": "&cO clan [{clan_tag}] foi eliminado. Restam {remaining_clans} clans.",
+              // Sobrou um clã (ou nenhum): o anúncio seguinte é a vitória (ou o cancelamento).
+              "eliminated-last": "&cO clan [{clan_tag}] foi eliminado."
             },
             "chase": {
               "kill": "&6O clan [{killer_clan}] eliminou um membro do alvo [{target_clan}] durante a caçada.",
@@ -600,6 +602,7 @@
           "deathmatch-failure": "&cO Gladiador não está em andamento.",
           "border-success": "&aO avanço da borda foi iniciado.",
           "border-failure": "&cNão há uma próxima borda ou já existe um avanço em andamento.",
+          "border-not-running": "&cA luta do Gladiador não está em andamento: a borda só se controla durante a luta.",
           "border-manual": "&aA borda passou para o modo manual.",
           "border-automatic": "&aA borda passou para o modo automático.",
           "rejoin-enabled": "&aA reentrada foi ativada.",
@@ -834,7 +837,7 @@
                   "&7Duração: &f{event_duration}",
                   "&7Participantes: &f{event_players}",
                   "&7Clan vencedor: &f{clan_winner}",
-                  "&7Mito: &f{event_myth} &8({event_myth_kills} abates)",
+                  "&7Mito: &f{event_myth} &8({event_myth_kills} {event_myth_kills_unit})",
                   "",
                   "&eClique para ver os detalhes!"
                 ]
@@ -856,7 +859,7 @@
                   "&7ID: &f{event_id}",
                   "&7Estado: &f{event_status}",
                   "&7Clan vencedor: &f{clan_winner}",
-                  "&7Mito: &f{event_myth} &8({event_myth_kills} abates)",
+                  "&7Mito: &f{event_myth} &8({event_myth_kills} {event_myth_kills_unit})",
                   "&7Participantes: &f{event_players}"
                 ]
               },
@@ -903,7 +906,7 @@
             "world-unavailable": "O mundo dessa teia não está disponível nesta instância.",
             "items": {
               "entry": {
-                "name": "&cTeia com {players} jogadores",
+                "name": "&cTeia com {players} {players_unit}",
                 "lore": [
                   "&7Mundo: &f{world}",
                   "&7Posição: &f{x}, {y}, {z}",
@@ -968,8 +971,8 @@
               "entry": {
                 "name": "&e[{first_clan}] &fvs &e[{second_clan}]",
                 "lore": [
-                  "&f{first_clan}: &6{first_wins} vitórias",
-                  "&f{second_clan}: &6{second_wins} vitórias"
+                  "&f{first_clan}: &6{first_wins} {first_wins_unit}",
+                  "&f{second_clan}: &6{second_wins} {second_wins_unit}"
                 ]
               },
               "back": {
