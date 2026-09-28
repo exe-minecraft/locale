@@ -7,13 +7,7 @@
           "request-sent-silent": "&aSolicitação de limpeza silenciosa enviada com sucesso.",
           // O resultado do -s, só para quem pediu: os jogadores não veem anúncio.
           "cleaned-silent": "&aLimpeza silenciosa concluída: {count} {count_unit} do chão.",
-          "cleaned-silent-nothing": "&aLimpeza silenciosa concluída: não havia itens no chão.",
-          "units": {
-            "item": {
-              "singular": "item removido",
-              "plural": "itens removidos"
-            }
-          }
+          "cleaned-silent-nothing": "&aLimpeza silenciosa concluída: não havia itens no chão."
         }
       },
       "messages": {
@@ -41,7 +35,14 @@
               "many": "&l{count}&d minutos"
             }
           },
-          "clean": "&5&lLIXEIRO &fForam removidos &d&l{count}&f lixos do chão!",
+          "clean": "&5&lLIXEIRO &d&l{count}&f {count_unit} do chão!",
+          // O {count_unit} do anúncio e do resultado do -s: 1 no singular, 0 e o resto no plural.
+          "units": {
+            "item": {
+              "singular": "item removido",
+              "plural": "itens removidos"
+            }
+          },
           "clean-nothing": "&5&lLIXEIRO &cNenhum item a ser removido!"
         }
       }
