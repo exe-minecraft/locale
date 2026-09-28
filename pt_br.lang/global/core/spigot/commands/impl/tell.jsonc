@@ -14,8 +14,8 @@
           "target-preference-disabled": "O jogador {target_name} está com o recebimento de mensagens privadas desativado.",
           "sender-ignored-target": "Você não pode enviar mensagens para um jogador ignorado!",
           "target-ignored-sender": "Você não pode enviar mensagens para o jogador {target_name} pois ele te adicionou na lista de ignorados!",
-          "message-sender": "&e[✉] &8[{target_connected_app}] &fMensagem para {target_name_with_tag}&e: &f{target_message}",
-          "message-target": "&e[✉] &8[{sender_connected_app}] &fMensagem de {sender_name_with_tag}&e: &f{sender_message}"
+          "message-sender": "&8[{target_connected_app}] &fMensagem para {target_name_with_tag}&e: &f{target_message}",
+          "message-target": "&8[{sender_connected_app}] &fMensagem de {sender_name_with_tag}&e: &f{sender_message}"
         },
         "tell": {
           "arguments": {
@@ -32,8 +32,8 @@
           "target-preference-disabled": "O jogador {target_name} está com o recebimento de mensagens privadas desativado.",
           "sender-ignored-target": "Você não pode enviar mensagens para um jogador ignorado!",
           "target-ignored-sender": "Você não pode enviar mensagens para o jogador {target_name} pois ele te adicionou na lista de ignorados!",
-          "message-sender": "&e[✉] &8[{target_connected_app}] &fMensagem para {target_name_with_tag}&e: &f{target_message}",
-          "message-target": "&e[✉] &8[{sender_connected_app}] &fMensagem de {sender_name_with_tag}&e: &f{sender_message}"
+          "message-sender": "&8[{target_connected_app}] &fMensagem para {target_name_with_tag}&e: &f{target_message}",
+          "message-target": "&8[{sender_connected_app}] &fMensagem de {sender_name_with_tag}&e: &f{sender_message}"
         }
       }
     }

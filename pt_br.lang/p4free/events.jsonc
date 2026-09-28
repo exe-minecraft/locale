@@ -477,11 +477,11 @@
             "allow-pvp": "&c[Gladiador] &fCombate liberado. Que vença o melhor!",
             "waiting-players": [
               "",
-              "&c ⚔&c&l GLADIADOR!",
+              "&c&l GLADIADOR!",
               "&7 A batalha começa em &c{time}&7.",
               "",
-              "&c 🪓 &7Participantes: &c{event_players_size}",
-              "&c ✔ &7Clans confirmados: &c{event_clans_size}",
+              "&7 Participantes: &c{event_players_size}",
+              "&7 Clans confirmados: &c{event_clans_size}",
               "",
               "&c Vá para o evento agora mesmo! Clique &lAQUI!",
               ""

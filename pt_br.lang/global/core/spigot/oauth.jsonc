@@ -15,9 +15,9 @@
               "&0&lData: {request_date}",
               "&0&lLocal: {request_ip_city}, {request_ip_region}",
               "",
-              "&0Autorizar o login &a✔",
+              "&aAutorizar o login",
               "",
-              "&0Não fui eu, rejeitar &c✖",
+              "&cNão fui eu, rejeitar",
               ""
             ]
           }
