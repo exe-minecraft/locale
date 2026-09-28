@@ -1,0 +1,8 @@
+{
+  "plugins": {
+    // A marca de combate do P4Free: 15 s depois do último golpe, renovada a cada golpe.
+    "combat-log": {
+      "command-blocked": "&cVocê está em combate. Esse comando volta em {seconds}s."
+    }
+  }
+}

@@ -319,7 +319,6 @@
           }
         },
         "clanfight": {
-          // Só as descrições da lista de uso: as outras mensagens destes comandos ainda faltam.
           "event-start": {
             "description": "abrir as inscrições do ClanFight"
           },
@@ -330,7 +329,9 @@
             "description": "cancelar o ClanFight"
           },
           "event-join": {
-            "description": "entrar no ClanFight com o seu clã"
+            "description": "entrar no ClanFight com o seu clã",
+            "unavailable": "Nenhuma instância do ClanFight está disponível.",
+            "failed": "Não foi possível entrar no ClanFight. Tente novamente."
           },
           "event-force-join": {
             "description": "enviar um jogador ao ClanFight",
@@ -339,18 +340,28 @@
                 "name": "jogador",
                 "description": "Jogador que será enviado ao ClanFight."
               }
-            }
+            },
+            "user-not-found": "Jogador não encontrado.",
+            "unavailable": "Nenhuma instância do ClanFight está disponível.",
+            "failed": "Não foi possível enviar o jogador ao ClanFight."
           },
           "sair": {
-            "description": "sair do ClanFight"
+            "description": "sair do ClanFight",
+            "not-running": "Não há um ClanFight em andamento.",
+            "processing": "Processando sua saída do ClanFight..."
           },
           "camarote": {
             "description": "entrar ou sair do camarote",
             "cabin-join": {
-              "description": "entrar no camarote para assistir"
+              "description": "entrar no camarote para assistir",
+              "unavailable": "Nenhuma instância do ClanFight está disponível.",
+              "failed": "Não foi possível entrar no camarote. Tente novamente.",
+              "inventory-not-empty": "Esvazie seu inventário antes de entrar no camarote."
             },
             "exit": {
-              "description": "sair do camarote"
+              "description": "sair do camarote",
+              "not-running": "Não há um ClanFight em andamento.",
+              "processing": "Processando sua saída do camarote..."
             }
           },
           "setloc": {
@@ -361,7 +372,6 @@
           }
         },
         "fastglad": {
-          // Só as descrições da lista de uso: as outras mensagens destes comandos ainda faltam.
           "event-start": {
             "description": "abrir as inscrições do FastGlad"
           },
@@ -372,7 +382,9 @@
             "description": "cancelar o FastGlad"
           },
           "event-join": {
-            "description": "entrar no FastGlad com o seu clã"
+            "description": "entrar no FastGlad com o seu clã",
+            "unavailable": "Nenhuma instância do FastGlad está disponível.",
+            "failed": "Não foi possível entrar no FastGlad. Tente novamente."
           },
           "event-force-join": {
             "description": "enviar um jogador ao FastGlad",
@@ -381,18 +393,28 @@
                 "name": "jogador",
                 "description": "Jogador que será enviado ao FastGlad."
               }
-            }
+            },
+            "user-not-found": "Jogador não encontrado.",
+            "unavailable": "Nenhuma instância do FastGlad está disponível.",
+            "failed": "Não foi possível enviar o jogador ao FastGlad."
           },
           "sair": {
-            "description": "sair do FastGlad"
+            "description": "sair do FastGlad",
+            "not-running": "Não há um FastGlad em andamento.",
+            "processing": "Processando sua saída do FastGlad..."
           },
           "camarote": {
             "description": "entrar ou sair do camarote",
             "cabin-join": {
-              "description": "entrar no camarote para assistir"
+              "description": "entrar no camarote para assistir",
+              "unavailable": "Nenhuma instância do FastGlad está disponível.",
+              "failed": "Não foi possível entrar no camarote. Tente novamente.",
+              "inventory-not-empty": "Esvazie seu inventário antes de entrar no camarote."
             },
             "exit": {
-              "description": "sair do camarote"
+              "description": "sair do camarote",
+              "not-running": "Não há um FastGlad em andamento.",
+              "processing": "Processando sua saída do camarote..."
             }
           },
           "setloc": {
@@ -463,10 +485,10 @@
               "command-blocked": "Você não pode usar comandos durante o Gladiador.",
               "drop-blocked": "Você não pode dropar este item enquanto o Gladiador não começa!",
               "removed-from-clan": "Você foi removido do clan enquanto participava de um evento de clans.",
-              "rejoin-command-blocked": "Você não pode reentrar porque utilizou um comando que bloqueia a reentrada.",
-              "rejoin-validation-failed": "Não foi possível validar sua reentrada. Tente novamente.",
-              "rejoin-disabled": "A reentrada no Gladiador está desativada.",
-              "rejoin-expired": "Seu tempo para reentrar no Gladiador expirou.",
+              "rejoin-command-blocked": "&cVocê não pode reentrar porque utilizou um comando que bloqueia a reentrada.",
+              "rejoin-validation-failed": "&cNão foi possível validar sua reentrada. Tente novamente.",
+              "rejoin-disabled": "&cA reentrada no Gladiador está desativada.",
+              "rejoin-expired": "&cSeu tempo para reentrar no Gladiador expirou.",
               "rejoin-countdown": "Você retornará ao Gladiador em 5 segundos. Prepare-se!",
               "rejoin-failed": "Não foi possível retornar ao Gladiador.",
               "need-clan": "Você precisa estar em um clan para participar do Gladiador.",
@@ -580,6 +602,7 @@
           "kick-player-failure": "&cEsse jogador não está no Gladiador.",
           "leave-success": "&aVocê saiu do Gladiador.",
           "leave-failure": "&cNão foi possível sair do Gladiador.",
+          "leave-not-in-event": "&cVocê não está no Gladiador.",
           "rejoin-success": "&aO pedido de reentrada foi aceito.",
           "rejoin-failure-player": "&cNão foi possível reentrar no Gladiador.",
           "kick-clan-success": "&aO clan foi expulso.",

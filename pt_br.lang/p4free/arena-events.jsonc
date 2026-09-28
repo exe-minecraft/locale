@@ -18,6 +18,8 @@
       "deathmatch": "&cO deathmatch de {event} começou!",
       "cannot-join": "&cNão foi possível entrar em {event}. Confira seu clã e o limite de participantes.",
       "empty-inventory": "&cEntre em {event} com o inventário e a armadura vazios.",
+      "combat-leave": "&cVocê não pode sair do {event} em combate.",
+      "command-blocked": "&cVocê não pode usar comandos durante o {event}.",
       "cancelled": "&c{event} foi cancelado.",
       "winner": "&aO clã {clan} venceu {event}!",
       "locked": "&eAs inscrições de {event} foram encerradas. Prepare-se!",

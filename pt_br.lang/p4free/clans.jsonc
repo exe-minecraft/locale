@@ -4,10 +4,13 @@
       "placeholders": {
         "tag-brackets": "&7[{clan_colored_tag}&7]"
       },
-      // O bloco do clã nas scoreboards do P4Free ({clan_scoreboard}).
+      // O bloco do clã nas scoreboards do P4Free ({clan_scoreboard}). A linha do 1.8 tem 16 caracteres de
+      // prefixo e 16 de sufixo, e o sufixo repete a cor do prefixo: a tag mais longa (§aK§bN§cN, 9) e um
+      // nome de 16 letras não cabem juntos, e o nome perdia o final. Cada um na sua linha.
       "scoreboard": {
         "clan": [
-          "&f [&7{tag}&f] {name}",
+          "&f Clã: [{tag}&f]",
+          "&7 {name}",
           "&f Membros: &7{members}/{max_members}"
         ],
         "no-clan": [
@@ -89,7 +92,12 @@
         "clan-not-found": "&cNão existe nenhum clã com essa tag.",
         "member-not-found": "&cNão foi possível encontrar informações sobre esse jogador.",
         "need-leader-role": "&cApenas o líder do clã pode fazer isso.",
-        "need-more-role": "&cVocê não tem um cargo alto o suficiente para fazer isso."
+        "need-more-role": "&cVocê não tem um cargo alto o suficiente para fazer isso.",
+        // Sair, expulsar e desfazer esperam quem está jogando um evento (inscrito na espera, vivo, ou
+        // caído com rejoin) sair dele: tirar do clã tirava do evento sem morte, sem drops e sem abate.
+        "target-in-event": "{target_name_with_tag} &cestá jogando um evento. Só dá para tirá-lo do clã depois que ele sair do evento ou o evento acabar.",
+        "self-in-event": "&cVocê está jogando um evento. Só dá para sair do clã depois de sair do evento ou de o evento acabar.",
+        "members-in-event": "&cHá membros do clã jogando um evento. O clã só pode ser desfeito depois que eles saírem do evento ou o evento acabar."
       },
       "items": {
         "member-head": {
@@ -149,7 +157,7 @@
             "arguments": {
               "tag": {
                 "name": "tag",
-                "description": "Tag de 3 caracteres, pode levar cor (&cABC)"
+                "description": "Tag de 3 caracteres, com uma cor por letra se quiser (&aK&bN&cN)"
               },
               "name": {
                 "name": "nome",
@@ -159,6 +167,7 @@
             "errors": {
               "tag-with-formatting": "&cA tag do clã pode ter cor, mas não negrito, itálico, sublinhado, riscado nem texto mágico.",
               "tag-length": "&cA tag precisa ter exatamente 3 caracteres, sem contar as cores.",
+              "tag-too-long": "&cA tag com as cores passa de 9 caracteres e não cabe acima da cabeça. Use no máximo uma cor por letra.",
               "name-length": "&cO nome do clã precisa ter de 5 a 16 caracteres.",
               "invalid-pattern": "&cA tag e o nome só aceitam letras e números.",
               "tag-in-use": "&cJá existe um clã com essa tag.",
@@ -416,13 +425,16 @@
             "arguments": {
               "tag": {
                 "name": "tag",
-                "description": "A mesma tag, com as cores que você quer"
+                "description": "A mesma tag, com as cores que você quer (uma por letra), ou sem cor para tirá-las"
               }
             },
             "errors": {
               "tag-with-formatting": "&cA tag do clã pode ter cor, mas não negrito, itálico, sublinhado, riscado nem texto mágico.",
+              "tag-too-long": "&cA tag com as cores passa de 9 caracteres e não cabe acima da cabeça. Use no máximo uma cor por letra.",
+              "tag-length": "&cAs letras da tag não mudam, só as cores.",
+              "invalid-pattern": "&cAs letras da tag não mudam, só as cores.",
               "letters-changed": "&cAs letras da tag não mudam, só as cores.",
-              "no-change": "&cNenhuma cor foi alterada."
+              "no-change": "&cA tag já está assim."
             }
           },
           "authorize": {
@@ -449,7 +461,7 @@
             "errors": {
               "already-in-state": "&cO clã &7[{clan_colored_tag}&7]&c já está desautorizado."
             },
-            "success": "&cVocê desautorizou o clã &7[{clan_colored_tag}&7] {clan_name}&c nos eventos."
+            "success": "&cVocê desautorizou o clã &7[{clan_colored_tag}&7] {clan_name}&c nos eventos. Quem já está num evento continua nele até o fim."
           },
           "delete": {
             "description": "apagar um clã",
@@ -599,6 +611,16 @@
             "",
             " &eVocê recebeu um pedido para entrar no clã \"{clan_tag}\".",
             " &eClique &e&lAQUI &epara abrir o menu de convites.",
+            ""
+          ],
+          "on-kicked": [
+            "",
+            "&cVocê foi expulso do clã &7[{clan_colored_tag}&7] {clan_name}&c.",
+            ""
+          ],
+          "on-clan-disband": [
+            "",
+            "&cO clã &7[{clan_colored_tag}&7] {clan_name}&c foi desfeito.",
             ""
           ],
           "pending-invites": " &eVocê tem {invites_size} convite(s) de clã parado(s). Clique &f&lAQUI&e para ver.",
