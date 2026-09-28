@@ -458,7 +458,9 @@
           "need-clan": "Para entrar no evento é necessário possuir um clan!",
           "clan-not-authorized": "&cO seu clã ainda não foi autorizado a entrar nos eventos.",
           "cant-join-event": "O {event} não está disponível para entrada.",
-          "target-in-event-app": "{player_name} já está no P4Free Eventos: dê o comando de lá para colocá-lo no {event}."
+          "target-in-event-app": "{player_name} já está no P4Free Eventos: dê o comando de lá para colocá-lo no {event}.",
+          // O /kit, o /berserker, o /espada e o /machado no app de eventos (EventItemCommandListener).
+          "item-command-blocked": "No P4Free Eventos os itens vêm só do evento."
         },
         "events": {
           "gladiator": {
