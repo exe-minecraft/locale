@@ -1,6 +1,11 @@
 {
   "plugins": {
     "player-sync": {
+      "commands": {
+        "playersync-importar": {
+          "description": "Importa os playerdata do mundo principal para o player_sync (só a consola)"
+        }
+      },
       "messages": {
         "load-failed": "&cNão foi possível carregar seus dados. Tente entrar novamente."
       }
