@@ -26,6 +26,7 @@
           },
           "punishment-list": {
             "punishment-proof-copy": "&eClique &f&lAQUI &epara copiar a prova.",
+            "punishment-proof-copy-hover": "&aClique para colocar no chat.",
             "punishment-proof-update": {
               "query": "&eDigite ou envie as novas &f&lprovas &edo infrator",
               "success": "Você atualizou as provas com sucesso!"
