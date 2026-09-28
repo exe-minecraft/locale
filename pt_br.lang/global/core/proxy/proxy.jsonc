@@ -195,7 +195,7 @@
             "already-connected": "&cVocê já está conectado ao &f{app_display_name}&c.",
             "failed": "&cNão foi possível conectar ao &f{app_display_name}&c. Tente novamente em instantes.",
             "save-timeout": "&cSeus dados não foram gravados a tempo para a troca. Tente de novo em instantes.",
-            "intersection-required": "&cEssa troca de servidor foi recusada: entre o P4Free e os eventos ela passa pelo /connect, que grava seus itens antes."
+            "intersection-required": "&cA troca para &f{app_display_name}&c foi recusada: seus dados ainda não terminaram de ser salvos. Tente de novo em instantes."
           },
           "command": {
             "in-delay": "&cEspere um instante antes de mandar outro comando."
