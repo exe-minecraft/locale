@@ -194,6 +194,9 @@
             "connecting": "&aConectando ao &f{app_display_name}&a...",
             "already-connected": "&cVocê já está conectado ao &f{app_display_name}&c.",
             "failed": "&cNão foi possível conectar ao &f{app_display_name}&c. Tente novamente em instantes."
+          },
+          "command": {
+            "in-delay": "&cEspere um instante antes de mandar outro comando."
           }
         }
       }
