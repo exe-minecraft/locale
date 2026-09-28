@@ -172,7 +172,9 @@
           },
           "title": "Inventário de {target_name}",
           "alert": "Psiu! Tem alguém vendo seu inventário...",
-          "alert-clan": "Psiu! Tem alguém do clã {clan_tag} vendo seu inventário..."
+          "alert-clan": "Psiu! Tem alguém do clã {clan_tag} vendo seu inventário...",
+          "locked": "O inventário de {target_name} é o kit de um evento: só dá para olhar.",
+          "target-full": "O inventário de {target_name} está cheio."
         },
         "lobby": {
           "already-in-lobby": "Você já está em um lobby!",
