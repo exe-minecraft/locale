@@ -1,8 +1,8 @@
 {
   "plugins": {
     "souls": {
-      "reward": "&d+{amount} almas &7pelo abate de {victim}.",
-      "reward-one": "&d+{amount} alma &7pelo abate de {victim}.",
+      // {unit} é o nome da moeda (plugins.currencies.types.souls.name) em minúsculas, "alma" com 1 e "almas" com o resto.
+      "reward": "&d+{amount} {unit} &7pelo abate de {victim}.",
       "streak": "&dSua sequência de abates ativou o bônus de almas!"
     }
   }
