@@ -20,6 +20,24 @@
             ""
           ]
         },
+        "limbo": {
+          "header": [
+            "",
+            "&c&lEXE",
+            "&frede-exe.com",
+            "",
+            "&fJogadores online: &a{app_online_player_count}",
+            ""
+          ],
+          "footer": [
+            "",
+            "&cDiscord: &fdiscord.gg/exe",
+            "",
+            "    &cAjude o servidor a se manter ativo adquirindo produtos.    ",
+            "&cAdquira acessando o nosso site: &frede-exe.com",
+            ""
+          ]
+        },
         "lobby": {
           "header": [
             "",

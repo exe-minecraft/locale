@@ -30,7 +30,9 @@
         "kill": { "singular": "abate", "plural": "abates" },
         "rush": { "singular": "rush", "plural": "rushes" },
         "win": { "singular": "vitória", "plural": "vitórias" },
-        "coin": { "singular": "moeda", "plural": "moedas" }
+        "coin": { "singular": "moeda", "plural": "moedas" },
+        "set": { "singular": "set", "plural": "sets" },
+        "hit": { "singular": "hit", "plural": "hits" }
       },
       // O quadro do mundo do Gladiador. Os {event_*} são listas que ficam vazias fora do evento,
       // e levam a linha em branco de cima junto, como no exe-scoreboard.
@@ -62,6 +64,18 @@
         "finalized": "&7finalizado"
       },
       "commands": {
+        "armor": {
+          "description": "ver os sets de armadura dos vivos de um clan no evento",
+          "arguments": {
+            "clan": { "name": "clan", "description": "Tag do clan." }
+          }
+        },
+        "check-target": {
+          "description": "ver quem acertou um jogador no evento, e quantas vezes",
+          "arguments": {
+            "player": { "name": "jogador", "description": "Nome do jogador." }
+          }
+        },
         "glad": {
           "event-start": {
             "description": "abrir as inscrições do Gladiador num mapa",
@@ -592,6 +606,32 @@
           }
         }
       },
+      // O /armor e o /checktarget da staff: a prova do foco no alvo (hideclans e target).
+      "reports": {
+        "no-event": "&cNão há evento rodando agora.",
+        "clan-not-in-event": "&cEsse clan não tem ninguém vivo no evento.",
+        "clan-offline": "&cOs vivos desse clan estão desconectados agora.",
+        "player-not-in-event": "&cEsse jogador não está no evento.",
+        "no-hits": "&eNinguém acertou esse jogador nesta partida.",
+        "participant": "&cQuem está jogando o evento não pode usar este relatório.",
+        "failed": "&cNão foi possível montar o relatório.",
+        "armor": {
+          "header": [
+            "",
+            "&eSets do clan [{clan_tag}&e]",
+            "&fEvento: &7{event} &8| &fVivos: &7{alive}",
+            "&7Só contam peças com &a{min_percent}%+ &7de durabilidade."
+          ],
+          "fewest": "&c#{position} {player_name} &7- &c{sets} {sets_unit}",
+          "entry": "&7#{position} {player_name} - {sets} {sets_unit}"
+        },
+        "hits": {
+          "header": ["", "&eHits recebidos por {player_name}"],
+          "armor": "&fArmadura vestida: &c{worn}% &7(#{position} do clan)",
+          "out-of-match": "&fArmadura: &7fora da partida",
+          "entry": "&7- &f{player_name} &7» &c{hits} {hits_unit}"
+        }
+      },
       "queries": {
         "unavailable": "&cO P4Free Eventos não está disponível agora. Tente de novo em instantes.",
         "timeout": "&cO P4Free Eventos não respondeu. Tente de novo em instantes.",
@@ -685,33 +725,12 @@
         "gladiator": {
           "primary": {
             "title": "Gladiador",
-            "commands-message": [
-              "",
-              "&e&lComandos do Gladiador",
-              "&c/gladiador entrar &7- &fEntra no evento Gladiador.",
-              "&c/gladiador sair &7- &fSai do evento e volta ao spawn.",
-              "&c/gladiador rejoin &7- &fReentra após uma desconexão.",
-              "&c/gladiador rush &7- &fMostra os rushes ativos.",
-              "&c/gladiador verrush <clan> &7- &fAssiste ao rush de um clan no camarote.",
-              "&c/gladiador status &7- &fMostra o estado atual do evento.",
-              "&c/gladiador camarote entrar &7- &fEntra como espectador.",
-              ""
-            ],
             "items": {
               "ranking": {
                 "name": "&eRanking",
                 "lore": [
                   "&7Consulte o ranking competitivo",
                   "&7dos eventos Gladiador.",
-                  "",
-                  "&eClique para abrir!"
-                ]
-              },
-              "schedule": {
-                "name": "&eHorários",
-                "lore": [
-                  "&7Confira os horários dos",
-                  "&7eventos competitivos.",
                   "",
                   "&eClique para abrir!"
                 ]
@@ -769,60 +788,6 @@
                     "&eClique direito para assistir"
                   ]
                 }
-              }
-            }
-          },
-          "schedule": {
-            "title": "Horários do Gladiador",
-            "items": {
-              "monday": {
-                "name": "&eSegunda-feira",
-                "lore": [
-                  "&7O evento ocorre às &f19:00 &7e",
-                  "&7vale ponto na tabela.",
-                  "",
-                  "&c• &fCom regra de rush",
-                  "&c• &fSe um membro do clan for banido,",
-                  "&f  o clan inteiro será expulso do evento."
-                ]
-              },
-              "thursday": {
-                "name": "&eQuinta-feira",
-                "lore": [
-                  "&7O evento ocorre às &f21:00 &7e",
-                  "&7vale ponto na tabela.",
-                  "",
-                  "&c• &fCom regra de rush",
-                  "&c• &fSe um membro do clan for banido,",
-                  "&f  o clan inteiro será expulso do evento."
-                ]
-              },
-              "sunday": {
-                "name": "&eDomingo",
-                "lore": [
-                  "&7O evento ocorre às &f19:00 &7e",
-                  "&7vale ponto na tabela.",
-                  "",
-                  "&c• &fCom regra de rush",
-                  "&c• &fSe um membro do clan for banido,",
-                  "&f  o clan inteiro será expulso do evento."
-                ]
-              },
-              "information": {
-                "name": "&eInformações",
-                "lore": [
-                  "&7Os horários referem-se aos eventos",
-                  "&7que valem pontuação na temporada.",
-                  "",
-                  "&7Outros eventos podem ocorrer durante",
-                  "&7a semana e serão anunciados no Discord."
-                ]
-              },
-              "back": {
-                "name": "&cVoltar",
-                "lore": [
-                  "&7Volta à central do Gladiador."
-                ]
               }
             }
           },

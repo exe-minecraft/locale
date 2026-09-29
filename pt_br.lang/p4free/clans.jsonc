@@ -614,7 +614,7 @@
           "on-invite-receive": [
             "",
             " &eVocê recebeu um pedido para entrar no clã \"{clan_tag}\".",
-            " &eClique &e&lAQUI &epara abrir o menu de convites.",
+            " &eClique &a&lAQUI &epara aceitar ou &c&lAQUI &epara recusar.",
             ""
           ],
           "on-kicked": [

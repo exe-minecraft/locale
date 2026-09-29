@@ -1,0 +1,153 @@
+{
+  "plugins": {
+    "core": {
+      "commands": {
+        // O /holograma: hologramas de texto da staff, gravados no banco do servidor e iguais em todas as
+        // instâncias do mesmo tipo (todos os lobbies, por exemplo). As mensagens fora dos subcomandos
+        // valem para todos eles.
+        "hologram": {
+          "loading": "Os hologramas deste servidor ainda estão carregando. Tente de novo em alguns segundos.",
+          "not-found": "Não existe holograma chamado {hologram_name} neste servidor. Veja os que existem com /holograma lista.",
+          // {hologram_line}: o número digitado; {hologram_lines} e {hologram_lines_word}: quantas linhas ele tem.
+          "invalid-line": "O holograma {hologram_name} não tem a linha {hologram_line}: ele tem {hologram_lines} {hologram_lines_word}.",
+          "too-many-lines": "O holograma {hologram_name} já tem o máximo de {hologram_max_lines} linhas.",
+          "last-line": "Essa é a única linha do holograma {hologram_name}. Para tirá-lo, use /holograma apagar {hologram_name}.",
+          "line": {
+            "singular": "linha",
+            "plural": "linhas"
+          },
+          "create": {
+            "description": "criar um holograma onde você está, com a primeira linha",
+            "arguments": {
+              "name": {
+                "name": "nome",
+                "description": "Nome do holograma: letras minúsculas, números, - ou _"
+              },
+              "text": {
+                "name": "texto",
+                "description": "Texto da linha, com cores por &"
+              }
+            },
+            "invalid-name": "Nome inválido: {hologram_name}. Use de 1 a 32 letras minúsculas, números, - ou _.",
+            "already-exists": "Já existe um holograma chamado {hologram_name}.",
+            "success": "Holograma {hologram_name} criado em {hologram_world} {hologram_x}, {hologram_y}, {hologram_z}."
+          },
+          "list": {
+            "description": "ver os hologramas deste servidor",
+            "empty": "Nenhum holograma neste servidor. Crie um com /holograma criar <nome> <texto>.",
+            "header": "Hologramas deste servidor:",
+            "entry": "&e{hologram_name}&7: {hologram_world} {hologram_x}, {hologram_y}, {hologram_z}, {hologram_lines} {hologram_lines_word}"
+          },
+          "info": {
+            "description": "ver as linhas de um holograma, numeradas",
+            "arguments": {
+              "name": {
+                "name": "nome",
+                "description": "Nome do holograma"
+              }
+            },
+            "header": "Holograma {hologram_name} em {hologram_world} {hologram_x}, {hologram_y}, {hologram_z}, com {hologram_lines} {hologram_lines_word}:",
+            // {hologram_text}: a linha como foi digitada, com os códigos & à vista.
+            "line": "&e{hologram_line}. &f{hologram_text}"
+          },
+          "teleport": {
+            "description": "ir até um holograma",
+            "arguments": {
+              "name": {
+                "name": "nome",
+                "description": "Nome do holograma"
+              }
+            },
+            "world-not-loaded": "O mundo {hologram_world} do holograma {hologram_name} não está carregado neste servidor.",
+            "failed": "Não foi possível levar você até o holograma {hologram_name}.",
+            "success": "Você está no holograma {hologram_name}."
+          },
+          "move": {
+            "description": "trazer um holograma para onde você está",
+            "arguments": {
+              "name": {
+                "name": "nome",
+                "description": "Nome do holograma"
+              }
+            },
+            "success": "Holograma {hologram_name} movido para {hologram_world} {hologram_x}, {hologram_y}, {hologram_z}."
+          },
+          "add": {
+            "description": "adicionar uma linha embaixo das outras",
+            "arguments": {
+              "name": {
+                "name": "nome",
+                "description": "Nome do holograma"
+              },
+              "text": {
+                "name": "texto",
+                "description": "Texto da linha, com cores por &"
+              }
+            },
+            "success": "Linha {hologram_line} adicionada ao holograma {hologram_name}."
+          },
+          "insert": {
+            "description": "inserir uma linha no número dado, descendo as de baixo",
+            "arguments": {
+              "name": {
+                "name": "nome",
+                "description": "Nome do holograma"
+              },
+              "line": {
+                "name": "linha",
+                "description": "Número da linha, a de cima é a 1"
+              },
+              "text": {
+                "name": "texto",
+                "description": "Texto da linha, com cores por &"
+              }
+            },
+            "success": "Linha {hologram_line} inserida no holograma {hologram_name}."
+          },
+          "set": {
+            "description": "trocar o texto de uma linha",
+            "arguments": {
+              "name": {
+                "name": "nome",
+                "description": "Nome do holograma"
+              },
+              "line": {
+                "name": "linha",
+                "description": "Número da linha, a de cima é a 1"
+              },
+              "text": {
+                "name": "texto",
+                "description": "Texto novo da linha, com cores por &"
+              }
+            },
+            "success": "Linha {hologram_line} do holograma {hologram_name} alterada."
+          },
+          "remove": {
+            "description": "remover uma linha",
+            "arguments": {
+              "name": {
+                "name": "nome",
+                "description": "Nome do holograma"
+              },
+              "line": {
+                "name": "linha",
+                "description": "Número da linha, a de cima é a 1"
+              }
+            },
+            "success": "Linha {hologram_line} removida do holograma {hologram_name}, que agora tem {hologram_lines} {hologram_lines_word}."
+          },
+          "delete": {
+            "description": "apagar um holograma de todos os servidores deste tipo",
+            "arguments": {
+              "name": {
+                "name": "nome",
+                "description": "Nome do holograma"
+              }
+            },
+            "success": "Holograma {hologram_name} apagado."
+          }
+        }
+      }
+    }
+  }
+}
