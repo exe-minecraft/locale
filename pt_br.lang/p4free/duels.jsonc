@@ -54,6 +54,7 @@
           "same-party": "&cVocês estão na mesma party.",
           "too-few": "&cA party precisa de pelo menos 2 jogadores.",
           "party-too-big": "&cNa fila 2v2 a party tem de ter 2 jogadores.",
+          "party-full": "&cA party já está no limite de jogadores.",
           "not-duo-leader": "&cSó o líder da dupla entra na fila 2v2.",
           "partner-offline": "&cSua dupla não está neste servidor.",
           "partner-busy": "&cSua dupla não está livre.",
