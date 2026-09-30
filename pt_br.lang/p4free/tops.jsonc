@@ -17,7 +17,11 @@
         "gladiator_rush_reversals": "Gladiador: viradas de rush",
         "gladiator_myths": "Gladiador: mitos",
         "mystery_boxes_opened": "Caixas abertas",
-        "batatadas": "Batatadas"
+        "batatadas": "Batatadas",
+        "duels_elo_1v1": "Duelos: elo 1v1",
+        "duels_elo_2v2": "Duelos: elo 2v2",
+        "duels_wins": "Duelos: vitórias",
+        "duels_best_win_streak": "Duelos: maior winstreak"
       }
     }
   }

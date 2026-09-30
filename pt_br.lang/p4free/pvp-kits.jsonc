@@ -36,7 +36,7 @@
         "givekit": {
           "arguments": {
             "kit": {
-              "name": "pvp|gladiador|clanfight|fastglad",
+              "name": "pvp|gladiador|clanfight|fastglad|x1",
               "description": "O kit a entregar"
             },
             "target": {
@@ -46,6 +46,10 @@
             "mark": {
               "name": "marca",
               "description": "A marca da partida gravada em cada peça (quem manda é o evento)"
+            },
+            "layout": {
+              "name": "arranjo",
+              "description": "Os slots da espada, das maçãs, da velocidade e da força no kit do x1, como 0,1,2,3"
             }
           }
         }

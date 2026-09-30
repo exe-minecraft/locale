@@ -1,0 +1,677 @@
+{
+  "plugins": {
+    // Os duelos do P4Free (módulo p4free/duels; spec docs/superpowers/specs/2026-09-30-p4free-duels-design.md
+    // no exe). Sem prefixo de marca. Contagem pelo Plural (units) ou no formato "rótulo: valor".
+    "duels": {
+      "modes": {
+        "challenge": "Desafio 1v1",
+        "ranked-solo": "Ranqueada 1v1",
+        "ranked-duo": "Ranqueada 2v2",
+        "party-versus": "Party contra party",
+        "party-split": "Split",
+        "party-all": "Todos contra todos"
+      },
+      // As palavras que acompanham um número montado no código (o Plural do core): 1 no singular.
+      "units": {
+        "copy": { "singular": "cópia", "plural": "cópias" },
+        "elo-point": { "singular": "ponto de elo", "plural": "pontos de elo" },
+        "player": { "singular": "jogador", "plural": "jogadores" }
+      },
+      // Os botões dos convites no chat. A mensagem os mostra pelos placeholders {accept} e {decline}, e o clique
+      // é ligado ao texto deles: mudar aqui muda nos dois lugares.
+      "buttons": {
+        "accept": "&a[Aceitar]",
+        "join": "&a[Entrar]",
+        "decline": "&c[Recusar]"
+      },
+      // O que cada jogador está fazendo, na cabeça dele no menu da party.
+      "activities": {
+        "queue-solo": "&eNa fila ranqueada 1v1",
+        "queue-duo": "&eNa fila ranqueada 2v2",
+        "match": "&cNum duelo",
+        "cabin": "&bNo camarote"
+      },
+      // Por que não dá: "self" é o texto ao próprio jogador (e a linha vermelha do ícone do menu); "other" é o
+      // texto aos outros quando o motivo é de alguém. Curtos: também cabem numa linha de lore.
+      "refusals": {
+        "self": {
+          "offline": "&cVocê precisa estar neste servidor.",
+          "dead": "&cVocê está morto.",
+          "in-combat": "&cVocê está em combate.",
+          "busy-queue-solo": "&cVocê está na fila 1v1.",
+          "busy-queue-duo": "&cVocê está na fila 2v2.",
+          "busy-match": "&cVocê está num duelo.",
+          "busy-cabin": "&cVocê está no camarote.",
+          "no-arena": "&cNenhuma arena de duelo está ativa.",
+          "no-free-arena": "&cTodas as arenas estão ocupadas agora.",
+          "unavailable": "&cOs duelos estão indisponíveis agora.",
+          "loading": "&cSeus dados de duelo ainda estão carregando.",
+          "stash-failed": "&cNão deu para guardar seus itens agora. Nada foi tirado de você.",
+          "match-ended": "&cEssa luta já acabou.",
+          "self": "&cVocê não pode desafiar a si mesmo.",
+          "not-in-party": "&cVocê não está numa party.",
+          "not-leader": "&cSó o líder da party pode fazer isso.",
+          "same-party": "&cVocês estão na mesma party.",
+          "too-few": "&cA party precisa de pelo menos 2 jogadores.",
+          "party-too-big": "&cNa fila 2v2 a party tem de ter 2 jogadores.",
+          "not-duo-leader": "&cSó o líder da dupla entra na fila 2v2.",
+          "partner-offline": "&cSua dupla não está neste servidor.",
+          "partner-busy": "&cSua dupla não está livre.",
+          "partner-loading": "&cOs dados da sua dupla ainda estão carregando."
+        },
+        "other": {
+          "offline": "&c{player} não está neste servidor.",
+          "dead": "&c{player} está morto.",
+          "in-combat": "&c{player} está em combate.",
+          "busy-queue-solo": "&c{player} está na fila 1v1.",
+          "busy-queue-duo": "&c{player} está na fila 2v2.",
+          "busy-match": "&c{player} está num duelo.",
+          "busy-cabin": "&c{player} está no camarote.",
+          "loading": "&cOs dados de duelo de {player} ainda estão carregando.",
+          "stash-failed": "&cNão deu para guardar os itens de {player} agora. Nada foi tirado de ninguém.",
+          "not-in-party": "&c{player} não está numa party."
+        }
+      },
+      "titles": {
+        "countdown": { "title": "&e{seconds}", "subtitle": "&7Prepare-se" },
+        "fight": { "title": "&cValendo!", "subtitle": "&7Boa luta" }
+      },
+      "messages": {
+        "command-blocked": "&cEsse comando não pode ser usado nos duelos.",
+        // Só na ranqueada, para o servidor inteiro: a cada 5 vitórias seguidas, e a quebra de uma de 10 ou mais.
+        "streak": "&6{player} &7chegou a &e{streak} vitórias seguidas &7na ranqueada.",
+        "streak-broken": "&7A sequência de &e{streak} vitórias &7de &6{player} &7acabou.",
+        // O resultado vai aos participantes e ao camarote da luta. {winners} e {losers} viram os nomes, cada um com
+        // as estatísticas da luta no hover.
+        "result": {
+          "duel": "&6{winners} &7venceu &f{losers} &8({format})&7, com &c{health} ❤&7.",
+          "team": "&7Vitória de &6{winners} &8({format})&7 contra &f{losers}&7.",
+          "draw": "&7A luta terminou empatada &8({format})&7.",
+          "elo-won": "&a+{amount} {points} &8(agora {elo})",
+          "elo-lost": "&c-{amount} {points} &8(agora {elo})",
+          "hover": [
+            "&6{player}",
+            "&8 ▸ &fGolpes: &f{hits}",
+            "&8 ▸ &fMaior combo: &f{combo}",
+            "&8 ▸ &fMaçãs comidas: &f{apples}",
+            "&8 ▸ &fGolpes defendidos: &f{blocked}"
+          ]
+        }
+      },
+      "queue": {
+        "joined": "&aVocê entrou na fila: &f{mode}&a.",
+        "already": "&cVocê já está nessa fila.",
+        "left": "&7Você saiu da fila.",
+        "partner-left": "&c{player} saiu da fila, e a dupla saiu junto.",
+        "dropped": "&cVocê saiu da fila: a partida encontrada não pôde começar.",
+        "found": "&aPartida encontrada! Preparando a arena.",
+        "actionbar": "&7Fila: &f{mode} &8/ &f{waited} &8/ &7procurando &f±{radius} de elo",
+        "invalid-mode": "&cA fila é 1v1 ou 2v2.",
+        "not-queued": "&cVocê não está em nenhuma fila."
+      },
+      "challenge": {
+        "sent": "&aDesafio enviado a &f{player} &8(expira em {time})&a.",
+        "received": [
+          "&6{player} &7te desafiou para um x1 casual.",
+          "{accept} {decline} &8(expira em {time})"
+        ],
+        "already-sent": "&cVocê já tem um desafio pendente para {player}.",
+        "none": "&c{player} não te desafiou, ou o desafio expirou.",
+        "declined": "&7Você recusou o desafio de {player}.",
+        "declined-by": "&c{player} recusou o seu desafio.",
+        "expired-sender": "&7O seu desafio para {player} expirou.",
+        "expired-target": "&7O desafio de {player} expirou."
+      },
+      "party": {
+        "invite-sent": "&aConvite enviado a &f{player} &8(expira em {time})&a.",
+        "invite-received": [
+          "&6{player} &7te convidou para a party.",
+          "{accept} {decline} &8(expira em {time})"
+        ],
+        "invite-declined": "&7Você recusou o convite de {player}.",
+        "invite-declined-by": "&c{player} recusou o seu convite.",
+        "invite-expired-sender": "&7O convite para {player} expirou.",
+        "invite-expired-target": "&7O convite de {player} expirou.",
+        "joined": "&a{player} entrou na party.",
+        "left": "&7Você saiu da party.",
+        "member-left": "&7{player} saiu da party.",
+        "member-quit": "&7{player} saiu do servidor e deixou a party.",
+        "kicked": "&c{player} tirou você da party.",
+        "member-kicked": "&7{player} saiu da party por ordem do líder.",
+        "promoted": "&6{player} &7agora é o líder da party.",
+        "new-leader": "&6{player} &7assumiu a liderança da party.",
+        "disbanded": "&c{player} desfez a party.",
+        "dissolved": "&7{player} saiu, e a party acabou: sobrou só você.",
+        // As respostas da PartyService (PartyService.Result).
+        "results": {
+          "self": "&cVocê não pode fazer isso consigo mesmo.",
+          "not-leader": "&cSó o líder da party pode fazer isso.",
+          "not-in-party": "&cVocê não está numa party.",
+          "target-in-party": "&c{player} já está numa party.",
+          "already-in-party": "&cVocê já está numa party. Saia dela antes.",
+          "already-invited": "&cVocê já convidou {player}, e o convite ainda vale.",
+          "no-invite": "&c{player} não te convidou, ou o convite expirou.",
+          "not-member": "&c{player} não está na sua party.",
+          "full": "&cA party já está no limite de jogadores."
+        },
+        "challenge": {
+          "sent": "&aDesafio enviado à party de &f{player} &8(expira em {time})&a.",
+          "received": [
+            "&7A party de &6{player} &7({their_size}) desafiou a sua ({your_size}): &f{yours} contra {theirs}&7.",
+            "{accept} {decline} &8(expira em {time})"
+          ],
+          "already-sent": "&cVocê já desafiou a party de {player}.",
+          "none": "&cA party de {player} não desafiou a sua, ou o desafio expirou.",
+          "declined": "&7Você recusou o desafio da party de {player}.",
+          "declined-by": "&c{player} recusou o desafio da sua party.",
+          "expired-sender": "&7O desafio para a party de {player} expirou.",
+          "expired-target": "&7O desafio da party de {player} expirou."
+        }
+      },
+      "cabin": {
+        "entered": "&aVocê está no camarote. Para sair: &f/x1 camarote sair&a.",
+        "left": "&7Você saiu do camarote.",
+        "not-watching": "&cVocê não está no camarote.",
+        "not-fighting": "&c{player} não está lutando agora."
+      },
+      // O /x1 arena, só da administração.
+      "arena": {
+        "invalid-size": "&cTamanho: pequena ou grande.",
+        "invalid-name": "&cNome: letras minúsculas, números, _ e -, até 32.",
+        "invalid-side": "&cLado: a ou b.",
+        "invalid-count": "&cCópias: de 1 a 50.",
+        "exists": "&cJá existe a arena {name}.",
+        "unknown": "&cNão existe a arena {name}.",
+        "busy": "&cA arena {name} ainda está colando cópias. Espere terminar.",
+        "missing-schematic": "&cFalta a schematic: &f{file}",
+        "world-loading": "&cO mundo dos duelos ainda está abrindo. Tente de novo em instantes.",
+        "read-only": "&cO arenas.yml não carregou, e nada é gravado até alguém o consertar. O painel tem o erro.",
+        "pasting": "&7Colando a arena {name}...",
+        "paste-failed": "&cA colagem da arena {name} falhou. O painel tem o erro.",
+        "created": "&aArena {name} criada. Marque os spawns com &f/x1 arena spawn {name} a &ae &fb&a.",
+        "no-copy": "&cA arena {name} ainda não tem cópia colada.",
+        "wrong-world": "&cMarque o spawn dentro do mundo {world}.",
+        "outside": "&cVocê está fora da primeira cópia da arena {name}.",
+        "spawn-set": "&aSpawn {side} da arena {name} marcado.",
+        "no-spawns": "&cMarque os dois spawns da arena {name} antes.",
+        "copies-removed": "&aA arena {name} fica com {copies}.",
+        "copies-pasting": "&7Colando {copies} da arena {name}...",
+        "copies-done": "&aA arena {name} tem agora {copies}.",
+        "list-empty": "&7Nenhuma arena criada.",
+        "list-header": "&6Arenas de duelo:",
+        "list-entry": "&8 ▸ &f{name} &8({size}) &7{copies}, ocupadas: {busy} &8/ {state}",
+        "states": {
+          "disabled": "&cdesativada",
+          "no-spawns": "&esem spawns",
+          "no-copies": "&esem cópias",
+          "ready": "&apronta"
+        },
+        "enabled": "&aArena {name} ativada.",
+        "disabled": "&cArena {name} desativada."
+      },
+      // O quadro do duelo. Linha que é lista vazia sai do quadro.
+      "scoreboard": {
+        "title": "&b&lDUELOS",
+        "lines": [
+          "",
+          "&f Formato: &b{duel_format}",
+          "{duel_opponent}",
+          "&f Tempo: &e{duel_time}",
+          "{duel_elo}",
+          "&f Ping: &a{duel_ping} ms",
+          "{duel_stats}",
+          "",
+          "&ewww.rede-exe.com"
+        ],
+        "opponent": "&f Adversário: &c{player}",
+        "alive-teams": "&f Vivos: &a{first} &7contra &c{second}",
+        "alive-all": "&f Vivos: &e{alive} &7de {total}",
+        "elo": "&f Seu elo: &b{elo}",
+        "hits": "&f Golpes: &e{hits}",
+        "combo": "&f Maior combo: &e{combo}"
+      },
+      "views": {
+        "primary": {
+          "title": "Duelos",
+          "ask": {
+            "challenge": "&7Digite o nick de quem você quer desafiar."
+          },
+          // A última linha de cada ícone clicável: o convite ao clique, ou o motivo da recusa em vermelho.
+          "actions": {
+            "join-queue": "&aClique para entrar na fila.",
+            "leave-queue": "&cClique para sair da fila.",
+            "challenge": "&aClique e digite o nick no chat.",
+            "open": "&aClique para abrir."
+          },
+          "items": {
+            "stats": {
+              "name": "&6{player}",
+              "lore": [
+                "&7Só as filas ranqueadas contam.",
+                "",
+                "&8 ▸ &fElo 1v1: &b{elo_1v1} &8(partidas: {matches_1v1})",
+                "&8 ▸ &fElo 2v2: &b{elo_2v2} &8(partidas: {matches_2v2})",
+                "&8 ▸ &fVitórias: &a{wins}",
+                "&8 ▸ &fDerrotas: &c{losses}",
+                "&8 ▸ &fWinstreak: &e{win_streak} &8(maior: {best_win_streak})"
+              ],
+              "loading": [
+                "&7Seus dados de duelo ainda estão",
+                "&7carregando. Tente de novo em",
+                "&7instantes."
+              ]
+            },
+            "queue-1v1": {
+              "idle": {
+                "name": "&6Fila ranqueada 1v1",
+                "lore": [
+                  "&7Um contra um, valendo elo 1v1.",
+                  "&7O servidor escolhe um adversário",
+                  "&7com elo parecido com o seu.",
+                  "",
+                  "&8 ▸ &fSeu elo 1v1: &b{elo_1v1}",
+                  "&8 ▸ &fNa fila agora: &f{queue_1v1_players}",
+                  "",
+                  "{queue_1v1_action}"
+                ]
+              },
+              "queued": {
+                "name": "&aVocê está na fila 1v1",
+                "lore": [
+                  "&8 ▸ &fEsperando há: &f{queue_1v1_waited}",
+                  "&8 ▸ &fProcurando: &f±{queue_1v1_radius} de elo",
+                  "&8 ▸ &fNa fila agora: &f{queue_1v1_players}",
+                  "",
+                  "{queue_1v1_action}"
+                ]
+              }
+            },
+            "queue-2v2": {
+              "idle": {
+                "name": "&6Fila ranqueada 2v2",
+                "lore": [
+                  "&7Dois contra dois, valendo elo 2v2.",
+                  "&7Entre sozinho e o servidor acha",
+                  "&7seu parceiro, ou entre com a",
+                  "&7sua party de 2.",
+                  "",
+                  "&8 ▸ &fSeu elo 2v2: &b{elo_2v2}",
+                  "{queue_2v2_partner}",
+                  "&8 ▸ &fNa fila agora: &f{queue_2v2_players}",
+                  "",
+                  "{queue_2v2_action}"
+                ]
+              },
+              "queued": {
+                "name": "&aVocê está na fila 2v2",
+                "lore": [
+                  "{queue_2v2_partner}",
+                  "&8 ▸ &fEsperando há: &f{queue_2v2_waited}",
+                  "&8 ▸ &fProcurando: &f±{queue_2v2_radius} de elo",
+                  "&8 ▸ &fNa fila agora: &f{queue_2v2_players}",
+                  "",
+                  "{queue_2v2_action}"
+                ]
+              },
+              "alone": "&8 ▸ &fEntrando: &fsozinho",
+              "partner": "&8 ▸ &fSua dupla: &f{player}"
+            },
+            "challenge": {
+              "name": "&6Desafiar um jogador",
+              "lore": [
+                "&7Um contra um, só por diversão:",
+                "&7não vale elo nem vitória.",
+                "",
+                "{challenge_action}"
+              ]
+            },
+            "party": {
+              "none": {
+                "name": "&6Party",
+                "lore": [
+                  "&7Junte até {party_max} jogadores para",
+                  "&7lutar entre vocês ou contra",
+                  "&7outra party.",
+                  "",
+                  "&aClique para abrir."
+                ]
+              },
+              "member": {
+                "name": "&6Party",
+                "lore": [
+                  "&8 ▸ &fLíder: &f{party_leader}",
+                  "&8 ▸ &fMembros: &f{party_size} de {party_max}",
+                  "",
+                  "&aClique para abrir."
+                ]
+              }
+            },
+            "cabin": {
+              "name": "&6Camarote",
+              "lore": [
+                "&7Assista às lutas acontecendo",
+                "&7agora. Seus itens ficam",
+                "&7guardados e voltam quando",
+                "&7você sair.",
+                "",
+                "&8 ▸ &fLutas agora: &f{cabin_matches}",
+                "",
+                "&aClique para ver as lutas."
+              ]
+            },
+            "kit": {
+              "name": "&6Editor de kit",
+              "lore": [
+                "&7Escolha em que slot fica a",
+                "&7espada, as maçãs e as poções",
+                "&7do kit dos duelos.",
+                "",
+                "{kit_action}"
+              ]
+            },
+            "ranking": {
+              "name": "&6Ranking",
+              "lore": [
+                "&7Elo 1v1, elo 2v2, vitórias e",
+                "&7maior winstreak.",
+                "",
+                "&aClique para abrir o /top."
+              ]
+            },
+            "commands": {
+              "name": "&6Comandos",
+              "lore": [
+                "&7Os comandos dos duelos e da",
+                "&7party, no chat.",
+                "",
+                "&aClique para ver."
+              ]
+            }
+          }
+        },
+        "party": {
+          "title": "Party",
+          "ask": {
+            "invite": "&7Digite o nick de quem você quer convidar.",
+            "challenge": "&7Digite o nick de alguém da party que você quer desafiar."
+          },
+          "actions": {
+            "invite": "&aClique e digite o nick no chat.",
+            "start": "&aClique para começar.",
+            "challenge": "&aClique e digite o nick no chat.",
+            "leave": "&aClique para sair."
+          },
+          "items": {
+            "leader": {
+              "name": "&6Party de {player}",
+              "lore": [
+                "&8 ▸ &fMembros: &f{party_size} de {party_max}"
+              ],
+              "none": {
+                "name": "&6Você não está numa party",
+                "lore": [
+                  "&7Convide alguém para criar uma.",
+                  "&7Ela nasce quando o primeiro",
+                  "&7convite é aceito."
+                ]
+              }
+            },
+            "member": {
+              "name": "&f{player}",
+              "lore": [
+                "{role}",
+                "{activity}",
+                "{actions}"
+              ],
+              "leader": "&6Líder",
+              "actions": [
+                "",
+                "&7Clique esquerdo: &fpassar a liderança",
+                "&7Shift + clique: &fexpulsar"
+              ]
+            },
+            "back": {
+              "name": "&6Voltar",
+              "lore": [ "&7Volta ao menu Duelos." ]
+            },
+            "invite": {
+              "name": "&6Convidar",
+              "lore": [
+                "&7Convite de 60 segundos.",
+                "",
+                "{invite_action}"
+              ]
+            },
+            "split": {
+              "name": "&6Split",
+              "lore": [
+                "&7Divide a party ao acaso em dois",
+                "&7times, e eles lutam entre si.",
+                "",
+                "&8 ▸ &fTimes: &f{split_first} contra {split_second}",
+                "",
+                "{fight_action}"
+              ]
+            },
+            "all": {
+              "name": "&6Todos contra todos",
+              "lore": [
+                "&7Cada um por si; o último vivo",
+                "&7vence.",
+                "",
+                "&8 ▸ &fNa luta: &f{party_size}",
+                "",
+                "{fight_action}"
+              ]
+            },
+            "challenge-party": {
+              "name": "&6Desafiar outra party",
+              "lore": [
+                "&7Sua party contra a de outro",
+                "&7jogador. O convite mostra o",
+                "&7tamanho das duas.",
+                "",
+                "{challenge_action}"
+              ]
+            },
+            "leave": {
+              "name": "&cSair da party",
+              "lore": [
+                "&7Se você é o líder, a liderança",
+                "&7passa ao membro mais antigo.",
+                "",
+                "{leave_hint}",
+                "{leave_action}"
+              ],
+              "leader-hint": "&cShift + clique desfaz a party."
+            }
+          }
+        },
+        "cabin": {
+          "title": "Camarote",
+          "actions": {
+            "watch": "&aClique para assistir."
+          },
+          "items": {
+            "empty": {
+              "name": "&7Nenhuma luta acontecendo agora",
+              "lore": [
+                "&7Volte daqui a pouco, ou comece",
+                "&7uma pelo menu Duelos."
+              ]
+            },
+            "back": {
+              "name": "&6Voltar",
+              "lore": [ "&7Volta ao menu Duelos." ]
+            },
+            "match": {
+              "name": "&6{format}",
+              "lore": [
+                "{teams}",
+                "",
+                "&8 ▸ &fTempo: &f{time}",
+                "&8 ▸ &fAssistindo: &f{watching}",
+                "",
+                "{action}"
+              ],
+              "team": "&f{players} &8(vivos: {alive} de {size})"
+            }
+          }
+        },
+        "kit": {
+          // O título do inventário no 1.8 cabe em 32 caracteres.
+          "title": "Clique na peça e no destino",
+          "items": {
+            "back": {
+              "name": "&6Voltar",
+              "lore": [ "&7Volta ao menu Duelos, sem salvar." ]
+            },
+            "standard": {
+              "name": "&6Padrão",
+              "lore": [ "&7Volta a espada, as maçãs e as", "&7poções para os slots 1 a 4." ]
+            },
+            "save": {
+              "name": "&aSalvar",
+              "lore": [ "{selected}", "&7Grava o arranjo e fecha." ]
+            },
+            "close": {
+              "name": "&cFechar",
+              "lore": [ "&7Fecha sem salvar." ]
+            }
+          },
+          "pieces": {
+            "sword": "&bEspada",
+            "apple": "&6Maçãs douradas",
+            "speed": "&bPoções de velocidade",
+            "strength": "&cPoções de força"
+          },
+          "piece": [ "&7Clique para escolher esta peça." ],
+          "piece-selected": [ "&aEscolhida. Clique no slot para", "&aonde ela vai, ou aqui para soltar." ],
+          "empty": {
+            "name": "&7Slot vazio",
+            "lore": [ "&7Escolha uma peça antes." ],
+            "target": [ "&aClique para trazer a peça escolhida." ]
+          },
+          "selected": "&8 ▸ &fEscolhida: {piece}",
+          "saved": "&aArranjo do kit salvo. Vale a partir da próxima luta."
+        }
+      },
+      "commands": {
+        "x1": {
+          "description": "abrir o menu dos duelos",
+          "challenge": {
+            "description": "desafiar um jogador para um x1 casual",
+            "arguments": { "player": { "name": "jogador", "description": "Quem você quer desafiar." } }
+          },
+          "accept": {
+            "description": "aceitar o desafio de um jogador",
+            "arguments": { "player": { "name": "jogador", "description": "Quem te desafiou." } }
+          },
+          "decline": {
+            "description": "recusar o desafio de um jogador",
+            "arguments": { "player": { "name": "jogador", "description": "Quem te desafiou." } }
+          },
+          "queue": {
+            "description": "entrar na fila ranqueada",
+            "arguments": { "mode": { "name": "1v1|2v2", "description": "A fila: 1v1, ou 2v2 (sozinho ou com a party de 2)." } }
+          },
+          "leave": {
+            "description": "sair da fila"
+          },
+          "cabin": {
+            "description": "assistir às lutas; com um nick, a luta dele",
+            "arguments": { "player": { "name": "jogador", "description": "Quem está lutando." } },
+            "leave": {
+              "description": "sair do camarote"
+            }
+          },
+          "kit": {
+            "description": "arrumar o kit dos duelos"
+          },
+          "arena": {
+            "description": "gerenciar as arenas dos duelos",
+            "create": {
+              "description": "criar uma arena da schematic plugins/duels/arenas/<nome>.schematic",
+              "arguments": {
+                "name": { "name": "nome", "description": "O nome da schematic, sem a extensão." },
+                "size": { "name": "pequena|grande", "description": "Pequena: até 4 jogadores. Grande: party." }
+              }
+            },
+            "spawn": {
+              "description": "marcar um spawn onde você está, na primeira cópia",
+              "arguments": {
+                "name": { "name": "nome", "description": "A arena." },
+                "side": { "name": "a|b", "description": "O lado." }
+              }
+            },
+            "copies": {
+              "description": "definir quantas cópias a arena tem",
+              "arguments": {
+                "name": { "name": "nome", "description": "A arena." },
+                "count": { "name": "quantidade", "description": "De 1 a 50." }
+              }
+            },
+            "list": {
+              "description": "listar as arenas"
+            },
+            "disable": {
+              "description": "tirar uma arena das lutas novas",
+              "arguments": { "name": { "name": "nome", "description": "A arena." } }
+            },
+            "enable": {
+              "description": "devolver uma arena às lutas",
+              "arguments": { "name": { "name": "nome", "description": "A arena." } }
+            }
+          }
+        },
+        "party": {
+          "description": "abrir o menu da party",
+          "invite": {
+            "description": "convidar um jogador para a party",
+            "arguments": { "player": { "name": "jogador", "description": "Quem você quer convidar." } }
+          },
+          "join": {
+            "description": "entrar na party de quem te convidou",
+            "arguments": { "player": { "name": "jogador", "description": "Quem te convidou." } }
+          },
+          "decline": {
+            "description": "recusar um convite de party",
+            "arguments": { "player": { "name": "jogador", "description": "Quem te convidou." } }
+          },
+          "leave": {
+            "description": "sair da party"
+          },
+          "kick": {
+            "description": "tirar um membro da party",
+            "arguments": { "player": { "name": "jogador", "description": "O membro." } }
+          },
+          "promote": {
+            "description": "passar a liderança da party",
+            "arguments": { "player": { "name": "jogador", "description": "O novo líder." } }
+          },
+          "disband": {
+            "description": "desfazer a party"
+          },
+          "challenge": {
+            "description": "desafiar a party de um jogador",
+            "arguments": { "player": { "name": "jogador", "description": "Alguém da party desafiada." } }
+          },
+          "accept": {
+            "description": "aceitar o desafio de outra party",
+            "arguments": { "player": { "name": "jogador", "description": "O líder que desafiou." } }
+          },
+          "decline-challenge": {
+            "description": "recusar o desafio de outra party",
+            "arguments": { "player": { "name": "jogador", "description": "O líder que desafiou." } }
+          },
+          "split": {
+            "description": "dividir a party em dois times e lutar"
+          },
+          "all": {
+            "description": "todos da party contra todos"
+          }
+        }
+      }
+    }
+  }
+}
