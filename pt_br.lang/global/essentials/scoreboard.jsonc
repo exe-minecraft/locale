@@ -50,7 +50,7 @@
         "lines": [
           "{build_mode_status}",
           "",
-          "&f Cash: &6{user_cash_formatted}",
+          "&f Cash: &6✪ {user_cash_formatted}",
           "&f Almas: &e{currency_souls_cached_account_value_formatted}",
           "&f Tokens: &a{currency_tokens_cached_account_value_formatted}",
           "&f Grupo: &c{user_group_name_with_color}",
