@@ -556,6 +556,19 @@
             },
             "success": "&cVocê tirou &6{points} &cpontos do clã &7[{clan_colored_tag}&7]&c, que agora tem &6{clan_points}&c."
           },
+          "maxmembers": {
+            "description": "definir o máximo de membros de todos os clãs",
+            "arguments": {
+              "amount": {
+                "name": "quantidade",
+                "description": "Quantos membros cada clã pode ter"
+              }
+            },
+            "errors": {
+              "invalid-amount": "&cA quantidade precisa ser maior que zero."
+            },
+            "success": "&aO máximo de membros por clã agora é &6{max_members}&a. Clã que já passou disso não perde ninguém."
+          },
           "spy": {
             "description": "ver o chat de todos os clãs",
             "success-enabled": "&aVocê ativou o espião do chat dos clãs.",
