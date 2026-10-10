@@ -267,16 +267,13 @@
         // O resultado vai a quem lutou e ao camarote; {winners} e {losers} viram os nomes, com as estatísticas no hover.
         "result": {
           "win": "&7Vitória do clã {winner} &7contra {loser}&7: &6{winners} &8(abates: {winner_kills}) &7contra &f{losers} &8(abates: {loser_kills})&7. Duração: &f{duration}&7.",
-          "draw": "&7O CxC entre {first} &7e {second} &7terminou empatado. Duração: &f{duration}&7."
+          "draw": "&7O CxC entre {first} &7e {second} &7terminou empatado. Duração: &f{duration}&7.",
+          // Um lado inteiro saiu antes do "LUTE!": não houve luta, e a vitória não é gravada.
+          "cancelled": "&7O CxC entre {first} &7e {second} &7acabou antes da luta começar."
         },
         "broadcast": {
-          "start": [
-            "",
-            "&6CxC: &fa batalha começou. Que vença o melhor!",
-            "&f{first} &8({first_size}) &7contra &f{second} &8({second_size})",
-            "{watch}",
-            ""
-          ],
+          // Uma linha só para o servidor inteiro (decisão do dono), com o camarote clicável.
+          "start": "&6CxC: &fo clã {first} &8({first_size}) &fenfrenta o clã {second} &8({second_size})&f. {watch}",
           "watch": "&e[Assistir no camarote]",
           "win": "&6CxC: &fo clã {winner} &fvenceu o clã {loser}&f.",
           "draw": "&6CxC: &fa batalha entre {first} &fe {second} &fterminou empatada."
