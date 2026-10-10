@@ -9,12 +9,15 @@
         "ranked-duo": "Ranqueada 2v2",
         "party-versus": "Party contra party",
         "party-split": "Split",
-        "party-all": "Todos contra todos"
+        "party-all": "Todos contra todos",
+        "clan": "CxC"
       },
       // As palavras que acompanham um número montado no código (o Plural do core): 1 no singular.
       "units": {
         "copy": { "singular": "cópia", "plural": "cópias" },
         "elo-point": { "singular": "ponto de elo", "plural": "pontos de elo" },
+        "kill": { "singular": "abate", "plural": "abates" },
+        "piece": { "singular": "peça", "plural": "peças" },
         "player": { "singular": "jogador", "plural": "jogadores" }
       },
       // Os botões dos convites no chat. A mensagem os mostra pelos placeholders {accept} e {decline}, e o clique
@@ -175,9 +178,130 @@
         "not-watching": "&cVocê não está no camarote.",
         "not-fighting": "&c{player} não está lutando agora."
       },
+      // O CxC, duelo de clãs (spec docs/superpowers/specs/2026-10-10-p4free-cxc-design.md no exe).
+      "cxc": {
+        "refusals": {
+          "no-clan": "&cVocê não está num clã.",
+          "not-officer": "&cSó o líder ou um capitão responde pelo clã no CxC.",
+          "not-vip": "&cO CxC é uma vantagem dos VIPs.",
+          "unknown-clan": "&cNenhum clã com a tag {tag}.",
+          "same-clan": "&cVocê não pode desafiar o próprio clã.",
+          "in-cxc": "&cSeu clã já está num CxC.",
+          "other-in-cxc": "&cO clã {tag} &cjá está num CxC.",
+          "pending": "&cSeu clã já tem um convite de CxC pendente.",
+          "other-pending": "&cO clã {tag} &cjá tem um convite de CxC pendente.",
+          "no-vip-online": "&cO clã {tag} &cnão tem nenhum VIP online agora.",
+          "no-arena": "&cNenhuma arena de CxC está ativa.",
+          "no-free-arena": "&cTodas as cópias deste mapa estão ocupadas agora.",
+          "no-kit": "&cO kit do CxC ainda não foi gravado pela staff.",
+          "no-invite": "&cO clã {tag} &cnão desafiou o seu, ou o convite expirou.",
+          "arena-gone": "&cO mapa escolhido saiu do ar. O convite foi cancelado.",
+          "empty-side": "&cO CxC não começou: nenhum VIP livre do clã {tag}&c.",
+          "not-fighting": "&cO clã {tag} &cnão está lutando agora.",
+          "kit-busy": "&cSaia dos duelos e do camarote antes de gravar o kit.",
+          "kit-empty": "&cSeu inventário está vazio: monte o kit antes."
+        },
+        "invite": {
+          "sent": [
+            "",
+            "&eSeu clã acaba de enviar um convite de duelo para o clã {tag}&e.",
+            "&eEles têm &a{time} &epara aceitar o duelo. Apenas &bjogadores VIPs &eserão puxados para a arena.",
+            ""
+          ],
+          "received": [
+            "",
+            "&eO clã {tag} &eacabou de desafiar o seu clã para um duelo!",
+            "&8 ▸ &fMapa: &7{arena}",
+            "&8 ▸ &fVIPs online: &a{challengers} &7contra &a{defenders}",
+            "{accept} {decline}",
+            "",
+            "&eO convite expira em {time}.",
+            ""
+          ],
+          "declined": "&7{player} recusou o desafio do clã {tag}&7.",
+          "declined-by": "&cO clã {tag} &crecusou o desafio do seu clã.",
+          "expired-sender": "&7O convite de CxC para o clã {tag} &7expirou.",
+          "expired-target": "&7O convite de CxC do clã {tag} &7expirou."
+        },
+        "left-out": {
+          "not-vip": [
+            "",
+            "&cVocê não foi puxado para o CxC do seu clã.",
+            "&fApenas &cjogadores VIPs &fsão puxados e participam do CxC.",
+            "&fNão perca a próxima batalha: &ewww.rede-exe.com",
+            ""
+          ],
+          "busy": "&cVocê ficou de fora do CxC do seu clã:"
+        },
+        "kit-saved": "&aKit do CxC gravado: {pieces}. Vale a partir do próximo duelo.",
+        "opening": [
+          "",
+          "&e&l Duelo de Clãs",
+          "&7 {first} &7contra {second}",
+          "&7 Elimine o clã adversário para vencer!",
+          ""
+        ],
+        "countdown": "&aO combate inicia em {seconds}s",
+        "titles": {
+          "count-5": { "title": "&4➎ &8➍ &8➌ &8➋ &8➊", "subtitle": "" },
+          "count-4": { "title": "&8➎ &c➍ &8➌ &8➋ &8➊", "subtitle": "" },
+          "count-3": { "title": "&8➎ &8➍ &6➌ &8➋ &8➊", "subtitle": "" },
+          "count-2": { "title": "&8➎ &8➍ &8➌ &e➋ &8➊", "subtitle": "" },
+          "count-1": { "title": "&8➎ &8➍ &8➌ &8➋ &a➊", "subtitle": "" },
+          "fight": { "title": "&a&lLUTE!", "subtitle": "" }
+        },
+        "strength": {
+          "warning": "&e&lAVISO: &eEm &c{time} &etodos os jogadores vivos receberão &c&lForça III&e!",
+          "applied": [
+            "",
+            "&c&l FORÇA III ATIVADA",
+            "&7 Todos os jogadores vivos receberam &c&lForça III&7!",
+            ""
+          ]
+        },
+        "kill": {
+          "colors": { "ally": "&a", "enemy": "&c", "neutral": "&e" },
+          "by": "{victim_color}[{victim_tag}] {victim} &ffoi &c&lELIMINADO &fpor {killer_color}[{killer_tag}] {killer} &7({kills})&f.",
+          "alone": "{victim_color}[{victim_tag}] {victim} &7foi eliminado."
+        },
+        // O resultado vai a quem lutou e ao camarote; {winners} e {losers} viram os nomes, com as estatísticas no hover.
+        "result": {
+          "win": "&7Vitória do clã {winner} &7contra {loser}&7: &6{winners} &8(abates: {winner_kills}) &7contra &f{losers} &8(abates: {loser_kills})&7. Duração: &f{duration}&7.",
+          "draw": "&7O CxC entre {first} &7e {second} &7terminou empatado. Duração: &f{duration}&7."
+        },
+        "broadcast": {
+          "start": [
+            "",
+            "&6CxC: &fa batalha começou. Que vença o melhor!",
+            "&f{first} &8({first_size}) &7contra &f{second} &8({second_size})",
+            "{watch}",
+            ""
+          ],
+          "watch": "&e[Assistir no camarote]",
+          "win": "&6CxC: &fo clã {winner} &fvenceu o clã {loser}&f.",
+          "draw": "&6CxC: &fa batalha entre {first} &fe {second} &fterminou empatada."
+        },
+        "scoreboard": {
+          "lines": [
+            "",
+            "{cxc_first}",
+            "{cxc_second}",
+            "",
+            "&f Tempo: &e{cxc_time}",
+            "{cxc_strength}",
+            "{cxc_kills}",
+            "",
+            "&ewww.rede-exe.com"
+          ],
+          "side": "&f {tag} &8(vivos: &a{alive} &8de {size})",
+          "strength-in": "&f Força III em &c{time}",
+          "strength-on": "&c Força III ativa",
+          "kills": "&f Abates: &e{kills}"
+        }
+      },
       // O /x1 arena, só da administração.
       "arena": {
-        "invalid-size": "&cTamanho: pequena ou grande.",
+        "invalid-size": "&cTamanho: pequena, grande ou cla.",
         "invalid-name": "&cNome: letras minúsculas, números, _ e -, até 32.",
         "invalid-side": "&cLado: a ou b.",
         "invalid-count": "&cCópias: de 1 a 50.",
@@ -194,6 +318,8 @@
         "wrong-world": "&cMarque o spawn dentro do mundo {world}.",
         "outside": "&cVocê está fora da primeira cópia da arena {name}.",
         "spawn-set": "&aSpawn {side} da arena {name} marcado.",
+        "icon-missing": "&cSegure na mão o item do ícone.",
+        "icon-set": "&aÍcone da arena {name} trocado.",
         "no-spawns": "&cMarque os dois spawns da arena {name} antes.",
         "copies-removed": "&aA arena {name} fica com {copies}.",
         "copies-pasting": "&7Colando {copies} da arena {name}...",
@@ -209,6 +335,15 @@
         },
         "enabled": "&aArena {name} ativada.",
         "disabled": "&cArena {name} desativada."
+      },
+      // O nome de cada molde de CxC no menu de mapas e no convite. A chave é o nome do molde (o da schematic).
+      "arenas": {
+        "names": {
+          "cxc_desert": "Arena do Deserto",
+          "cxc_savanna": "Arena da Savana",
+          "cxc_nether": "Arena do Nether",
+          "cxc_supermario": "Arena do Super Mario"
+        }
       },
       // O quadro do duelo. Linha que é lista vazia sai do quadro.
       "scoreboard": {
@@ -515,7 +650,27 @@
                 "",
                 "{action}"
               ],
-              "team": "&f{players} &8(vivos: {alive} de {size})"
+              "team": "&f{players} &8(vivos: {alive} de {size})",
+              "clan-team": "&f{tag} &8(vivos: {alive} de {size})"
+            }
+          }
+        },
+        "cxc": {
+          // O título do inventário no 1.8 cabe em 32 caracteres.
+          "title": "Escolha o mapa do CxC",
+          "actions": {
+            "challenge": "&aClique para desafiar."
+          },
+          "items": {
+            "arena": {
+              "name": "&6{arena}",
+              "lore": [
+                "&7Desafiar o clã {tag} &7neste mapa.",
+                "",
+                "&8 ▸ &fCópias livres: &f{free}",
+                "",
+                "{action}"
+              ]
             }
           }
         },
@@ -595,7 +750,7 @@
               "description": "criar uma arena da schematic plugins/duels/arenas/<nome>.schematic",
               "arguments": {
                 "name": { "name": "nome", "description": "O nome da schematic, sem a extensão." },
-                "size": { "name": "pequena|grande", "description": "Pequena: até 4 jogadores. Grande: party." }
+                "size": { "name": "pequena|grande|cla", "description": "Pequena: até 4 jogadores. Grande: party. Cla: CxC." }
               }
             },
             "spawn": {
@@ -611,6 +766,10 @@
                 "name": { "name": "nome", "description": "A arena." },
                 "count": { "name": "quantidade", "description": "De 1 a 50." }
               }
+            },
+            "icon": {
+              "description": "trocar o ícone da arena pelo item na sua mão",
+              "arguments": { "name": { "name": "nome", "description": "A arena." } }
             },
             "list": {
               "description": "listar as arenas"
@@ -670,6 +829,28 @@
           },
           "all": {
             "description": "todos da party contra todos"
+          }
+        },
+        "cxc": {
+          "description": "os duelos de clãs",
+          "challenge": {
+            "description": "desafiar outro clã (líder ou capitão VIP)",
+            "arguments": { "tag": { "name": "tag", "description": "A tag do clã desafiado." } }
+          },
+          "accept": {
+            "description": "aceitar o desafio de outro clã",
+            "arguments": { "tag": { "name": "tag", "description": "A tag do clã que desafiou." } }
+          },
+          "decline": {
+            "description": "negar o desafio de outro clã",
+            "arguments": { "tag": { "name": "tag", "description": "A tag do clã que desafiou." } }
+          },
+          "cabin": {
+            "description": "assistir ao CxC de um clã",
+            "arguments": { "tag": { "name": "tag", "description": "A tag de um dos clãs lutando." } }
+          },
+          "kit": {
+            "description": "gravar o seu inventário e a sua armadura como o kit do CxC"
           }
         }
       }

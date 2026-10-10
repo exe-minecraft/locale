@@ -47,6 +47,9 @@
         },
         "gladiator_wins": {
           "name": "Vitórias no Gladiador"
+        },
+        "cxc_wins": {
+          "name": "Vitórias no CxC"
         }
       },
       "settings": {
@@ -114,6 +117,7 @@
             " &8▸ &fAbates: &7{member_kills}",
             " &8▸ &fMortes: &7{member_deaths}",
             " &8▸ &fGladiadores: &7{member_gladiator_wins}",
+            " &8▸ &fCxC: &7{member_cxc_wins}",
             "",
             "&8Última entrada em {member_last_seen_at}"
           ]
@@ -127,6 +131,7 @@
             " &8▸ &fMembros: &7({clan_members_size}/{clan_max_members_size}) {clan_online_members_size} online",
             " &8▸ &fPontos: &7{clan_points}",
             " &8▸ &fGladiadores: &7{clan_gladiator_wins}",
+            " &8▸ &fCxC: &7{clan_cxc_wins}",
             " &8▸ &fKDR: &7{clan_kdr}",
             " &8▸ &fAbates: &7{clan_kills}",
             " &8▸ &fMortes: &7{clan_deaths}",
@@ -221,6 +226,7 @@
               "  &fEventos: {clan_authorized}",
               "  &fPontos: &7{clan_points}",
               "  &fGladiadores: &7{clan_gladiator_wins}",
+              "  &fCxC: &7{clan_cxc_wins}",
               "",
               "  &fMembros: &7{clan_members_size}/{clan_max_members_size} ({clan_online_members_size} online)",
               "  {clan_online_members}",
@@ -253,6 +259,7 @@
               "  &fAbates: &7{target_kills}",
               "  &fMortes: &7{target_deaths}",
               "  &fGladiadores: &7{target_gladiator_wins}",
+              "  &fCxC: &7{target_cxc_wins}",
               "",
               "  &8Última entrada em {target_last_seen_at}",
               ""
@@ -268,6 +275,7 @@
               "  &fAbates: &7{target_kills}",
               "  &fMortes: &7{target_deaths}",
               "  &fGladiadores: &7{target_gladiator_wins}",
+              "  &fCxC: &7{target_cxc_wins}",
               "",
               "  &8Última entrada em {target_last_seen_at}",
               ""
