@@ -280,20 +280,23 @@
         },
         "scoreboard": {
           "lines": [
+            "{build_mode_status}",
             "",
+            "&f Duração: &a{cxc_time}",
+            "{cxc_kills}",
+            "",
+            "&f Jogadores restantes:",
             "{cxc_first}",
             "{cxc_second}",
             "",
-            "&f Tempo: &e{cxc_time}",
             "{cxc_strength}",
-            "{cxc_kills}",
             "",
             "&ewww.rede-exe.com"
           ],
-          "side": "&f {tag} &8(vivos: &a{alive} &8de {size})",
-          "strength-in": "&f Força III em &c{time}",
-          "strength-on": "&c Força III ativa",
-          "kills": "&f Abates: &e{kills}"
+          "side": "&f   &7{tag} &f{alive}",
+          "strength-in": "&f Força III em: &c{time}",
+          "strength-on": "&f Força III em: &cAtiva",
+          "kills": "&f Abates no duelo: &c{kills}"
         }
       },
       // O /x1 arena, só da administração.
@@ -348,21 +351,21 @@
       "scoreboard": {
         "title": "&b&lDUELOS",
         "lines": [
+          "{build_mode_status}",
           "",
-          "&f Formato: &b{duel_format}",
           "{duel_opponent}",
-          "&f Tempo: &e{duel_time}",
+          "",
           "{duel_elo}",
-          "&f Ping: &a{duel_ping} ms",
+          "&f Ping: &a{duel_ping}ms",
           "{duel_stats}",
           "",
           "&ewww.rede-exe.com"
         ],
-        "opponent": "&f Adversário: &c{player}",
+        "opponent": "&f Seu oponente: &c{player}",
         "alive-teams": "&f Vivos: &a{first} &7contra &c{second}",
         "alive-all": "&f Vivos: &e{alive} &7de {total}",
-        "elo": "&f Seu elo: &b{elo}",
-        "hits": "&f Golpes: &e{hits}",
+        "elo": "&f Seu elo: &c{elo}",
+        "hits": "&f Golpes totais: &e{hits}",
         "combo": "&f Maior combo: &e{combo}"
       },
       "views": {

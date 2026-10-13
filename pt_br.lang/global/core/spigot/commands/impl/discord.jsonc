@@ -18,7 +18,7 @@
                 "",
                 "&8⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊",
                 "&3&l{discord_synchronization_code}",
-                "  &9Clique para copiar",
+                "  &9Clique no código",
                 "&8⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊",
                 "",
                 "&0Vale por 10 minutos."
@@ -38,7 +38,8 @@
               ]
             }
           },
-          "book-fallback": "&eO código do Discord está no livro que você recebeu."
+          "copy-code": "&bCódigo: &f{discord_synchronization_code}&b. Abra o chat, clique no código e use Ctrl+A e Ctrl+C para copiar.",
+          "book-fallback": "&eUse /discord codigo para ver e copiar o código no chat."
         }
       }
     }

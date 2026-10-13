@@ -8,13 +8,11 @@
       "units": {
         "member": { "singular": "membro", "plural": "membros" }
       },
-      // O bloco do clã nas scoreboards do P4Free ({clan_scoreboard}). A linha do 1.8 tem 16 caracteres de
-      // prefixo e 16 de sufixo, e o sufixo repete a cor do prefixo: a tag mais longa (§aK§bN§cN, 9) e um
-      // nome de 16 letras não cabem juntos, e o nome perdia o final. Cada um na sua linha.
+      // O bloco do exe-scoreboard em Documents: tag sem cor e nome juntos, membros logo abaixo.
+      // Com a tag sem cor, até o nome de 16 letras cabe na linha do protocolo 1.8.
       "scoreboard": {
         "clan": [
-          "&f Clã: [{tag}&f]",
-          "&7 {name}",
+          "&f [&7{tag}&f] {name}",
           "&f Membros: &7{members}/{max_members}"
         ],
         "no-clan": [

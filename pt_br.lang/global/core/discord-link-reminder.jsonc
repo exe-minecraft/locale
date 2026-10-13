@@ -1,0 +1,5 @@
+{
+  "plugins": { "core": { "discord-link-reminder": {
+    "message": "&bVocê ainda não vinculou seu Discord! &7Use &f/discord &7para vincular sua conta, ou &bclique aqui&7."
+  } } }
+}

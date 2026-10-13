@@ -1,0 +1,7 @@
+{
+  "plugins": { "core": { "views": { "content-state": {
+    "empty": { "name": "&eNenhum registro", "lore": ["", "&7Não há informações para mostrar", "&7neste menu no momento."] },
+    "loading": { "name": "&eCarregando...", "lore": ["", "&7Aguarde enquanto buscamos as informações."] },
+    "error": { "name": "&cNão foi possível carregar", "lore": ["", "&7Feche e abra o menu para tentar novamente."] }
+  } } } }
+}

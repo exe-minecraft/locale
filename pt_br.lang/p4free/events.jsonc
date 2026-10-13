@@ -49,12 +49,39 @@
           "",
           "&ewww.rede-exe.com"
         ],
-        "clans": "&f Clãs restantes: &6{clans}",
+        "clans": "&f Clans restantes: &6{clans}",
         "kills": "&f Abates no evento: &c{kills}",
-        "border": "&f Borda estágio &c{stage}",
+        "border": "&f Borda em: &c{time}",
+        "border-manual": "&f Borda &c&lMANUAL",
+        "border-closing": "&f Borda &4Fechando...",
         "deathmatch": "&f &4&lDEATHMATCH",
         "rushes": " Rushes ativos ({rushes}):",
         "rush": " {first_tag} &7{first_alive} &fvs {second_tag} &7{second_alive}"
+      },
+      "arena-scoreboards": {
+        "clanfight": {
+          "lines": [
+            "{build_mode_status}", "", "{arena_time}", "{arena_clans}", "",
+            "{arena_kills}", "", "{clan_scoreboard}", "", "{arena_battle}", "", "&ewww.rede-exe.com"
+          ],
+          "time": "&f Duração: &a{time}",
+          "clans": "&f Clans restantes: &6{clans}",
+          "kills": "&f Abates no evento: &c{kills}",
+          "battle": "&f Batalha em andamento:",
+          "versus": " &7{first} &fvs &7{second}"
+        },
+        "fastglad": {
+          "lines": [
+            "{build_mode_status}", "", "{arena_time}", "{arena_clans}", "",
+            "{clan_scoreboard}", "", "{arena_points}", "{arena_merchant}", "", "&ewww.rede-exe.com"
+          ],
+          "time": "&f Duração: &a{time}",
+          "clans": "&f Clans restantes: &6{clans}",
+          "kills": "&f Abates no evento: &c{kills}",
+          "points": "&f Moedas de abate: &6{points}",
+          "merchant": "&fMercador Sombrio em: &9{time}",
+          "merchant-open": "&fMercador Sombrio &aVIVO"
+        }
       },
       "stages": {
         "waiting_players": "&adisponível para entrar",
@@ -818,14 +845,20 @@
             "title": "Detalhes do Gladiador",
             "items": {
               "overview": {
-                "name": "&6&lResumo do evento",
+                "name": "&b&lResumo da edição",
                 "lore": [
-                  "&7ID: &f{event_id}",
                   "&7Estado: &f{event_status}",
-                  "&7Clan vencedor: &f{clan_winner}",
-                  "&7Mito: &f{event_myth} &8({event_myth_kills} {event_myth_kills_unit})",
+                  "",
                   "&7Participantes: &f{event_players}"
                 ]
+              },
+              "winner": {
+                "name": "&6&lClan vencedor",
+                "lore": ["", "&f{clan_winner}", "", "&7Resultado desta edição do Gladiador."]
+              },
+              "myth": {
+                "name": "&b&lMito do evento",
+                "lore": ["", "&f{event_myth}", "&7Abates: &c{event_myth_kills}", "", "&7Jogador com mais abates nesta edição."]
               },
               "deaths": {
                 "name": "&c&lMortes",
@@ -846,7 +879,7 @@
                 ]
               },
               "lineup": {
-                "name": "&a&lLineup",
+                "name": "&a&lFormação dos clans",
                 "lore": [
                   "&7Jogadores registrados: &f{event_lineup}"
                 ]
