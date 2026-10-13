@@ -315,6 +315,8 @@
         "wrong-world": "&cMarque o spawn dentro do mundo {world}.",
         "outside": "&cVocê está fora da primeira cópia da arena {name}.",
         "spawn-set": "&aSpawn {side} da arena {name} marcado.",
+        "teleported": "&aVocê está no spawn A da cópia {copy} da arena {name}.",
+        "invalid-copy": "&cA arena {name} tem {copies}. Escolha de 1 a {last}.",
         "icon-missing": "&cSegure na mão o item do ícone.",
         "icon-set": "&aÍcone da arena {name} trocado.",
         "no-spawns": "&cMarque os dois spawns da arena {name} antes.",
@@ -767,6 +769,13 @@
             "icon": {
               "description": "trocar o ícone da arena pelo item na sua mão",
               "arguments": { "name": { "name": "nome", "description": "A arena." } }
+            },
+            "teleport": {
+              "description": "ir ao spawn A de uma cópia da arena",
+              "arguments": {
+                "name": { "name": "nome", "description": "A arena." },
+                "copy": { "name": "cópia", "description": "O número da cópia, a partir de 1. Sem ele, a primeira." }
+              }
             },
             "list": {
               "description": "listar as arenas"
