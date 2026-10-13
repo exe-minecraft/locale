@@ -63,10 +63,10 @@
               "  &fDiscord: &7não vinculado &8(use /discord)",
               ""
             ],
-            "link": "  &7Ver no site: &b&nclique aqui",
+            "link": "  &aLink pronto: &b&nclique para abrir o site&r &8(vale 1 minuto)",
             "link-hover": "&7Abre o site já logado. Não mande este link a ninguém.",
             "link-unavailable": "Não deu para gerar o link do site agora. Tente de novo em instantes.",
-            "site": "  &7Ver no site: &b&nclique aqui",
+            "site": "  &fSite: &b&ngerar link de acesso",
             "site-hover": "&7Gera um link de entrada no site, que vale por 1 minuto.",
             "type-original": "Original",
             "type-cracked": "Pirata",
