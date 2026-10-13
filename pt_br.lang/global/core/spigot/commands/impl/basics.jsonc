@@ -43,7 +43,6 @@
               "  &fJogador: &7{profile_name}",
               "  &fUUID: &7{profile_uuid}",
               "  &fConta: &7{profile_type}",
-              "  &fIdioma: &7{profile_language}",
               "  &fGrupos: &7{profile_groups}",
               "  &fCadastro: &7{profile_registered}"
             ],
