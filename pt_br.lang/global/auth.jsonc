@@ -24,9 +24,6 @@
             "&cVocê excedeu o limite de tentativas!",
             "&cEspere 10 minutos e tente de novo."
           ],
-          "too-many-logged-accounts": [
-            "&cVocê está com muitas contas conectadas!"
-          ],
           "reserved-name": [
             "Este nick é reservado para os bots da rede."
           ],
@@ -86,14 +83,6 @@
             "As senhas não são iguais.",
             "Confirme a senha corretamente.",
             "Utilize /registrar <senha> <senha>"
-          ],
-          "too-many-logged-accounts": [
-            "&cVocê está com muitas contas conectadas!"
-          ],
-          "too-many-registered-accounts": [
-            "&cVocê já registrou muitas contas.",
-            "&cEntre em contato com nossa equipe.",
-            "&cDiscord: &fdiscord.gg/exe"
           ],
           "reserved-name": [
             "Este nick é reservado para os bots da rede."

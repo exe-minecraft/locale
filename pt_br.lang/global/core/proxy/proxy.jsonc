@@ -101,14 +101,6 @@
               "",
               "&f{discord_invite_url}"
             ],
-            "too-many-logged-accounts": [
-              "&c&lEXE&r",
-              "",
-              "&cVocê está com muitas contas logadas",
-              "&cao mesmo tempo, deslogue das outras para entrar!",
-              "",
-              "&f{discord_invite_url}"
-            ],
             "lost-sent-to-lobby": [
               "&cO servidor em que você estava caiu, e você foi levado para o lobby."
             ],
