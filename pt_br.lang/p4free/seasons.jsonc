@@ -1,0 +1,105 @@
+{
+  "plugins": {
+    "seasons": {
+      "info": {
+        "none": "&7O P4Free ainda não tem temporada aberta.",
+        "active": "&e{name} &7termina em &f{end}&7. Faltam &f{left}&7.",
+        "ending": "&e{name} &7está no fim: a virada acontece a qualquer momento.",
+        "overdue": "&cA data marcada ({end}) já passou. Vire com /temporada encerrar {season} ou remarque com /temporada data.",
+        "pending": "&e{name} &7está começando: o servidor está zerando a temporada anterior."
+      },
+      "usage": {
+        "info": {
+          "syntax": "",
+          "description": "ver a temporada em jogo e quanto falta"
+        }
+      },
+      "top": {
+        "description": "ver os rankings de uma temporada que acabou",
+        "arguments": {
+          "season": {
+            "name": "número",
+            "description": "A temporada; sem número, a última que acabou"
+          }
+        },
+        "not-archived": "&cA temporada {season} ainda não tem ranking arquivado."
+      },
+      "history": {
+        "description": "ver as temporadas do P4Free",
+        "header": "&eTemporadas do P4Free:",
+        "line": {
+          "active": "&a▸ {name} &7(em jogo): de {start} até {end}",
+          "pending": "&e▸ {name} &7(começando): até {end}",
+          "closed": "&7▸ {name}: de {start} até {end}"
+        }
+      },
+      "schedule": {
+        "description": "remarcar o fim da temporada em jogo",
+        "arguments": {
+          "date": {
+            "name": "dd/mm/aaaa",
+            "description": "O dia do fim, no horário de Brasília"
+          },
+          "time": {
+            "name": "hh:mm",
+            "description": "A hora do fim; sem hora, o fim do dia"
+          }
+        },
+        "success": "&aA temporada {season} agora termina em {end}. O VIP de temporada acompanha a data nova."
+      },
+      "start": {
+        "description": "abrir a primeira temporada do P4Free",
+        "arguments": {
+          "date": {
+            "name": "dd/mm/aaaa",
+            "description": "O dia do fim, no horário de Brasília"
+          },
+          "time": {
+            "name": "hh:mm",
+            "description": "A hora do fim; sem hora, o fim do dia"
+          }
+        },
+        "already-started": "&cO P4Free já tem temporada. Para mudar a data, use /temporada data.",
+        "success": "&a{name} aberta. Termina em {end}."
+      },
+      "close": {
+        "description": "encerrar a temporada e zerar o P4Free",
+        "arguments": {
+          "season": {
+            "name": "número atual",
+            "description": "O número da temporada em jogo, como confirmação"
+          },
+          "date": {
+            "name": "dd/mm/aaaa",
+            "description": "O dia do fim da próxima temporada"
+          },
+          "time": {
+            "name": "hh:mm",
+            "description": "A hora do fim da próxima; sem hora, o fim do dia"
+          }
+        },
+        "wrong-number": "&cA temporada em jogo é a {season}. Digite esse número para confirmar o encerramento.",
+        "success": "&aTemporada {season} encerrada. Os servidores do P4Free reiniciam para a virada, e a {next_season} abre sozinha, até {end}."
+      },
+      "errors": {
+        "invalid-date": "&c{date} não é uma data válida. Use dd/mm/aaaa e, se quiser, hh:mm.",
+        "past-date": "&cA data precisa estar no futuro ({date} já passou).",
+        "no-season": "&cNão há temporada em jogo. Use /temporada iniciar para abrir a primeira.",
+        "conflict": "&cA temporada mudou enquanto você digitava. Confira com /temporada e tente de novo.",
+        "invalid": "&cA plataforma recusou a data ou o nome da temporada."
+      },
+      "turnover": {
+        "closing": "&eA temporada {season} acabou! &7O servidor reinicia para começar a temporada {next_season}, e os rankings dela ficam em /temporada top {season}.",
+        "login-closed": "&eO P4Free está começando uma nova temporada. &7Volte em alguns minutos."
+      },
+      "archive": {
+        "ranking": "Temporada {season}: {ranking}"
+      },
+      "placeholders": {
+        "none": "-",
+        "turning": "virando",
+        "ending": "acabando"
+      }
+    }
+  }
+}
