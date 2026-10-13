@@ -301,6 +301,7 @@
         },
         "vip-time": {
           "permanent": "Permanente",
+          "frozen": "{remaining} &b(congelado)",
           "no-group": "Você não possui nenhum grupo vip!",
           "visualization-format": " {user_group_display_name} &8➠ &7{user_group_expire_in}",
           "visualization": [

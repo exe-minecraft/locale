@@ -47,6 +47,70 @@
             },
             "error": "Sua tentativa de remover o grupo falhou, tente novamente mais tarde!",
             "success": "Você remove o grupo {group_id} do jogador {target_name} no servidor {server_id}."
+          },
+          "freeze": {
+            "description": "congelar o tempo de VIP de um jogador (continua VIP, o prazo para)",
+            "arguments": {
+              "target": {
+                "name": "jogador",
+                "description": "Jogador cujo VIP será congelado"
+              },
+              "group": {
+                "name": "grupo",
+                "description": "Grupo de VIP a congelar"
+              },
+              "server": {
+                "name": "servidor",
+                "description": "Escopo do grupo (global para a rede toda)"
+              }
+            },
+            "need-highest-group": "Você só pode congelar grupos abaixo do seu nesse servidor!",
+            "error": "Sua tentativa de congelar o VIP falhou, tente novamente mais tarde!",
+            "conflict": "{target_name} não tem {group_id} com prazo correndo em {server_id}: é permanente, venceu ou já está congelado.",
+            "not-vip": "Só grupos de VIP congelam: {group_id} é staff ou o grupo padrão.",
+            "success": "Você congelou o {group_id} de {target_name} em {server_id}. Restam {remaining}, parados até descongelar."
+          },
+          "unfreeze": {
+            "description": "descongelar o tempo de VIP de um jogador (o prazo volta a correr)",
+            "arguments": {
+              "target": {
+                "name": "jogador",
+                "description": "Jogador cujo VIP será descongelado"
+              },
+              "group": {
+                "name": "grupo",
+                "description": "Grupo de VIP a descongelar"
+              },
+              "server": {
+                "name": "servidor",
+                "description": "Escopo do grupo (global para a rede toda)"
+              }
+            },
+            "need-highest-group": "Você só pode descongelar grupos abaixo do seu nesse servidor!",
+            "error": "Sua tentativa de descongelar o VIP falhou, tente novamente mais tarde!",
+            "conflict": "{target_name} não tem {group_id} congelado em {server_id}.",
+            "not-vip": "Só grupos de VIP congelam: {group_id} é staff ou o grupo padrão.",
+            "success": "Você descongelou o {group_id} de {target_name} em {server_id}. O prazo voltou a correr: restam {remaining}."
+          },
+          "freeze-all": {
+            "description": "congelar todos os VIPs; os novos também entram congelados",
+            "need-global-manager": "Congelar todos os VIPs mexe na rede inteira: é de manager global para cima.",
+            "error": "Sua tentativa de congelar todos os VIPs falhou, tente novamente mais tarde!",
+            "vips": {
+              "singular": "VIP congelado",
+              "plural": "VIPs congelados"
+            },
+            "success": "Congelamento geral ligado: {count} {vips}. VIP comprado ou dado a partir de agora também entra congelado."
+          },
+          "unfreeze-all": {
+            "description": "descongelar todos os VIPs e desligar o congelamento geral",
+            "need-global-manager": "Descongelar todos os VIPs mexe na rede inteira: é de manager global para cima.",
+            "error": "Sua tentativa de descongelar todos os VIPs falhou, tente novamente mais tarde!",
+            "vips": {
+              "singular": "VIP descongelado",
+              "plural": "VIPs descongelados"
+            },
+            "success": "Congelamento geral desligado: {count} {vips}. Os prazos voltaram a correr."
           }
         }
       }
