@@ -3,26 +3,8 @@
     "replay": {
       "commands": {
         "replay": {
-          "help": {
-            "header": "<gold>=== Comandos de Replay ===</gold>",
-            "record": "<gray>* </gray><yellow>/replay record <nome></yellow><white> - Iniciar gravação</white>",
-            "stop": "<gray>* </gray><yellow>/replay stop</yellow><white> - Parar a gravação</white>",
-            "play": "<gray>* </gray><yellow>/replay play <nome></yellow><white> - Assistir replay</white>",
-            "list": "<gray>* </gray><yellow>/replay list [página]</yellow><white> - Listar replays</white>",
-            "delete": "<gray>* </gray><yellow>/replay delete <nome></yellow><white> - Deletar replay</white>",
-            "info": "<gray>* </gray><yellow>/replay info <nome></yellow><white> - Informações do replay</white>"
-          },
           "record": {
-            "arguments": {
-              "name": {
-                "name": "nome",
-                "description": "Nome do replay"
-              }
-            },
-            "usage": "<red>Uso: /replay record <nome></red>",
             "already-recording": "<red>Você já está gravando um replay!</red>",
-            "name-too-long": "<red>Nome muito longo! Máximo: 32 caracteres.</red>",
-            "name-invalid": "<red>Nome inválido! Use apenas letras, números, - e _</red>",
             "preparing": {
               "header": "<yellow>=== Preparando Gravação ===</yellow>",
               "name": "<gray>* Nome: </gray><white>{name}</white>",
@@ -31,7 +13,8 @@
               "loading": "<aqua>Carregando mapa... A gravação iniciará automaticamente.</aqua>",
               "stop-hint": "<yellow>Use /replay stop para parar a gravação.</yellow>"
             },
-            "error": "<red>Não foi possível concluir. Tente novamente.</red>"
+            "error": "<red>Não foi possível concluir. Tente novamente.</red>",
+            "description": "Inicia uma gravação na sua posição."
           },
           "stop": {
             "finished": {
@@ -41,17 +24,18 @@
               "play-hint": "<yellow>Use /replay play {name} para assistir.</yellow>"
             },
             "error": "<red>Não foi possível concluir. Tente novamente.</red>",
-            "not-active": "<red>Você não está gravando nenhum replay.</red>"
+            "not-active": "<red>Você não está gravando nenhum replay.</red>",
+            "description": "Encerra sua gravação."
           },
           "play": {
             "arguments": {
-              "name": {
-                "name": "nome",
-                "description": "Nome do replay"
+              "id": {
+                "name": "id",
+                "description": "ID da gravação"
               }
             },
-            "usage": "<red>Uso: /replay play <nome></red>",
-            "not-found": "<red>Replay não encontrado: {name}</red>"
+            "not-found": "<red>Replay não encontrado: {name}</red>",
+            "description": "Assiste a um replay pelo ID."
           },
           "list": {
             "arguments": {
@@ -62,62 +46,94 @@
             },
             "empty": "<yellow>Nenhum replay encontrado.</yellow>",
             "header": "<gold>=== Replays (Página {page}) ===</gold>",
-            "item": "<gray>* </gray><white>{name}</white><gray> - </gray><aqua>{duration}</aqua>"
+            "item": "<gray>* </gray><white>{name}</white><gray> - </gray><aqua>{duration}</aqua>",
+            "description": "Lista as gravações disponíveis."
           },
           "delete": {
             "arguments": {
-              "name": {
-                "name": "nome",
-                "description": "Nome do replay"
+              "id": {
+                "name": "id",
+                "description": "ID da gravação"
               }
             },
-            "usage": "<red>Uso: /replay delete <nome></red>",
             "success": "<green>Replay '{name}' deletado com sucesso!</green>",
-            "not-found": "<red>Replay não encontrado: {name}</red>"
+            "not-found": "<red>Replay não encontrado: {name}</red>",
+            "description": "Exclui uma gravação."
           },
           "info": {
             "arguments": {
-              "name": {
-                "name": "nome",
-                "description": "Nome do replay"
+              "id": {
+                "name": "id",
+                "description": "ID da gravação"
               }
             },
-            "usage": "<red>Uso: /replay info <nome></red>",
             "header": "<gold>=== Informações do Replay ===</gold>",
             "name": "<gray>* Nome: </gray><white>{name}</white>",
             "duration": "<gray>* Duração: </gray><white>{duration}</white>",
             "world": "<gray>* Mundo: </gray><white>{world}</white>",
             "center": "<gray>* Centro: </gray><white>{center}</white>",
             "radius": "<gray>* Raio: </gray><white>{radius} chunks</white>",
-            "created-at": "<gray>* Criado em: </gray><white>{date}</white>"
+            "created-at": "<gray>* Criado em: </gray><white>{date}</white>",
+            "description": "Exibe os dados de uma gravação."
           },
-          "usage": "<yellow>/replay ver <id> | pause | retomar | tempo <segundos> | velocidade <0.25|0.5|1|2|4> | sair</yellow>"
+          "usage": {
+            "open": {
+              "syntax": "ver <id>",
+              "description": "Abre uma gravação pelo ID."
+            },
+            "pause": {
+              "syntax": "pause",
+              "description": "Pausa ou continua a reprodução."
+            },
+            "resume": {
+              "syntax": "retomar",
+              "description": "Continua a reprodução."
+            },
+            "seek": {
+              "syntax": "tempo <segundos>",
+              "description": "Vai para um instante da gravação."
+            },
+            "speed": {
+              "syntax": "velocidade <0.25|0.5|1|2|4>",
+              "description": "Altera a velocidade de reprodução."
+            },
+            "exit": {
+              "syntax": "sair",
+              "description": "Encerra a reprodução e volta ao servidor anterior."
+            }
+          },
+          "target": {
+            "description": "Destaca um jogador da gravação.",
+            "arguments": {
+              "alvo": {
+                "name": "jogador|clear",
+                "description": "Jogador da gravação ou clear para limpar o destaque"
+              }
+            }
+          }
         },
         "replaycamera": {
           "arguments": {
             "target": {
-              "name": "jogador",
-              "description": "Jogador gravado para prender a câmera, ou 'reset'"
+              "name": "jogador|reset",
+              "description": "Jogador da gravação ou reset para soltar a câmera"
             }
           },
           "not-watching": "<red>Você não está assistindo um replay.</red>",
           "reset": "<green>Câmera devolvida.</green>",
           "not-found": "<red>Jogador não encontrado na gravação. Presentes: </red><white>{players}</white>",
           "not-in-scene": "<red>Esse jogador ainda não está em cena neste tick.</red>",
-          "locked": "<green>Câmera presa em </green><white>{name}</white><green>. F5 alterna a perspectiva; após um seek, rode o comando de novo. /rcam reset solta.</green>"
+          "locked": "<green>Câmera presa em </green><white>{name}</white><green>. F5 alterna a perspectiva; após um seek, rode o comando de novo. /rcam reset solta.</green>",
+          "description": "Prende ou solta a câmera em um jogador gravado."
         }
       },
       "scoreboard": {
-        "title": "<gradient:#FF6F00:#faa825:#FF6F00><bold>REDE FANTASY</bold></gradient>",
+        "title": "<red><bold>EXE</bold></red>",
         "lines": [
-          "<font:fantasy:small_font> <gray>{current_date}</gray> <dark_gray>{current_app_name}</dark_gray>",
+          "<gray>{current_date} <dark_gray>{current_app_name}</dark_gray></gray>",
           "",
-          "<font:fantasy:small_font> <white><glyph:cargo><glyph:space><white>Cargo:</white> {user_group_name_with_color}",
-          "<font:fantasy:small_font> <white><glyph:online><glyph:space><white>Online: </white><gray>%network_online-count%</gray>",
-          "",
-          "<font:fantasy:small_font> <white>Tempo: </white><gray>{replay_time}</gray><dark_gray> / </dark_gray><gray>{replay_duration}</gray>",
-          "",
-          "<font:fantasy:small_font><gradient:#FF6F00:#faa825:#FF6F00>redefantasy.com</gradient>"
+          "<white>Cargo: {user_group_name_with_color}</white>",
+          "<white>Tempo: <gray>{replay_time} / {replay_duration}</gray></white>"
         ]
       },
       "items": {
@@ -133,7 +149,7 @@
           ]
         },
         "pause": {
-          "name": "<gray>⏸ Pausar</gray>",
+          "name": "<gray>Pausar</gray>",
           "lore": [
             "",
             "<gray>Pausa a reprodução do replay.</gray>",
@@ -142,7 +158,7 @@
           ]
         },
         "play": {
-          "name": "<green>▶ Reproduzir</green>",
+          "name": "<green>Reproduzir</green>",
           "lore": [
             "",
             "<gray>Continua a reprodução do replay.</gray>",
@@ -151,7 +167,7 @@
           ]
         },
         "seek-backward": {
-          "name": "<red>⏪ Retroceder 10s</red>",
+          "name": "<red>Retroceder 10s</red>",
           "lore": [
             "",
             "<gray>Retrocede 10 segundos no replay.</gray>",
@@ -160,7 +176,7 @@
           ]
         },
         "seek-forward": {
-          "name": "<aqua>⏩ Avançar 10s</aqua>",
+          "name": "<aqua>Avançar 10s</aqua>",
           "lore": [
             "",
             "<gray>Avança 10 segundos no replay.</gray>",
@@ -231,17 +247,17 @@
         },
         "playback": {
           "stopped": "<yellow>Replay encerrado.</yellow>",
-          "paused": "<yellow>⏸ Pausado</yellow>",
-          "resumed": "<green>▶ Reproduzindo</green>",
+          "paused": "<yellow>Pausado</yellow>",
+          "resumed": "<green>Reproduzindo</green>",
           "speed-changed": "<aqua>Velocidade: {speed}x</aqua>",
-          "seek-forward": "<aqua>⏩ {time} / {total}</aqua>",
-          "seek-backward": "<aqua>⏪ {time} / {total}</aqua>",
+          "seek-forward": "<aqua>{time} / {total}</aqua>",
+          "seek-backward": "<aqua>{time} / {total}</aqua>",
           "finished": "<gold>Replay finalizado! Use o item de sair para voltar.</gold>",
           "following": "<green>Seguindo jogador...</green>",
           "free-mode": "<yellow>Modo livre</yellow>",
           "welcome": [
             "",
-            "<gradient:#FF6F00:#faa825:#FF6F00><bold>REPLAY</bold></gradient><dark_gray>  <white>{replay_name}</white><dark_gray> , <gray>{replay_duration}",
+            "<gold><bold>REPLAY</bold></gold><dark_gray>  <white>{replay_name}</white><dark_gray> , <gray>{replay_duration}",
             "",
             "<gray>Você está assistindo a uma gravação. Nada aqui é ao vivo:</gray>",
             "<gray>os jogadores, os blocos e os itens são o que foram naquele momento.</gray>",
@@ -260,7 +276,9 @@
             "<dark_gray>▸ </dark_gray><yellow>Clique num baú</yellow><gray> : abre o conteúdo gravado dele.</gray>",
             "<dark_gray>▸ </dark_gray><gray>Os comandos que os jogadores digitaram aparecem flutuando sobre eles.</gray>",
             ""
-          ]
+          ],
+          "status-paused": "Pausado",
+          "status-playing": "Reproduzindo"
         }
       }
     }
