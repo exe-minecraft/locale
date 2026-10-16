@@ -4,10 +4,11 @@
       "proxy": {
         "motd": {
           // Como a da Hypixel: os espaços à esquerda centram cada linha nos 271 px da MOTD na lista do
-          // cliente (305 da lista, menos 32 do ícone e 2). Texto novo recalcula os espaços.
+          // cliente (305 da lista, menos 32 do ícone e 2). O espaço anda 4 px e, depois de um &l, 5 px:
+          // misturar os dois acerta o pixel. Texto novo recalcula os espaços.
           "highest-version": [
-            "                           &4&lEXE &8[1.8.x]",
-            "          &e&lTEMPORADA #1 &7&l| &f&lUM NOVO COMEÇO"
+            "                           &c&lEXE &7[1.8.x]",
+            "         &l &c&lTEMPORADA #1 &7&l| &f&lUM NOVO COMEÇO"
           ],
           "lowest-version": [
             "&c&lEXE &8➠ &cdiscord.gg/exe",
