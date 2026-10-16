@@ -57,7 +57,7 @@
               "description": "Mensagem que será enviada"
             }
           },
-          "message": "&5 &7({sender_connected_server}) {sender_name_with_tag} &f{sender_message}"
+          "message": "&d&l[S] &7({sender_connected_server}) {sender_name_with_tag} &f{sender_message}"
         },
         "staff-high-chat": {
           "arguments": {
@@ -66,7 +66,7 @@
               "description": "Mensagem que será enviada"
             }
           },
-          "message": "&c &7({sender_connected_server}) {sender_name_with_tag} &f{sender_message}"
+          "message": "&4&l[BUNKER] &7({sender_connected_server}) {sender_name_with_tag} &f{sender_message}"
         }
       }
     }
