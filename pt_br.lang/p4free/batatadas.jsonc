@@ -29,7 +29,23 @@
         }
       },
       "updated": "&aContagem atualizada.",
-      "failed": "&cNão foi possível consultar ou atualizar as batatadas agora."
+      "failed": "&cNão foi possível consultar ou atualizar as batatadas agora.",
+      "reset-done": "&aSuas batatadas foram zeradas.",
+      "reset-failed": "&cNão foi possível zerar as batatadas agora. O item voltou para o seu inventário.",
+      "items": {
+        "reset": {
+          "display-name": "&6Resetar batatadas",
+          "name": "&6Resetar batatadas",
+          "lore": [
+            "&7Zera todas as batatadas que você",
+            "&7tem no servidor.",
+            "",
+            "&6O item é gasto no reset.",
+            "",
+            "&eClique com o botão direito para usar."
+          ]
+        }
+      }
     }
   }
 }

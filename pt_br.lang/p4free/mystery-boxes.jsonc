@@ -2,7 +2,8 @@
   "plugins": {
     "mystery-boxes": {
       "types": {
-        "basic": "&eCaixa Misteriosa Básica"
+        "basic": "&aCaixa Misteriosa Básica",
+        "advanced": "&bCaixa Misteriosa Avançada"
       },
       "rarities": {
         "common": "Comum",

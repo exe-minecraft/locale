@@ -1,0 +1,144 @@
+{
+  "plugins": {
+    // A loja do P4Free (/shop, /loja), com cash e tokens. O ícone de cada produto é o
+    // próprio item que a loja entrega (o nome e a descrição vêm de quem registra o item);
+    // aqui ficam o preço, as dicas de clique, os menus e as mensagens da compra.
+    "shop": {
+      "views": {
+        "primary": {
+          "title": "Loja",
+          "items": {
+            "special-items": {
+              "name": "&6Itens especiais",
+              "lore": [
+                "&7Itens exclusivos que podem te",
+                "&7ajudar na sua jornada.",
+                "",
+                "&d• &7Boosters de almas e de tokens",
+                "&b• &7Berserker de 5 e de 6 minutos",
+                "&a• &7Slot de perk",
+                "&b• &7Resetar evolução",
+                "&6• &7Resetar batatadas",
+                "",
+                "&eClique para ver."
+              ]
+            },
+            "ender-chest": {
+              "name": "&5Baú do fim",
+              "lore": [
+                "&7Aumente o espaço do seu baú do fim.",
+                "",
+                "&e• &7Uma linha adicional",
+                "&e• &7Duas linhas adicionais",
+                "",
+                "&eClique para ver."
+              ]
+            },
+            "mystery-boxes": {
+              "name": "&eCaixas misteriosas",
+              "lore": [
+                "&7Desafie a sorte para conseguir",
+                "&7itens especiais.",
+                "",
+                "&a• &7Caixa básica",
+                "&b• &7Caixa avançada",
+                "",
+                "&eClique para ver."
+              ]
+            },
+            "cash": {
+              "name": "&eAdquira cash",
+              "lore": [
+                "&7Compre &6cash &7na nossa loja para",
+                "&7adquirir produtos no servidor.",
+                "",
+                "&eClique para receber o link."
+              ]
+            }
+          }
+        },
+        "special-items": {
+          "title": "Itens especiais"
+        },
+        "ender-chest": {
+          "title": "Baú do fim"
+        },
+        "mystery-boxes": {
+          "title": "Caixas misteriosas"
+        },
+        "profile": {
+          "name": "&eSeu saldo",
+          "lore": [
+            "&fCash: &6✪{cash}",
+            "&fTokens: &a{tokens}"
+          ]
+        },
+        "back": {
+          "name": "&7Voltar",
+          "lore": []
+        },
+        "product": {
+          "price": [
+            "",
+            "&fPreço: {prices}"
+          ],
+          "price-separator": " &7ou ",
+          "hint": [
+            "",
+            "&eClique para comprar."
+          ],
+          "hint-preview": [
+            "",
+            "&fBotão esquerdo: &7Comprar",
+            "&fBotão direito: &7Ver os prêmios da caixa"
+          ],
+          "unavailable": "&cProduto indisponível"
+        },
+        "checkout": {
+          "title": "Forma de pagamento",
+          "items": {
+            "tokens": {
+              "name": "&aTokens",
+              "lore": [
+                "&7Pague com tokens.",
+                "",
+                "&fPreço: {tokens_price}",
+                "",
+                "{tokens_state}"
+              ]
+            },
+            "cash": {
+              "name": "&6Cash",
+              "lore": [
+                "&7Pague com cash.",
+                "",
+                "&fPreço: {cash_price}",
+                "",
+                "{cash_state}"
+              ]
+            }
+          },
+          "states": {
+            "buy": "&aClique para comprar.",
+            "no-balance": "&cVocê não tem saldo suficiente.",
+            "unavailable": "&cIndisponível nesta moeda."
+          }
+        }
+      },
+      "prices": {
+        "cash": "&6✪{amount}",
+        "tokens": "&a{amount} {currency}"
+      },
+      "messages": {
+        "unavailable": "&cEste produto está indisponível no momento.",
+        "inventory-full": "&cEsvazie um espaço no inventário para receber este produto.",
+        "not-enough": "&cSaldo insuficiente: o produto custa {price} {currency}.",
+        "charge-failed": "&cNão foi possível cobrar agora. Se o seu saldo desceu, abra um ticket com este horário que a staff confere.",
+        "bought": "&aVocê comprou &f{amount}x {item} &apor {price} {currency}.",
+        "refunded": "&cNão deu para entregar o produto: o valor voltou para a sua conta.",
+        "refund-failed": "&cNão deu para entregar o produto nem devolver o valor. Abra um ticket com este horário que a staff resolve.",
+        "buy-cash": "&eCompre cash na nossa loja: &fhttps://loja.rede-exe.com"
+      }
+    }
+  }
+}

@@ -8,7 +8,35 @@
         "not-allowed-with-shift": "&cVocê não pode abrir este inventário usando shift.",
         "not-allowed-while-inventory-open": "&cFeche o inventário atual e tente novamente.",
         "load-failed": "&cNão foi possível abrir o baú agora. Tente novamente em instantes.",
-        "save-failed": "&cOcorreu um erro ao salvar o baú. Ele fica travado até salvar; se demorar, contate um administrador."
+        "save-failed": "&cOcorreu um erro ao salvar o baú. Ele fica travado até salvar; se demorar, contate um administrador.",
+        "line": {
+          "used": "&aVocê desbloqueou &f{lines} {lines_word} &ano seu baú do fim, que agora tem &f{rows} {rows_word}&a.",
+          "maximum": "&cVocê já tem as &f{maximum} {maximum_word} &cextras que o baú do fim comporta. A melhoria voltou para o seu inventário.",
+          "partial": "&eO seu baú do fim tem espaço para mais &f{room} {room_word}&e. A melhoria voltou para o seu inventário: agache e use de novo para usar só o que couber.",
+          "failed": "&cNão foi possível ativar a melhoria agora. Ela voltou para o seu inventário."
+        }
+      },
+      // A melhoria do baú do fim, vendida na loja e sorteada nas caixas. A linha comprada
+      // soma por cima das do grupo e não some quando o VIP vence.
+      "items": {
+        "line": {
+          "display-name": "&5Melhoria do baú do fim",
+          "name": "&5+{lines} {lines_word} no baú do fim",
+          "lore": [
+            "&7Desbloqueia &f{lines} {lines_word} &7a mais no",
+            "&7seu baú do fim &8(/ec)&7, para sempre.",
+            "",
+            "&7As linhas compradas somam por cima",
+            "&7das do seu grupo, até um baú cheio.",
+            "&7Cabem até &f{maximum} {maximum_word} &7extras.",
+            "",
+            "&eClique com o botão direito para usar."
+          ],
+          "word": {
+            "singular": "linha",
+            "plural": "linhas"
+          }
+        }
       },
       "ender-chest": {
         "title": "Ender Chest de {owner_name}",

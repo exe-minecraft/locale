@@ -226,6 +226,19 @@
             "",
             "&eClique com o botão direito para usar."
           ]
+        },
+        "reset": {
+          "display-name": "&bResetar evolução",
+          "name": "&bResetar evolução",
+          "lore": [
+            "&7Zera a evolução de todas as suas perks.",
+            "",
+            "&eVocê recebe de volta &l{percentage}%&e do que",
+            "&einvestiu para evoluir cada perk.",
+            "&7Os slots comprados continuam seus.",
+            "",
+            "&eClique com o botão direito para usar."
+          ]
         }
       },
 
@@ -260,6 +273,11 @@
         "slots-full": "Você só pode manter {slots} {slots_unit}. Desative outra antes.",
         "slots-maximum": "Você já tem o máximo de slots.",
         "slot-redeemed": "&aAgora você pode manter &f{slots} &a{slots_unit}.",
+        "reset-nothing": "&cVocê não tem nenhuma perk para resetar.",
+        "reset-done": "&aSua evolução de perks foi resetada.",
+        "reset-refunded": "&aSua evolução de perks foi resetada e você recebeu de volta &f{refund}&a.",
+        "reset-refund-failed": "&cSua evolução foi resetada, mas a devolução não passou. Abra um ticket com este horário que a staff devolve.",
+        "reset-failed": "&cNão foi possível resetar agora: suas perks continuam como estavam e o item voltou para o seu inventário.",
         "selection-trimmed": "Algumas perks foram desativadas: você mantém {slots} {slots_unit}.",
 
         "already-owned": "Você já tem {perk} neste nível ou acima.",
