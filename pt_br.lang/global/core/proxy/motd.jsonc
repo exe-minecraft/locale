@@ -3,10 +3,11 @@
     "core": {
       "proxy": {
         "motd": {
-          // P4Free: Temporada #1, Um Novo Começo.
+          // Como a da Hypixel: os espaços à esquerda centram cada linha nos 271 px da MOTD na lista do
+          // cliente (305 da lista, menos 32 do ícone e 2). Texto novo recalcula os espaços.
           "highest-version": [
-            "                      &c&lEXE &fP4Free &8[&71.8.x&8]",
-            "          &c&lTEMPORADA #1 &8| &f&lUM NOVO COMEÇO"
+            "                           &4&lEXE &8[1.8.x]",
+            "          &e&lTEMPORADA #1 &7&l| &f&lUM NOVO COMEÇO"
           ],
           "lowest-version": [
             "&c&lEXE &8➠ &cdiscord.gg/exe",
