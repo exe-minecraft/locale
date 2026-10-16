@@ -1,0 +1,36 @@
+{
+  "plugins": {
+    "core": {
+      "shop": {
+        // O anúncio do cupom em destaque da loja, para a rede toda: a plataforma o manda quando um cupom passa a ser o
+        // destaque (com o título) e de 30 em 30 minutos enquanto ele valer. O texto é montado na plataforma.
+        "coupon": {
+          "title": {
+            "title": "&e&lCUPOM NOVO!",
+            "subtitle": "&b{code} &7com &a{discount} &7de desconto"
+          },
+          // {details} são as linhas que o cupom tiver (validade, mínimo, onde vale, usos); sem nenhuma, a linha some.
+          // O AQUI abre a loja.
+          "announce": [
+            "",
+            "&e&lCUPOM DE DESCONTO NA ÁREA!",
+            "",
+            "&7Use o cupom &b&l{code} &7e garanta &a{discount} de desconto &7nas suas compras.",
+            "{details}",
+            "&7Garanta o seu clicando &e&lAQUI&7.",
+            ""
+          ],
+          "details": {
+            "expires": "&7O cupom expira em &c{time}&7.",
+            "minimum": "&7Vale em compras a partir de &f{minimum}&7.",
+            "categories": "&7Vale em: &f{categories}&7.",
+            "uses-left": {
+              "one": "&7Resta só &e{uses} &7uso!",
+              "other": "&7Restam só &e{uses} &7usos!"
+            }
+          }
+        }
+      }
+    }
+  }
+}
