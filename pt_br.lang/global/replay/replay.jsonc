@@ -4,27 +4,27 @@
       "commands": {
         "replay": {
           "record": {
-            "already-recording": "<red>Você já está gravando um replay!</red>",
+            "already-recording": "&cVocê já está gravando um replay!",
             "preparing": {
-              "header": "<yellow>=== Preparando Gravação ===</yellow>",
-              "name": "<gray>* Nome: </gray><white>{name}</white>",
-              "radius": "<gray>* Raio: </gray><white>{radius} chunks</white>",
-              "max-duration": "<gray>* Duração máxima: </gray><white>{duration}</white>",
-              "loading": "<aqua>Carregando mapa... A gravação iniciará automaticamente.</aqua>",
-              "stop-hint": "<yellow>Use /replay stop para parar a gravação.</yellow>"
+              "header": "&ePreparando a gravação:",
+              "name": "&8▸ &7Nome: &f{name}",
+              "radius": "&8▸ &7Raio: &f{radius} chunks",
+              "max-duration": "&8▸ &7Duração máxima: &f{duration}",
+              "loading": "&bCarregando o mapa. A gravação começa sozinha.",
+              "stop-hint": "&7Use &f/replay stop&7 para parar a gravação."
             },
-            "error": "<red>Não foi possível concluir. Tente novamente.</red>",
+            "error": "&cNão foi possível concluir. Tente novamente.",
             "description": "Inicia uma gravação na sua posição."
           },
           "stop": {
             "finished": {
-              "header": "<green>=== Gravação Finalizada ===</green>",
-              "name": "<gray>* Nome: </gray><white>{name}</white>",
-              "duration": "<gray>* Duração: </gray><white>{duration}</white>",
-              "play-hint": "<yellow>Use /replay play {name} para assistir.</yellow>"
+              "header": "&aGravação finalizada:",
+              "name": "&8▸ &7Nome: &f{name}",
+              "duration": "&8▸ &7Duração: &f{duration}",
+              "play-hint": "&7Use &f/replay play {name}&7 para assistir."
             },
-            "error": "<red>Não foi possível concluir. Tente novamente.</red>",
-            "not-active": "<red>Você não está gravando nenhum replay.</red>",
+            "error": "&cNão foi possível concluir. Tente novamente.",
+            "not-active": "&cVocê não está gravando nenhum replay.",
             "description": "Encerra sua gravação."
           },
           "play": {
@@ -34,7 +34,7 @@
                 "description": "ID da gravação"
               }
             },
-            "not-found": "<red>Replay não encontrado: {name}</red>",
+            "not-found": "&cReplay não encontrado: &f{name}",
             "description": "Assiste a um replay pelo ID."
           },
           "list": {
@@ -44,9 +44,9 @@
                 "description": "Número da página"
               }
             },
-            "empty": "<yellow>Nenhum replay encontrado.</yellow>",
-            "header": "<gold>=== Replays (Página {page}) ===</gold>",
-            "item": "<gray>* </gray><white>{name}</white><gray> - </gray><aqua>{duration}</aqua>",
+            "empty": "&eNenhum replay encontrado.",
+            "header": "&eReplays &7(Página {page}):",
+            "item": "&8▸ &f{name} &7- &b{duration}",
             "description": "Lista as gravações disponíveis."
           },
           "delete": {
@@ -56,8 +56,8 @@
                 "description": "ID da gravação"
               }
             },
-            "success": "<green>Replay '{name}' deletado com sucesso!</green>",
-            "not-found": "<red>Replay não encontrado: {name}</red>",
+            "success": "&aReplay &f{name}&a deletado com sucesso!",
+            "not-found": "&cReplay não encontrado: &f{name}",
             "description": "Exclui uma gravação."
           },
           "info": {
@@ -67,13 +67,13 @@
                 "description": "ID da gravação"
               }
             },
-            "header": "<gold>=== Informações do Replay ===</gold>",
-            "name": "<gray>* Nome: </gray><white>{name}</white>",
-            "duration": "<gray>* Duração: </gray><white>{duration}</white>",
-            "world": "<gray>* Mundo: </gray><white>{world}</white>",
-            "center": "<gray>* Centro: </gray><white>{center}</white>",
-            "radius": "<gray>* Raio: </gray><white>{radius} chunks</white>",
-            "created-at": "<gray>* Criado em: </gray><white>{date}</white>",
+            "header": "&eInformações do replay:",
+            "name": "&8▸ &7Nome: &f{name}",
+            "duration": "&8▸ &7Duração: &f{duration}",
+            "world": "&8▸ &7Mundo: &f{world}",
+            "center": "&8▸ &7Centro: &f{center}",
+            "radius": "&8▸ &7Raio: &f{radius} chunks",
+            "created-at": "&8▸ &7Criado em: &f{date}",
             "description": "Exibe os dados de uma gravação."
           },
           "usage": {
@@ -119,11 +119,11 @@
               "description": "Jogador da gravação ou reset para soltar a câmera"
             }
           },
-          "not-watching": "<red>Você não está assistindo um replay.</red>",
-          "reset": "<green>Câmera devolvida.</green>",
-          "not-found": "<red>Jogador não encontrado na gravação. Presentes: </red><white>{players}</white>",
-          "not-in-scene": "<red>Esse jogador ainda não está em cena neste tick.</red>",
-          "locked": "<green>Câmera presa em </green><white>{name}</white><green>. F5 alterna a perspectiva; após um seek, rode o comando de novo. /rcam reset solta.</green>",
+          "not-watching": "&cVocê não está assistindo um replay.",
+          "reset": "&aCâmera devolvida.",
+          "not-found": "&cJogador não encontrado na gravação. Presentes: &f{players}",
+          "not-in-scene": "&cEsse jogador ainda não está em cena neste tick.",
+          "locked": "&aCâmera presa em &f{name}&a. F5 alterna a perspectiva; após um seek, rode o comando de novo. /rcam reset solta.",
           "description": "Prende ou solta a câmera em um jogador gravado."
         }
       },
@@ -141,70 +141,70 @@
       },
       "items": {
         "speed": {
-          "name": "<yellow>Velocidade: <white>{speed}</white></yellow>",
+          "name": "&eVelocidade: &f{speed}",
           "lore": [
             "",
-            "<gray>Controla a velocidade do replay.</gray>",
+            "&7Controla a velocidade do replay.",
             "",
-            "<dark_gray>▸ </dark_gray><white>Velocidades: </white><aqua>0.25x, 0.5x, 1x, 2x, 4x</aqua>",
+            "&8▸ &7Velocidades: &b0.25x, 0.5x, 1x, 2x, 4x",
             "",
-            "<yellow>Clique para alterar.</yellow>"
+            "&eClique para alterar."
           ]
         },
         "pause": {
-          "name": "<gray>Pausar</gray>",
+          "name": "&7Pausar",
           "lore": [
             "",
-            "<gray>Pausa a reprodução do replay.</gray>",
+            "&7Pausa a reprodução do replay.",
             "",
-            "<yellow>Clique para pausar.</yellow>"
+            "&eClique para pausar."
           ]
         },
         "play": {
-          "name": "<green>Reproduzir</green>",
+          "name": "&aReproduzir",
           "lore": [
             "",
-            "<gray>Continua a reprodução do replay.</gray>",
+            "&7Continua a reprodução do replay.",
             "",
-            "<yellow>Clique para continuar.</yellow>"
+            "&eClique para continuar."
           ]
         },
         "seek-backward": {
-          "name": "<red>Retroceder 10s</red>",
+          "name": "&cRetroceder 10s",
           "lore": [
             "",
-            "<gray>Retrocede 10 segundos no replay.</gray>",
+            "&7Retrocede 10 segundos no replay.",
             "",
-            "<yellow>Clique para retroceder.</yellow>"
+            "&eClique para retroceder."
           ]
         },
         "seek-forward": {
-          "name": "<aqua>Avançar 10s</aqua>",
+          "name": "&bAvançar 10s",
           "lore": [
             "",
-            "<gray>Avança 10 segundos no replay.</gray>",
+            "&7Avança 10 segundos no replay.",
             "",
-            "<yellow>Clique para avançar.</yellow>"
+            "&eClique para avançar."
           ]
         },
         "player-list": {
-          "name": "<light_purple> Lista de Jogadores</light_purple>",
+          "name": "&d Lista de Jogadores",
           "lore": [
             "",
-            "<gray>Abre a lista de jogadores do replay.</gray>",
-            "<gray>Você pode seguir um jogador específico.</gray>",
+            "&7Abre a lista de jogadores do replay.",
+            "&7Você pode seguir um jogador específico.",
             "",
-            "<yellow>Clique para abrir.</yellow>"
+            "&eClique para abrir."
           ]
         },
         "exit": {
-          "name": "<red> Sair do Replay</red>",
+          "name": "&c Sair do Replay",
           "lore": [
             "",
-            "<gray>Encerra o replay e volta</gray>",
-            "<gray>para o servidor anterior.</gray>",
+            "&7Encerra o replay e volta",
+            "&7para o servidor anterior.",
             "",
-            "<yellow>Clique para sair.</yellow>"
+            "&eClique para sair."
           ]
         }
       },
@@ -213,23 +213,23 @@
           "title": "Jogadores no Replay",
           "items": {
             "player": {
-              "name": "<yellow>{player_name}</yellow>",
+              "name": "&e{player_name}",
               "lore": [
                 "",
-                "<dark_gray>▸ </dark_gray><white>Vida: </white><red>❤ {player_health}</red>",
+                "&8▸ &fVida: &c❤ {player_health}",
                 "",
-                "<green>Clique para seguir este jogador.</green>"
+                "&aClique para seguir este jogador."
               ],
               "following": {
-                "name": "<green>✓ {player_name}</green>",
+                "name": "&a▸ {player_name}",
                 "lore": [
                   "",
-                  "<dark_gray>▸ </dark_gray><white>Vida: </white><red>❤ {player_health}</red>",
+                  "&8▸ &fVida: &c❤ {player_health}",
                   "",
-                  "<aqua>Você está seguindo este jogador.</aqua>",
+                  "&bVocê está seguindo este jogador.",
                   "",
-                  "<yellow>Clique para parar de seguir.</yellow>",
-                  "<gray>Ou pressione </gray><white>SHIFT</white><gray> para sair.</gray>"
+                  "&eClique para parar de seguir.",
+                  "&7Ou pressione &fSHIFT&7 para sair."
                 ]
               }
             }
@@ -238,46 +238,46 @@
       },
       "messages": {
         "connection": {
-          "initializing": "<gray>Conectando ao servidor de replay...</gray>",
-          "start-error": "<red>Erro ao iniciar replay: Tente novamente.</red>",
+          "initializing": "&7Conectando ao servidor de replay...",
+          "start-error": "&cErro ao iniciar replay: Tente novamente.",
           "errors": {
-            "in-connection-delay": "<red>Aguarde um pouco antes de entrar em outro replay.</red>",
-            "already-have-request": "<yellow>Você já tem uma solicitação de replay pendente.</yellow>",
-            "replay-not-found": "<red>Replay não encontrado: {replay_name}</red>",
-            "not-available-apps": "<red>Nenhum servidor de replay disponível no momento.</red>",
-            "internal": "<red>Erro interno ao conectar ao replay.</red>"
+            "in-connection-delay": "&cAguarde um pouco antes de entrar em outro replay.",
+            "already-have-request": "&eVocê já tem uma solicitação de replay pendente.",
+            "replay-not-found": "&cReplay não encontrado: &f{replay_name}",
+            "not-available-apps": "&cNenhum servidor de replay disponível no momento.",
+            "internal": "&cErro interno ao conectar ao replay."
           }
         },
         "playback": {
-          "stopped": "<yellow>Replay encerrado.</yellow>",
-          "paused": "<yellow>Pausado</yellow>",
-          "resumed": "<green>Reproduzindo</green>",
-          "speed-changed": "<aqua>Velocidade: {speed}x</aqua>",
-          "seek-forward": "<aqua>{time} / {total}</aqua>",
-          "seek-backward": "<aqua>{time} / {total}</aqua>",
-          "finished": "<gold>Replay finalizado! Use o item de sair para voltar.</gold>",
-          "following": "<green>Seguindo jogador...</green>",
-          "free-mode": "<yellow>Modo livre</yellow>",
+          "stopped": "&eReplay encerrado.",
+          "paused": "&ePausado",
+          "resumed": "&aReproduzindo",
+          "speed-changed": "&bVelocidade: {speed}x",
+          "seek-forward": "&b{time} / {total}",
+          "seek-backward": "&b{time} / {total}",
+          "finished": "&6Replay finalizado! Use o item de sair para voltar.",
+          "following": "&aSeguindo jogador...",
+          "free-mode": "&eModo livre",
           "welcome": [
             "",
-            "<gold><bold>REPLAY</bold></gold><dark_gray>  <white>{replay_name}</white><dark_gray> , <gray>{replay_duration}",
+            "&6&lREPLAY &8 &f{replay_name} &8, &7{replay_duration}",
             "",
-            "<gray>Você está assistindo a uma gravação. Nada aqui é ao vivo:</gray>",
-            "<gray>os jogadores, os blocos e os itens são o que foram naquele momento.</gray>",
+            "&7Você está assistindo a uma gravação. Nada aqui é ao vivo:",
+            "&7os jogadores, os blocos e os itens são o que foram naquele momento.",
             "",
-            "<white>Controles</white>",
-            "<dark_gray>▸ </dark_gray><yellow>Hotbar</yellow><gray> : velocidade, voltar 10s, pausar, avançar 10s,</gray>",
-            "<gray>  lista de jogadores e sair.</gray>",
-            "<dark_gray>▸ </dark_gray><yellow>SHIFT duas vezes</yellow><gray> : alterna entre </gray><white>criativo</white><gray> (voa) e </gray><white>espectador</white><gray> (atravessa blocos).</gray>",
-            "<dark_gray>▸ </dark_gray><yellow>Lista de jogadores</yellow><gray> : clique num nome para a câmera segui-lo.</gray>",
-            "<dark_gray>▸ </dark_gray><yellow>SHIFT</yellow><gray> : solta a câmera de quem você está seguindo.</gray>",
+            "&fControles",
+            "&8▸ &eHotbar&7 : velocidade, voltar 10s, pausar, avançar 10s,",
+            "&7  lista de jogadores e sair.",
+            "&8▸ &eSHIFT duas vezes&7 : alterna entre &fcriativo&7 (voa) e &fespectador&7 (atravessa blocos).",
+            "&8▸ &eLista de jogadores&7 : clique num nome para a câmera segui-lo.",
+            "&8▸ &eSHIFT&7 : solta a câmera de quem você está seguindo.",
             ""
           ],
           "welcome-staff": [
-            "<white>Staff</white>",
-            "<dark_gray>▸ </dark_gray><yellow>Clique num jogador</yellow><gray> : abre o inventário dele como estava naquele instante.</gray>",
-            "<dark_gray>▸ </dark_gray><yellow>Clique num baú</yellow><gray> : abre o conteúdo gravado dele.</gray>",
-            "<dark_gray>▸ </dark_gray><gray>Os comandos que os jogadores digitaram aparecem flutuando sobre eles.</gray>",
+            "&fStaff",
+            "&8▸ &eClique num jogador&7 : abre o inventário dele como estava naquele instante.",
+            "&8▸ &eClique num baú&7 : abre o conteúdo gravado dele.",
+            "&8▸ &7Os comandos que os jogadores digitaram aparecem flutuando sobre eles.",
             ""
           ],
           "status-paused": "Pausado",
