@@ -3,10 +3,10 @@
     "core": {
       "proxy": {
         "motd": {
-          // A do exe-bungee-core antigo.
+          // P4Free: Temporada #1, Um Novo Começo.
           "highest-version": [
-            "&c&lEXE &7- &fServidor",
-            "&eBem-vindo &7[1.8+]"
+            "&c&lEXE &8— &fP4Free &fTemporada #1 ",
+            "&e#1 &8| &fUM NOVO COMEÇO &8- &c1.8.x"
           ],
           "lowest-version": [
             "&c&lEXE &8➠ &cdiscord.gg/exe",
