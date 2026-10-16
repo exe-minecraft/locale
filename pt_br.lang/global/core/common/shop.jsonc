@@ -3,7 +3,8 @@
     "core": {
       "shop": {
         // O anúncio do cupom em destaque da loja, para a rede toda: a plataforma o manda quando um cupom passa a ser o
-        // destaque (com o título) e de 30 em 30 minutos enquanto ele valer. O texto é montado na plataforma.
+        // destaque (com o título) e, se ele tem data de fim, de 30 em 30 minutos enquanto valer. O texto é montado na
+        // plataforma.
         "coupon": {
           "title": {
             "title": "&e&lCUPOM NOVO!",
