@@ -32,6 +32,7 @@
       "failed": "&cNão foi possível consultar ou atualizar as batatadas agora.",
       "reset-done": "&aSuas batatadas foram zeradas.",
       "reset-failed": "&cNão foi possível zerar as batatadas agora. O item voltou para o seu inventário.",
+      "reset-nothing": "&cVocê não tem batatadas para zerar. O item voltou para o seu inventário.",
       "items": {
         "reset": {
           "display-name": "&6Resetar batatadas",
