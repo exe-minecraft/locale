@@ -209,6 +209,22 @@
         }
       },
       "views": {
+        "list": {
+          "title": "Gravações",
+          "items": {
+            "replay": {
+              "name": "&eReplay &f{replay_short}",
+              "lore": [
+                "",
+                "&8▸ &7Duração: &f{replay_duration}",
+                "&8▸ &7Mundo: &f{replay_world}",
+                "&8▸ &7Criado: &f{replay_date}",
+                "",
+                "&aClique para assistir."
+              ]
+            }
+          }
+        },
         "player-list": {
           "title": "Jogadores no Replay",
           "items": {
