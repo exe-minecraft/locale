@@ -134,7 +134,11 @@
             "success": "{target_name} agora é pirata."
           },
           "reload": {
-            "failed": "O pedido de reload falhou em {failed_amount} de {app_amount} app(s). Tente de novo.",
+            "failed": "O pedido de reload falhou em {failed_amount} de {app_amount} {app_unit}. Tente de novo.",
+            // O {app_unit} que acompanha o {app_amount}: 1 no singular, 0 e o resto no plural.
+            "units": {
+              "app": { "singular": "app", "plural": "apps" }
+            },
             "description": "recarregar as configs, ou o locale e os menus",
             "arguments": {
               "scope": {
@@ -144,8 +148,8 @@
             },
             "success-app": "Reload de configs solicitado para este app ({app_id}).",
             "no-server": "Este app não pertence a um server.",
-            "success-server": "Reload de configs solicitado para {app_amount} app(s) do server '{server_id}'.",
-            "success-global": "Reload de configs solicitado para {app_amount} app(s) online.",
+            "success-server": "Reload de configs solicitado para {app_amount} {app_unit} do server '{server_id}'.",
+            "success-global": "Reload de configs solicitado para {app_amount} {app_unit} online.",
             "content-requested": "Relendo o locale e os menus do GitHub...",
             "content-result": "Locale: {lang_status}. Menus: {menu_status}.",
             "content-status": {

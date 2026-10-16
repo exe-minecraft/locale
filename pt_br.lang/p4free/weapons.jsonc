@@ -3,6 +3,11 @@
     // A espada e o machado especiais do P4Free. Os dois são o mesmo sistema, e a
     // diferença entre eles vive aqui e no config.yml do módulo.
     "weapons": {
+      // As palavras que acompanham um número montado no código (o Plural do core): 1 no singular.
+      "units": {
+        "kill": { "singular": "abate", "plural": "abates" },
+        "duplicate-weapon": { "singular": "arma duplicada", "plural": "armas duplicadas" }
+      },
       "espada": {
         "item": {
           "name": "&bEspada Especial",
@@ -56,7 +61,7 @@
           "retrieved": [
             "",
             " &aVocê resgatou a espada especial!",
-            " &7Prestígio &f{prestige}&7, &f{kills}&7 abate(s).",
+            " &7Prestígio &f{prestige}&7, &f{kills}&7 {kills_unit}.",
             " &eShift + botão direito com ela na mão abre a bancada.",
             ""
           ]
@@ -69,7 +74,7 @@
           "retrieved": [
             "",
             " &aVocê resgatou o machado especial!",
-            " &7Prestígio &f{prestige}&7, &f{kills}&7 abate(s).",
+            " &7Prestígio &f{prestige}&7, &f{kills}&7 {kills_unit}.",
             " &eShift + botão direito com ele na mão abre a bancada.",
             ""
           ]
@@ -77,7 +82,7 @@
       },
       "messages": {
         "profile-loading": "Seu perfil ainda está carregando. Tente de novo em instantes.",
-        "duplicates-removed": "Removemos {amount} arma(s) duplicada(s) do seu inventário.",
+        "duplicates-removed": "Removemos {amount} {amount_unit} do seu inventário.",
         "skull-cracker": "&6Crítico! &eQuebra-Crânio ativado.",
         "armor-breaker": {
           "attacker": "&4Quebra-Armadura ativado.",

@@ -4,6 +4,12 @@
     // ligadas nos slots que tem. A descrição de cada uma vive na chave dela: é o único
     // texto que muda entre elas, e por isso é o único que não está no menu.
     "perks": {
+      // As palavras que acompanham um número montado no código (o Plural do core): 1 no singular.
+      "units": {
+        "enemy": { "singular": "inimigo", "plural": "inimigos" },
+        "active-perk": { "singular": "perk ativa", "plural": "perks ativas" },
+        "given-item": { "singular": "item entregue", "plural": "itens entregues" }
+      },
       "types": {
         "attack": {
           "name": "Ataque",
@@ -235,7 +241,7 @@
         "speed-activated": "&aVelocidade ativada por &f{seconds}s&a.",
 
         "suppressed": "Suas perks foram desligadas por um inimigo.",
-        "suppression-activated": "&aVocê desligou as perks de &f{amount} &ainimigo(s).",
+        "suppression-activated": "&aVocê desligou as perks de &f{amount} &a{amount_unit}.",
         "suppression-empty": "Nenhum inimigo no alcance.",
         "suppression-ended": "&aSuas perks voltaram.",
 
@@ -251,10 +257,10 @@
 
         "selected": "&a{perk} &fativada.",
         "deselected": "{perk} desativada.",
-        "slots-full": "Você só pode manter {slots} perk(s) ativa(s). Desative outra antes.",
+        "slots-full": "Você só pode manter {slots} {slots_unit}. Desative outra antes.",
         "slots-maximum": "Você já tem o máximo de slots.",
-        "slot-redeemed": "&aAgora você pode manter &f{slots} &aperk(s) ativa(s).",
-        "selection-trimmed": "Algumas perks foram desativadas: você mantém {slots} ativa(s).",
+        "slot-redeemed": "&aAgora você pode manter &f{slots} &a{slots_unit}.",
+        "selection-trimmed": "Algumas perks foram desativadas: você mantém {slots} {slots_unit}.",
 
         "already-owned": "Você já tem {perk} neste nível ou acima.",
         "level-invalid": "Esta perk vai até o nível {max_level}.",
@@ -290,7 +296,7 @@
           "reset": "As perks de {name} foram zeradas.",
           "cooldowns-cleared": "Os cooldowns de {name} foram limpos.",
           "target-inventory-full": "O inventário de {name} está cheio.",
-          "item-given": "{amount} item(ns) entregue(s) a {name}."
+          "item-given": "{amount} {amount_unit} a {name}."
         }
       }
     }

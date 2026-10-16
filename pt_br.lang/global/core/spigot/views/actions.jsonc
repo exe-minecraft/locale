@@ -9,13 +9,17 @@
             "maintenance": {},
             "execute-action": {
               "confirmation": {
-                "query": "Tem certeza que deseja {action_name} {action_apps_size} servidor(es)?"
+                "query": "Tem certeza que deseja {action_name} {action_apps_size} {action_apps_unit}?"
               },
               "select-time": {
-                "query": "Qual o tempo que você deseja para {action_name} o(s) {action_apps_size} servidor(es)?",
+                "query": "Qual o tempo que você deseja para {action_name} {action_apps_size} {action_apps_unit}?",
                 "invalid-time": "Digite um tempo em segundos de 1s a 120s!"
               },
-              "success": "Sua solicitação de {action_name} {action_apps_size} servidor(es) foi enviada com sucesso!"
+              "success": "Sua solicitação de {action_name} {action_apps_size} {action_apps_unit} foi enviada com sucesso!",
+              // O {action_apps_unit} das três frases: 1 no singular, 0 e o resto no plural.
+              "units": {
+                "server": { "singular": "servidor", "plural": "servidores" }
+              }
             }
           },
           "app-nodes-action": {

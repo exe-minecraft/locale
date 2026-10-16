@@ -6,7 +6,8 @@
       },
       // As palavras que acompanham um número montado no código (o Plural do core): 1 no singular.
       "units": {
-        "member": { "singular": "membro", "plural": "membros" }
+        "member": { "singular": "membro", "plural": "membros" },
+        "pending-invite": { "singular": "convite de clã parado", "plural": "convites de clã parados" }
       },
       // O bloco do exe-scoreboard em Documents: tag sem cor e nome juntos, membros logo abaixo.
       // Com a tag sem cor, até o nome de 16 letras cabe na linha do protocolo 1.8.
@@ -646,7 +647,7 @@
             "&cO clã &7[{clan_colored_tag}&7] {clan_name}&c foi desfeito.",
             ""
           ],
-          "pending-invites": " &eVocê tem {invites_size} convite(s) de clã parado(s). Clique &f&lAQUI&e para ver.",
+          "pending-invites": " &eVocê tem {invites_size} {invites_unit}. Clique &f&lAQUI&e para ver.",
           "pending-invites-hover": "&e/clan convites"
         },
         "views": {
