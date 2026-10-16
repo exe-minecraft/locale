@@ -56,6 +56,13 @@
               "",
               "&f{discord_invite_url}"
             ],
+            "name-case-mismatch": [
+              "&c&lEXE&r",
+              "",
+              "&cEste nick está registrado como &f{name}&c.",
+              "&cEntre com o nick escrito exatamente assim,",
+              "&crespeitando as letras maiúsculas e minúsculas."
+            ],
             "name-pattern-invalid": [
               "&c&lEXE&r",
               "",
