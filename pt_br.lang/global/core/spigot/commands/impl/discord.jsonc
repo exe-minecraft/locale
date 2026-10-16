@@ -3,43 +3,19 @@
     "core": {
       "commands": {
         "discord": {
-          "book": {
-            "title": "Discord",
-            "author": "EXE",
-            "pages": {
-              "0": [
-                "&9&lVincular Discord",
-                "&8discord.gg/exe",
-                "",
-                "&0Copie o código abaixo",
-                "&0e cole numa sala",
-                "&0qualquer do nosso",
-                "&0discord.",
-                "",
-                "&8⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊",
-                "&3&l{discord_synchronization_code}",
-                "  &9Clique no código",
-                "&8⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊",
-                "",
-                "&0Vale por 10 minutos."
-              ],
-              "1": [
-                "&9&lOutros jeitos",
-                "",
-                "&0Pelo site, num clique",
-                "&0só, sem código:",
-                "&3rede-exe.com",
-                "&0em Perfil.",
-                "",
-                "&0No discord, o código",
-                "&0também vale na DM",
-                "&0do bot, onde só",
-                "&0você vê."
-              ]
-            }
-          },
-          "copy-code": "&bCódigo: &f{discord_synchronization_code}&b. Abra o chat, clique no código e use Ctrl+A e Ctrl+C para copiar.",
-          "book-fallback": "&eUse /discord codigo para ver e copiar o código no chat."
+          "message": [
+            "",
+            "  &9&lVINCULAR DISCORD",
+            "  &fSeu código: &9&l{discord_synchronization_code}",
+            "  &7No Discord, use &f/conta vincular &7e cole o código.",
+            "  &7Para copiar: clique no código, &fCtrl+A &7e &fCtrl+C&7.",
+            "  &7O código vale por 10 minutos e é só seu.",
+            "  &7Ainda não está no Discord? &9&n{discord_invite}",
+            ""
+          ],
+          "code-hover": "&7Coloca o código no chat para copiar. Não envie: copie e apague.",
+          "invite": "discord.gg/exe",
+          "invite-hover": "&7Abre o convite do Discord da rede."
         }
       }
     }
