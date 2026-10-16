@@ -1,8 +1,14 @@
 {
   "plugins": {
     "batatadas": {
-      "broadcast": "&6{player} batatou! &7Total: {amount} batatada(s).",
-      "balance": "&e{player} tem {amount} batatada(s).",
+      "broadcast": "&6{player} batatou! &7Total: {amount} {amount_unit}.",
+      "balance": "&e{player} tem {amount} {amount_unit}.",
+      "units": {
+        "batatada": {
+          "singular": "batatada",
+          "plural": "batatadas"
+        }
+      },
       "no-permission": "&cVocê não pode alterar as batatadas.",
       "usage": {
         "self": {
