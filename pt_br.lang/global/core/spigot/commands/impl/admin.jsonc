@@ -113,7 +113,7 @@
             "already-original": "{target_name} já possui uma conta original.",
             "account-is-offline": "A conta de {target_name} não é premium (não encontrada na Mojang).",
             "already-synchronized": "Já existe uma conta sincronizada com essa original.",
-            "success": "{target_name} agora é original."
+            "success": "{target_name} agora é original. Se a conta tinha senha, o dono entra com o Minecraft original e usa o /logar uma vez; depois disso, entra direto."
           },
           "cracked": {
             "original-error": "A senha de {target_name} foi trocada, mas a conta continua original. Rode o comando de novo.",
