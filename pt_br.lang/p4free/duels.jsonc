@@ -99,7 +99,9 @@
             "&8 ▸ &fMaior combo: &f{combo}",
             "&8 ▸ &fMaçãs comidas: &f{apples}",
             "&8 ▸ &fGolpes defendidos: &f{blocked}"
-          ]
+          ],
+          // A última linha do hover do nome: o clique abre a foto do inventário dele (views.inventory), por 5 minutos.
+          "inventory": "&eClique para ver o inventário."
         }
       },
       "queue": {
@@ -712,6 +714,54 @@
           },
           "selected": "&8 ▸ &fEscolhida: {piece}",
           "saved": "&aArranjo do kit salvo. Vale a partir da próxima luta."
+        },
+        // A foto do inventário de quem lutou, aberta pelo clique no nome do resultado: só o kit da partida, no instante
+        // em que a luta acabou para ele (a morte, a saída ou o fim).
+        "inventory": {
+          // O título do inventário no 1.8 cabe em 32 caracteres: com o nick mais longo (16), este fica em 30.
+          "title": "Inventário de {player}",
+          "unavailable": "&cEsse inventário não está mais disponível.",
+          // Acrescentada à lore do que gasta (armadura, espada, arco).
+          "durability": [ "&7Durabilidade: &f{current}&7/&f{max}" ],
+          "items": {
+            "health": {
+              "name": "&cVida: &f{health} ❤",
+              "lore": [ "&7No instante em que a luta", "&7terminou para este jogador." ]
+            },
+            "effects": {
+              "name": "&dEfeitos",
+              "lore": [ "{effects}" ]
+            }
+          },
+          "effects": {
+            "line": "&8 ▸ &f{effect} {level} &7({time})",
+            "none": "&7Nenhum efeito ativo.",
+            "names": {
+              "speed": "Velocidade",
+              "slow": "Lentidão",
+              "fast-digging": "Pressa",
+              "slow-digging": "Cansaço",
+              "increase-damage": "Força",
+              "heal": "Vida instantânea",
+              "harm": "Dano instantâneo",
+              "jump": "Super pulo",
+              "confusion": "Náusea",
+              "regeneration": "Regeneração",
+              "damage-resistance": "Resistência",
+              "fire-resistance": "Resistência ao fogo",
+              "water-breathing": "Respiração aquática",
+              "invisibility": "Invisibilidade",
+              "blindness": "Cegueira",
+              "night-vision": "Visão noturna",
+              "hunger": "Fome",
+              "weakness": "Fraqueza",
+              "poison": "Veneno",
+              "wither": "Decomposição",
+              "health-boost": "Vida extra",
+              "absorption": "Absorção",
+              "saturation": "Saturação"
+            }
+          }
         }
       },
       "commands": {
@@ -745,6 +795,10 @@
           },
           "kit": {
             "description": "arrumar o kit dos duelos"
+          },
+          "inventory": {
+            "description": "ver o inventário de quem lutou (o clique no nome do resultado)",
+            "arguments": { "id": { "name": "id", "description": "O código que o clique no nome do resultado traz." } }
           },
           "arena": {
             "description": "gerenciar as arenas dos duelos",
