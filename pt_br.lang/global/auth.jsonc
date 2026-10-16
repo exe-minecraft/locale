@@ -149,6 +149,11 @@
                 " &fAcompanhe o nosso discord e fique por dentro de tudo!",
                 " &cDiscord: &fdiscord.gg/exe",
                 ""
+              ],
+              "original-hint": [
+                " &eEste nick é de uma conta original do Minecraft.",
+                " &eSe ela é sua, saia e entre de novo: você entra direto, sem senha.",
+                ""
               ]
             }
           },
