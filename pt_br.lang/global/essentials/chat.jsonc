@@ -128,7 +128,7 @@
           // /g completa o @); no local sem comando, porque o chat sem comando já é o local.
           "global": {
             "text": "&7[G]",
-            "hover": "&7Mensagem enviada no chat global, visível em todos os servidores.",
+            "hover": "&7Mensagem enviada no chat global.",
             "suggest": "/g @{sender} "
           },
           "local": {
