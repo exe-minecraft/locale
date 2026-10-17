@@ -141,10 +141,10 @@
         "slot-maximum": "Você já tem o máximo de slots de tags ({maximum}).",
         "not-enough": "Cash insuficiente: o slot custa &6✪{price}&c.",
         "currency-missing": "A compra de slots está indisponível no momento.",
-        "charge-failed": "Não foi possível cobrar agora. Se o seu cash desceu, abra um ticket com este horário que a staff confere.",
+        "charge-failed": "Não deu para confirmar a cobrança. Se o cash saiu da sua conta, ele volta sozinho.",
         "slot-bought": "Slot comprado por &6✪{price}&a: agora você equipa até {total} {total_unit} ao mesmo tempo.",
-        "refunded": "Não deu para gravar o slot: o cash voltou para a sua conta.",
-        "refund-failed": "Não deu para gravar o slot nem devolver o cash. Abra um ticket com este horário que a staff resolve."
+        "refunded": "O slot não foi comprado, e o cash voltou para a sua conta.",
+        "refund-failed": "O slot não foi comprado, e o cash ainda não voltou. Abra um ticket com este horário que a staff devolve."
       },
       "commands": {
         "tag": {

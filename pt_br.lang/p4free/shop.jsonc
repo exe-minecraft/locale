@@ -133,10 +133,10 @@
         "unavailable": "&cEste produto está indisponível no momento.",
         "inventory-full": "&cEsvazie um espaço no inventário para receber este produto.",
         "not-enough": "&cSaldo insuficiente: o produto custa {price} {currency}.",
-        "charge-failed": "&cNão foi possível cobrar agora. Se o seu saldo desceu, abra um ticket com este horário que a staff confere.",
+        "charge-failed": "&cNão deu para confirmar a cobrança e nada foi entregue. Se o valor saiu da sua conta, ele volta sozinho.",
         "bought": "&aVocê comprou &f{amount}x {item} &apor {price} {currency}.",
-        "refunded": "&cNão deu para entregar o produto: o valor voltou para a sua conta.",
-        "refund-failed": "&cNão deu para entregar o produto nem devolver o valor. Abra um ticket com este horário que a staff resolve.",
+        "refunded": "&cA compra não passou, e o valor voltou para a sua conta.",
+        "refund-failed": "&cA compra não passou, e o valor ainda não voltou. Abra um ticket com este horário que a staff devolve.",
         "buy-cash": "&eCompre cash na nossa loja: &fhttps://loja.rede-exe.com"
       }
     }
