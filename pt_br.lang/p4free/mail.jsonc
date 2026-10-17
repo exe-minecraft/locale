@@ -30,27 +30,29 @@
       },
       "reasons": {
         "inventory-full": "Inventário cheio",
-        "stash-entry": "Entrada no camarote",
-        "stash-return": "Saída do camarote",
-        "invsee": "Devolvido pela staff",
+        "stash-entry": "Entrada num evento",
+        "stash-return": "Volta do inventário guardado",
+        "invsee": "Movido pelo /invsee",
         "mystery-box": "Caixa misteriosa",
         "mystery-box-refund": "Devolução da caixa misteriosa",
         "check-refund": "Devolução de cheque",
         "check-change": "Troco de cheque",
         "item-refund": "Devolução de item",
-        "duel-grid": "Fim do duelo",
+        "duel-grid": "Grade de criação do duelo",
         "virtual-chest-shrink": "Baú virtual reduzido",
         "collect-leftover": "Sobra de uma coleta",
         "staff": "Enviado pela staff"
       },
       "messages": {
         "arrived": "&7Chegou uma encomenda ao seu correio ({reason}). Use &f/correio&7.",
+        "arrived-in-stash": "&7Chegou uma encomenda ao seu correio ({reason}).",
         "received": {
           "title": "&6&lCORREIO",
           "subtitle": "&fVocê recebeu itens no correio!"
         },
         "reminder": "&7Você tem &f{count} {count_unit} &7por coletar. Use &f/correio&7.",
         "inventory-full": "&cLibere espaço no inventário para coletar este correio.",
+        "claim-in-stash": "&cO correio só pode ser coletado fora de eventos.",
         "already-claimed": "&cEste correio já foi coletado.",
         "claimed": "&aVocê coletou os itens do correio.",
         "send": {
