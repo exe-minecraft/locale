@@ -15,7 +15,8 @@
           ],
           "code-hover": "&7Coloca o código no chat para copiar. Não envie: copie e apague.",
           "invite": "discord.rede-exe.com",
-          "invite-hover": "&7Abre o convite do Discord da rede."
+          "invite-hover": "&7Abre o convite do Discord da rede.",
+          "already-linked": "Sua conta já está vinculada a um Discord. Para trocar, use /conta desvincular no Discord vinculado."
         }
       }
     }

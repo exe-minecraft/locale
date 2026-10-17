@@ -27,7 +27,8 @@
             },
             "invalid-duration": "Duração inválida. Use por exemplo 7d, 1h30m ou permanent.",
             "error": "Não foi possível aplicar a punição.",
-            "success": "{target_name} foi banido com sucesso."
+            "success": "{target_name} foi banido com sucesso.",
+            "already-punished": "{target_name} já está banido por um prazo igual ou maior. Para estender, use um tempo maior."
           },
           "mute": {
             "description": "silenciar um jogador manualmente",
@@ -47,7 +48,8 @@
             },
             "invalid-duration": "Duração inválida. Use por exemplo 7d, 1h30m ou permanent.",
             "error": "Não foi possível aplicar a punição.",
-            "success": "{target_name} foi silenciado com sucesso."
+            "success": "{target_name} foi silenciado com sucesso.",
+            "already-punished": "{target_name} já está silenciado por um prazo igual ou maior. Para estender, use um tempo maior."
           },
           "ip-ban": {
             "description": "banir o IP de um jogador manualmente",
@@ -67,7 +69,8 @@
             },
             "invalid-duration": "Duração inválida. Use por exemplo 7d, 1h30m ou permanent.",
             "error": "Não foi possível aplicar a punição.",
-            "success": "{target_name} teve o IP banido com sucesso."
+            "success": "{target_name} teve o IP banido com sucesso.",
+            "already-punished": "O IP de {target_name} já está banido por um prazo igual ou maior. Para estender, use um tempo maior."
           },
           "cuboid": {
             "description": "selecionar dois cantos e copiar o cuboide",

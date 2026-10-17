@@ -31,7 +31,9 @@
           "app-not-found": "Não foi possível encontrar nenhum servidor com esse id!",
           "app-proxy": "Ops, a aplicação informada é do tipo Proxy.",
           "app-offline": "Ops, parece que esse servidor está offline.",
-          "success": "Conectando-se ao servidor \"{app_id}\"."
+          "success": "Conectando-se ao servidor \"{app_id}\".",
+          "already-connected": "Você já está em \"{app_id}\".",
+          "already-connected-target": "{target_name} já está em \"{app_id}\"."
         },
         "profile": {
           "message": {

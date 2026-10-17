@@ -27,7 +27,8 @@
               }
             },
             "need-item-in-hand": "Você precisa ter um item em sua mão!",
-            "success": "Tag nbt removida com sucesso."
+            "success": "Tag nbt removida com sucesso.",
+            "not-found": "O item da sua mão não tem a tag nbt \"{nbt_key}\"."
           },
           "need-item-in-hand": "Você precisa ter um item em sua mão!",
           "item-data-empty": "Este item não possui nenhum NBT.",
