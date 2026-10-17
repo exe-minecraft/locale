@@ -40,18 +40,24 @@
             }
           },
           "no-reason": "Motivo não especificado",
-          "success": "{target_name} foi expulso da rede.",
+          "success": "Você expulsou o jogador {target_name} com sucesso.",
           "kick-message": [
-            "&c&lEXE&r",
+            "&c&lREDE EXE",
             "",
-            "&cVocê foi expulso do servidor.",
+            "&cVocê foi expulso do nosso servidor.",
             "",
             "&cAutor: {kick_author_name}",
             "&cMotivo: {kick_reason}",
             "",
-            "&fAlguma dúvida? Acesse o nosso Discord: &e{discord_invite_url}"
+            "&fAlguma dúvida? Acesse o nosso Discord: &ediscord.rede-exe.com"
           ],
-          "broadcast": "&c{target_name} foi expulso da rede por {kick_author_name}. &7Motivo: {kick_reason}"
+          "broadcast": [
+            " ",
+            " &7[Modo Silencioso]",
+            " &c[!] {target_name} foi punido por {kick_author_name}",
+            " &c[!] Motivo: {kick_reason}",
+            " "
+          ]
         },
         "hpunish": {
           "arguments": {
