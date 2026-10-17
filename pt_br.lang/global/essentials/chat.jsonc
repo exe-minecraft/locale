@@ -137,8 +137,7 @@
             "suggest": "{sender}, "
           },
           "sender": {
-            "hover": "&eClique para mencionar {sender}.",
-            "suggest": "/{command} {sender}, "
+            "hover": "&eClique para mencionar {sender}."
           },
           // O que aparece ao passar o mouse sobre o resto da linha. Montado no servidor de quem
           // escreveu, porque a tag e o clã só existem lá; cada lista vira um hover de várias linhas.
