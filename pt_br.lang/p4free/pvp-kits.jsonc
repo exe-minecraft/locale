@@ -24,13 +24,21 @@
           "short": "&a"
         }
       },
-      // O vale da Berserker de 5 ou 6 minutos, vendido na loja e sorteado nas caixas.
+      // O vale da Berserker de 5 ou 6 minutos, vendido na loja e sorteado nas caixas. Desde 17/10 o
+      // vendido é o da temporada (name-season e lore-season); o de dias ficou para os já entregues.
       "entitlement": {
         "display-name": "Vale da Berserker",
         "name": "&bBerserker &8({time}) &7por {days} {days_word}",
         "lore": [
           "&7Libera a poção Berserker de &f{minutes} minutos",
           "&7no /berserker por &f{days} {days_word}&7.",
+          "",
+          "&eClique com o botão direito para usar."
+        ],
+        "name-season": "&bBerserker &8({time}) &7da temporada",
+        "lore-season": [
+          "&7Libera a poção Berserker de &f{minutes} minutos",
+          "&7no /berserker até o fim da temporada.",
           "",
           "&eClique com o botão direito para usar."
         ]
@@ -78,7 +86,11 @@
         "berserker-removed": "&cAs Berserker mais longas do que o seu grupo libera foram tiradas do seu inventário.",
         "entitlement-owned": "&cVocê já tem essa Berserker no /berserker. Guarde o vale para quando acabar.",
         "entitlement-failed": "&cNão foi possível liberar a Berserker agora. O vale voltou para o seu inventário.",
-        "entitlement-used": "&aA Berserker de &f{minutes} minutos &aestá liberada no /berserker por &f{days} {days_word}&a."
+        "entitlement-used": "&aA Berserker de &f{minutes} minutos &aestá liberada no /berserker por &f{days} {days_word}&a.",
+        // {ends_at}: a data de fim da temporada, no formato de plugins.core.time.date-time-pattern.
+        "entitlement-used-season": "&aA Berserker de &f{minutes} minutos &aestá liberada no /berserker até o fim da temporada (&f{ends_at}&a).",
+        "entitlement-pending": "&aA temporada está virando: a Berserker de &f{minutes} minutos &aentra no /berserker quando a próxima abrir.",
+        "entitlement-no-season": "&cAinda não há temporada aberta. Guarde o vale para quando a primeira começar."
       },
       "menu": {
         "main": {
