@@ -54,7 +54,7 @@
           "broadcast": [
             " ",
             " &7[Modo Silencioso]",
-            " &c[!] {target_name} foi punido por {kick_author_name}",
+            " &c[!] {target_name_with_tag} &cfoi punido por {kick_author_name_with_tag}",
             " &c[!] Motivo: {kick_reason}",
             " "
           ]
