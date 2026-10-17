@@ -9,6 +9,14 @@
         "tag": { "singular": "tag", "plural": "tags" },
         "code": { "singular": "código", "plural": "códigos" }
       },
+      // As tags que os eventos dão, sem slot (EventTag): entram no chat depois das equipadas, nesta ordem, e a
+      // descrição sai ao passar o mouse. A de vencedor é de quem estava no clã quando ele venceu, até o próximo.
+      "event-tags": {
+        "gladiator": { "name": "&4[Gladiador]", "description": "&7Estava no clã que venceu o último Gladiador." },
+        "clanfight": { "name": "&c[ClanFight]", "description": "&7Estava no clã que venceu o último ClanFight." },
+        "fastglad": { "name": "&2[FastGlad]", "description": "&7Estava no clã que venceu o último FastGlad." },
+        "myth": { "name": "&5[Mito]", "description": "&7O Mito atual do Gladiador." }
+      },
       "views": {
         "tags": {
           "title": "Tags ({slots_used}/{slots_total})",

@@ -808,7 +808,7 @@
                     "&fO evento está {event_status}&f.",
                     "",
                     "&c• &fTag &4[Gladiador] &fpara o clan vencedor",
-                    "&c• &fTag &d[Mito] &fpara quem conseguir mais abates",
+                    "&c• &fTag &5[Mito] &fpara quem conseguir mais abates",
                     "",
                     "&7Participantes: &f{event_players}",
                     "&7Clans: &f{event_clans}",
