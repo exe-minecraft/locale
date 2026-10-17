@@ -125,6 +125,7 @@
             "&eLista de todos os jogadores em modo God:"
           ],
           "list-entry": "&e • {player}",
+          "list-entry-app": "&e • {player} &7({app})",
           "list-empty": "&cNão há jogadores em modo God no momento."
         },
         "fix": {
