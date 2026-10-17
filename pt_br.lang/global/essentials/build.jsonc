@@ -4,10 +4,10 @@
       "build": {
         "usage": {
           "toggle": { "syntax": "", "description": "ativar ou desativar a construção" },
-          "other": { "syntax": "<jogador>", "description": "alternar a construção de outro staff" },
+          "other": { "syntax": "<jogador>", "description": "liberar ou tirar a construção de um jogador por 30 minutos" },
           "list": { "syntax": "list", "description": "ver quem está construindo" }
         },
-        "enabled": "&aModo construção ativado!",
+        "enabled": "&aModo construção ativado por {minutes} minutos!",
         "disabled": "&cModo construção desativado!",
         "expired": [
           "&e ",
@@ -15,7 +15,7 @@
           "&c "
         ],
         "world-changed": "&7Construção desativada ao mudar de mundo.",
-        "enabled-other": "&aVocê ativou o modo construção para {player}!",
+        "enabled-other": "&aVocê liberou o modo construção para {player} por {minutes} minutos!",
         "disabled-other": "&aVocê desativou o modo construção para {player}!",
         "list": [
           "",
@@ -26,7 +26,6 @@
         ],
         "list-empty": "&cNão há jogadores no modo construção no momento.",
         "not-online": "&cJogador não encontrado!",
-        "target-group": "&cO jogador precisa ser Administrador ou superior para construir.",
         "saving": "&cAguarde a conclusão do salvamento desse jogador.",
         "protected": "&cConstrução protegida. A equipe precisa ativar &f/build&c para editar."
       }
