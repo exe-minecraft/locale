@@ -89,7 +89,7 @@
         // O resultado vai a todos no P4Free local. {winners} e {losers} viram os nomes, cada um com
         // as estatísticas da luta no hover.
         "result": {
-          "duel": "&6{winners} &a&lvenceu &f{losers} &f({format}), com &c{health} ❤&f.",
+          "duel": "&6{winners} &a&lVENCEU &f{losers} &f({format}), com &c{health} ❤&f.",
           "team": "&a&lVitória &fde &6{winners} &f({format}) contra &f{losers}&f.",
           "draw": "&7A luta terminou empatada &8({format})&7.",
           "elo-won": "&a+{amount} {points} &8(agora {elo})",
