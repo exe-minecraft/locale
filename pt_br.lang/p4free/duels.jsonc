@@ -48,6 +48,7 @@
           "no-arena": "&cNenhuma arena de duelo está ativa.",
           "no-free-arena": "&cTodas as arenas estão ocupadas agora.",
           "unavailable": "&cOs duelos estão indisponíveis agora.",
+          "queue-closed": "&cA staff fechou as filas do x1. Aguarde a reabertura.",
           "loading": "&cSeus dados de duelo ainda estão carregando.",
           "stash-failed": "&cNão deu para guardar seus itens agora. Nada foi tirado de você.",
           "match-ended": "&cEssa luta já acabou.",
@@ -85,7 +86,7 @@
         // Só na ranqueada, para o servidor inteiro: a cada 5 vitórias seguidas, e a quebra de uma de 10 ou mais.
         "streak": "&6{player} &7chegou a &e{streak} vitórias seguidas &7na ranqueada.",
         "streak-broken": "&7A sequência de &e{streak} vitórias &7de &6{player} &7acabou.",
-        // O resultado vai aos participantes e ao camarote da luta. {winners} e {losers} viram os nomes, cada um com
+        // O resultado vai a todos no P4Free local. {winners} e {losers} viram os nomes, cada um com
         // as estatísticas da luta no hover.
         "result": {
           "duel": "&6{winners} &7venceu &f{losers} &8({format})&7, com &c{health} ❤&7.",
@@ -105,6 +106,8 @@
         }
       },
       "queue": {
+        "opened": "&aAs filas 1v1 e 2v2 do x1 foram abertas.",
+        "closed": "&cAs filas 1v1 e 2v2 do x1 foram fechadas.",
         "joined": "&aVocê entrou na fila: &f{mode}&a.",
         "already": "&cVocê já está nessa fila.",
         "left": "&7Você saiu da fila.",
@@ -782,6 +785,12 @@
           "queue": {
             "description": "entrar na fila ranqueada",
             "arguments": { "mode": { "name": "1v1|2v2", "description": "A fila: 1v1, ou 2v2 (sozinho ou com a party de 2)." } }
+          },
+          "close": {
+            "description": "fechar as filas 1v1 e 2v2 do x1"
+          },
+          "open": {
+            "description": "abrir as filas 1v1 e 2v2 do x1"
           },
           "leave": {
             "description": "sair da fila"
