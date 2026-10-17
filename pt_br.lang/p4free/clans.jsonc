@@ -610,6 +610,54 @@
               ]
             }
           },
+          // O /clan resetar (17/10): zera o clã inteiro (o dono escolheu também a autorização e o boletim), ou apaga o
+          // que a tag de um clã desfeito guarda; "todos" faz os dois em tudo. Pede confirmação.
+          "reset": {
+            "description": "zerar um clã, ou todos (pede confirmação)",
+            "arguments": {
+              "target": {
+                "name": "tag|todos",
+                "description": "Tag do clã que você quer zerar, ou todos"
+              },
+              "confirm": {
+                "name": "confirmar",
+                "description": "Escreva confirmar para zerar de verdade"
+              }
+            },
+            "errors": {
+              "invalid-tag": "&cA tag precisa ter 3 letras ou números. Para zerar todos os clãs, use /clan resetar todos.",
+              "no-confirmation": "&cNada foi zerado: use o comando sem o confirmar primeiro e confirme em seguida.",
+              "no-record": "&cNão existe clã com a tag {tag}, e ela não guarda nada de um clã desfeito."
+            },
+            "confirm-clan": [
+              "",
+              " &cIsto zera o clã {clan_label}&c: pontos, abates, mortes, vitórias, a autorização dos eventos e o boletim, sem volta. Membros e cargos ficam.",
+              " &cPara zerar, use &f/clan resetar {tag} confirmar &cnos próximos {confirm_seconds} segundos.",
+              ""
+            ],
+            "confirm-tag": [
+              "",
+              " &cNão existe clã com a tag {tag} agora. Isto apaga o que ela guarda de um clã desfeito (pontos, vitórias e autorização), e quem a criar de novo começa do zero.",
+              " &cPara apagar, use &f/clan resetar {tag} confirmar &cnos próximos {confirm_seconds} segundos.",
+              ""
+            ],
+            "confirm-all": [
+              "",
+              " &cIsto zera {total_clans} {total_clans_unit} (pontos, abates, mortes, vitórias, autorização e boletim) e apaga o que todas as tags guardam de clãs desfeitos, sem volta.",
+              " &cPara zerar, use &f/clan resetar todos confirmar &cnos próximos {confirm_seconds} segundos.",
+              ""
+            ],
+            "success-clan": "&aVocê zerou o clã {clan_label}&a.",
+            "success-tag": "&aVocê apagou o que a tag {tag} guardava.",
+            "success-all": [
+              "",
+              " &fClãs zerados: &a{reset}",
+              " &fCom falha: &c{failed}",
+              " &fTags guardadas apagadas: &a{records}",
+              ""
+            ],
+            "records-failed": "&cfalhou"
+          },
           "add": {
             "description": "pôr um jogador num clã",
             "arguments": {
