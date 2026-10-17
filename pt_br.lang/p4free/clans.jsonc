@@ -2,7 +2,10 @@
   "plugins": {
     "clans": {
       "placeholders": {
-        "tag-brackets": "&7[{clan_colored_tag}&7]"
+        "tag-brackets": "&7[{clan_colored_tag}&7]",
+        // O [TAG] Nome clicável das mensagens (o clique abre o /clan info, o mouse mostra o cartão). É a âncora do
+        // clique, então a mensagem o escreve inteiro pelo {clan_label}, e não por tag e nome soltos.
+        "clan-label": "&7[{clan_colored_tag}&7] &f{clan_name}"
       },
       // As palavras que acompanham um número montado no código (o Plural do core): 1 no singular.
       "units": {
@@ -715,6 +718,22 @@
         }
       },
       "messages": {
+        // O que aparece ao passar o mouse no clã e no nick clicáveis (recrutamento, convite, pedido, /clan info,
+        // /clan lookup), como no exe-clans.
+        "cards": {
+          "clan": [
+            "{clan_label}",
+            "",
+            "&7Membros: &f{clan_members_size}/{clan_max_members_size}",
+            "&7Vagas: &a{clan_free_slots}",
+            "&7Pontos: &f{clan_points}",
+            "&7KDR: &f{clan_kdr}",
+            "&7Eventos: {clan_authorized}",
+            "",
+            "&eClique para ver o clã."
+          ],
+          "player-hover": "&eClique para ver o perfil de {name}."
+        },
         "clan": {
           "new-leader": [
             "",
