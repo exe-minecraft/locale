@@ -106,8 +106,9 @@
               ],
               "case-format": {
                 "with-expiration": {
-                  "with-next": "{punishment_category_case_color}❒ &f{punishment_category_case_index}ª ocorrência em diante: &7{punishment_category_case_type_name} por {punishment_category_case_duration} {punishment_category_case_time}",
-                  "without-next": "{punishment_category_case_color}❒ &f{punishment_category_case_index}ª ocorrência: &7{punishment_category_case_type_name} por {punishment_category_case_duration} {punishment_category_case_time}"
+                  // O último degrau é o que se repete (getCase limita ao tamanho da escada): é ele o "em diante".
+                  "with-next": "{punishment_category_case_color}❒ &f{punishment_category_case_index}ª ocorrência: &7{punishment_category_case_type_name} por {punishment_category_case_duration} {punishment_category_case_time}",
+                  "without-next": "{punishment_category_case_color}❒ &f{punishment_category_case_index}ª ocorrência em diante: &7{punishment_category_case_type_name} por {punishment_category_case_duration} {punishment_category_case_time}"
                 },
                 "without-expiration": "{punishment_category_case_color}❒ &f{punishment_category_case_index}ª ocorrência: &7{punishment_category_case_type_name} permanente"
               }

@@ -16,185 +16,99 @@
             "name": "&cbanimento por ip"
           }
         },
+        // As categorias do /punir, uma por regra do servidor. O tipo e a duração de cada uma não
+        // vivem aqui: estão no catálogo da plataforma (docs/deploy/punir-catalogo-20261017 no monorepo).
         "categories": {
-          "abuse-bugs": {
-            "name": "Abuso de Bugs",
+          "chat-disorder": {
+            "name": "Desordem no chat",
             "description": [
-              "&7Aproveitar-se de qualquer",
-              "&7maneira de um erro em nossos",
-              "&7sistemas para benefício próprio ou ter",
-              "&7conhecimento de um erro e não reportá-lo"
+              "&7Mensagens que atrapalham o",
+              "&7desenvolvimento do bate-papo",
+              "&7dentro do servidor."
             ]
           },
-          "account-hacking": {
-            "name": "Invasão de contas",
+          "staff-or-server-offense": {
+            "name": "Ofensa à equipe/servidor",
             "description": [
-              "&7Invadir contas de outros jogadores",
-              "&7Utilizando qualquer metodo"
+              "&7Qualquer desrespeito com a",
+              "&7equipe e/ou com o servidor."
             ]
           },
-          "anti-game": {
-            "name": "Anti Jogo",
+          "discrimination": {
+            "name": "Atitude de discriminação",
             "description": [
-              "&7Atitudes que podem prejudicar",
-              "&7a jogabilidade de outros jogadores",
-              "&7dentro de nossos servidores."
-            ]
-          },
-          "blacklist": {
-            "name": "Blacklist",
-            "description": [
-              "&7Este sofrerá pelo eterno",
-              "&7Fogo que lhe queimará",
-              "&7No banimento do servidor."
+              "&7Ofender outro jogador por conta de",
+              "&7seu sexo, cultura, cor, religião e",
+              "&7outros, de maneira direta ou indireta."
             ]
           },
           "business": {
-            "name": "Comércio",
+            "name": "Comércio externo",
             "description": [
-              "&7Comércio de itens ou contas em troca",
-              "&7de produtos externos, jogos, VIPs ou dinheiro."
+              "&7Promover ou realizar transações",
+              "&7comerciais fora dos canais",
+              "&7oficiais permitidos."
             ]
           },
-          "chargeback": {
-            "name": "Estorno de Compras",
+          "divulgation": {
+            "name": "Divulgação simples",
             "description": [
-              "&7Tentar realizar estorno da compra",
-              "&7de um produto adquirido em nossa rede."
-            ]
-          },
-          "client-alternative": {
-            "name": "Cliente Alternativo",
-            "description": [
-              "&7Fazer uso de clientes alternativos",
-              "&7ou modificações que promovam vantagens",
-              "&7sobre outros jogadores."
-            ]
-          },
-          "custom": {
-            "name": "Customizado",
-            "description": [
-              "&7Selecionar outro motivo do banimento"
+              "&7Fazer promoções ou divulgações",
+              "&7não autorizadas de forma",
+              "&7não agressiva."
             ]
           },
           "disinformation": {
             "name": "Desinformação",
             "description": [
-              "&7Espalhar informações falsas",
-              "&7com o intuito de prejudicar outros",
-              "&7jogadores ou causar baderna geral."
+              "&7Disseminar informações falsas ou",
+              "&7enganosas que podem prejudicar",
+              "&7outros ou criar confusão."
             ]
           },
-          "divulgation": {
-            "name": "Divulgação",
+          "client-alternative": {
+            "name": "Clientes alternativos",
             "description": [
-              "&7Fazer divulgação de sites,",
-              "&7servidores de Discord e vídeos ou",
-              "&7canais em plataformas de mídia de forma comedida."
-            ]
-          },
-          "fake-account": {
-            "name": "Conta Fake",
-            "description": [
-              "&7Criar uma conta com intuito",
-              "&7de cometer qualquer infração",
-              "&7para benefício próprio ou prejuízo da rede."
-            ]
-          },
-          "fake-chat": {
-            "name": "Chat Fake",
-            "description": [
-              "&7Realizar ameaças a outros jogadores",
-              "&7com relação à sua pessoa, sua família ou sua conta."
-            ]
-          },
-          "falsification-evidence": {
-            "name": "Falsificação de Provas",
-            "description": [
-              "&7Forjar provas com objetivo",
-              "&7de fazer jogadores inocentes",
-              "&7serem punidos de forma errada."
-            ]
-          },
-          "inappropriate-build": {
-            "name": "Construção Inadequada",
-            "description": [
-              "&7Fazer uma construção ofensiva",
-              "&7ou com símbolos inapropriados em",
-              "&7qualquer um dos modos de jogo da rede."
+              "&7Utilizar modificações ilegais que",
+              "&7geram vantagem em relação aos",
+              "&7outros jogadores."
             ]
           },
           "inappropriate-nickname": {
-            "name": "Nick Inapropriado",
+            "name": "Nome impróprio",
             "description": [
-              "&7Criar uma conta com nickname",
-              "&7com mensagem sexual, discriminatória,",
-              "&7ofensiva aos jogadores ou ao servidor."
+              "&7Escolher um nome de usuário",
+              "&7ofensivo ou impróprio."
             ]
           },
-          "intimidation": {
-            "name": "Ameaça",
+          "falsification-evidence": {
+            "name": "Falsificação de provas",
             "description": [
-              "&7Realizar ameaças a outros jogadores",
-              "&7com relação à sua pessoa, sua família ou sua conta."
+              "&7Falsificar evidências para",
+              "&7fazer denúncias falsas."
             ]
           },
-          "macro": {
-            "name": "Abuso de Macros",
+          "chargeback": {
+            "name": "Estorno de pagamento (chargeback)",
             "description": [
-              "&7Abuso de macros é uma prática que consiste em utilizar",
-              "&7programas ou modificações que automatizam ações no servidor,",
-              "&7como por exemplo, utilizar programas que pressionam",
-              "&7teclas automaticamente ou que realizam ações de forma automática."
-            ]
-          },
-          "offense": {
-            "name": "Ofensa à Jogador",
-            "description": [
-              "&7Ofender jogadores de qualquer cargo",
-              "&7utilizando o chat para enviar xingamentos."
-            ]
-          },
-          "racism": {
-            "name": "Racismo / Discriminação",
-            "description": [
-              "&7Atitudes preconceituosas com outros",
-              "&7jogadores motivadas por sua raça, cor, sexo, idade,",
-              "&7religião e/ou outros fatores consolidadas",
-              "&7através de mensagens no chat."
+              "&7Tentar reverter pagamentos de",
+              "&7maneira fraudulenta ou injusta."
             ]
           },
           "server-divulgation": {
-            "name": "Divulgação de Servidores",
+            "name": "Divulgação grave",
             "description": [
-              "&7Fazer divulgação de outros servidores",
-              "&7de Minecraft ou lojas do gênero como",
-              "&7ferramenta de marketing e de captação de",
-              "&7jogadores através do envio de endereços IP e links."
+              "&7Divulgar outros servidores de",
+              "&7Minecraft ou lojas do gênero para",
+              "&7marketing e captação de jogadores,",
+              "&7inclusive com endereços IP e links."
             ]
           },
-          "spam-and-flood": {
-            "name": "Spam / Flood",
+          "abuse-bugs": {
+            "name": "Abuso de bugs",
             "description": [
-              "&7Fazer o uso de vários caracteres ",
-              "&7repetidos na mesma palavra ou",
-              "&7enviar várias mensagens iguais."
-            ]
-          },
-          "staff-or-server-offense": {
-            "name": "Ofensa à Equipe ou Servidor",
-            "description": [
-              "&7Ofender membros da equipe de",
-              "&7qualquer cargo ou a rede diretamente",
-              "&7utilizando o chat para enviar xingamentos."
-            ]
-          },
-          "stealing": {
-            "name": "Roubo de itens",
-            "description": [
-              "&7Enganar jogadores para roubar",
-              "&7seus coins ou itens dentro do servidor.",
-              "&7Geralmente através de trocas falsas."
+              "&7Explorar falhas no sistema para",
+              "&7obter vantagens injustas."
             ]
           }
         }
