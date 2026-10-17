@@ -54,7 +54,7 @@
               "&cO nick &f{name} &cpertence a outra conta da rede.",
               "&cSe ele é seu, procure a nossa equipe:",
               "",
-              "&f{discord_invite_url}"
+              "&fdiscord.rede-exe.com"
             ],
             "name-case-mismatch": [
               "&c&lEXE&r",
@@ -81,7 +81,7 @@
               "&cO servidor se encontra em manutenção, voltamos em breve.",
               "&cFique por dentro de todas as novidades em:",
               "",
-              "&f{discord_invite_url}"
+              "&fdiscord.rede-exe.com"
             ],
             "no-auth-apps-available": [
               "&c&lEXE&r",
@@ -89,7 +89,7 @@
               "&cNão encontramos nenhum servidor de autenticação.",
               "&cFique por dentro de todas as novidades em:",
               "",
-              "&f{discord_invite_url}"
+              "&fdiscord.rede-exe.com"
             ],
             "internal-error": [
               "&c&lEXE&r",
@@ -98,7 +98,7 @@
               "&cNossa equipe foi notificada e está trabalhando para resolver o problema.",
               "&cPor favor, tente novamente mais tarde.",
               "",
-              "&f{discord_invite_url}"
+              "&fdiscord.rede-exe.com"
             ],
             "unsupported-version": [
               "&c&lEXE&r",
@@ -106,7 +106,7 @@
               "&cUtilize a versão &f1.8+ para",
               "&cter uma melhor experiência.",
               "",
-              "&f{discord_invite_url}"
+              "&fdiscord.rede-exe.com"
             ],
             "lost-sent-to-lobby": [
               "&cO servidor em que você estava caiu, e você foi levado para o lobby."
@@ -118,7 +118,7 @@
               "&cA rede está lotada no momento.",
               "&cTente entrar de novo em alguns instantes.",
               "",
-              "&f{discord_invite_url}"
+              "&fdiscord.rede-exe.com"
             ],
             "replaced-before-login": [
               "&c&lEXE&r",
