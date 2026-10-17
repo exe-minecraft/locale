@@ -50,6 +50,55 @@
             ]
           }
         },
+        "alts": {
+          "arguments": {
+            "target": {
+              "name": "nome ou ip",
+              "description": "Insira o nome do jogador (o IP é só do Manager para cima)"
+            }
+          },
+          "invalid-name-pattern": "Você precisa inserir um formato de nome válido!",
+          "invalid-address": "Esse IP não é um endereço válido!",
+          "message": {
+            "accounts": {
+              "singular": "conta",
+              "plural": "contas"
+            },
+            "ips": {
+              "singular": "IP",
+              "plural": "IPs"
+            },
+            "account": {
+              "header": [
+                "",
+                " &eContas no mesmo IP de &f{alts_target}&e: &7{alts_total} {alts_accounts}",
+                ""
+              ],
+              "empty": "Nenhuma conta divide IP com &f{alts_target}&e."
+            },
+            "address": {
+              "header": [
+                "",
+                " &eContas que usaram o IP &f{alts_target}&e: &7{alts_total} {alts_accounts}",
+                ""
+              ],
+              "empty": "Nenhuma conta usou o IP &f{alts_target}&e."
+            },
+            "entry": "  &f{alts_name}&7: {alts_state}{alts_punishments}",
+            "online": "&aonline agora",
+            "seen": "&7visto em {alts_seen}",
+            "punishment": " &8[{alts_punishment_type}&8]",
+            "unknown-type": "&cpunição",
+            "remaining": "por mais {alts_punishment_remaining}",
+            "permanent": "permanente",
+            "more": "  &7e mais {alts_hidden} {alts_accounts}, de acesso mais antigo",
+            "hover": "&7Clique para abrir o &f/account {alts_name}",
+            "hover-addresses": "&7IPs em comum: &f{alts_addresses}",
+            "hover-addresses-more": "&7e mais {alts_hidden} {alts_ips}",
+            "hover-punishment": "{alts_punishment_type}&7, {alts_punishment_duration}: &f{alts_punishment_reason}",
+            "no-reason": "&7sem motivo registrado"
+          }
+        },
         "staff-chat": {
           "arguments": {
             "message": {
