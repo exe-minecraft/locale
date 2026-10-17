@@ -3,7 +3,7 @@
     "core": {
       "messages": {
         "discord": {
-          "linked": "Conta vinculada ao Discord! Seus cargos já foram aplicados por lá.",
+          "linked": "Conta vinculada ao Discord! Seu nick do jogo vai aparecer por lá.",
           "link-failed": "Esse código não vale mais. Gere outro no nosso Discord e cole aqui de novo."
         }
       }
