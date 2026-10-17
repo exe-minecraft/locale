@@ -59,8 +59,10 @@
               "description": "ID do kit que será deletado"
             }
           },
-          "cannot-find-with-id": "Não foi possivel encontrar um kit com esse id!",
-          "success": "O kit {kit_id} foi deletado com sucesso."
+          "cannot-find-with-id": "Não foi possível encontrar um kit com esse id!",
+          "success": "O kit {kit_id} foi deletado com sucesso.",
+          // O kit vem do yml; o que se apaga são os itens gravados. Sem eles não havia nada a deletar.
+          "already-empty": "O kit {kit_id} não tem itens gravados: não havia nada a deletar."
         },
         "editkit": {
           "arguments": {
@@ -121,7 +123,8 @@
                   "success": "Items do kit \"{kit_id}\" alterados."
                 }
               },
-              "success": "&aOs itens do kit &f{kit_id}&a foram alterados."
+              "success": "&aOs itens do kit &f{kit_id}&a foram alterados.",
+              "unchanged": "&eNada mudou nos itens do kit &f{kit_id}&e."
             },
             "update-delay": {
               "conversation": {

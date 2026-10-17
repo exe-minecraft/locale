@@ -658,6 +658,8 @@
                 "{action}"
               ],
               "team": "&f{players} &8(vivos: {alive} de {size})",
+              // No 1v1 cada lado é um jogador só: sem a contagem de vivos.
+              "solo": "&f{players}",
               "clan-team": "&f{tag} &8(vivos: {alive} de {size})"
             }
           }

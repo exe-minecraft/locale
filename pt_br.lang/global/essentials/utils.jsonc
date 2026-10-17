@@ -43,7 +43,8 @@
         },
         "pot": {
           "need-potion-in-hand": "&cVocê precisa segurar uma poção na mão para usar este comando.",
-          "success": "&aPoções foram agrupadas com sucesso!"
+          "success": "&aPoções foram agrupadas com sucesso!",
+          "nothing-to-group": "&cSuas poções desse tipo já estão agrupadas."
         },
         "repair": {
           "cannot-repair-custom-item": "Você não pode reparar um item customizado.",

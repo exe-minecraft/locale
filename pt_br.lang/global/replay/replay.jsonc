@@ -109,7 +109,13 @@
                 "name": "jogador|clear",
                 "description": "Jogador da gravação ou clear para limpar o destaque"
               }
-            }
+            },
+            "not-watching": "&cVocê não está assistindo um replay.",
+            "usage": "&cUse /replay alvo <jogador|clear>.",
+            "cleared": "&aDestaque removido.",
+            "no-target": "&cNenhum jogador está destacado.",
+            "not-found": "&cJogador não encontrado na gravação. Presentes: &f{players}",
+            "locked": "&aDestacando &f{name}&a."
           }
         },
         "replaycamera": {
@@ -121,6 +127,7 @@
           },
           "not-watching": "&cVocê não está assistindo um replay.",
           "reset": "&aCâmera devolvida.",
+          "not-attached": "&cA câmera não está presa em nenhum jogador.",
           "not-found": "&cJogador não encontrado na gravação. Presentes: &f{players}",
           "not-in-scene": "&cEsse jogador ainda não está em cena neste tick.",
           "locked": "&aCâmera presa em &f{name}&a. F5 alterna a perspectiva; após um seek, rode o comando de novo. /rcam reset solta.",

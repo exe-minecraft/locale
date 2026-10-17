@@ -26,7 +26,9 @@
             "need-highest-group": "Você só pode adicionar grupos abaixo do seu nesse servidor!",
             "error": "Sua tentativa de adicionar o grupo falhou, tente novamente mais tarde!",
             "success": "Você adicionou o grupo {group_id} para o jogador {target_name} no servidor {server_id} por {days} dias.",
-            "success-permanent": "Você adicionou o grupo {group_id} para o jogador {target_name} no servidor {server_id} permanentemente."
+            "success-permanent": "Você adicionou o grupo {group_id} para o jogador {target_name} no servidor {server_id} permanentemente.",
+            // O mesmo grupo permanente de novo: nada mudou. Com dias, o prazo é trocado e vale o success.
+            "already": "O jogador {target_name} já tem o grupo {group_id} permanente no servidor {server_id}."
           },
           "remove": {
             "need-highest-group": "Você só pode remover grupos abaixo do seu nesse servidor!",
@@ -46,7 +48,9 @@
               }
             },
             "error": "Sua tentativa de remover o grupo falhou, tente novamente mais tarde!",
-            "success": "Você remove o grupo {group_id} do jogador {target_name} no servidor {server_id}."
+            "success": "Você removeu o grupo {group_id} do jogador {target_name} no servidor {server_id}.",
+            // Quem não tem o grupo nesse escopo (ou já venceu): nada foi tirado.
+            "not-found": "O jogador {target_name} não tem o grupo {group_id} no servidor {server_id}."
           },
           "freeze": {
             "description": "congelar o tempo de VIP de um jogador (continua VIP, o prazo para)",

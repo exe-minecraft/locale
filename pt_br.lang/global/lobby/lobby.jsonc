@@ -55,7 +55,10 @@
       },
       "commands": {
         "fly": {
-          "success": "Seu modo de voo foi alterado com sucesso!"
+          // O success fica para o jar anterior, até o lobby novo subir.
+          "success": "Seu modo de voo foi alterado com sucesso!",
+          "enabled": "&aModo de voo ativado.",
+          "disabled": "&cModo de voo desativado."
         },
         "join-all-queue": {
           "arguments": {
@@ -64,7 +67,8 @@
               "description": "Servidor que serão redirecionados os jogadores"
             }
           },
-          "success": "Todos os jogadores desse lobby foram adicionados a fila do servidor &f{target_server_display_name}!"
+          "success": "Todos os jogadores desse lobby foram adicionados à fila do servidor &f{target_server_display_name}!",
+          "nobody": "&cNenhum jogador desse lobby foi adicionado à fila do servidor &f{target_server_display_name}&c."
         },
         "set-p4free": {
           "success": "&aA entrada do P4Free foi movida para &f{x}, {y}, {z}&a."

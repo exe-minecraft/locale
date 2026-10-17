@@ -14,10 +14,13 @@
             "off": "&cDepuração de redstone desativada."
           },
           "tick": {
-            "info": "&eEstado do tick de redstone: &f{redstone_tick_state}",
+            "info": "&eEstado do tick de redstone: &f{redstone_tick_enabled}",
             "on": "&aTick de redstone ativado.",
             "off": "&cTick de redstone desativado.",
-            "update": "&aConfiguração do tick de redstone atualizada."
+            "already-on": "&cO tick de redstone já está ativado.",
+            "already-off": "&cO tick de redstone já está desativado.",
+            "update": "&aConfiguração do tick de redstone atualizada.",
+            "unchanged": "&cO tick de redstone já está em {redstone_tick_amount}."
           }
         }
       },

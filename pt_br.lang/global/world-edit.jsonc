@@ -31,11 +31,11 @@
         "up-blocked": "&cNão há espaço livre nessa altura."
       },
       "commands": {
-        "wand": { "help": "//wand: recebe o machado de seleção", "done": "&aMachado de seleção no inventário. Esquerdo marca a pos1, direito a pos2." },
+        "wand": { "help": "//wand: recebe o machado de seleção", "done": "&aMachado de seleção no inventário. Esquerdo marca a pos1, direito a pos2.", "already": "&cVocê já tem o machado de seleção no inventário." },
         "pos1": { "help": "//pos1: marca a primeira posição onde você está", "done": "&aPosição 1 em &f{x}, {y}, {z}&a.", "done-with-count": "&aPosição 1 em &f{x}, {y}, {z} &a(&f{count}&a)." },
         "pos2": { "help": "//pos2: marca a segunda posição onde você está", "done": "&aPosição 2 em &f{x}, {y}, {z}&a.", "done-with-count": "&aPosição 2 em &f{x}, {y}, {z} &a(&f{count}&a)." },
         "chunk": { "help": "//chunk: seleciona o chunk onde você está", "done": "&aChunk &f{cx}, {cz}&a selecionado." },
-        "sel": { "help": "//sel [cuboid]: limpa a seleção", "done": "&aSeleção limpa.", "only-cuboid": "&cSó existe seleção cuboide." },
+        "sel": { "help": "//sel [cuboid]: limpa a seleção", "done": "&aSeleção limpa.", "nothing": "&cVocê não tem nenhuma seleção para limpar.", "only-cuboid": "&cSó existe seleção cuboide." },
         "set": { "help": "//set <padrão>: preenche a seleção", "done": "&aBlocos alterados: {count}." },
         "replace": { "help": "//replace [de] <para>: troca blocos na seleção", "done": "&aBlocos trocados: {count}." },
         "walls": { "help": "//walls <padrão>: faz as paredes da seleção", "done": "&aBlocos nas paredes: {count}." },

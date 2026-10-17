@@ -137,7 +137,8 @@
               "&cMotivo: {punishment_reason}",
               "",
               "&cSilenciado injustamente?",
-              "&cRevise sua punição em &brede-exe.com/p/{punishment_id}"
+              "&cRevise sua punição em &brede-exe.com/p/{punishment_id}",
+              ""
             ],
             "mute-message-with-expiration": [
               "",
@@ -148,7 +149,8 @@
               "&cExpira em: {punishment_expiration}",
               "",
               "&cSilenciado injustamente?",
-              "&cRevise sua punição em &brede-exe.com/p/{punishment_id}"
+              "&cRevise sua punição em &brede-exe.com/p/{punishment_id}",
+              ""
             ],
             "ban-message-permanent": [
               "&c&lEXE&r",
