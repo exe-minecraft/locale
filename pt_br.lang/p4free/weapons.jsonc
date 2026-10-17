@@ -135,54 +135,126 @@
       },
       // Os nomes dos encantamentos. Ficam aqui e não no config.yml porque são texto
       // visível: no config saíam sem acento e sem cor.
+      // A descrição e o efeito saem no ícone da bancada, como no exe-p4free-core. O texto é
+      // o mesmo para a espada e para o machado. O efeito é o rótulo do número que o nível
+      // mexe; o Indestrutível e a Repulsão não têm número, e por isso não têm efeito.
       "enchants": {
-        "sharpening": { "name": "&bAfiação" },
-        "unbreakable": { "name": "&bIndestrutível" },
-        "fortune": { "name": "&bFortuna" },
-        "amplifier": { "name": "&bAmplificador" },
-        "repair": { "name": "&bReparador" },
-        "efficiency": { "name": "&bEficiência" },
-        "drainage": { "name": "&bDrenagem" },
-        "skull-cracker": { "name": "&cQuebra-Crânio" },
-        "knockback": { "name": "&cRepulsão" },
-        "armor-breaker": { "name": "&cQuebra-Armadura" }
+        "sharpening": {
+          "name": "&bAfiação",
+          "description": [
+            "&7Aumenta o dano causado",
+            "&7e acelera a quebra da",
+            "&7armadura inimiga."
+          ],
+          "effect": "Afiação"
+        },
+        "unbreakable": {
+          "name": "&bIndestrutível",
+          "description": [
+            "&7Torna a arma inquebrável,",
+            "&7deixando-a com durabilidade infinita."
+          ]
+        },
+        "fortune": {
+          "name": "&bFortuna",
+          "description": [
+            "&7Chance de conseguir tokens",
+            "&7em dobro em cada golpe ou abate."
+          ],
+          "effect": "Chance"
+        },
+        "amplifier": {
+          "name": "&bAmplificador",
+          "description": [
+            "&7Aumenta a quantidade de",
+            "&7tokens recebidos por golpe",
+            "&7e por abate."
+          ],
+          "effect": "Tokens a mais"
+        },
+        "repair": {
+          "name": "&bReparador",
+          "description": [
+            "&7Chance de ganhar um Reparador",
+            "&7ao abater um inimigo."
+          ],
+          "effect": "Chance"
+        },
+        "efficiency": {
+          "name": "&bEficiência",
+          "description": [
+            "&7Aumenta a velocidade de",
+            "&7quebrar blocos como: teia."
+          ],
+          "effect": "Eficiência"
+        },
+        "drainage": {
+          "name": "&bDrenagem",
+          "description": [
+            "&7Chance de roubar tokens",
+            "&7do oponente ao abatê-lo."
+          ],
+          "effect": "Chance"
+        },
+        "skull-cracker": {
+          "name": "&cQuebra-Crânio",
+          "description": [
+            "&7Chance de um golpe crítico,",
+            "&7com mais dano no inimigo."
+          ],
+          "effect": "Chance"
+        },
+        "knockback": {
+          "name": "&cRepulsão",
+          "description": [
+            "&7Empurra o oponente",
+            "&7para longe ao atacar."
+          ]
+        },
+        "armor-breaker": {
+          "name": "&cQuebra-Armadura",
+          "description": [
+            "&7Pequena chance de quebrar",
+            "&7a armadura do oponente",
+            "&7mais rápido durante {seconds}s."
+          ],
+          "effect": "Chance"
+        }
       },
       // A bancada, o menu que gasta tokens para subir encantamento.
       "views": {
         "weapon": {
           "title": "{weapon_name}",
           "items": {
-            // 0: encantamento que sobe por nível.
+            // Os ícones dos encantamentos seguem o desenho do exe-p4free-core: o nome na cor
+            // do estado (verde quando dá para evoluir), a descrição, o nível com o próximo, o
+            // número que ele mexe e o que falta. As linhas só com uma lista ({enchant_description},
+            // {enchant_effect}, {enchant_shop}) viram uma linha por item, e vazias somem.
+            // 0: o encantamento que dá para evoluir.
             "0": {
-              "name": "&f{enchant_name}",
+              "name": "&a{enchant_name} &l{enchant_level}",
               "lore": [
+                "{enchant_description}",
                 "",
-                "&7Nível: &f{enchant_level}&7/&f{enchant_max_level}",
-                "&7Custo: &b{enchant_price} {enchant_currency}",
+                "{enchant_progress}",
+                "{enchant_effect}",
                 "",
-                "&eClique para evoluir."
+                " &fPreço: {enchant_currency_color}{enchant_price} {enchant_currency}",
+                "",
+                "{enchant_shop}",
+                "&aClique para adquirir."
               ]
             },
-            // 1: encantamento que sobe uma chance.
-            "1": {
-              "name": "&f{enchant_name}",
-              "lore": [
-                "",
-                "&7Nível: &f{enchant_level}&7/&f{enchant_max_level}",
-                "&7Chance: &f{enchant_chance}% &8-> &a{enchant_next_chance}%",
-                "&7Custo: &b{enchant_price} {enchant_currency}",
-                "",
-                "&eClique para evoluir."
-              ]
-            },
-            // 2: encantamento já no máximo.
+            // 2: o encantamento já no máximo.
             "2": {
-              "name": "&f{enchant_name}",
+              "name": "&c{enchant_name} &l{enchant_level}",
               "lore": [
+                "{enchant_description}",
                 "",
-                "&7Nível: &a{enchant_level}&7/&a{enchant_max_level}",
+                "{enchant_progress}",
+                "{enchant_effect}",
                 "",
-                "&aNo máximo."
+                "&cEste encantamento já está no nível máximo."
               ]
             },
             // 3: o balcão de conserto.
@@ -209,14 +281,25 @@
                 "{prestige_state}"
               ]
             },
-            // 6: o que se liga e desliga em vez de se comprar.
+            // 6 e 11: o que se liga e desliga em vez de se comprar, ativado e desativado.
             "6": {
-              "name": "{enchant_name}",
+              "name": "&a{enchant_name} &a&lATIVADA",
               "lore": [
+                "{enchant_description}",
                 "",
-                "&7Nível: &f{enchant_level}&7/&f{enchant_max_level}",
+                " &fEstado: &a&lATIVADA",
                 "",
-                "&eClique para alternar."
+                "&cClique para desativar."
+              ]
+            },
+            "11": {
+              "name": "&7{enchant_name} &c&lDESATIVADA",
+              "lore": [
+                "{enchant_description}",
+                "",
+                " &fEstado: &c&lDESATIVADA",
+                "",
+                "&aClique para ativar."
               ]
             },
             // 7: a exclusão da arma. O texto é neutro porque estes itens são os
@@ -236,35 +319,45 @@
             // 8: o encantamento que ainda pede prestígio. Sem ele o ícone convidava a
             // evoluir e só o clique é que dizia que não.
             "8": {
-              "name": "&8{enchant_name}",
+              "name": "&c{enchant_name} &l{enchant_level}",
               "lore": [
+                "{enchant_description}",
                 "",
-                "&7Nível: &f{enchant_level}&7/&f{enchant_max_level}",
+                "{enchant_progress}",
+                "{enchant_effect}",
                 "",
-                "&cPede prestígio &f{enchant_prestige}&c.",
-                "&cAinda não dá para evoluir."
+                " &cRequisitos:",
+                " &fPrestígio &b&l{enchant_prestige} &fnecessário.",
+                "",
+                "&cNão é possível evoluir este encantamento."
               ]
             },
             // 9: o encantamento que dá para evoluir, mas o saldo não chega.
             "9": {
-              "name": "&f{enchant_name}",
+              "name": "&c{enchant_name} &l{enchant_level}",
               "lore": [
+                "{enchant_description}",
                 "",
-                "&7Nível: &f{enchant_level}&7/&f{enchant_max_level}",
-                "&7Custo: &b{enchant_price} {enchant_currency}",
+                "{enchant_progress}",
+                "{enchant_effect}",
                 "",
-                "&cVocê não tem {enchant_currency} suficientes."
+                " &fPreço: {enchant_currency_color}{enchant_price} {enchant_currency}",
+                "",
+                "{enchant_shop}",
+                "&cVocê não possui {enchant_currency} suficientes."
               ]
             },
             // 10: o nível que o grupo leva de graça (o upgrade VIP do sistema antigo).
             "10": {
-              "name": "&f{enchant_name}",
+              "name": "&a{enchant_name} &l{enchant_level}",
               "lore": [
+                "{enchant_description}",
                 "",
-                "&7Nível: &f{enchant_level}&7/&f{enchant_max_level}",
+                "{enchant_progress}",
+                "{enchant_effect}",
                 "",
-                "&aUpgrade do seu grupo disponível!",
-                "&eClique para levar de graça."
+                "&aUpgrade VIP disponível!",
+                "&eClique para adquirir de graça."
               ]
             },
             // 5: o ranking.
@@ -278,6 +371,25 @@
               ]
             }
           },
+          // O {enchant_progress} dos ícones: o nível de hoje e o seguinte, ou o máximo.
+          "progress": {
+            "next": " &fNível &l{level} &8➟ &bNível &l{next}",
+            "maximum": " &fNível Máximo!"
+          },
+          // O {enchant_effect}: o número de hoje riscado e o do próximo nível, ou só o de
+          // hoje no máximo. {effect} é o "effect" do encantamento.
+          "effect": {
+            "next": "  &f{effect}: &7&m{from}&7 ➟ &b{to}",
+            "current": "  &f{effect}: &7{from}"
+          },
+          // O {enchant_shop}: só no que se paga em cash. A linha em branco do fim é dele, para
+          // não sobrar uma no que se paga em tokens.
+          "shop": [
+            "&e Adquira &f&lCASH&e e outros",
+            "&e produtos em nossa loja!",
+            "&e Acesse: &floja.rede-exe.com",
+            ""
+          ],
           // As últimas linhas do conserto e do prestígio, que mudam com o estado da arma.
           "states": {
             "repair": {
