@@ -135,11 +135,6 @@
                 " &cDiscord: &fdiscord.rede-exe.com",
                 ""
               ],
-              "original-hint": [
-                " &eEste nick é de uma conta original do Minecraft.",
-                " &eSe ela é sua, saia e entre de novo: você entra direto, sem senha.",
-                ""
-              ],
               "original": {
                 "message": [
                   " &eEste nick é de uma conta original do Minecraft. Ela é sua?",
