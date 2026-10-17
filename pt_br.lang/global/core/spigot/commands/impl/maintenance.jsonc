@@ -1,0 +1,61 @@
+{
+  "plugins": {
+    "core": {
+      "commands": {
+        "maintenance": {
+          "grant": {
+            "description": "deixar um jogador entrar num servidor em manutenção por algumas horas",
+            "arguments": {
+              "target": {
+                "name": "jogador",
+                "description": "Jogador que poderá entrar"
+              },
+              "server": {
+                "name": "servidor",
+                "description": "Servidor em manutenção em que ele poderá entrar"
+              },
+              "hours": {
+                "name": "horas",
+                "description": "Horas de liberação, de 1 a 24; em branco = 2"
+              }
+            },
+            "need-admin": "Você precisa ser admin nesse servidor para liberar a entrada.",
+            "error": "Sua tentativa de liberar a entrada falhou, tente novamente mais tarde!",
+            "invalid-hours": "As horas de liberação vão de {min} a {max}.",
+            "success": "{target_name} pode entrar em {server_id} por {duration}, até {expires_at}."
+          },
+          "revoke": {
+            "description": "tirar a liberação de entrada de um jogador num servidor em manutenção",
+            "arguments": {
+              "target": {
+                "name": "jogador",
+                "description": "Jogador que perde a liberação"
+              },
+              "server": {
+                "name": "servidor",
+                "description": "Servidor em que a liberação vale"
+              }
+            },
+            "need-admin": "Você precisa ser admin nesse servidor para revogar a liberação.",
+            "error": "Sua tentativa de revogar a liberação falhou, tente novamente mais tarde!",
+            "success": "{target_name} não pode mais entrar em {server_id} em manutenção."
+          },
+          "list": {
+            "description": "ver quem está liberado num servidor em manutenção",
+            "arguments": {
+              "server": {
+                "name": "servidor",
+                "description": "Servidor que você quer consultar"
+              }
+            },
+            "need-admin": "Você precisa ser admin nesse servidor para ver as liberações.",
+            "error": "Não foi possível consultar as liberações agora, tente novamente mais tarde!",
+            "header": "Liberados em {server_id}:",
+            "entry": "{target_name} até {expires_at} (liberado por {granted_by_name})",
+            "empty": "Ninguém está liberado em {server_id}."
+          }
+        }
+      }
+    }
+  }
+}
