@@ -14,6 +14,9 @@
       "waiting": "&e{event} está com inscrições abertas. &f/{command} entrar",
       "round": "&e{event}: {first} enfrenta {second}. Preparem-se!",
       "round-timeout": "&cOs dois clãs da rodada foram eliminados por exceder o tempo limite.",
+      // O fim de cada duelo do ClanFight: o vencedor (se um lado ficou de pé) e quem deu mais hits nele.
+      "round-winner": "&e{event}: o clã {winner} venceu a batalha contra {loser}!",
+      "round-top-hitter": "&fMais hits no duelo: &7[{clan}] &e{player} &fcom &b{hits} {hits_unit}&f.",
       "border": "&eA borda de {event} está diminuindo para {size} blocos.",
       "deathmatch": "&cO deathmatch de {event} começou!",
       "cannot-join": "&cNão foi possível entrar em {event}. Confira seu clã e o limite de participantes.",
@@ -25,6 +28,9 @@
       "stash-failed": "&cNão foi possível guardar seu inventário agora. Tente entrar em {event} de novo.",
       "cancelled": "&c{event} foi cancelado.",
       "winner": "&aO clã {clan} venceu {event}!",
+      // Logo depois do vencedor do ClanFight: os 3 que mais deram hits, somados todos os duelos.
+      "hits-ranking": "&fQuem mais deu hits no {event}:",
+      "hits-ranking-entry": "&e{position}º &7[{clan}] &f{player} com &b{hits} {hits_unit}",
       "locked": "&eAs inscrições de {event} foram encerradas. Prepare-se!",
       "fight": "&cO combate de {event} foi liberado!",
       "action-success": "&aAção aplicada ao evento.",

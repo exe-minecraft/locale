@@ -68,7 +68,11 @@
           "clans": "&f Clans restantes: &6{clans}",
           "kills": "&f Abates no evento: &c{kills}",
           "battle": "&f Batalha em andamento:",
-          "versus": " &7{first} &fvs &7{second}"
+          "versus": " &7{first} &fvs &7{second}",
+          // A chance de vitória de cada lado, na ordem do "vs"; quem tem 50% ou mais sai no ahead.
+          "odds": "&f Chance: {first} &8x {second}",
+          "ahead": "&a{chance}%",
+          "behind": "&c{chance}%"
         },
         "fastglad": {
           "lines": [
