@@ -28,6 +28,7 @@
             "invalid-duration": "Duração inválida. Use por exemplo 7d, 1h30m ou permanent.",
             "error": "Não foi possível aplicar a punição.",
             "success": "{target_name} foi banido com sucesso.",
+            "new-account": "&eO nick {target_name} nunca entrou na rede: a conta foi criada agora, e a punição vale para quem entrar com ele.",
             "already-punished": "{target_name} já está banido por um prazo igual ou maior. Para estender, use um tempo maior."
           },
           "mute": {
@@ -49,6 +50,7 @@
             "invalid-duration": "Duração inválida. Use por exemplo 7d, 1h30m ou permanent.",
             "error": "Não foi possível aplicar a punição.",
             "success": "{target_name} foi silenciado com sucesso.",
+            "new-account": "&eO nick {target_name} nunca entrou na rede: a conta foi criada agora, e a punição vale para quem entrar com ele.",
             "already-punished": "{target_name} já está silenciado por um prazo igual ou maior. Para estender, use um tempo maior."
           },
           "ip-ban": {
