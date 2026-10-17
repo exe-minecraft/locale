@@ -16,7 +16,8 @@
               "",
               " &eConta de {primary}{account_name}&e:",
               "",
-              "  &fUUID: &7{account_uuid}"
+              "  &fUUID: &7{account_uuid}",
+              "  &fConta: &7{account_type}"
             ],
             "session": [
               "  &fÚltima entrada: &7{account_last_login}",

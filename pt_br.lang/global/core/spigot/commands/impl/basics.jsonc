@@ -35,7 +35,6 @@
         },
         "profile": {
           "message": {
-            "wallet-value": "R$ {value}",
             "identity": [
               "",
               " &eSeu perfil:",
