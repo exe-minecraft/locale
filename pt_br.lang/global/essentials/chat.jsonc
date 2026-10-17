@@ -135,6 +135,31 @@
           "sender": {
             "hover": "&eClique para mencionar {sender}.",
             "suggest": "/{command} {sender}, "
+          },
+          // O que aparece ao passar o mouse sobre o resto da linha. Montado no servidor de quem
+          // escreveu, porque a tag e o clã só existem lá; cada lista vira um hover de várias linhas.
+          // {tag} e {description}: o nome e a descrição que a staff deu à tag no /tag criar.
+          "tag": {
+            "hover": ["{tag}", "&7{description}"]
+          },
+          // O clique roda o /clan info do clã.
+          "clan": {
+            "hover": ["&7Clã {clan_colored_tag} &f{clan_name}", "", "&eClique para ver o clã."]
+          },
+          // Um por grupo com tag (o Membro não tem). O clique na tag do VIP abre o store-url.
+          "group": {
+            "store-url": "https://loja.rede-exe.com",
+            "master": ["{group_tag}", "&7Equipe da rede: direção."],
+            "manager": ["{group_tag}", "&7Equipe da rede: gerência."],
+            "developer": ["{group_tag}", "&7Equipe da rede: desenvolvimento."],
+            "administrator": ["{group_tag}", "&7Equipe da rede: administração."],
+            "moderator": ["{group_tag}", "&7Equipe da rede: moderação do chat e das regras."],
+            "imperial": ["{group_tag}", "&7O VIP mais alto da rede.", "", "&eClique para ver as vantagens na loja."],
+            "samurai": ["{group_tag}", "&7VIP da rede.", "", "&eClique para ver as vantagens na loja."]
+          },
+          // {sent_at}: a data e a hora no formato de plugins.core.time.date-time-pattern.
+          "message": {
+            "hover": "&7Enviada em &f{sent_at}"
           }
         }
       },
