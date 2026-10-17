@@ -65,8 +65,8 @@
             "link-unavailable": "Não deu para gerar o link do site agora. Tente de novo em instantes.",
             "site": "  &fSite: &b&ngerar link de acesso",
             "site-hover": "&7Gera um link de entrada no site, que vale por 1 minuto.",
-            "type-original": "Original",
-            "type-cracked": "Pirata",
+            "type-original": "&aOriginal",
+            "type-cracked": "&cPirata",
             "no-groups": "nenhum",
             "unavailable": "indisponível"
           }
