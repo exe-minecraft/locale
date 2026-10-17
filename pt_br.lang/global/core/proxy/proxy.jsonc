@@ -108,6 +108,14 @@
               "",
               "&fdiscord.rede-exe.com"
             ],
+            "world-downloader": [
+              "&c&lEXE&r",
+              "",
+              "&cDetectamos o World Downloader no seu cliente.",
+              "&cBaixar os mapas da rede não é permitido.",
+              "",
+              "&7Desative o mod e entre de novo para jogar."
+            ],
             "lost-sent-to-lobby": [
               "&cO servidor em que você estava caiu, e você foi levado para o lobby."
             ],
