@@ -112,6 +112,80 @@
             },
             "success": "Congelamento geral desligado: {count} {vips}. Os prazos voltaram a correr."
           }
+        },
+        // O /darvip (o /givevip do exe-p4free-core): dá VIP com anúncio na rede toda e registro para a staff.
+        // Os dias somam ao que resta, a temporada é a do servidor onde o comando roda, e os dois VIPs convivem
+        // na conta. O anúncio e o título vão para todos; o AQUI abre a loja.
+        "give-vip": {
+          "description": "dar VIP a um jogador, com anúncio na rede",
+          "arguments": {
+            "target": {
+              "name": "jogador",
+              "description": "Jogador que vai receber o VIP"
+            },
+            "vip": {
+              "name": "vip",
+              "description": "O VIP a dar (samurai ou imperial)"
+            },
+            "duration": {
+              "name": "dias|permanente|temporada",
+              "description": "Dias somados ao que resta, permanente, ou até o fim da temporada deste servidor"
+            }
+          },
+          "not-vip": "{vip} não é um VIP. Os VIPs são: {vips}.",
+          "invalid-duration": "Use os dias (de 1 a {max_days}), permanente ou temporada.",
+          "need-highest-group": "Você só pode dar VIP abaixo do seu grupo!",
+          "self": "Só o master dá VIP para a própria conta.",
+          "error": "A plataforma não confirmou o VIP de {target_name}. Confira no painel (Tempo de VIP) antes de repetir: ele pode ter sido gravado.",
+          "already-permanent": "{target_name} já tem o {vip_tag} &cpermanente: não há o que somar.",
+          "success": "Você deu {days} {days_word} de {vip_tag} &apara {target_name}. Agora restam {remaining}.",
+          "success-frozen": "Você deu {days} {days_word} de {vip_tag} &apara {target_name}. O VIP está congelado: restam {remaining}, parados até descongelar.",
+          "success-permanent": "Você deu o {vip_tag} &apermanente para {target_name}.",
+          "success-season": "Você deu o {vip_tag} &apara {target_name} até o fim da temporada de {server_id} ({ends_at}).",
+          "season-pending": "A temporada de {server_id} está na virada: o {vip_tag} &ade {target_name} ficou gravado e entra quando a próxima abrir.",
+          "season-already": "{target_name} já tem o {vip_tag} &cdesta temporada (comprado ou dado).",
+          "no-season": "{server_id} não tem temporada aberta: o VIP de temporada segue a do servidor onde o comando roda.",
+          "announce": {
+            "days": [
+              "",
+              "{vip_color}&lNOVO VIP {vip_name} NA ÁREA!",
+              "",
+              "&fO jogador {target_name_with_color} &facabou de adquirir",
+              "&fo VIP {vip_tag} &fpor {vip_color}{days} {days_word}&f!",
+              "",
+              "&fGaranta o seu clicando &a&lAQUI&f.",
+              ""
+            ],
+            "permanent": [
+              "",
+              "{vip_color}&lNOVO VIP {vip_name} NA ÁREA!",
+              "",
+              "&fO jogador {target_name_with_color} &facabou de adquirir",
+              "&fo VIP {vip_tag} {vip_color}permanente&f!",
+              "",
+              "&fGaranta o seu clicando &a&lAQUI&f.",
+              ""
+            ],
+            "season": [
+              "",
+              "{vip_color}&lNOVO VIP {vip_name} NA ÁREA!",
+              "",
+              "&fO jogador {target_name_with_color} &facabou de adquirir",
+              "&fo VIP {vip_tag} &faté o fim da temporada ({vip_color}{ends_at}&f)!",
+              "",
+              "&fGaranta o seu clicando &a&lAQUI&f.",
+              ""
+            ]
+          },
+          "title": {
+            "title": "{target_name_with_color}",
+            "subtitle": "&fTornou-se {vip_tag}"
+          },
+          "staff-log": {
+            "days": "&8[VIP] &7{sender_name} deu {days} {days_word} de {vip_tag} &7para {target_name}.",
+            "permanent": "&8[VIP] &7{sender_name} deu o {vip_tag} &7permanente para {target_name}.",
+            "season": "&8[VIP] &7{sender_name} deu o {vip_tag} &7para {target_name} até o fim da temporada ({ends_at})."
+          }
         }
       }
     }
