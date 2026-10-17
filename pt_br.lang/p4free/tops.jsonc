@@ -22,7 +22,11 @@
         "duels_elo_1v1": "Duelos: elo 1v1",
         "duels_elo_2v2": "Duelos: elo 2v2",
         "duels_wins": "Duelos: vitórias",
-        "duels_best_win_streak": "Duelos: maior winstreak"
+        "duels_best_win_streak": "Duelos: maior winstreak",
+        "clan_fight_player_kills": "ClanFight: abates",
+        "clan_fight_clan_wins": "ClanFight: vitórias de clãs",
+        "fast_glad_player_kills": "FastGlad: abates",
+        "fast_glad_clan_wins": "FastGlad: vitórias de clãs"
       }
     }
   }
