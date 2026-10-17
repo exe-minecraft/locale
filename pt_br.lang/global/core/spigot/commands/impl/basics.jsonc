@@ -122,10 +122,14 @@
           "only-staff": "&c{target_name} não é da staff: o modo God só vale para a staff.",
           "list-header": [
             "",
-            "&eLista de todos os jogadores em modo God:"
+            "&eLista de todos os jogadores em modo God:",
+            ""
           ],
           "list-entry": "&e • {player}",
           "list-entry-app": "&e • {player} &7({app})",
+          "list-footer": [
+            ""
+          ],
           "list-empty": "&cNão há jogadores em modo God no momento."
         },
         "fix": {
