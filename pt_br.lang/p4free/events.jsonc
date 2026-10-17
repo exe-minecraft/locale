@@ -546,6 +546,19 @@
               "rejoin-expired": "&cSeu tempo para reentrar no Gladiador expirou.",
               "rejoin-countdown": "Você retornará ao Gladiador em 5 segundos. Prepare-se!",
               "rejoin-failed": "Não foi possível retornar ao Gladiador.",
+              // Cada recusa do /glad rejoin com o seu motivo (sugestão de um jogador, 17/10).
+              "rejoin-no-event": "&cNão há um Gladiador em andamento para reentrar.",
+              "rejoin-not-participant": "&cVocê não está nesta partida do Gladiador, então não há reentrada.",
+              "rejoin-fighting": "&cVocê já está lutando no Gladiador.",
+              "rejoin-eliminated": "&cVocê foi eliminado desta partida do Gladiador e não pode reentrar.",
+              "rejoin-combat-logged": "&cVocê saiu do Gladiador em combate e foi eliminado: quem sai em combate não pode reentrar.",
+              "rejoin-web-logged": "&cVocê saiu do Gladiador numa teia e foi eliminado: quem sai numa teia não pode reentrar.",
+              "rejoin-kicked": "&cVocê foi expulso desta partida do Gladiador e não pode reentrar.",
+              "rejoin-left": "&cVocê saiu desta partida do Gladiador (pelo /glad sair ou com a reentrada desativada) e não pode reentrar.",
+              "rejoin-already-used": "&cVocê já usou a sua reentrada nesta partida: ela só vale uma vez.",
+              "rejoin-clan-out": "&cO seu clã não tem mais ninguém vivo no Gladiador, então não dá para reentrar.",
+              "rejoin-pending": "&eA sua reentrada já está em andamento.",
+              "rejoin-clan-changed": "&cVocê trocou de clã depois de cair e não pode voltar a lutar pelo clã antigo.",
               "need-clan": "Você precisa estar em um clan para participar do Gladiador.",
               "clan-limit": "Seu clan já atingiu o limite de participantes.",
               "removed": "{reason}"
@@ -638,6 +651,24 @@
                 "subtitle": "&fEvento cancelando em {time}!"
               }
             }
+          }
+        }
+      },
+      // As DMs do bot do Discord a quem cai do Gladiador com a conta vinculada (GladiatorDropNotice). Texto do
+      // Discord, não do jogo: sem códigos de cor, com o negrito e o código dele. O {deadline} vira o carimbo que conta
+      // sozinho no aplicativo ("em 4 minutos"), e o {deadline_time}, a hora.
+      "discord": {
+        "gladiator": {
+          "rejoin-open": [
+            "Você caiu do **Gladiador**. Dá para voltar até {deadline_time} ({deadline}) com `/glad rejoin`.",
+            "Não use /ec, /cofre, /kit nem /cash antes de voltar: qualquer um deles tira a sua reentrada."
+          ],
+          "rejoin-closed": {
+            "combat-logged": ["Você saiu do **Gladiador** em combate e foi eliminado: quem sai em combate não pode reentrar."],
+            "web-logged": ["Você saiu do **Gladiador** numa teia e foi eliminado: quem sai numa teia não pode reentrar."],
+            "disabled": ["Você caiu do **Gladiador**, mas a reentrada está desativada nesta partida, então não dá para voltar."],
+            "already-used": ["Você caiu do **Gladiador** de novo. A reentrada só vale uma vez por partida, então não dá para voltar."],
+            "clan-out": ["Você caiu do **Gladiador** e o seu clã ficou sem ninguém vivo, então não dá para voltar."]
           }
         }
       },
