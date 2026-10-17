@@ -156,7 +156,7 @@
           "empty": "&7Ninguém neste ranking ainda."
         },
         "hint": {
-          "both": "&eEsquerdo &7troca o ranking, &edireito &7o período",
+          "both": "&eEsquerdo: &7evento &8| &eDireito: &7período",
           "one": "&eClique para alterar!"
         },
         "selector": {
