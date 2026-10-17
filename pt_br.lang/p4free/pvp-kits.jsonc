@@ -89,7 +89,7 @@
         "entitlement-used": "&aA Berserker de &f{minutes} minutos &aestá liberada no /berserker por &f{days} {days_word}&a.",
         // {ends_at}: a data de fim da temporada, no formato de plugins.core.time.date-time-pattern.
         "entitlement-used-season": "&aA Berserker de &f{minutes} minutos &aestá liberada no /berserker até o fim da temporada (&f{ends_at}&a).",
-        "entitlement-pending": "&aA temporada está virando: a Berserker de &f{minutes} minutos &aentra no /berserker quando a próxima abrir.",
+        "entitlement-pending": "&aA Berserker de &f{minutes} minutos &aentra no /berserker quando a próxima temporada abrir.",
         "entitlement-no-season": "&cAinda não há temporada aberta. Guarde o vale para quando a primeira começar.",
         "entitlement-spent": "&cEste vale já foi usado: a Berserker dele foi liberada antes."
       },
