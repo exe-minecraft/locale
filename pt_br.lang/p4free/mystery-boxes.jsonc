@@ -17,7 +17,7 @@
       ],
       "unavailable": "&cAs caixas estão indisponíveis no momento.",
       "failed": "&cNão foi possível entregar o prêmio. Sua caixa foi devolvida.",
-      "won": "&aVocê recebeu {amount}x {reward} &7({rarity}).",
+      "won": "&aVocê ganhou {amount}x {reward} &7({rarity}).",
       "preview-title": "Prêmios da caixa",
       "result-title": "Seu prêmio",
       "chance": "&7Chance: {chance}% | Raridade: {rarity}",
