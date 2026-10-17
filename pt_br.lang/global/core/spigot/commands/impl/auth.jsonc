@@ -4,17 +4,17 @@
       "commands": {
         "change-password": {
           "arguments": {
+            "current-password": {
+              "name": "senha atual",
+              "description": "A senha que você usa hoje para entrar"
+            },
             "password": {
-              "name": "senha",
-              "description": "Uma senha que você irá se lembrar"
+              "name": "nova senha",
+              "description": "Uma senha nova que você irá se lembrar"
             },
             "confirm-password": {
-              "name": "senha",
-              "description": "Confirme sua senha"
-            },
-            "target": {
-              "name": "jogador",
-              "description": "Jogador que deseja alterar a senha"
+              "name": "nova senha",
+              "description": "Repita a senha nova"
             }
           },
           "user-is-original-sender": "Você possui uma conta original, por isso não tem uma senha!",
@@ -27,7 +27,10 @@
             "Confirme a senha corretamente."
           ],
           "success": "Senha alterada com sucesso!",
-          "not-confirmed": "A troca de senha não foi confirmada. Pode repetir o comando sem problema."
+          "not-confirmed": "A troca de senha não foi confirmada. Pode repetir o comando sem problema.",
+          "current-password-wrong": "A senha atual está errada.",
+          "current-password-locked": "Muitas senhas erradas. Espere 10 minutos e tente de novo.",
+          "current-password-required": "Para trocar a sua senha, use /trocarsenha <senha atual> <nova senha> <nova senha>."
         },
         "confirm": {
           "arguments": {
