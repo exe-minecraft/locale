@@ -7,6 +7,7 @@
       // As palavras que acompanham um número montado no código (o Plural do core): 1 no singular.
       "units": {
         "member": { "singular": "membro", "plural": "membros" },
+        "clan": { "singular": "clã", "plural": "clãs" },
         "pending-invite": { "singular": "convite de clã parado", "plural": "convites de clã parados" }
       },
       // O bloco do exe-scoreboard em Documents: tag sem cor e nome juntos, membros logo abaixo.
@@ -158,7 +159,9 @@
         },
         "clan": {
           "usage": {
-            "chat": { "syntax": "/. <mensagem>", "description": "falar no chat do clã" }
+            "chat": { "syntax": "/. <mensagem>", "description": "falar no chat do clã" },
+            "authorize-list": { "syntax": "autorizar listar", "description": "ver os clãs autorizados nos eventos" },
+            "delete-all": { "syntax": "excluir todos", "description": "apagar todos os clãs (pede confirmação)" }
           },
           "create": {
             "description": "criar um clã com tag e nome",
@@ -367,6 +370,59 @@
             },
             "success": "&cVocê negou o convite do clã &7[{clan_colored_tag}&7] {clan_name}&c."
           },
+          "recruit": {
+            "description": "anunciar o clã para recrutar jogadores",
+            "errors": {
+              "need-more-role": "&cSó o líder e os capitães anunciam o clã.",
+              "clan-max-members-exceeded": "&cO clã já está cheio.",
+              "in-cooldown": "&cO clã já foi anunciado há pouco. Aguarde {remaining_time} para anunciar de novo."
+            }
+          },
+          "apply": {
+            "description": "pedir para entrar num clã",
+            "arguments": {
+              "tag": {
+                "name": "tag",
+                "description": "Tag do clã em que você quer entrar"
+              }
+            },
+            "errors": {
+              "clan-max-members-exceeded": "&cEsse clã já está cheio.",
+              "already-applied": "&cVocê já pediu para entrar nesse clã. Aguarde a resposta do líder ou de um capitão.",
+              "recently-denied": "&cEsse clã recusou seu pedido há pouco. Você pode pedir de novo {application_duration} depois da recusa."
+            },
+            "success": "&aSeu pedido para entrar no clã &7[{clan_colored_tag}&7] {clan_name}&a foi enviado. O líder ou um capitão online tem {application_duration} para aceitar."
+          },
+          "acceptrequest": {
+            "description": "aceitar o pedido de um jogador para entrar no clã",
+            "arguments": {
+              "target": {
+                "name": "jogador",
+                "description": "Jogador que pediu para entrar"
+              }
+            },
+            "errors": {
+              "need-more-role": "&cSó o líder e os capitães aceitam pedidos.",
+              "no-application": "{target_name_with_tag} &cnão tem pedido para entrar no clã, ou o pedido já venceu.",
+              "clan-max-members-exceeded": "&cO clã já está cheio.",
+              "target-always-have-clan": "{target_name_with_tag} &cjá faz parte de um clã."
+            },
+            "success": "&aVocê aceitou o pedido de {target_name_with_tag}&a."
+          },
+          "denyrequest": {
+            "description": "recusar o pedido de um jogador para entrar no clã",
+            "arguments": {
+              "target": {
+                "name": "jogador",
+                "description": "Jogador que pediu para entrar"
+              }
+            },
+            "errors": {
+              "need-more-role": "&cSó o líder e os capitães recusam pedidos.",
+              "no-application": "{target_name_with_tag} &cnão tem pedido para entrar no clã, ou o pedido já venceu."
+            },
+            "success": "&cVocê recusou o pedido de {target_name_with_tag}&c."
+          },
           "promote": {
             "description": "promover um membro a capitão",
             "arguments": {
@@ -448,6 +504,30 @@
               "no-change": "&cA tag já está assim."
             }
           },
+          "membertag": {
+            "description": "dar uma tag a um membro no chat do clã",
+            "arguments": {
+              "target": {
+                "name": "jogador",
+                "description": "Membro que vai receber a tag"
+              },
+              "tag": {
+                "name": "tag",
+                "description": "A tag, com cor e negrito se quiser (&4&lDONO), ou remover para tirar"
+              }
+            },
+            "errors": {
+              "need-more-role": "&cSó o líder e os capitães dão tag, e o capitão só na dele e na dos membros.",
+              "not-same-clan": "&cEsse jogador não faz parte do seu clã.",
+              "tag-with-formatting": "&cA tag pode ter cor e negrito, mas não itálico, sublinhado, riscado nem texto mágico.",
+              "invalid-pattern": "&cA tag só aceita letras e números, sem espaço.",
+              "tag-length": "&cA tag precisa ter de 1 a {max_letters} letras, sem contar as cores.",
+              "tag-too-long": "&cA tag tem códigos de cor demais. Use menos cores.",
+              "no-change": "&cA tag desse membro já está assim."
+            },
+            "success": "&aVocê deu a tag &7[{custom_tag}&7] &aa {target_name_with_tag}&a.",
+            "success-removed": "&cVocê tirou a tag de {target_name_with_tag}&c."
+          },
           "authorize": {
             "description": "liberar o clã para os eventos",
             "arguments": {
@@ -459,7 +539,24 @@
             "errors": {
               "already-in-state": "&cO clã &7[{clan_colored_tag}&7]&c já está autorizado."
             },
-            "success": "&aVocê autorizou o clã &7[{clan_colored_tag}&7] {clan_name}&a nos eventos."
+            "success": "&aVocê autorizou o clã &7[{clan_colored_tag}&7] {clan_name}&a nos eventos.",
+            "list": {
+              "description": "ver os clãs autorizados nos eventos",
+              "errors": {
+                "empty": "&cNenhum clã está autorizado nos eventos."
+              },
+              "header": [
+                "",
+                " &bClãs autorizados nos eventos &7({total_clans} no total)",
+                " &7Clique num clã para escrever o /clan desautorizar dele.",
+                ""
+              ],
+              "entry": " &8• &7[{clan_colored_tag}&7] &f{clan_name}",
+              "entry-hover": "&c/clan desautorizar {clan_tag}",
+              "footer": [
+                ""
+              ]
+            }
           },
           "unauthorize": {
             "description": "tirar o clã dos eventos",
@@ -482,7 +579,33 @@
                 "description": "Tag do clã que você quer apagar"
               }
             },
-            "success": "&cVocê apagou o clã &7[{clan_colored_tag}&7] {clan_name}&c."
+            "success": "&cVocê apagou o clã &7[{clan_colored_tag}&7] {clan_name}&c.",
+            "all": {
+              "description": "apagar todos os clãs (pede confirmação)",
+              "arguments": {
+                "confirm": {
+                  "name": "confirmar",
+                  "description": "Escreva confirmar para apagar de verdade"
+                }
+              },
+              "errors": {
+                "empty": "&cNão há nenhum clã para apagar.",
+                "no-confirmation": "&cNada foi apagado: use /clan excluir todos primeiro e confirme em seguida."
+              },
+              "confirm": [
+                "",
+                " &cIsto apaga {total_clans} {total_clans_unit} da rede, com os membros, sem volta.",
+                " &cPara apagar, use &f/clan excluir todos confirmar &cnos próximos {confirm_seconds} segundos.",
+                ""
+              ],
+              "success": [
+                "",
+                " &fApagados: &a{deleted}",
+                " &fMantidos por ter membro jogando um evento: &e{in_event}",
+                " &fCom falha: &c{failed}",
+                ""
+              ]
+            }
           },
           "add": {
             "description": "pôr um jogador num clã",
@@ -598,11 +721,13 @@
             "{user_name_with_tag} &aé o novo líder do clã!",
             ""
           ],
+          // A tag do /clan tagmembro, antes do cargo; vazia para quem não tem.
+          "custom-tag": "&7[{custom_tag}&7] ",
           "on-member-chat": [
-            "&7[{user_clan_colored_tag}&7] &a{user_role_symbol}{user_name_with_color}&f: &b{user_chat_message}"
+            "&7[{user_clan_colored_tag}&7] {user_custom_tag}&a{user_role_symbol}{user_name_with_color}&f: &b{user_chat_message}"
           ],
           "on-member-chat-spy": [
-            "&8[espião] &7[{user_clan_colored_tag}&7] &a{user_role_symbol}{user_name}&f: &7{user_chat_message}"
+            "&8[espião] &7[{user_clan_colored_tag}&7] {user_custom_tag}&a{user_role_symbol}{user_name}&f: &7{user_chat_message}"
           ],
           "on-member-demote": [
             "",
@@ -628,6 +753,18 @@
             "",
             "{user_name_with_tag} &aé o mais novo membro do clã!",
             ""
+          ],
+          "on-recruit": [
+            "",
+            "{user_name_with_tag} &aanunciou o clã para recrutar.",
+            ""
+          ],
+          "on-application-receive": [
+            "",
+            " {applicant_name_with_tag} &equer entrar no clã.",
+            " &7KDR: &f{applicant_kdr} &8| &7Abates: &f{applicant_kills} &8| &7Mortes: &f{applicant_deaths}",
+            " &eClique &a&lAQUI &epara aceitar ou &c&lAQUI &epara recusar.",
+            ""
           ]
         },
         "member": {
@@ -647,6 +784,33 @@
             "&cO clã &7[{clan_colored_tag}&7] {clan_name}&c foi desfeito.",
             ""
           ],
+          // O anúncio do /clan recrutar: com o clique da candidatura para quem não tem clã, sem ele para quem tem.
+          "on-clan-recruit": [
+            "",
+            " &e&lRECRUTAMENTO &8| &fO clã &7[{clan_colored_tag}&7] &f{clan_name} &festá recrutando!",
+            " &7Membros: &f{clan_members_size}/{clan_max_members_size} &8| &7Pontos: &f{clan_points} &8| &7KDR: &f{clan_kdr}",
+            ""
+          ],
+          "on-clan-recruit-apply": [
+            "",
+            " &e&lRECRUTAMENTO &8| &fO clã &7[{clan_colored_tag}&7] &f{clan_name} &festá recrutando!",
+            " &7Membros: &f{clan_members_size}/{clan_max_members_size} &8| &7Pontos: &f{clan_points} &8| &7KDR: &f{clan_kdr}",
+            " &eClique &a&lAQUI &epara pedir para entrar.",
+            ""
+          ],
+          "on-clan-recruit-apply-hover": "&e/clan pedido {clan_tag}",
+          "on-application-accepted": [
+            "",
+            "&aSeu pedido foi aceito! Você entrou no clã &7[{clan_colored_tag}&7] {clan_name}&a.",
+            ""
+          ],
+          "on-application-denied": [
+            "",
+            "&cSeu pedido para entrar no clã &7[{clan_colored_tag}&7] {clan_name}&c foi recusado.",
+            ""
+          ],
+          "on-custom-tag-set": "&aSua tag no clã agora é &7[{custom_tag}&7]&a.",
+          "on-custom-tag-removed": "&cSua tag no clã foi tirada.",
           "pending-invites": " &eVocê tem {invites_size} {invites_unit}. Clique &f&lAQUI&e para ver.",
           "pending-invites-hover": "&e/clan convites"
         },
