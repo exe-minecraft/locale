@@ -29,21 +29,22 @@
         }
       },
       "reasons": {
-        "inventory-full": "&7Seu inventário estava cheio: os itens foram para o seu correio. Use /correio.",
-        "stash-entry": "&7Seus itens pessoais ficaram guardados ao entrar no camarote e foram para o seu correio. Use /correio.",
-        "stash-return": "&7Seu inventário estava cheio ao sair do camarote: os itens foram para o seu correio. Use /correio.",
-        "invsee": "&7Um item seu foi devolvido pela staff e foi para o seu correio. Use /correio.",
-        "mystery-box": "&7Seu inventário estava cheio: o prêmio da caixa misteriosa foi para o seu correio. Use /correio.",
-        "mystery-box-refund": "&7A caixa misteriosa não pôde ser aberta: o item de volta foi para o seu correio. Use /correio.",
-        "check-refund": "&7O cheque foi devolvido e os itens foram para o seu correio. Use /correio.",
-        "check-change": "&7O troco do cheque foi para o seu correio. Use /correio.",
-        "item-refund": "&7Um item seu foi devolvido e foi para o seu correio. Use /correio.",
-        "duel-grid": "&7Seu inventário estava cheio ao fim do duelo: os itens foram para o seu correio. Use /correio.",
-        "virtual-chest-shrink": "&7O seu baú virtual diminuiu: os itens que não cabem mais foram para o seu correio. Use /correio.",
-        "collect-leftover": "&7Seu inventário encheu ao coletar: o que não coube voltou para o seu correio. Use /correio.",
-        "staff": "&7A staff enviou itens para você. Use /correio."
+        "inventory-full": "Inventário cheio",
+        "stash-entry": "Entrada no camarote",
+        "stash-return": "Saída do camarote",
+        "invsee": "Devolvido pela staff",
+        "mystery-box": "Caixa misteriosa",
+        "mystery-box-refund": "Devolução da caixa misteriosa",
+        "check-refund": "Devolução de cheque",
+        "check-change": "Troco de cheque",
+        "item-refund": "Devolução de item",
+        "duel-grid": "Fim do duelo",
+        "virtual-chest-shrink": "Baú virtual reduzido",
+        "collect-leftover": "Sobra de uma coleta",
+        "staff": "Enviado pela staff"
       },
       "messages": {
+        "arrived": "&7Chegou uma encomenda ao seu correio ({reason}). Use &f/correio&7.",
         "received": {
           "title": "&6&lCORREIO",
           "subtitle": "&fVocê recebeu itens no correio!"
