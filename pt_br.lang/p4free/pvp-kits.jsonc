@@ -84,6 +84,7 @@
         "berserker-cooldown": "&c&l[EXE] &cVocê precisa aguardar mais tempo para pegar outra poção!",
         "berserker-given": "&aVocê adquiriu a Berserker com sucesso!",
         "berserker-removed": "&cAs Berserker mais longas do que o seu grupo libera foram tiradas do seu inventário.",
+        "berserker-pickup-denied": "&cEssa Berserker é exclusiva de quem tem acesso a ela no /berserker ou no kit VIP.",
         "entitlement-owned": "&cVocê já tem essa Berserker no /berserker. Guarde o vale para quando acabar.",
         "entitlement-failed": "&cNão foi possível liberar a Berserker agora. O vale voltou para o seu inventário.",
         "entitlement-used": "&aA Berserker de &f{minutes} minutos &aestá liberada no /berserker por &f{days} {days_word}&a.",
