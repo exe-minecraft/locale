@@ -1,0 +1,316 @@
+{
+  "plugins": {
+    // As tags do P4Free (/tag, /tags). A staff cria o catálogo em jogo; o jogador ganha a tag
+    // por código de resgate ou pela staff, equipa até 3 nos slots e elas aparecem no chat antes
+    // da tag do clã. O nome e a descrição de cada tag vêm do banco, com as cores da staff.
+    "tags": {
+      // As palavras que acompanham um número montado no código (o Plural do core): 1 no singular.
+      "units": {
+        "tag": { "singular": "tag", "plural": "tags" },
+        "code": { "singular": "código", "plural": "códigos" }
+      },
+      "views": {
+        "tags": {
+          "title": "Tags ({slots_used}/{slots_total})",
+          "equipped-none": "&7Nenhuma",
+          "items": {
+            "info": {
+              "name": "&eSuas tags",
+              "lore": [
+                "&7Slots em uso: &f{slots_used} de {slots_total}",
+                "",
+                "&7Equipadas:",
+                "{equipped}",
+                "",
+                "&7Clique numa tag para equipar",
+                "&7ou desequipar."
+              ]
+            },
+            "tag": {
+              "name": "{tag}",
+              "lore": [
+                "&7{description}",
+                "",
+                "{state}"
+              ]
+            },
+            "empty": {
+              "name": "&cNenhuma tag",
+              "lore": [
+                "&7Você ainda não tem nenhuma tag.",
+                "&7Resgate um código com &f/tag resgatar&7."
+              ]
+            },
+            "slot": {
+              "buy": {
+                "name": "&aComprar slot",
+                "lore": [
+                  "&7Mais um slot para equipar tags.",
+                  "",
+                  "&7Slot: &f{next_slot}º",
+                  "&7Preço: &6✪{price}",
+                  "&7Seu cash: &6✪{balance}",
+                  "",
+                  "&eClique para comprar."
+                ]
+              },
+              "no-balance": {
+                "name": "&cComprar slot",
+                "lore": [
+                  "&7Mais um slot para equipar tags.",
+                  "",
+                  "&7Slot: &f{next_slot}º",
+                  "&7Preço: &6✪{price}",
+                  "&7Seu cash: &c✪{balance}",
+                  "",
+                  "&cVocê não tem cash suficiente."
+                ]
+              },
+              "maximum": {
+                "name": "&cSlots no máximo",
+                "lore": [
+                  "&7Você já tem o máximo de slots",
+                  "&7de tags ({maximum})."
+                ]
+              }
+            },
+            "clear": {
+              "clear": {
+                "name": "&cDesequipar todas",
+                "lore": [
+                  "&7Tira todas as tags equipadas.",
+                  "",
+                  "&eClique para desequipar."
+                ]
+              },
+              "empty": {
+                "name": "&7Desequipar todas",
+                "lore": [
+                  "&7Você não tem nenhuma tag equipada."
+                ]
+              }
+            }
+          },
+          // O estado de cada tag no menu: é o que o clique nela faz.
+          "states": {
+            "equipped": "&aEquipada. &eClique para desequipar.",
+            "equip": "&eClique para equipar.",
+            "no-slot": "&cSem slot livre: compre outro ou desequipe uma tag."
+          }
+        },
+        "confirmation": {
+          "title": "Comprar slot de tag",
+          "subject": {
+            "name": "&eSlot de tag {next_slot}º",
+            "lore": [
+              "&7Mais um slot para equipar tags.",
+              "",
+              "&7Preço: &6✪{price}",
+              "&7Seu cash: &6✪{balance}"
+            ]
+          }
+        }
+      },
+      // Os usos e o prazo de um código, na geração e no /tag codigos.
+      "codes": {
+        "unlimited": "ilimitados",
+        "uses": "{uses} de {max}",
+        "never": "nunca",
+        "expired": "&cexpirado",
+        "in": "em {duration}",
+        "status": {
+          "valid": "&aválido",
+          "expired": "&cexpirado",
+          "exhausted": "&cesgotado"
+        }
+      },
+      "messages": {
+        "loading": "Suas tags ainda estão carregando. Tente de novo em instantes.",
+        "not-found": "Não existe tag com o id &f{id}&c.",
+        "equipped": "Tag {tag} &aequipada.",
+        "unequipped": "Tag {tag} &adesequipada.",
+        "cleared": "Todas as suas tags foram desequipadas.",
+        "not-owned": "Você não tem a tag {tag}&c.",
+        "already-equipped": "A tag {tag} &cjá está equipada.",
+        "not-equipped": "A tag {tag} &cnão está equipada.",
+        "slots-full": "Você não tem slot livre. Compre outro com &f/tag slot comprar &cou desequipe uma tag.",
+        "nothing-equipped": "Você não tem nenhuma tag equipada.",
+        "failed": "Não deu para gravar agora. Tente de novo em instantes.",
+        "slot-info": "Slots de tags em uso: &f{used} de {total}&e.",
+        "slot-next": "O {next_slot}º slot custa &6✪{price}&e. Use &f/tag slot comprar &epara comprar.",
+        "slot-maximum": "Você já tem o máximo de slots de tags ({maximum}).",
+        "not-enough": "Cash insuficiente: o slot custa &6✪{price}&c.",
+        "currency-missing": "A compra de slots está indisponível no momento.",
+        "charge-failed": "Não foi possível cobrar agora. Se o seu cash desceu, abra um ticket com este horário que a staff confere.",
+        "slot-bought": "Slot comprado por &6✪{price}&a: agora você equipa até {total} {total_unit} ao mesmo tempo.",
+        "refunded": "Não deu para gravar o slot: o cash voltou para a sua conta.",
+        "refund-failed": "Não deu para gravar o slot nem devolver o cash. Abra um ticket com este horário que a staff resolve."
+      },
+      "commands": {
+        "tag": {
+          "select": {
+            "description": "equipar uma tag num slot livre",
+            "arguments": {
+              "tag": { "name": "tag", "description": "Id da tag" }
+            }
+          },
+          "unequip": {
+            "description": "desequipar uma tag",
+            "arguments": {
+              "tag": { "name": "tag", "description": "Id da tag" }
+            }
+          },
+          "clear": {
+            "description": "desequipar todas as tags"
+          },
+          "slot": {
+            "description": "ver os slots, ou comprar mais um",
+            "arguments": {
+              "action": { "name": "comprar", "description": "Compra o próximo slot" }
+            }
+          },
+          "info": {
+            "description": "ver uma tag",
+            "arguments": {
+              "tag": { "name": "tag", "description": "Id da tag" }
+            },
+            "lines": [
+              "",
+              " &eTag &f{id}",
+              " &7Nome: {tag}",
+              " &7Descrição: &f{description}",
+              " &7Ícone: &f{icon}",
+              " &7Você tem: {owned}",
+              ""
+            ],
+            "owned": "&asim",
+            "not-owned": "&cnão"
+          },
+          "redeem": {
+            "description": "resgatar um código de tag",
+            "arguments": {
+              "code": { "name": "código", "description": "O código que você recebeu" }
+            },
+            "invalid": "Código inválido ou que não existe.",
+            "already-owned": "Você já tem a tag {tag}&c.",
+            "already-redeemed": "Você já resgatou este código.",
+            "expired": "Este código expirou.",
+            "exhausted": "Este código já foi usado o máximo de vezes.",
+            "grant-failed": "Não deu para entregar a tag agora. O seu uso do código está guardado: use o mesmo código de novo em instantes.",
+            "redeemed": [
+              "",
+              " &aCódigo resgatado: você ganhou a tag {tag}&a.",
+              " &7Use &f/tags &7para equipar.",
+              ""
+            ]
+          },
+          "create": {
+            "description": "criar uma tag",
+            "arguments": {
+              "id": { "name": "id", "description": "Letras minúsculas, números, - e _" },
+              "name": { "name": "nome", "description": "O nome com cores, como &6[Campeão]" },
+              "description": { "name": "descrição", "description": "Use _ no lugar dos espaços" },
+              "icon": { "name": "material", "description": "O ícone no menu, como DIAMOND" }
+            },
+            "invalid-id": "O id só aceita letras minúsculas, números, - e _, até 32.",
+            "invalid-name": "O nome precisa de algo visível e de no máximo {max_name} caracteres, contando as cores.",
+            "invalid-description": "A descrição precisa de algo visível e de no máximo {max_description} caracteres, contando as cores.",
+            "invalid-icon": "Material inválido. Exemplos: NAME_TAG, DIAMOND, GOLD_INGOT, NETHER_STAR.",
+            "exists": "O id &f{id} &cjá é ou já foi de uma tag. Quem ganhou a antiga ainda tem a permissão dela: escolha outro id.",
+            "created": [
+              "",
+              " &aTag criada.",
+              " &7Id: &f{id}",
+              " &7Nome: {tag}",
+              " &7Descrição: &f{description}",
+              " &7Material: &f{icon}",
+              " &7Permissão: &f{permission}",
+              " &7Dê com &f/tag dar <jogador> {id} &7ou gere um código com &f/tag codigo {id}&7.",
+              ""
+            ]
+          },
+          "delete": {
+            "description": "apagar uma tag e os códigos dela",
+            "arguments": {
+              "tag": { "name": "tag", "description": "Id da tag" }
+            },
+            "deleted": "Tag &f{id} &aapagada, com os códigos dela. O id não volta a ser usado, porque quem a ganhou ainda tem &f{permission}&a."
+          },
+          "edit": {
+            "description": "trocar o nome, a descrição ou o material de uma tag",
+            "arguments": {
+              "tag": { "name": "tag", "description": "Id da tag" },
+              "field": { "name": "nome|descricao|material", "description": "O que trocar" },
+              "value": { "name": "valor", "description": "O valor novo, com _ no lugar dos espaços na descrição" }
+            },
+            "invalid-value": "Valor inválido: nome até {max_name} caracteres, descrição até {max_description}, material como DIAMOND.",
+            "updated": "Tag &f{id} &aatualizada: {tag}&a."
+          },
+          "list": {
+            "description": "listar as tags",
+            "empty": "Nenhuma tag cadastrada.",
+            "header": "{count} {count_unit} no catálogo:",
+            "entry": " &e• &f{id} &7{tag}"
+          },
+          "give": {
+            "description": "dar uma tag a um jogador",
+            "arguments": {
+              "player": { "name": "jogador", "description": "Quem recebe a tag" },
+              "tag": { "name": "tag", "description": "Id da tag" }
+            },
+            "already-owned": "{name} já tem a tag {tag}&c.",
+            "failed": "A plataforma não confirmou a tag {tag} &cpara {name}. Tente de novo.",
+            "given": "{name} agora tem a tag {tag}&a.",
+            "received": "Você ganhou a tag {tag}&a. Use &f/tags &apara equipar."
+          },
+          "take": {
+            "description": "tirar uma tag de um jogador",
+            "arguments": {
+              "player": { "name": "jogador", "description": "Quem perde a tag" },
+              "tag": { "name": "tag", "description": "Id da tag" }
+            },
+            "failed": "A plataforma não confirmou a retirada da tag {tag} &cde {name}. Tente de novo.",
+            "taken": "A tag {tag} &afoi tirada de {name}.",
+            "lost": "Você perdeu a tag {tag}&c."
+          },
+          "code": {
+            "description": "gerar um código de resgate",
+            "arguments": {
+              "tag": { "name": "tag", "description": "Id da tag" },
+              "uses": { "name": "usos", "description": "Quantos jogadores podem resgatar, ou -1 para ilimitado" },
+              "duration": { "name": "duração", "description": "Por quanto tempo vale, como 30m, 24h ou 7d" }
+            },
+            "invalid-uses": "Usos inválidos: um número a partir de 1, ou -1 para ilimitado.",
+            "invalid-duration": "Duração inválida. Exemplos: 30m, 1h, 24h, 7d, 30d.",
+            "created": [
+              "",
+              " &aCódigo gerado: &e{code}",
+              " &7Tag: {tag}",
+              " &7Usos: &f{uses}",
+              " &7Expira: &f{expiration}",
+              " &7Os jogadores resgatam com &f/tag resgatar {code}&7.",
+              ""
+            ]
+          },
+          "codes": {
+            "description": "listar os códigos, de todas as tags ou de uma",
+            "arguments": {
+              "tag": { "name": "tag", "description": "Só os códigos desta tag" }
+            },
+            "empty": "Nenhum código encontrado.",
+            "header": "{count} {count_unit}, do mais novo ao mais antigo:",
+            "entry": " &e{code} &7tag &f{tag_id} &7usos &f{uses} &7expira &f{expiration} &7({status}&7)"
+          },
+          "delcode": {
+            "description": "apagar um código",
+            "arguments": {
+              "code": { "name": "código", "description": "O código a apagar" }
+            },
+            "deleted": "Código &f{code} &aapagado. Quem já o resgatou continua com a tag.",
+            "not-found": "Não existe o código &f{code}&c."
+          }
+        }
+      }
+    }
+  }
+}
