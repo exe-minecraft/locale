@@ -14,11 +14,12 @@
         "point": { "singular": "ponto", "plural": "pontos" },
         "pending-invite": { "singular": "convite de clã parado", "plural": "convites de clã parados" }
       },
-      // O bloco do exe-scoreboard em Documents: tag sem cor e nome juntos, membros logo abaixo.
-      // Com a tag sem cor, até o nome de 16 letras cabe na linha do protocolo 1.8.
+      // O bloco do exe-scoreboard em Documents: tag e nome juntos, membros logo abaixo. A {tag} já vem com a
+      // cor do clã (cinza quando ela não tem cor), desde 17/10. Com uma cor na tag, até o nome de 16 letras cabe
+      // na linha do protocolo 1.8; com duas, 15, e com três, 13.
       "scoreboard": {
         "clan": [
-          "&f [&7{tag}&f] {name}",
+          "&f [{tag}&f] {name}",
           "&f Membros: &7{members}/{max_members}"
         ],
         "no-clan": [
