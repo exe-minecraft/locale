@@ -148,6 +148,9 @@
       },
       "commands": {
         "tag": {
+          "usage": {
+            "menu": { "syntax": "", "description": "abrir o menu das tags" }
+          },
           "select": {
             "description": "equipar uma tag num slot livre",
             "arguments": {
@@ -269,6 +272,7 @@
               "player": { "name": "jogador", "description": "Quem perde a tag" },
               "tag": { "name": "tag", "description": "Id da tag" }
             },
+            "not-owned": "{name} não tem a tag {tag} &cdada por permissão avulsa (quem a tem pelo grupo continua com ela).",
             "failed": "A plataforma não confirmou a retirada da tag {tag} &cde {name}. Tente de novo.",
             "taken": "A tag {tag} &afoi tirada de {name}.",
             "lost": "Você perdeu a tag {tag}&c."
