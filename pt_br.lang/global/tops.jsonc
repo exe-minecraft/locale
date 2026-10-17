@@ -110,7 +110,9 @@
           "clan_fight_player_kills": "&6&lCLANFIGHT &f&lABATES",
           "clan_fight_clan_wins": "&6&lCLANFIGHT &f&lVITÓRIAS",
           "fast_glad_player_kills": "&6&lFASTGLAD &f&lABATES",
-          "fast_glad_clan_wins": "&6&lFASTGLAD &f&lVITÓRIAS"
+          "fast_glad_clan_wins": "&6&lFASTGLAD &f&lVITÓRIAS",
+          "currency_tokens": "&6&lTOKENS",
+          "currency_souls": "&6&lALMAS"
         },
         "labels": {
           "clan_kills": "Clãs",
@@ -137,7 +139,9 @@
           "clan_fight_player_kills": "ClanFight",
           "clan_fight_clan_wins": "ClanFight",
           "fast_glad_player_kills": "FastGlad",
-          "fast_glad_clan_wins": "FastGlad"
+          "fast_glad_clan_wins": "FastGlad",
+          "currency_tokens": "Tokens",
+          "currency_souls": "Almas"
         },
         "rows": {
           "1": "&6#1 &f{name} &7- &e{value}",
