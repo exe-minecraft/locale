@@ -6,11 +6,19 @@
           "arguments": {
             "group": {
               "name": "grupo",
-              "description": "Grupo que deseja definir a manutenção"
+              "description": "Grupo mínimo para entrar; default abre"
+            },
+            "server": {
+              "name": "servidor",
+              "description": "Servidor que deseja fechar; em branco = a rede toda"
             }
           },
-          "success": "Grupo de manutenção alterado para {group_display_name}",
-          "error": "Não foi possivel definir o grupo de manutenção, tente novamente mais tarde!"
+          "success": "Manutenção da rede alterada para {group_display_name}.",
+          "error": "Não foi possível definir a manutenção da rede, tente novamente mais tarde!",
+          "server-success": "Manutenção de {server_id} alterada para {group_display_name} em {apps}.",
+          "server-error": "Não foi possível alterar a manutenção de {apps} em {server_id}. Repita o comando, repetir é seguro.",
+          "server-no-apps": "Nenhum app encontrado em {server_id}, ou a plataforma não respondeu. Tente novamente.",
+          "server-scaled": "O {server_id} escala sozinho e o arion cuida da manutenção das instâncias dele. Para fechar a rede, use /gmanu sem servidor."
         },
         "settings": {
           "arguments": {
