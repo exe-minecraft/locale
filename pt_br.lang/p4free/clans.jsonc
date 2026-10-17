@@ -724,7 +724,7 @@
             "errors": {
               "invalid-amount": "&cOs pontos precisam ser maiores que zero."
             },
-            "success": "&aVocê somou &6{points} &apontos ao clã &7[{clan_colored_tag}&7]&a, que agora tem &6{clan_points}&a."
+            "success": "&aVocê somou &6{points} &a{points_unit} ao clã &7[{clan_colored_tag}&7]&a, que agora tem &6{clan_points}&a."
           },
           "removepoints": {
             "description": "tirar pontos de um clã",
@@ -743,7 +743,7 @@
               "no-points": "&cO clã &7[{clan_colored_tag}&7] &cnão tem pontos para tirar."
             },
             // {points} é o que saiu de verdade: com o corte em zero, só o que o clã tinha.
-            "success": "&cVocê tirou &6{points} &cpontos do clã &7[{clan_colored_tag}&7]&c, que agora tem &6{clan_points}&c."
+            "success": "&cVocê tirou &6{points} &c{points_unit} do clã &7[{clan_colored_tag}&7]&c, que agora tem &6{clan_points}&c."
           },
           "maxmembers": {
             "description": "definir o máximo de membros de todos os clãs",

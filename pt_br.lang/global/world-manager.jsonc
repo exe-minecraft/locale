@@ -69,8 +69,8 @@
             }
           },
           "main-world": "&cNão é possível usar este comando no mundo principal!",
-          "instant": "&aBorda definida para {size} blocos!",
-          "timed": "&aBorda definida para {size} blocos em {seconds} segundos!",
+          "instant": "&aBorda definida para {size} {size_word}!",
+          "timed": "&aBorda definida para {size} {size_word} em {seconds} {seconds_word}!",
           "unchanged": "&cA borda já está em {size} {size_word}.",
           "block": {
             "singular": "bloco",

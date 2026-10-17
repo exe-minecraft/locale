@@ -25,7 +25,7 @@
             },
             "need-highest-group": "Você só pode adicionar grupos abaixo do seu nesse servidor!",
             "error": "Sua tentativa de adicionar o grupo falhou, tente novamente mais tarde!",
-            "success": "Você adicionou o grupo {group_id} para o jogador {target_name} no servidor {server_id} por {days} dias.",
+            "success": "Você adicionou o grupo {group_id} para o jogador {target_name} no servidor {server_id} por {days} {days_word}.",
             "success-permanent": "Você adicionou o grupo {group_id} para o jogador {target_name} no servidor {server_id} permanentemente.",
             // O mesmo grupo permanente de novo: nada mudou. Com dias, o prazo é trocado e vale o success.
             "already": "O jogador {target_name} já tem o grupo {group_id} permanente no servidor {server_id}."
