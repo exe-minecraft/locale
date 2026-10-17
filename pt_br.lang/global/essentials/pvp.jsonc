@@ -20,7 +20,7 @@
           "&4&l  PVP &fVocê &c&ldesabilitou&f o PvP no mundo {world}!",
           "&c "
         ],
-        "denied": "&c&lEXE &cNão é permitido PvP nessa área."
+        "denied": "&cNão é permitido PvP nessa área."
       }
     }
   }

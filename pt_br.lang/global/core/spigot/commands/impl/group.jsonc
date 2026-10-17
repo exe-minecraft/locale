@@ -68,7 +68,7 @@
             "error": "Sua tentativa de congelar o VIP falhou, tente novamente mais tarde!",
             "conflict": "{target_name} não tem {group_id} com prazo correndo em {server_id}: é permanente, venceu ou já está congelado.",
             "not-vip": "Só grupos de VIP congelam: {group_id} é staff ou o grupo padrão.",
-            "success": "Você congelou o {group_id} de {target_name} em {server_id}. Restam {remaining}, parados até descongelar."
+            "success": "Você congelou o {group_id} de {target_name} em {server_id}. Tempo restante: {remaining}, parado até descongelar."
           },
           "unfreeze": {
             "description": "descongelar o tempo de VIP de um jogador (o prazo volta a correr)",

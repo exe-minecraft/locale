@@ -7,7 +7,7 @@
           "custom-item-disabled": "&cVocê não pode usar este item neste servidor.",
           "material-disabled": "&cVocê não pode usar este material neste servidor.",
           "action-disabled": "&cVocê não pode realizar esta ação neste servidor.",
-          "drop-disabled": "&c&lEXE &cO drop de itens nesta localização não é permitido!"
+          "drop-disabled": "&cO drop de itens nesta localização não é permitido!"
         }
       }
     }

@@ -3,7 +3,7 @@
     "seasons": {
       "info": {
         "none": "&7O P4Free ainda não tem temporada aberta.",
-        "active": "&e{name} &7termina em &f{end}&7. Faltam &f{left}&7.",
+        "active": "&e{name} &7termina em &f{end}&7. Tempo restante: &f{left}&7.",
         "ending": "&e{name} &7está no fim: a virada acontece a qualquer momento.",
         "overdue": "&cA data marcada ({end}) já passou. Vire com /temporada encerrar {season} ou remarque com /temporada data.",
         "pending": "&e{name} &7está começando: o servidor está zerando a temporada anterior."
