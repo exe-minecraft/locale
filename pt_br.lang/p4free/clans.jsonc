@@ -723,6 +723,12 @@
           ],
           // A tag do /clan tagmembro, antes do cargo; vazia para quem não tem.
           "custom-tag": "&7[{custom_tag}&7] ",
+          // O que aparece ao passar o mouse na linha do /. que o chat normal não tem: a tag do membro e o cargo.
+          // O clã, o nick e a hora usam os textos do chat normal (plugins.essentials.chat.tags).
+          "custom-tag-hover": "&7Tag no clã, dada pelo líder ou por um capitão.",
+          "role-hover": "&7Cargo no clã: &f{role_name}",
+          // O clique no nick escreve isto no chat de quem lê, como a menção do /g.
+          "chat-mention": "/. @{sender} ",
           "on-member-chat": [
             "&7[{user_clan_colored_tag}&7] {user_custom_tag}&a{user_role_symbol}{user_name_with_color}&f: &b{user_chat_message}"
           ],
