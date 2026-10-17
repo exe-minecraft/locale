@@ -6,7 +6,8 @@
       // As palavras que acompanham um número montado no código (o Plural do core): 1 no singular.
       "units": {
         "kill": { "singular": "abate", "plural": "abates" },
-        "duplicate-weapon": { "singular": "arma duplicada", "plural": "armas duplicadas" }
+        "duplicate-weapon": { "singular": "arma duplicada", "plural": "armas duplicadas" },
+        "entry": { "singular": "registro", "plural": "registros" }
       },
       "espada": {
         "item": {
@@ -64,7 +65,17 @@
             " &7Prestígio &f{prestige}&7, &f{kills}&7 {kills_unit}.",
             " &eShift + botão direito com ela na mão abre a bancada.",
             ""
-          ]
+          ],
+          // /espada historico <jogador>, da staff. Abre o mesmo menu do /machado historico.
+          "historico": {
+            "description": "Mostra o histórico das armas especiais de um jogador",
+            "arguments": {
+              "target": {
+                "name": "jogador",
+                "description": "O jogador, online ou não, cujo histórico você quer ver"
+              }
+            }
+          }
         },
         "machado": {
           "still-loading": "Seu machado ainda está carregando. Tente de novo em instantes.",
@@ -77,7 +88,16 @@
             " &7Prestígio &f{prestige}&7, &f{kills}&7 {kills_unit}.",
             " &eShift + botão direito com ele na mão abre a bancada.",
             ""
-          ]
+          ],
+          "historico": {
+            "description": "Mostra o histórico das armas especiais de um jogador",
+            "arguments": {
+              "target": {
+                "name": "jogador",
+                "description": "O jogador, online ou não, cujo histórico você quer ver"
+              }
+            }
+          }
         }
       },
       "messages": {
@@ -107,7 +127,11 @@
         "prestige-done": "&aPrestígio &l{prestige}&r&a. Os encantamentos foram zerados.",
         "book-wrong-weapon": "Este livro não é para esta arma.",
         "deleted": "&cSua arma foi excluída.",
-        "free-upgrade": "&aParabéns! &f{enchant} &asubiu para o nível &f{level}&a de graça, pelo seu grupo."
+        "free-upgrade": "&aParabéns! &f{enchant} &asubiu para o nível &f{level}&a de graça, pelo seu grupo.",
+        "history": {
+          "empty": "{player} não tem nada no histórico das armas.",
+          "failed": "Não deu para carregar o histórico agora. Tente de novo em instantes."
+        }
       },
       // Os nomes dos encantamentos. Ficam aqui e não no config.yml porque são texto
       // visível: no config saíam sem acento e sem cor.
@@ -270,6 +294,111 @@
         },
         "delete": {
           "title": "Excluir a arma"
+        },
+        // O histórico das duas armas, que a staff abre com /espada historico ou /machado historico.
+        // Um item por registro, do mais novo para o mais velho; a data é no horário de Brasília.
+        "history": {
+          "title": "Histórico de {target}",
+          "free": "&anada",
+          "cost": "&b{amount} {currency}",
+          // Por onde o nível subiu.
+          "sources": {
+            "menu": "a bancada",
+            "book": "um livro de encantamento",
+            "free": "o upgrade do grupo",
+            "toggle": "o interruptor da bancada"
+          },
+          "retrieve": {
+            "created": "&aArma nova, sem registro anterior.",
+            "existing": "&eA arma que ele já tinha."
+          },
+          "items": {
+            "enchant-upgrade": {
+              "name": "&aEncantamento melhorado",
+              "lore": [
+                "",
+                "&7Arma: {weapon}",
+                "&7Encantamento: {enchant} &f{level}",
+                "&7Por: &f{source}",
+                "&7Custo: {cost}",
+                "",
+                "&8{date}"
+              ]
+            },
+            "prestige": {
+              "name": "&6Prestígio",
+              "lore": [
+                "",
+                "&7Arma: {weapon}",
+                "&7Prestígio novo: &f{prestige}",
+                "&7Investido: &b{invested} {invested_currency}",
+                "",
+                "&8{date}"
+              ]
+            },
+            "retrieve": {
+              "name": "&ePegou a arma pelo comando",
+              "lore": [
+                "",
+                "&7Arma: {weapon}",
+                "{retrieve}",
+                "&7Prestígio: &f{prestige}",
+                "&7Abates: &f{kills}",
+                "",
+                "&8{date}"
+              ]
+            },
+            "delete": {
+              "name": "&4Excluiu a arma",
+              "lore": [
+                "",
+                "&7Arma: {weapon}",
+                "&7Prestígio: &f{prestige}",
+                "&7Investido: &b{invested} {invested_currency}",
+                "&7Abates: &f{kills}",
+                "",
+                "&7Encantamentos:",
+                "{enchants}",
+                "",
+                "&8{date}"
+              ]
+            },
+            "repair": {
+              "name": "&dConsertou a arma",
+              "lore": [
+                "",
+                "&7Arma: {weapon}",
+                "&7Custo: {cost}",
+                "",
+                "&8{date}"
+              ]
+            },
+            "broken": {
+              "name": "&cA arma quebrou",
+              "lore": [
+                "",
+                "&7Arma: {weapon}",
+                "&7Prestígio: &f{prestige}",
+                "&7Investido: &b{invested} {invested_currency}",
+                "&7Abates: &f{kills}",
+                "",
+                "&7Encantamentos:",
+                "{enchants}",
+                "",
+                "&8{date}"
+              ]
+            },
+            // Aparece quando a consulta trouxe o máximo que a plataforma devolve de uma vez.
+            "truncated": {
+              "name": "&eSó os mais recentes",
+              "lore": [
+                "",
+                "&7Aqui aparecem os {limit} {limit_unit}",
+                "&7mais recentes. Os anteriores estão",
+                "&7nos Logs do painel."
+              ]
+            }
+          }
         }
       },
       // O livro de encantamento, o segundo caminho para subir um nível.
