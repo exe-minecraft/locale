@@ -562,7 +562,10 @@
               "watch-stopped": "&aVocê parou de assistir ao rush e voltou a ver todos os jogadores.",
               "started": "&6Rush iniciado: [{first_clan}] vs [{second_clan}].",
               "finished": "&6Rush finalizado: [{first_clan}] {first_deaths} x {second_deaths} [{second_clan}]. &7Os clans têm {immunity_time} de imunidade contra terceiros.",
-              "finished-hits": "&7Hits do rush: &f[{first_clan}] {first_hits} x {second_hits} [{second_clan}]&7. Quem mais hitou: &f{top_hitter} ({top_hitter_hits})&7, quem mais levou: &f{top_victim} ({top_victim_hits})&7.",
+              "finished-hits": "&7Hits do rush: &f[{first_clan}] {first_hits} x {second_hits} [{second_clan}]&7.",
+              "finished-tiebreak": "&eEmpate nos abates: [{winner_clan}] venceu o rush nos hits.",
+              "finished-draw": "&eEmpate nos abates e nos hits: o rush terminou sem vencedor.",
+              "finished-hits-players": "&7Quem mais hitou: &f{top_hitter} ({top_hitter_hits})&7, quem mais levou: &f{top_victim} ({top_victim_hits})&7.",
               "immunity-ended": "&eA imunidade do rush entre [{first_clan}] e [{second_clan}] terminou."
             },
             "deathmatch": "&4&lMATA-MATA INICIADO! &cO PvP será reativado em 30 segundos.",
@@ -880,7 +883,10 @@
               "rushes": {
                 "name": "&6&lRushes",
                 "lore": [
-                  "&7Total registrado: &f{event_rushes}"
+                  "&7Total registrado: &f{event_rushes}",
+                  "&7Viradas: &f{event_reversals}",
+                  "",
+                  "&eClique para ver cada rush."
                 ]
               },
               "exits": {
@@ -907,6 +913,25 @@
                   "&7Volta ao histórico do Gladiador."
                 ]
               }
+            }
+          },
+          "history-rushes": {
+            "title": "Rushes da edição",
+            "items": {
+              "back": {
+                "name": "&cVoltar",
+                "lore": [
+                  "&7Volta aos detalhes da edição."
+                ]
+              }
+            },
+            "rush": {
+              "name": "&6[{first_clan}] {first_kills} x {second_kills} [{second_clan}]",
+              "kills": ["&7Vencedor: &f[{winner_clan}] &7nos abates", "", "&7Hits: &f{first_hits} x {second_hits}", "&7Quem mais hitou: &f{top_hitter} ({top_hitter_hits})", "&7Quem mais levou: &f{top_victim} ({top_victim_hits})", "&7Viradas: &f{first_reversals} x {second_reversals}", "&7Duração: &f{duration}"],
+              "hits": ["&7Vencedor: &f[{winner_clan}] &7nos hits (abates empatados)", "", "&7Hits: &f{first_hits} x {second_hits}", "&7Quem mais hitou: &f{top_hitter} ({top_hitter_hits})", "&7Quem mais levou: &f{top_victim} ({top_victim_hits})", "&7Viradas: &f{first_reversals} x {second_reversals}", "&7Duração: &f{duration}"],
+              "forfeit": ["&7Vencedor: &f[{winner_clan}] &7por W.O.", "", "&7Hits: &f{first_hits} x {second_hits}", "&7Quem mais hitou: &f{top_hitter} ({top_hitter_hits})", "&7Quem mais levou: &f{top_victim} ({top_victim_hits})", "&7Viradas: &f{first_reversals} x {second_reversals}", "&7Duração: &f{duration}"],
+              "won": ["&7Vencedor: &f[{winner_clan}]", "", "&7Hits: &f{first_hits} x {second_hits}", "&7Quem mais hitou: &f{top_hitter} ({top_hitter_hits})", "&7Quem mais levou: &f{top_victim} ({top_victim_hits})", "&7Viradas: &f{first_reversals} x {second_reversals}", "&7Duração: &f{duration}"],
+              "draw": ["&7Empate: abates e hits iguais", "", "&7Hits: &f{first_hits} x {second_hits}", "&7Quem mais hitou: &f{top_hitter} ({top_hitter_hits})", "&7Quem mais levou: &f{top_victim} ({top_victim_hits})", "&7Viradas: &f{first_reversals} x {second_reversals}", "&7Duração: &f{duration}"]
             }
           },
           "web-monitor": {
