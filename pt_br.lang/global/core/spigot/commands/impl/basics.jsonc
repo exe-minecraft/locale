@@ -91,6 +91,8 @@
         },
         "gamemode": {
           "gamemode-not-allowed-target": "{target_name} não pode ficar no modo {gamemode_name}!",
+          "gamemode-already-target": "{target_name} já está no modo {gamemode_name}.",
+          "gamemode-already-sender": "Você já está no modo {gamemode_name}.",
           "arguments": {
             "type": {
               "name": "gamemode",
