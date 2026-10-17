@@ -23,6 +23,8 @@
               "  &fÚltima saída: &7{account_last_quit}"
             ],
             "still-online": "ainda online",
+            "type-original": "Original",
+            "type-cracked": "Pirata",
             "general": [
               "",
               "  &fGrupos: &7{account_groups}",

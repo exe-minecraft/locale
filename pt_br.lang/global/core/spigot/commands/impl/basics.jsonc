@@ -48,8 +48,7 @@
             ],
             "balance": [
               "",
-              "  &fCash: &6{profile_cash}",
-              "  &fCarteira: &7{profile_wallet}"
+              "  &fCash: &6{profile_cash}"
             ],
             "discord": [
               "",
