@@ -26,7 +26,7 @@
             }
           },
           "punishment-category-not-found": "Não foi possível encontrar a categoria desejada",
-          "new-account": "&eO nick {target_name} nunca entrou na rede: a conta foi criada agora, e a punição vale para quem entrar com ele."
+          "new-account": "&eO nick {target_name} nunca entrou na rede: a conta foi criada agora, e o que você aplicar vale para quem entrar com ele."
         },
         "kick": {
           "arguments": {
