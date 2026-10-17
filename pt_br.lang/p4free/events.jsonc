@@ -557,7 +557,7 @@
               "rejoin-left": "&cVocê saiu desta partida do Gladiador (pelo /glad sair ou com a reentrada desativada) e não pode reentrar.",
               "rejoin-already-used": "&cVocê já usou a sua reentrada nesta partida: ela só vale uma vez.",
               "rejoin-clan-out": "&cO seu clã não tem mais ninguém vivo no Gladiador, então não dá para reentrar.",
-              "rejoin-pending": "&eA sua reentrada já está em andamento.",
+              "rejoin-pending": "&cA sua reentrada já está em andamento.",
               "rejoin-clan-changed": "&cVocê trocou de clã depois de cair e não pode voltar a lutar pelo clã antigo.",
               "need-clan": "Você precisa estar em um clan para participar do Gladiador.",
               "clan-limit": "Seu clan já atingiu o limite de participantes.",
