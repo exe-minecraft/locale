@@ -10,6 +10,14 @@
           "  &7nick do jogo lá também.",
           ""
         ],
+        "message-vip": [
+          "",
+          "  &9&lVINCULE SEU DISCORD",
+          "  &7Olá, &f{player}&7! Sua conta ainda não está",
+          "  &7vinculada ao &9Discord&7. Vincule para ter o seu",
+          "  &7nick e o cargo do seu VIP lá também.",
+          ""
+        ],
         "button": "  &9&l[CLIQUE AQUI PARA VINCULAR]",
         "button-hover": "&7Mostra o seu código e como vincular."
       }
