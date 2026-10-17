@@ -31,6 +31,15 @@
             "Aguarde, estamos verificando sua senha."
           ]
         },
+        "original": {
+          "kick-message": [
+            "&aSua conta original entra direto, sem senha.",
+            "&fEntre de novo no servidor."
+          ],
+          "not-available": [
+            "&cEsta opção é só para um nick de conta original ainda sem registro aqui."
+          ]
+        },
         "register": {
           "arguments": {
             "password": {
@@ -83,6 +92,10 @@
               "register": {
                 "title": "&c&lEXE",
                 "subtitle": "&fUtilize /registrar <senha> <senha>"
+              },
+              "original": {
+                "title": "&c&lEXE",
+                "subtitle": "&fVocê tem Minecraft original? Responda no chat"
               }
             },
             "authenticated": {
@@ -126,7 +139,18 @@
                 " &eEste nick é de uma conta original do Minecraft.",
                 " &eSe ela é sua, saia e entre de novo: você entra direto, sem senha.",
                 ""
-              ]
+              ],
+              "original": {
+                "message": [
+                  " &eEste nick é de uma conta original do Minecraft. Ela é sua?",
+                  " &a&l{original}   &c&l{pirate}",
+                  ""
+                ],
+                "original": "[Original]",
+                "original-hover": "&fA conta é minha: sair e entrar de novo, direto, sem senha",
+                "pirate": "[Pirata]",
+                "pirate-hover": "&fNão tenho original: registrar uma senha"
+              }
             }
           },
           "timeout": {
