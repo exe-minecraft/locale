@@ -45,7 +45,8 @@
             "description": "A hora do fim; sem hora, o fim do dia"
           }
         },
-        "success": "&aA temporada {season} agora termina em {end}. O VIP de temporada acompanha a data nova."
+        "success": "&aA temporada {season} agora termina em {end}. O VIP de temporada acompanha a data nova.",
+        "unchanged": "&cA temporada {season} já termina em {end}."
       },
       "start": {
         "description": "abrir a primeira temporada do P4Free",

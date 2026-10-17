@@ -498,7 +498,11 @@
       "messages": {
         "commands": {
           "exit-failed": "Não foi possível levar você de volta ao spawn. Reconecte para sair do evento.",
-          "already-stopped": "Esse evento já está parado.",
+          // O &c porque esta chega também pelo Echo, do app de eventos, onde a mensagem não leva a cor do erro.
+          "already-stopped": "&cEsse evento já está parado.",
+          // O /parar e o /forcestart que o app de eventos recusa: o estágio que o comando leu era velho.
+          "already-ending": "&cO {event} já está terminando.",
+          "already-started": "&cO {event} já começou.",
           "cant-start": "&cJá existe um evento ocorrendo!",
           "map-not-found": "&cO mapa {map} não existe ou não está carregado no P4Free Eventos.",
           "start-failed": "&cNão foi possível abrir o {event}. Confira os pontos gravados com setloc.",
@@ -689,13 +693,15 @@
             "&7Só contam peças com &a{min_percent}%+ &7de durabilidade."
           ],
           "fewest": "&c#{position} {player_name} &7- &c{sets} {sets_unit}",
-          "entry": "&7#{position} {player_name} - {sets} {sets_unit}"
+          "entry": "&7#{position} {player_name} - {sets} {sets_unit}",
+          "footer": [""]
         },
         "hits": {
           "header": ["", "&eHits recebidos por {player_name}"],
           "armor": "&fArmadura vestida: &c{worn}% &7(#{position} do clan)",
           "out-of-match": "&fArmadura: &7fora da partida",
-          "entry": "&7- &f{player_name} &7» &c{hits} {hits_unit}"
+          "entry": "&7- &f{player_name} &7» &c{hits} {hits_unit}",
+          "footer": [""]
         }
       },
       "queries": {
@@ -706,6 +712,8 @@
         "action": {
           "deathmatch-success": "&aO mata-mata foi iniciado.",
           "deathmatch-failure": "&cO Gladiador não está em andamento.",
+          // A segunda vez da mesma ação: já estava assim, e nada foi gravado nem anunciado.
+          "deathmatch-already": "&cO mata-mata já foi iniciado.",
           "border-success": "&aO avanço da borda foi iniciado.",
           "border-failure": "&cNão há uma próxima borda ou já existe um avanço em andamento.",
           "border-manual": "&aA borda passou para o modo manual.",
@@ -713,6 +721,8 @@
           "rejoin-enabled": "&aA reentrada foi ativada.",
           "rejoin-disabled": "&eA reentrada foi desativada.",
           "rejoin-failure": "&cNão foi possível alterar a reentrada.",
+          "rejoin-already-enabled": "&cA reentrada já está ativada.",
+          "rejoin-already-disabled": "&cA reentrada já está desativada.",
           "revive-success": "&aO jogador foi revivido.",
           "revive-failure": "&cNão foi possível reviver esse jogador.",
           "kick-player-success": "&aO jogador foi expulso.",
@@ -739,15 +749,20 @@
           "rush-list-elsewhere": "&eHá rushes acontecendo no Gladiador. Entre no P4Free Eventos com &f/glad camarote entrar &epara vê-los.",
           "max-members-success": "&aO limite de participantes por clan foi atualizado.",
           "max-members-failure": "&cNão foi possível atualizar o limite de participantes por clan.",
+          "max-members-unchanged": "&cO limite de participantes por clan já é esse.",
           "set-location-success": "&aA localização do Gladiador foi salva.",
           "set-location-failure": "&cNão foi possível salvar a localização do Gladiador.",
           "stacked-enabled": "&aO sistema de jogadores empilhados foi ativado.",
           "stacked-disabled": "&eO sistema de jogadores empilhados foi desativado.",
           "stacked-failure": "&cNão foi possível alterar o sistema de jogadores empilhados.",
+          "stacked-already-enabled": "&cO sistema de jogadores empilhados já está ativado.",
+          "stacked-already-disabled": "&cO sistema de jogadores empilhados já está desativado.",
           "stacked-threshold-success": "&aO limite de jogadores empilhados foi atualizado.",
           "stacked-threshold-failure": "&cNão foi possível atualizar o limite de jogadores empilhados.",
+          "stacked-threshold-unchanged": "&cO limite de jogadores empilhados já é esse.",
           "beast-set-success": "&aO Mito foi definido com sucesso.",
           "beast-reset-success": "&aO Mito foi removido com sucesso.",
+          "beast-already": "&cEsse jogador já é o Mito. Nada foi gravado nem somado ao ranking.",
           "beast-update-failure": "&cNão foi possível atualizar o Mito.",
           "player-offline": "&cO jogador não está online na instância do Gladiador."
         },
