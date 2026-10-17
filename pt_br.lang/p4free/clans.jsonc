@@ -256,7 +256,7 @@
               " &eInformações do jogador:",
               "",
               "  &fJogador: {target_name_with_tag}",
-              "  &fClã: &7[{target_clan_colored_tag}&7] {target_clan_name}",
+              "  &fClã: {target_clan_label}",
               "  &fCargo: &7{target_role_prefix}{target_role_name}",
               "  &fNo clã desde: &7{target_joined_clan_at}",
               "",
@@ -795,7 +795,7 @@
         "member": {
           "on-invite-receive": [
             "",
-            " &eVocê recebeu um pedido para entrar no clã \"{clan_tag}\".",
+            " &eVocê recebeu um convite para entrar no clã {clan_label}&e.",
             " &eClique &a&lAQUI &epara aceitar ou &c&lAQUI &epara recusar.",
             ""
           ],
@@ -812,13 +812,13 @@
           // O anúncio do /clan recrutar: com o clique da candidatura para quem não tem clã, sem ele para quem tem.
           "on-clan-recruit": [
             "",
-            " &e&lRECRUTAMENTO &8| &fO clã &7[{clan_colored_tag}&7] &f{clan_name} &festá recrutando!",
+            " &e&lRECRUTAMENTO &8| &fO clã {clan_label} &festá recrutando!",
             " &7Membros: &f{clan_members_size}/{clan_max_members_size} &8| &7Pontos: &f{clan_points} &8| &7KDR: &f{clan_kdr}",
             ""
           ],
           "on-clan-recruit-apply": [
             "",
-            " &e&lRECRUTAMENTO &8| &fO clã &7[{clan_colored_tag}&7] &f{clan_name} &festá recrutando!",
+            " &e&lRECRUTAMENTO &8| &fO clã {clan_label} &festá recrutando!",
             " &7Membros: &f{clan_members_size}/{clan_max_members_size} &8| &7Pontos: &f{clan_points} &8| &7KDR: &f{clan_kdr}",
             " &eClique &a&lAQUI &epara pedir para entrar.",
             ""
