@@ -138,7 +138,7 @@
           "self": "Só o master dá VIP para a própria conta.",
           "error": "A plataforma não confirmou o VIP de {target_name}. Confira no painel (Tempo de VIP) antes de repetir: ele pode ter sido gravado.",
           "already-permanent": "{target_name} já tem o {vip_tag} &cpermanente: não há o que somar.",
-          "success": "Você deu {days} {days_word} de {vip_tag} &apara {target_name}. Agora restam {remaining}.",
+          "success": "Você deu {days} {days_word} de {vip_tag} &apara {target_name}. O VIP vence em {expires_at} (restam {remaining}).",
           "success-frozen": "Você deu {days} {days_word} de {vip_tag} &apara {target_name}. O VIP está congelado: restam {remaining}, parados até descongelar.",
           "success-permanent": "Você deu o {vip_tag} &apermanente para {target_name}.",
           "success-season": "Você deu o {vip_tag} &apara {target_name} até o fim da temporada de {server_id} ({ends_at}).",
