@@ -46,6 +46,7 @@
       "messages": {
         "arrived": "&7Chegou uma encomenda ao seu correio ({reason}). Use &f/correio&7.",
         "arrived-in-stash": "&7Chegou uma encomenda ao seu correio ({reason}).",
+        "delayed": "&7O correio não respondeu agora. Sua encomenda ({reason}) está guardada e chega sozinha assim que ele voltar.",
         "received": {
           "title": "&6&lCORREIO",
           "subtitle": "&fVocê recebeu itens no correio!"
