@@ -31,30 +31,6 @@
             "Aguarde, estamos verificando sua senha."
           ]
         },
-        "loginstaff": {
-          "arguments": {
-            "code": {
-              "name": "código",
-              "description": "Insira o seu código de loginstaff para se autenticar"
-            }
-          },
-          "already-logged": [
-            "Você já se logou como staff!"
-          ],
-          "not-logged": [
-            "Você precisa se autenticar primeiro!"
-          ],
-          "code-not-registered": [
-            "Código de login staff não registrado!"
-          ],
-          "invalid-password": [
-            "Senha inválida!",
-            "Utilize /logar <senha>"
-          ],
-          "kick-message": [
-            "&cO código de login inserido é inválido."
-          ]
-        },
         "register": {
           "arguments": {
             "password": {
@@ -107,10 +83,6 @@
               "register": {
                 "title": "&c&lEXE",
                 "subtitle": "&fUtilize /registrar <senha> <senha>"
-              },
-              "staff": {
-                "title": "&c&lEXE",
-                "subtitle": "&fUtilize /loginstaff <código>"
               }
             },
             "authenticated": {
