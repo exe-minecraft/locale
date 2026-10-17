@@ -7,8 +7,8 @@
           // cliente (305 da lista, menos 32 do ícone e 2). O espaço anda 4 px e, depois de um &l, 5 px:
           // misturar os dois acerta o pixel. Texto novo recalcula os espaços.
           "highest-version": [
-            "                           &c&lEXE &7[1.8.x]",
-            "                  &l  &4discord.rede-exe.com"
+            "             &c&lEXE &7[1.8.x] &4discord.rede-exe.com",
+            "         &l &c&lTEMPORADA #1 &7&l| &f&lUM NOVO COMEÇO"
           ],
           "lowest-version": [
             "&c&lEXE &8➠ &cdiscord.rede-exe.com",
