@@ -408,7 +408,7 @@
           "name": "&fLivro de &a{enchant}",
           "lore": [
             "",
-            "&7Sobe &a{levels} &7nível(is) de",
+            "&7Soma &a+{levels} &7ao nível de",
             "&7&o{enchant}&7 na sua arma.",
             "",
             "&eArraste sobre a arma."
