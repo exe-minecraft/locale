@@ -24,8 +24,8 @@
               "  &fÚltima saída: &7{account_last_quit}"
             ],
             "still-online": "ainda online",
-            "type-original": "Original",
-            "type-cracked": "Pirata",
+            "type-original": "&aOriginal",
+            "type-cracked": "&cPirata",
             "general": [
               "",
               "  &fGrupos: &7{account_groups}",
