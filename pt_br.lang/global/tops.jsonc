@@ -172,7 +172,7 @@
           "2": "&7#2 &f{name} &7- &e{value}",
           "3": "&c#3 &f{name} &7- &e{value}",
           "other": "&8#{position} &f{name} &7- &e{value}",
-          "empty": "&8#{position} &7-"
+          "empty": "&8#{position} &7-/-"
         },
         "rows-sem-valor": {
           "1": "&6#1 &f{name}",
