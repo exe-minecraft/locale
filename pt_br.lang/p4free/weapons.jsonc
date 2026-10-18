@@ -11,11 +11,11 @@
       },
       "espada": {
         "item": {
-          "name": "&bEspada Especial",
-          "investment": "&7Investido: &b{tokens} tokens",
-          "enchant-owned": "&8▸ &f{enchant} &b{level}",
-          "enchant-missing": "&8▸ &7{enchant}",
-          "kills": "&7Abates: &f{kills}"
+          "name": "&cEspada Especial",
+          "investment": "&fInvestimento: &e{tokens} Tokens",
+          "enchant-owned": "&6 {enchant} &l{level}",
+          "enchant-missing": "&8 {enchant} ✖",
+          "kills": "&fAbates: &c{kills}"
         },
         "broken": "&cA sua espada especial se partiu.",
         // O {weapon_plural} da bancada: o "Ranking de Espadas".
@@ -24,10 +24,10 @@
       "machado": {
         "item": {
           "name": "&cMachado Especial",
-          "investment": "&7Investido: &b{tokens} tokens",
-          "enchant-owned": "&8▸ &f{enchant} &b{level}",
-          "enchant-missing": "&8▸ &7{enchant}",
-          "kills": "&7Abates: &f{kills}"
+          "investment": "&fInvestimento: &e{tokens} Tokens",
+          "enchant-owned": "&6 {enchant} &l{level}",
+          "enchant-missing": "&8 {enchant} ✖",
+          "kills": "&fAbates: &c{kills}"
         },
         "broken": "&cO seu machado especial se partiu.",
         "plural": "Machados"
@@ -141,9 +141,11 @@
       // A descrição e o efeito saem no ícone da bancada, como no exe-p4free-core. O texto é
       // o mesmo para a espada e para o machado. O efeito é o rótulo do número que o nível
       // mexe; o Indestrutível e a Repulsão não têm número, e por isso não têm efeito.
+      // Os nomes não levam cor: cada item e mensagem define a sua, inclusive o dourado
+      // dos adquiridos e o cinza escuro dos ausentes na lore original das armas.
       "enchants": {
         "sharpening": {
-          "name": "&bAfiação",
+          "name": "Afiação",
           "description": [
             "&7Aumenta o dano causado",
             "&7e acelera a quebra da",
@@ -152,14 +154,14 @@
           "effect": "Afiação"
         },
         "unbreakable": {
-          "name": "&bIndestrutível",
+          "name": "Indestrutível",
           "description": [
             "&7Torna a arma inquebrável,",
             "&7deixando-a com durabilidade infinita."
           ]
         },
         "fortune": {
-          "name": "&bFortuna",
+          "name": "Fortuna",
           "description": [
             "&7Chance de conseguir tokens",
             "&7em dobro em cada golpe ou abate."
@@ -167,7 +169,7 @@
           "effect": "Chance"
         },
         "amplifier": {
-          "name": "&bAmplificador",
+          "name": "Amplificador",
           "description": [
             "&7Aumenta a quantidade de",
             "&7tokens recebidos por golpe",
@@ -176,7 +178,7 @@
           "effect": "Tokens a mais"
         },
         "repair": {
-          "name": "&bReparador",
+          "name": "Reparador",
           "description": [
             "&7Chance de ganhar um Reparador",
             "&7ao abater um inimigo."
@@ -184,7 +186,7 @@
           "effect": "Chance"
         },
         "efficiency": {
-          "name": "&bEficiência",
+          "name": "Eficiência",
           "description": [
             "&7Aumenta a velocidade de",
             "&7quebrar blocos como: teia."
@@ -192,7 +194,7 @@
           "effect": "Eficiência"
         },
         "drainage": {
-          "name": "&bDrenagem",
+          "name": "Drenagem",
           "description": [
             "&7Chance de roubar tokens",
             "&7do oponente ao abatê-lo."
@@ -200,7 +202,7 @@
           "effect": "Chance"
         },
         "skull-cracker": {
-          "name": "&cQuebra-Crânio",
+          "name": "Quebra-Crânio",
           "description": [
             "&7Chance de um golpe crítico,",
             "&7com mais dano no inimigo."
@@ -208,14 +210,14 @@
           "effect": "Chance"
         },
         "knockback": {
-          "name": "&cRepulsão",
+          "name": "Repulsão",
           "description": [
             "&7Empurra o oponente",
             "&7para longe ao atacar."
           ]
         },
         "armor-breaker": {
-          "name": "&cQuebra-Armadura",
+          "name": "Quebra-Armadura",
           "description": [
             "&7Pequena chance de quebrar",
             "&7a armadura do oponente",
