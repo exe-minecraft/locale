@@ -69,7 +69,7 @@
       "rewards": {
         "basic": {
           "tokens_1": {
-            "name": "Cheque de Tokens (1.000)",
+            "name": "&7Cheque de Tokens (1.000)",
             "lore": [
               "&fRaridade: &7Comum",
               "",
@@ -80,7 +80,7 @@
             ]
           },
           "fortune_sword_1": {
-            "name": "Evolução de Fortuna para Espada (+10)",
+            "name": "&7Evolução de Fortuna para Espada (+10)",
             "lore": [
               "&fRaridade: &7Comum",
               "",
@@ -89,7 +89,7 @@
             ]
           },
           "fortune_axe_1": {
-            "name": "Evolução de Fortuna para Machado (+10)",
+            "name": "&7Evolução de Fortuna para Machado (+10)",
             "lore": [
               "&fRaridade: &7Comum",
               "",
@@ -98,7 +98,7 @@
             ]
           },
           "tokens_2": {
-            "name": "Cheque de Tokens (3.500)",
+            "name": "&dCheque de Tokens (3.500)",
             "lore": [
               "&fRaridade: &dRaro",
               "",
@@ -109,7 +109,7 @@
             ]
           },
           "repair_1": {
-            "name": "Evolução de Reparador (+10)",
+            "name": "&dEvolução de Reparador (+10)",
             "lore": [
               "&fRaridade: &dRaro",
               "",
@@ -118,7 +118,7 @@
             ]
           },
           "itemrepair_1": {
-            "name": "Reparador",
+            "name": "&dReparador",
             "lore": [
               "&fRaridade: &dRaro",
               "",
@@ -129,7 +129,7 @@
             ]
           },
           "cash_1": {
-            "name": "Cheque de Cash (✪ 800)",
+            "name": "&6Cheque de Cash (✪ 800)",
             "lore": [
               "&fRaridade: &6Lendário",
               "",
@@ -140,7 +140,7 @@
             ]
           },
           "drainage_1": {
-            "name": "Evolução de Drenagem (+5)",
+            "name": "&6Evolução de Drenagem (+5)",
             "lore": [
               "&fRaridade: &6Lendário",
               "",
@@ -149,7 +149,7 @@
             ]
           },
           "mb_1": {
-            "name": "Caixa Misteriosa (Básica)",
+            "name": "&6Caixa Misteriosa (Básica)",
             "lore": [
               "&fRaridade: &6Lendário",
               "",
@@ -161,7 +161,7 @@
             ]
           },
           "echestone_1": {
-            "name": "Melhoria no Baú do Fim",
+            "name": "&6Melhoria no Baú do Fim",
             "lore": [
               "&fRaridade: &6Lendário",
               "",
@@ -172,7 +172,7 @@
             ]
           },
           "mb_2": {
-            "name": "Caixa Misteriosa (Avançada)",
+            "name": "&bCaixa Misteriosa (Avançada)",
             "lore": [
               "&fRaridade: &bMítico",
               "",
@@ -184,7 +184,7 @@
             ]
           },
           "amplifier_1": {
-            "name": "Evolução de Amplificador (+1)",
+            "name": "&bEvolução de Amplificador (+1)",
             "lore": [
               "&fRaridade: &bMítico",
               "",
@@ -193,7 +193,7 @@
             ]
           },
           "berserker_1": {
-            "name": "Berserker [05:00]",
+            "name": "&bBerserker [05:00]",
             "lore": [
               "&fRaridade: &bMítico",
               "",
@@ -206,7 +206,7 @@
             ]
           },
           "boosttoken_1": {
-            "name": "Booster de Tokens [Individual]",
+            "name": "&bBooster de Tokens [Individual]",
             "lore": [
               "&fRaridade: &bMítico",
               "",
@@ -219,7 +219,7 @@
         },
         "advanced": {
           "tokens_1": {
-            "name": "Cheque de Tokens (3.500)",
+            "name": "&7Cheque de Tokens (3.500)",
             "lore": [
               "&fRaridade: &7Comum",
               "",
@@ -230,7 +230,7 @@
             ]
           },
           "fortune_sword_1": {
-            "name": "Evolução de Fortuna para Espada (+10)",
+            "name": "&7Evolução de Fortuna para Espada (+10)",
             "lore": [
               "&fRaridade: &7Comum",
               "",
@@ -239,7 +239,7 @@
             ]
           },
           "fortune_axe_1": {
-            "name": "Evolução de Fortuna para Machado (+10)",
+            "name": "&7Evolução de Fortuna para Machado (+10)",
             "lore": [
               "&fRaridade: &7Comum",
               "",
@@ -248,7 +248,7 @@
             ]
           },
           "tokens_2": {
-            "name": "Cheque de Tokens (5.000)",
+            "name": "&dCheque de Tokens (5.000)",
             "lore": [
               "&fRaridade: &dRaro",
               "",
@@ -259,7 +259,7 @@
             ]
           },
           "repair_1": {
-            "name": "Evolução de Reparador (+10)",
+            "name": "&dEvolução de Reparador (+10)",
             "lore": [
               "&fRaridade: &dRaro",
               "",
@@ -268,7 +268,7 @@
             ]
           },
           "itemrepair_1": {
-            "name": "Reparador",
+            "name": "&dReparador",
             "lore": [
               "&fRaridade: &dRaro",
               "",
@@ -279,7 +279,7 @@
             ]
           },
           "echesttwo_1": {
-            "name": "Melhoria no Baú do Fim",
+            "name": "&dMelhoria no Baú do Fim",
             "lore": [
               "&fRaridade: &dRaro",
               "",
@@ -290,7 +290,7 @@
             ]
           },
           "cash_1": {
-            "name": "Cheque de Cash (✪ 1.200)",
+            "name": "&6Cheque de Cash (✪ 1.200)",
             "lore": [
               "&fRaridade: &6Lendário",
               "",
@@ -301,7 +301,7 @@
             ]
           },
           "fortune_sword_2": {
-            "name": "Evolução de Fortuna para Espada(+25)",
+            "name": "&6Evolução de Fortuna para Espada(+25)",
             "lore": [
               "&fRaridade: &6Lendário",
               "",
@@ -310,7 +310,7 @@
             ]
           },
           "fortune_axe_2": {
-            "name": "Evolução de Fortuna para Machado (+25)",
+            "name": "&6Evolução de Fortuna para Machado (+25)",
             "lore": [
               "&fRaridade: &6Lendário",
               "",
@@ -319,7 +319,7 @@
             ]
           },
           "repair_2": {
-            "name": "Evolução de Reparador (+25)",
+            "name": "&bEvolução de Reparador (+25)",
             "lore": [
               "&fRaridade: &bMítico",
               "",
@@ -328,7 +328,7 @@
             ]
           },
           "drainage_1": {
-            "name": "Evolução de Drenagem (+5)",
+            "name": "&6Evolução de Drenagem (+5)",
             "lore": [
               "&fRaridade: &6Lendário",
               "",
@@ -337,7 +337,7 @@
             ]
           },
           "mb_1": {
-            "name": "Caixa Misteriosa (Básica)",
+            "name": "&6Caixa Misteriosa (Básica)",
             "lore": [
               "&fRaridade: &6Lendário",
               "",
@@ -349,7 +349,7 @@
             ]
           },
           "amplifier_1": {
-            "name": "Evolução de Amplificador (+1)",
+            "name": "&bEvolução de Amplificador (+1)",
             "lore": [
               "&fRaridade: &bMítico",
               "",
@@ -358,7 +358,7 @@
             ]
           },
           "drainage_2": {
-            "name": "Evolução de Drenagem (+10)",
+            "name": "&bEvolução de Drenagem (+10)",
             "lore": [
               "&fRaridade: &bMítico",
               "",
@@ -367,7 +367,7 @@
             ]
           },
           "mb_2": {
-            "name": "Caixa Misteriosa (Avançada)",
+            "name": "&bCaixa Misteriosa (Avançada)",
             "lore": [
               "&fRaridade: &bMítico",
               "",
@@ -379,7 +379,7 @@
             ]
           },
           "berserker_1": {
-            "name": "Berserker [06:00]",
+            "name": "&bBerserker [06:00]",
             "lore": [
               "&fRaridade: &bMítico",
               "",
@@ -392,7 +392,7 @@
             ]
           },
           "boosttoken_1": {
-            "name": "Booster de Tokens [Individual]",
+            "name": "&bBooster de Tokens [Individual]",
             "lore": [
               "&fRaridade: &bMítico",
               "",
@@ -403,7 +403,7 @@
             ]
           },
           "skull_cracker_1": {
-            "name": "Evolução de Racha Crânio (+10)",
+            "name": "&dEvolução de Racha Crânio (+10)",
             "lore": [
               "&fRaridade: &dRaro",
               "",
@@ -412,7 +412,7 @@
             ]
           },
           "skull_cracker_2": {
-            "name": "Evolução de Racha Crânio (+20)",
+            "name": "&bEvolução de Racha Crânio (+20)",
             "lore": [
               "&fRaridade: &bMítico",
               "",
@@ -421,7 +421,7 @@
             ]
           },
           "armor_breaker_1": {
-            "name": "Evolução de Quebra Armadura (+7)",
+            "name": "&6Evolução de Quebra Armadura (+7)",
             "lore": [
               "&fRaridade: &6Lendário",
               "",
@@ -430,7 +430,7 @@
             ]
           },
           "armor_breaker_2": {
-            "name": "Evolução de Quebra Armadura (+15)",
+            "name": "&bEvolução de Quebra Armadura (+15)",
             "lore": [
               "&fRaridade: &bMítico",
               "",
