@@ -14,7 +14,7 @@
             }
           },
           "success-other": "Você limpou o inventário de {target_name}!",
-          "success-same": "Seu inventário agora está vazio."
+          "success-same": "Seu inventário foi limpo."
         },
         "connect": {
           "arguments": {
