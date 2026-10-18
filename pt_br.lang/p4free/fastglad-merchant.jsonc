@@ -62,7 +62,17 @@
       "repaired": "&aSua forja reparou a armadura.",
       "antidote": "&bSeu antídoto bloqueou o neutralizador.",
       "neutralized": "&cSeus efeitos foram removidos pelo neutralizador.",
-      "stolen": "&5Um item do seu inventário foi roubado pela Mão Sombria."
+      "stolen": "&5Um item do seu inventário foi roubado pela Mão Sombria.",
+      // As moedas de abate como no exe-fastgladiator. O received é o aviso do original a quem ganha moedas num abate (o
+      // matador e cada colega vivo). Os outros são as respostas do /fg darmoedas e do /fg tirarmoedas à staff, com
+      // quanto mudou e o saldo de agora.
+      "coins": {
+        "received": "&fVocê recebeu &6{coins} {coins_unit} de abate &fpara usar no &9Mercador Sombrio&f.",
+        "added": "&aVocê deu &6{coins} {coins_unit} de abate &aa &f{player}&a, que agora tem &6{balance}&a.",
+        "removed": "&aVocê tirou &6{coins} {coins_unit} de abate &ade &f{player}&a, que agora tem &6{balance}&a.",
+        "already-empty": "&f{player} &cjá está sem moedas de abate.",
+        "not-fighting": "&f{player} &cnão está lutando no {event} agora."
+      }
     }
   }
 }

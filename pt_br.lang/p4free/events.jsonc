@@ -549,6 +549,12 @@
           "mercador": {
             "description": "abrir a loja do Mercador Sombrio durante a luta"
           },
+          "darmoedas": {
+            "description": "dar moedas de abate do Mercador Sombrio a quem luta"
+          },
+          "tirarmoedas": {
+            "description": "tirar moedas de abate do Mercador Sombrio de quem luta"
+          },
           "deathmatch": {
             "description": "forçar o deathmatch do FastGlad"
           }

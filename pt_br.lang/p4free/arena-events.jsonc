@@ -22,6 +22,14 @@
         "clan": {
           "name": "tag",
           "description": "A tag do clan a expulsar do evento"
+        },
+        "coins-player": {
+          "name": "jogador",
+          "description": "Quem luta no FastGlad e ganha ou perde as moedas"
+        },
+        "coins": {
+          "name": "moedas",
+          "description": "Quantas moedas de abate dar ou tirar"
         }
       },
       // A tag de um clan nos abates, pintada para cada um que lê: verde para o próprio clan, vermelha para os outros.
