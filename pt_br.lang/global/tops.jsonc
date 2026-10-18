@@ -174,7 +174,7 @@
           "other": "&8#{position} &f{name} &7- &e{value}",
           "empty": "&8#{position} &7-/-"
         },
-        "clan": "&7[&f{tag}&7] &f{name}",
+        "clan": "&7[{tag}&7] &f{name}",
         "rows-sem-valor": {
           "1": "&6#1 &f{name}",
           "2": "&7#2 &f{name}",
