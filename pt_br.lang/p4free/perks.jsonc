@@ -310,9 +310,13 @@
           "perk-invalid": "Perk inválida. Existem: {perks}",
           "level-invalid": "Esta perk vai até o nível {max_level}.",
           "given": "{name} agora tem {perk} no nível {level}.",
+          "already-level": "{name} já tem {perk} no nível {level}.",
           "taken": "{perk} foi tirada de {name}.",
+          "not-owned": "{name} não tem {perk}.",
           "reset": "As perks de {name} foram zeradas.",
+          "reset-nothing": "{name} não tem perk, slot extra nem cooldown para zerar.",
           "cooldowns-cleared": "Os cooldowns de {name} foram limpos.",
+          "cooldowns-nothing": "{name} não tem cooldown de perk correndo.",
           "target-inventory-full": "O inventário de {name} está cheio.",
           "item-given": "{amount} {amount_unit} a {name}."
         }

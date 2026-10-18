@@ -66,6 +66,191 @@
             }
           }
         }
+      },
+      "hologram": {
+        "lines": [
+          "{title}",
+          "{row_1}",
+          "{row_2}",
+          "{row_3}",
+          "{row_4}",
+          "{row_5}",
+          "{row_6}",
+          "{row_7}",
+          "{row_8}",
+          "{row_9}",
+          "{row_10}",
+          "",
+          "{hint}",
+          "{selector_1}",
+          "{selector_2}"
+        ],
+        "titles": {
+          "clan_kills": "&6&lCLÃS &f&lABATES",
+          "clan_points": "&6&lTEMPORADA #{season}",
+          "clan_gladiator_wins": "&6&lCLÃS &f&lGLADIADOR",
+          "clan_cxc_wins": "&6&lCLÃS &f&lCXC",
+          "weapon_sword_kills": "&6&lESPADAS &f&lABATES",
+          "weapon_sword_prestige": "&6&lESPADAS &f&lPRESTÍGIO",
+          "weapon_sword_tokens_spent": "&6&lESPADAS &f&lINVESTIMENTO",
+          "weapon_axe_kills": "&6&lMACHADOS &f&lABATES",
+          "weapon_axe_prestige": "&6&lMACHADOS &f&lPRESTÍGIO",
+          "weapon_axe_tokens_spent": "&6&lMACHADOS &f&lINVESTIMENTO",
+          "gladiator_clan_wins": "&6&lGLADIADOR &f&lVITÓRIAS",
+          "gladiator_player_kills": "&6&lGLADIADOR &f&lABATES",
+          "gladiator_rush_wins": "&6&lGLADIADOR &f&lRUSH",
+          "gladiator_rush_reversals": "&6&lGLADIADOR &f&lVIRADAS",
+          "gladiator_myths": "&6&lGLADIADOR &f&lMITOS",
+          "mystery_boxes_opened": "&6&lCAIXAS ABERTAS",
+          "batatadas": "&6&lBATATADAS",
+          "duels_elo_1v1": "&6&lX1 &f&lELO 1V1",
+          "duels_elo_2v2": "&6&lX1 &f&lELO 2V2",
+          "duels_wins": "&6&lX1 &f&lVITÓRIAS",
+          "duels_best_win_streak": "&6&lX1 &f&lWINSTREAK",
+          "clan_fight_player_kills": "&6&lCLANFIGHT &f&lABATES",
+          "clan_fight_clan_wins": "&6&lCLANFIGHT &f&lVITÓRIAS",
+          "fast_glad_player_kills": "&6&lFASTGLAD &f&lABATES",
+          "fast_glad_clan_wins": "&6&lFASTGLAD &f&lVITÓRIAS",
+          "currency_tokens": "&6&lTOKENS",
+          "currency_souls": "&6&lALMAS",
+          "legado_temporada_1": "&6&lANTIGA &f&lTEMPORADA #1",
+          "legado_temporada_2": "&6&lANTIGA &f&lTEMPORADA #2",
+          "legado_temporada_3": "&6&lANTIGA &f&lTEMPORADA #3",
+          "legado_temporada_4": "&6&lANTIGA &f&lTEMPORADA #4",
+          "legado_temporada_5": "&6&lANTIGA &f&lTEMPORADA #5",
+          "legado_temporada_7": "&6&lANTIGA &f&lTEMPORADA #7",
+          "exe_league_dragon": "&6&lEXE LEAGUE &f&lDRAGON",
+          "exe_league_matrix": "&6&lEXE LEAGUE &f&lMATRIX",
+          "exe_league_ragnarok": "&6&lEXE LEAGUE &f&lRAGNAROK",
+          "exe_league_ice": "&6&lEXE LEAGUE &f&lICE",
+          "exe_league_candy": "&6&lEXE LEAGUE &f&lCANDY",
+          "exe_league_origins": "&6&lEXE LEAGUE &f&lORIGINS"
+        },
+        "labels": {
+          "clan_kills": "Clãs",
+          "clan_points": "Pontos",
+          "clan_gladiator_wins": "Gladiador",
+          "clan_cxc_wins": "CxC",
+          "weapon_sword_kills": "Espadas",
+          "weapon_sword_prestige": "Prestígio",
+          "weapon_sword_tokens_spent": "Investimento",
+          "weapon_axe_kills": "Machados",
+          "weapon_axe_prestige": "Prestígio",
+          "weapon_axe_tokens_spent": "Investimento",
+          "gladiator_clan_wins": "Gladiador",
+          "gladiator_player_kills": "Gladiador",
+          "gladiator_rush_wins": "Rush",
+          "gladiator_rush_reversals": "Viradas",
+          "gladiator_myths": "Mitos",
+          "mystery_boxes_opened": "Caixas",
+          "batatadas": "Batatadas",
+          "duels_elo_1v1": "Elo 1v1",
+          "duels_elo_2v2": "Elo 2v2",
+          "duels_wins": "Vitórias",
+          "duels_best_win_streak": "Winstreak",
+          "clan_fight_player_kills": "ClanFight",
+          "clan_fight_clan_wins": "ClanFight",
+          "fast_glad_player_kills": "FastGlad",
+          "fast_glad_clan_wins": "FastGlad",
+          "currency_tokens": "Tokens",
+          "currency_souls": "Almas",
+          "legado_temporada_1": "#1",
+          "legado_temporada_2": "#2",
+          "legado_temporada_3": "#3",
+          "legado_temporada_4": "#4",
+          "legado_temporada_5": "#5",
+          "legado_temporada_7": "#7",
+          "exe_league_dragon": "Dragon",
+          "exe_league_matrix": "Matrix",
+          "exe_league_ragnarok": "Ragnarok",
+          "exe_league_ice": "ICE",
+          "exe_league_candy": "Candy",
+          "exe_league_origins": "Origins"
+        },
+        "rows": {
+          "1": "&6#1 &f{name} &7- &e{value}",
+          "2": "&7#2 &f{name} &7- &e{value}",
+          "3": "&c#3 &f{name} &7- &e{value}",
+          "other": "&8#{position} &f{name} &7- &e{value}",
+          "empty": "&8#{position} &7-/-"
+        },
+        "clan": "&7[&f{tag}&7] &f{name}",
+        "rows-sem-valor": {
+          "1": "&6#1 &f{name}",
+          "2": "&7#2 &f{name}",
+          "3": "&c#3 &f{name}",
+          "other": "&8#{position} &f{name}"
+        },
+        "states": {
+          "loading": "&7Carregando...",
+          "failed": "&cRanking indisponível agora.",
+          "empty": "&7Ninguém neste ranking ainda."
+        },
+        "hint": {
+          "both": "&eEsquerdo: &7evento &8| &eDireito: &7período",
+          "one": "&eClique para alterar!"
+        },
+        "selector": {
+          "selected": "&e&l{option}",
+          "unselected": "&7{option}"
+        },
+        "periods": {
+          "weekly": "Semanal",
+          "season": "Temporada",
+          "total": "Total"
+        }
+      },
+      "commands": {
+        "hologram": {
+          "loading": "Os hologramas de ranking deste servidor ainda estão carregando. Tente de novo em alguns segundos.",
+          "not-found": "Não existe holograma de ranking chamado {hologram_name} neste servidor. Veja os que existem com /topholograma lista.",
+          "create": {
+            "description": "criar um holograma de ranking onde você está",
+            "arguments": {
+              "name": {
+                "name": "nome",
+                "description": "Nome do holograma: letras minúsculas, números, - ou _"
+              },
+              "rankings": {
+                "name": "rankings",
+                "description": "Até 6 ids de ranking separados por espaço, na ordem do clique esquerdo"
+              }
+            },
+            "invalid-name": "Nome inválido: {hologram_name}. Use de 1 a 32 letras minúsculas, números, - ou _.",
+            "already-exists": "Já existe um holograma de ranking chamado {hologram_name}.",
+            "repeated-ranking": "O ranking {ranking} foi repetido. Cada ranking entra uma vez só.",
+            "too-many-rankings": "Um holograma de ranking tem no máximo {max_rankings} rankings.",
+            "rankings-unavailable": "Não foi possível conferir a lista de rankings agora. Tente de novo em alguns instantes.",
+            "unknown-ranking": "Não existe o ranking {ranking}. Veja os ids no TAB do comando.",
+            "success": "Holograma de ranking {hologram_name} criado em {hologram_world} {hologram_x}, {hologram_y}, {hologram_z}, com os rankings {hologram_rankings}."
+          },
+          "list": {
+            "description": "ver os hologramas de ranking deste servidor",
+            "empty": "Nenhum holograma de ranking neste servidor. Crie um com /topholograma criar <nome> <rankings>.",
+            "header": "Hologramas de ranking deste servidor:",
+            "entry": "&e{hologram_name}&7: {hologram_world} {hologram_x}, {hologram_y}, {hologram_z} ({hologram_rankings})"
+          },
+          "move": {
+            "description": "trazer um holograma de ranking para onde você está",
+            "arguments": {
+              "name": {
+                "name": "nome",
+                "description": "Nome do holograma"
+              }
+            },
+            "success": "Holograma de ranking {hologram_name} movido para {hologram_world} {hologram_x}, {hologram_y}, {hologram_z}."
+          },
+          "delete": {
+            "description": "apagar um holograma de ranking de todos os servidores deste tipo",
+            "arguments": {
+              "name": {
+                "name": "nome",
+                "description": "Nome do holograma"
+              }
+            },
+            "success": "Holograma de ranking {hologram_name} apagado."
+          }
+        }
       }
     }
   }

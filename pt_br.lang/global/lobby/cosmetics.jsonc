@@ -83,6 +83,7 @@
           "equipped": "Você equipou {cosmetic_name}&a.",
           "unequipped": "Você removeu o cosmético de {category_name}.",
           "unequipped-all": "Todos os seus cosméticos foram removidos.",
+          "nothing-equipped": "Você não tem nenhum cosmético equipado.",
           "purchased": "Você comprou {cosmetic_name}&a por &6{cosmetic_price} Cash&a!",
           "insufficient": "Você precisa de &6{cosmetic_price} Cash&c para comprar {cosmetic_name}&c. Seu saldo: &6{user_balance} Cash&c.",
           "purchase-failed": "Não foi possível concluir a compra. Tente novamente em instantes.",

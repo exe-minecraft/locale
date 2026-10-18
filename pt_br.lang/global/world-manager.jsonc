@@ -25,6 +25,7 @@
           "invalid-type": "Tipo inválido. Este servidor suporta os tipos vazio e plano.",
           "already-exists": "Já existe um mundo ou uma pasta com esse nome. Para carregar uma pasta existente, use /world importar.",
           "not-on-disk": "Não foi encontrada uma pasta de mundo com level.dat para esse nome neste servidor.",
+          "already-loaded": "Esse mundo já está carregado e no catálogo: não havia nada a importar.",
           "busy": "O world-manager ainda está carregando ou já existe uma operação para esse mundo. Aguarde a conclusão.",
           "error": "Não foi possível concluir a operação do mundo. A falha foi registrada para a equipe técnica.",
           "create": {
@@ -68,8 +69,13 @@
             }
           },
           "main-world": "&cNão é possível usar este comando no mundo principal!",
-          "instant": "&aBorda definida para {size} blocos!",
-          "timed": "&aBorda definida para {size} blocos em {seconds} segundos!",
+          "instant": "&aBorda definida para {size} {size_word}!",
+          "timed": "&aBorda definida para {size} {size_word} em {seconds} {seconds_word}!",
+          "unchanged": "&cA borda já está em {size} {size_word}.",
+          "block": {
+            "singular": "bloco",
+            "plural": "blocos"
+          },
           "invalid": "&cInsira um tamanho entre 1 e 60000000 e um tempo entre 0 e 86400 segundos."
         }
       }

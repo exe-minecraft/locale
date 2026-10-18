@@ -90,7 +90,9 @@
                 "description": "Quantidade de {currency_plural_name_lower_case} serão removidos do jogador"
               }
             },
-            "success": "{currency_color}Você removeu &f{currency_formatted_value} {currency_adaptively_name} do jogador {currency_target_name_with_color}"
+            "success": "{currency_color}Você removeu &f{currency_formatted_value} {currency_adaptively_name} do jogador {currency_target_name_with_color}",
+            // O débito não deixa o saldo negativo: nada foi removido. {currency_formatted_value} é o saldo atual.
+            "insufficient": "O jogador {currency_target_name_with_color} &ctem só &f{currency_formatted_value} {currency_adaptively_name}&c: nada foi removido."
           },
           "set": {
             "description": "definir o saldo de um jogador",

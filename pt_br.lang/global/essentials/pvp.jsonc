@@ -10,6 +10,8 @@
         },
         "status-on": "&eO PvP está habilitado nesse mundo.",
         "status-off": "&eO PvP está desabilitado nesse mundo.",
+        "already-on": "&cO PvP já está habilitado no mundo {world}.",
+        "already-off": "&cO PvP já está desabilitado no mundo {world}.",
         "enabled": [
           "&c ",
           "&4&l  PVP &fVocê &a&lhabilitou&f o PvP no mundo {world}!",

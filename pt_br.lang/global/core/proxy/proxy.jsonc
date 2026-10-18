@@ -103,10 +103,18 @@
             "unsupported-version": [
               "&c&lEXE&r",
               "",
-              "&cUtilize a versão &f1.8+ para",
-              "&cter uma melhor experiência.",
+              "&cA rede é só para o Minecraft &f1.8&c.",
+              "&cEntre com a versão &f1.8.9&c.",
               "",
               "&fdiscord.rede-exe.com"
+            ],
+            "world-downloader": [
+              "&c&lEXE&r",
+              "",
+              "&cDetectamos o World Downloader no seu cliente.",
+              "&cBaixar os mapas da rede não é permitido.",
+              "",
+              "&7Desative o mod e entre de novo para jogar."
             ],
             "lost-sent-to-lobby": [
               "&cO servidor em que você estava caiu, e você foi levado para o lobby."
@@ -137,7 +145,8 @@
               "&cMotivo: {punishment_reason}",
               "",
               "&cSilenciado injustamente?",
-              "&cRevise sua punição em &brede-exe.com/p/{punishment_id}"
+              "&cRevise sua punição em &brede-exe.com/p/{punishment_id}",
+              ""
             ],
             "mute-message-with-expiration": [
               "",
@@ -148,7 +157,8 @@
               "&cExpira em: {punishment_expiration}",
               "",
               "&cSilenciado injustamente?",
-              "&cRevise sua punição em &brede-exe.com/p/{punishment_id}"
+              "&cRevise sua punição em &brede-exe.com/p/{punishment_id}",
+              ""
             ],
             "ban-message-permanent": [
               "&c&lEXE&r",

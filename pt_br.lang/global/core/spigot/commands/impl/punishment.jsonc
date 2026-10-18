@@ -25,7 +25,134 @@
               "description": "A prova da sua punição"
             }
           },
-          "punishment-category-not-found": "Não foi possível encontrar a categoria desejada"
+          "punishment-category-not-found": "Não foi possível encontrar a categoria desejada",
+          "new-account": "&eO nick {target_name} nunca entrou na rede: a conta foi criada agora, e o que você aplicar vale para quem entrar com ele."
+        },
+        "kick": {
+          "arguments": {
+            "target": {
+              "name": "jogador",
+              "description": "Jogador que deseja expulsar da rede"
+            },
+            "reason": {
+              "name": "motivo",
+              "description": "O motivo da expulsão"
+            }
+          },
+          "no-reason": "Motivo não especificado",
+          "success": "Você expulsou o jogador {target_name} com sucesso.",
+          "kick-message": [
+            "&c&lREDE EXE",
+            "",
+            "&cVocê foi expulso do nosso servidor.",
+            "",
+            "&cAutor: {kick_author_name}",
+            "&cMotivo: {kick_reason}",
+            "",
+            "&fAlguma dúvida? Acesse o nosso Discord: &ediscord.rede-exe.com"
+          ],
+          "broadcast": [
+            " ",
+            " &7[Modo Silencioso]",
+            " &c[!] {target_name_with_tag} &cfoi punido por {kick_author_name_with_tag}",
+            " &c[!] Motivo: {kick_reason}",
+            " "
+          ]
+        },
+        "hpunish": {
+          "arguments": {
+            "page": {
+              "name": "página",
+              "description": "A página da lista"
+            }
+          },
+          "message": {
+            "empty": "Nenhuma punição nas últimas {hpunish_hours} horas.",
+            "page-not-found": "A página {hpunish_page} não existe. A última é a {hpunish_pages}.",
+            "header": [
+              "",
+              " &ePunições das últimas {hpunish_hours} horas &7({hpunish_total} {hpunish_punishments})",
+              " &a▪ Ativa  &c▪ Finalizada ou revogada",
+              ""
+            ],
+            "punishments": {
+              "singular": "punição",
+              "plural": "punições"
+            },
+            "entry": " {hpunish_color}▪ &f{hpunish_target} &8- &7{hpunish_date} &8- {hpunish_color}{hpunish_title}",
+            "unknown": "?",
+            "state": {
+              "active": "&aAtiva",
+              "expired": "&cFinalizada",
+              "revoked": "&cRevogada"
+            },
+            "state-color": {
+              "active": "&a",
+              "ended": "&c"
+            },
+            "permanent": "Permanente",
+            "no-proof": "sem prova",
+            "hover": [
+              "&e{hpunish_target}",
+              "",
+              "&7Tipo: &f{hpunish_type}",
+              "&7Motivo: &f{hpunish_title}",
+              "&7Prova: &f{hpunish_proof}",
+              "&7Autor: &f{hpunish_author}",
+              "&7Aplicada em: &f{hpunish_date}",
+              "&7Duração: &f{hpunish_duration}",
+              "&7Estado: {hpunish_state}"
+            ],
+            "hover-hidden": "&7Aplicada em silêncio",
+            "hover-click": [
+              "",
+              "&eClique para ver o histórico do jogador."
+            ],
+            "previous": "&e← Anterior  ",
+            "next": "  &ePróxima →",
+            "footer": " {hpunish_previous}&7Página {hpunish_page} de {hpunish_pages}{hpunish_next}"
+          }
+        },
+        "punishment-statistics": {
+          "arguments": {
+            "action": {
+              "name": "anunciar",
+              "description": "Anuncia as estatísticas para a rede"
+            },
+            "audience": {
+              "name": "staff",
+              "description": "Anuncia só para a staff"
+            }
+          },
+          "usage": {
+            "show": {
+              "syntax": "",
+              "description": "Mostra as estatísticas de punições"
+            },
+            "broadcast": {
+              "syntax": "anunciar [staff]",
+              "description": "Anuncia para a rede toda, ou só para a staff"
+            }
+          },
+          "message": {
+            "statistics": [
+              "",
+              " &6&lEstatísticas de punições",
+              " &eÚltimas 24 horas: &f{statistics_day_punishments} {statistics_day_punishments_word} &7({statistics_day_players} {statistics_day_players_word})",
+              " &eÚltimos 30 dias: &f{statistics_month_punishments} {statistics_month_punishments_word} &7({statistics_month_players} {statistics_month_players_word})",
+              ""
+            ],
+            "punishments": {
+              "singular": "punição",
+              "plural": "punições"
+            },
+            "players": {
+              "singular": "jogador punido",
+              "plural": "jogadores punidos"
+            }
+          },
+          "broadcast-all": "Estatísticas de punições anunciadas para a rede toda.",
+          "broadcast-staff": "Estatísticas de punições anunciadas para a staff."
         },
         "punishment-revoke": {
           "arguments": {

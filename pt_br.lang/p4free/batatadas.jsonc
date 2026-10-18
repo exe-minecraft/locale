@@ -42,6 +42,7 @@
         }
       },
       "updated": "&aContagem atualizada.",
+      "unchanged": "&cA contagem já era {amount} {amount_unit}. Nada foi gravado.",
       "failed": "&cNão foi possível consultar ou atualizar as batatadas agora.",
       "reset-done": "&aSuas batatadas foram zeradas.",
       "reset-failed": "&cNão foi possível zerar as batatadas agora. O item voltou para o seu inventário.",

@@ -38,7 +38,8 @@
             },
             "need-admin": "Você precisa ser admin nesse servidor para revogar a liberação.",
             "error": "Sua tentativa de revogar a liberação falhou, tente novamente mais tarde!",
-            "success": "{target_name} não pode mais entrar em {server_id} em manutenção."
+            "success": "{target_name} não pode mais entrar em {server_id} em manutenção.",
+            "not-granted": "{target_name} não tinha liberação ativa em {server_id}."
           },
           "list": {
             "description": "ver quem está liberado num servidor em manutenção",

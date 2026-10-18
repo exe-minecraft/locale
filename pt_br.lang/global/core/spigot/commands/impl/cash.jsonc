@@ -26,6 +26,7 @@
               }
             },
             "success": "&aVocê definiu o Cash de {cash_target_name_with_color} &apara {cash_formatted_value}.",
+            "same": "&cO Cash de {cash_target_name_with_color} &cjá é {cash_formatted_value}.",
             "error": "&cSua tentativa de definir o seu saldo falhou, tente novamente mais tarde!"
           },
           "add": {

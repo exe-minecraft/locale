@@ -329,8 +329,10 @@
         "invalid-copy": "&cA arena {name} tem {copies}. Escolha de 1 a {last}.",
         "icon-missing": "&cSegure na mão o item do ícone.",
         "icon-set": "&aÍcone da arena {name} trocado.",
+        "icon-unchanged": "&cA arena {name} já tem esse ícone.",
         "no-spawns": "&cMarque os dois spawns da arena {name} antes.",
         "copies-removed": "&aA arena {name} fica com {copies}.",
+        "copies-unchanged": "&cA arena {name} já tem {copies}.",
         "copies-pasting": "&7Colando {copies} da arena {name}...",
         "copies-done": "&aA arena {name} tem agora {copies}.",
         "list-empty": "&7Nenhuma arena criada.",
@@ -343,7 +345,9 @@
           "ready": "&apronta"
         },
         "enabled": "&aArena {name} ativada.",
-        "disabled": "&cArena {name} desativada."
+        "disabled": "&cArena {name} desativada.",
+        "already-enabled": "&cA arena {name} já está ativada.",
+        "already-disabled": "&cA arena {name} já está desativada."
       },
       // O nome de cada molde de CxC no menu de mapas e no convite. A chave é o nome do molde (o da schematic).
       "arenas": {
@@ -660,6 +664,8 @@
                 "{action}"
               ],
               "team": "&f{players} &8(vivos: {alive} de {size})",
+              // No 1v1 cada lado é um jogador só: sem a contagem de vivos.
+              "solo": "&f{players}",
               "clan-team": "&f{tag} &8(vivos: {alive} de {size})"
             }
           }
@@ -718,7 +724,8 @@
             "target": [ "&aClique para trazer a peça escolhida." ]
           },
           "selected": "&8 ▸ &fEscolhida: {piece}",
-          "saved": "&aArranjo do kit salvo. Vale a partir da próxima luta."
+          "saved": "&aArranjo do kit salvo. Vale a partir da próxima luta.",
+          "unchanged": "&cO arranjo é o mesmo que já está salvo. Mude uma peça de lugar antes de salvar."
         },
         // A foto do inventário de quem lutou, aberta pelo clique no nome do resultado: só o kit da partida, no instante
         // em que a luta acabou para ele (a morte, a saída ou o fim).

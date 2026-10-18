@@ -255,6 +255,7 @@
               "value": { "name": "valor", "description": "O valor novo, com _ no lugar dos espaços na descrição" }
             },
             "invalid-value": "Valor inválido: nome até {max_name} caracteres, descrição até {max_description}, material como DIAMOND.",
+            "unchanged": "A tag &f{id} &cjá está com esse valor. Nada foi gravado.",
             "updated": "Tag &f{id} &aatualizada: {tag}&a."
           },
           "list": {

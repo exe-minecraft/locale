@@ -13,6 +13,7 @@
           "not-positive": "&cO raio deve ser maior que zero.",
           "teleported": "&eVocê foi teleportado.",
           "success": "&aVocê teleportou {players} para você.",
+          "nobody": "&cNão há nenhum jogador nesse raio.",
           "players": {
             "one": "1 jogador",
             "many": "{count} jogadores"

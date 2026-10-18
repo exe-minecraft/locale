@@ -31,7 +31,9 @@
           "app-not-found": "Não foi possível encontrar nenhum servidor com esse id!",
           "app-proxy": "Ops, a aplicação informada é do tipo Proxy.",
           "app-offline": "Ops, parece que esse servidor está offline.",
-          "success": "Conectando-se ao servidor \"{app_id}\"."
+          "success": "Conectando-se ao servidor \"{app_id}\".",
+          "already-connected": "Você já está em \"{app_id}\".",
+          "already-connected-target": "{target_name} já está em \"{app_id}\"."
         },
         "profile": {
           "message": {
@@ -122,9 +124,14 @@
           "only-staff": "&c{target_name} não é da staff: o modo God só vale para a staff.",
           "list-header": [
             "",
-            "&eLista de todos os jogadores em modo God:"
+            "&eLista de todos os jogadores em modo God:",
+            ""
           ],
           "list-entry": "&e • {player}",
+          "list-entry-app": "&e • {player} &7({app})",
+          "list-footer": [
+            ""
+          ],
           "list-empty": "&cNão há jogadores em modo God no momento."
         },
         "fix": {

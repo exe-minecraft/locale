@@ -11,13 +11,15 @@
       "units": {
         "member": { "singular": "membro", "plural": "membros" },
         "clan": { "singular": "clã", "plural": "clãs" },
+        "point": { "singular": "ponto", "plural": "pontos" },
         "pending-invite": { "singular": "convite de clã parado", "plural": "convites de clã parados" }
       },
-      // O bloco do exe-scoreboard em Documents: tag sem cor e nome juntos, membros logo abaixo.
-      // Com a tag sem cor, até o nome de 16 letras cabe na linha do protocolo 1.8.
+      // O bloco do exe-scoreboard em Documents: tag e nome juntos, membros logo abaixo. A {tag} já vem com a
+      // cor do clã (cinza quando ela não tem cor), desde 17/10. Com uma cor na tag, até o nome de 16 letras cabe
+      // na linha do protocolo 1.8; com duas, 15, e com três, 13.
       "scoreboard": {
         "clan": [
-          "&f [&7{tag}&f] {name}",
+          "&f [{tag}&f] {name}",
           "&f Membros: &7{members}/{max_members}"
         ],
         "no-clan": [
@@ -204,6 +206,10 @@
             ],
             "index-entry": "  &8• &b{section_name}",
             "index-entry-hover": "&eClique para abrir esta seção.",
+            // Fecha a lista das seções com a linha em branco que o index abre.
+            "index-footer": [
+              ""
+            ],
             "sections": {
               "clan-player-name": "Comandos clã, jogador",
               "player-clan-name": "Comandos jogador, clã",
@@ -627,7 +633,8 @@
             "errors": {
               "invalid-tag": "&cA tag precisa ter 3 letras ou números. Para zerar todos os clãs, use /clan resetar todos.",
               "no-confirmation": "&cNada foi zerado: use o comando sem o confirmar primeiro e confirme em seguida.",
-              "no-record": "&cNão existe clã com a tag {tag}, e ela não guarda nada de um clã desfeito."
+              "no-record": "&cNão existe clã com a tag {tag}, e ela não guarda nada de um clã desfeito.",
+              "already-reset": "&cO clã {clan_label} &cjá está zerado: não tem pontos, abates, mortes, vitórias, autorização nem boletim."
             },
             "confirm-clan": [
               "",
@@ -718,7 +725,7 @@
             "errors": {
               "invalid-amount": "&cOs pontos precisam ser maiores que zero."
             },
-            "success": "&aVocê somou &6{points} &apontos ao clã &7[{clan_colored_tag}&7]&a, que agora tem &6{clan_points}&a."
+            "success": "&aVocê somou &6{points} &a{points_unit} ao clã &7[{clan_colored_tag}&7]&a, que agora tem &6{clan_points}&a."
           },
           "removepoints": {
             "description": "tirar pontos de um clã",
@@ -733,9 +740,11 @@
               }
             },
             "errors": {
-              "invalid-amount": "&cOs pontos precisam ser maiores que zero."
+              "invalid-amount": "&cOs pontos precisam ser maiores que zero.",
+              "no-points": "&cO clã &7[{clan_colored_tag}&7] &cnão tem pontos para tirar."
             },
-            "success": "&cVocê tirou &6{points} &cpontos do clã &7[{clan_colored_tag}&7]&c, que agora tem &6{clan_points}&c."
+            // {points} é o que saiu de verdade: com o corte em zero, só o que o clã tinha.
+            "success": "&cVocê tirou &6{points} &c{points_unit} do clã &7[{clan_colored_tag}&7]&c, que agora tem &6{clan_points}&c."
           },
           "maxmembers": {
             "description": "definir o máximo de membros de todos os clãs",
@@ -746,7 +755,8 @@
               }
             },
             "errors": {
-              "invalid-amount": "&cA quantidade precisa ser maior que zero."
+              "invalid-amount": "&cA quantidade precisa ser maior que zero.",
+              "unchanged": "&cO máximo de membros por clã já é &6{max_members}&c."
             },
             "success": "&aO máximo de membros por clã agora é &6{max_members}&a. Clã que já passou disso não perde ninguém."
           },
