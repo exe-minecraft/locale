@@ -231,7 +231,64 @@
       "already-in-event": "&cVocê já está participando do {event}.",
       "stash-failed": "&cNão foi possível guardar seu inventário agora. Tente entrar no {event} de novo.",
       "action-success": "&aAção aplicada ao evento com sucesso!",
-      "action-failed": "&cNão foi possível aplicar esta ação no estado atual do evento."
+      "action-failed": "&cNão foi possível aplicar esta ação no estado atual do evento.",
+      // O menu do /clanfight e do /fastglad, como o do Gladiador (views.gladiator.primary do events.jsonc). O layout
+      // de cada um fica no server-menus (events/clan-fight/primary e events/fast-glad/primary).
+      "views": {
+        "primary": {
+          "title": "{event}",
+          "items": {
+            "ranking": {
+              "name": "&eRanking",
+              "lore": [
+                "&7Clique com o botão esquerdo para",
+                "&7abrir o ranking do &6{event}&7."
+              ]
+            },
+            "commands": {
+              "name": "&eComandos",
+              "lore": [
+                "&7Clique com o botão esquerdo para saber",
+                "&7todos os comandos do &6{event}&7!"
+              ]
+            },
+            "event": {
+              "inactive": {
+                "name": "&cNenhum evento rolando",
+                "lore": [
+                  "&7Nenhum evento está acontecendo nesse",
+                  "&7momento. Fique ligado em nosso &fDiscord&7."
+                ]
+              },
+              "waiting": {
+                "name": "&6{event}",
+                "lore": [
+                  "&fO evento está {event_status}&f!",
+                  "",
+                  "&c• &fTag {event_tag} &fpara o clan vencedor",
+                  "",
+                  "&7Participantes: &f{event_players}",
+                  "&7Clans: &f{event_clans}",
+                  "",
+                  "&7Clique com o botão esquerdo para entrar",
+                  "&7Clique com o botão direito para assistir"
+                ]
+              },
+              "running": {
+                "name": "&6{event}",
+                "lore": [
+                  "&fO evento está {event_status}&f!",
+                  "",
+                  "&7Participantes vivos: &f{event_players}",
+                  "&7Clans vivos: &f{event_clans}",
+                  "",
+                  "&7Clique com o botão direito para assistir"
+                ]
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
