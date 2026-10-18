@@ -165,6 +165,11 @@
         "border-change": {
           "title": "&4Borda fechando!",
           "subtitle": "&fMovam-se para dentro da nova área!"
+        },
+        // O deathmatch do FastGlad começou, com a explosão: o title tira da tela o "Borda fechando!".
+        "deathmatch": {
+          "title": "&4&lDEATHMATCH",
+          "subtitle": "&fA luta final vai começar!"
         }
       },
       // O fim de cada duelo: o {round_result} é uma das linhas do round-result, e o {round_hits} a linha do round-hits,
