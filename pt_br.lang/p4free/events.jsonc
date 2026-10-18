@@ -561,7 +561,7 @@
           // O /spawn de quem luta, espera o rejoin ou está no camarote (EventsListener.onSpawnRequest).
           "spawn-blocked": "Dentro de um evento não há /spawn: saia pelo comando do evento, como o /glad sair.",
           // O /ec (e os apelidos) no camarote ou à espera do rejoin: lá os itens reais estão guardados (EventsListener).
-          "cabin-ender-chest": "O baú não abre no camarote: os seus itens estão guardados até você sair dele."
+          "cabin-ender-chest": "Você não pode abrir o baú enquanto estiver no camarote. Seus itens ficam guardados até você sair."
         },
         "events": {
           // A espera de um evento na barra de ação de todos no p4free (EventCountdownEchoListener), a cada segundo, como
