@@ -284,6 +284,7 @@
         "level-invalid": "Esta perk vai até o nível {max_level}.",
         "currency-missing": "A moeda desta perk não existe neste servidor. Avise a equipe.",
         "not-enough": "Você não tem {price} {currency}.",
+        "charge-failed": "Não deu para confirmar a cobrança, e a perk não subiu. Se o valor saiu da sua conta, ele volta sozinho.",
         // O salto é sempre de dois níveis ou mais: a compra de um só vai para "bought".
         "bought": "&a{perk} &fsubiu para o nível &a{level} &fpor &a{price} {currency}&f.",
         "bought-many": "&a{perk} &fsubiu {levels} níveis, até o nível &a{level}&f, por &a{price} {currency}&f.",

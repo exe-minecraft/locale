@@ -61,6 +61,8 @@
           "still-loading": "Sua espada ainda está carregando. Tente de novo em instantes.",
           "inventory-full": "Libere um espaço no inventário antes de resgatar a espada.",
           "already-have": "Você já tem a espada especial na mochila.",
+          "in-vault": "Sua espada especial está guardada no seu /cofre.",
+          "vault-busy": "Seu cofre está aberto ou ainda sendo salvo. Tente de novo em instantes.",
           "cooldown": "Aguarde para resgatar a espada de novo.",
           "retrieved": [
             "",
@@ -84,6 +86,8 @@
           "still-loading": "Seu machado ainda está carregando. Tente de novo em instantes.",
           "inventory-full": "Libere um espaço no inventário antes de resgatar o machado.",
           "already-have": "Você já tem o machado especial na mochila.",
+          "in-vault": "Seu machado especial está guardado no seu /cofre.",
+          "vault-busy": "Seu cofre está aberto ou ainda sendo salvo. Tente de novo em instantes.",
           "cooldown": "Aguarde para resgatar o machado de novo.",
           "retrieved": [
             "",
