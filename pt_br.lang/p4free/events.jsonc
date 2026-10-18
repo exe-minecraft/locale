@@ -52,7 +52,7 @@
         "border-manual": "&f Borda &c&lMANUAL",
         "border-closing": "&f Borda &4Fechando...",
         "deathmatch": "&f &4&lDEATHMATCH",
-        "rushes": " Rushes ativos ({rushes}):",
+        "rushes": "&f Rushes ativos ({rushes}):",
         "rush": " {first_tag} &7{first_alive} &fvs {second_tag} &7{second_alive}"
       },
       "arena-scoreboards": {
