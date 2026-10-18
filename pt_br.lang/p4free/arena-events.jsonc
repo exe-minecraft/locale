@@ -84,6 +84,11 @@
         "&4&l&m      &c&l&m      &r &f&l{event_title} &c&l&m      &4&l&m      ",
         ""
       ],
+      // A contagem na barra de ação, a cada segundo, para quem está na arena e no camarote, como a do Gladiador.
+      "actionbar": {
+        "waiting": "&aComeçando em {time}...",
+        "preparing": "&aO PvP vai ser ativo em {time}..."
+      },
       // O (N) das entradas e saídas é quantos ainda estão no evento.
       "join": "&4[{event}] &cO jogador &7[{clan_tag}&7] &f{player_name} &centrou no evento. &f({event_players})",
       "quit": "&4[{event}] &cO jogador &7[{clan_tag}&7] &f{player_name} &csaiu do evento. &f({event_players})",
