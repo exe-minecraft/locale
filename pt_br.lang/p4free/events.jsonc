@@ -472,6 +472,12 @@
           },
           "reviver": {
             "description": "reviver um jogador no ClanFight"
+          },
+          "expulsar": {
+            "description": "expulsar um jogador do ClanFight"
+          },
+          "expulsarclan": {
+            "description": "expulsar um clan inteiro do ClanFight"
           }
         },
         "fastglad": {
@@ -529,6 +535,12 @@
           },
           "reviver": {
             "description": "reviver um jogador no FastGlad"
+          },
+          "expulsar": {
+            "description": "expulsar um jogador do FastGlad"
+          },
+          "expulsarclan": {
+            "description": "expulsar um clan inteiro do FastGlad"
           },
           "mercador": {
             "description": "abrir a loja do Mercador Sombrio durante a luta"

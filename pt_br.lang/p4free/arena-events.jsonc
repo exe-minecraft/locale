@@ -14,6 +14,14 @@
         "player": {
           "name": "jogador",
           "description": "Jogador a reviver no evento"
+        },
+        "kick-player": {
+          "name": "jogador",
+          "description": "Jogador a expulsar do evento"
+        },
+        "clan": {
+          "name": "tag",
+          "description": "A tag do clan a expulsar do evento"
         }
       },
       // A tag de um clan nos abates, pintada para cada um que lê: verde para o próprio clan, vermelha para os outros.
@@ -94,6 +102,10 @@
       // O (N) das entradas e saídas é quantos ainda estão no evento.
       "join": "&4[{event}] &cO jogador &7[{clan_tag}&7] &f{player_name} &centrou no evento. &f({event_players})",
       "quit": "&4[{event}] &cO jogador &7[{clan_tag}&7] &f{player_name} &csaiu do evento. &f({event_players})",
+      // O expulsar e o expulsar clan da staff, como o /fastglad kick e kickclan do exe-fastgladiator.
+      "kicked": "&4[{event}] &cO jogador &7[{clan_tag}&7] &f{player_name} &cfoi expulso do evento. &f({event_players})",
+      "clan-kicked": "&4[{event}] &cO clan &7[{clan_tag}&7] &cfoi expulso do evento.",
+      "kicked-notice": "&cVocê foi expulso do {event} por um membro da Staff!",
       "kill": "&4[{event}] {victim_clan} {victim_name} &7foi &c&lELIMINADO &7por {killer_clan} {killer_name} &7({killer_kills} {killer_kills_unit}).",
       // A morte sem matador (queda, lava, borda).
       "death": "&4[{event}] {victim_clan} {victim_name} &7foi &c&lELIMINADO &7do evento.",
@@ -271,6 +283,14 @@
       ],
       "hits-ranking-entry": "&6 {position}º &7[{clan}&7] &f{player} &7com &b{hits} &7{hits_unit}",
       "hits-ranking-footer": [""],
+      // Logo depois do vencedor do FastGlad, como o exe-fastgladiator: os 3 que mais abateram na partida.
+      "kills-ranking": [
+        "",
+        "&e&l Os jogadores com mais abates foram:",
+        ""
+      ],
+      "kills-ranking-entry": "&6 {position}º &7[{clan}&7] &f{player} &7com &c{kills} &7{kills_unit}",
+      "kills-ranking-footer": [""],
       "cannot-join": "&cNão foi possível entrar no {event}. Confira o seu clan e o limite de membros do evento.",
       "combat-leave": "&cVocê não pode sair do {event} em combate!",
       "command-blocked": "&cVocê não pode usar comandos durante o {event}.",
@@ -278,6 +298,11 @@
       "already-in-event": "&cVocê já está participando do {event}.",
       "stash-failed": "&cNão foi possível guardar seu inventário agora. Tente entrar no {event} de novo.",
       "action-success": "&aAção aplicada ao evento com sucesso!",
+      "kick-success": "&aVocê expulsou {player} do {event}.",
+      "kick-failed": "&c{player} não está no {event}.",
+      "kick-clan-success": "&aVocê expulsou o clan {clan} do {event}.",
+      "kick-clan-failed": "&cO clan {clan} não tem ninguém lutando no {event}.",
+      "clan-not-found": "&cNão existe nenhum clan com a tag {clan}.",
       "action-failed": "&cNão foi possível aplicar esta ação no estado atual do evento.",
       // O menu do /clanfight e do /fastglad, como o do Gladiador (views.gladiator.primary do events.jsonc). O layout
       // de cada um fica no server-menus (events/clan-fight/primary e events/fast-glad/primary).
