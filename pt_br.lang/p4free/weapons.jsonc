@@ -403,25 +403,44 @@
       },
       // O livro de encantamento, o segundo caminho para subir um nível.
       "enchant-book": {
-        "display-name": "Livro de encantamento",
+        "display-name": "Evolução de Nível",
+        "level": {
+          "singular": "nível",
+          "plural": "níveis"
+        },
+        "weapons": {
+          "sword": {
+            "description": "em sua espada.",
+            "hint-start": "&eArraste este item até a",
+            "hint-end": "&esua espada para evoluir."
+          },
+          "axe": {
+            "description": "em seu machado.",
+            "hint-start": "&eArraste este item até o",
+            "hint-end": "&eseu machado para evoluir."
+          }
+        },
         "item": {
-          "name": "&fLivro de &a{enchant}",
+          "name": "&bEvolução de Nível &8(+{levels})",
           "lore": [
+            "&fTipo: &7{enchant}",
             "",
-            "&7Soma &a+{levels} &7ao nível de",
-            "&7&o{enchant}&7 na sua arma.",
+            "&7 Evolua &e+{levels} {levels_word} &7do encantamento",
+            "&d {enchant}&7 {weapon_description}",
             "",
-            "&eArraste sobre a arma."
+            "{weapon_hint_start}",
+            "{weapon_hint_end}"
           ]
         }
       },
+
       // O Reparador, o prêmio do encantamento Reparo da espada.
       "repairer": {
         "item": {
           "name": "&cReparador",
           "lore": [
-            "&7Repara a armadura do corpo",
-            "&7no clique direito."
+            "&7Repara sua armadura do",
+            "&7corpo ao clicar com o botão direito."
           ]
         },
         "announce": [
