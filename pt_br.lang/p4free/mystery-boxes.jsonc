@@ -2,8 +2,8 @@
   "plugins": {
     "mystery-boxes": {
       "types": {
-        "basic": "&aCaixa Misteriosa Básica",
-        "advanced": "&bCaixa Misteriosa Avançada"
+        "basic": "&aCaixa Misteriosa &7(Básica)",
+        "advanced": "&bCaixa Misteriosa &7(Avançada)"
       },
       "rarities": {
         "common": "Comum",
@@ -27,11 +27,422 @@
       "commands": {
         "caixas": {
           "usage": {
-            "view": { "syntax": "ver <tipo>", "description": "ver os prêmios de uma caixa" },
-            "top": { "syntax": "top", "description": "ver o ranking de caixas abertas" },
-            "give": { "syntax": "dar <jogador> <tipo> <quantidade>", "description": "entregar caixas, de 1 a 64" }
+            "view": {
+              "syntax": "ver <tipo>",
+              "description": "ver os prêmios de uma caixa"
+            },
+            "top": {
+              "syntax": "top",
+              "description": "ver o ranking de caixas abertas"
+            },
+            "give": {
+              "syntax": "dar <jogador> <tipo> <quantidade>",
+              "description": "entregar caixas, de 1 a 64"
+            }
           }
         }
+      },
+      "items": {
+        "basic": {
+          "lore": [
+            "&fRaridade: &e✫&7✫✫✫✫",
+            "",
+            "&7Uma caixa misteriosa cheia de",
+            "&7surpresas. Clique com o botão direito",
+            "&7para descobrir o que há dentro!",
+            "",
+            "&7Agache e clique direito para ver os prêmios."
+          ]
+        },
+        "advanced": {
+          "lore": [
+            "&fRaridade: &e✫✫&7✫✫✫",
+            "",
+            "&7Uma caixa misteriosa cheia de",
+            "&7surpresas. Clique com o botão direito",
+            "&7para descobrir o que há dentro!",
+            "",
+            "&7Agache e clique direito para ver os prêmios."
+          ]
+        }
+      },
+      "rewards": {
+        "basic": {
+          "tokens_1": {
+            "name": "Cheque de Tokens (1.000)",
+            "lore": [
+              "&fRaridade: &7Comum",
+              "",
+              "&7Ative o cheque e receba",
+              "&7tokens para utilizar no servidor.",
+              "",
+              "&fValor: &a1.000 tokens"
+            ]
+          },
+          "fortune_sword_1": {
+            "name": "Evolução de Fortuna para Espada (+10)",
+            "lore": [
+              "&fRaridade: &7Comum",
+              "",
+              "&7Evolua &e+10 níveis &7do encantamento",
+              "&aFortuna &7em sua espada."
+            ]
+          },
+          "fortune_axe_1": {
+            "name": "Evolução de Fortuna para Machado (+10)",
+            "lore": [
+              "&fRaridade: &7Comum",
+              "",
+              "&7Evolua &e+10 níveis &7do encantamento",
+              "&aFortuna &7em seu machado."
+            ]
+          },
+          "tokens_2": {
+            "name": "Cheque de Tokens (3.500)",
+            "lore": [
+              "&fRaridade: &dRaro",
+              "",
+              "&7Ative o cheque e receba",
+              "&7tokens para utilizar no servidor.",
+              "",
+              "&fValor: &a3.500 tokens"
+            ]
+          },
+          "repair_1": {
+            "name": "Evolução de Reparador (+10)",
+            "lore": [
+              "&fRaridade: &dRaro",
+              "",
+              "&7Evolua &e+10 níveis &7do encantamento",
+              "&bReparador &7em sua espada."
+            ]
+          },
+          "itemrepair_1": {
+            "name": "Reparador",
+            "lore": [
+              "&fRaridade: &dRaro",
+              "",
+              "&7Repara sua armadura do",
+              "&7corpo ao clicar com o botão direito.",
+              "",
+              "&fQuantidade: &e1"
+            ]
+          },
+          "cash_1": {
+            "name": "Cheque de Cash (✪ 800)",
+            "lore": [
+              "&fRaridade: &6Lendário",
+              "",
+              "&7Ative o cheque e receba",
+              "&7cash para utilizar no servidor.",
+              "",
+              "&fValor: &6✪ 800 cash"
+            ]
+          },
+          "drainage_1": {
+            "name": "Evolução de Drenagem (+5)",
+            "lore": [
+              "&fRaridade: &6Lendário",
+              "",
+              "&7Evolua &e+5 níveis &7do encantamento",
+              "&cDrenagem &7em sua espada."
+            ]
+          },
+          "mb_1": {
+            "name": "Caixa Misteriosa (Básica)",
+            "lore": [
+              "&fRaridade: &6Lendário",
+              "",
+              "&7Uma caixa misteriosa cheia de",
+              "&7surpresas. Clique com o botão direito",
+              "&7para descobrir o que há dentro!",
+              "",
+              "&fQuantidade: &e2"
+            ]
+          },
+          "echestone_1": {
+            "name": "Melhoria no Baú do Fim",
+            "lore": [
+              "&fRaridade: &6Lendário",
+              "",
+              "&7Tenha uma linha adicional no",
+              "&7seu baú do fim &8(/echest)&7.",
+              "",
+              "&cAviso: &fO máximo de linhas no baú do fim são &66&f."
+            ]
+          },
+          "mb_2": {
+            "name": "Caixa Misteriosa (Avançada)",
+            "lore": [
+              "&fRaridade: &bMítico",
+              "",
+              "&7Uma caixa misteriosa cheia de",
+              "&7surpresas. Clique com o botão direito",
+              "&7para descobrir o que há dentro!",
+              "",
+              "&fQuantidade: &e1"
+            ]
+          },
+          "amplifier_1": {
+            "name": "Evolução de Amplificador (+1)",
+            "lore": [
+              "&fRaridade: &bMítico",
+              "",
+              "&7Evolua &e+1 nível &7do encantamento",
+              "&dAmplificador &7em sua espada."
+            ]
+          },
+          "berserker_1": {
+            "name": "Berserker [05:00]",
+            "lore": [
+              "&fRaridade: &bMítico",
+              "",
+              "&7Tenha acesso ilimitado a poção",
+              "&7berserker de &f5 minutos&7.",
+              "",
+              "&fComando: &7/berserker",
+              "",
+              "&7Válido durante esta temporada."
+            ]
+          },
+          "boosttoken_1": {
+            "name": "Booster de Tokens [Individual]",
+            "lore": [
+              "&fRaridade: &bMítico",
+              "",
+              "&7Ative esse booster e dobre",
+              "&7o valor de tokens obtidos.",
+              "",
+              "&fDuração: &720m &8(Esse tempo é acumulativo)"
+            ]
+          }
+        },
+        "advanced": {
+          "tokens_1": {
+            "name": "Cheque de Tokens (3.500)",
+            "lore": [
+              "&fRaridade: &7Comum",
+              "",
+              "&7Ative o cheque e receba",
+              "&7tokens para utilizar no servidor.",
+              "",
+              "&fValor: &a3.500 tokens"
+            ]
+          },
+          "fortune_sword_1": {
+            "name": "Evolução de Fortuna para Espada (+10)",
+            "lore": [
+              "&fRaridade: &7Comum",
+              "",
+              "&7Evolua &e+10 níveis &7do encantamento",
+              "&aFortuna &7em sua espada."
+            ]
+          },
+          "fortune_axe_1": {
+            "name": "Evolução de Fortuna para Machado (+10)",
+            "lore": [
+              "&fRaridade: &7Comum",
+              "",
+              "&7Evolua &e+10 níveis &7do encantamento",
+              "&aFortuna &7em seu machado."
+            ]
+          },
+          "tokens_2": {
+            "name": "Cheque de Tokens (5.000)",
+            "lore": [
+              "&fRaridade: &dRaro",
+              "",
+              "&7Ative o cheque e receba",
+              "&7tokens para utilizar no servidor.",
+              "",
+              "&fValor: &a5.000 tokens"
+            ]
+          },
+          "repair_1": {
+            "name": "Evolução de Reparador (+10)",
+            "lore": [
+              "&fRaridade: &dRaro",
+              "",
+              "&7Evolua &e+10 níveis &7do encantamento",
+              "&bReparador &7em sua espada."
+            ]
+          },
+          "itemrepair_1": {
+            "name": "Reparador",
+            "lore": [
+              "&fRaridade: &dRaro",
+              "",
+              "&7Repara sua armadura do",
+              "&7corpo ao clicar com o botão direito.",
+              "",
+              "&fQuantidade: &e2"
+            ]
+          },
+          "echesttwo_1": {
+            "name": "Melhoria no Baú do Fim",
+            "lore": [
+              "&fRaridade: &dRaro",
+              "",
+              "&7Tenha duas linhas adicionais no",
+              "&7seu baú do fim &8(/echest)&7.",
+              "",
+              "&cAviso: &fO máximo de linhas no baú do fim são &66&f."
+            ]
+          },
+          "cash_1": {
+            "name": "Cheque de Cash (✪ 1.200)",
+            "lore": [
+              "&fRaridade: &6Lendário",
+              "",
+              "&7Ative o cheque e receba",
+              "&7cash para utilizar no servidor.",
+              "",
+              "&fValor: &6✪ 1.200 cash"
+            ]
+          },
+          "fortune_sword_2": {
+            "name": "Evolução de Fortuna para Espada(+25)",
+            "lore": [
+              "&fRaridade: &6Lendário",
+              "",
+              "&7Evolua &e+25 níveis &7do encantamento",
+              "&aFortuna &7em sua espada."
+            ]
+          },
+          "fortune_axe_2": {
+            "name": "Evolução de Fortuna para Machado (+25)",
+            "lore": [
+              "&fRaridade: &6Lendário",
+              "",
+              "&7Evolua &e+25 níveis &7do encantamento",
+              "&aFortuna &7em sua espada."
+            ]
+          },
+          "repair_2": {
+            "name": "Evolução de Reparador (+25)",
+            "lore": [
+              "&fRaridade: &bMítico",
+              "",
+              "&7Evolua &e+25 níveis &7do encantamento",
+              "&bReparador &7em sua espada."
+            ]
+          },
+          "drainage_1": {
+            "name": "Evolução de Drenagem (+5)",
+            "lore": [
+              "&fRaridade: &6Lendário",
+              "",
+              "&7Evolua &e+5 níveis &7do encantamento",
+              "&cDrenagem &7em sua espada."
+            ]
+          },
+          "mb_1": {
+            "name": "Caixa Misteriosa (Básica)",
+            "lore": [
+              "&fRaridade: &6Lendário",
+              "",
+              "&7Uma caixa misteriosa cheia de",
+              "&7surpresas. Clique com o botão direito",
+              "&7para descobrir o que há dentro!",
+              "",
+              "&fQuantidade: &e4"
+            ]
+          },
+          "amplifier_1": {
+            "name": "Evolução de Amplificador (+1)",
+            "lore": [
+              "&fRaridade: &bMítico",
+              "",
+              "&7Evolua &e+1 nível &7do encantamento",
+              "&dAmplificador &7em sua espada."
+            ]
+          },
+          "drainage_2": {
+            "name": "Evolução de Drenagem (+10)",
+            "lore": [
+              "&fRaridade: &bMítico",
+              "",
+              "&7Evolua &e+10 níveis &7do encantamento",
+              "&cDrenagem &7em sua espada."
+            ]
+          },
+          "mb_2": {
+            "name": "Caixa Misteriosa (Avançada)",
+            "lore": [
+              "&fRaridade: &bMítico",
+              "",
+              "&7Uma caixa misteriosa cheia de",
+              "&7surpresas. Clique com o botão direito",
+              "&7para descobrir o que há dentro!",
+              "",
+              "&fQuantidade: &e2"
+            ]
+          },
+          "berserker_1": {
+            "name": "Berserker [06:00]",
+            "lore": [
+              "&fRaridade: &bMítico",
+              "",
+              "&7Tenha acesso ilimitado a poção",
+              "&7berserker de &f6 minutos&7.",
+              "",
+              "&fComando: &7/berserker",
+              "",
+              "&7Válido durante esta temporada."
+            ]
+          },
+          "boosttoken_1": {
+            "name": "Booster de Tokens [Individual]",
+            "lore": [
+              "&fRaridade: &bMítico",
+              "",
+              "&7Ative esse booster e dobre",
+              "&7o valor de tokens obtidos.",
+              "",
+              "&fDuração: &71h &8(Esse tempo é acumulativo)"
+            ]
+          },
+          "skull_cracker_1": {
+            "name": "Evolução de Racha Crânio (+10)",
+            "lore": [
+              "&fRaridade: &dRaro",
+              "",
+              "&7Evolua &e+10 níveis &7do encantamento",
+              "&aRacha Crânio &7em seu machado."
+            ]
+          },
+          "skull_cracker_2": {
+            "name": "Evolução de Racha Crânio (+20)",
+            "lore": [
+              "&fRaridade: &bMítico",
+              "",
+              "&7Evolua &e+20 níveis &7do encantamento",
+              "&aRacha Crânio &7em seu machado."
+            ]
+          },
+          "armor_breaker_1": {
+            "name": "Evolução de Quebra Armadura (+7)",
+            "lore": [
+              "&fRaridade: &6Lendário",
+              "",
+              "&7Evolua &e+7 níveis &7do encantamento",
+              "&aQuebra Armadura &7em seu machado."
+            ]
+          },
+          "armor_breaker_2": {
+            "name": "Evolução de Quebra Armadura (+15)",
+            "lore": [
+              "&fRaridade: &bMítico",
+              "",
+              "&7Evolua &e+15 níveis &7do encantamento",
+              "&aQuebra Armadura &7em seu machado."
+            ]
+          }
+        }
+      },
+      "animation": {
+        "selected": "&fItem Selecionado: {reward}",
+        "already-opening": "&cAguarde sua caixa terminar de abrir."
       }
     }
   }
