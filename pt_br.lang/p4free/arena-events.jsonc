@@ -1,5 +1,10 @@
 {
   "plugins": {
+    // O ClanFight e o FastGlad no padrão do Gladiador (events.jsonc): as faixas riscadas em volta dos anúncios, o
+    // [evento] em vermelho-escuro nas entradas, saídas e abates, e a tag do clan em [cinza]. Toda mensagem das arenas
+    // tem o {event} (ClanFight, FastGlad), o {event_title} (o mesmo em maiúsculas, para a faixa) e o {event_tag} (a tag
+    // que o clan vencedor ganha); o stash-failed, o not-in-event e as respostas da staff só têm o {event}. Cada bloco
+    // que abre com linha em branco fecha com outra.
     "arena-events": {
       "arguments": {
         "location": {
@@ -11,31 +16,172 @@
           "description": "Jogador a reviver no evento"
         }
       },
-      "waiting": "&e{event} está com inscrições abertas. &f/{command} entrar",
-      "round": "&e{event}: {first} enfrenta {second}. Preparem-se!",
-      "round-timeout": "&cOs dois clãs da rodada foram eliminados por exceder o tempo limite.",
-      // O fim de cada duelo do ClanFight: o vencedor (se um lado ficou de pé) e quem deu mais hits nele.
-      "round-winner": "&e{event}: o clã {winner} venceu a batalha contra {loser}!",
-      "round-top-hitter": "&fMais hits no duelo: &7[{clan}] &e{player} &fcom &b{hits} {hits_unit}&f.",
-      "border": "&eA borda de {event} está diminuindo para {size} blocos.",
-      "deathmatch": "&cO deathmatch de {event} começou!",
-      "cannot-join": "&cNão foi possível entrar em {event}. Confira seu clã e o limite de participantes.",
-      "empty-inventory": "&cEntre em {event} com o inventário e a armadura vazios.",
-      "combat-leave": "&cVocê não pode sair do {event} em combate.",
-      "command-blocked": "&cVocê não pode usar comandos durante o {event}.",
-      "not-in-event": "&cVocê não está no {event}.",
-      "already-in-event": "&cVocê já está inscrito no {event}.",
-      "stash-failed": "&cNão foi possível guardar seu inventário agora. Tente entrar em {event} de novo.",
-      "cancelled": "&c{event} foi cancelado.",
-      "winner": "&aO clã {clan} venceu {event}!",
+      // A tag de um clan nos abates, pintada para cada um que lê: verde para o próprio clan, vermelha para os outros.
+      "clan-tag": {
+        "own": "&a[&7{tag}&a]",
+        "other": "&c[&7{tag}&c]"
+      },
+      // A abertura, com o tempo inteiro da espera. O "AQUI" leva o clique do entrar.
+      "start": [
+        "",
+        "&4&l&m      &c&l&m      &r &f&l{event_title} &c&l&m      &4&l&m      ",
+        "",
+        "&fO Evento {event} foi &a&lINICIADO&f!",
+        "&6 ► &fUse &e/{command} entrar &fou clique &e&lAQUI&f.",
+        "",
+        "&e&lPremiações do evento",
+        "&6• &fTag {event_tag} &fpara os jogadores do clan vencedor",
+        "",
+        "&c► &fO evento começará em &a{time}&f.",
+        "",
+        "&4&l&m      &c&l&m      &r &f&l{event_title} &c&l&m      &4&l&m      ",
+        ""
+      ],
+      // A contagem da espera, a cada 30 s.
+      "waiting": [
+        "",
+        "&4&l&m      &c&l&m      &r &f&l{event_title} &c&l&m      &4&l&m      ",
+        "",
+        "&fO Evento {event} começará em &a{time}&f!",
+        "&6 ► &fUse &e/{command} entrar &fou clique &e&lAQUI&f.",
+        "",
+        "&7 Participantes: &f{event_players_size}",
+        "&7 Clans confirmados: &f{event_clans_size}",
+        "",
+        "&4&l&m      &c&l&m      &r &f&l{event_title} &c&l&m      &4&l&m      ",
+        ""
+      ],
+      "cancelled": [
+        "",
+        "&4&l&m       &c&l&m       &r &f&l{event_title} &c&l&m       &4&l&m       ",
+        "",
+        "&c&lEVENTO CANCELADO!",
+        "&fO evento foi cancelado por falta de jogadores",
+        "&fou por um membro da &eStaff&f.",
+        "",
+        "&4&l&m       &c&l&m       &r &f&l{event_title} &c&l&m       &4&l&m       ",
+        ""
+      ],
+      // A todos os apps do P4Free; quem está no evento recebe logo a seguir o bloco do preparing-time.
+      "locked": "&4[{event}] &cAs entradas do evento foram fechadas!",
+      "preparing-time": [
+        "",
+        "&4&l&m      &c&l&m      &r &f&l{event_title} &c&l&m      &4&l&m      ",
+        "",
+        "&fO PvP irá começar em &a{time}&f.",
+        "&fJunte os membros e boa sorte!",
+        "",
+        "&4&l&m      &c&l&m      &r &f&l{event_title} &c&l&m      &4&l&m      ",
+        ""
+      ],
+      "fight": [
+        "",
+        "&4&l&m      &c&l&m      &r &f&l{event_title} &c&l&m      &4&l&m      ",
+        "",
+        "&c&lPVP ATIVO!",
+        "&fO PvP foi &aativado&f. Que comecem as batalhas!",
+        "",
+        "&4&l&m      &c&l&m      &r &f&l{event_title} &c&l&m      &4&l&m      ",
+        ""
+      ],
+      // O (N) das entradas e saídas é quantos ainda estão no evento.
+      "join": "&4[{event}] &cO jogador &7[{clan_tag}&7] &f{player_name} &centrou no evento. &f({event_players})",
+      "quit": "&4[{event}] &cO jogador &7[{clan_tag}&7] &f{player_name} &csaiu do evento. &f({event_players})",
+      "kill": "&4[{event}] {victim_clan} {victim_name} &7foi &c&lELIMINADO &7por {killer_clan} {killer_name} &7({killer_kills} {killer_kills_unit}).",
+      // A morte sem matador (queda, lava, borda).
+      "death": "&4[{event}] {victim_clan} {victim_name} &7foi &c&lELIMINADO &7do evento.",
+      // Só para quem matou, logo depois do anúncio do abate.
+      "kills": "&eVocê agora tem &6{kills} &e{kills_unit}.",
+      "eliminated": "&4[{event}] &cO clan &7[{clan_tag}&7] &cfoi eliminado do evento! &f{remaining_verb} {remaining_clans} {remaining_clans_unit}.",
+      // O duelo do ClanFight, como o rush do Gladiador: o (N) é quantos de cada clan estão vivos.
+      "round": [
+        "",
+        "&4&l&m      &c&l&m      &r &f&lBATALHA &c&l&m      &4&l&m      ",
+        "",
+        "&e&l UMA BATALHA COMEÇOU!",
+        " &7[{first}&7] &7({first_alive}) &fvs &7[{second}&7] &7({second_alive})",
+        "",
+        "&4&l&m      &c&l&m      &r &f&lBATALHA &c&l&m      &4&l&m      ",
+        ""
+      ],
+      "round-timeout": "&4[{event}] &cOs dois clans da batalha foram eliminados por exceder o tempo limite.",
+      // O fim de cada duelo: o {round_result} é uma das linhas do round-result, e o {round_hits} a linha do round-hits,
+      // que some quando ninguém acertou ninguém.
+      "round-finished": [
+        "",
+        "&4&l&m      &c&l&m      &r &f&lBATALHA &c&l&m      &4&l&m      ",
+        "",
+        "&e&l BATALHA FINALIZADA!",
+        "",
+        "{round_result}",
+        "{round_hits}",
+        "",
+        "&4&l&m      &c&l&m      &r &f&lBATALHA &c&l&m      &4&l&m      ",
+        ""
+      ],
+      "round-result": {
+        "won": "&7 Vencedor: &a[{winner}&a] &7contra &c[{loser}&c].",
+        "none": "&7 Nenhum clan ficou de pé nesta batalha."
+      },
+      "round-hits": [
+        "&7 Mais hits na batalha: &7[{clan}&7] &f{player} &7({hits} {hits_unit})"
+      ],
+      // A borda do FastGlad, como a do Gladiador.
+      "border": [
+        "",
+        "&4&l&m       &c&l&m       &r &f&lBORDA FECHANDO &c&l&m       &4&l&m       ",
+        "",
+        "&c  &4&lATENÇÃO, JOGADORES!",
+        "&c  &fA borda está se fechando!",
+        "",
+        "    &4• &fNovo tamanho da borda: &c{size} x {size}",
+        "    &4• &fTempo para fechar: &c{time}",
+        "",
+        "&c  &fPreparem-se e movam-se para dentro da nova área!",
+        "",
+        "&4&l&m       &c&l&m       &r &f&lBORDA FECHANDO &c&l&m       &4&l&m       ",
+        ""
+      ],
+      "deathmatch": [
+        "",
+        "&4&l&m       &c&l&m       &r &f&lDEATHMATCH &c&l&m       &4&l&m       ",
+        "",
+        "&4&lDEATHMATCH INICIADO!",
+        "&6 ► &fOs jogadores foram puxados para a arena de",
+        "&f deathmatch e terão que batalhar até restar um só clan!",
+        "",
+        "&4&l&m       &c&l&m       &r &f&lDEATHMATCH &c&l&m       &4&l&m       ",
+        ""
+      ],
+      "merchant-open": "&4[{event}] &5O Mercador Sombrio chegou! &fUse &e/fg mercador&f.",
+      "winner": [
+        "",
+        "&4&l&m      &c&l&m      &r &f&l{event_title} &c&l&m      &4&l&m      ",
+        "",
+        "&fO Evento {event} foi &c&lFINALIZADO&f!",
+        "&6 ► &fO clan &7[{clan}&7] &ffoi o grande vencedor!",
+        "",
+        "&6• &fTodos os membros do clan receberão a tag {event_tag}",
+        "",
+        "&4&l&m      &c&l&m      &r &f&l{event_title} &c&l&m      &4&l&m      ",
+        ""
+      ],
       // Logo depois do vencedor do ClanFight: os 3 que mais deram hits, somados todos os duelos.
-      "hits-ranking": "&fQuem mais deu hits no {event}:",
-      "hits-ranking-entry": "&e{position}º &7[{clan}] &f{player} com &b{hits} {hits_unit}",
-      "locked": "&eAs inscrições de {event} foram encerradas. Prepare-se!",
-      "fight": "&cO combate de {event} foi liberado!",
-      "action-success": "&aAção aplicada ao evento.",
-      "action-failed": "&cNão foi possível aplicar esta ação no estado atual do evento.",
-      "merchant-open": "&5O Mercador Sombrio chegou! &f/fg mercador"
+      "hits-ranking": [
+        "",
+        "&e&l Quem mais deu hits no {event}:",
+        ""
+      ],
+      "hits-ranking-entry": "&6 {position}º &7[{clan}&7] &f{player} &7com &b{hits} &7{hits_unit}",
+      "hits-ranking-footer": [""],
+      "cannot-join": "&cNão foi possível entrar no {event}. Confira o seu clan e o limite de membros do evento.",
+      "combat-leave": "&cVocê não pode sair do {event} em combate!",
+      "command-blocked": "&cVocê não pode usar comandos durante o {event}.",
+      "not-in-event": "&cVocê não está no {event}!",
+      "already-in-event": "&cVocê já está participando do {event}.",
+      "stash-failed": "&cNão foi possível guardar seu inventário agora. Tente entrar no {event} de novo.",
+      "action-success": "&aAção aplicada ao evento com sucesso!",
+      "action-failed": "&cNão foi possível aplicar esta ação no estado atual do evento."
     }
   }
 }
