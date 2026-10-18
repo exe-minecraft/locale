@@ -94,6 +94,47 @@
         "deathmatch": "&4mata-mata",
         "finalized": "&7finalizado"
       },
+      "info": {
+        "not-running": "O evento {event} ainda não começou!",
+        "unavailable": "Não foi possível consultar {event} agora. Tente novamente em instantes.",
+        "message": [
+          "",
+          "&4&l&m       &c&l&m       &r &f&l{event_title} &c&l&m       &4&l&m      ",
+          "",
+          "&eStatus: &f{event_status}",
+          "",
+          "&eInscritos: &f{event_participants}",
+          "&eParticipando: &f{event_players}",
+          "",
+          "{event_details}",
+          "",
+          "&eClãs participando: &f{event_clans} {event_clans_unit}",
+          "{event_clan_list}",
+          "",
+          "&4&l&m       &c&l&m       &r &f&l{event_title} &c&l&m       &4&l&m      ",
+          ""
+        ],
+        "countdown": "&ePróxima fase em: &f{time}",
+        "elapsed": "&eTempo de combate: &f{time}",
+        "clan": "&7{clan} &f{players} {players_unit}",
+        "no-clans": "&cNenhum clã participando...",
+        "border": "&eBorda: &f{border} &7(estágio {stage})",
+        "border-state": {
+          "manual": "&c&lMANUAL",
+          "changing": "&cAlterando...",
+          "next": "Próxima redução em {time}",
+          "last": "Último estágio",
+          "deathmatch": "&4&lDEATHMATCH"
+        },
+        "rushes": "&eRushes acontecendo: &f{rushes} {rushes_unit}",
+        "duel": "&eDuelo atual: &7[{first}] &fcontra &7[{second}]",
+        "no-duel": "&eDuelo atual: &faguardando o próximo confronto",
+        "merchant": {
+          "open": "&eMercador Sombrio: &aaberto &7(/fg mercador)",
+          "next": "&eMercador Sombrio: &fchega em {time}",
+          "closed": "&eMercador Sombrio: &ffechado, sem novas visitas nesta partida"
+        }
+      },
       "commands": {
         "armor": {
           "description": "ver os sets de armadura dos vivos de um clan no evento",
@@ -184,10 +225,9 @@
               "processing": "Processando sua saída do camarote..."
             }
           },
-          "status": {
-            "description": "ver o estado atual do Gladiador",
-            "unavailable": "Ainda não há dados do Gladiador.",
-            "message": "&eGladiador: {event_status} &8| &e{event_players} {event_players_unit} &8| &e{event_clans} {event_clans_unit} &8| &eborda {event_border} &8| &e{event_rushes} {event_rushes_unit} &8| &e{event_time}s"
+          "info": {
+            "description": "ver as informações da partida do Gladiador",
+            "title": "STATUS DO GLADIADOR"
           },
           "beast": {
             "description": "ver ou definir o Mito atual",
@@ -383,6 +423,10 @@
           }
         },
         "clanfight": {
+          "info": {
+            "description": "ver as informações da partida do ClanFight",
+            "title": "STATUS DO CLANFIGHT"
+          },
           "event-start": {
             "description": "abrir as inscrições do ClanFight"
           },
@@ -436,6 +480,10 @@
           }
         },
         "fastglad": {
+          "info": {
+            "description": "ver as informações da partida do FastGlad",
+            "title": "STATUS DO FASTGLAD"
+          },
           "event-start": {
             "description": "abrir as inscrições do FastGlad"
           },

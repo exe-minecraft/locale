@@ -48,6 +48,7 @@
           "no-arena": "&cNenhuma arena de duelo está ativa.",
           "no-free-arena": "&cTodas as arenas estão ocupadas agora.",
           "unavailable": "&cOs duelos estão indisponíveis agora.",
+          "queue-closed": "&cA staff fechou as filas do x1. Aguarde a reabertura.",
           "loading": "&cSeus dados de duelo ainda estão carregando.",
           "stash-failed": "&cNão deu para guardar seus itens agora. Nada foi tirado de você.",
           "match-ended": "&cEssa luta já acabou.",
@@ -85,11 +86,11 @@
         // Só na ranqueada, para o servidor inteiro: a cada 5 vitórias seguidas, e a quebra de uma de 10 ou mais.
         "streak": "&6{player} &7chegou a &e{streak} vitórias seguidas &7na ranqueada.",
         "streak-broken": "&7A sequência de &e{streak} vitórias &7de &6{player} &7acabou.",
-        // O resultado vai aos participantes e ao camarote da luta. {winners} e {losers} viram os nomes, cada um com
+        // O resultado vai a todos no P4Free local. {winners} e {losers} viram os nomes, cada um com
         // as estatísticas da luta no hover.
         "result": {
-          "duel": "&6{winners} &7venceu &f{losers} &8({format})&7, com &c{health} ❤&7.",
-          "team": "&7Vitória de &6{winners} &8({format})&7 contra &f{losers}&7.",
+          "duel": "&6&lX1 &r&f{winners} &7({health}&c❤&7) &eVENCEU o duelo contra &f{losers}&e.",
+          "team": "&6&lX1 &r&eVitória de &f{winners} &econtra &f{losers} &7({format})&e.",
           "draw": "&7A luta terminou empatada &8({format})&7.",
           "elo-won": "&a+{amount} {points} &8(agora {elo})",
           "elo-lost": "&c-{amount} {points} &8(agora {elo})",
@@ -105,6 +106,10 @@
         }
       },
       "queue": {
+        "opened": "&8[&bStaff&8] &f{player} &aabriu as filas 1v1 e 2v2 do x1.",
+        "closed": "&8[&bStaff&8] &f{player} &cencerrou as filas 1v1 e 2v2 do x1.",
+        "already-open": "&cAs filas 1v1 e 2v2 do x1 já estão abertas.",
+        "already-closed": "&cAs filas 1v1 e 2v2 do x1 já estão encerradas.",
         "joined": "&aVocê entrou na fila: &f{mode}&a.",
         "already": "&cVocê já está nessa fila.",
         "left": "&7Você saiu da fila.",
@@ -724,9 +729,21 @@
           // Acrescentada à lore do que gasta (armadura, espada, arco).
           "durability": [ "&7Durabilidade: &f{current}&7/&f{max}" ],
           "items": {
-            "health": {
-              "name": "&cVida: &f{health} ❤",
-              "lore": [ "&7No instante em que a luta", "&7terminou para este jogador." ]
+              "health": {
+                "name": "&cVida: &f{health} ❤",
+                "lore": [ "&7No instante em que a luta", "&7terminou para este jogador." ],
+                "dead": {
+                  "name": "&cMorto",
+                  "lore": [ "&7Este jogador morreu na luta.", "&7Vida: &f{health} ❤" ]
+                }
+              },
+              "previous": {
+                "name": "&eInventário anterior",
+                "lore": [ "&7Jogador: &f{previous}", "", "&eClique para ver o inventário." ]
+              },
+              "next": {
+                "name": "&ePróximo inventário",
+                "lore": [ "&7Jogador: &f{next}", "", "&eClique para ver o inventário." ]
             },
             "effects": {
               "name": "&dEfeitos",
@@ -782,6 +799,12 @@
           "queue": {
             "description": "entrar na fila ranqueada",
             "arguments": { "mode": { "name": "1v1|2v2", "description": "A fila: 1v1, ou 2v2 (sozinho ou com a party de 2)." } }
+          },
+          "close": {
+            "description": "fechar as filas 1v1 e 2v2 do x1"
+          },
+          "open": {
+            "description": "abrir as filas 1v1 e 2v2 do x1"
           },
           "leave": {
             "description": "sair da fila"

@@ -1,7 +1,20 @@
 {
   "plugins": {
     "batatadas": {
-      "broadcast": "&6{player} batatou! &7Total: {amount} {amount_unit}.",
+      "broadcast": {
+        "first": [
+          "&c",
+          " &6&lBATATA ",
+          "&e {player}&f batatou pela primeira vez!!",
+          "&c "
+        ],
+        "repeat": [
+          "&c",
+          " &6&lBATATA ",
+          "&e {player}&f batatou pela {amount}ª vez!!",
+          "&c "
+        ]
+      },
       "balance": "&e{player} tem {amount} {amount_unit}.",
       "units": {
         "batatada": {
