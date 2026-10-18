@@ -13,6 +13,8 @@
         "none": "nenhum",
         "cancelled": "cancelado",
         "finalized": "finalizado",
+        // O tempo de uma edição sem o início gravado (a que não chegou a lutar, as arenas de antes de 18/10/2026).
+        "unknown": "não registrado",
         "time": {
           "seconds": "{value}s",
           "minutes": "{value}min",

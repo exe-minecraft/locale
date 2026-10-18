@@ -252,6 +252,13 @@
                 "&7todos os comandos do &6{event}&7!"
               ]
             },
+            "history": {
+              "name": "&eHistórico",
+              "lore": [
+                "&7Clique com o botão esquerdo para",
+                "&7ver as edições anteriores do &6{event}&7."
+              ]
+            },
             "event": {
               "inactive": {
                 "name": "&cNenhum evento rolando",
@@ -287,7 +294,92 @@
               }
             }
           }
+        },
+        // A lista das edições, a mesma vista da do Gladiador: por isso o "mais abates" vem no {event_myth}. O layout é
+        // um só para as duas arenas (events/arena/history e events/arena/history-detail no server-menus).
+        "history": {
+          "title": "Histórico do {event}",
+          "items": {
+            "entry": {
+              "name": "&a{event} de {event_date}",
+              "lore": [
+                "&7Data: &f{event_date}",
+                "&7Tempo de evento: &f{event_duration}",
+                "&7Jogadores participantes: &f{event_players}",
+                "&cClan vencedor: &f{clan_winner}",
+                "&7Mais abates: &f{event_myth} &8({event_myth_kills} {event_myth_kills_unit})",
+                "",
+                "&eClique para ver os detalhes!"
+              ]
+            },
+            "back": {
+              "name": "&cVoltar",
+              "lore": [
+                "&7Volta à central do {event}."
+              ]
+            }
+          }
+        },
+        "history-detail": {
+          "title": "Detalhes do {event}",
+          "items": {
+            "overview": {
+              "name": "&6&lResumo do evento",
+              "lore": [
+                "&7Estado: &f{event_status}",
+                "&7Data: &f{event_date}",
+                "&7Tempo de evento: &f{event_duration}",
+                "",
+                "&7Participantes: &f{event_players}",
+                "&7Clans: &f{event_clans}"
+              ]
+            },
+            // A formação vencedora sai uma linha por jogador; sem vencedor, a linha some.
+            "winner": {
+              "name": "&a&lClan vencedor",
+              "lore": [
+                "",
+                "&a{clan_winner}",
+                "&7• &f{event_winners}",
+                "",
+                "&7Resultado desta edição do {event}."
+              ]
+            },
+            "killer": {
+              "name": "&e&lMais abates",
+              "lore": [
+                "",
+                "&f{top_killer} &8(&f{top_killer_kills} {top_killer_kills_unit}&8)",
+                "",
+                "&7Jogador com mais abates nesta edição."
+              ]
+            },
+            "kills": {
+              "name": "&4&lAbates",
+              "lore": [
+                "&7Total de abates: &f{event_kills}"
+              ]
+            },
+            "hitter": {
+              "name": "&b&lMais hits",
+              "lore": [
+                "",
+                "&f{top_hitter} &8(&f{top_hitter_hits} {top_hitter_hits_unit}&8)",
+                "",
+                "&7Jogador que mais acertou golpes nesta edição."
+              ]
+            },
+            "back": {
+              "name": "&cVoltar ao histórico",
+              "lore": [
+                "&7Volta ao histórico do {event}."
+              ]
+            }
+          }
         }
+      },
+      "history": {
+        "loading": "Consultando o histórico do {event}..."
       }
     }
   }
