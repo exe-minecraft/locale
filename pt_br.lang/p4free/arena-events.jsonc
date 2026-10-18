@@ -18,8 +18,10 @@
       },
       // A tag de um clan nos abates, pintada para cada um que lê: verde para o próprio clan, vermelha para os outros.
       "clan-tag": {
-        "own": "&7[{tag}&7]",
-        "other": "&7[{tag}&7]"
+        // Nos abates, como no exe-gladiador: verde para o clã de quem lê e vermelho para os outros, com a tag na cor
+        // do clã dentro (o &7 só pinta a tag sem cor). Nas outras mensagens os colchetes são &7.
+        "own": "&a[&7{tag}&a]",
+        "other": "&c[&7{tag}&c]"
       },
       // A abertura, com o tempo inteiro da espera. O "AQUI" leva o clique do entrar.
       "start": [
