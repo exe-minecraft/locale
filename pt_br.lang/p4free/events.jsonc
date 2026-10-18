@@ -928,8 +928,12 @@
                 "subtitle": "&fMovam-se para dentro da nova área!"
               },
               "rejoin": {
-                "title": "&c5",
                 "subtitle": "&fVocê retornará ao evento!"
+              },
+              // O deathmatch começou: o title tira da tela o "Borda fechando!", que fica o tempo da borda inteiro.
+              "deathmatch": {
+                "title": "&4&lDEATHMATCH",
+                "subtitle": "&fA luta final vai começar!"
               },
               "revive": {
                 "subtitle": "&fVocê será ressuscitado!"
@@ -1021,6 +1025,11 @@
           "revive-pending": "&cEste jogador já está no processo de revive. Aguarde.",
           "revive-bringing": "&eO jogador está sendo levado ao Gladiador e será revivido 5 segundos depois de chegar.",
           "revive-not-arrived": "&cO jogador não chegou ao Gladiador a tempo de ser revivido.",
+          // As recusas do /glad revive, como as do exe-gladiator.
+          "revive-not-running": "&cNão há um Gladiador em andamento para reviver alguém.",
+          "revive-alive": "&cEste jogador ainda está lutando no Gladiador!",
+          "revive-no-clan": "&cEste jogador não está em um clan!",
+          "revive-clan-changed": "&cEste jogador trocou de clan depois de entrar no Gladiador e não pode voltar pelo clan antigo.",
           "kick-player-success": "&aVocê expulsou o jogador do Gladiador com sucesso!",
           "kick-player-failure": "&cEste jogador não está no Gladiador!",
           "leave-success": "&aVocê saiu do {event} com sucesso!",
