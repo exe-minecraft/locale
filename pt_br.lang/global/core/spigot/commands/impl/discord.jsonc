@@ -8,12 +8,12 @@
             "  &9&lVINCULAR DISCORD",
             "  &fSeu código: &9&l{discord_synchronization_code}",
             "  &7No Discord, use &f/conta vincular &7e cole o código.",
-            "  &7Para copiar: clique no código, &fCtrl+A &7e &fCtrl+C&7.",
+            "  &7Para copiar, clique no código, &fCtrl+A &7e &fCtrl+C&7.",
             "  &7O código vale por 10 minutos e é só seu.",
             "  &7Ainda não está no Discord? &9&n{discord_invite}",
             ""
           ],
-          "code-hover": "&7Coloca o código no chat para copiar. Não envie: copie e apague.",
+          "code-hover": "&7Coloca o código no chat para copiar. Copie e apague sem enviar.",
           "invite": "discord.rede-exe.com",
           "invite-hover": "&7Abre o convite do Discord da rede.",
           "already-linked": "Sua conta já está vinculada a um Discord. Para trocar, use /conta desvincular no Discord vinculado."

@@ -22,7 +22,7 @@
           "invalid-option": "&cOpção inválida! Use 1 ou 2.",
           "no-active": "&cNão há nenhuma enquete ativa no momento!",
           "already-voted": "&cVocê já votou nesta enquete!",
-          "voted": "&aVocê votou em: {option}",
+          "voted": "&aVocê votou em {option}",
           "unavailable": "&cNão foi possível registrar o seu voto agora. Tente de novo em instantes."
         },
         "announce": {

@@ -103,7 +103,7 @@
           "states": {
             "equipped": "&aEquipada. &eClique para desequipar.",
             "equip": "&eClique para equipar.",
-            "no-slot": "&cSem slot livre: compre outro ou desequipe uma tag."
+            "no-slot": "&cVocê não tem slots livres. Compre outro ou desequipe uma tag."
           }
         },
         "confirmation": {
@@ -147,10 +147,10 @@
         "slot-info": "Slots de tags em uso: &f{used} de {total}&e.",
         "slot-next": "O {next_slot}º slot custa &6✪{price}&e. Use &f/tag slot comprar &epara comprar.",
         "slot-maximum": "Você já tem o máximo de slots de tags ({maximum}).",
-        "not-enough": "Cash insuficiente: o slot custa &6✪{price}&c.",
+        "not-enough": "Seu cash é insuficiente. O slot custa &6✪{price}&c.",
         "currency-missing": "A compra de slots está indisponível no momento.",
         "charge-failed": "Não deu para confirmar a cobrança. Se o cash saiu da sua conta, ele volta sozinho.",
-        "slot-bought": "Slot comprado por &6✪{price}&a: agora você equipa até {total} {total_unit} ao mesmo tempo.",
+        "slot-bought": "Slot comprado por &6✪{price}&a. Agora você equipa até {total} {total_unit} ao mesmo tempo.",
         "refunded": "O slot não foi comprado, e o cash voltou para a sua conta.",
         "refund-failed": "O slot não foi comprado, e o cash ainda não voltou. Abra um ticket com este horário que a staff devolve."
       },
@@ -207,10 +207,10 @@
             "already-redeemed": "Você já resgatou este código.",
             "expired": "Este código expirou.",
             "exhausted": "Este código já foi usado o máximo de vezes.",
-            "grant-failed": "Não deu para entregar a tag agora. O seu uso do código está guardado: use o mesmo código de novo em instantes.",
+            "grant-failed": "Não deu para entregar a tag agora. O seu uso do código está guardado. Use o mesmo código de novo em instantes.",
             "redeemed": [
               "",
-              " &aCódigo resgatado: você ganhou a tag {tag}&a.",
+              " &aCódigo resgatado. Você ganhou a tag {tag}&a.",
               " &7Use &f/tags &7para equipar.",
               ""
             ]
@@ -227,7 +227,7 @@
             "invalid-name": "O nome precisa de algo visível e de no máximo {max_name} caracteres, contando as cores.",
             "invalid-description": "A descrição precisa de algo visível e de no máximo {max_description} caracteres, contando as cores.",
             "invalid-icon": "Material inválido. Exemplos: NAME_TAG, DIAMOND, GOLD_INGOT, NETHER_STAR.",
-            "exists": "O id &f{id} &cjá é ou já foi de uma tag. Quem ganhou a antiga ainda tem a permissão dela: escolha outro id.",
+            "exists": "O id &f{id} &cjá é ou já foi de uma tag. Quem ganhou a antiga ainda tem a permissão dela. Escolha outro id.",
             "created": [
               "",
               " &aTag criada.",
@@ -254,9 +254,9 @@
               "field": { "name": "nome|descricao|material", "description": "O que trocar" },
               "value": { "name": "valor", "description": "O valor novo, com _ no lugar dos espaços na descrição" }
             },
-            "invalid-value": "Valor inválido: nome até {max_name} caracteres, descrição até {max_description}, material como DIAMOND.",
+            "invalid-value": "Valor inválido. Use até {max_name} caracteres no nome e até {max_description} na descrição, com um material como DIAMOND.",
             "unchanged": "A tag &f{id} &cjá está com esse valor. Nada foi gravado.",
-            "updated": "Tag &f{id} &aatualizada: {tag}&a."
+            "updated": "A tag &f{id} &afoi atualizada para {tag}&a."
           },
           "list": {
             "description": "listar as tags",
@@ -293,7 +293,7 @@
               "uses": { "name": "usos", "description": "Quantos jogadores podem resgatar, ou -1 para ilimitado" },
               "duration": { "name": "duração", "description": "Por quanto tempo vale, como 30m, 24h ou 7d" }
             },
-            "invalid-uses": "Usos inválidos: um número a partir de 1, ou -1 para ilimitado.",
+            "invalid-uses": "Quantidade de usos inválida. Use um número a partir de 1 ou -1 para usos ilimitados.",
             "invalid-duration": "Duração inválida. Exemplos: 30m, 1h, 24h, 7d, 30d.",
             "created": [
               "",

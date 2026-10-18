@@ -169,7 +169,7 @@
           "status": {
             "0": "&eClique para desbloquear.",
             "1": "&cVocê não tem o suficiente para desbloquear.",
-            "2": "&eClique para ativar. &7Botão direito: níveis.",
+            "2": "&eClique para ativar. &7Use o botão direito para ver os níveis.",
             "3": "&cSeus slots estão cheios. Desative outra antes.",
             "4": "&aAtivada. &7Clique para desativar."
           },
@@ -277,8 +277,8 @@
         "reset-done": "&aSua evolução de perks foi resetada.",
         "reset-refunded": "&aSua evolução de perks foi resetada e você recebeu de volta &f{refund}&a.",
         "reset-refund-failed": "&cSua evolução foi resetada, mas a devolução não passou. Abra um ticket com este horário que a staff devolve.",
-        "reset-failed": "&cNão foi possível resetar agora: suas perks continuam como estavam e o item voltou para o seu inventário.",
-        "selection-trimmed": "Algumas perks foram desativadas: você mantém {slots} {slots_unit}.",
+        "reset-failed": "&cNão foi possível resetar agora. Suas perks continuam como estavam e o item voltou para o seu inventário.",
+        "selection-trimmed": "Algumas perks foram desativadas. Você mantém {slots} {slots_unit}.",
 
         "already-owned": "Você já tem {perk} neste nível ou acima.",
         "level-invalid": "Esta perk vai até o nível {max_level}.",
@@ -307,7 +307,7 @@
             "slot": { "syntax": "slot <jogador> [quantidade]", "description": "entregar o item de slot extra" }
           },
           "target-offline": "{name} não está online neste servidor.",
-          "perk-invalid": "Perk inválida. Existem: {perks}",
+          "perk-invalid": "Perk inválida. Escolha entre {perks}.",
           "level-invalid": "Esta perk vai até o nível {max_level}.",
           "given": "{name} agora tem {perk} no nível {level}.",
           "already-level": "{name} já tem {perk} no nível {level}.",

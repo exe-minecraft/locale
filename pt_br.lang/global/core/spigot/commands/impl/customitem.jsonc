@@ -24,15 +24,15 @@
         "custom-item-origin": {
           "link-unavailable": "Não deu para gerar o link do site agora. Tente de novo em instantes.",
           "link-hover": "&7Abre o site já logado. Não mande este link a ninguém.",
-          "link": "A história do item {custom_item_key}: clique &e&lAQUI&a para ver no site.",
+          "link": "Para ver a história do item {custom_item_key} no site, clique &e&lAQUI&a.",
           "no-item-in-hand": "Segure o item que você quer consultar!",
-          "no-identity": "Esse item não carrega identidade: não tem história para mostrar."
+          "no-identity": "Esse item não tem uma identidade registrada, por isso não há histórico para mostrar."
         },
         "custom-item-restore": {
           "error": "Não foi possível restaurar o item agora. Ele continua inutilizado; pode repetir o comando com segurança.",
           "no-item-in-hand": "Você precisa estar segurando o item que deseja restaurar!",
           "not-unique-item": "Esse item não é um exemplar (não carrega identidade única)!",
-          "not-voided": "Esse item não está inutilizado: não há nada para restaurar.",
+          "not-voided": "Esse item não está inutilizado. Não há nada para restaurar.",
           "success": "O item {custom_item_key} foi restaurado com uma identidade nova!"
         }
       }

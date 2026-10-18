@@ -110,11 +110,11 @@
         "closed": "&8[&bStaff&8] &f{player} &cencerrou as filas 1v1 e 2v2 do x1.",
         "already-open": "&cAs filas 1v1 e 2v2 do x1 já estão abertas.",
         "already-closed": "&cAs filas 1v1 e 2v2 do x1 já estão encerradas.",
-        "joined": "&aVocê entrou na fila: &f{mode}&a.",
+        "joined": "&aVocê entrou na fila de &f{mode}&a.",
         "already": "&cVocê já está nessa fila.",
         "left": "&7Você saiu da fila.",
         "partner-left": "&c{player} saiu da fila, e a dupla saiu junto.",
-        "dropped": "&cVocê saiu da fila: a partida encontrada não pôde começar.",
+        "dropped": "&cVocê saiu da fila porque a partida encontrada não pôde começar.",
         "found": "&aPartida encontrada! Preparando a arena.",
         "actionbar": "&7Fila: &f{mode} &8/ &f{waited} &8/ &7procurando &f±{radius} de elo",
         "invalid-mode": "&cA fila é 1v1 ou 2v2.",
@@ -152,7 +152,7 @@
         "promoted": "&6{player} &7agora é o líder da party.",
         "new-leader": "&6{player} &7assumiu a liderança da party.",
         "disbanded": "&c{player} desfez a party.",
-        "dissolved": "&7{player} saiu, e a party acabou: sobrou só você.",
+        "dissolved": "&7{player} saiu. A party acabou porque sobrou só você.",
         // As respostas da PartyService (PartyService.Result).
         "results": {
           "self": "&cVocê não pode fazer isso consigo mesmo.",
@@ -168,7 +168,7 @@
         "challenge": {
           "sent": "&aDesafio enviado à party de &f{player} &8(expira em {time})&a.",
           "received": [
-            "&7A party de &6{player} &7({their_size}) desafiou a sua ({your_size}): &f{yours} contra {theirs}&7.",
+            "&7A party de &6{player} &7({their_size}) desafiou a sua ({your_size}) para uma luta de &f{yours} contra {theirs}&7.",
             "{accept} {decline} &8(expira em {time})"
           ],
           "already-sent": "&cVocê já desafiou a party de {player}.",
@@ -180,7 +180,7 @@
         }
       },
       "cabin": {
-        "entered": "&aVocê está no camarote. Para sair: &f/x1 camarote sair&a.",
+        "entered": "&aVocê está no camarote. Para sair, use &f/x1 camarote sair&a.",
         "left": "&7Você saiu do camarote.",
         "not-watching": "&cVocê não está no camarote.",
         "not-fighting": "&c{player} não está lutando agora."
@@ -203,10 +203,10 @@
           "no-kit": "&cO kit do CxC ainda não foi gravado pela staff.",
           "no-invite": "&cO clã {tag} &cnão desafiou o seu, ou o convite expirou.",
           "arena-gone": "&cO mapa escolhido saiu do ar. O convite foi cancelado.",
-          "empty-side": "&cO CxC não começou: nenhum VIP livre do clã {tag}&c.",
+          "empty-side": "&cO CxC não começou porque o clã {tag}&c não tem nenhum VIP livre.",
           "not-fighting": "&cO clã {tag} &cnão está lutando agora.",
           "kit-busy": "&cSaia dos duelos e do camarote antes de gravar o kit.",
-          "kit-empty": "&cSeu inventário está vazio: monte o kit antes."
+          "kit-empty": "&cSeu inventário está vazio. Monte o kit antes."
         },
         "invite": {
           "sent": [
@@ -235,12 +235,12 @@
             "",
             "&cVocê não foi puxado para o CxC do seu clã.",
             "&fApenas &cjogadores VIPs &fsão puxados e participam do CxC.",
-            "&fNão perca a próxima batalha: &ewww.rede-exe.com",
+            "&fNão perca a próxima batalha. Acesse &ewww.rede-exe.com",
             ""
           ],
           "busy": "&cVocê ficou de fora do CxC do seu clã:"
         },
-        "kit-saved": "&aKit do CxC gravado: {pieces}. Vale a partir do próximo duelo.",
+        "kit-saved": "&aKit do CxC gravado com {pieces}. Vale a partir do próximo duelo.",
         "opening": [
           "",
           "&e&l Duelo de Clãs",
@@ -280,11 +280,11 @@
         },
         "broadcast": {
           // Uma linha para o backend local: início da contagem com camarote clicável e término, inclusive cancelamento.
-          "start": "&6CxC: &fo clã {first} &8({first_size}) &fenfrenta o clã {second} &8({second_size})&f. {watch}",
+          "start": "&6CxC &fentre os clãs {first} &8({first_size}) &fe {second} &8({second_size})&f. {watch}",
           "watch": "&e[Assistir no camarote]",
-          "win": "&6CxC: &fo clã {winner} &fvenceu o clã {loser}&f.",
-          "draw": "&6CxC: &fa batalha entre {first} &fe {second} &fterminou empatada.",
-          "cancelled": "&6CxC: &fa batalha entre {first} &fe {second} &ffoi cancelada antes de começar."
+          "win": "&fO clã {winner} &fvenceu o clã {loser} &fno &6CxC&f.",
+          "draw": "&fO &6CxC &fentre {first} &fe {second} &fterminou empatado.",
+          "cancelled": "&fO &6CxC &fentre {first} &fe {second} &ffoi cancelado antes de começar."
         },
         "scoreboard": {
           "lines": [
@@ -309,14 +309,14 @@
       },
       // O /x1 arena, só da administração.
       "arena": {
-        "invalid-size": "&cTamanho: pequena, grande ou cla.",
-        "invalid-name": "&cNome: letras minúsculas, números, _ e -, até 32.",
-        "invalid-side": "&cLado: a ou b.",
-        "invalid-count": "&cCópias: de 1 a 50.",
+        "invalid-size": "&cEscolha o tamanho pequena, grande ou cla.",
+        "invalid-name": "&cUse até 32 caracteres no nome, com letras minúsculas, números, _ e -.",
+        "invalid-side": "&cEscolha o lado a ou b.",
+        "invalid-count": "&cEscolha de 1 a 50 cópias.",
         "exists": "&cJá existe a arena {name}.",
         "unknown": "&cNão existe a arena {name}.",
         "busy": "&cA arena {name} ainda está colando cópias. Espere terminar.",
-        "missing-schematic": "&cFalta a schematic: &f{file}",
+        "missing-schematic": "&cA schematic &f{file}&c não foi encontrada.",
         "world-loading": "&cO mundo dos duelos ainda está abrindo. Tente de novo em instantes.",
         "read-only": "&cO arenas.yml não carregou, e nada é gravado até alguém o consertar. O painel tem o erro.",
         "pasting": "&7Colando a arena {name}...",
@@ -806,7 +806,7 @@
           },
           "queue": {
             "description": "entrar na fila ranqueada",
-            "arguments": { "mode": { "name": "1v1|2v2", "description": "A fila: 1v1, ou 2v2 (sozinho ou com a party de 2)." } }
+            "arguments": { "mode": { "name": "1v1|2v2", "description": "Escolha a fila 1v1 ou 2v2 (sozinho ou com a party de 2)." } }
           },
           "close": {
             "description": "fechar as filas 1v1 e 2v2 do x1"
@@ -837,7 +837,7 @@
               "description": "criar uma arena da schematic plugins/duels/arenas/<nome>.schematic",
               "arguments": {
                 "name": { "name": "nome", "description": "O nome da schematic, sem a extensão." },
-                "size": { "name": "pequena|grande|cla", "description": "Pequena: até 4 jogadores. Grande: party. Cla: CxC." }
+                "size": { "name": "pequena|grande|cla", "description": "Use pequena para até 4 jogadores, grande para party ou cla para CxC." }
               }
             },
             "spawn": {

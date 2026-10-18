@@ -185,7 +185,7 @@
         "queue": {
           "actionbar": "&c&lFILA! &fSua posição atual &c➟ &f&l{queue_position}º",
           "joined": "&aVocê entrou na fila do {queue_server_name}&a.",
-          "unavailable": "&cNão dá para entrar no {queue_server_name} &cagora: {server_state}&c."
+          "unavailable": "&cNão dá para entrar no {queue_server_name} &cagora ({server_state}&c)."
         },
         "views": {
           "lobby-selector": {

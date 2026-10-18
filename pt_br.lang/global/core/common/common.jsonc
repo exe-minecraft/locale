@@ -6,7 +6,7 @@
           "not-found": "Não foi possível encontrar o jogador {name} em nosso servidor.",
           "not-online": "O jogador {name} não se encontra online em nosso servidor.",
           "not-allowed-self": "Ops! Você não pode utilizar isso em você mesmo.",
-          "target-same-or-higher-group": "Você não pode punir {name}: só se pune quem está num grupo abaixo do seu.",
+          "target-same-or-higher-group": "Você não pode punir {name} porque o grupo desse jogador não está abaixo do seu.",
           "not-online-locally": "O jogador {name} não se encontra online neste servidor."
         },
         "operation": {

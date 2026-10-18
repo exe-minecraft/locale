@@ -12,7 +12,7 @@
         "line": {
           "used": "&aVocê desbloqueou &f{lines} {lines_word} &ano seu baú do fim, que agora tem &f{rows} {rows_word}&a.",
           "maximum": "&cSeu baú do fim já tem todas as linhas que cabem. A melhoria não foi usada.",
-          "partial": "&eO seu baú do fim tem espaço para mais &f{room} {room_word}&e. A melhoria voltou para o seu inventário: agache e use de novo para usar só o que couber.",
+          "partial": "&eO seu baú do fim tem espaço para mais &f{room} {room_word}&e. A melhoria voltou para o seu inventário. Agache e use de novo para usar só o que couber.",
           "failed": "&cNão foi possível ativar a melhoria agora. Ela voltou para o seu inventário.",
           "loading": "&cSeu grupo ainda está carregando. Tente de novo em instantes."
         }
@@ -44,14 +44,14 @@
         "title": "Ender Chest de {owner_name}",
         "in-use": "&cEste Ender Chest está em uso ou sendo salvo. Aguarde um momento.",
         "cooldown": "&cAguarde {time} depois de entrar para abrir o Ender Chest.",
-        "fix-size": "&eSeu Ender Chest diminuiu com o grupo atual: o que sobrou foi para o inventário.",
+        "fix-size": "&eSeu Ender Chest diminuiu com o grupo atual. O que sobrou foi para o inventário.",
         "item-not-allowed": "&cVocê não pode guardar esse item no Ender Chest."
       },
       "vault": {
         "title": "Cofre de {owner_name}",
         "in-use": "&cEste cofre está em uso ou sendo salvo. Aguarde um momento.",
         "cooldown": "&cAguarde {time} depois de entrar para abrir o cofre.",
-        "fix-size": "&eSeu cofre foi ajustado: o que sobrou foi para o inventário.",
+        "fix-size": "&eSeu cofre foi ajustado. O que sobrou foi para o inventário.",
         "item-not-allowed": "&cVocê não pode guardar esse item no cofre."
       }
     }

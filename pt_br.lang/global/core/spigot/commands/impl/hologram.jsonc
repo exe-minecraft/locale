@@ -9,7 +9,7 @@
           "loading": "Os hologramas deste servidor ainda estão carregando. Tente de novo em alguns segundos.",
           "not-found": "Não existe holograma chamado {hologram_name} neste servidor. Veja os que existem com /holograma lista.",
           // {hologram_line}: o número digitado; {hologram_lines} e {hologram_lines_word}: quantas linhas ele tem.
-          "invalid-line": "O holograma {hologram_name} não tem a linha {hologram_line}: ele tem {hologram_lines} {hologram_lines_word}.",
+          "invalid-line": "O holograma {hologram_name} não tem a linha {hologram_line}. Ele tem {hologram_lines} {hologram_lines_word}.",
           "too-many-lines": "O holograma {hologram_name} já tem o máximo de {hologram_max_lines} linhas.",
           "last-line": "Essa é a única linha do holograma {hologram_name}. Para tirá-lo, use /holograma apagar {hologram_name}.",
           "line": {
@@ -21,14 +21,14 @@
             "arguments": {
               "name": {
                 "name": "nome",
-                "description": "Nome do holograma: letras minúsculas, números, - ou _"
+                "description": "Use letras minúsculas, números, - ou _ no nome do holograma"
               },
               "text": {
                 "name": "texto",
                 "description": "Texto da linha, com cores por &"
               }
             },
-            "invalid-name": "Nome inválido: {hologram_name}. Use de 1 a 32 letras minúsculas, números, - ou _.",
+            "invalid-name": "O nome {hologram_name} é inválido. Use de 1 a 32 letras minúsculas, números, - ou _.",
             "already-exists": "Já existe um holograma chamado {hologram_name}.",
             "success": "Holograma {hologram_name} criado em {hologram_world} {hologram_x}, {hologram_y}, {hologram_z}."
           },

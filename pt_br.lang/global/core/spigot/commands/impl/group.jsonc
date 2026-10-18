@@ -70,9 +70,9 @@
             },
             "need-highest-group": "Você só pode congelar grupos abaixo do seu nesse servidor!",
             "error": "Sua tentativa de congelar o VIP falhou, tente novamente mais tarde!",
-            "conflict": "{target_name} não tem {group_id} com prazo correndo em {server_id}: é permanente, venceu ou já está congelado.",
-            "not-vip": "Só grupos de VIP congelam: {group_id} é staff ou o grupo padrão.",
-            "success": "Você congelou o {group_id} de {target_name} em {server_id}. Tempo restante: {remaining}, parado até descongelar."
+            "conflict": "{target_name} não tem {group_id} com prazo correndo em {server_id}. O grupo é permanente, venceu ou já está congelado.",
+            "not-vip": "Só grupos de VIP podem ser congelados. {group_id} é staff ou o grupo padrão.",
+            "success": "Você congelou o {group_id} de {target_name} em {server_id}. Restam {remaining}, com o prazo parado até descongelar."
           },
           "unfreeze": {
             "description": "descongelar o tempo de VIP de um jogador (o prazo volta a correr)",
@@ -93,28 +93,28 @@
             "need-highest-group": "Você só pode descongelar grupos abaixo do seu nesse servidor!",
             "error": "Sua tentativa de descongelar o VIP falhou, tente novamente mais tarde!",
             "conflict": "{target_name} não tem {group_id} congelado em {server_id}.",
-            "not-vip": "Só grupos de VIP congelam: {group_id} é staff ou o grupo padrão.",
-            "success": "Você descongelou o {group_id} de {target_name} em {server_id}. O prazo voltou a correr: restam {remaining}."
+            "not-vip": "Só grupos de VIP podem ser congelados. {group_id} é staff ou o grupo padrão.",
+            "success": "Você descongelou o {group_id} de {target_name} em {server_id}. O prazo voltou a correr e restam {remaining}."
           },
           "freeze-all": {
             "description": "congelar todos os VIPs; os novos também entram congelados",
-            "need-global-manager": "Congelar todos os VIPs mexe na rede inteira: é de manager global para cima.",
+            "need-global-manager": "Congelar todos os VIPs afeta a rede inteira. Só manager global ou superior pode fazer isso.",
             "error": "Sua tentativa de congelar todos os VIPs falhou, tente novamente mais tarde!",
             "vips": {
               "singular": "VIP congelado",
               "plural": "VIPs congelados"
             },
-            "success": "Congelamento geral ligado: {count} {vips}. VIP comprado ou dado a partir de agora também entra congelado."
+            "success": "Congelamento geral ligado para {count} {vips}. VIP comprado ou dado a partir de agora também entra congelado."
           },
           "unfreeze-all": {
             "description": "descongelar todos os VIPs e desligar o congelamento geral",
-            "need-global-manager": "Descongelar todos os VIPs mexe na rede inteira: é de manager global para cima.",
+            "need-global-manager": "Descongelar todos os VIPs afeta a rede inteira. Só manager global ou superior pode fazer isso.",
             "error": "Sua tentativa de descongelar todos os VIPs falhou, tente novamente mais tarde!",
             "vips": {
               "singular": "VIP descongelado",
               "plural": "VIPs descongelados"
             },
-            "success": "Congelamento geral desligado: {count} {vips}. Os prazos voltaram a correr."
+            "success": "Congelamento geral desligado para {count} {vips}. Os prazos voltaram a correr."
           }
         },
         // O /darvip (o /givevip do exe-p4free-core): dá VIP com anúncio na rede toda e registro para a staff.
@@ -136,19 +136,19 @@
               "description": "Dias somados ao que resta, permanente, ou até o fim da temporada deste servidor"
             }
           },
-          "not-vip": "{vip} não é um VIP. Os VIPs são: {vips}.",
+          "not-vip": "{vip} não é um VIP. Escolha entre {vips}.",
           "invalid-duration": "Use os dias (de 1 a {max_days}), permanente ou temporada.",
           "need-highest-group": "Você só pode dar VIP abaixo do seu grupo!",
           "self": "Só o master dá VIP para a própria conta.",
-          "error": "A plataforma não confirmou o VIP de {target_name}. Confira no painel (Tempo de VIP) antes de repetir: ele pode ter sido gravado.",
-          "already-permanent": "{target_name} já tem o {vip_tag} &cpermanente: não há o que somar.",
+          "error": "A plataforma não confirmou o VIP de {target_name}. Confira no painel (Tempo de VIP) antes de repetir, pois ele pode ter sido gravado.",
+          "already-permanent": "{target_name} já tem o {vip_tag} &cpermanente. Não há o que somar.",
           "success": "Você deu {days} {days_word} de {vip_tag} &apara {target_name}. O VIP vence em {expires_at} (restam {remaining}).",
-          "success-frozen": "Você deu {days} {days_word} de {vip_tag} &apara {target_name}. O VIP está congelado: restam {remaining}, parados até descongelar.",
+          "success-frozen": "Você deu {days} {days_word} de {vip_tag} &apara {target_name}. O VIP está congelado e restam {remaining}, com o prazo parado até descongelar.",
           "success-permanent": "Você deu o {vip_tag} &apermanente para {target_name}.",
           "success-season": "Você deu o {vip_tag} &apara {target_name} até o fim da temporada de {server_id} ({ends_at}).",
-          "season-pending": "A temporada de {server_id} está na virada: o {vip_tag} &ade {target_name} ficou gravado e entra quando a próxima abrir.",
+          "season-pending": "A temporada de {server_id} está na virada. O {vip_tag} &ade {target_name} ficou gravado e entra quando a próxima abrir.",
           "season-already": "{target_name} já tem o {vip_tag} &cdesta temporada (comprado ou dado).",
-          "no-season": "{server_id} não tem temporada aberta: o VIP de temporada segue a do servidor onde o comando roda.",
+          "no-season": "{server_id} não tem temporada aberta. O VIP de temporada segue a do servidor onde o comando roda.",
           "announce": {
             "days": [
               "",

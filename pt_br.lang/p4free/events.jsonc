@@ -555,11 +555,13 @@
           "need-clan": "Você precisa estar em um clan para participar do evento!",
           "clan-not-authorized": "&cPara entrar nos eventos o seu clan tem que estar autorizado!",
           "cant-join-event": "O {event} já começou ou não está disponível.",
-          "target-in-event-app": "{player_name} já está no P4Free Eventos: dê o comando de lá para colocá-lo no {event}.",
+          "target-in-event-app": "{player_name} já está no P4Free Eventos. Dê o comando de lá para colocá-lo no {event}.",
           // O /kit, o /berserker, o /espada e o /machado no app de eventos (EventItemCommandListener).
           "item-command-blocked": "No P4Free Eventos os itens vêm só do evento.",
           // O /spawn de quem luta, espera o rejoin ou está no camarote (EventsListener.onSpawnRequest).
-          "spawn-blocked": "Dentro de um evento não há /spawn: saia pelo comando do evento, como o /glad sair."
+          "spawn-blocked": "Você não pode usar /spawn dentro de um evento. Saia pelo comando do evento, como o /glad sair.",
+          // O /ec (e os apelidos) no camarote ou à espera do rejoin: lá os itens reais estão guardados (EventsListener).
+          "cabin-ender-chest": "Você não pode abrir o baú enquanto estiver no camarote. Seus itens ficam guardados até você sair."
         },
         "events": {
           // A espera de um evento na barra de ação de todos no p4free (EventCountdownEchoListener), a cada segundo, como
@@ -743,9 +745,9 @@
               // Quem venceu o rush: nos abates, nos hits quando os abates empatam, por W.O., ou ninguém.
               "result": {
                 "kills": "&7 Vencedor: &7[{winner_clan}&7] nos abates.",
-                "hits": "&7 Abates empatados: &7[{winner_clan}&7] venceu nos hits.",
+                "hits": "&7 Os abates empataram. &7[{winner_clan}&7] venceu nos hits.",
                 "forfeit": "&7 Vencedor: &7[{winner_clan}&7] por W.O.",
-                "draw": "&7 Empate nos abates e nos hits: o rush terminou sem vencedor."
+                "draw": "&7 O rush terminou sem vencedor porque houve empate nos abates e nos hits."
               },
               "immunity-ended": [
                 "",
@@ -831,7 +833,7 @@
               "postponed": [
                 "",
                 "&c A caçada não foi iniciada!",
-                "&7 Nenhum clan estava apto: todos fizeram abates,",
+                "&7 Nenhum clan estava apto porque todos fizeram abates,",
                 "&7 estão em rush ou têm poucos membros vivos.",
                 ""
               ],
@@ -952,11 +954,11 @@
         "gladiator": {
           "rejoin-open": [
             "Você caiu do **Gladiador**. Dá para voltar até {deadline_time} ({deadline}) com `/glad rejoin`.",
-            "Não use /ec, /cofre, /kit nem /cash antes de voltar: qualquer um deles tira a sua reentrada."
+            "Não use /ec, /cofre, /kit nem /cash antes de voltar, pois qualquer um deles tira a sua reentrada."
           ],
           "rejoin-closed": {
-            "combat-logged": ["Você saiu do **Gladiador** em combate e foi eliminado: quem sai em combate não pode reentrar."],
-            "web-logged": ["Você saiu do **Gladiador** numa teia e foi eliminado: quem sai numa teia não pode reentrar."],
+            "combat-logged": ["Você saiu do **Gladiador** em combate e foi eliminado. Quem sai em combate não pode reentrar."],
+            "web-logged": ["Você saiu do **Gladiador** numa teia e foi eliminado. Quem sai numa teia não pode reentrar."],
             "disabled": ["Você caiu do **Gladiador**, mas a reentrada está desativada nesta partida, então não dá para voltar."],
             "already-used": ["Você caiu do **Gladiador** de novo. A reentrada só vale uma vez por partida, então não dá para voltar."],
             "clan-out": ["Você caiu do **Gladiador** e o seu clan ficou sem ninguém vivo, então não dá para voltar."]
@@ -995,7 +997,7 @@
         "unavailable": "&cO P4Free Eventos não está disponível agora. Tente de novo em instantes.",
         "timeout": "&cO P4Free Eventos não respondeu. Tente de novo em instantes.",
         "failed": "&cNão foi possível consultar os dados do Gladiador.",
-        "empty": "Nada a mostrar: não há Gladiador rodando ou ele ainda não tem registros.",
+        "empty": "Não há Gladiador em andamento ou a partida ainda não tem registros para mostrar.",
         "action": {
           "deathmatch-success": "&aVocê ativou o deathmatch com sucesso!",
           "deathmatch-failure": "&cO Gladiador não está em andamento!",
@@ -1025,7 +1027,7 @@
           "kick-clan-success": "&aVocê expulsou o clan do Gladiador com sucesso!",
           "kick-clan-failure": "&cEste clan não está no Gladiador!",
           "rush-start-success": "&aVocê ativou o rush entre os clans &7[{first_clan}&7] &ae &7[{second_clan}&7]&a.",
-          "rush-start-not-running": "&cO Gladiador não está em luta: não existem rushes antes do fim da preparação nem durante o DEATHMATCH!",
+          "rush-start-not-running": "&cO Gladiador não está em luta. Não existem rushes antes do fim da preparação nem durante o DEATHMATCH!",
           "rush-start-same-clan": "&cO rush precisa de dois clans diferentes!",
           "rush-start-no-alive": "&cO clan &7[{clan}&7] &cnão tem ninguém vivo no Gladiador!",
           "rush-start-busy": "&cO clan &7[{clan}&7] &cjá está em um rush ativo contra &7[{other_clan}&7]&c!",
@@ -1250,7 +1252,7 @@
               "hits": ["&a{winner_clan} venceu &7nos hits (abates empatados)", "", "&7Hits: &f{first_hits} &7x &f{second_hits}", "&7Quem mais hitou: &f{top_hitter} ({top_hitter_hits})", "&7Quem mais levou: &f{top_victim} ({top_victim_hits})", "&7Viradas: &f{first_reversals} &7x &f{second_reversals}", "&7Duração: &f{duration}"],
               "forfeit": ["&a{winner_clan} venceu &7por W.O.", "", "&7Hits: &f{first_hits} &7x &f{second_hits}", "&7Quem mais hitou: &f{top_hitter} ({top_hitter_hits})", "&7Quem mais levou: &f{top_victim} ({top_victim_hits})", "&7Viradas: &f{first_reversals} &7x &f{second_reversals}", "&7Duração: &f{duration}"],
               "won": ["&a{winner_clan} venceu", "", "&7Hits: &f{first_hits} &7x &f{second_hits}", "&7Quem mais hitou: &f{top_hitter} ({top_hitter_hits})", "&7Quem mais levou: &f{top_victim} ({top_victim_hits})", "&7Viradas: &f{first_reversals} &7x &f{second_reversals}", "&7Duração: &f{duration}"],
-              "draw": ["&eEmpate: abates e hits iguais", "", "&7Hits: &f{first_hits} &7x &f{second_hits}", "&7Quem mais hitou: &f{top_hitter} ({top_hitter_hits})", "&7Quem mais levou: &f{top_victim} ({top_victim_hits})", "&7Viradas: &f{first_reversals} &7x &f{second_reversals}", "&7Duração: &f{duration}"]
+              "draw": ["&eEmpate nos abates e nos hits", "", "&7Hits: &f{first_hits} &7x &f{second_hits}", "&7Quem mais hitou: &f{top_hitter} ({top_hitter_hits})", "&7Quem mais levou: &f{top_victim} ({top_victim_hits})", "&7Viradas: &f{first_reversals} &7x &f{second_reversals}", "&7Duração: &f{duration}"]
             }
           },
           "web-monitor": {

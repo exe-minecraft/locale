@@ -8,18 +8,18 @@
             "state": {
               "connecting": "&aConectando...",
               "preparing": "&fPreparando um servidor para você &7({position} de {total})",
-              "full": "&fRede cheia: você é o &c{position}&f de &c{total}",
-              "restarting": "&fServidores reiniciando: você é o &c{position}&f de &c{total}"
+              "full": "&fA rede está cheia. Sua posição na fila é &c{position}&f de &c{total}",
+              "restarting": "&fOs servidores estão reiniciando. Sua posição na fila é &c{position}&f de &c{total}"
             },
-            "actionbar": "&7Aguarde aqui: você é conectado automaticamente",
+            "actionbar": "&7Aguarde aqui. Você será conectado automaticamente",
             "reason": {
               "full": [
                 "",
                 " &c&lEXE &8➟ &eSala de Espera",
                 "",
                 " &fA rede está &ccheia&f no momento.",
-                " &7Você entra sozinho assim que abrir uma vaga:",
-                " &7não precisa sair nem reconectar.",
+                " &7Você entra automaticamente assim que abrir uma vaga.",
+                " &7Não precisa sair nem reconectar.",
                 ""
               ],
               "server-down": [
@@ -27,8 +27,8 @@
                 " &c&lEXE &8➟ &eSala de Espera",
                 "",
                 " &fO servidor em que você estava &ccaiu&f.",
-                " &7Você volta sozinho para um lobby em instantes:",
-                " &7não precisa sair nem reconectar.",
+                " &7Você volta automaticamente para um lobby em instantes.",
+                " &7Não precisa sair nem reconectar.",
                 ""
               ],
               "restart": [
@@ -36,8 +36,8 @@
                 " &c&lEXE &8➟ &eSala de Espera",
                 "",
                 " &fA rede está &ereiniciando&f.",
-                " &7Você é conectado sozinho em instantes:",
-                " &7não precisa sair nem reconectar.",
+                " &7Você será conectado automaticamente em instantes.",
+                " &7Não precisa sair nem reconectar.",
                 ""
               ]
             }
@@ -52,7 +52,7 @@
               "&c&lEXE&r",
               "",
               "&cO nick &f{name} &cpertence a outra conta da rede.",
-              "&cSe ele é seu, procure a nossa equipe:",
+              "&cSe ele é seu, procure a nossa equipe no Discord.",
               "",
               "&fdiscord.rede-exe.com"
             ],
@@ -79,7 +79,7 @@
               "&c&lEXE&r",
               "",
               "&cO servidor se encontra em manutenção, voltamos em breve.",
-              "&cFique por dentro de todas as novidades em:",
+              "&cAcompanhe todas as novidades no nosso Discord.",
               "",
               "&fdiscord.rede-exe.com"
             ],
@@ -87,7 +87,7 @@
               "&c&lEXE&r",
               "",
               "&cNão encontramos nenhum servidor de autenticação.",
-              "&cFique por dentro de todas as novidades em:",
+              "&cAcompanhe todas as novidades no nosso Discord.",
               "",
               "&fdiscord.rede-exe.com"
             ],
@@ -204,7 +204,7 @@
             "already-connected": "&cVocê já está conectado ao &f{app_display_name}&c.",
             "failed": "&cNão foi possível conectar ao &f{app_display_name}&c. Tente novamente em instantes.",
             "save-timeout": "&cSeus dados não foram gravados a tempo para a troca. Tente de novo em instantes.",
-            "intersection-required": "&cA troca para &f{app_display_name}&c foi recusada: seus dados ainda não terminaram de ser salvos. Tente de novo em instantes."
+            "intersection-required": "&cSeus dados ainda não terminaram de ser salvos, por isso a troca para &f{app_display_name}&c foi recusada. Tente de novo em instantes."
           },
           "command": {
             "in-delay": "&cEspere um instante antes de mandar outro comando."

@@ -189,7 +189,7 @@
           "name": "Eficiência",
           "description": [
             "&7Aumenta a velocidade de",
-            "&7quebrar blocos como: teia."
+            "&7quebrar blocos como teia."
           ],
           "effect": "Eficiência"
         },
@@ -450,7 +450,7 @@
           "shop": [
             "&e Adquira &f&lCASH&e e outros",
             "&e produtos em nossa loja!",
-            "&e Acesse: &floja.rede-exe.com",
+            "&e Acesse &floja.rede-exe.com",
             ""
           ],
           // As últimas linhas do conserto e do prestígio, que mudam com o estado da arma, e o

@@ -77,7 +77,7 @@
           ],
           "not-confirmed": [
             "Não foi possível confirmar o seu registro.",
-            "Tente de novo: /registrar <senha> <senha>"
+            "Tente de novo com /registrar <senha> <senha>"
           ]
         }
       },
@@ -104,7 +104,7 @@
             },
             "queue-position": {
               "title": "&c&lEXE",
-              "subtitle": "&fVocê está na fila: &c{position}&f de &c{total}"
+              "subtitle": "&fVocê está na posição &c{position}&f de &c{total} na fila"
             },
             "preparing-server": {
               "title": "&c&lEXE",
@@ -142,9 +142,9 @@
                   ""
                 ],
                 "original": "[Original]",
-                "original-hover": "&fA conta é minha: sair e entrar de novo, direto, sem senha",
+                "original-hover": "&fA conta é minha. Quero sair e entrar de novo direto, sem senha",
                 "pirate": "[Pirata]",
-                "pirate-hover": "&fNão tenho original: registrar uma senha"
+                "pirate-hover": "&fNão tenho conta original. Quero registrar uma senha"
               }
             }
           },

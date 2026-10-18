@@ -599,7 +599,7 @@
               },
               "errors": {
                 "empty": "&cNão há nenhum clã para apagar.",
-                "no-confirmation": "&cNada foi apagado: use /clan excluir todos primeiro e confirme em seguida."
+                "no-confirmation": "&cNada foi apagado. Use /clan excluir todos primeiro e confirme em seguida."
               },
               "confirm": [
                 "",
@@ -632,13 +632,13 @@
             },
             "errors": {
               "invalid-tag": "&cA tag precisa ter 3 letras ou números. Para zerar todos os clãs, use /clan resetar todos.",
-              "no-confirmation": "&cNada foi zerado: use o comando sem o confirmar primeiro e confirme em seguida.",
+              "no-confirmation": "&cNada foi zerado. Use o comando sem o confirmar primeiro e confirme em seguida.",
               "no-record": "&cNão existe clã com a tag {tag}, e ela não guarda nada de um clã desfeito.",
-              "already-reset": "&cO clã {clan_label} &cjá está zerado: não tem pontos, abates, mortes, vitórias, autorização nem boletim."
+              "already-reset": "&cO clã {clan_label} &cjá está zerado. Não tem pontos, abates, mortes, vitórias, autorização nem boletim."
             },
             "confirm-clan": [
               "",
-              " &cIsto zera o clã {clan_label}&c: pontos, abates, mortes, vitórias, a autorização dos eventos e o boletim, sem volta. Membros e cargos ficam.",
+              " &cIsto apaga os pontos, abates, mortes, vitórias, a autorização dos eventos e o boletim do clã {clan_label}&c, sem volta. Membros e cargos ficam.",
               " &cPara zerar, use &f/clan resetar {tag} confirmar &cnos próximos {confirm_seconds} segundos.",
               ""
             ],
@@ -692,7 +692,7 @@
             },
             "errors": {
               "target-without-clan": "&cEsse jogador não faz parte de nenhum clã.",
-              "target-is-leader": "&cO líder não sai por aqui: transfira a liderança ou apague o clã."
+              "target-is-leader": "&cO líder não pode sair por aqui. Transfira a liderança ou apague o clã."
             },
             "success": "&cVocê tirou {target_name_with_tag} &cdo clã &7[{clan_colored_tag}&7] {clan_name}&c."
           },
@@ -972,7 +972,7 @@
             "2": {
               "name": "&aBoletim",
               "lore": [
-                "&7O histórico do seu clã: entradas,",
+                "&7Histórico do seu clã com entradas,",
                 "&7saídas, promoções, expulsões e",
                 "&7mudanças de tag.",
                 "",

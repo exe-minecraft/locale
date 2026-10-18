@@ -26,7 +26,7 @@
             }
           },
           "punishment-category-not-found": "Não foi possível encontrar a categoria desejada",
-          "new-account": "&eO nick {target_name} nunca entrou na rede: a conta foi criada agora, e o que você aplicar vale para quem entrar com ele."
+          "new-account": "&eO nick {target_name} nunca entrou na rede. A conta foi criada agora, e o que você aplicar vale para quem entrar com ele."
         },
         "kick": {
           "arguments": {
@@ -49,7 +49,7 @@
             "&cAutor: {kick_author_name}",
             "&cMotivo: {kick_reason}",
             "",
-            "&fAlguma dúvida? Acesse o nosso Discord: &ediscord.rede-exe.com"
+            "&fAlguma dúvida? Entre no nosso Discord em &ediscord.rede-exe.com"
           ],
           "broadcast": [
             " ",

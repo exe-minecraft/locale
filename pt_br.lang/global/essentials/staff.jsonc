@@ -46,11 +46,11 @@
               "description": "A página da lista, a partir de 1"
             }
           },
-          "offline": "&c&lErro: &fJogador não encontrado ou offline.",
-          "invalid-page": "&c&lErro: &fNúmero da página inválido.",
-          "page-not-positive": "&c&lErro: &fO número da página deve ser maior que 0.",
-          "empty": "&c&lInfo: &fNenhum comando recente para {player}.",
-          "missing-page": "&c&lErro: &fPágina {page} não existe. Total de páginas: {pages}",
+          "offline": "&cJogador não encontrado ou offline.",
+          "invalid-page": "&cNúmero da página inválido.",
+          "page-not-positive": "&cO número da página deve ser maior que 0.",
+          "empty": "&eNenhum comando recente para {player}.",
+          "missing-page": "&cPágina {page} não existe. Total de páginas: {pages}",
           "header": "&6&lComandos recentes de &e{player} &6(Página {page}/{pages}):",
           "entry": "&8{index}. &f{command} &7({time} atrás)",
           "copy": "&7Clique para copiar",

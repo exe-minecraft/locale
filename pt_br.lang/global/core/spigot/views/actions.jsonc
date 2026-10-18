@@ -16,8 +16,8 @@
                 "invalid-time": "Digite um tempo em segundos de 1s a 120s!"
               },
               "success": "Sua solicitação de {action_name} {action_apps_size} {action_apps_unit} foi enviada com sucesso!",
-              "nothing-to-do": "Não há o que {action_name}: a seleção já está assim.",
-              "error": "Não foi possível enviar a solicitação de {action_name} para: {apps}. Tente de novo.",
+              "nothing-to-do": "Não há o que {action_name}, pois a seleção já está assim.",
+              "error": "Não foi possível enviar a solicitação de {action_name} para {apps}. Tente de novo.",
               // O {action_apps_unit} das três frases: 1 no singular, 0 e o resto no plural.
               "units": {
                 "server": { "singular": "servidor", "plural": "servidores" }

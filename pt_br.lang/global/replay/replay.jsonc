@@ -34,7 +34,7 @@
                 "description": "ID da gravação"
               }
             },
-            "not-found": "&cReplay não encontrado: &f{name}",
+            "not-found": "&cO replay &f{name}&c não foi encontrado.",
             "description": "Assiste a um replay pelo ID."
           },
           "list": {
@@ -57,7 +57,7 @@
               }
             },
             "success": "&aReplay &f{name}&a deletado com sucesso!",
-            "not-found": "&cReplay não encontrado: &f{name}",
+            "not-found": "&cO replay &f{name}&c não foi encontrado.",
             "description": "Exclui uma gravação."
           },
           "info": {
@@ -67,7 +67,7 @@
                 "description": "ID da gravação"
               }
             },
-            "not-found": "&cReplay não encontrado: &f{name}",
+            "not-found": "&cO replay &f{name}&c não foi encontrado.",
             "header": "&eInformações do replay:",
             "name": "&8▸ &7Nome: &f{name}",
             "duration": "&8▸ &7Duração: &f{duration}",
@@ -277,11 +277,11 @@
       "messages": {
         "connection": {
           "initializing": "&7Conectando ao servidor de replay...",
-          "start-error": "&cErro ao iniciar replay: Tente novamente.",
+          "start-error": "&cNão foi possível iniciar o replay. Tente de novo.",
           "errors": {
             "in-connection-delay": "&cAguarde um pouco antes de entrar em outro replay.",
             "already-have-request": "&eVocê já tem uma solicitação de replay pendente.",
-            "replay-not-found": "&cReplay não encontrado: &f{replay_name}",
+            "replay-not-found": "&cO replay &f{replay_name}&c não foi encontrado.",
             "not-available-apps": "&cNenhum servidor de replay disponível no momento.",
             "internal": "&cErro interno ao conectar ao replay."
           }
@@ -300,21 +300,21 @@
             "",
             "&6&lREPLAY &8 &f{replay_name} &8, &7{replay_duration}",
             "",
-            "&7Você está assistindo a uma gravação. Nada aqui é ao vivo:",
-            "&7os jogadores, os blocos e os itens são o que foram naquele momento.",
+            "&7Você está assistindo a uma gravação. Nada aqui acontece ao vivo.",
+            "&7Os jogadores, os blocos e os itens aparecem como estavam naquele momento.",
             "",
             "&fControles",
-            "&8▸ &eHotbar&7 : velocidade, voltar 10s, pausar, avançar 10s,",
-            "&7  lista de jogadores e sair.",
-            "&8▸ &eSHIFT duas vezes&7 : alterna entre &fcriativo&7 (voa) e &fespectador&7 (atravessa blocos).",
-            "&8▸ &eLista de jogadores&7 : clique num nome para a câmera segui-lo.",
-            "&8▸ &eSHIFT&7 : solta a câmera de quem você está seguindo.",
+            "&8▸ &7Na &ehotbar&7, você pode mudar a velocidade, voltar 10s, pausar, avançar 10s,",
+            "&7  abrir a lista de jogadores e sair.",
+            "&8▸ &7Aperte &eSHIFT duas vezes&7 para alternar entre &fcriativo&7 (voa) e &fespectador&7 (atravessa blocos).",
+            "&8▸ &7Na &elista de jogadores&7, clique num nome para a câmera segui-lo.",
+            "&8▸ &7Aperte &eSHIFT&7 para soltar a câmera de quem você está seguindo.",
             ""
           ],
           "welcome-staff": [
             "&fStaff",
-            "&8▸ &eClique num jogador&7 : abre o inventário dele como estava naquele instante.",
-            "&8▸ &eClique num baú&7 : abre o conteúdo gravado dele.",
+            "&8▸ &eClique num jogador&7 para abrir o inventário dele como estava naquele instante.",
+            "&8▸ &eClique num baú&7 para abrir o conteúdo gravado dele.",
             "&8▸ &7Os comandos que os jogadores digitaram aparecem flutuando sobre eles.",
             ""
           ],

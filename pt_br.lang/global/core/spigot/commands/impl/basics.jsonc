@@ -27,7 +27,7 @@
               "description": "Jogador que deseja limpar o inventário"
             }
           },
-          "app-now": "&eVocê está em: \"{app_id}\"",
+          "app-now": "&eVocê está em \"{app_id}\"",
           "app-not-found": "Não foi possível encontrar nenhum servidor com esse id!",
           "app-proxy": "Ops, a aplicação informada é do tipo Proxy.",
           "app-offline": "Ops, parece que esse servidor está offline.",
@@ -62,7 +62,7 @@
               "  &fDiscord: &7não vinculado &8(use /discord)",
               ""
             ],
-            "link": "  &aLink pronto: &b&nclique para abrir o site&r &8(vale 1 minuto)",
+            "link": "  &aLink pronto. &b&nClique para abrir o site&r &8(vale 1 minuto)",
             "link-hover": "&7Abre o site já logado. Não mande este link a ninguém.",
             "link-unavailable": "Não deu para gerar o link do site agora. Tente de novo em instantes.",
             "site": "  &fSite: &b&ngerar link de acesso",
@@ -121,7 +121,7 @@
           "success-activated": "&aModo God ativado.",
           "success-activated-other": "&aModo God ativado para {target_name}.",
           "success-deactivated-other": "&aModo God desativado para {target_name}.",
-          "only-staff": "&c{target_name} não é da staff: o modo God só vale para a staff.",
+          "only-staff": "&c{target_name} não é da staff. Só a staff pode usar o modo God.",
           "list-header": [
             "",
             "&eLista de todos os jogadores em modo God:",
@@ -180,7 +180,7 @@
           "durability": [ "&7Durabilidade: &f{current}&7/&f{max}" ],
           "alert": "Psiu! Tem alguém vendo seu inventário...",
           "alert-clan": "Psiu! Tem alguém do clã {clan_tag} vendo seu inventário...",
-          "locked": "O inventário de {target_name} é o kit de um evento: só dá para olhar.",
+          "locked": "O inventário de {target_name} é o kit de um evento. Você só pode visualizá-lo.",
           "target-full": "O inventário de {target_name} está cheio."
         },
         "lobby": {
@@ -290,8 +290,8 @@
               "description": "Jogador que você deseja teleportar"
             }
           },
-          "success-other": "O jogador {target_name} foi teleportado para as coordenadas: {coordinates_x}, {coordinates_y}, {coordinates_z}.",
-          "success-same": "Você foi teleportado para as coordenadas: {coordinates_x}, {coordinates_y}, {coordinates_z}."
+          "success-other": "O jogador {target_name} foi teleportado para as coordenadas {coordinates_x}, {coordinates_y}, {coordinates_z}.",
+          "success-same": "Você foi teleportado para as coordenadas {coordinates_x}, {coordinates_y}, {coordinates_z}."
         },
         "tpworld": {
           "arguments": {

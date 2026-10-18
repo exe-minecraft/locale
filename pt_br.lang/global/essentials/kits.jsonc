@@ -62,7 +62,7 @@
           "cannot-find-with-id": "Não foi possível encontrar um kit com esse id!",
           "success": "O kit {kit_id} foi deletado com sucesso.",
           // O kit vem do yml; o que se apaga são os itens gravados. Sem eles não havia nada a deletar.
-          "already-empty": "O kit {kit_id} não tem itens gravados: não havia nada a deletar."
+          "already-empty": "O kit {kit_id} não tem itens gravados. Não havia nada para apagar."
         },
         "editkit": {
           "arguments": {

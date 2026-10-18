@@ -2,6 +2,25 @@
 
 Todo texto que o jogador vê sai daqui. Plugin nenhum crava texto no código nem no `config.yml`.
 
+## Escrita
+
+Use português do Brasil com acentuação correta, frases diretas e naturais, sem travessão
+nem ponto do meio (`·`). Não use dois-pontos para emendar uma mensagem com uma explicação,
+consequência ou instrução. Reescreva com ponto, vírgula ou uma ligação natural conforme o
+sentido, sem trocar o travessão automaticamente por dois-pontos.
+
+Prefira `Você não pode abrir o baú enquanto estiver no camarote. Seus itens ficam guardados
+até você sair.` a `O baú não abre no camarote: os seus itens estão guardados até você sair
+dele.`. Prefira `Para sair, use /glad sair.` a `Para sair: /glad sair.`.
+
+Dois-pontos cabem em rótulos de dados (`Preço: {price}`, `Abates: {kills}`), listas e sintaxe
+técnica. Preserve as chaves, os placeholders, os códigos de cor, os comandos e o significado
+ao revisar uma mensagem. As regras gerais de escrita ficam no `CLAUDE.md` do monorepo `exe`.
+
+Remover os dois-pontos não autoriza resumir o texto. Preserve as explicações, os exemplos,
+as condições e o tom do original. Leia também as linhas vizinhas quando a mensagem estiver
+dividida em uma lista e reformule o conjunto sem cortar o contexto.
+
 ## Onde fica cada chave
 
 A chave `plugins.<namespace>.…` vive em `pt_br.lang/<bundle>/<namespace>.jsonc`, ou em

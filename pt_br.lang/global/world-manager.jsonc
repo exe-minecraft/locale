@@ -25,7 +25,7 @@
           "invalid-type": "Tipo inválido. Este servidor suporta os tipos vazio e plano.",
           "already-exists": "Já existe um mundo ou uma pasta com esse nome. Para carregar uma pasta existente, use /world importar.",
           "not-on-disk": "Não foi encontrada uma pasta de mundo com level.dat para esse nome neste servidor.",
-          "already-loaded": "Esse mundo já está carregado e no catálogo: não havia nada a importar.",
+          "already-loaded": "Esse mundo já está carregado e no catálogo. Não havia nada para importar.",
           "busy": "O world-manager ainda está carregando ou já existe uma operação para esse mundo. Aguarde a conclusão.",
           "error": "Não foi possível concluir a operação do mundo. A falha foi registrada para a equipe técnica.",
           "create": {

@@ -57,8 +57,8 @@
         "already-claimed": "&cEste correio já foi coletado.",
         "claimed": "&aVocê coletou os itens do correio.",
         "send": {
-          "cancelled": "&cEnvio cancelado: nada foi enviado.",
-          "success": "&aEnviado: &f{count} {count_unit} &apara &f{recipients} {recipients_unit}&a.",
+          "cancelled": "&cEnvio cancelado. Nada foi enviado.",
+          "success": "&aVocê enviou &f{count} {count_unit} &apara &f{recipients} {recipients_unit}&a.",
           "not-allowed-item": "&cEste item não pode ser enviado pelo correio.",
           "unknown-player": "&cO jogador {name} não existe.",
           "platform-failed": "&cNão foi possível buscar os destinatários agora. Tente de novo em instantes."

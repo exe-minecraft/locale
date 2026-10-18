@@ -209,14 +209,14 @@
             "arguments": {
               "name": {
                 "name": "nome",
-                "description": "Nome do holograma: letras minúsculas, números, - ou _"
+                "description": "Use letras minúsculas, números, - ou _ no nome do holograma"
               },
               "rankings": {
                 "name": "rankings",
                 "description": "Até 6 ids de ranking separados por espaço, na ordem do clique esquerdo"
               }
             },
-            "invalid-name": "Nome inválido: {hologram_name}. Use de 1 a 32 letras minúsculas, números, - ou _.",
+            "invalid-name": "O nome {hologram_name} é inválido. Use de 1 a 32 letras minúsculas, números, - ou _.",
             "already-exists": "Já existe um holograma de ranking chamado {hologram_name}.",
             "repeated-ranking": "O ranking {ranking} foi repetido. Cada ranking entra uma vez só.",
             "too-many-rankings": "Um holograma de ranking tem no máximo {max_rankings} rankings.",

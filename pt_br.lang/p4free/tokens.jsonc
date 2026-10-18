@@ -5,7 +5,7 @@
       "messages": {
         "session-summary": [
           "",
-          " &bSequência encerrada: &f+{tokens} {tokens_unit}",
+          " &bSequência encerrada. Você ganhou &f+{tokens} {tokens_unit}",
           " &7{hits} {hits_unit}, {kills} {kills_unit}",
           ""
         ]
