@@ -50,7 +50,7 @@
         ],
         "clans": "&f Clans restantes: &6{clans}",
         "kills": "&f Abates no evento: &c{kills}",
-        "border": "&f Borda em: &c{time}",
+        "border": "&f Borda em &c{time}",
         "border-manual": "&f Borda &c&lMANUAL",
         "border-closing": "&f Borda &4Fechando...",
         "deathmatch": "&f &4&lDEATHMATCH",

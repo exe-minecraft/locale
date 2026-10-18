@@ -89,7 +89,7 @@
         // O resultado vai a todos no P4Free local. {winners} e {losers} viram os nomes, cada um com
         // as estatísticas da luta no hover.
         "result": {
-          "duel": "&6&lX1 &r&f{winners} &7({health}&c❤&7) &eVENCEU o duelo contra &f{losers}&e.",
+          "duel": "&6&lX1 &r&f{winners} &7({health}&c❤&7) &evenceu o duelo contra &f{losers}&e.",
           "team": "&6&lX1 &r&eVitória de &f{winners} &econtra &f{losers} &7({format})&e.",
           "draw": "&7A luta terminou empatada &8({format})&7.",
           "elo-won": "&a+{amount} {points} &8(agora {elo})",
@@ -279,11 +279,12 @@
           "cancelled": "&7O CxC entre {first} &7e {second} &7acabou antes da luta começar."
         },
         "broadcast": {
-          // Uma linha só para o servidor inteiro (decisão do dono), com o camarote clicável.
+          // Uma linha para o backend local: início da contagem com camarote clicável e término, inclusive cancelamento.
           "start": "&6CxC: &fo clã {first} &8({first_size}) &fenfrenta o clã {second} &8({second_size})&f. {watch}",
           "watch": "&e[Assistir no camarote]",
           "win": "&6CxC: &fo clã {winner} &fvenceu o clã {loser}&f.",
-          "draw": "&6CxC: &fa batalha entre {first} &fe {second} &fterminou empatada."
+          "draw": "&6CxC: &fa batalha entre {first} &fe {second} &fterminou empatada.",
+          "cancelled": "&6CxC: &fa batalha entre {first} &fe {second} &ffoi cancelada antes de começar."
         },
         "scoreboard": {
           "lines": [
