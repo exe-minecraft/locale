@@ -193,7 +193,27 @@
               "&eClans vivos: &f{event_clans}",
               "&eEstágio da borda: &f{event_border}",
               "&eRushes ativos: &f{event_rushes}",
+              "",
+              "&4&l&m       &c&l&m       &r &f&lSTATUS DO GLADIADOR &c&l&m       &4&l&m      ",
+              ""
+            ],
+            "message-countdown": [
+              "",
+              "&4&l&m       &c&l&m       &r &f&lSTATUS DO GLADIADOR &c&l&m       &4&l&m      ",
+              "",
+              "&eStatus: {event_status}",
+              "&eJogadores inscritos: &f{event_players}",
+              "&eClans inscritos: &f{event_clans}",
               "&eContagem: &f{event_time}s",
+              "",
+              "&4&l&m       &c&l&m       &r &f&lSTATUS DO GLADIADOR &c&l&m       &4&l&m      ",
+              ""
+            ],
+            "message-finalized": [
+              "",
+              "&4&l&m       &c&l&m       &r &f&lSTATUS DO GLADIADOR &c&l&m       &4&l&m      ",
+              "",
+              "&eStatus: {event_status}",
               "",
               "&4&l&m       &c&l&m       &r &f&lSTATUS DO GLADIADOR &c&l&m       &4&l&m      ",
               ""
