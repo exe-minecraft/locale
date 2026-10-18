@@ -3,8 +3,8 @@
     // O ClanFight e o FastGlad no padrão do Gladiador (events.jsonc): as faixas riscadas em volta dos anúncios, o
     // [evento] em vermelho-escuro nas entradas, saídas e abates, e a tag do clan em [cinza]. Toda mensagem das arenas
     // tem o {event} (ClanFight, FastGlad), o {event_title} (o mesmo em maiúsculas, para a faixa) e o {event_tag} (a tag
-    // que o clan vencedor ganha); o stash-failed, o not-in-event e as respostas da staff só têm o {event}. Cada bloco
-    // que abre com linha em branco fecha com outra.
+    // que o clan vencedor ganha); o stash-failed, o not-in-event e as respostas da staff só têm o {event}, e as do
+    // expulsar também o {player} ou o {clan}. Cada bloco que abre com linha em branco fecha com outra.
     "arena-events": {
       "arguments": {
         "location": {
@@ -286,7 +286,7 @@
       // Logo depois do vencedor do FastGlad, como o exe-fastgladiator: os 3 que mais abateram na partida.
       "kills-ranking": [
         "",
-        "&e&l Os jogadores com mais abates foram:",
+        "&e&l Quem mais abateu no {event}:",
         ""
       ],
       "kills-ranking-entry": "&6 {position}º &7[{clan}&7] &f{player} &7com &c{kills} &7{kills_unit}",
