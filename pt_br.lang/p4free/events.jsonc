@@ -478,6 +478,10 @@
           },
           "expulsarclan": {
             "description": "expulsar um clan inteiro do ClanFight"
+          },
+          "inventario": {
+            "description": "ver o inventário de quem lutou (o clique no nome do fim da batalha)",
+            "arguments": { "code": { "name": "código", "description": "O código que o clique no nome traz." } }
           }
         },
         "fastglad": {

@@ -838,7 +838,11 @@
           },
           "inventory": {
             "description": "ver o inventário de quem lutou (o clique no nome do resultado)",
-            "arguments": { "id": { "name": "id", "description": "O código que o clique no nome do resultado traz." } }
+            "arguments": {
+              // O "id" é do jar de antes do fight-inventory; sai depois que ele deixar o ar.
+              "id": { "name": "id", "description": "O código que o clique no nome do resultado traz." },
+              "code": { "name": "código", "description": "O código que o clique no nome do resultado traz." }
+            }
           },
           "arena": {
             "description": "gerenciar as arenas dos duelos",

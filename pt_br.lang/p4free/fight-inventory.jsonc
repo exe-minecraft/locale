@@ -1,0 +1,65 @@
+{
+  "plugins": {
+    // A foto do inventário de quem lutou, aberta pelo clique no nome do resultado do x1 e do fim de cada batalha do
+    // ClanFight (FightInventoryView, no core). Saiu do plugins.duels.views.inventory em 18/10, para os dois usarem a
+    // mesma tela e o mesmo menu (fight-inventory).
+    "fight-inventory": {
+      // O título do inventário no 1.8 cabe em 32 caracteres: com o nick mais longo (16), este fica em 30.
+      "title": "Inventário de {player}",
+      "unavailable": "&cEsse inventário não está mais disponível.",
+      // Acrescentada à lore do que gasta (armadura, espada, arco).
+      "durability": [ "&7Durabilidade: &f{current}&7/&f{max}" ],
+      "items": {
+          "health": {
+            "name": "&cVida: &f{health} ❤",
+            "lore": [ "&7No instante em que a luta", "&7terminou para este jogador." ],
+            "dead": {
+              "name": "&cMorto",
+              "lore": [ "&7Este jogador morreu na luta.", "&7Vida: &f{health} ❤" ]
+            }
+          },
+          "previous": {
+            "name": "&eInventário anterior",
+            "lore": [ "&7Jogador: &f{previous}", "", "&eClique para ver o inventário." ]
+          },
+          "next": {
+            "name": "&ePróximo inventário",
+            "lore": [ "&7Jogador: &f{next}", "", "&eClique para ver o inventário." ]
+        },
+        "effects": {
+          "name": "&dEfeitos",
+          "lore": [ "{effects}" ]
+        }
+      },
+      "effects": {
+        "line": "&8 ▸ &f{effect} {level} &7({time})",
+        "none": "&7Nenhum efeito ativo.",
+        "names": {
+          "speed": "Velocidade",
+          "slow": "Lentidão",
+          "fast-digging": "Pressa",
+          "slow-digging": "Cansaço",
+          "increase-damage": "Força",
+          "heal": "Vida instantânea",
+          "harm": "Dano instantâneo",
+          "jump": "Super pulo",
+          "confusion": "Náusea",
+          "regeneration": "Regeneração",
+          "damage-resistance": "Resistência",
+          "fire-resistance": "Resistência ao fogo",
+          "water-breathing": "Respiração aquática",
+          "invisibility": "Invisibilidade",
+          "blindness": "Cegueira",
+          "night-vision": "Visão noturna",
+          "hunger": "Fome",
+          "weakness": "Fraqueza",
+          "poison": "Veneno",
+          "wither": "Decomposição",
+          "health-boost": "Vida extra",
+          "absorption": "Absorção",
+          "saturation": "Saturação"
+        }
+      }
+    }
+  }
+}

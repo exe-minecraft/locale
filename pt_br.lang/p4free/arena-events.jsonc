@@ -190,7 +190,9 @@
         }
       },
       // O fim de cada duelo: o {round_result} é uma das linhas do round-result, e o {round_hits} a linha do round-hits,
-      // que some quando ninguém acertou ninguém.
+      // que some quando ninguém acertou ninguém. O {round_inventories} é a linha do round-inventories, só para quem estava
+      // na arena e no camarote e para quem lutou. Cada nome abre a foto do inventário de quem lutou, como no x1. O clique
+      // se acha pelo nome já pintado do "player", então ele precisa da cor na frente do {player}.
       "round-finished": [
         "",
         "&4&l&m      &c&l&m      &r &f&lBATALHA &c&l&m      &4&l&m      ",
@@ -199,6 +201,7 @@
         "",
         "{round_result}",
         "{round_hits}",
+        "{round_inventories}",
         "",
         "&4&l&m      &c&l&m      &r &f&lBATALHA &c&l&m      &4&l&m      ",
         ""
@@ -210,6 +213,12 @@
       "round-hits": [
         "&7 Mais hits na batalha: &7[{clan}&7] &f{player} &7({hits} {hits_unit})"
       ],
+      "round-inventories": {
+        "line": "&7 Inventários: {players}",
+        "player": "&f{player}",
+        "separator": "&7, ",
+        "hover": "&eClique para ver o inventário de {player}."
+      },
       // A borda do FastGlad, como a do Gladiador.
       "border": [
         "",
