@@ -1,6 +1,13 @@
 {
   "plugins": {
     "essentials": {
+      // O /spawn <jogador> da staff (Moderador para cima). Nos eventos o app de eventos recusa: o blocked-other.
+      "commands": {
+        "spawn": {
+          "success-other": "&aVocê mandou {target_name} para o spawn.",
+          "blocked-other": "{target_name} está em um evento, e dentro de um evento não há /spawn."
+        }
+      },
       "messages": {
         "spawn": {
           "already-connect": "&cVocê já está conectado a um spawn.",
