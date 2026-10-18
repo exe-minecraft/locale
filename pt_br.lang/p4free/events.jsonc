@@ -840,6 +840,13 @@
               ],
               "web-wear": "&6&l[TEIA] &f{on_web} de {members} membros do clan &7[{clan_tag}&7] &festão na teia. &cA partir de 20 s nela, a armadura de todo o clan gasta mais a cada golpe, e mais ainda com o tempo."
             },
+            // A contagem na barra de ação, a cada segundo, para quem está no evento e no camarote, como no exe-gladiador:
+            // a espera, a preparação e o PvP desligado do deathmatch.
+            "actionbar": {
+              "waiting": "&aComeçando em {time}...",
+              "preparing": "&aO PvP vai ser ativo em {time}...",
+              "deathmatch": "&cO PvP será reativado em {time}."
+            },
             "title": {
               "win-event": {
                 "title": "&cGLADIADOR ACABOU",
