@@ -128,7 +128,7 @@
         "already-repaired": "Esta arma não precisa de conserto.",
         "repaired": "Arma consertada.",
         "cannot-drop": "A arma não se larga no chão.",
-        "cannot-move": "A arma não sai do seu inventário.",
+        "cannot-move": "Você só pode guardar a arma no seu próprio /cofre.",
         "prestige-maximum": "Esta arma já está no prestígio máximo.",
         "prestige-not-invested": "Você precisa ter {required} tokens investidos nesta arma.",
         "prestige-done": "&aPrestígio &l{prestige}&r&a. Os encantamentos foram zerados.",

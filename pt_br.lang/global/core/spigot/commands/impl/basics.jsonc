@@ -13,8 +13,14 @@
               "description": "Jogador que deseja limpar o inventário"
             }
           },
-          "success-other": "Você limpou o inventário de {target_name}!",
-          "success-same": "Seu inventário foi limpo."
+          "success-other": "Você removeu {count} {count_unit} do inventário de {target_name}.",
+          "success-same": "Você removeu {count} {count_unit} do seu inventário.",
+          "nothing-same": "Não há itens para remover do seu inventário.",
+          "nothing-other": "Não há itens para remover do inventário de {target_name}.",
+          "items": {
+            "singular": "item",
+            "plural": "itens"
+          }
         },
         "connect": {
           "arguments": {
