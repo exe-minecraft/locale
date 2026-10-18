@@ -11,7 +11,7 @@
           },
           "in-cooldown": "Você precisa esperar mais {remaining_time} para enviar outra mensagem!",
           "message-cannot-be-empty": "Você não pode enviar uma mensagem vazia!",
-          "chat-locked": "O chat global está desabilitado!",
+          "chat-locked": "O chat global está mutado no momento.",
           "too-similar": "Essa mensagem é quase igual à anterior. Escreva outra coisa.",
           "dont-have-requirements": "Você precisa ter no mínimo {chat_message_currency_value_formatted_requirement} para enviar uma mensagem no chat!",
           // {sender_tags}: as tags equipadas do P4Free (/tags), cada uma seguida de um espaço, ou vazio.
@@ -48,7 +48,7 @@
           },
           "in-cooldown": "Você precisa esperar mais {remaining_time} para enviar outra mensagem!",
           "message-cannot-be-empty": "Você não pode enviar uma mensagem vazia!",
-          "chat-locked": "O chat local está desabilitado!",
+          "chat-locked": "O chat local está mutado no momento.",
           "too-similar": "Essa mensagem é quase igual à anterior. Escreva outra coisa.",
           "dont-have-requirements": "Você precisa ter no mínimo {chat_message_currency_value_formatted_requirement} para enviar uma mensagem no chat!",
           "without-receivers": "&cParece que você está sozinho aqui :(",
@@ -92,16 +92,37 @@
             ""
           ]
         },
+        // O /togglechat muta e desmuta os canais do servidor, como o /chat mute do exe-chats. O aviso
+        // vai a todos os jogadores do servidor. O "todos" muta os dois se algum estiver aberto e só
+        // desmuta quando os dois estão mutados.
         "toggle-chat": {
           "arguments": {
             "type": {
-              "name": "tipo",
-              "description": "Tipo do canal que você deseja mudar o status"
+              "name": "global|local|todos",
+              "description": "Canal que você deseja mutar ou desmutar"
             }
           },
-          "chat-type-not-found": "Não foi possível encontrar um chat com esse id",
-          "success-locked": "O status do chat {chat_type_name} foi alterado para desabilitado.",
-          "success-unlocked": "O status do chat {chat_type_name} foi alterado para habilitado."
+          "chat-type-not-found": "Esse canal não existe. Use global, local ou todos.",
+          "locked": {
+            "global": "&cO chat global foi mutado.",
+            "local": "&cO chat local foi mutado.",
+            "todos": [
+              "",
+              "&c Todos os canais foram mutados.",
+              "&7 Os jogadores não poderão enviar mensagens em nenhum canal.",
+              ""
+            ]
+          },
+          "unlocked": {
+            "global": "&aO chat global foi desmutado.",
+            "local": "&aO chat local foi desmutado.",
+            "todos": [
+              "",
+              "&a Todos os canais foram desmutados.",
+              "&7 Os jogadores agora podem enviar mensagens normalmente.",
+              ""
+            ]
+          }
         }
       },
       "chat": {
