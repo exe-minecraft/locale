@@ -48,7 +48,7 @@
           "no-arena": "&cNenhuma arena de duelo está ativa.",
           "no-free-arena": "&cTodas as arenas estão ocupadas agora.",
           "unavailable": "&cOs duelos estão indisponíveis agora.",
-          "queue-closed": "&cA staff fechou as filas do x1. Aguarde a reabertura.",
+          "queue-closed": "&cAs filas do x1 estão fechadas. Aguarde a reabertura.",
           "loading": "&cSeus dados de duelo ainda estão carregando.",
           "stash-failed": "&cNão deu para guardar seus itens agora. Nada foi tirado de você.",
           "match-ended": "&cEssa luta já acabou.",
@@ -107,10 +107,10 @@
         }
       },
       "queue": {
-        "opened": "&8[&bStaff&8] &f{player} &aabriu as filas 1v1 e 2v2 do x1.",
-        "closed": "&8[&bStaff&8] &f{player} &cencerrou as filas 1v1 e 2v2 do x1.",
-        "already-open": "&cAs filas 1v1 e 2v2 do x1 já estão abertas.",
-        "already-closed": "&cAs filas 1v1 e 2v2 do x1 já estão encerradas.",
+        "opened": "&e{player} abriu as filas do x1.",
+        "closed": "&e{player} fechou as filas do x1.",
+        "already-open": "&cAs filas do x1 já estão abertas.",
+        "already-closed": "&cAs filas do x1 já estão fechadas.",
         "joined": "&aVocê entrou na fila de &f{mode}&a.",
         "already": "&cVocê já está nessa fila.",
         "left": "&7Você saiu da fila.",
