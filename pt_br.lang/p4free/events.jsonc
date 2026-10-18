@@ -132,7 +132,7 @@
         "duel": "&eDuelo atual: &7[{first}&7] &fcontra &7[{second}&7]",
         "no-duel": "&eDuelo atual: &faguardando o próximo confronto",
         "merchant": {
-          "open": "&eMercador Sombrio: &aaberto &7(/fg mercador)",
+          "open": "&eMercador Sombrio: &aaberto &7(no centro do mapa)",
           "next": "&eMercador Sombrio: &fchega em {time}",
           "closed": "&eMercador Sombrio: &ffechado, sem novas visitas nesta partida"
         }
@@ -531,7 +531,7 @@
             "description": "reviver um jogador no FastGlad"
           },
           "mercador": {
-            "description": "abrir o Mercador Sombrio"
+            "description": "abrir a loja do Mercador Sombrio durante a luta"
           },
           "deathmatch": {
             "description": "forçar o deathmatch do FastGlad"

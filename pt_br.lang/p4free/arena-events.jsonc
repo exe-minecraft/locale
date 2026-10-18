@@ -165,6 +165,11 @@
         "border-change": {
           "title": "&4Borda fechando!",
           "subtitle": "&fMovam-se para dentro da nova área!"
+        },
+        // A chegada do Mercador Sombrio do FastGlad, com o som do wither, como no exe-fastgladiator.
+        "merchant-arrive": {
+          "title": "&9O Mercador Sombrio chegou!",
+          "subtitle": "&fCurvem-se perante ao seu rei."
         }
       },
       // O fim de cada duelo: o {round_result} é uma das linhas do round-result, e o {round_hits} a linha do round-hits,
@@ -215,7 +220,32 @@
         "&4&l&m       &c&l&m       &r &f&lDEATHMATCH &c&l&m       &4&l&m       ",
         ""
       ],
-      "merchant-open": "&4[{event}] &5O Mercador Sombrio chegou! &fUse &e/fg mercador&f.",
+      // O Mercador Sombrio do FastGlad, com o texto do exe-fastgladiator: um wither no centro do mapa (o ponto entry, o
+      // centro da borda), e o clique direito nele, a até 6 blocos, abre a loja. O {time} é a duração da visita na
+      // chegada e quanto falta para a próxima na despedida; a última visita se despede com o merchant-gone.
+      "merchant-name": "&9Mercador Sombrio",
+      "merchant-open": [
+        "",
+        "&9 [Mercador Sombrio] &7Aaah, esses meros mortais de novo! Utilizem suas &6moedas de abate &7para comprar itens comigo, quem sabe assim deixam de ser tão insignificantes...",
+        "",
+        "&f Estou no &acentro do mapa&f. Cliquem em mim com o botão direito.",
+        "&f Fiquem atentos, eu vou embora em &a{time}&f.",
+        ""
+      ],
+      "merchant-leave": [
+        "",
+        "&9 [Mercador Sombrio] &7Já cansei de vocês, mortais medíocres. Meu tempo aqui acabou, mas não chorem demais...",
+        "",
+        "&f Eu voltarei em &a{time} &fpara oferecer meus itens, caso ainda queiram tentar ser alguém neste mundo.",
+        ""
+      ],
+      "merchant-gone": [
+        "",
+        "&9 [Mercador Sombrio] &7Já cansei de vocês, mortais medíocres. Meu tempo aqui acabou, agora podem chorar...",
+        "",
+        "&f Eu não voltarei mais para este lugar!",
+        ""
+      ],
       "winner": [
         "",
         "&4&l&m      &c&l&m      &r &f&l{event_title} &c&l&m      &4&l&m      ",
