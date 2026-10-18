@@ -66,6 +66,9 @@
           "kills": "&f Abates no evento: &c{kills}",
           "battle": "&f Batalha em andamento:",
           "versus": " &7{first} &fvs &7{second}",
+          // Sem duelo, como no exe-clanfight: entre dois duelos (a pausa e o sorteio) e antes do primeiro.
+          "drawing": " &eSorteando...",
+          "waiting": " &bEsperando...",
           // A chance de vitória de cada lado, na ordem do "vs"; quem tem 50% ou mais sai no ahead.
           "odds": "&f Chance: {first} &8x {second}",
           "ahead": "&a{chance}%",

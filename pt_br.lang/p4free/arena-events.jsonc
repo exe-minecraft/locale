@@ -110,6 +110,51 @@
         ""
       ],
       "round-timeout": "&4[{event}] &cOs dois clans da batalha foram eliminados por exceder o tempo limite.",
+      // Os titles do exe-clanfight, com o mesmo som de antes. Entre dois duelos: 5 s de pausa, o draw (um par qualquer
+      // dos vivos a cada segundo, para todos na arena e no camarote) 5 vezes, o drawn com o par de verdade, a contagem de
+      // 5 a 1 e o fight só para quem vai lutar. O win-event é dos dois eventos, como o do Gladiador.
+      "title": {
+        "draw": {
+          "title": "&bSorteando batalha...",
+          "subtitle": "&7[{first}&7] &cvs &7[{second}&7]"
+        },
+        "drawn": {
+          "title": "&f",
+          "subtitle": "&7[{first}&7] &fx &7[{second}&7]"
+        },
+        // O número da vez em cor e os outros apagados, como os ➎ ➍ ➌ ➋ ➊ do original, em algarismos (o 1.8 desenha
+        // esses símbolos com outra fonte, de outro tamanho).
+        "countdown": {
+          "5": {
+            "title": "&45 &84 &83 &82 &81",
+            "subtitle": "&7[{first}&7] &fvs &7[{second}&7]"
+          },
+          "4": {
+            "title": "&85 &c4 &83 &82 &81",
+            "subtitle": "&7[{first}&7] &fvs &7[{second}&7]"
+          },
+          "3": {
+            "title": "&85 &84 &63 &82 &81",
+            "subtitle": "&7[{first}&7] &fvs &7[{second}&7]"
+          },
+          "2": {
+            "title": "&85 &84 &83 &e2 &81",
+            "subtitle": "&7[{first}&7] &fvs &7[{second}&7]"
+          },
+          "1": {
+            "title": "&85 &84 &83 &82 &a1",
+            "subtitle": "&7[{first}&7] &fvs &7[{second}&7]"
+          }
+        },
+        "fight": {
+          "title": "&a&lLUTEM!",
+          "subtitle": "&7[{first}&7] &fvs &7[{second}&7]"
+        },
+        "win-event": {
+          "title": "&c{event_title} ACABOU",
+          "subtitle": "&a[{clan}] &fvenceu o evento!"
+        }
+      },
       // O fim de cada duelo: o {round_result} é uma das linhas do round-result, e o {round_hits} a linha do round-hits,
       // que some quando ninguém acertou ninguém.
       "round-finished": [
