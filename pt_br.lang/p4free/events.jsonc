@@ -522,6 +522,9 @@
           "spawn-blocked": "Dentro de um evento não há /spawn: saia pelo comando do evento, como o /glad sair."
         },
         "events": {
+          // A espera de um evento na barra de ação de todos no p4free (EventCountdownEchoListener), a cada segundo, como
+          // o exe-gladiador fazia no servidor do evento.
+          "waiting-bar": "&4[{event}] &aComeçando em {time}... &e/{command} entrar",
           "gladiator": {
             // A tag de um clan nos abates, como o original pintava para cada um que lê: verde para o próprio clan, vermelha
             // para os outros.
