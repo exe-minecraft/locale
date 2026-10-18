@@ -88,7 +88,7 @@
         "waiting_players": "&adisponível para entrar",
         "preparing_time": "&eem preparação",
         "running": "&cem andamento",
-        "deathmatch": "&4mata-mata",
+        "deathmatch": "&4em deathmatch",
         "finalized": "&7finalizado"
       },
       "commands": {
@@ -604,7 +604,7 @@
               "kicked-notice": "&cVocê foi expulso do Gladiador por um membro da Staff!",
               // Só para quem matou, logo depois do anúncio do abate.
               "kills": "&eVocê agora tem &6{kills} &e{kills_unit}.",
-              "combat-immunity": "&4[Gladiador] &cVocê não pode atacar este jogador durante a imunidade!",
+              "combat-immunity": "&cVocê não pode atacar este jogador durante a imunidade!",
               "combat-leave": "Você não pode sair do Gladiador em combate!",
               "command-blocked": "Você não pode usar comandos durante o Gladiador.",
               "drop-blocked": "Você não pode dropar este item enquanto o Gladiador não começa!",
@@ -719,7 +719,7 @@
               "&4&l&m       &c&l&m       &r &f&lDEATHMATCH &c&l&m       &4&l&m       ",
               ""
             ],
-            "pvp-enabled": "&aO PvP foi ligado!",
+            "pvp-enabled": "&4[Gladiador] &aO PvP foi ligado!",
             "finish-summary": [
               "",
               "&4&l&m      &c&l&m      &r &f&lGLADIADOR &c&l&m      &4&l&m      ",
@@ -925,10 +925,10 @@
         "failed": "&cNão foi possível consultar os dados do Gladiador.",
         "empty": "Nada a mostrar: não há Gladiador rodando ou ele ainda não tem registros.",
         "action": {
-          "deathmatch-success": "&aVocê ativou o DeathMatch com sucesso!",
+          "deathmatch-success": "&aVocê ativou o deathmatch com sucesso!",
           "deathmatch-failure": "&cO Gladiador não está em andamento!",
           // A segunda vez da mesma ação: já estava assim, e nada foi gravado nem anunciado.
-          "deathmatch-already": "&cO DeathMatch já foi iniciado!",
+          "deathmatch-already": "&cO deathmatch já foi iniciado!",
           "border-success": "&aIniciando o avanço da borda em 5 segundos...",
           "border-failure": "&cNão há mais estágios de borda para avançar, ou já existe um avanço em andamento!",
           "border-manual": "&aA borda vai ser controlada manualmente!",
