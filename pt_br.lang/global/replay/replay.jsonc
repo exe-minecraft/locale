@@ -67,6 +67,7 @@
                 "description": "ID da gravação"
               }
             },
+            "not-found": "&cReplay não encontrado: &f{name}",
             "header": "&eInformações do replay:",
             "name": "&8▸ &7Nome: &f{name}",
             "duration": "&8▸ &7Duração: &f{duration}",

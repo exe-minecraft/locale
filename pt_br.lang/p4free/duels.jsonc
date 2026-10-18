@@ -106,8 +106,10 @@
         }
       },
       "queue": {
-        "opened": "&aAs filas 1v1 e 2v2 do x1 foram abertas.",
-        "closed": "&cAs filas 1v1 e 2v2 do x1 foram fechadas.",
+        "opened": "&8[&bStaff&8] &f{player} &aabriu as filas 1v1 e 2v2 do x1.",
+        "closed": "&8[&bStaff&8] &f{player} &cencerrou as filas 1v1 e 2v2 do x1.",
+        "already-open": "&cAs filas 1v1 e 2v2 do x1 já estão abertas.",
+        "already-closed": "&cAs filas 1v1 e 2v2 do x1 já estão encerradas.",
         "joined": "&aVocê entrou na fila: &f{mode}&a.",
         "already": "&cVocê já está nessa fila.",
         "left": "&7Você saiu da fila.",
@@ -734,9 +736,21 @@
           // Acrescentada à lore do que gasta (armadura, espada, arco).
           "durability": [ "&7Durabilidade: &f{current}&7/&f{max}" ],
           "items": {
-            "health": {
-              "name": "&cVida: &f{health} ❤",
-              "lore": [ "&7No instante em que a luta", "&7terminou para este jogador." ]
+              "health": {
+                "name": "&cVida: &f{health} ❤",
+                "lore": [ "&7No instante em que a luta", "&7terminou para este jogador." ],
+                "dead": {
+                  "name": "&cMorto",
+                  "lore": [ "&7Este jogador morreu na luta.", "&7Vida: &f{health} ❤" ]
+                }
+              },
+              "previous": {
+                "name": "&eInventário anterior",
+                "lore": [ "&7Jogador: &f{previous}", "", "&eClique para ver o inventário." ]
+              },
+              "next": {
+                "name": "&ePróximo inventário",
+                "lore": [ "&7Jogador: &f{next}", "", "&eClique para ver o inventário." ]
             },
             "effects": {
               "name": "&dEfeitos",
