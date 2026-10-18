@@ -18,8 +18,8 @@
       },
       // A tag de um clan nos abates, pintada para cada um que lê: verde para o próprio clan, vermelha para os outros.
       "clan-tag": {
-        "own": "&a[&7{tag}&a]",
-        "other": "&c[&7{tag}&c]"
+        "own": "&7[{tag}&7]",
+        "other": "&7[{tag}&7]"
       },
       // A abertura, com o tempo inteiro da espera. O "AQUI" leva o clique do entrar.
       "start": [
@@ -152,7 +152,17 @@
         },
         "win-event": {
           "title": "&c{event_title} ACABOU",
-          "subtitle": "&a[{clan}] &fvenceu o evento!"
+          "subtitle": "&7[{clan}&7] &fvenceu o evento!"
+        },
+        // A borda do FastGlad, como a do Gladiador: o número dos 5 s antes de cada redução (com o clique) e o aviso que
+        // fica na tela enquanto ela fecha (com o wither).
+        "border-warn": {
+          "title": "&c{seconds}",
+          "subtitle": "&fA borda vai fechar!"
+        },
+        "border-change": {
+          "title": "&4Borda fechando!",
+          "subtitle": "&fMovam-se para dentro da nova área!"
         }
       },
       // O fim de cada duelo: o {round_result} é uma das linhas do round-result, e o {round_hits} a linha do round-hits,
@@ -170,7 +180,7 @@
         ""
       ],
       "round-result": {
-        "won": "&7 Vencedor: &a[{winner}&a] &7contra &c[{loser}&c].",
+        "won": "&7 Vencedor: &7[{winner}&7] contra &7[{loser}&7].",
         "none": "&7 Nenhum clan ficou de pé nesta batalha."
       },
       "round-hits": [
