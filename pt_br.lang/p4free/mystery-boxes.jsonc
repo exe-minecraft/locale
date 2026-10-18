@@ -6,10 +6,10 @@
         "advanced": "&bCaixa Misteriosa &7(Avançada)"
       },
       "rarities": {
-        "common": "Comum",
-        "rare": "Rara",
-        "legendary": "Lendária",
-        "mystic": "Mística"
+        "common": "&7Comum",
+        "rare": "&dRara",
+        "legendary": "&6Lendária",
+        "mystic": "&bMística"
       },
       "item-lore": [
         "&7Clique direito para abrir.",
@@ -17,7 +17,7 @@
       ],
       "unavailable": "&cAs caixas estão indisponíveis no momento.",
       "failed": "&cNão foi possível entregar o prêmio. Sua caixa foi devolvida.",
-      "won": "&aVocê ganhou {amount}x {reward} &7({rarity}).",
+      "won": "&aVocê ganhou {amount}x {reward} &7({rarity}&7).",
       "preview-title": "Prêmios da caixa",
       "result-title": "Seu prêmio",
       "chance": "&7Chance: {chance}% | Raridade: {rarity}",
