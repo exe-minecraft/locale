@@ -542,8 +542,32 @@
             }
           }
         },
-        // O histórico dos duelos 2v2 de um jogador (o botão do /elo, o /elo historico2v2 e as cabeças do ranking de elo
-        // 2v2): a ranqueada 2v2 e os 2v2 de party. Uma linha por partida, da mais nova para a mais velha.
+        // O histórico de duelos de um jogador é um só (pedido do dono, 19/10): o filtro troca entre o 1v1 (os textos do
+        // elo-history) e o 2v2 (os do duo-history). Abre pelo clique na tag do elo, pelo /elo historico, pelo botão do
+        // /elo e pelas cabeças dos rankings de elo.
+        "history": {
+          "modes": {
+            "one-v-one": "1v1",
+            "two-v-two": "2v2"
+          },
+          "filter": {
+            "selected": "&f ▶ {mode}",
+            "unselected": "&7 ▶ {mode}"
+          },
+          "items": {
+            "filter": {
+              "name": "&bEscolha o modo",
+              "lore": [
+                "",
+                "{modes}",
+                "",
+                "&bClique para trocar."
+              ]
+            }
+          }
+        },
+        // O 2v2 do histórico de duelos: a ranqueada 2v2 e os 2v2 de party. Uma linha por partida, da mais nova para a
+        // mais velha.
         "duo-history": {
           "title": "2v2 de {player}",
           "failed": "&cNão foi possível ler o histórico 2v2 agora. Tente de novo em instantes.",
