@@ -130,7 +130,10 @@
           "event": [
             "",
             "&aEm evento agora: &f{event_name}"
-          ]
+          ],
+          "in-gladiator": {
+            "prefix": "&c# "
+          }
         },
         "clan-banner": {
           "name": "&7[{clan_colored_tag}&7] {clan_name}",
