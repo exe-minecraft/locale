@@ -289,9 +289,13 @@
           "rush-watch": {
             "description": "assistir ao rush de um clan ou parar de assistir",
             "arguments": {
+              "clan-or-stop": {
+                "name": "clan|sair",
+                "description": "Tag do clan cujo rush deseja assistir, ou sair para parar de assistir."
+              },
               "clan": {
                 "name": "clan",
-                "description": "Tag do clan cujo rush deseja assistir, ou sair para parar de assistir."
+                "description": "Tag do clan cujo rush deseja assistir."
               },
               "second-clan": {
                 "name": "segundo clan",
@@ -739,6 +743,14 @@
             // A morte sem matador (queda, lava, borda).
             "death": "&4[Gladiador] {victim_clan} {victim_name} &7foi &c&lELIMINADO &7do evento.",
             "rush": {
+              "colors": {
+                "green": "&a",
+                "red": "&c",
+                "blue": "&9",
+                "light_purple": "&d",
+                "yellow": "&e",
+                "white": "&f"
+              },
               "none": "&cNenhum rush está acontecendo no momento.",
               "list-header": [
                 "",
