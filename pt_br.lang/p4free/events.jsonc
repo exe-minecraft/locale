@@ -305,6 +305,18 @@
             "query-failed": "Ocorreu um erro ao consultar esse clan!",
             "clan-not-found": "O clan especificado não existe!"
           },
+          // O [TELEPORTAR] do anúncio do rush. Leva a um jogador do rush sem o verrush, e o camarote continua vendo todos.
+          "rush-teleport": {
+            "description": "teleportar até o rush de um clan sem o verrush",
+            "arguments": {
+              "clan": {
+                "name": "clan",
+                "description": "Tag do clan cujo rush deseja visitar."
+              }
+            },
+            "query-failed": "Ocorreu um erro ao consultar esse clan!",
+            "clan-not-found": "O clan especificado não existe!"
+          },
           "history": {
             "description": "ver o histórico das edições",
             "arguments": {
@@ -777,11 +789,21 @@
               "not-watching": "&cVocê não está assistindo a nenhum rush.",
               "stop-watching": " &c[PARAR DE ASSISTIR]",
               "stop-watching-hover": "&eClique para parar de assistir a este rush e voltar a ver todos os jogadores.",
-              // O {rush_watch} do started é esta linha, só para quem está no camarote: o clique o leva a um jogador sorteado
-              // do rush, como no exe-gladiator. Para os outros a linha some.
-              "watch": " &8[TELEPORTAR ATÉ ESTE RUSH]",
-              // O que o [TELEPORTAR ATÉ ESTE RUSH] e o [ASSISTIR] da lista dizem ao passar o mouse.
-              "watch-hover": "&eClique para teleportar até um jogador deste rush e assistir.",
+              // O {rush_watch} do started é esta linha, só para quem está no camarote. Os dois botões levam a um jogador
+              // sorteado do rush, o [TELEPORTAR] sem o verrush e o [ASSISTIR] com ele. São dois botões porque o clique
+              // direito no chat do 1.8 não chega ao servidor. Para os outros a linha some.
+              "watch": " {teleport_button} {watch_button}",
+              "teleport-button": "&8[TELEPORTAR]",
+              "watch-button": "&8[ASSISTIR]",
+              "teleport-hover": [
+                "&eClique para teleportar até um jogador deste rush &fsem o verrush&e.",
+                "&7Você continua vendo todos os jogadores."
+              ],
+              // O que o [ASSISTIR] do anúncio e o da lista dizem ao passar o mouse.
+              "watch-hover": [
+                "&eClique para teleportar até um jogador deste rush &fcom o verrush ligado&e.",
+                "&7Você vê só os jogadores dos dois clans."
+              ],
               "started": [
                 "",
                 "&4&l&m      &c&l&m      &r &f&lREGRA DE RUSH &c&l&m      &4&l&m      ",
@@ -1124,6 +1146,8 @@
           "rush-stop-other-opponent": "&cO rush do clan &7[{clan}&7] &cé contra &7[{other_clan}&7]&c, não contra &7[{second_clan}&7]&c!",
           "watch-rush-success": "&aModo de visualização do rush atualizado.",
           "watch-rush-failure": "&cNão foi possível assistir a esse rush.",
+          "teleport-rush-success": "&aVocê foi teleportado até o rush sem o verrush e continua vendo todos os jogadores.",
+          "teleport-rush-failure": "&cNão foi possível teleportar até esse rush.",
           "rush-list-elsewhere": "&eHá rushes acontecendo no Gladiador. Entre no P4Free Eventos com &f/glad camarote entrar &epara vê-los.",
           "max-members-success": "&aVocê alterou com sucesso o limite máximo de membros por clan.",
           "max-members-failure": "&cNão foi possível alterar o limite máximo de membros por clan.",
