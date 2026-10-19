@@ -39,10 +39,8 @@
         "own": "&a[&7{tag}&a]",
         "other": "&c[&7{tag}&c]"
       },
-<<<<<<< HEAD
       // O que o "AQUI" da abertura e da espera diz ao passar o mouse.
       "join-hover": "&eClique para entrar no {event}.",
-=======
       // O status do FastGlad a cada 600 segundos de luta, inclusive no deathmatch, como no exe-fastgladiator.
       "status": [
         "",
@@ -56,7 +54,6 @@
         "&2&l&m      &a&l&m      &r &f&lSTATUS DO FASTGLAD &a&l&m      &2&l&m     ",
         ""
       ],
->>>>>>> 1ed7557 (Adiciona o status periódico do Gladiador e do FastGlad)
       // A abertura, com o tempo inteiro da espera. O "AQUI" leva o clique do entrar.
       "start": [
         "",

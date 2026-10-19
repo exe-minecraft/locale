@@ -606,10 +606,8 @@
               "own": "&a[&7{tag}&a]",
               "other": "&c[&7{tag}&c]"
             },
-<<<<<<< HEAD
             // O que o "AQUI" da abertura e da espera diz ao passar o mouse.
             "join-hover": "&eClique para entrar no Gladiador.",
-=======
             // A cada 310 segundos de luta, inclusive no deathmatch, para quem está no app do evento.
             "status": [
               "",
@@ -626,7 +624,6 @@
               "&4&l&m       &c&l&m       &r &f&lSTATUS DO GLADIADOR &c&l&m       &4&l&m      ",
               ""
             ],
->>>>>>> 1ed7557 (Adiciona o status periódico do Gladiador e do FastGlad)
             // A abertura, com o tempo inteiro da espera. O "AQUI" leva o clique do /glad entrar.
             "start": [
               "",
