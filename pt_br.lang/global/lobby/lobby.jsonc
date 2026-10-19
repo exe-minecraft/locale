@@ -172,7 +172,13 @@
           "in-delay": "&cVocê precisa esperar &f{remaining_time}&c para falar novamente.",
           "preference-off": "&cVocê não pode enviar mensagens nesse chat pois desabilitou as mensagens.",
           "need-highest-group": "&cVocê precisa ter o grupo &f{required_group_display_tag}&c ou superior para enviar mensagens no chat!",
-          "message": "{message_owner_name_with_tag}&7: {message_content}"
+          "message": "{message_owner_name_with_tag}&7: {message_content}",
+          // A mensagem de Moderador para cima, em destaque com uma linha em branco antes e depois (LobbyEchoListener).
+          "staff-message": [
+            "",
+            "{message_owner_name_with_tag}&7: {message_content}",
+            ""
+          ]
         },
         "on-join": {
           "user-notification": "{user_name_with_tag} &fentrou no lobby!"
