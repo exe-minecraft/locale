@@ -90,7 +90,9 @@
           "locked": "Este cosmético é exclusivo do grupo {cosmetic_group}&c.",
           "not-owned": "Você ainda não possui este cosmético.",
           "profile-unavailable": "Seus cosméticos ainda não foram carregados. Tente novamente em instantes.",
-          "gadget-cooldown": "&cAguarde &f{remaining_time}&c para usar o gadget novamente."
+          "gadget-cooldown": "&cAguarde &f{remaining_time}&c para usar o gadget novamente.",
+          // Os fogos, a bola de neve, a pérola e o anzol são entidades que todos veem.
+          "gadget-vanish": "&cOs gadgets ficam desligados enquanto você está no vanish."
         },
         "catalog": {
           "particle-smoke": "Fumaça",

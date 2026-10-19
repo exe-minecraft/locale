@@ -848,7 +848,10 @@
             " &7KDR: &f{applicant_kdr} &8| &7Abates: &f{applicant_kills} &8| &7Mortes: &f{applicant_deaths}",
             " &eClique &a&lAQUI &epara aceitar ou &c&lAQUI &epara recusar.",
             ""
-          ]
+          ],
+          // O que cada AQUI do pedido diz ao passar o mouse.
+          "on-application-receive-accept-hover": "&aClique para aceitar o pedido de {player}.",
+          "on-application-receive-deny-hover": "&cClique para recusar o pedido de {player}."
         },
         "member": {
           "on-invite-receive": [
@@ -857,6 +860,9 @@
             " &eClique &a&lAQUI &epara aceitar ou &c&lAQUI &epara recusar.",
             ""
           ],
+          // O que cada AQUI do convite diz ao passar o mouse.
+          "on-invite-receive-accept-hover": "&aClique para aceitar o convite do clã [{clan_tag}].",
+          "on-invite-receive-deny-hover": "&cClique para recusar o convite do clã [{clan_tag}].",
           "on-kicked": [
             "",
             "&cVocê foi expulso do clã &7[{clan_colored_tag}&7] {clan_name}&c.",

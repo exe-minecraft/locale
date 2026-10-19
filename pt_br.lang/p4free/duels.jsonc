@@ -25,7 +25,11 @@
       "buttons": {
         "accept": "&a[Aceitar]",
         "join": "&a[Entrar]",
-        "decline": "&c[Recusar]"
+        "decline": "&c[Recusar]",
+        // O que cada botão diz ao passar o mouse.
+        "accept-hover": "&aClique para aceitar.",
+        "join-hover": "&aClique para entrar.",
+        "decline-hover": "&cClique para recusar."
       },
       // O que cada jogador está fazendo, na cabeça dele no menu da party.
       "activities": {
@@ -287,6 +291,7 @@
           // Uma linha para o backend local: início da contagem com camarote clicável e término, inclusive cancelamento.
           "start": "&6CxC &fentre os clãs {first} &8({first_size}) &fe {second} &8({second_size})&f. {watch}",
           "watch": "&e[Assistir no camarote]",
+          "watch-hover": "&eClique para assistir a este CxC do camarote.",
           "win": "&fO clã {winner} &fvenceu o clã {loser} &fno &6CxC&f.",
           "draw": "&fO &6CxC &fentre {first} &fe {second} &fterminou empatado.",
           "cancelled": "&fO &6CxC &fentre {first} &fe {second} &ffoi cancelado antes de começar."

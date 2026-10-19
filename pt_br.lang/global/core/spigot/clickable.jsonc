@@ -2,7 +2,13 @@
   "plugins": {
     "core": {
       "clickable": {
-        "anchor": "AQUI"
+        "anchor": "AQUI",
+        // O que todo clique diz ao passar o mouse quando quem o monta não deu um texto próprio. {value} é o comando ou o link.
+        "hover": {
+          "run-command": "&eClique para usar &f{value}&e.",
+          "suggest-command": "&eClique para escrever &f{value} &eno chat.",
+          "open-url": "&eClique para abrir &f{value}&e."
+        }
       }
     }
   }

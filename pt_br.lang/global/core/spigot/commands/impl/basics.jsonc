@@ -310,8 +310,24 @@
           "success": "Você foi teleportado para o mundo {world_name}"
         },
         "vanish": {
+          "arguments": {
+            "action": {
+              "name": "list",
+              "description": "Ver quem está em vanish na rede"
+            }
+          },
           "success-activated": "&aModo vanish habilitado com sucesso.",
-          "success-deactivated": "&cModo vanish desabilitado com sucesso."
+          "success-deactivated": "&cModo vanish desabilitado com sucesso.",
+          "list-header": [
+            "",
+            "&eLista de todos os jogadores em vanish:",
+            ""
+          ],
+          "list-entry-app": "&e • {player} &7({app})",
+          "list-footer": [
+            ""
+          ],
+          "list-empty": "&cNão há jogadores em vanish no momento."
         },
         "vip-time": {
           "permanent": "Permanente",

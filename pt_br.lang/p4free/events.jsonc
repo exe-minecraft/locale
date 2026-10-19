@@ -598,6 +598,8 @@
               "own": "&a[&7{tag}&a]",
               "other": "&c[&7{tag}&c]"
             },
+            // O que o "AQUI" da abertura e da espera diz ao passar o mouse.
+            "join-hover": "&eClique para entrar no Gladiador.",
             // A abertura, com o tempo inteiro da espera. O "AQUI" leva o clique do /glad entrar.
             "start": [
               "",
@@ -735,6 +737,8 @@
               // O {rush_watch} do started é esta linha, só para quem está no camarote: o clique o leva a um jogador sorteado
               // do rush, como no exe-gladiator. Para os outros a linha some.
               "watch": " &8[TELEPORTAR ATÉ ESTE RUSH]",
+              // O que o [TELEPORTAR ATÉ ESTE RUSH] e o [ASSISTIR] da lista dizem ao passar o mouse.
+              "watch-hover": "&eClique para teleportar até um jogador deste rush e assistir.",
               "started": [
                 "",
                 "&4&l&m      &c&l&m      &r &f&lREGRA DE RUSH &c&l&m      &4&l&m      ",
@@ -908,6 +912,8 @@
                 " &7Clique &a&lAQUI &7para teleportar-se até a teia.",
                 ""
               ],
+              // O "AQUI" só escreve o /tppos no chat, para a staff conferir antes de ir.
+              "warning-hover": "&eClique para escrever no chat o /tppos até a teia.",
               "reversal": [
                 "",
                 "&4&l&m      &c&l&m      &r &6&lVIRADA DE RUSH &c&l&m      &4&l&m      ",

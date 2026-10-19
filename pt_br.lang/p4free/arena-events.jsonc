@@ -39,6 +39,8 @@
         "own": "&a[&7{tag}&a]",
         "other": "&c[&7{tag}&c]"
       },
+      // O que o "AQUI" da abertura e da espera diz ao passar o mouse.
+      "join-hover": "&eClique para entrar no {event}.",
       // A abertura, com o tempo inteiro da espera. O "AQUI" leva o clique do entrar.
       "start": [
         "",
