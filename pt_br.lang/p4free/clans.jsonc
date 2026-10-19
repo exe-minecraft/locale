@@ -1016,7 +1016,9 @@
         },
         "clan-leaderboard": {
           "position-color": {
-            "first": "&a",
+            "first": "&6",
+            "second": "&7",
+            "third": "&c",
             "other": "&8"
           },
           "items": {

@@ -287,11 +287,11 @@
             "query-failed": "Não foi possível consultar os rushes."
           },
           "rush-watch": {
-            "description": "assistir ao rush de um clan",
+            "description": "assistir ao rush de um clan ou parar de assistir",
             "arguments": {
               "clan": {
                 "name": "clan",
-                "description": "Tag do clan cujo rush deseja assistir."
+                "description": "Tag do clan cujo rush deseja assistir, ou sair para parar de assistir."
               },
               "second-clan": {
                 "name": "segundo clan",
@@ -739,7 +739,7 @@
             // A morte sem matador (queda, lava, borda).
             "death": "&4[Gladiador] {victim_clan} {victim_name} &7foi &c&lELIMINADO &7do evento.",
             "rush": {
-              "none": "Nenhum rush está acontecendo no momento.",
+              "none": "&cNenhum rush está acontecendo no momento.",
               "list-header": [
                 "",
                 "&4&l&m       &c&l&m       &r &f&lRUSH ACONTECENDO &c&l&m       &4&l&m       ",
@@ -758,6 +758,9 @@
               "no-online-player": "Não há jogadores online neste rush para teleportar.",
               "teleported": "&aVocê agora está vendo o rush entre &7[{first_clan}&7] &ae &7[{second_clan}&7]&a!",
               "watch-stopped": "&aVocê parou de assistir o rush e agora pode ver todos os jogadores novamente.",
+              "not-watching": "&cVocê não está assistindo a nenhum rush.",
+              "stop-watching": " &c[PARAR DE ASSISTIR]",
+              "stop-watching-hover": "&eClique para parar de assistir a este rush e voltar a ver todos os jogadores.",
               // O {rush_watch} do started é esta linha, só para quem está no camarote: o clique o leva a um jogador sorteado
               // do rush, como no exe-gladiator. Para os outros a linha some.
               "watch": " &8[TELEPORTAR ATÉ ESTE RUSH]",
@@ -782,8 +785,8 @@
                 "",
                 "&e&l RUSH FINALIZADO!",
                 "",
-                "&7 O rush entre &7[{first_clan}&7] &7({first_alive}) e &7[{second_clan}&7] &7({second_alive}) finalizou.",
-                "&7 Total de abates: &7[{first_clan}&7] &c({first_kills} {first_kills_unit}) &7e &7[{second_clan}&7] &c({second_kills} {second_kills_unit})",
+                "&7 O rush entre &7[{first_clan}&7] {first_color}({first_alive}) &7e &7[{second_clan}&7] {second_color}({second_alive}) &7finalizou.",
+                "&7 Total de abates: &7[{first_clan}&7] {first_color}({first_kills} {first_kills_unit}) &7e &7[{second_clan}&7] {second_color}({second_kills} {second_kills_unit})",
                 "{rush_hits}",
                 "{rush_result}",
                 "&7 Os jogadores possuem &f{immunity_time} &7de imunidade.",
@@ -792,9 +795,9 @@
                 ""
               ],
               "hits": [
-                "&7 Total de hits: &7[{first_clan}&7] &c({first_hits} {first_hits_unit}) &7e &7[{second_clan}&7] &c({second_hits} {second_hits_unit})",
-                "&7 Quem mais hitou: &f{top_hitter} &7({top_hitter_hits} {top_hitter_hits_unit})",
-                "&7 Quem mais levou: &f{top_victim} &7({top_victim_hits} {top_victim_hits_unit})"
+                "&7 Total de hits: &7[{first_clan}&7] {first_color}({first_hits} {first_hits_unit}) &7e &7[{second_clan}&7] {second_color}({second_hits} {second_hits_unit})",
+                "&7 Quem mais hitou: {top_hitter_color}{top_hitter} ({top_hitter_hits} {top_hitter_hits_unit})",
+                "&7 Quem mais levou: {top_victim_color}{top_victim} ({top_victim_hits} {top_victim_hits_unit})"
               ],
               // Quem venceu o rush: nos abates, nos hits quando os abates empatam, por W.O., ou ninguém.
               "result": {
