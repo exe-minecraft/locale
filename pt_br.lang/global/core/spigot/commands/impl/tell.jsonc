@@ -4,7 +4,7 @@
       "commands": {
         "toggletell": {
           "enabled": "Tell habilitado! Você voltará a receber mensagens privadas.",
-          "disabled": "Tell desabilitado! Você não receberá mais mensagens privadas. Use /tt para habilitar novamente."
+          "disabled": "&cTell desabilitado! Você não receberá mais mensagens privadas. Use /tt para habilitar novamente."
         },
         "reply": {
           "arguments": {
