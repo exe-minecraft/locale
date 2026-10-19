@@ -80,6 +80,7 @@
         "",
         "&7 Participantes: &f{event_players_size}",
         "&7 Clans confirmados: &f{event_clans_size}",
+        "&7 {event_clan_list}",
         "",
         "&4&l&m      &c&l&m      &r &f&l{event_title} &c&l&m      &4&l&m      ",
         ""

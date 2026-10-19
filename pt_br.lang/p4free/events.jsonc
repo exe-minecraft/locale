@@ -181,7 +181,14 @@
         "clan": "&8[&7{tag}&8] ({players})",
         "rush-clan": "&c[&7{tag}&c] ({players})",
         "separator": "&8, ",
-        "no-clans": "&cNenhum clan participando..."
+        "no-clans": "&cNenhum clan participando...",
+        // O hover de cada clã da lista para quem está no camarote.
+        "teleport-hover": "&7Clique para ir até um membro vivo deste clan."
+      },
+      // O clique num clã do status, para quem está no camarote.
+      "cabin-teleport": {
+        "spectator-required": "Você precisa estar no camarote para ir até um clan.",
+        "no-member": "O clan {tag} não tem nenhum membro vivo no evento agora."
       },
       "info": {
         "not-running": "O evento {event} ainda não começou!",
@@ -323,6 +330,15 @@
               "description": "sair do camarote",
               "not-running": "Não há nenhum Gladiador ocorrendo.",
               "processing": "Processando sua saída do camarote..."
+            },
+            "cabin-teleport": {
+              "description": "ir até um membro vivo de um clan",
+              "arguments": {
+                "clan": {
+                  "name": "clan",
+                  "description": "Tag do clan até o qual deseja ir."
+                }
+              }
             }
           },
           "info": {
@@ -579,6 +595,15 @@
               "description": "sair do camarote",
               "not-running": "Não há nenhum ClanFight ocorrendo.",
               "processing": "Processando sua saída do camarote..."
+            },
+            "cabin-teleport": {
+              "description": "ir até um membro vivo de um clan",
+              "arguments": {
+                "clan": {
+                  "name": "clan",
+                  "description": "Tag do clan até o qual deseja ir."
+                }
+              }
             }
           },
           "setloc": {
@@ -646,6 +671,15 @@
               "description": "sair do camarote",
               "not-running": "Não há nenhum FastGlad ocorrendo.",
               "processing": "Processando sua saída do camarote..."
+            },
+            "cabin-teleport": {
+              "description": "ir até um membro vivo de um clan",
+              "arguments": {
+                "clan": {
+                  "name": "clan",
+                  "description": "Tag do clan até o qual deseja ir."
+                }
+              }
             }
           },
           "setloc": {
@@ -762,6 +796,7 @@
               "",
               "&7 Participantes: &f{event_players_size}",
               "&7 Clans confirmados: &f{event_clans_size}",
+              "&7 {event_clan_list}",
               "",
               "&4&l&m      &c&l&m      &r &f&lGLADIADOR &c&l&m      &4&l&m      ",
               ""
