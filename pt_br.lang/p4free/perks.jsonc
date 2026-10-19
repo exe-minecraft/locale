@@ -298,6 +298,16 @@
         "perks": {
           "still-loading": "Suas perks ainda estão carregando. Tente de novo em instantes."
         },
+        // /verperks, do Samurai para cima. A lista abre e fecha com uma linha em branco, como o /build list.
+        "verperks": {
+          "arguments": {
+            "target": { "name": "jogador", "description": "Quem você quer ver" }
+          },
+          "none": "{name} não tem nenhuma perk ativa.",
+          "header": ["", " &ePerks ativas de &f{name}&e:"],
+          "entry": " &7• &f{perk} &7nível &f{level}",
+          "footer": [""]
+        },
         "perkadmin": {
           "usage": {
             "dar": { "syntax": "dar <jogador> <perk> <nível>", "description": "dar uma perk no nível escolhido" },
