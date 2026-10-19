@@ -55,6 +55,8 @@
           "no-free-arena": "&cTodas as arenas estão ocupadas agora.",
           "unavailable": "&cOs duelos estão indisponíveis agora.",
           "queue-closed": "&cAs filas do x1 estão fechadas. Aguarde a reabertura.",
+          // O /restart ou o /stop do app em contagem: nenhuma fila, desafio, luta de party ou CxC começa.
+          "restarting": "&cO servidor vai sair do ar em instantes, por isso não dá para começar duelos nem entrar nas filas.",
           "loading": "&cSeus dados de duelo ainda estão carregando.",
           "stash-failed": "&cNão deu para guardar seus itens agora. Nada foi tirado de você.",
           "match-ended": "&cEssa luta já acabou.",
@@ -203,6 +205,7 @@
           "no-clan": "&cVocê não está num clã.",
           "not-officer": "&cSó o líder ou um capitão responde pelo clã no CxC.",
           "not-vip": "&cO CxC é uma vantagem dos VIPs.",
+          "restarting": "&cO servidor vai sair do ar em instantes, por isso não dá para desafiar outro clã agora.",
           "unknown-clan": "&cNenhum clã com a tag {tag}.",
           "same-clan": "&cVocê não pode desafiar o próprio clã.",
           "in-cxc": "&cSeu clã já está num CxC.",
