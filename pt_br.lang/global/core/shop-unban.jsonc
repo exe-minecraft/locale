@@ -1,0 +1,11 @@
+{
+  "plugins": {
+    "core": {
+      "messages": {
+        "shop": {
+          "unban-staff": "&8[&cStaff&8] &f{player} &7foi desbanido pela loja. &7Pedido &f#{order}&7, &f{count} &7banimento(s) removido(s)."
+        }
+      }
+    }
+  }
+}
