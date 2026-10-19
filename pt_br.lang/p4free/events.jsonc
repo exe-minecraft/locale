@@ -96,6 +96,13 @@
         "deathmatch": "&4em deathmatch",
         "finalized": "&7finalizado"
       },
+      // A lista do status periódico, como no exe-gladiator. O rush destaca os colchetes e a contagem em vermelho.
+      "status": {
+        "clan": "&8[&7{tag}&8] ({players})",
+        "rush-clan": "&c[&7{tag}&c] ({players})",
+        "separator": "&8, ",
+        "no-clans": "&cNenhum clan participando..."
+      },
       "info": {
         "not-running": "O evento {event} ainda não começou!",
         "unavailable": "Não foi possível consultar {event} agora. Tente novamente em instantes.",
@@ -599,8 +606,27 @@
               "own": "&a[&7{tag}&a]",
               "other": "&c[&7{tag}&c]"
             },
+<<<<<<< HEAD
             // O que o "AQUI" da abertura e da espera diz ao passar o mouse.
             "join-hover": "&eClique para entrar no Gladiador.",
+=======
+            // A cada 310 segundos de luta, inclusive no deathmatch, para quem está no app do evento.
+            "status": [
+              "",
+              "&4&l&m       &c&l&m       &r &f&lSTATUS DO GLADIADOR &c&l&m       &4&l&m      ",
+              "",
+              "&eTempo: &f{time}",
+              "",
+              "&eJogadores vivos: &f{event_players}",
+              "&eClans vivos: &f{event_clans}",
+              "",
+              "&eClans Participando:",
+              "{event_clan_list}",
+              "",
+              "&4&l&m       &c&l&m       &r &f&lSTATUS DO GLADIADOR &c&l&m       &4&l&m      ",
+              ""
+            ],
+>>>>>>> 1ed7557 (Adiciona o status periódico do Gladiador e do FastGlad)
             // A abertura, com o tempo inteiro da espera. O "AQUI" leva o clique do /glad entrar.
             "start": [
               "",
