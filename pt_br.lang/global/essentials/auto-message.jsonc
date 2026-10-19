@@ -29,8 +29,15 @@
           "boxes": [
             "",
             "&6&l CAIXAS: &fAs &aCaixas Misteriosas&f dão prêmios comuns, raros,",
-            " &flendários e místicos. Compre no &a/shop&f do P4Free.",
+            " &flendários e místicos. Compre clicando &a&lAQUI&f.",
             " &fNa caixa, agache e clique com o direito para ver os prêmios.",
+            ""
+          ],
+          // A do events-1, que não tem a loja: sem comando, porque lá o /shop não existe.
+          "boxes-events": [
+            "",
+            "&6&l CAIXAS: &fAs &aCaixas Misteriosas&f dão prêmios comuns, raros,",
+            " &flendários e místicos. Compre na loja do &aP4Free&f.",
             ""
           ],
           "tokens": [
