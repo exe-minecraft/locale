@@ -304,7 +304,7 @@
           "others": {
             "none": "{target_name_with_color} &enão tem nenhuma perk ativa.",
             "header": ["", " &ePerks ativas de {target_name_with_color}&e:"],
-            "entry": " &7• &f{perk} &7nível &f{level}",
+            "entry": " &7• &b{perk} &7nível &f{level}",
             "footer": [""]
           }
         },
