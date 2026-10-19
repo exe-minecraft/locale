@@ -20,6 +20,9 @@
             "&7Próximo nível: &b{next_price}",
             "&7Desbloqueio: &b{unlock_price}",
             "",
+            "&7Dano do crítico: {damage_multiplier}x",
+            "&7Chance de ativar: {chance}%",
+            "",
             "{status}"
           ],
           "upgrade-lore": [
@@ -39,6 +42,10 @@
             "&7Nível: &f{level}&7/&f{max_level}",
             "&7Próximo nível: &b{next_price}",
             "&7Desbloqueio: &b{unlock_price}",
+            "",
+            "&7Amplificador: {power}",
+            "&7Duração: {duration}",
+            "&7Chance de ativar: {chance}%",
             "",
             "{status}"
           ],
@@ -61,6 +68,8 @@
             "&7Próximo nível: &b{next_price}",
             "&7Desbloqueio: &b{unlock_price}",
             "",
+            "&7Chance de devolver: {chance}%",
+            "",
             "{status}"
           ],
           "upgrade-lore": [
@@ -80,6 +89,8 @@
             "&7Próximo nível: &b{next_price}",
             "&7Desbloqueio: &b{unlock_price}",
             "",
+            "&7Quanto repara: {repair_percentage}%",
+            "",
             "{status}"
           ],
           "upgrade-lore": [
@@ -98,6 +109,10 @@
             "&7Nível: &f{level}&7/&f{max_level}",
             "&7Próximo nível: &b{next_price}",
             "&7Desbloqueio: &b{unlock_price}",
+            "",
+            "&7Amplificador: {power}",
+            "&7Duração: {duration}",
+            "&7Recarga: {cooldown}",
             "",
             "{status}"
           ],
@@ -121,6 +136,11 @@
             "&7Próximo nível: &b{next_price}",
             "&7Desbloqueio: &b{unlock_price}",
             "",
+            "&7Alcance: {radius} &7blocos",
+            "&7Alvos: {targets}",
+            "&7Duração: {duration}",
+            "&7Recarga: {cooldown}",
+            "",
             "{status}"
           ],
           "upgrade-lore": [
@@ -143,6 +163,10 @@
             "&7Nível: &f{level}&7/&f{max_level}",
             "&7Próximo nível: &b{next_price}",
             "&7Desbloqueio: &b{unlock_price}",
+            "",
+            "&7Força do empurrão: {power}",
+            "&7Duração: {duration}",
+            "&7Recarga: {cooldown}",
             "",
             "{status}"
           ],
@@ -172,6 +196,12 @@
             "2": "&eClique para ativar. &7Use o botão direito para ver os níveis.",
             "3": "&cSeus slots estão cheios. Desative outra antes.",
             "4": "&aAtivada. &7Clique para desativar."
+          },
+          // Os números da perk no ícone, como nas armas: o de hoje riscado e o do próximo nível.
+          // Sem a perk, o que o primeiro nível dá; no máximo, só o de hoje.
+          "effect": {
+            "next": "&7&m{from}&7 ➟ &b{to}",
+            "current": "&f{from}"
           },
           "info": {
             "name": "&eComo funciona",
