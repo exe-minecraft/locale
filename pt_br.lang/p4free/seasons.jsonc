@@ -1,6 +1,18 @@
 {
   "plugins": {
     "seasons": {
+      // Os marcos da temporada (SeasonMarks do plugin seasons): o tempo do início da temporada até cada marco.
+      "marks": {
+        "names": {
+          "weapon-prestige": "o primeiro prestígio de arma",
+          "kills-100": "100 abates",
+          "perk-max-level": "uma perk no nível máximo"
+        },
+        "first": "&e&lMARCA DA TEMPORADA! &fVocê conseguiu {mark} em &e{time}&f desde o início da temporada {season}. É esse o tempo a bater na próxima.",
+        "record": "&a&lNOVO RECORDE PESSOAL! &fVocê conseguiu {mark} em &a{time}&f, mais rápido que os &7{previous}&f da temporada {previous_season}.",
+        "slower": "&e&lMARCA DA TEMPORADA! &fVocê conseguiu {mark} em &e{time}&f. O seu recorde continua sendo &a{previous}&f, da temporada {previous_season}.",
+        "server-record": "&6&lRECORDE DO SERVIDOR! &f{player}&f conseguiu {mark} em &6{time}&f, o menor tempo de todas as temporadas."
+      },
       "info": {
         "none": "&7O P4Free ainda não tem temporada aberta.",
         "active": "&e{name} &7termina em &f{end}&7. O tempo restante é &f{left}&7.",
