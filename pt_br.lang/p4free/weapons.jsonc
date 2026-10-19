@@ -446,7 +446,7 @@
           // O {enchant_effect}: o número de hoje riscado e o do próximo nível, ou só o de
           // hoje no máximo. {effect} é o "effect" do encantamento.
           "effect": {
-            "next": "  &f{effect}: &7&m{from}&7 ➟ &b{to}",
+            "next": "  &f{effect}: &c&m{from}&7 ➟ &b{to}",
             "current": "  &f{effect}: &7{from}"
           },
           // O {enchant_shop}: só no que se paga em cash. A linha em branco do fim é dele, para

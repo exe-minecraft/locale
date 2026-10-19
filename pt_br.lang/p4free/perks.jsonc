@@ -200,7 +200,7 @@
           // Os números da perk no ícone, como nas armas: o de hoje riscado e o do próximo nível.
           // Sem a perk, o que o primeiro nível dá; no máximo, só o de hoje.
           "effect": {
-            "next": "&7&m{from}&7 ➟ &b{to}",
+            "next": "&c&m{from}&7 ➟ &b{to}",
             "current": "&f{from}"
           },
           "info": {
