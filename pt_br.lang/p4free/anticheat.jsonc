@@ -1,0 +1,76 @@
+{
+  "plugins": {
+    // O que a rede soma ao Polar no P4Free (o plugin anticheat): as logs do /shawzyylogs, os alertas de um
+    // servidor repassados à staff do outro e o aviso do limite de CPS. Os textos seguem o messages.yml do Polar
+    // no ar, que é o do P4Free antigo ("AC").
+    "anticheat": {
+      // As palavras que acompanham um número montado no código (o Plural do core): 1 no singular.
+      "units": {
+        "record": { "singular": "registro", "plural": "registros" }
+      },
+      // O alerta de outro servidor, para quem recebe os alertas do Polar aqui. {message} é o alerta como saiu lá.
+      "alert-relay": "&e[{server}] &r{message}",
+      // A quem passa do limite de CPS do polar.yml. {limit} vem de lá (15,2 no clique esquerdo, 20 no direito).
+      "cps": {
+        "chat": [
+          "",
+          "&cVocê ultrapassou o limite de {limit} CPS e está sendo prejudicado.",
+          ""
+        ],
+        "title": "&cLimite de CPS excedido!",
+        "subtitle": "&eReduza seu CPS para evitar penalidades"
+      },
+      "logs": {
+        "failed": "&4&lAC &c| &cNão foi possível ler as logs agora. Tente de novo em alguns segundos.",
+        "kinds": {
+          "mitigation": "mitigação",
+          "detection": "alerta",
+          "cloud": "nuvem",
+          "punishment": "punição"
+        },
+        // Uma linha por evento. A data mostra os detalhes ao passar o mouse.
+        "lines": {
+          "mitigation": "&8{date} &8[{server}] &4{player} &7foi mitigado por &c{check} &8❘ &4x{vl}",
+          "detection": "&8{date} &8[{server}] &4{player} &7apitou &c{check} &8❘ &4x{vl}",
+          "cloud": "&8{date} &8[{server}] &4{player} &8❘ &c{check}",
+          "punishment": "&8{date} &8[{server}] &4{player} &7recebeu &c{punishment} &7por &c{reason}"
+        },
+        "hover": "&8Versão: &c{version}\n&8Cliente: &c{brand}\n&8Ping: &c{ping} ms\n&8Informações extra: &c{details}"
+      },
+      "commands": {
+        "shawzyylogs": {
+          "view": {
+            "description": "ver as logs de um jogador, da mais nova para a mais velha",
+            "arguments": {
+              "target": { "name": "jogador", "description": "Nick do jogador" },
+              "page": { "name": "página", "description": "Número da página" }
+            },
+            "empty": "&4&lAC &c| &7{player} não tem nenhuma log no anticheat.",
+            "header": "&4&lAC &c| &7Logs de &c{player} &8(página {page} de {pages})",
+            "next": "&7Para a próxima página, use &c/shawzyylogs ver {player} {next}&7."
+          },
+          "recent": {
+            "description": "ver as logs mais recentes dos dois servidores, dos últimos 7 dias",
+            "arguments": {
+              "page": { "name": "página", "description": "Número da página" }
+            },
+            "empty": "&4&lAC &c| &7Nenhuma log no anticheat nos últimos 7 dias.",
+            "header": "&4&lAC &c| &7Logs recentes &8(página {page} de {pages})",
+            "next": "&7Para a próxima página, use &c/shawzyylogs recentes {next}&7."
+          },
+          "info": {
+            "description": "ver quantas vezes cada verificação pegou um jogador",
+            "arguments": {
+              "target": { "name": "jogador", "description": "Nick do jogador" },
+              "period": { "name": "6h|2d|1w|hoje", "description": "Desde quando contar" }
+            },
+            "empty": "&4&lAC &c| &7{player} não tem nenhuma log no anticheat nesse período.",
+            "header": "&4&lAC &c| &7Resumo de &c{player} &8({count} {count_unit})",
+            "header-limited": "&4&lAC &c| &7Resumo de &c{player} &8(só os {count} {count_unit} mais recentes)",
+            "entry": "&8• &c{check} &8({kind}) &7{count} {count_unit}"
+          }
+        }
+      }
+    }
+  }
+}
