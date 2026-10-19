@@ -7,7 +7,9 @@
           "not-online": "O jogador {name} não se encontra online em nosso servidor.",
           "not-allowed-self": "Ops! Você não pode utilizar isso em você mesmo.",
           "target-same-or-higher-group": "Você não pode punir {name} porque o grupo desse jogador não está abaixo do seu.",
-          "not-online-locally": "O jogador {name} não se encontra online neste servidor."
+          "not-online-locally": "O jogador {name} não se encontra online neste servidor.",
+          "preferences-loading": "Suas preferências ainda estão carregando. Tente de novo em alguns segundos.",
+          "preferences-loading-other": "As preferências de {name} ainda estão carregando. Tente de novo em alguns segundos."
         },
         "operation": {
           "cancelled": "Operação cancelada com sucesso!"
