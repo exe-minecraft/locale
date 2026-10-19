@@ -575,6 +575,7 @@
           "map-not-found": "&cO mapa {map} não existe ou não está carregado no P4Free Eventos.",
           "start-failed": "&cNão foi possível abrir o {event}. Confira os pontos gravados com setloc.",
           "need-clan": "Você precisa estar em um clan para participar do evento!",
+          "vanished": "&cÉ necessário desativar o /v para jogar em eventos. O camarote continua permitido.",
           "clan-not-authorized": "&cPara entrar nos eventos o seu clan tem que estar autorizado!",
           "cant-join-event": "O {event} já começou ou não está disponível.",
           "target-in-event-app": "{player_name} já está no P4Free Eventos. Dê o comando de lá para colocá-lo no {event}.",
