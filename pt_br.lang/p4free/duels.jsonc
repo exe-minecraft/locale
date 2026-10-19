@@ -486,6 +486,16 @@
                 "",
                 "&aClique para abrir."
               ]
+            },
+            "history-duo": {
+              "name": "&6Seu histórico 2v2",
+              "lore": [
+                "&7Cada 2v2 que você jogou, na",
+                "&7ranqueada e na party, com o",
+                "&7parceiro e os adversários.",
+                "",
+                "&aClique para abrir."
+              ]
             }
           }
         },
@@ -528,6 +538,233 @@
                 "{tier}",
                 "",
                 "&8{date}"
+              ]
+            }
+          }
+        },
+        // O histórico dos duelos 2v2 de um jogador (o botão do /elo, o /elo historico2v2 e as cabeças do ranking de elo
+        // 2v2): a ranqueada 2v2 e os 2v2 de party. Uma linha por partida, da mais nova para a mais velha.
+        "duo-history": {
+          "title": "2v2 de {player}",
+          "failed": "&cNão foi possível ler o histórico 2v2 agora. Tente de novo em instantes.",
+          "separator": "&7, &f",
+          // O elo só aparece na ranqueada.
+          "change": {
+            "won": "&8(+{amount} {points})",
+            "lost": "&8(-{amount} {points})"
+          },
+          "elo": "&7Elo 2v2: &f{before} &8→ &f{after}",
+          "items": {
+            "summary": {
+              "name": "&6{player}",
+              "lore": [
+                "&7Os duelos 2v2, do mais novo",
+                "&7para o mais velho.",
+                "",
+                "&8 ▸ &fVitórias: &a{wins}",
+                "&8 ▸ &fDerrotas: &c{losses}",
+                "&8 ▸ &fEmpates: &7{draws}",
+                "&8 ▸ &fPartidas no histórico: &f{count}"
+              ]
+            },
+            "empty": {
+              "name": "&cNenhum 2v2",
+              "lore": [
+                "&7{player} ainda não jogou",
+                "&7nenhum duelo 2v2."
+              ]
+            },
+            "entry": {
+              "won": { "name": "&aVitória {change}" },
+              "lost": { "name": "&cDerrota {change}" },
+              "draw": { "name": "&7Empate" },
+              "lore": [
+                "&7{format}",
+                "&7Parceiro: &f{partner}",
+                "&7Contra: &f{opponents}",
+                "{elo}",
+                "",
+                "&8{date}"
+              ]
+            }
+          }
+        },
+        // O histórico do CxC, de um clã (o menu do /cxc e o /cxc historico) ou de um jogador (o botão direito do menu
+        // e o /cxc lutas). Só o CxC que chegou a lutar. As tags são as do dia do duelo.
+        "cxc-history": {
+          "title": "CxC de {owner}",
+          "failed": "&cNão foi possível ler o histórico do CxC agora. Tente de novo em instantes.",
+          "separator": "&7, &f",
+          "own": "&7Abates no duelo: &f{kills}",
+          // Quem lutou de cada lado, quatro nomes por linha: o CxC não tem teto por lado.
+          "lineup": "&7Lutaram: &f{names}",
+          "opponents": "&7Contra: &f{names}",
+          "names": "&f{names}",
+          "items": {
+            "summary": {
+              "clan": {
+                "name": "{owner}",
+                "lore": [
+                  "&7Os duelos de clãs do clã, do",
+                  "&7mais novo para o mais velho.",
+                  "",
+                  "&8 ▸ &fVitórias: &a{wins}",
+                  "&8 ▸ &fDerrotas: &c{losses}",
+                  "&8 ▸ &fEmpates: &7{draws}",
+                  "&8 ▸ &fDuelos no histórico: &f{count}"
+                ]
+              },
+              "player": {
+                "name": "&6{owner}",
+                "lore": [
+                  "&7Os CxC em que {owner} &7lutou,",
+                  "&7do mais novo para o mais velho.",
+                  "",
+                  "&8 ▸ &fVitórias: &a{wins}",
+                  "&8 ▸ &fDerrotas: &c{losses}",
+                  "&8 ▸ &fEmpates: &7{draws}",
+                  "&8 ▸ &fAbates: &f{kills}",
+                  "&8 ▸ &fDuelos no histórico: &f{count}"
+                ]
+              }
+            },
+            "empty": {
+              "name": "&cNenhum CxC",
+              "clan": [
+                "&7O clã {owner} &7ainda não",
+                "&7lutou nenhum CxC."
+              ],
+              "player": [
+                "&7{owner} ainda não lutou",
+                "&7nenhum CxC."
+              ]
+            },
+            "entry": {
+              "won": { "name": "&aVitória contra {opponent}" },
+              "lost": { "name": "&cDerrota contra {opponent}" },
+              "draw": { "name": "&7Empate contra {opponent}" },
+              "lore": [
+                "&7Placar: {tag} &f{kills} &8x &f{opponent_kills} {opponent}",
+                "&7Mapa: &f{arena}",
+                "&7Duração: &f{duration}",
+                "{own}",
+                "{lineup}",
+                "{opponents}",
+                "",
+                "&8{date}"
+              ]
+            }
+          }
+        },
+        // O menu do /cxc (o desenho A que o dono escolheu em 19/10). A última linha de cada ícone diz o que o clique
+        // faz, ou por que não faz nada agora (as recusas de cxc.refusals).
+        "cxc-menu": {
+          "title": "Duelo de Clãs",
+          "ask": {
+            "challenge": "&7Digite a tag do clã que você quer desafiar."
+          },
+          "actions": {
+            "challenge": "&aClique e digite a tag no chat.",
+            "history": ["&aClique para ver o do seu clã.", "&eBotão direito para ver os seus."],
+            "history-own": ["&aClique para ver os seus."],
+            "invite": ["&aClique para aceitar.", "&cBotão direito para recusar."],
+            "invite-officer": "&7Só o líder ou um capitão VIP responde."
+          },
+          "items": {
+            "clan": {
+              "none": {
+                "name": "&cSem clã",
+                "lore": [
+                  "&7Entre num clã para lutar",
+                  "&7os duelos de clãs."
+                ]
+              },
+              "member": {
+                "name": "{clan_tag} &f{clan_name}",
+                "lore": [
+                  "&8 ▸ &fVitórias de CxC: &a{clan_cxc_wins}",
+                  "&8 ▸ &fMembros: &f{clan_members}",
+                  "&8 ▸ &fOnline: &f{clan_online}",
+                  "&8 ▸ &fVIPs online: &b{clan_vips}",
+                  "",
+                  "&7Só os VIPs vão para a arena."
+                ]
+              }
+            },
+            "challenge": {
+              "name": "&6Desafiar um clã",
+              "lore": [
+                "&7O líder ou um capitão VIP escolhe",
+                "&7o clã e o mapa. Os VIPs online",
+                "&7dos dois clãs vão para a arena.",
+                "",
+                "{challenge_action}"
+              ]
+            },
+            "invites": {
+              "none": {
+                "name": "&6Convites",
+                "lore": [
+                  "&7Nenhum convite de CxC pendente.",
+                  "{invite_action}"
+                ]
+              },
+              "received": {
+                "name": "&aDesafio do clã {invite_tag}",
+                "lore": [
+                  "&7O clã {invite_tag} &7desafiou o seu.",
+                  "&8 ▸ &fMapa: &7{invite_arena}",
+                  "&8 ▸ &fExpira em: &f{invite_time}s",
+                  "",
+                  "{invite_action}"
+                ]
+              },
+              "sent": {
+                "name": "&eConvite enviado",
+                "lore": [
+                  "&7Seu clã desafiou o clã {invite_tag}&7.",
+                  "&8 ▸ &fMapa: &7{invite_arena}",
+                  "&8 ▸ &fExpira em: &f{invite_time}s",
+                  "",
+                  "&7Esperando a resposta deles."
+                ]
+              }
+            },
+            "cabin": {
+              "name": "&6Camarote",
+              "lore": [
+                "&7Assista aos duelos de clãs",
+                "&7que estão acontecendo.",
+                "",
+                "&8 ▸ &fLutas agora: &f{cabin_matches}",
+                "",
+                "&aClique para abrir."
+              ]
+            },
+            "history": {
+              "name": "&6Histórico",
+              "lore": [
+                "&7Cada CxC com o placar, o mapa,",
+                "&7a duração e quem lutou.",
+                "",
+                "{history_action}"
+              ]
+            },
+            "ranking": {
+              "name": "&6Ranking de CxC",
+              "lore": [
+                "&7Os clãs com mais vitórias",
+                "&7de CxC.",
+                "",
+                "&aClique para abrir."
+              ]
+            },
+            "commands": {
+              "name": "&6Comandos",
+              "lore": [
+                "&7Os comandos do CxC.",
+                "",
+                "&aClique para ver no chat."
               ]
             }
           }
@@ -955,6 +1192,10 @@
           "history": {
             "description": "ver o histórico do elo 1v1; com um nick, o de outro jogador",
             "arguments": { "target": { "name": "jogador", "description": "De quem você quer ver o histórico." } }
+          },
+          "history-duo": {
+            "description": "ver o histórico dos duelos 2v2; com um nick, o de outro jogador",
+            "arguments": { "target": { "name": "jogador", "description": "De quem você quer ver o histórico." } }
           }
         },
         "x1": {
@@ -1097,7 +1338,15 @@
           }
         },
         "cxc": {
-          "description": "os duelos de clãs",
+          "description": "abrir o menu dos duelos de clãs",
+          "history": {
+            "description": "ver o histórico de CxC de um clã; sem tag, o do seu",
+            "arguments": { "tag": { "name": "tag", "description": "A tag do clã." } }
+          },
+          "fights": {
+            "description": "ver os CxC em que você lutou; com um nick, os de outro jogador",
+            "arguments": { "target": { "name": "jogador", "description": "De quem você quer ver as lutas." } }
+          },
           "challenge": {
             "description": "desafiar outro clã (líder ou capitão VIP)",
             "arguments": { "tag": { "name": "tag", "description": "A tag do clã desafiado." } }
