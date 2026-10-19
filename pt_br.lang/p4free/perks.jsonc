@@ -14,7 +14,7 @@
         "attack": {
           "name": "Ataque",
           "menu-lore": [
-            "&7Num golpe crítico, multiplica o dano.",
+            "&7Em qualquer golpe, sem precisar pular, pode multiplicar o dano.",
             "",
             "&7Nível: &f{level}&7/&f{max_level}",
             "&7Próximo nível: &b{next_price}",
@@ -83,7 +83,7 @@
         "repair": {
           "name": "Reparação",
           "menu-lore": [
-            "&7Ao matar alguém, sua armadura é reparada.",
+            "&7Ao matar alguém, sua armadura e a do seu clã no mundo são reparadas.",
             "",
             "&7Nível: &f{level}&7/&f{max_level}",
             "&7Próximo nível: &b{next_price}",
