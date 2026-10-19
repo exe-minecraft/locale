@@ -125,6 +125,16 @@
       // O (N) das entradas e saídas é quantos ainda estão no evento.
       "join": "&4[{event}] &cO jogador &7[{clan_tag}&7] &f{player_name} &centrou no evento. &f({event_players})",
       "quit": "&4[{event}] &cO jogador &7[{clan_tag}&7] &f{player_name} &csaiu do evento. &f({event_players})",
+      // O revive da staff no ClanFight fora da espera, como o "foi revivido" do Gladiador. No FastGlad, como no
+      // exe-fastgladiator, e na espera, o revivido sai com o "entrou no evento" (o join).
+      "revived": "&4[{event}] &cO jogador &7[{clan_tag}&7] &f{player_name} &cfoi revivido. &f({event_players})",
+      // O aviso a quem o revive da staff traz de volta ao ClanFight, antes da contagem de 5 s no title (os algarismos e o
+      // "Você será ressuscitado!" são os do Gladiador). O FastGlad, como o exe-fastgladiator, revive sem contagem.
+      "revive-countdown": [
+        "",
+        "&eVocê será ressuscitado no evento {event} em &e&l5 segundos&e, prepare-se!",
+        ""
+      ],
       // O expulsar e o expulsar clan da staff, como o /fastglad kick e kickclan do exe-fastgladiator.
       "kicked": "&4[{event}] &cO jogador &7[{clan_tag}&7] &f{player_name} &cfoi expulso do evento. &f({event_players})",
       "clan-kicked": "&4[{event}] &cO clan &7[{clan_tag}&7] &cfoi expulso do evento.",
@@ -330,6 +340,17 @@
       "already-in-event": "&cVocê já está participando do {event}.",
       // O /entrar de quem a staff expulsou na espera, até o fim da partida.
       "kicked-cannot-join": "&cVocê não pode entrar de novo, pois foi expulso desta partida do {event}.",
+      // As respostas do revive da staff que dizem o nome do evento. As outras (o sucesso, a falha, o "já está no processo",
+      // sem clan, o /v e o "não está online no P4Free") são as do /glad revive, que servem aos três.
+      "revive": {
+        "bringing": "&eO jogador está sendo levado ao {event} para ser revivido.",
+        "not-arrived": "&cO jogador não chegou ao {event} a tempo de ser revivido.",
+        "not-running": "&cNão há um {event} em andamento para reviver alguém.",
+        "alive": "&cEste jogador ainda está lutando no {event}!",
+        "clan-changed": "&cEste jogador trocou de clan depois de entrar no {event} e não pode voltar pelo clan antigo.",
+        // Só no ClanFight, como no exe-clanfight, onde o revive traz quem é de um clan da partida, mesmo eliminado.
+        "clan-not-in-match": "&cO clan deste jogador não está participando do {event}."
+      },
       "stash-failed": "&cNão foi possível guardar seu inventário agora. Tente entrar no {event} de novo.",
       "action-success": "&aAção aplicada ao evento com sucesso!",
       "kick-success": "&aVocê expulsou {player} do {event}.",
