@@ -1,0 +1,24 @@
+{
+  "plugins": {
+    "core": {
+      // O boost no Discord da rede, anunciado no chat da rede toda. A plataforma manda quando o bot vê a mensagem de
+      // boost do servidor. {name} é o nick do jogo de quem tem o Discord vinculado, e o nome do Discord de quem não tem.
+      "discord-boost": {
+        "announce": {
+          "one": [
+            "",
+            "&d&l  BOOSTER",
+            "&f{name} &7impulsionou o nosso Discord! Impulsione você também em &ddiscord.rede-exe.com&7.",
+            ""
+          ],
+          "other": [
+            "",
+            "&d&l  BOOSTER",
+            "&f{name} &7impulsionou o nosso Discord &d{count} vezes&7! Impulsione você também em &ddiscord.rede-exe.com&7.",
+            ""
+          ]
+        }
+      }
+    }
+  }
+}
