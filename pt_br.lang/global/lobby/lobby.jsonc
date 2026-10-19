@@ -168,6 +168,37 @@
         }
       },
       "messages": {
+        // As mensagens automáticas do lobby, em rodízio (a lista e o intervalo estão no config.yml do lobby).
+        // O destaque é o da dica do exe-souls, como no P4Free. Tudo aqui tem de ser verdade no jogo: a fila
+        // sai pelo cargo (UserQueueController), e o resto é a lista de vantagens dos VIPs de 16/10.
+        "auto-messages": {
+          "queue": [
+            "",
+            "&6&l VIP: &fQuem tem VIP passa à frente na fila do &aP4Free&f, e o",
+            " &aImperial&f fica à frente do &aSamurai&f. Adquira em &arede-exe.com&f.",
+            ""
+          ],
+          "vip": [
+            "",
+            "&6&l VIP: &fNo P4Free o &aSamurai&f e o &aImperial&f têm kit &aP4&f e &aP5&f,",
+            " &fbaú do fim com &a5&f e &a6 linhas&f, &a2&f e &a3 perks&f e mais almas e tokens.",
+            " &fAdquira em &arede-exe.com&f.",
+            ""
+          ],
+          "lobby-perks": [
+            "",
+            "&6&l VIP: &fCom VIP você fala no chat do lobby, voa com &a/fly&f,",
+            " &fentra com o servidor cheio e usa cosméticos exclusivos.",
+            " &fAdquira em &arede-exe.com&f.",
+            ""
+          ],
+          "cash": [
+            "",
+            "&6&l CASH: &fCom &aCash&f você compra caixas misteriosas, o",
+            " &aIndestrutível&f e mais no &a/shop&f do P4Free. Adquira em &arede-exe.com&f.",
+            ""
+          ]
+        },
         "chat": {
           "in-delay": "&cVocê precisa esperar &f{remaining_time}&c para falar novamente.",
           "preference-off": "&cVocê não pode enviar mensagens nesse chat pois desabilitou as mensagens.",

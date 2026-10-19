@@ -1,0 +1,65 @@
+{
+  "plugins": {
+    "events": {
+      // As dicas do evento que está rodando, da espera ao fim, só no app do evento (a lista e o intervalo estão no
+      // tips.yml do events-server). O destaque é o da dica do exe-souls, como as mensagens de sempre do essentials.
+      "tips": {
+        "gladiator": {
+          "souls": [
+            "",
+            "&e&l DICA: &fAcumule &a5 abates&f, sem morrer, no Gladiador",
+            " &fpara ativar o bônus de &a2x almas&f!",
+            ""
+          ],
+          "rejoin": [
+            "",
+            "&e&l DICA: &fCaiu do Gladiador? Você tem &a5 minutos&f para voltar",
+            " &fcom &a/glad rejoin&f. Quem sai em combate ou numa teia não volta.",
+            ""
+          ],
+          "cabin": [
+            "",
+            "&e&l DICA: &fFicou de fora? Assista à luta pelo &a/glad camarote&f.",
+            ""
+          ],
+          "info": [
+            "",
+            "&e&l DICA: &fVeja os inscritos, o tempo e os clãs no &a/glad info&f.",
+            ""
+          ]
+        },
+        "fast-glad": {
+          "merchant": [
+            "",
+            "&e&l DICA: &fO &aMercador Sombrio&f aparece no centro do mapa. Clique",
+            " &fnele com o botão direito para gastar as moedas dos seus abates.",
+            ""
+          ],
+          "souls": [
+            "",
+            "&e&l DICA: &fAcumule &a5 abates&f, sem morrer, no FastGlad",
+            " &fpara ativar o bônus de &a2x almas&f!",
+            ""
+          ],
+          "cabin": [
+            "",
+            "&e&l DICA: &fFicou de fora? Assista à luta pelo &a/fg camarote&f.",
+            ""
+          ]
+        },
+        "clan-fight": {
+          "cabin": [
+            "",
+            "&e&l DICA: &fFicou de fora? Assista à luta pelo &a/cf camarote&f.",
+            ""
+          ],
+          "info": [
+            "",
+            "&e&l DICA: &fVeja os inscritos e os clãs do ClanFight no &a/cf info&f.",
+            ""
+          ]
+        }
+      }
+    }
+  }
+}
