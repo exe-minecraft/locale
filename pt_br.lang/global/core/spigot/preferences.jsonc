@@ -17,6 +17,13 @@
             "&7privadas de outros jogadores."
           ]
         },
+        "auto-messages": {
+          "name": "&eMensagens automáticas",
+          "description": [
+            "&7Mostra as dicas e avisos que",
+            "&7aparecem sozinhos no chat."
+          ]
+        },
         "client-addons": {
           "name": "&eInterações com clientes customizados",
           "description": [

@@ -1,0 +1,10 @@
+{
+  "plugins": {
+    "core": {
+      "achievements": {
+        // O aviso de quem desbloqueia uma conquista, só na primeira vez (AchievementUnlocks do core).
+        "unlocked": "&a&lCONQUISTA! &fVocê desbloqueou &a{achievement_name}&f e ganhou &a{achievement_xp} de XP&f."
+      }
+    }
+  }
+}

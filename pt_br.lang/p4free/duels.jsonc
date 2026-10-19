@@ -3,6 +3,16 @@
     // Os duelos do P4Free (módulo p4free/duels; spec docs/superpowers/specs/2026-09-30-p4free-duels-design.md
     // no exe). Sem prefixo de marca. Contagem pelo Plural (units) ou no formato "rótulo: valor".
     "duels": {
+      "preferences": {
+        "results": {
+          "name": "&eResultados dos duelos",
+          "description": [
+            "&7Mostra os resultados dos x1 e do CxC,",
+            "&7as winstreaks e as trocas de elo dos",
+            "&7outros. Os seus aparecem sempre."
+          ]
+        }
+      },
       "modes": {
         "challenge": "Desafio 1v1",
         "ranked-solo": "Ranqueada 1v1",

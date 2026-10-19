@@ -1,6 +1,15 @@
 {
   "plugins": {
     "clans": {
+      "preferences": {
+        "recruits": {
+          "name": "&eRecrutamento de clãs",
+          "description": [
+            "&7Mostra os clãs que estão",
+            "&7recrutando membros."
+          ]
+        }
+      },
       "placeholders": {
         "tag-brackets": "&7[{clan_colored_tag}&7]",
         // O [TAG] Nome clicável das mensagens (o clique abre o /clan info, o mouse mostra o cartão). É a âncora do
