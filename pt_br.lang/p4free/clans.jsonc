@@ -125,6 +125,11 @@
             " &8▸ &fCxC: &7{member_cxc_wins}",
             "",
             "&8Última entrada em {member_last_seen_at}"
+          ],
+          // No fim da lore, só no /clan roster e só de quem está jogando um evento agora.
+          "event": [
+            "",
+            "&aEm evento agora: &f{event_name}"
           ]
         },
         "clan-banner": {
