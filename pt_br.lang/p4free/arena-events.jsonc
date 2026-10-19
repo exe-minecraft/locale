@@ -328,6 +328,8 @@
       "command-blocked": "&cVocê não pode usar comandos durante o {event}.",
       "not-in-event": "&cVocê não está no {event}!",
       "already-in-event": "&cVocê já está participando do {event}.",
+      // O /entrar de quem a staff expulsou na espera, até o fim da partida.
+      "kicked-cannot-join": "&cVocê não pode entrar de novo, pois foi expulso desta partida do {event}.",
       "stash-failed": "&cNão foi possível guardar seu inventário agora. Tente entrar no {event} de novo.",
       "action-success": "&aAção aplicada ao evento com sucesso!",
       "kick-success": "&aVocê expulsou {player} do {event}.",
