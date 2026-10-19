@@ -20,6 +20,27 @@
         "piece": { "singular": "peça", "plural": "peças" },
         "player": { "singular": "jogador", "plural": "jogadores" }
       },
+      // Os elos do exe-p4free-core sobre o elo da ranqueada 1v1 (o EloTier do duels diz onde cada um começa). A tag
+      // entra no chat de todo jogador, antes das equipadas, e o hover dela é o "chat-description". Os símbolos de
+      // pictograma do antigo (☮ ☪ ☫ ☬ ☯ ☣) e o travessão do Starter foram trocados, porque não vão em texto do jogador.
+      "elo": {
+        "chat-description": "&7Elo {tier_name} &7no x1, com &f{elo} {points}&7.",
+        "tiers": {
+          "starter": { "name": "&8Starter", "tag": "&8[-]" },
+          "primary": { "name": "&7Primary", "tag": "&7[=]" },
+          "advanced": { "name": "&dAdvanced", "tag": "&d[✧]" },
+          "expert": { "name": "&5Expert", "tag": "&5[❖]" },
+          "silver": { "name": "&9Silver", "tag": "&9[✦]" },
+          "gold": { "name": "&3Gold", "tag": "&3[✩]" },
+          "diamond": { "name": "&bDiamond", "tag": "&b[♦]" },
+          "emerald": { "name": "&aEmerald", "tag": "&a[❂]" },
+          "cristal": { "name": "&2Cristal", "tag": "&2[✶]" },
+          "sapphire": { "name": "&eSapphire", "tag": "&e[✷]" },
+          "elite": { "name": "&6Elite", "tag": "&6[✹]" },
+          "master": { "name": "&cMaster", "tag": "&c[❋]" },
+          "legendary": { "name": "&4Legendary", "tag": "&4[✪]" }
+        }
+      },
       // Os botões dos convites no chat. A mensagem os mostra pelos placeholders {accept} e {decline}, e o clique
       // é ligado ao texto deles: mudar aqui muda nos dois lugares.
       "buttons": {
@@ -101,6 +122,9 @@
         // Só na ranqueada, para o servidor inteiro: a cada 5 vitórias seguidas, e a quebra de uma de 10 ou mais.
         "streak": "&6{player} &7chegou a &e{streak} vitórias seguidas &7na ranqueada.",
         "streak-broken": "&7A sequência de &e{streak} vitórias &7de &6{player} &7acabou.",
+        // Quem mudou de elo na ranqueada 1v1, para o servidor inteiro, como no exe-p4free-core.
+        "elo-promoted": "&a{player} &7subiu para o elo {tier_tag} {tier_name}&7.",
+        "elo-demoted": "&7{player} &7caiu para o elo {tier_tag} {tier_name}&7.",
         // O resultado vai a todos no P4Free local. {winners} e {losers} viram os nomes, cada um com
         // as estatísticas da luta no hover.
         "result": {
@@ -405,6 +429,55 @@
         "combo": "&f Maior combo: &e{combo}"
       },
       "views": {
+        // O /elo (e o clique na cabeça do /x1): o elo 1v1 de quem abre, a escada inteira e o ranking.
+        "elo": {
+          "title": "Elos do x1",
+          "next": {
+            "top": "&6Você está no elo mais alto.",
+            "missing": "&7Próximo: {tier_tag} {tier_name}&7, com mais &f{missing} {points}&7."
+          },
+          // Os pontos de cada degrau: o primeiro não tem piso (quem cai abaixo de 1000 continua nele) e o último não tem teto.
+          "ranges": {
+            "first": "&7Até &f{max} &7pontos",
+            "middle": "&7De &f{min} &7a &f{max} &7pontos",
+            "last": "&f{min} &7pontos ou mais"
+          },
+          "states": {
+            "current": "&aSeu elo atual.",
+            "reached": "&aVocê já passou por este elo.",
+            "locked": "&7Você precisa de mais &f{missing} {points}&7."
+          },
+          "items": {
+            "stats": {
+              "name": "&6{player}",
+              "lore": [
+                "&7O elo vem da ranqueada 1v1 e",
+                "&7aparece como tag no chat.",
+                "",
+                "&8 ▸ &fElo: {tier_tag} {tier_name}",
+                "&8 ▸ &fPontos: &b{elo}",
+                "",
+                "{next}"
+              ]
+            },
+            "tier": {
+              "name": "{tier_tag} {tier_name}",
+              "lore": [
+                "{range}",
+                "",
+                "{state}"
+              ]
+            },
+            "ranking": {
+              "name": "&6Ranking de elo",
+              "lore": [
+                "&7Os maiores elos da ranqueada 1v1.",
+                "",
+                "&aClique para abrir."
+              ]
+            }
+          }
+        },
         "primary": {
           "title": "Duelos",
           "ask": {
@@ -427,7 +500,9 @@
                 "&8 ▸ &fElo 2v2: &b{elo_2v2} &8(partidas: {matches_2v2})",
                 "&8 ▸ &fVitórias: &a{wins}",
                 "&8 ▸ &fDerrotas: &c{losses}",
-                "&8 ▸ &fWinstreak: &e{win_streak} &8(maior: {best_win_streak})"
+                "&8 ▸ &fWinstreak: &e{win_streak} &8(maior: {best_win_streak})",
+                "",
+                "&aClique para ver os elos."
               ],
               "loading": [
                 "&7Seus dados de duelo ainda estão",
@@ -818,6 +893,12 @@
         }
       },
       "commands": {
+        "elo": {
+          "description": "ver os elos do x1; com um nick, o elo de outro jogador",
+          "arguments": { "target": { "name": "jogador", "description": "De quem você quer ver o elo." } },
+          "target": "{target_name_with_color} &7está no elo {tier_tag} {tier_name}&7, com &f{elo} {points} &8(partidas 1v1: {matches})&7.",
+          "failed": "&cNão foi possível ler o elo desse jogador agora. Tente de novo em instantes."
+        },
         "x1": {
           "description": "abrir o menu dos duelos",
           "challenge": {
