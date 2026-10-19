@@ -67,6 +67,8 @@
           "party-too-big": "&cNa fila 2v2 a party tem de ter 2 jogadores.",
           "party-full": "&cA party já está no limite de jogadores do VIP do líder.",
           "party-vip-required": "&cSó VIPs podem criar e liderar parties.",
+          // A permissão do VIP ainda carregando: não cresce a party, e o motivo não é o "Só VIPs".
+          "party-loading": "&cAinda estamos carregando suas vantagens. Tente de novo em instantes.",
           "not-duo-leader": "&cSó o líder da dupla entra na fila 2v2.",
           "partner-offline": "&cSua dupla não está neste servidor.",
           "partner-busy": "&cSua dupla não está livre.",
@@ -179,7 +181,10 @@
           "full": "&cA party já está no limite de jogadores do VIP do líder.",
           "vip-required": "&cSó VIPs podem criar e liderar parties. Samurai permite até 8 membros e Imperial até 16, incluindo o líder.",
           "target-vip-required": "&c{player} precisa ser VIP para liderar a party.",
-          "target-limit": "&cO limite do VIP de {player} não comporta todos os membros da party."
+          "target-limit": "&cO limite do VIP de {player} não comporta todos os membros da party.",
+          // A permissão de quem lidera, ou de quem receberia a liderança, ainda carregando.
+          "loading": "&cAinda estamos carregando suas vantagens. Tente de novo em instantes.",
+          "target-loading": "&cAinda estamos carregando as vantagens de {player}. Tente de novo em instantes."
         },
         "challenge": {
           "sent": "&aDesafio enviado à party de &f{player} &8(expira em {time})&a.",
