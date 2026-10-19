@@ -74,6 +74,28 @@
           "legendary": "&6Lendário"
         },
         "pet-name": "&7Mascote de &f{owner_name}",
+        "pet-name-custom": "&f{pet_name} &7de &f{owner_name}",
+        // A ficha que sai no chat quando alguém clica com o botão direito num mascote.
+        "pet-card": {
+          "title": "&eMascote de {owner_name_with_color}",
+          "name": "&7Nome: &f{pet_name}",
+          "unnamed": "&7Nome: &8nenhum ainda",
+          "species": "&7Espécie: {cosmetic_name} &8({cosmetic_rarity}&8)",
+          "since": "&7Companheiro desde: &f{since_date}",
+          "rename-hint": "&7Para dar um nome a ele por &6{rename_price} Cash&7, agache e clique nele com o botão direito."
+        },
+        "pet-rename": {
+          "query": "&eQual vai ser o nome do seu mascote? Use de {min_length} a {max_length} letras ou números. Custa &6{rename_price} Cash&e.",
+          "confirm": "&eConfirma o nome &f{pet_name}&e para o seu mascote por &6{rename_price} Cash&e?",
+          "invalid": "Esse nome não serve. Use de {min_length} a {max_length} caracteres, só letras, números, espaço e . _ ' -",
+          "not-equipped": "Você guardou ou trocou o mascote antes de terminar, então nada foi cobrado.",
+          "same-name": "Seu mascote já se chama &f{pet_name}&c. Nada foi cobrado.",
+          "in-progress": "Espere terminar o nome que você já está dando ao mascote.",
+          "insufficient": "Você precisa de &6{rename_price} Cash&c para dar um nome ao mascote. Seu saldo: &6{user_balance} Cash&c.",
+          "failed": "Não foi possível dar o nome ao mascote. Tente novamente em instantes.",
+          "unconfirmed": "Não foi possível confirmar o nome &f{pet_name}&c. A falha foi registrada. Procure a equipe se o nome ou o Cash não aparecerem.",
+          "renamed": "Agora seu mascote se chama &f{pet_name}&a! Foram &6{rename_price} Cash&a."
+        },
         "gadget-lore": [
           "&7Clique com o botão direito",
           "&7para usar o gadget."
