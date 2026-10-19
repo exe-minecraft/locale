@@ -42,7 +42,8 @@
       // texto aos outros quando o motivo é de alguém. Curtos: também cabem numa linha de lore.
       "refusals": {
         "self": {
-          "restarting": "&cO servidor vai reiniciar em breve. Não dá para começar duelos agora.",
+          // {action_name_gerund} é o "reiniciando" ou o "desligando" do core (plugins.core.actions.types).
+          "restarting": "&cO servidor está {action_name_gerund}. Não dá para começar duelos agora.",
           "offline": "&cVocê precisa estar neste servidor.",
           "dead": "&cVocê está morto.",
           "in-combat": "&cVocê está em combate.",
@@ -75,7 +76,7 @@
           "partner-loading": "&cOs dados da sua dupla ainda estão carregando."
         },
         "other": {
-          "restarting": "&cO servidor vai reiniciar em breve. Não dá para começar duelos agora.",
+          "restarting": "&cO servidor está {action_name_gerund}. Não dá para começar duelos agora.",
           "offline": "&c{player} não está neste servidor.",
           "dead": "&c{player} está morto.",
           "in-combat": "&c{player} está em combate.",
@@ -209,7 +210,7 @@
       // O CxC, duelo de clãs (spec docs/superpowers/specs/2026-10-10-p4free-cxc-design.md no exe).
       "cxc": {
         "refusals": {
-          "restarting": "&cO servidor vai reiniciar em breve. Não dá para começar um CxC agora.",
+          "restarting": "&cO servidor está {action_name_gerund}. Não dá para começar um CxC agora.",
           "no-clan": "&cVocê não está num clã.",
           "not-officer": "&cSó o líder ou um capitão responde pelo clã no CxC.",
           "not-vip": "&cO CxC é uma vantagem dos VIPs.",
