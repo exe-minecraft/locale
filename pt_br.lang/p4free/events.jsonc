@@ -862,7 +862,8 @@
               "&4&l&m      &c&l&m      &r &f&lGLADIADOR &c&l&m      &4&l&m      ",
               ""
             ],
-            // Quando ninguém do clan vencedor fez abates, ninguém leva o [Mito], porque ele sai só desse clan.
+            // Quando nenhum abate do clan vencedor conta para o [Mito] (ninguém abateu, ou só quem saiu ou foi expulso),
+            // a tag continua com quem já a tinha (o dono, 19/10).
             "finish-summary-no-myth": [
               "",
               "&4&l&m      &c&l&m      &r &f&lGLADIADOR &c&l&m      &4&l&m      ",
@@ -871,7 +872,7 @@
               "&6 ► &fO clan &7[{clan_winner}&7] &ffoi o grande vencedor!",
               "",
               "&6• &fTodos os membros do clan receberão a tag &4[Gladiador]",
-              "&6• &fNinguém do clan vencedor fez abates, então ninguém recebe a tag &5[Mito]",
+              "&6• &fNinguém do clan vencedor fez abates que contam, então a tag &5[Mito] &fcontinua com quem já a tinha",
               "",
               "&4&l&m      &c&l&m      &r &f&lGLADIADOR &c&l&m      &4&l&m      ",
               ""
