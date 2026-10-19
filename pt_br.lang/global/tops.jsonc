@@ -48,7 +48,8 @@
                 "",
                 "{rankings}",
                 "",
-                "&bClique para trocar."
+                "&bClique esquerdo para o próximo.",
+                "&bClique direito para o anterior."
               ]
             },
             "empty": {
