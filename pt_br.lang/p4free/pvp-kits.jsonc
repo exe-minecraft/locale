@@ -20,17 +20,19 @@
         ],
         // A Berserker de 2 minutos de quem impulsiona o Discord, com espera própria (o /boostdiscord da staff dá).
         "booster-lore": [
+          "",
           "&dVantagem de booster do Discord",
-          "&7Poção berserker de &f{minutes} minutos&7,",
-          "&7com espera própria, separada das outras.",
+          "&7Tem espera própria, separada",
+          "&7das outras poções.",
           "",
           "&aClique para pegar.",
           ""
         ],
         "booster-lore-locked": [
+          "",
           "&dVantagem de booster do Discord",
-          "&7Poção berserker de &f{minutes} minutos&7,",
-          "&7com espera própria, separada das outras.",
+          "&7Tem espera própria, separada",
+          "&7das outras poções.",
           "",
           "&cImpulsione o Discord da rede e abra um",
           "&cticket para liberar: &fdiscord.rede-exe.com",
