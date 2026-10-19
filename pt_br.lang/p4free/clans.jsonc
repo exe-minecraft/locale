@@ -15,11 +15,12 @@
         "pending-invite": { "singular": "convite de clã parado", "plural": "convites de clã parados" }
       },
       // O bloco do exe-scoreboard em Documents: tag e nome juntos, membros logo abaixo. A {tag} já vem com a
-      // cor do clã (cinza quando ela não tem cor), desde 17/10. Com uma cor na tag, até o nome de 16 letras cabe
-      // na linha do protocolo 1.8; com duas, 15, e com três, 13.
+      // cor do clã (cinza quando ela não tem cor), desde 17/10, e os colchetes em cinza (o dono, 19/10). O espaço
+      // do começo vai sem cor para os colchetes não gastarem mais da linha do protocolo 1.8: com uma cor na tag,
+      // até o nome de 15 letras cabe; com duas, 12, e com três, 11.
       "scoreboard": {
         "clan": [
-          "&f [{tag}&f] {name}",
+          " &7[{tag}&7] &f{name}",
           "&f Membros: &7{members}/{max_members}"
         ],
         "no-clan": [
