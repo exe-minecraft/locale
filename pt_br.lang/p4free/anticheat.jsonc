@@ -35,7 +35,12 @@
           "cloud": "&8{date} &8[{server}] &4{player} &8❘ &c{check}",
           "punishment": "&8{date} &8[{server}] &4{player} &7recebeu &c{punishment} &7por &c{reason}"
         },
-        "hover": "&8Versão: &c{version}\n&8Cliente: &c{brand}\n&8Ping: &c{ping} ms\n&8Informações extra: &c{details}"
+        "hover": [
+          "&8Versão: &c{version}",
+          "&8Cliente: &c{brand}",
+          "&8Ping: &c{ping} ms",
+          "&8Informações extra: &c{details}"
+        ]
       },
       "commands": {
         "shawzyylogs": {
