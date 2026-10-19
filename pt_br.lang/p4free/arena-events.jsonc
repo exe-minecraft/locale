@@ -23,6 +23,19 @@
         "own": "&a[&7{tag}&a]",
         "other": "&c[&7{tag}&c]"
       },
+      // O status do FastGlad a cada 600 segundos de luta, inclusive no deathmatch, como no exe-fastgladiator.
+      "status": [
+        "",
+        "&2&l&m      &a&l&m      &r &f&lSTATUS DO FASTGLAD &a&l&m      &2&l&m     ",
+        "",
+        "&eTempo: &f{time}",
+        "",
+        "&eClans Participando:",
+        "{event_clan_list}",
+        "",
+        "&2&l&m      &a&l&m      &r &f&lSTATUS DO FASTGLAD &a&l&m      &2&l&m     ",
+        ""
+      ],
       // A abertura, com o tempo inteiro da espera. O "AQUI" leva o clique do entrar.
       "start": [
         "",
