@@ -18,6 +18,24 @@
           "&b até o fim desta temporada.",
           ""
         ],
+        // A Berserker de 2 minutos de quem impulsiona o Discord, com espera própria (o /boostdiscord da staff dá).
+        "booster-lore": [
+          "&dVantagem de booster do Discord",
+          "&7Poção berserker de &f{minutes} minutos&7,",
+          "&7com espera própria, separada das outras.",
+          "",
+          "&aClique para pegar.",
+          ""
+        ],
+        "booster-lore-locked": [
+          "&dVantagem de booster do Discord",
+          "&7Poção berserker de &f{minutes} minutos&7,",
+          "&7com espera própria, separada das outras.",
+          "",
+          "&cImpulsione o Discord da rede e abra um",
+          "&cticket para liberar: &fdiscord.rede-exe.com",
+          ""
+        ],
         "color": {
           "long": "&6",
           "medium": "&b",
@@ -52,6 +70,40 @@
             }
           }
         },
+        "boostdiscord": {
+          "description": "dar ou tirar a Berserker de booster do Discord",
+          "give": {
+            "description": "libera a Berserker de booster no /berserker",
+            "arguments": {
+              "target": {
+                "name": "jogador",
+                "description": "Jogador que impulsionou o Discord"
+              },
+              "days": {
+                "name": "dias",
+                "description": "Dias de duração; em branco ou 0 = permanente"
+              }
+            },
+            "negative-days": "Os dias não podem ser negativos.",
+            "error": "Não foi possível liberar a Berserker de booster agora. Tente novamente.",
+            "success": "Você liberou a Berserker de booster para {target_name} por {days} {days_word}.",
+            "success-permanent": "Você liberou a Berserker de booster para {target_name} permanentemente.",
+            // O mesmo permanente de novo: nada mudou. Com dias, o prazo é trocado e vale o success.
+            "already": "{target_name} já tem a Berserker de booster permanente."
+          },
+          "remove": {
+            "description": "tira a Berserker de booster do /berserker",
+            "arguments": {
+              "target": {
+                "name": "jogador",
+                "description": "Jogador que perde a vantagem"
+              }
+            },
+            "error": "Não foi possível tirar a Berserker de booster agora. Tente novamente.",
+            "success": "Você tirou a Berserker de booster de {target_name}.",
+            "not-found": "{target_name} não tinha a Berserker de booster."
+          }
+        },
         "givekit": {
           "arguments": {
             "kit": {
@@ -83,6 +135,7 @@
         "berserker-denied": "&c&l[EXE] &cVocê não possui permissão para adquirir essa poção.",
         "berserker-cooldown": "&c&l[EXE] &cVocê precisa aguardar mais tempo para pegar outra poção!",
         "berserker-given": "&aVocê adquiriu a Berserker com sucesso!",
+        "booster-denied": "&cEssa Berserker é de quem impulsiona o Discord da rede. Impulsione e abra um ticket para liberar.",
         "berserker-removed": "&cAs Berserker mais longas do que o seu grupo libera foram tiradas do seu inventário.",
         "berserker-pickup-denied": "&cEssa Berserker é exclusiva de quem tem acesso a ela no /berserker ou no kit VIP.",
         "entitlement-owned": "&cVocê já tem essa Berserker no /berserker. Guarde o vale para quando acabar.",

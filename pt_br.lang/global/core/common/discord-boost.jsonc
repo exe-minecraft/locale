@@ -9,12 +9,14 @@
             "",
             "&d&l  BOOSTER",
             "&f{name} &7impulsionou o nosso Discord! Impulsione você também em &ddiscord.rede-exe.com&7.",
+            " &7Quem impulsiona ganha a &dBerserker de booster&7 no &d/berserker&7. Abra um ticket para liberar.",
             ""
           ],
           "other": [
             "",
             "&d&l  BOOSTER",
             "&f{name} &7impulsionou o nosso Discord &d{count} vezes&7! Impulsione você também em &ddiscord.rede-exe.com&7.",
+            " &7Quem impulsiona ganha a &dBerserker de booster&7 no &d/berserker&7. Abra um ticket para liberar.",
             ""
           ]
         }
