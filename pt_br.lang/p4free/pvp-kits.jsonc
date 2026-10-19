@@ -25,8 +25,7 @@
           "&7Tem espera própria, separada",
           "&7das outras poções.",
           "",
-          "&aClique para pegar.",
-          ""
+          "&aClique para pegar."
         ],
         "booster-lore-locked": [
           "",
@@ -35,8 +34,7 @@
           "&7das outras poções.",
           "",
           "&cImpulsione o Discord da rede e abra um",
-          "&cticket para liberar: &fdiscord.rede-exe.com",
-          ""
+          "&cticket para liberar: &fdiscord.rede-exe.com"
         ],
         "color": {
           "long": "&6",
