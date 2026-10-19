@@ -592,6 +592,8 @@
           "clan-not-authorized": "&cPara entrar nos eventos o seu clan tem que estar autorizado!",
           "cant-join-event": "O {event} já começou ou não está disponível.",
           "target-in-event-app": "{player_name} já está no P4Free Eventos. Dê o comando de lá para colocá-lo no {event}.",
+          // O forceentrar da staff num alvo com o /v ativado, em qualquer app (EventForceJoinCommand).
+          "target-vanished": "&c{player_name} está com o /v ativado e não pode ser enviado ao {event}.",
           // O /kit, o /berserker, o /espada e o /machado no app de eventos (EventItemCommandListener).
           "item-command-blocked": "No P4Free Eventos os itens vêm só do evento.",
           // O /spawn de quem luta, espera o rejoin ou está no camarote (EventsListener.onSpawnRequest).
@@ -1099,6 +1101,7 @@
           "revive-alive": "&cEste jogador ainda está lutando no Gladiador!",
           "revive-no-clan": "&cEste jogador não está em um clan!",
           "revive-clan-changed": "&cEste jogador trocou de clan depois de entrar no Gladiador e não pode voltar pelo clan antigo.",
+          "revive-vanished": "&cEste jogador está com o /v ativado e não pode voltar à luta.",
           "kick-player-success": "&aVocê expulsou o jogador do Gladiador com sucesso!",
           "kick-player-failure": "&cEste jogador não está no Gladiador!",
           "leave-success": "&aVocê saiu do {event} com sucesso!",
