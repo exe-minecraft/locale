@@ -587,6 +587,8 @@
           "start-failed": "&cNão foi possível abrir o {event}. Confira os pontos gravados com setloc.",
           "need-clan": "Você precisa estar em um clan para participar do evento!",
           "vanished": "&cÉ necessário desativar o /v para jogar em eventos. O camarote continua permitido.",
+          // O /v da staff ligado por quem está vivo num evento (EventsListener.onVanish).
+          "vanish-blocked": "&cVocê não pode ativar o /v enquanto estiver lutando no {event}. No camarote ele continua permitido.",
           "clan-not-authorized": "&cPara entrar nos eventos o seu clan tem que estar autorizado!",
           "cant-join-event": "O {event} já começou ou não está disponível.",
           "target-in-event-app": "{player_name} já está no P4Free Eventos. Dê o comando de lá para colocá-lo no {event}.",

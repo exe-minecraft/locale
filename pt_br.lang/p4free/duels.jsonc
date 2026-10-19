@@ -93,6 +93,8 @@
       },
       "messages": {
         "command-blocked": "&cEsse comando não pode ser usado nos duelos.",
+        // O /v da staff ligado numa fila ou num duelo (MatchListener.onVanish).
+        "vanish-blocked": "&cVocê não pode ativar o /v enquanto estiver numa fila ou num duelo. No camarote ele continua permitido.",
         // Só na ranqueada, para o servidor inteiro: a cada 5 vitórias seguidas, e a quebra de uma de 10 ou mais.
         "streak": "&6{player} &7chegou a &e{streak} vitórias seguidas &7na ranqueada.",
         "streak-broken": "&7A sequência de &e{streak} vitórias &7de &6{player} &7acabou.",
