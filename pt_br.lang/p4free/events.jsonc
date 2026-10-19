@@ -1,6 +1,27 @@
 {
   "plugins": {
     "events": {
+      // O /glad mapas. Dar nome a um mapa em "names" é o que o põe no menu: o nome é a chave do mundo no P4Free Eventos.
+      "gladiator-maps": {
+        "names": {
+          "gladiador2": "Arena dos Titãs",
+          "gladiador3": "Vale das Lâminas",
+          "gladiador4": "Fortaleza Celeste",
+          "gladiador5": "Ruínas de Aurora",
+          "gladiador6": "Coliseu Sombrio",
+          "gladiador7": "Abismo Esquecido"
+        },
+        "visiting": [
+          "",
+          "&aVocê está visitando o mapa &f{map}&a.",
+          "&7Voe à vontade pelo mapa. Para sair, use &f/spawn&7.",
+          ""
+        ],
+        "already-visiting": "Você já está visitando este mapa.",
+        "event-running": "Não dá para visitar os mapas enquanto um evento está acontecendo. Volte quando ele acabar.",
+        "not-found": "Este mapa não existe ou não pode ser visitado.",
+        "event-started": "Um evento começou, e a visita aos mapas acabou. Você voltou ao spawn."
+      },
       // As dicas do evento que está rodando, da espera ao fim, só no app do evento (a lista e o intervalo estão no
       // tips.yml do events-server). O destaque é o da dica do exe-souls, como as mensagens de sempre do essentials.
       "tips": {
@@ -228,6 +249,17 @@
           },
           "event-force-start": {
             "description": "começar o Gladiador sem esperar"
+          },
+          "mapas": {
+            "description": "visitar os mapas do Gladiador",
+            "arguments": {
+              "map": {
+                "name": "mapa",
+                "description": "O mapa que você quer visitar. Sem ele, abre o menu dos mapas."
+              }
+            },
+            "unavailable": "&cO P4Free Eventos não está disponível agora. Tente de novo em instantes.",
+            "failed": "Não foi possível ir ao mapa. Tente novamente."
           },
           "event-stop": {
             "description": "cancelar o Gladiador"
@@ -1284,6 +1316,13 @@
                   "&7ver as edições anteriores do &6Gladiador&7."
                 ]
               },
+              "maps": {
+                "name": "&eMapas",
+                "lore": [
+                  "&7Clique com o botão esquerdo para",
+                  "&7conhecer os mapas do &6Gladiador&7."
+                ]
+              },
               "event": {
                 "inactive": {
                   "name": "&cNenhum evento rolando",
@@ -1319,6 +1358,33 @@
                     "&7Clique com o botão direito para assistir"
                   ]
                 }
+              }
+            }
+          },
+          "maps": {
+            "title": "Mapas do Gladiador",
+            "items": {
+              "map": {
+                "name": "&6{map}",
+                "lore": [
+                  "&7Voe pelo mapa como no camarote,",
+                  "&7sem sair dos limites dele.",
+                  "",
+                  "&eClique para visitar!"
+                ],
+                "lore-busy": [
+                  "&7Voe pelo mapa como no camarote,",
+                  "&7sem sair dos limites dele.",
+                  "",
+                  "&cHá um evento acontecendo. Volte",
+                  "&cquando ele acabar."
+                ]
+              },
+              "back": {
+                "name": "&cVoltar",
+                "lore": [
+                  "&7Volta à central do Gladiador."
+                ]
               }
             }
           },
