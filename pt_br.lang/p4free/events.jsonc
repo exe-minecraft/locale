@@ -4,12 +4,12 @@
       // O /glad mapas. Dar nome a um mapa em "names" é o que o põe no menu: o nome é a chave do mundo no P4Free Eventos.
       "gladiator-maps": {
         "names": {
-          "gladiador2": "Rosa dos Ventos",
-          "gladiador3": "Portais do Fim",
-          "gladiador4": "Covil do Dragão",
-          "gladiador5": "Espada Caída",
-          "gladiador6": "Vale dos Cogumelos",
-          "gladiador7": "Zona de Guerra"
+          "gladiador2": "Mapa 1 (Bússola)",
+          "gladiador3": "Mapa 2 (End)",
+          "gladiador4": "Mapa 3 (Dragão)",
+          "gladiador5": "Mapa 4 (Espada)",
+          "gladiador6": "Mapa 5 (Cogumelos)",
+          "gladiador7": "Mapa 6 (Militar)"
         },
         "visiting": [
           "",
