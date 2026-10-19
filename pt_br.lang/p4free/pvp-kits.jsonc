@@ -86,10 +86,10 @@
             },
             "negative-days": "Os dias não podem ser negativos.",
             "error": "Não foi possível liberar a Berserker de booster agora. Tente novamente.",
-            "success": "Você liberou a Berserker de booster para {target_name} por {days} {days_word}.",
-            "success-permanent": "Você liberou a Berserker de booster para {target_name} permanentemente.",
+            "success": "Você liberou a Berserker de booster para {target_name_with_color} &apor {days} {days_word}.",
+            "success-permanent": "Você liberou a Berserker de booster para {target_name_with_color} &apermanentemente.",
             // O mesmo permanente de novo: nada mudou. Com dias, o prazo é trocado e vale o success.
-            "already": "{target_name} já tem a Berserker de booster permanente."
+            "already": "{target_name_with_color} &cjá tem a Berserker de booster permanente."
           },
           "remove": {
             "description": "tira a Berserker de booster do /berserker",
@@ -100,8 +100,8 @@
               }
             },
             "error": "Não foi possível tirar a Berserker de booster agora. Tente novamente.",
-            "success": "Você tirou a Berserker de booster de {target_name}.",
-            "not-found": "{target_name} não tinha a Berserker de booster."
+            "success": "Você tirou a Berserker de booster de {target_name_with_color}&a.",
+            "not-found": "{target_name_with_color} &anão tinha a Berserker de booster."
           }
         },
         "givekit": {
