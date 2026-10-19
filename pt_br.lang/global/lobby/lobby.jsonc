@@ -191,6 +191,9 @@
         "queue": {
           "actionbar": "&c&lFILA! &fSua posição atual &c➟ &f&l{queue_position}º",
           "joined": "&aVocê entrou na fila do {queue_server_name}&a.",
+          "already": "&cVocê já está na fila do {queue_server_name}&c, na posição &f{queue_position}º&c.",
+          "bypass": "&aConectando ao {queue_server_name}&a sem passar pela fila.",
+          "bypass-failed": "&cNão deu para conectar ao {queue_server_name} &cagora. Tente de novo em instantes.",
           "unavailable": "&cNão dá para entrar no {queue_server_name} &cagora ({server_state}&c)."
         },
         "views": {

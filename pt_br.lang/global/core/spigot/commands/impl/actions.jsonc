@@ -4,11 +4,11 @@
       "commands": {
         "restart": {
           "not-restarting-now": "O servidor não está com nenhuma ação de reiniciar!",
-          "already-have-action": "Uma ação já está sendo executada!"
+          "already-have-action": "O servidor já vai reiniciar. Para cancelar, use /restart cancel."
         },
         "stop": {
           "not-stopping-now": "O servidor não está com nenhuma ação de desligamento!",
-          "already-have-action": "Uma ação já está sendo executada!"
+          "already-have-action": "O servidor já vai desligar. Para cancelar, use /stop cancel."
         }
       }
     }
