@@ -81,7 +81,7 @@
           "name": "&7Nome: &f{pet_name}",
           "unnamed": "&7Nome: &8nenhum ainda",
           "species": "&7Espécie: {cosmetic_name} &8({cosmetic_rarity}&8)",
-          "since": "&7Companheiro desde: &f{since_date}",
+          "since": "&7Adquirido em: &f{since_date}",
           "rename-hint": "&7Para dar um nome a ele por &6{rename_price} Cash&7, agache e clique nele com o botão direito."
         },
         "pet-rename": {
