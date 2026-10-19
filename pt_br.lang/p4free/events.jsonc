@@ -856,13 +856,13 @@
               "&6 ► &fO clan &7[{clan_winner}&7] &ffoi o grande vencedor!",
               "",
               "&6• &fTodos os membros do clan receberão a tag &4[Gladiador]",
-              "&6• &e{event_myth} &ffoi o maior matador com &e{event_myth_kills} {event_myth_kills_unit}",
-              "&f  e receberá a tag &5[Mito]",
+              "&6• &e{event_myth} &ffoi o maior matador do clan vencedor",
+              "&f  com &e{event_myth_kills} {event_myth_kills_unit} &fe receberá a tag &5[Mito]",
               "",
               "&4&l&m      &c&l&m      &r &f&lGLADIADOR &c&l&m      &4&l&m      ",
               ""
             ],
-            // A vitória sem nenhum abate na partida: ninguém leva o [Mito].
+            // Quando ninguém do clan vencedor fez abates, ninguém leva o [Mito], porque ele sai só desse clan.
             "finish-summary-no-myth": [
               "",
               "&4&l&m      &c&l&m      &r &f&lGLADIADOR &c&l&m      &4&l&m      ",
@@ -871,7 +871,7 @@
               "&6 ► &fO clan &7[{clan_winner}&7] &ffoi o grande vencedor!",
               "",
               "&6• &fTodos os membros do clan receberão a tag &4[Gladiador]",
-              "&6• &fNinguém fez abates, então ninguém recebe a tag &5[Mito]",
+              "&6• &fNinguém do clan vencedor fez abates, então ninguém recebe a tag &5[Mito]",
               "",
               "&4&l&m      &c&l&m      &r &f&lGLADIADOR &c&l&m      &4&l&m      ",
               ""
