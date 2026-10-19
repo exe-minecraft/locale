@@ -952,6 +952,15 @@
                 "",
                 "&aClique para ver."
               ]
+            },
+            "history": {
+              "name": "&6Seu histórico",
+              "lore": [
+                "&7Seus duelos 1v1 e 2v2, com o",
+                "&7resultado, contra quem e o elo.",
+                "",
+                "&aClique para abrir."
+              ]
             }
           }
         },
