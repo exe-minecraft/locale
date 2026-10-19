@@ -119,6 +119,9 @@
             "lost-sent-to-lobby": [
               "&cO servidor em que você estava caiu, e você foi levado para o lobby."
             ],
+            "lost-sent-to-back-app": [
+              "&cO servidor em que você estava caiu, e você foi levado para o {app_display_name}."
+            ],
             "reconnect": "&cReconecte-se, por favor!",
             "auth-full": [
               "&c&lEXE&r",
