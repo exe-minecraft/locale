@@ -42,7 +42,7 @@
           "no-reason": "Motivo não especificado",
           "success": "Você expulsou o jogador {target_name} com sucesso.",
           "kick-message": [
-            "&c&lREDE EXE",
+            "&c&lEXE&r",
             "",
             "&cVocê foi expulso do nosso servidor.",
             "",
