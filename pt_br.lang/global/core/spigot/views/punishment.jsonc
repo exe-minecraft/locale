@@ -11,9 +11,17 @@
             "punishment-apply": {
               "error": "Não foi possível confirmar a punição. Confira no /checkpunir antes de aplicar de novo.",
               "pending": "Aplicando punição...",
-              "success": "Você puniu o jogador {punishment_target_name_with_color} com sucesso!",
+              "success": "Você puniu o jogador {punishment_target_name_with_color} &acom sucesso!",
               "success-broadcast": [
                 "",
+                " &c(!) {punishment_target_name_with_tag} &cfoi punido por {punishment_author_name_with_tag}",
+                " &c(!) Motivo: {punishment_category_name}",
+                ""
+              ],
+              // A punição silenciosa só chega à staff (Moderador+), com o aviso de que foi silenciosa.
+              "success-broadcast-silent": [
+                "",
+                " &7[Modo Silencioso]",
                 " &c(!) {punishment_target_name_with_tag} &cfoi punido por {punishment_author_name_with_tag}",
                 " &c(!) Motivo: {punishment_category_name}",
                 ""
