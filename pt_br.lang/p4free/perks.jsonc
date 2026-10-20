@@ -199,9 +199,9 @@
           // enquanto forem os mesmos, o menu não convida para uma ação que ele recusa.
           "status": {
             "0": "&eClique para desbloquear.",
-            "1": "&cFalta saldo para desbloquear.",
-            "2": "&eClique para ativar. &7Direito abre os níveis.",
-            "3": "&cSlots cheios. Desative outra antes.",
+            "1": "&cVocê não tem o suficiente para desbloquear.",
+            "2": "&eClique para ativar. &7Use o botão direito para ver os níveis.",
+            "3": "&cSeus slots estão cheios. Desative outra antes.",
             "4": "&aAtivada. &7Clique para desativar."
           },
           // Os números da perk no ícone, como nas armas: o de hoje riscado e o do próximo nível.
@@ -232,8 +232,8 @@
             "0": "&aVocê já tem este nível.",
             "1": "&eClique para comprar.",
             "2": "&cVocê não tem o suficiente.",
-            "3": "&eClique para comprar todos até este nível.",
-            "4": "&cFalta saldo para chegar até aqui."
+            "3": "&eClique para comprar todos os níveis até aqui.",
+            "4": "&cVocê não tem o suficiente para chegar até aqui."
           },
           "items": {
             "0": {
