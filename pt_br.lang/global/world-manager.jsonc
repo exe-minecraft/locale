@@ -55,6 +55,24 @@
               }
             },
             "success": "&aMundo &f{world_name} &acarregado. Use &f/world {world_name} &apara entrar."
+          },
+          "delete": {
+            "description": "apagar um mundo deste servidor, sem volta",
+            "arguments": {
+              "name": {
+                "name": "nome",
+                "description": "Nome do mundo neste servidor"
+              },
+              "confirm": {
+                "name": "confirmar",
+                "description": "Confirma a exclusão"
+              }
+            },
+            "confirm": "&eO mundo &f{world_name} &eserá apagado do disco, sem volta. Quem estiver nele vai para o spawn. Para confirmar, use &f/world apagar {world_name} confirmar &eem até {confirm_seconds} segundos.",
+            "no-confirmation": "&cNada foi apagado. Use &f/world apagar {world_name} &cprimeiro e confirme em seguida.",
+            "main-world": "&cO mundo principal do servidor não pode ser apagado.",
+            "unload-failed": "&cO servidor recusou descarregar o mundo, e nada foi apagado. Confira se ainda há alguém nele e tente novamente.",
+            "success": "&aMundo &f{world_name} &aapagado e retirado do catálogo."
           }
         },
         "border": {
