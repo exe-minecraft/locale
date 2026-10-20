@@ -2,8 +2,7 @@
   "plugins": { "core": {
     // O /perfil (o vídeo do dono, 20/10). O "lore" é o do próprio jogador, o "lore-public" é o que os outros veem no
     // /perfil <jogador>, sem cash nem compras.
-    // O /perfil no padrão dos menus da casa (o dono, 20/10), nos menus core/spigot/views/profile/own e public. O
-    // "profile" de baixo é o do jar de antes e sai depois da janela.
+    // O /perfil no padrão dos menus da casa (o dono, 20/10), nos menus core/spigot/views/profile/own e public.
     "views": { "player-profile": {
       "title": "Seu perfil",
       "title-public": "Perfil de {target_name}",
@@ -121,103 +120,6 @@
       },
       "store-link": "&aClique aqui para abrir a loja.",
       "discord-link": "&aClique aqui para entrar no Discord da rede.",
-      "site-link": "&aLink pronto. &b&nClique para abrir o site&r &8(vale 1 minuto)",
-      "site-link-hover": "&7Abre o site já logado. Não mande este link a ninguém.",
-      "site-link-unavailable": "Não deu para gerar o link do site agora. Tente de novo em instantes."
-    },
-    "profile": {
-      "title": "Seu perfil",
-      "title-public": "Perfil de {target_name}",
-      "unknown": "?",
-      "items": {
-        "profile": {
-          "name": "&aInformações pessoais",
-          "lore": [
-            "&fGrupo: {target_group_name}",
-            "&fNível de rede: &7{level}",
-            "&fCash: &6{cash}",
-            "",
-            "&fCadastrado em: &7{registered}",
-            "&fÚltimo login: &7{last_login}",
-            "&fConquistas: &7{achievements}",
-            "",
-            "&eClique para abrir seu perfil no site."
-          ],
-          "lore-public": [
-            "&fJogador: {target_name_with_color}",
-            "&fGrupo: {target_group_name}",
-            "&fNível de rede: &7{level}",
-            "",
-            "&fCadastrado em: &7{registered}",
-            "&fÚltimo login: &7{last_login}",
-            "&fConquistas: &7{achievements}"
-          ]
-        },
-        "discord": {
-          "name": "&aDiscord",
-          "linked": [
-            "&7Sua conta está vinculada ao",
-            "&7Discord &f{discord_name}&7.",
-            "",
-            "&7Use &f/discord &7para entrar na comunidade."
-          ],
-          "unlinked": [
-            "&7Você ainda não vinculou sua conta.",
-            "",
-            "&7Use &f/discord &7para vincular e entrar",
-            "&7na comunidade."
-          ],
-          "linked-public": [
-            "&7Conta vinculada: &f{discord_name}"
-          ],
-          "unlinked-public": [
-            "&7Nenhuma conta vinculada."
-          ]
-        },
-        "purchases": {
-          "name": "&aHistórico da loja",
-          "lore": [
-            "&7Compras feitas na nossa loja.",
-            "",
-            "&fTotal de compras: &7{purchases}",
-            "",
-            "&eClique para ver os detalhes."
-          ]
-        },
-        "store": {
-          "name": "&bAjude a manter o servidor!",
-          "lore": [
-            "&7Comprando &eVIP &7ou &eCash &7você ajuda",
-            "&7a manter o servidor online por",
-            "&7muito mais tempo!",
-            "",
-            "&fAcesse já: &bloja.rede-exe.com",
-            "",
-            "&eClique para receber o link no chat."
-          ]
-        },
-        "ignores": {
-          "name": "&cJogadores ignorados",
-          "lore": [
-            "&7Veja os jogadores que você",
-            "&7ignorou no servidor."
-          ]
-        },
-        "preferences": {
-          "name": "&aPreferências",
-          "lore": [
-            "&7Clique para ver suas preferências."
-          ]
-        },
-        "achievements": {
-          "name": "&aConquistas",
-          "lore": [
-            "&7Clique para ver as conquistas que",
-            "&7você já desbloqueou e as que faltam."
-          ]
-        }
-      },
-      "store-link": "&aClique aqui para abrir a loja.",
       "site-link": "&aLink pronto. &b&nClique para abrir o site&r &8(vale 1 minuto)",
       "site-link-hover": "&7Abre o site já logado. Não mande este link a ninguém.",
       "site-link-unavailable": "Não deu para gerar o link do site agora. Tente de novo em instantes."

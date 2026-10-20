@@ -47,42 +47,6 @@
               "name": "jogador",
               "description": "Jogador cujo perfil você deseja ver"
             }
-          },
-          "message": {
-            "identity": [
-              "",
-              " &eSeu perfil:",
-              "",
-              "  &fJogador: &7{profile_name}",
-              "  &fUUID: &7{profile_uuid}",
-              "  &fConta: &7{profile_type}",
-              "  &fGrupos: &7{profile_groups}",
-              "  &fCadastro: &7{profile_registered}"
-            ],
-            "balance": [
-              "",
-              "  &fCash: &6{profile_cash}"
-            ],
-            "discord": [
-              "",
-              "  &fDiscord: &7{discord_name} &8(@{discord_username})",
-              "  &fVinculado desde: &7{discord_since}",
-              ""
-            ],
-            "discord-unlinked": [
-              "",
-              "  &fDiscord: &7não vinculado &8(use /discord)",
-              ""
-            ],
-            "link": "  &aLink pronto. &b&nClique para abrir o site&r &8(vale 1 minuto)",
-            "link-hover": "&7Abre o site já logado. Não mande este link a ninguém.",
-            "link-unavailable": "Não deu para gerar o link do site agora. Tente de novo em instantes.",
-            "site": "  &fSite: &b&ngerar link de acesso",
-            "site-hover": "&7Gera um link de entrada no site, que vale por 1 minuto.",
-            "type-original": "&aOriginal",
-            "type-cracked": "&cPirata",
-            "no-groups": "nenhum",
-            "unavailable": "indisponível"
           }
         },
         "enchantment": {
