@@ -1414,6 +1414,7 @@
                     "&7Participantes vivos: &f{event_players}",
                     "&7Clans vivos: &f{event_clans}",
                     "&7Rushes ativos: &f{event_rushes}",
+                    "{event_now}",
                     "",
                     "&7Clique com o botão direito para assistir"
                   ]
