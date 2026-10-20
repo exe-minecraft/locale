@@ -325,6 +325,8 @@
         ""
       ],
       "hits-ranking-entry": "&6 {position}º &7[{clan}&7] &f{player} &7com &b{hits} &7{hits_unit}",
+      // Só a quem deu hits e ficou fora dos 3, logo depois deles.
+      "hits-ranking-own": "&7 Você ficou em &f{position}º &7com &b{hits} &7{hits_unit}.",
       "hits-ranking-footer": [""],
       // Logo depois do vencedor do FastGlad, como o exe-fastgladiator: os 3 que mais abateram na partida.
       "kills-ranking": [
@@ -333,6 +335,8 @@
         ""
       ],
       "kills-ranking-entry": "&6 {position}º &7[{clan}&7] &f{player} &7com &c{kills} &7{kills_unit}",
+      // Só a quem abateu e ficou fora dos 3, logo depois deles.
+      "kills-ranking-own": "&7 Você ficou em &f{position}º &7com &c{kills} &7{kills_unit}.",
       "kills-ranking-footer": [""],
       "cannot-join": "&cNão foi possível entrar no {event}. Confira o seu clan e o limite de membros do evento.",
       "combat-leave": "&cVocê não pode sair do {event} em combate!",
@@ -367,6 +371,10 @@
       "views": {
         "primary": {
           "title": "{event}",
+          // O {event_now} do item do evento rodando: os dois clãs do duelo do ClanFight. Sem duelo, a linha some.
+          "now": {
+            "fighting": ["&7Lutando agora: &7[{first}&7] &fx &7[{second}&7]"]
+          },
           "items": {
             "ranking": {
               "name": "&eRanking",

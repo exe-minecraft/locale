@@ -1349,6 +1349,11 @@
         "gladiator": {
           "primary": {
             "title": "Gladiador",
+            // O {event_now} do item do evento rodando: os rushes de pé, um por linha. Sem rush, as linhas somem.
+            "now": {
+              "rushes": ["&7Rushes acontecendo:"],
+              "rush": "&7 • [{first}&7] &fx &7[{second}&7]"
+            },
             "items": {
               "ranking": {
                 "name": "&eRanking",
