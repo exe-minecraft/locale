@@ -197,7 +197,8 @@
             "season": "&8[VIP] &7{sender_name} deu o {vip_tag} &7para {target_name} até o fim da temporada ({ends_at})."
           }
         },
-        // O /gg, o AQUI do anúncio de VIP novo. A linha vai à rede toda, e cada um comemora uma vez por ativação.
+        // O /gg, o AQUI do anúncio de VIP novo. A linha é uma fala de quem comemora, no chat de onde ele está (o /g no
+        // P4Free, o chat do lobby no lobby), com as regras de lá. Cada um comemora uma vez por ativação.
         "cheer-vip": {
           "description": "dar os parabéns a quem acabou de ganhar VIP",
           "arguments": {
@@ -214,12 +215,13 @@
             "gg!",
             "aeee!",
             "boa demais!",
-            "parabéns!",
+            "que inveja!",
             "bem-vindo ao clube!",
             "farmou aura, 67!",
             "chegou chegando!"
           ],
-          "message": "&a▸ {sender_name_with_color} &7para {target_name_with_color}&7: &a{phrase}"
+          // A fala, sem cor: o chat de cada lugar põe o formato dele.
+          "message": "{phrase} Parabéns pelo {vip_name}, {target_name}!"
         }
       }
     }
