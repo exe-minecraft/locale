@@ -14,7 +14,7 @@
         "attack": {
           "name": "Ataque",
           "menu-lore": [
-            "&7Em qualquer golpe, sem precisar pular,",
+            "&7Em golpes dados no chão, sem pular,",
             "&7pode multiplicar o dano.",
             "",
             "&7Nível: &f{level}&7/&f{max_level}",
