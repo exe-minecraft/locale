@@ -1,0 +1,43 @@
+{
+  "plugins": { "core": {
+    // O /cash: o saldo em cima e o extrato embaixo, do mais recente (o dono, 20/10).
+    "views": { "cash": {
+      "title": "Cash de {target_name}",
+      "unknown": "?",
+      // Quem fez a mudança. Só o Gerente vê, e só quando não foi o próprio jogador.
+      "actor": "&7Feito por &f{actor}",
+      // O motivo de cada linha, pela origem gravada no extrato. O {detail} vem como foi gravado.
+      "reasons": {
+        "none": "Sem motivo registrado",
+        "staff": { "add": "Adicionado pela equipe", "remove": "Removido pela equipe", "set": "Saldo definido pela equipe" },
+        "gg": "Recompensa do gg",
+        "shop": "Compra na loja do site (pedido #{detail})",
+        "cosmetic": "Cosmético no lobby ({detail})",
+        "cosmetic-refund": "Estorno de cosmético ({detail})",
+        "cosmetic-rename": "Nome de mascote ({detail})",
+        "currency-add": "Recebido no P4Free",
+        "currency-remove": "Gasto no P4Free",
+        "currency-set": "Saldo definido no P4Free",
+        "currency-check": "Cheque de Cash",
+        "currency-debit-reversal": "Estorno de compra no P4Free",
+        "currency-debit": {
+          "shop": "Loja do P4Free ({detail})",
+          "perk": "Perk no P4Free ({detail})",
+          "tag-slot": "Espaço de tag nº {detail}",
+          "other": "Compra no P4Free"
+        }
+      },
+      "items": {
+        "balance": { "name": "&6Cash de {target_name}", "lore": ["", "&7Saldo atual: &6{balance} Cash", "", "&7Compre Cash em &frede-exe.com/loja&7."] },
+        "credit": { "name": "&a+{amount} Cash" },
+        "debit": { "name": "&c-{amount} Cash" },
+        // O saldo definido pela staff não guarda quanto mudou, só o saldo que ficou.
+        "set": { "name": "&eSaldo definido" },
+        "entry": { "lore": ["", "&7Motivo: &f{reason}", "&7Data: &f{date}", "&7Saldo depois: &6{balance} Cash", "{actor}"] },
+        "previous": { "name": "&eMais recentes" },
+        "next": { "name": "&eMais antigas" },
+        "close": { "name": "&cFechar", "lore": ["&7Fecha o extrato de Cash."] }
+      }
+    } }
+  } }
+}
