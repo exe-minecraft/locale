@@ -241,16 +241,16 @@
         ""
       ],
       "round-result": {
-        "won": "&7 Vencedor: &7[{winner}&7] contra &7[{loser}&7].",
-        "none": "&7 Nenhum clan ficou de pé nesta batalha."
+        "won": "&e Vencedor: &7[{winner}&7] &fcontra &7[{loser}&7]&f.",
+        "none": "&e Nenhum clan ficou de pé nesta batalha."
       },
       "round-hits": [
-        "&7 Mais hits na batalha: &7[{clan}&7] &f{player} &7({hits} {hits_unit})"
+        "&e Mais hits na batalha: &7[{clan}&7] &f{player} &f(&a{hits} {hits_unit}&f)"
       ],
       "round-inventories": {
-        "line": "&7 Inventários: {players}",
+        "line": "&e Inventários: {players}",
         "player": "&f{player}",
-        "separator": "&7, ",
+        "separator": "&f, ",
         "hover": "&eClique para ver o inventário de {player}."
       },
       // A borda do FastGlad, como a do Gladiador.
