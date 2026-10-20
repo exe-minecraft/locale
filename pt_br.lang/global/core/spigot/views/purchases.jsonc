@@ -5,13 +5,15 @@
       "title": "Minhas compras",
       "status": { "pending": "&eAguardando pagamento", "paid": "&aPago", "cancelled": "&cCancelado", "expired": "&cExpirado", "refunded": "&6Reembolsado" },
       "product": "&7{quantity}x &f{product}",
-      // O funil do /compras, no desenho do histórico de duelos. "Presentes" são as que o jogador comprou para outro.
-      "filters": { "all": "Todas", "self": "Para você", "gifts": "Presentes" },
+      // O funil do /compras, no desenho do histórico de duelos. "Todas" junta o que ele comprou e o que recebeu de presente.
+      "filters": { "all": "Todas", "self": "Para você", "gifts": "Presentes dados", "received": "Presentes recebidos" },
       "filter": { "selected": "&f ▶ {filter}", "unselected": "&7 ▶ {filter}" },
       "items": {
         "order": { "name": "&bPedido #{order_id}", "lore": ["", "&7Situação: {status}", "&7Data: &f{date}", "&7Total: &aR$ {total}", "&7Destinatário: &f{recipient}", "", "{products}", "", "&7Consulte os detalhes em Minhas compras", "&7no site rede-exe.com."] },
         "previous": { "name": "&eCompras anteriores" },
         "next": { "name": "&eMais compras" },
+        // O presente que outro jogador deu: quem pagou, sem os valores, que são dele.
+        "received": { "name": "&dPresente de {buyer}", "lore": ["", "&7Situação: {status}", "&7Data: &f{date}", "", "{products}"] },
         "filter": { "name": "&bEscolha quais compras ver", "lore": ["", "{filters}", "", "&bClique para trocar."] },
         "close": { "name": "&cFechar", "lore": ["&7Fecha o histórico de compras."] }
       }
