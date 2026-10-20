@@ -110,17 +110,17 @@
         },
         "other": {
           "restarting": "&cO servidor está {action_name_gerund}. Não dá para começar duelos agora.",
-          "offline": "&c{player} não está neste servidor.",
-          "dead": "&c{player} está morto.",
-          "in-combat": "&c{player} está em combate.",
-          "vanished": "&c{player} precisa desativar o /v para jogar duelos.",
-          "busy-queue-solo": "&c{player} está na fila 1v1.",
-          "busy-queue-duo": "&c{player} está na fila 2v2.",
-          "busy-match": "&c{player} está num duelo.",
-          "busy-cabin": "&c{player} está no camarote.",
-          "loading": "&cOs dados de duelo de {player} ainda estão carregando.",
-          "stash-failed": "&cNão deu para guardar os itens de {player} agora. Nada foi tirado de ninguém.",
-          "not-in-party": "&c{player} não está numa party."
+          "offline": "&c{player}&c não está neste servidor.",
+          "dead": "&c{player}&c está morto.",
+          "in-combat": "&c{player}&c está em combate.",
+          "vanished": "&c{player}&c precisa desativar o /v para jogar duelos.",
+          "busy-queue-solo": "&c{player}&c está na fila 1v1.",
+          "busy-queue-duo": "&c{player}&c está na fila 2v2.",
+          "busy-match": "&c{player}&c está num duelo.",
+          "busy-cabin": "&c{player}&c está no camarote.",
+          "loading": "&cOs dados de duelo de {player}&c ainda estão carregando.",
+          "stash-failed": "&cNão deu para guardar os itens de {player}&c agora. Nada foi tirado de ninguém.",
+          "not-in-party": "&c{player}&c não está numa party."
         }
       },
       "titles": {
@@ -166,14 +166,14 @@
         }
       },
       "queue": {
-        "opened": "&e{player} abriu as filas do x1.",
-        "closed": "&e{player} fechou as filas do x1.",
+        "opened": "&e{player}&e abriu as filas do x1.",
+        "closed": "&e{player}&e fechou as filas do x1.",
         "already-open": "&cAs filas do x1 já estão abertas.",
         "already-closed": "&cAs filas do x1 já estão fechadas.",
         "joined": "&aVocê entrou na fila de &f{mode}&a.",
         "already": "&cVocê já está nessa fila.",
         "left": "&7Você saiu da fila.",
-        "partner-left": "&c{player} saiu da fila, e a dupla saiu junto.",
+        "partner-left": "&c{player}&c saiu da fila, e a dupla saiu junto.",
         "dropped": "&cVocê saiu da fila porque a partida encontrada não pôde começar.",
         "found": "&aPartida encontrada! Preparando a arena.",
         "actionbar": "&7Fila: &f{mode} &8/ &f{waited} &8/ &7procurando &f±{radius} de elo",
@@ -186,12 +186,12 @@
           "&6{player} &7te desafiou para um x1 casual.",
           "{accept} {decline} &8(expira em {time})"
         ],
-        "already-sent": "&cVocê já tem um desafio pendente para {player}.",
-        "none": "&c{player} não te desafiou, ou o desafio expirou.",
-        "declined": "&7Você recusou o desafio de {player}.",
-        "declined-by": "&c{player} recusou o seu desafio.",
-        "expired-sender": "&7O seu desafio para {player} expirou.",
-        "expired-target": "&7O desafio de {player} expirou."
+        "already-sent": "&cVocê já tem um desafio pendente para {player}&c.",
+        "none": "&c{player}&c não te desafiou, ou o desafio expirou.",
+        "declined": "&7Você recusou o desafio de {player}&7.",
+        "declined-by": "&c{player}&c recusou o seu desafio.",
+        "expired-sender": "&7O seu desafio para {player}&7 expirou.",
+        "expired-target": "&7O desafio de {player}&7 expirou."
       },
       "party": {
         "invite-sent": "&aConvite enviado a &f{player} &8(expira em {time})&a.",
@@ -199,38 +199,38 @@
           "&6{player} &7te convidou para a party.",
           "{accept} {decline} &8(expira em {time})"
         ],
-        "invite-declined": "&7Você recusou o convite de {player}.",
-        "invite-declined-by": "&c{player} recusou o seu convite.",
-        "invite-expired-sender": "&7O convite para {player} expirou.",
-        "invite-expired-target": "&7O convite de {player} expirou.",
-        "joined": "&a{player} entrou na party.",
+        "invite-declined": "&7Você recusou o convite de {player}&7.",
+        "invite-declined-by": "&c{player}&c recusou o seu convite.",
+        "invite-expired-sender": "&7O convite para {player}&7 expirou.",
+        "invite-expired-target": "&7O convite de {player}&7 expirou.",
+        "joined": "&a{player}&a entrou na party.",
         "left": "&7Você saiu da party.",
-        "member-left": "&7{player} saiu da party.",
-        "member-quit": "&7{player} saiu do servidor e deixou a party.",
-        "kicked": "&c{player} tirou você da party.",
-        "member-kicked": "&7{player} saiu da party por ordem do líder.",
+        "member-left": "&7{player}&7 saiu da party.",
+        "member-quit": "&7{player}&7 saiu do servidor e deixou a party.",
+        "kicked": "&c{player}&c tirou você da party.",
+        "member-kicked": "&7{player}&7 saiu da party por ordem do líder.",
         "promoted": "&6{player} &7agora é o líder da party.",
         "new-leader": "&6{player} &7assumiu a liderança da party.",
-        "disbanded": "&c{player} desfez a party.",
-        "dissolved": "&7{player} saiu. A party acabou porque sobrou só você.",
+        "disbanded": "&c{player}&c desfez a party.",
+        "dissolved": "&7{player}&7 saiu. A party acabou porque sobrou só você.",
         "eligibility-dissolved": "&7A party acabou porque nenhum membro tem um VIP com limite para liderar o grupo.",
         // As respostas da PartyService (PartyService.Result).
         "results": {
           "self": "&cVocê não pode fazer isso consigo mesmo.",
           "not-leader": "&cSó o líder da party pode fazer isso.",
           "not-in-party": "&cVocê não está numa party.",
-          "target-in-party": "&c{player} já está numa party.",
+          "target-in-party": "&c{player}&c já está numa party.",
           "already-in-party": "&cVocê já está numa party. Saia dela antes.",
-          "already-invited": "&cVocê já convidou {player}, e o convite ainda vale.",
-          "no-invite": "&c{player} não te convidou, ou o convite expirou.",
-          "not-member": "&c{player} não está na sua party.",
+          "already-invited": "&cVocê já convidou {player}&c, e o convite ainda vale.",
+          "no-invite": "&c{player}&c não te convidou, ou o convite expirou.",
+          "not-member": "&c{player}&c não está na sua party.",
           "full": "&cA party já está no limite de jogadores do VIP do líder.",
           "vip-required": "&cSó VIPs podem criar e liderar parties. Samurai permite até 8 membros e Imperial até 16, incluindo o líder.",
-          "target-vip-required": "&c{player} precisa ser VIP para liderar a party.",
-          "target-limit": "&cO limite do VIP de {player} não comporta todos os membros da party.",
+          "target-vip-required": "&c{player}&c precisa ser VIP para liderar a party.",
+          "target-limit": "&cO limite do VIP de {player}&c não comporta todos os membros da party.",
           // A permissão de quem lidera, ou de quem receberia a liderança, ainda carregando.
           "loading": "&cAinda estamos carregando suas vantagens. Tente de novo em instantes.",
-          "target-loading": "&cAinda estamos carregando as vantagens de {player}. Tente de novo em instantes."
+          "target-loading": "&cAinda estamos carregando as vantagens de {player}&c. Tente de novo em instantes."
         },
         "challenge": {
           "sent": "&aDesafio enviado à party de &f{player} &8(expira em {time})&a.",
@@ -238,19 +238,19 @@
             "&7A party de &6{player} &7({their_size}) desafiou a sua ({your_size}) para uma luta de &f{yours} contra {theirs}&7.",
             "{accept} {decline} &8(expira em {time})"
           ],
-          "already-sent": "&cVocê já desafiou a party de {player}.",
-          "none": "&cA party de {player} não desafiou a sua, ou o desafio expirou.",
-          "declined": "&7Você recusou o desafio da party de {player}.",
-          "declined-by": "&c{player} recusou o desafio da sua party.",
-          "expired-sender": "&7O desafio para a party de {player} expirou.",
-          "expired-target": "&7O desafio da party de {player} expirou."
+          "already-sent": "&cVocê já desafiou a party de {player}&c.",
+          "none": "&cA party de {player}&c não desafiou a sua, ou o desafio expirou.",
+          "declined": "&7Você recusou o desafio da party de {player}&7.",
+          "declined-by": "&c{player}&c recusou o desafio da sua party.",
+          "expired-sender": "&7O desafio para a party de {player}&7 expirou.",
+          "expired-target": "&7O desafio da party de {player}&7 expirou."
         }
       },
       "cabin": {
         "entered": "&aVocê está no camarote. Para sair, use &f/x1 camarote sair&a.",
         "left": "&7Você saiu do camarote.",
         "not-watching": "&cVocê não está no camarote.",
-        "not-fighting": "&c{player} não está lutando agora."
+        "not-fighting": "&c{player}&c não está lutando agora."
       },
       // O CxC, duelo de clãs (spec docs/superpowers/specs/2026-10-10-p4free-cxc-design.md no exe).
       "cxc": {
@@ -293,7 +293,7 @@
             "&eO convite expira em {time}.",
             ""
           ],
-          "declined": "&7{player} recusou o desafio do clã {tag}&7.",
+          "declined": "&7{player}&7 recusou o desafio do clã {tag}&7.",
           "declined-by": "&cO clã {tag} &crecusou o desafio do seu clã.",
           "expired-sender": "&7O convite de CxC para o clã {tag} &7expirou.",
           "expired-target": "&7O convite de CxC do clã {tag} &7expirou."
