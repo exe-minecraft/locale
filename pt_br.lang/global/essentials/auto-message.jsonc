@@ -59,6 +59,51 @@
             "&9&l DISCORD: &fNovidades, sorteios e suporte ficam no nosso",
             " &fDiscord. Entre clicando &a&lAQUI&f.",
             ""
+          ],
+          // Os líderes dos rankings, para provocar quem está atrás. O nome e o número vêm do %tops_<ranking>;<campo>[;weekly]%
+          // do plugin tops; a entrada do automessage/config.yml leva o "requires" com o nome, e a mensagem só sai quando o
+          // ranking tem alguém (sem isso sairia um nome em branco). Número só em rótulo, porque não passa pelo Plural.
+          "top-elo-1v1": [
+            "",
+            "&b&l RANKING: &f%tops_duels_elo_1v1;name-with-color%&f está no topo do elo",
+            " &fdo &ax1&f. Elo: &a%tops_duels_elo_1v1;amount-formatted-number%&f. Acha que consegue tomar",
+            " &fo lugar? Desafie no &a/x1&f e acompanhe no &a/elo&f.",
+            ""
+          ],
+          "top-elo-2v2": [
+            "",
+            "&b&l RANKING: &f%tops_duels_elo_2v2;name-with-color%&f está no topo do elo",
+            " &fdo &a2v2&f. Elo: &a%tops_duels_elo_2v2;amount-formatted-number%&f. Chama um parceiro",
+            " &fe vá buscar esse posto no &a/x1&f.",
+            ""
+          ],
+          "top-duels-wins": [
+            "",
+            "&b&l RANKING: &f%tops_duels_wins;name-with-color%&f é quem mais venceu",
+            " &fduelos na temporada. Vitórias: &a%tops_duels_wins;amount-formatted-number%&f.",
+            " &fAlguém aí vai deixar barato? &a/x1&f",
+            ""
+          ],
+          "top-gladiator-kills-weekly": [
+            "",
+            "&b&l RANKING: &f%tops_gladiator_player_kills;name-with-color;weekly%&f é quem mais",
+            " &fmatou no Gladiador esta semana. Abates: &a%tops_gladiator_player_kills;amount-formatted-number;weekly%&f.",
+            " &fA semana só vira na segunda, ainda dá tempo de passar.",
+            ""
+          ],
+          "top-gladiator-rush-wins": [
+            "",
+            "&b&l RANKING: &fO clan &7[&f%tops_gladiator_rush_wins;name%&7]&f é o que mais venceu",
+            " &frushes no Gladiador na temporada. Rushes vencidos: &a%tops_gladiator_rush_wins;amount-formatted-number%&f.",
+            " &fQuem vai ser o clan que para eles?",
+            ""
+          ],
+          "top-gladiator-clan-wins": [
+            "",
+            "&b&l RANKING: &fO clan &7[&f%tops_gladiator_clan_wins;name%&7]&f é o que mais",
+            " &fvenceu o Gladiador na temporada. Vitórias: &a%tops_gladiator_clan_wins;amount-formatted-number%&f.",
+            " &fO trono está em jogo a cada evento.",
+            ""
           ]
         }
       }
