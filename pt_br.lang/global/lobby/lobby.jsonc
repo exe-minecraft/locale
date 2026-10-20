@@ -194,6 +194,14 @@
             " &fAdquira em &arede-exe.com&f.",
             ""
           ],
+          // O upgrade do Samurai para o Imperial: o NPC fica no spawn de cada lobby e o /upgrade abre o mesmo menu.
+          "vip-upgrade": [
+            "",
+            "&4&l UPGRADE: &fJá tem o &aSamurai&f? Evolua para o &4Imperial&f pagando",
+            " &fem Cash só os dias que faltam do seu VIP. Fale com o NPC do",
+            " &fupgrade no spawn ou use &a/upgrade&f para ver o seu preço.",
+            ""
+          ],
           "lobby-perks": [
             "",
             "&6&l VIP: &fCom VIP você fala no chat do lobby, voa com &a/fly&f,",
