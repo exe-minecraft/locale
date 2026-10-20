@@ -54,6 +54,11 @@
         "online": "&aClique para entrar"
       },
       "commands": {
+        // O /togglechat da staff (Gerente+), o mute do chat de todos os lobbies, como o do P4Free. Vale com o lobby do 3d6acc80f.
+        "toggle-chat": {
+          "locked": "&cO chat do lobby foi mutado.",
+          "unlocked": "&aO chat do lobby foi desmutado."
+        },
         "fly": {
           // O success fica para o jar anterior, até o lobby novo subir.
           "success": "Seu modo de voo foi alterado com sucesso!",
@@ -219,6 +224,7 @@
         "chat": {
           "in-delay": "&cVocê precisa esperar &f{remaining_time}&c para falar novamente.",
           "preference-off": "&cVocê não pode enviar mensagens nesse chat pois desabilitou as mensagens.",
+          "chat-locked": "&cO chat do lobby está mutado no momento.",
           "need-highest-group": "&cVocê precisa ter o grupo &f{required_group_display_tag}&c ou superior para enviar mensagens no chat!",
           "message": "{message_owner_name_with_tag}&7: {message_content}",
           // A mensagem de Moderador para cima, em destaque com uma linha em branco antes e depois (LobbyEchoListener).
