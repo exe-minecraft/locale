@@ -763,11 +763,18 @@
           // o exe-gladiador fazia no servidor do evento.
           "waiting-bar": "&4[{event}] &aComeçando em {time}... &e/{command} entrar",
           "gladiator": {
-            // A tag de um clan nos abates, como o original pintava para cada um que lê: verde para o próprio clan, vermelha
-            // para os outros.
+            // A tag de um clan nos abates e nas mortes, pintada para cada um que lê na cor em que ele vê na name-tag o nick
+            // de quem luta por esse clan. O nick vem logo depois e fica na mesma cor.
             "clan-tag": {
-              // Nos abates, como no exe-gladiador: verde para o clã de quem lê e vermelho para os outros, com a tag na cor
-              // do clã dentro (o &7 só pinta a tag sem cor). Nas outras mensagens os colchetes são &7.
+              // O próprio clan em verde, o caçado em amarelo, os outros em vermelho. No /glad verrush e no duelo do ClanFight,
+              // quem não é de nenhum dos dois clans vê um em azul e o outro em rosa. A tag vai na cor do clan dentro (o &7 só
+              // pinta a tag sem cor). Nas outras mensagens os colchetes são &7.
+              "green": "&a[&7{tag}&a]",
+              "yellow": "&e[&7{tag}&e]",
+              "red": "&c[&7{tag}&c]",
+              "blue": "&9[&7{tag}&9]",
+              "light_purple": "&d[&7{tag}&d]",
+              // Do events-server de antes do 72f31c152. Saem depois de o novo estar no ar.
               "own": "&a[&7{tag}&a]",
               "other": "&c[&7{tag}&c]"
             },
