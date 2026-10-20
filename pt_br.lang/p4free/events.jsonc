@@ -163,12 +163,14 @@
           "clans": "&f Clans restantes: &6{clans}",
           "kills": "&f Abates no evento: &c{kills}",
           "battle": "&f Batalha em andamento:",
-          "versus": " &7{first} &fvs &7{second}",
+          // O duelo como o messageVersus do exe-clanfight: a tag de cada clã com as cores dele e os vivos.
+          "versus": " {first} &7{first_alive} &cvs &f{second} &7{second_alive}",
           // Sem duelo, como no exe-clanfight: entre dois duelos (a pausa e o sorteio) e antes do primeiro.
           "drawing": " &eSorteando...",
           "waiting": " &bEsperando...",
-          // A chance de vitória de cada lado, na ordem do "vs"; quem tem 50% ou mais sai no ahead.
-          "odds": "&f Chance: {first} &8x {second}",
+          // A chance de vitória de cada lado, na ordem do "vs", como o winChance do exe-clanfight; quem tem 50% ou mais
+          // sai no ahead.
+          "odds": " {first} {first_chance} &7- {second} {second_chance}",
           "ahead": "&a{chance}%",
           "behind": "&c{chance}%"
         },
