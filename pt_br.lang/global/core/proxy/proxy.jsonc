@@ -148,7 +148,8 @@
               "&cMotivo: {punishment_reason}",
               "",
               "&cSilenciado injustamente?",
-              "&cRevise sua punição em &brede-exe.com/p/{punishment_id}",
+              "&cRevise sua punição no Discord, em &bdiscord.rede-exe.com&c.",
+              "&cAbra um ticket com o código &f{punishment_id}&c.",
               ""
             ],
             "mute-message-with-expiration": [
@@ -160,7 +161,8 @@
               "&cExpira em: {punishment_expiration}",
               "",
               "&cSilenciado injustamente?",
-              "&cRevise sua punição em &brede-exe.com/p/{punishment_id}",
+              "&cRevise sua punição no Discord, em &bdiscord.rede-exe.com&c.",
+              "&cAbra um ticket com o código &f{punishment_id}&c.",
               ""
             ],
             "ban-message-permanent": [
@@ -172,7 +174,8 @@
               "&cMotivo: {punishment_reason}",
               "",
               "&cBanido injustamente?",
-              "&cRevise sua punição em &brede-exe.com/p/{punishment_id}"
+              "&cRevise sua punição no Discord, em &bdiscord.rede-exe.com&c.",
+              "&cAbra um ticket com o código &f{punishment_id}&c."
             ],
             "ban-message-with-expiration": [
               "&c&lEXE&r",
@@ -184,7 +187,8 @@
               "&cExpira em: {punishment_expiration}",
               "",
               "&cBanido injustamente?",
-              "&cRevise sua punição em &brede-exe.com/p/{punishment_id}"
+              "&cRevise sua punição no Discord, em &bdiscord.rede-exe.com&c.",
+              "&cAbra um ticket com o código &f{punishment_id}&c."
             ]
           },
           "teleport": {
