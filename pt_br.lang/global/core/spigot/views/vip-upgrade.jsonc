@@ -43,7 +43,7 @@
           "name": "&eLoja",
           "lore": ["", "&7Ainda não tem o &a[Samurai]&7?", "&7Compre o VIP &4[Imperial] &7direto", "&7na loja, &frede-exe.com/loja&7."]
         },
-        "close": { "name": "&cFechar" },
+        "close": { "name": "&cFechar", "lore": ["&7Fecha o menu de upgrade."] },
         "confirm": {
           "name": "&aConfirmar o upgrade",
           "lore": ["", "&7Você vira {to_tag} &7até o fim", "&7do seu VIP atual.", "", "&7Preço: &6{price} Cash"]
@@ -52,6 +52,10 @@
       // Uma linha por vantagem da loja que muda do Samurai para o Imperial.
       "benefit": "&8▸ &7{label}: &f{from} &8→ &a{to}",
       "benefit-new": "&8▸ &7{label}: &a{to}",
+      // A vantagem de texto longo (a party) em várias linhas, para a lore não sair da tela.
+      "benefit-label": "&8▸ &7{label}:",
+      "benefit-from": "&8   &f{from}",
+      "benefit-to": "&8   → &a{to}",
       "status": {
         "available": "&aClique para evoluir!",
         "insufficient": "&cVocê não tem Cash suficiente.",

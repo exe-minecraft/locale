@@ -135,8 +135,8 @@
         "streak": "&6{player} &7chegou a &e{streak} vitórias seguidas &7na ranqueada.",
         "streak-broken": "&7A sequência de &e{streak} vitórias &7de &6{player} &7acabou.",
         // Quem mudou de elo na ranqueada 1v1, para o servidor inteiro, como no exe-p4free-core.
-        "elo-promoted": "&a&l▸ &r{player} &asubiu para o elo {tier_tag} {tier_name}&a.",
-        "elo-demoted": "&c&l▸ &r{player} &ccaiu para o elo {tier_tag} {tier_name}&c.",
+        "elo-promoted": "&a&l▸ &r{player} &asubiu para o ELO {tier_name}&a.",
+        "elo-demoted": "&c&l▸ &r{player} &ccaiu para o ELO {tier_name}&c.",
         // O hover dos dois de cima. O clique roda o /elo historico de quem mudou de elo.
         "elo-hover": [
           "&6{player}",

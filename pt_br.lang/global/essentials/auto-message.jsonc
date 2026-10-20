@@ -13,6 +13,14 @@
             " &fConheça as vantagens clicando &a&lAQUI&f.",
             ""
           ],
+          // O upgrade do Samurai para o Imperial: o AQUI roda o /upgrade, que abre o menu com o preço de agora.
+          "vip-upgrade": [
+            "",
+            "&4&l UPGRADE: &fJá tem o &aSamurai&f? Evolua para o &4Imperial&f pagando",
+            " &fem Cash só os dias que faltam do seu VIP, e o preço desce",
+            " &fconforme o tempo passa. Veja o seu clicando &a&lAQUI&f.",
+            ""
+          ],
           "souls": [
             "",
             "&e&l DICA: &fAcumule &a5 abates&f, sem morrer, no Gladiador ou no",
