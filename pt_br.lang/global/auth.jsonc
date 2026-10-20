@@ -172,9 +172,8 @@
               " &c&lEXE &8➟ &cConta banida",
               "",
               " &fSua conta está banida, mas você pode comprar o &cUnban&f na loja.",
-              " &f1. Entre em &brede-exe.com/entrar&f e digite o seu nick.",
-              " &f2. Digite aqui &e/confirmar <código>&f com o código que o site mostrar.",
-              " &f3. Compre o &cUnban&f em &brede-exe.com/loja&f.",
+              " &f1. Digite aqui &e/confirmar <código>&f com o código que o site mostrou.",
+              " &f2. Compre o &cUnban&f em &brede-exe.com/loja&f.",
               "",
               " &7Você tem 5 minutos. Depois do pagamento, é só entrar de novo.",
               ""
