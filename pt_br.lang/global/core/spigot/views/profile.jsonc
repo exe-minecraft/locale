@@ -69,6 +69,15 @@
             "&aClique para ver as suas conquistas."
           ]
         },
+        "achievements-public": {
+          "name": "&bConquistas",
+          "lore": [
+            "&7Cada conquista dá XP e sobe",
+            "&7o nível de rede.",
+            "",
+            "&aClique para ver as de {target_name}."
+          ]
+        },
         "purchases": {
           "name": "&aSuas compras",
           "lore": [

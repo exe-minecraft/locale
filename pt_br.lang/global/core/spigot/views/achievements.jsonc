@@ -14,6 +14,15 @@
                 ""
               ]
             },
+            "summary-other": {
+              "name": "&aConquistas de {target_name}",
+              "lore": [
+                "",
+                " &fDesbloqueadas: &7{achievements_unlocked} de {achievements_total}",
+                " &fXP ganho: &7{achievements_xp}",
+                ""
+              ]
+            },
             "unlocked": {
               "name": "&a{achievement_name}",
               "lore": [
