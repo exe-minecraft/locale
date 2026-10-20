@@ -2,6 +2,15 @@
   "plugins": {
     "core": {
       "commands": {
+        "broadcast": {
+          "arguments": {
+            "message": {
+              "name": "mensagem",
+              "description": "Mensagem que deseja enviar para a rede toda."
+            }
+          },
+          "message": "&c&lEXE &f{broadcast_message}"
+        },
         "broadcast-announce": {
           "arguments": {
             "message": {
