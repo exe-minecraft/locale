@@ -167,6 +167,10 @@
           ]
         }
       },
+      "carry": {
+        "carrying": "&7Você pegou {target_name_with_color} &7no colo. Clique com o botão esquerdo para arremessar.",
+        "carried": "{carrier_name_with_color} &7pegou você no colo. Aperte shift para sair."
+      },
       "messages": {
         // As mensagens automáticas do lobby, em rodízio (a lista e o intervalo estão no config.yml do lobby).
         // O destaque é o da dica do exe-souls, como no P4Free, e cada VIP na cor do grupo (Samurai &a, Imperial &4). Tudo aqui tem de ser verdade no jogo: a fila
