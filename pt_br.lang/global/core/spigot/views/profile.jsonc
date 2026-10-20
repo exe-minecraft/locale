@@ -85,6 +85,13 @@
           "lore": [
             "&7Clique para ver suas preferências."
           ]
+        },
+        "achievements": {
+          "name": "&aConquistas",
+          "lore": [
+            "&7Clique para ver as conquistas que",
+            "&7você já desbloqueou e as que faltam."
+          ]
         }
       },
       "store-link": "&aClique aqui para abrir a loja.",
