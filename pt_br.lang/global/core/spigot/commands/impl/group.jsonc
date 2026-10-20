@@ -179,6 +179,12 @@
               "",
               "&fGaranta o seu clicando &a&lAQUI&f.",
               ""
+            ],
+            // A linha de baixo do anúncio, uma mensagem à parte porque cada uma tem um AQUI só. Este roda o /gg do
+            // nick e vale por 5 minutos.
+            "cheer": [
+              "&fDê os parabéns a {target_name_with_color} &fclicando &a&lAQUI&f.",
+              ""
             ]
           },
           "title": {
@@ -190,6 +196,30 @@
             "permanent": "&8[VIP] &7{sender_name} deu o {vip_tag} &7permanente para {target_name}.",
             "season": "&8[VIP] &7{sender_name} deu o {vip_tag} &7para {target_name} até o fim da temporada ({ends_at})."
           }
+        },
+        // O /gg, o AQUI do anúncio de VIP novo. A linha vai à rede toda, e cada um comemora uma vez por ativação.
+        "cheer-vip": {
+          "description": "dar os parabéns a quem acabou de ganhar VIP",
+          "arguments": {
+            "target": {
+              "name": "jogador",
+              "description": "Quem acabou de ganhar o VIP"
+            }
+          },
+          "self": "Comemorar o próprio VIP não vale.",
+          "closed": "A comemoração do VIP de {target_name} já passou.",
+          "already": "Você já deu os parabéns a {target_name}.",
+          // Uma sai sorteada a cada /gg.
+          "phrases": [
+            "gg!",
+            "aeee!",
+            "boa demais!",
+            "parabéns!",
+            "bem-vindo ao clube!",
+            "farmou aura, 67!",
+            "chegou chegando!"
+          ],
+          "message": "&a▸ {sender_name_with_color} &7para {target_name_with_color}&7: &a{phrase}"
         }
       }
     }
