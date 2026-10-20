@@ -165,6 +165,24 @@
               "&cTodos os servidores estão cheios ou indisponíveis agora.",
               "&cTente entrar de novo em alguns minutos."
             ]
+          },
+          "banned": {
+            "hold": [
+              "",
+              " &c&lEXE &8➟ &cConta banida",
+              "",
+              " &fSua conta está banida, mas você pode comprar o &cUnban&f na loja.",
+              " &f1. Entre em &brede-exe.com/entrar&f e digite o seu nick.",
+              " &f2. Digite aqui &e/confirmar <código>&f com o código que o site mostrar.",
+              " &f3. Compre o &cUnban&f em &brede-exe.com/loja&f.",
+              "",
+              " &7Você tem 5 minutos. Depois do pagamento, é só entrar de novo.",
+              ""
+            ],
+            "kick-message": [
+              "&cO tempo para confirmar o login do site acabou.",
+              "&cSe você já comprou o Unban, é só entrar de novo."
+            ]
           }
         }
       }

@@ -140,6 +140,7 @@
             ]
           },
           "punishment": {
+            "ban-hold-blocked": "&cSua conta está banida. Aqui você só pode usar o /confirmar com o código do site.",
             "mute-message-permanent": [
               "",
               "&cVocê foi silenciado permanentemente.",
