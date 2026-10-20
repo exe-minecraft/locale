@@ -92,13 +92,6 @@
             "&7abrir a lista de lobbies."
           ]
         },
-        "lobby-achievements-item": {
-          "name": "&aConquistas",
-          "lore": [
-            "&7Clique com o botão direito para",
-            "&7ver as suas conquistas."
-          ]
-        },
         "lobby-profile-item": {
           "name": "&bMeu perfil",
           "lore": [
