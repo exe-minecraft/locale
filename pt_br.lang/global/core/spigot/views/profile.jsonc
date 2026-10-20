@@ -2,7 +2,121 @@
   "plugins": { "core": {
     // O /perfil (o vídeo do dono, 20/10). O "lore" é o do próprio jogador, o "lore-public" é o que os outros veem no
     // /perfil <jogador>, sem cash nem compras.
-    "views": { "profile": {
+    // O /perfil no padrão dos menus da casa (o dono, 20/10), nos menus core/spigot/views/profile/own e public. O
+    // "profile" de baixo é o do jar de antes e sai depois da janela.
+    "views": { "player-profile": {
+      "title": "Seu perfil",
+      "title-public": "Perfil de {target_name}",
+      "unknown": "?",
+      "items": {
+        "profile": {
+          "name": "&6{target_name}",
+          "lore": [
+            "&7Suas informações na rede.",
+            "",
+            "&8 ▸ &fGrupo: {target_group_name}",
+            "&8 ▸ &fNível de rede: &b{level}",
+            "&8 ▸ &fConquistas: &b{achievements}",
+            "&8 ▸ &fCash: &6{cash}",
+            "",
+            "&8 ▸ &fCadastro: &7{registered}",
+            "&8 ▸ &fÚltimo login: &7{last_login}",
+            "",
+            "&aClique para abrir seu perfil no site."
+          ],
+          "lore-public": [
+            "&7O perfil público deste jogador.",
+            "",
+            "&8 ▸ &fGrupo: {target_group_name}",
+            "&8 ▸ &fNível de rede: &b{level}",
+            "&8 ▸ &fConquistas: &b{achievements}",
+            "",
+            "&8 ▸ &fCadastro: &7{registered}",
+            "&8 ▸ &fÚltimo login: &7{last_login}"
+          ]
+        },
+        "discord": {
+          "name": "&9Discord",
+          "linked": [
+            "&7Novidades, sorteios e suporte",
+            "&7ficam no nosso Discord.",
+            "",
+            "&8 ▸ &fConta: &b{discord_name}",
+            "",
+            "&aClique para receber o convite."
+          ],
+          "unlinked": [
+            "&7Novidades, sorteios e suporte",
+            "&7ficam no nosso Discord.",
+            "",
+            "&8 ▸ &fConta: &cnão vinculada",
+            "",
+            "&aClique para gerar o código de vínculo."
+          ],
+          "linked-public": [
+            "&8 ▸ &fConta: &b{discord_name}"
+          ],
+          "unlinked-public": [
+            "&8 ▸ &fConta: &7nenhuma vinculada"
+          ]
+        },
+        "achievements": {
+          "name": "&bConquistas",
+          "lore": [
+            "&7Cada conquista dá XP e sobe",
+            "&7o seu nível de rede.",
+            "",
+            "&aClique para ver as suas conquistas."
+          ]
+        },
+        "purchases": {
+          "name": "&aSuas compras",
+          "lore": [
+            "&7O que você comprou na loja, para",
+            "&7você ou de presente.",
+            "",
+            "&8 ▸ &fCompras: &b{purchases}",
+            "",
+            "&aClique para ver o histórico."
+          ]
+        },
+        "store": {
+          "name": "&eLoja",
+          "lore": [
+            "&7VIP e Cash ajudam a manter",
+            "&7o servidor de pé.",
+            "",
+            "&8 ▸ &floja.rede-exe.com",
+            "",
+            "&aClique para receber o link."
+          ]
+        },
+        "ignores": {
+          "name": "&cJogadores ignorados",
+          "lore": [
+            "&7Veja os jogadores que você",
+            "&7ignorou no servidor.",
+            "",
+            "&aClique para ver a lista."
+          ]
+        },
+        "preferences": {
+          "name": "&aPreferências",
+          "lore": [
+            "&7Ajuste o que a rede mostra",
+            "&7para você.",
+            "",
+            "&aClique para ver as preferências."
+          ]
+        }
+      },
+      "store-link": "&aClique aqui para abrir a loja.",
+      "discord-link": "&aClique aqui para entrar no Discord da rede.",
+      "site-link": "&aLink pronto. &b&nClique para abrir o site&r &8(vale 1 minuto)",
+      "site-link-hover": "&7Abre o site já logado. Não mande este link a ninguém.",
+      "site-link-unavailable": "Não deu para gerar o link do site agora. Tente de novo em instantes."
+    },
+    "profile": {
       "title": "Seu perfil",
       "title-public": "Perfil de {target_name}",
       "unknown": "?",

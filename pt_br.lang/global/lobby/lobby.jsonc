@@ -100,10 +100,10 @@
           ]
         },
         "lobby-profile-item": {
-          "name": "&bMeu Perfil",
+          "name": "&bMeu perfil",
           "lore": [
             "&7Clique com o botão direito para",
-            "&7abrir ao menu de seu perfil."
+            "&7abrir o seu perfil."
           ]
         },
         "lobby-hide-players": {
