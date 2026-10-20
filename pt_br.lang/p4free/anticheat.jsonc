@@ -10,12 +10,12 @@
       },
       // O alerta de outro servidor, para quem recebe os alertas do Polar aqui. {message} é o alerta como saiu lá.
       "alert-relay": "&e[{server}] &r{message}",
-      // A quem passa do limite de CPS do polar.yml. {limit} vem de lá, só a parte inteira (15 no clique esquerdo, 20 no
-      // direito).
+      // A quem passa do limite de CPS do polar.yml. O 15 está escrito aqui até o plugin 933a83c7b subir no próximo
+      // restart dos p4free (o do ar escreve {limit} como 15,2); depois volta a ser {limit}, que dá 20 no botão direito.
       "cps": {
         "chat": [
           "",
-          "&cVocê ultrapassou o limite de {limit} CPS e já está sendo mitigado.",
+          "&cVocê ultrapassou o limite de 15 CPS e já está sendo mitigado.",
           ""
         ],
         "title": "&cLimite de CPS excedido!",
