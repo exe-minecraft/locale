@@ -1,0 +1,40 @@
+{
+  "plugins": {
+    "core": {
+      "views": {
+        "achievement-list": {
+          "title": "Conquistas",
+          "items": {
+            "summary": {
+              "name": "&aSuas conquistas",
+              "lore": [
+                "",
+                " &fDesbloqueadas: &7{achievements_unlocked} de {achievements_total}",
+                " &fXP ganho: &7{achievements_xp}",
+                ""
+              ]
+            },
+            "unlocked": {
+              "name": "&a{achievement_name}",
+              "lore": [
+                "",
+                " &fXP: &7+{achievement_xp}",
+                " &fDesbloqueada em &7{achievement_unlocked_at}",
+                ""
+              ]
+            },
+            "locked": {
+              "name": "&c{achievement_name}",
+              "lore": [
+                "",
+                " &fXP: &7+{achievement_xp}",
+                " &7Você ainda não desbloqueou esta conquista.",
+                ""
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
