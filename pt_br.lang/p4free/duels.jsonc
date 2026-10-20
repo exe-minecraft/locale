@@ -146,6 +146,12 @@
           "&8 ▸ &fVitórias seguidas: &f{streak}",
           "&eClique para ver o histórico de elo."
         ],
+        // O abate nas lutas com mais de dois jogadores (2v2 e party), para quem luta e para o camarote. Os nicks vão na
+        // cor do lado como quem lê os vê, e {kills} é a conta de quem matou nesta luta ("2 abates").
+        "kill": {
+          "by": "{victim} &7foi eliminado por {killer} &7({health}&c❤&7, {kills}).",
+          "alone": "{victim} &7morreu."
+        },
         // O resultado vai a todos no P4Free local. {winners} e {losers} viram os nomes, cada um com
         // as estatísticas da luta no hover.
         "result": {
