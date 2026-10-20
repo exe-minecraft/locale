@@ -137,6 +137,15 @@
         // Quem mudou de elo na ranqueada 1v1, para o servidor inteiro, como no exe-p4free-core.
         "elo-promoted": "&a&l▸ &r{player} &asubiu para o elo {tier_tag} {tier_name}&a.",
         "elo-demoted": "&c&l▸ &r{player} &ccaiu para o elo {tier_tag} {tier_name}&c.",
+        // O hover dos dois de cima. O clique roda o /elo historico de quem mudou de elo.
+        "elo-hover": [
+          "&6{player}",
+          "&8 ▸ &fElo 1v1: &7{elo_before} &8→ &f{elo_after}",
+          "&8 ▸ &fElo anterior: {from_tag} {from_name}",
+          "&8 ▸ &fPartidas 1v1: &f{matches}",
+          "&8 ▸ &fVitórias seguidas: &f{streak}",
+          "&eClique para ver o histórico de elo."
+        ],
         // O resultado vai a todos no P4Free local. {winners} e {losers} viram os nomes, cada um com
         // as estatísticas da luta no hover.
         "result": {
