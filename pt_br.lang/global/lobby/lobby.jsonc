@@ -225,7 +225,8 @@
           ]
         },
         "on-join": {
-          "user-notification": "{user_name_with_tag} &fentrou no lobby!"
+          "user-notification": "{user_name_with_tag} &fentrou no lobby!",
+          "user-notification-hover": "&7Clique para ver o perfil de quem entrou."
         },
         "achievement-unlocked": "&a&lCONQUISTA! &fVocê desbloqueou &a{achievement_name}&f.",
         "visibility": {

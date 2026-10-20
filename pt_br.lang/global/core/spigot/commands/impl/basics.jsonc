@@ -42,6 +42,12 @@
           "already-connected-target": "{target_name} já está em \"{app_id}\"."
         },
         "profile": {
+          "arguments": {
+            "name": {
+              "name": "jogador",
+              "description": "Jogador cujo perfil você deseja ver"
+            }
+          },
           "message": {
             "identity": [
               "",
