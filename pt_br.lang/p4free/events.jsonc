@@ -230,7 +230,9 @@
         ],
         "countdown": "&ePróxima fase em: &f{time}",
         "elapsed": "&eTempo de combate: &f{time}",
-        "clan": "&7[{clan}&7] &f{players} {players_unit}",
+        "clan": "&7[{clan}&7] &7{players} {players_unit}",
+        // O clan em rush, com os colchetes em vermelho como no status periódico.
+        "rush-clan": "&c[{clan}&c] &7{players} {players_unit}",
         "no-clans": "&cNenhum clã participando...",
         "border": "&eBorda: &f{border} &7(estágio {stage})",
         "border-state": {
@@ -918,8 +920,8 @@
                 "",
                 "&e&l RUSHES ATIVOS: &f{rush_count}"
               ],
-              // A linha inteira é clicável e leva a assistir ao rush; os números são os abates de cada clan nele.
-              "list-entry": "&c &7[{first_clan}&7] &c{first_deaths} &fvs &c{second_deaths} &7[{second_clan}&7] &8[ASSISTIR]",
+              // A linha inteira é clicável e leva a assistir ao rush; os números são os jogadores vivos de cada clan nele.
+              "list-entry": "&c &7[{first_clan}&7] &c{first_alive} &fvs &c{second_alive} &7[{second_clan}&7] &8[ASSISTIR]",
               "list-footer": [
                 "",
                 "&4&l&m       &c&l&m       &r &f&lRUSH ACONTECENDO &c&l&m       &4&l&m       ",
