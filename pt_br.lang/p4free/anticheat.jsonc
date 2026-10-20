@@ -10,11 +10,12 @@
       },
       // O alerta de outro servidor, para quem recebe os alertas do Polar aqui. {message} é o alerta como saiu lá.
       "alert-relay": "&e[{server}] &r{message}",
-      // A quem passa do limite de CPS do polar.yml. {limit} vem de lá (15,2 no clique esquerdo, 20 no direito).
+      // A quem passa do limite de CPS do polar.yml. {limit} vem de lá, só a parte inteira (15 no clique esquerdo, 20 no
+      // direito).
       "cps": {
         "chat": [
           "",
-          "&cVocê ultrapassou o limite de {limit} CPS e está sendo prejudicado.",
+          "&cVocê ultrapassou o limite de {limit} CPS e já está sendo mitigado.",
           ""
         ],
         "title": "&cLimite de CPS excedido!",
