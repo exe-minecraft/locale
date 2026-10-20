@@ -855,6 +855,11 @@
             "{user_name_with_tag} &aé o mais novo membro do clã!",
             ""
           ],
+          "on-member-cps-limit": [
+            "",
+            "{user_name_with_color} &cultrapassou o limite de CPS no evento e está sendo mitigado.",
+            ""
+          ],
           "on-recruit": [
             "",
             "{user_name_with_tag} &aanunciou o clã para recrutar.",
