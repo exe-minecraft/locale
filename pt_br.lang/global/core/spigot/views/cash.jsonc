@@ -20,6 +20,7 @@
         "currency-set": "Saldo definido no P4Free",
         "currency-check": "Cheque de Cash",
         "currency-debit-reversal": "Estorno de compra no P4Free",
+        "vip-upgrade": "Upgrade do VIP para o Imperial",
         "currency-debit": {
           "shop": "Loja do P4Free ({detail})",
           "perk": "Perk no P4Free ({detail})",

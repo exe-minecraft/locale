@@ -1,0 +1,89 @@
+{
+  "plugins": { "core": {
+    // O upgrade do Samurai para o Imperial (o /upgrade do exe-p4free-core), pelo NPC do lobby e do P4Free ou pelo
+    // /upgradevip. O preço vem da plataforma, por dia que falta, e o Imperial vai até a data do Samurai.
+    "views": { "vip-upgrade": {
+      "title": "Upgrade de VIP",
+      "unknown": "?",
+      "items": {
+        "info": {
+          "name": "&aSuas informações",
+          "lore": ["&8{player_name}", "", "&7Grupo atual: {group_tag}", "&7Seu Cash: &6{balance}"]
+        },
+        "upgrade": {
+          "name": "&aUpgrade para o {to_tag}",
+          "lore-available": [
+            "",
+            "&7Seu {from_tag} &7vale até &f{expires_at}&7.",
+            "&7Evolua para o {to_tag} &7pelo mesmo",
+            "&7tempo que falta, &f{remaining}&7.",
+            "",
+            "&7O que muda:",
+            "{benefits}",
+            "",
+            "&7Preço: &6{price} Cash",
+            "&8São {cash_per_day} Cash por dia que falta,",
+            "&8e o preço desce conforme o tempo passa.",
+            "",
+            "{status}"
+          ],
+          "lore-unavailable": [
+            "",
+            "&7Evolua o seu {from_tag} &7para o {to_tag}",
+            "&7pelos dias que faltam, pagando só a",
+            "&7diferença em Cash.",
+            "",
+            "&7O que muda:",
+            "{benefits}",
+            "",
+            "{status}"
+          ]
+        },
+        "store": {
+          "name": "&eLoja",
+          "lore": ["", "&7Ainda não tem o &a[Samurai]&7?", "&7Compre o VIP &4[Imperial] &7direto", "&7na loja, &frede-exe.com/loja&7."]
+        },
+        "close": { "name": "&cFechar" },
+        "confirm": {
+          "name": "&aConfirmar o upgrade",
+          "lore": ["", "&7Você vira {to_tag} &7até o fim", "&7do seu VIP atual.", "", "&7Preço: &6{price} Cash"]
+        }
+      },
+      // Uma linha por vantagem da loja que muda do Samurai para o Imperial.
+      "benefit": "&8▸ &7{label}: &f{from} &8→ &a{to}",
+      "benefit-new": "&8▸ &7{label}: &a{to}",
+      "status": {
+        "available": "&aClique para evoluir!",
+        "insufficient": "&cVocê não tem Cash suficiente.",
+        "no_vip": "&cO upgrade é para quem tem o {from_tag} &cativo.",
+        "permanent": "&cSeu {from_tag} &cé permanente, e o upgrade é pelos dias que faltam.",
+        "frozen": "&cSeu {from_tag} &cestá congelado. O upgrade volta quando ele voltar a contar.",
+        "already": "&cSeu {to_tag} &cjá vai até o fim do {from_tag}&c, então não há dias para evoluir.",
+        "error": "&cNão foi possível consultar o preço agora. Tente de novo em instantes."
+      },
+      "insufficient": "Você precisa de &6{price} Cash &cpara este upgrade.",
+      "store-link": "&eClique aqui para comprar Cash na loja.",
+      "result": {
+        "applied": "Agora você é {to_tag} &aaté {expires_at}. Foram descontados &6{price} Cash&a.",
+        "repeated": "Este upgrade já foi feito, e nada foi cobrado de novo.",
+        "requote": "O preço mudou para &6{price} Cash&c. Confira o menu outra vez antes de confirmar.",
+        "error": "A plataforma não confirmou o upgrade. Abra o menu e tente de novo, porque o mesmo upgrade nunca é cobrado duas vezes."
+      },
+      "announce": [
+        "",
+        "{vip_color}&lNOVO VIP IMPERIAL NA ÁREA!",
+        "",
+        "&fO jogador {target_name_with_color} &facabou de evoluir o seu",
+        "{from_tag} &fpara o {vip_tag} &fpor {vip_color}{days} {days_word}&f!",
+        "",
+        "&fGaranta o seu clicando &a&lAQUI&f.",
+        ""
+      ],
+      "announce-title": {
+        "title": "{target_name_with_color}",
+        "subtitle": "&fEvoluiu para {vip_tag}"
+      },
+      "npc-hologram": ["&4&lUPGRADE DE VIP", "&7Do &a[Samurai] &7para o &4[Imperial]", "&eClique para ver o preço"]
+    } }
+  } }
+}
