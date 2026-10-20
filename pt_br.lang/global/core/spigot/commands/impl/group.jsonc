@@ -157,8 +157,7 @@
               "&fO jogador {target_name_with_color} &facabou de adquirir",
               "&fo VIP {vip_tag} &fpor {vip_color}{days} {days_word}&f!",
               "",
-              "&fGaranta o seu clicando &a&lAQUI&f.",
-              ""
+              "&fGaranta o seu clicando &a&lAQUI&f."
             ],
             "permanent": [
               "",
@@ -167,8 +166,7 @@
               "&fO jogador {target_name_with_color} &facabou de adquirir",
               "&fo VIP {vip_tag} {vip_color}permanente&f!",
               "",
-              "&fGaranta o seu clicando &a&lAQUI&f.",
-              ""
+              "&fGaranta o seu clicando &a&lAQUI&f."
             ],
             "season": [
               "",
@@ -177,10 +175,10 @@
               "&fO jogador {target_name_with_color} &facabou de adquirir",
               "&fo VIP {vip_tag} &faté o fim da temporada ({vip_color}{ends_at}&f)!",
               "",
-              "&fGaranta o seu clicando &a&lAQUI&f.",
-              ""
+              "&fGaranta o seu clicando &a&lAQUI&f."
             ],
-            // A linha de baixo do anúncio, uma mensagem à parte porque cada uma tem um AQUI só. Este roda o /gg do
+            // A linha de baixo do anúncio, uma mensagem à parte porque cada uma tem um AQUI só, e é ela que fecha o
+            // bloco com a linha em branco (o anúncio de cima termina sem, para o botão ficar colado nele). Este roda o /gg do
             // nick e vale por 5 minutos.
             "cheer": [
               "&fDê os parabéns a {target_name_with_color} &fclicando &a&lAQUI&f.",
