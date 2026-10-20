@@ -632,6 +632,10 @@
           "reviver": {
             "description": "reviver um jogador no ClanFight"
           },
+          "kit": {
+            "description": "arrumar o kit do ClanFight",
+            "unavailable": "&cO editor de kit não está disponível neste servidor. Tente de novo em instantes."
+          },
           "expulsar": {
             "description": "expulsar um jogador do ClanFight"
           },
@@ -725,6 +729,10 @@
           },
           "deathmatch": {
             "description": "forçar o deathmatch do FastGlad"
+          },
+          "kit": {
+            "description": "arrumar o kit do FastGlad",
+            "unavailable": "&cO editor de kit não está disponível neste servidor. Tente de novo em instantes."
           }
         }
       },

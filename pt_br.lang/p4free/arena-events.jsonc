@@ -405,6 +405,14 @@
                 "&7ver as edições anteriores do &6{event}&7."
               ]
             },
+            "kit": {
+              "name": "&eKit",
+              "lore": [
+                "&7Clique com o botão esquerdo para",
+                "&7escolher em que slot fica cada",
+                "&7peça do kit do &6{event}&7."
+              ]
+            },
             "event": {
               "inactive": {
                 "name": "&cNenhum evento rolando",
@@ -441,6 +449,40 @@
               }
             }
           }
+        },
+        // O editor do kit, o mesmo do x1 (duels.jsonc, views.kit), um só para as duas arenas (events/arena/kit no
+        // server-menus). O título do inventário no 1.8 cabe em 32 caracteres. Vale com o essentials do a5443bf10.
+        "kit": {
+          "title": "Arrume o kit do {event}",
+          "items": {
+            "back": {
+              "name": "&6Voltar",
+              "lore": [ "&7Volta ao menu do {event}, sem salvar." ]
+            },
+            "standard": {
+              "name": "&6Padrão",
+              "lore": [ "&7Volta cada peça para o slot", "&7em que o kit vem." ]
+            },
+            "save": {
+              "name": "&aSalvar",
+              "lore": [ "{selected}", "&7Grava o arranjo e fecha." ]
+            },
+            "close": {
+              "name": "&cFechar",
+              "lore": [ "&7Fecha sem salvar." ]
+            }
+          },
+          "piece": [ "", "&7Clique para escolher esta peça." ],
+          "piece-selected": [ "", "&aEscolhida. Clique no slot para", "&aonde ela vai, ou aqui para soltar." ],
+          "empty": {
+            "name": "&7Slot vazio",
+            "lore": [ "&7Escolha uma peça antes." ],
+            "target": [ "&aClique para trazer a peça escolhida." ]
+          },
+          "selected": "&8 ▸ &fUma peça está escolhida e ainda não foi colocada.",
+          "saved": "&aArranjo do kit do {event} salvo. Vale a partir do próximo kit que você receber.",
+          "unchanged": "&cO arranjo é o mesmo que já está salvo. Mude uma peça de lugar antes de salvar.",
+          "loading": "&cSeus dados ainda estão carregando. Tente de novo em instantes."
         },
         // A lista das edições, a mesma vista da do Gladiador: por isso o "mais abates" vem no {event_myth}. O layout é
         // um só para as duas arenas (events/arena/history e events/arena/history-detail no server-menus).

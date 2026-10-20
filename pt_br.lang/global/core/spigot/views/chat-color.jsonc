@@ -1,0 +1,73 @@
+{
+  "plugins": { "core": {
+    // O /cor (o /cores do exe-chats), vantagem VIP: a cor de base do que o jogador escreve no chat local, no global, no
+    // do lobby, no /tell e no do clã, por baixo dos & que ele digitar. O Samurai tem as doze do exe-chats; o Imperial,
+    // mais as três escuras. Quem perde o VIP fica com a escolha guardada, e ela volta a valer com o VIP.
+    "commands": { "chat-color": {
+      "description": "Escolhe a cor das suas mensagens no chat.",
+      "arguments": { "color": { "name": "cor", "description": "A cor das suas mensagens, ou padrao para voltar à cor padrão" } },
+      "usage": {
+        "menu": { "syntax": "", "description": "abre o menu das cores, com a prévia de cada uma" },
+        "color": { "syntax": "<cor>", "description": "escolhe a cor direto, e o TAB mostra as do seu VIP" },
+        "default": { "syntax": "padrao", "description": "volta à cor padrão" }
+      }
+    } },
+    // O nome de cada cor, pela constante guardada na preferência CHAT_COLOR (em minúsculas).
+    "preferences": { "chat-color": {
+      "options": {
+        "none": "Padrão",
+        "red": "Vermelho",
+        "blue": "Azul",
+        "green": "Verde",
+        "yellow": "Amarelo",
+        "aqua": "Aqua",
+        "light_purple": "Roxo Claro",
+        "gold": "Dourado",
+        "dark_red": "Vermelho Escuro",
+        "dark_purple": "Roxo Escuro",
+        "white": "Branco",
+        "dark_gray": "Cinza Escuro",
+        "gray": "Cinza",
+        "dark_blue": "Azul Escuro",
+        "dark_green": "Verde Escuro",
+        "dark_aqua": "Aqua Escuro"
+      }
+    } },
+    "views": { "chat-color": {
+      "title": "Cor do chat",
+      // {player_name_with_tag}: o nick de quem abriu, com a tag e na cor do cargo; {color}: o código da cor.
+      "preview": "{player_name_with_tag}&7: {color}Olá! Assim sai a minha mensagem.",
+      "items": {
+        "color": {
+          "name": "{color_name}",
+          "lore": ["", "&7Sua mensagem no chat:", "{preview}", "", "{status}"]
+        },
+        "reset": {
+          "selected": {
+            "name": "&fCor padrão",
+            "lore": ["", "&7Suas mensagens saem na cor", "&7de cada chat.", "", "&aÉ a cor que você usa agora."]
+          },
+          "available": {
+            "name": "&fCor padrão",
+            "lore": ["", "&7Cor escolhida: {current}", "", "&7Suas mensagens voltam a sair", "&7na cor de cada chat.", "", "&eClique para voltar à cor padrão."]
+          }
+        }
+      },
+      // A última linha da lore de cada cor. {required_tag}: a tag do VIP que libera a cor.
+      "status": {
+        "selected": ["&aÉ a cor que você usa agora."],
+        "available": ["&eClique para usar esta cor."],
+        "locked": ["&cExclusiva do VIP {required_tag}&c.", "&7Evolua o seu VIP com &f/upgradevip&7."],
+        "kept": ["&eSua escolha está guardada e volta", "&ea valer com o VIP {required_tag}&e."]
+      },
+      "result": {
+        "changed": "Suas mensagens no chat agora saem em {color_name}&a.",
+        "reset": "Suas mensagens no chat voltaram à cor padrão.",
+        "already": "Suas mensagens já saem em {color_name}&c.",
+        "already-default": "Suas mensagens já saem na cor padrão.",
+        "locked": "A cor {color_name} &cé exclusiva do VIP {required_tag}&c. Evolua o seu VIP com /upgradevip.",
+        "error": "Não foi possível salvar sua cor agora. Tente de novo em instantes."
+      }
+    } }
+  } }
+}

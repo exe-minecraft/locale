@@ -177,6 +177,66 @@
               "",
               "&fGaranta o seu clicando &a&lAQUI&f."
             ],
+            // O VIP comprado por outra conta (no site ou no ticket do Discord) diz quem deu, com o nick na cor do maior
+            // grupo dele. O "de presente de" vai numa linha só dele porque os dois nicks juntos quebravam no chat do 1.8.
+            "days-gift": [
+              "",
+              "{vip_color}&lNOVO VIP {vip_name} NA ÁREA!",
+              "",
+              "&fO jogador {target_name_with_color} &facabou de ganhar",
+              "&fde presente de {gifter_name_with_color}",
+              "&fo VIP {vip_tag} &fpor {vip_color}{days} {days_word}&f!",
+              "",
+              "&fGaranta o seu clicando &a&lAQUI&f."
+            ],
+            "permanent-gift": [
+              "",
+              "{vip_color}&lNOVO VIP {vip_name} NA ÁREA!",
+              "",
+              "&fO jogador {target_name_with_color} &facabou de ganhar",
+              "&fde presente de {gifter_name_with_color}",
+              "&fo VIP {vip_tag} {vip_color}permanente&f!",
+              "",
+              "&fGaranta o seu clicando &a&lAQUI&f."
+            ],
+            "season-gift": [
+              "",
+              "{vip_color}&lNOVO VIP {vip_name} NA ÁREA!",
+              "",
+              "&fO jogador {target_name_with_color} &facabou de ganhar",
+              "&fde presente de {gifter_name_with_color}",
+              "&fo VIP {vip_tag} &faté o fim da temporada ({vip_color}{ends_at}&f)!",
+              "",
+              "&fGaranta o seu clicando &a&lAQUI&f."
+            ],
+            // O VIP dado pela staff no /darvip, e o presente de uma conta que já não existe. Quem recebe ganhou, não adquiriu.
+            "days-given": [
+              "",
+              "{vip_color}&lNOVO VIP {vip_name} NA ÁREA!",
+              "",
+              "&fO jogador {target_name_with_color} &facabou de ganhar",
+              "&fo VIP {vip_tag} &fpor {vip_color}{days} {days_word}&f!",
+              "",
+              "&fGaranta o seu clicando &a&lAQUI&f."
+            ],
+            "permanent-given": [
+              "",
+              "{vip_color}&lNOVO VIP {vip_name} NA ÁREA!",
+              "",
+              "&fO jogador {target_name_with_color} &facabou de ganhar",
+              "&fo VIP {vip_tag} {vip_color}permanente&f!",
+              "",
+              "&fGaranta o seu clicando &a&lAQUI&f."
+            ],
+            "season-given": [
+              "",
+              "{vip_color}&lNOVO VIP {vip_name} NA ÁREA!",
+              "",
+              "&fO jogador {target_name_with_color} &facabou de ganhar",
+              "&fo VIP {vip_tag} &faté o fim da temporada ({vip_color}{ends_at}&f)!",
+              "",
+              "&fGaranta o seu clicando &a&lAQUI&f."
+            ],
             // A linha de baixo do anúncio, uma mensagem à parte porque cada uma tem um AQUI só, e é ela que fecha o
             // bloco com a linha em branco (o anúncio de cima termina sem, para o botão ficar colado nele). Este roda o /gg do
             // nick e vale por 5 minutos.
@@ -187,7 +247,9 @@
           },
           "title": {
             "title": "{target_name_with_color}",
-            "subtitle": "&fTornou-se {vip_tag}"
+            "subtitle": "&fTornou-se {vip_tag}",
+            "subtitle-gift": "&fGanhou {vip_tag} &fde {gifter_name_with_color}",
+            "subtitle-given": "&fGanhou {vip_tag}"
           },
           "staff-log": {
             "days": "&8[VIP] &7{sender_name} deu {days} {days_word} de {vip_tag} &7para {target_name}.",

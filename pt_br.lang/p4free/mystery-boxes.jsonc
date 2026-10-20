@@ -18,6 +18,15 @@
       "unavailable": "&cAs caixas estão indisponíveis no momento.",
       "failed": "&cNão foi possível entregar o prêmio. Sua caixa foi devolvida.",
       "won": "&aVocê ganhou {amount}x {reward} &7({rarity}&7).",
+      // O anúncio do exe-mystery-box.jar no P4Free e nos eventos, quando o prêmio não é comum, com o destaque das
+      // mensagens automáticas. O {reward} e o {rarity} já vêm na cor da raridade, e o {box} na cor da caixa. Também
+      // há {player_name} e {player_name_with_color}. Vale com o mystery-boxes do cc0720643.
+      "broadcast": [
+        "",
+        "&6&l CAIXAS: {player_name_with_tag} &fabriu a {box}",
+        " &fe ganhou {amount}x {reward} &f({rarity}&f)!",
+        ""
+      ],
       "preview-title": "Prêmios da caixa",
       "result-title": "Seu prêmio",
       "chance": "&7Chance: {chance}% | Raridade: {rarity}",
