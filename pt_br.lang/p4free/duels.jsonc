@@ -254,6 +254,7 @@
       },
       "cabin": {
         "entered": "&aVocê está no camarote. Para sair, use &f/x1 camarote sair&a.",
+        "entered-cxc": "&aVocê está no camarote. Para sair, use &f/cxc sair&a.",
         "left": "&7Você saiu do camarote.",
         "not-watching": "&cVocê não está no camarote.",
         "not-fighting": "&c{player}&c não está lutando agora."
@@ -1420,6 +1421,9 @@
           "cabin": {
             "description": "assistir ao CxC de um clã",
             "arguments": { "tag": { "name": "tag", "description": "A tag de um dos clãs lutando." } }
+          },
+          "leave": {
+            "description": "sair do camarote do CxC"
           },
           "kit": {
             "description": "gravar o seu inventário e a sua armadura como o kit do CxC"
