@@ -135,8 +135,8 @@
         "streak": "&6{player} &7chegou a &e{streak} vitórias seguidas &7na ranqueada.",
         "streak-broken": "&7A sequência de &e{streak} vitórias &7de &6{player} &7acabou.",
         // Quem mudou de elo na ranqueada 1v1, para o servidor inteiro, como no exe-p4free-core.
-        "elo-promoted": "&a{player} &7subiu para o elo {tier_tag} {tier_name}&7.",
-        "elo-demoted": "&7{player} &7caiu para o elo {tier_tag} {tier_name}&7.",
+        "elo-promoted": "&a&l▸ &r{player} &asubiu para o elo {tier_tag} {tier_name}&a.",
+        "elo-demoted": "&c&l▸ &r{player} &ccaiu para o elo {tier_tag} {tier_name}&c.",
         // O resultado vai a todos no P4Free local. {winners} e {losers} viram os nomes, cada um com
         // as estatísticas da luta no hover.
         "result": {
