@@ -1,0 +1,13 @@
+{
+  "plugins": {
+    "core": {
+      "commands": {
+        "tellspy": {
+          "enabled": "Espião do tell ligado! Você vai ver as mensagens privadas da rede.",
+          "disabled": "Espião do tell desligado! Use /ts para ligar de novo.",
+          "message": "&8[Espião] {sender_name_with_color} &8→ {target_name_with_color}&8: &7{sender_message}"
+        }
+      }
+    }
+  }
+}

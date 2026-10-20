@@ -24,6 +24,13 @@
             "&7aparecem sozinhos no chat."
           ]
         },
+        "tell-spy": {
+          "name": "&eEspião do tell",
+          "description": [
+            "&7Mostra as mensagens privadas",
+            "&7trocadas na rede. Também pelo /ts."
+          ]
+        },
         "client-addons": {
           "name": "&eInterações com clientes customizados",
           "description": [
