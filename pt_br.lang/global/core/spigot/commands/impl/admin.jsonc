@@ -142,6 +142,23 @@
             "error": "Não foi possível atualizar a senha de {target_name}.",
             "success": "{target_name} agora é pirata."
           },
+          "unregister": {
+            "description": "apagar a senha de uma conta pirata",
+            "arguments": {
+              "target": {
+                "name": "jogador",
+                "description": "Jogador que terá a senha apagada"
+              }
+            },
+            "higher-group": "Você não pode apagar a senha de {target_name_with_color}. Só dá para apagar a de quem tem um cargo abaixo do seu.",
+            "original": "{target_name_with_color} tem conta original e entra sem senha.",
+            "not-registered": "{target_name_with_color} já está sem senha.",
+            "success": "A senha de {target_name_with_color} foi apagada. Quem entrar com o nick agora usa o /registrar.",
+            "kick-message": [
+              "&cA senha da sua conta foi apagada pela equipe.",
+              "&cEntre de novo e use o /registrar."
+            ]
+          },
           "reload": {
             "failed": "O pedido de reload falhou em {failed_amount} de {app_amount} {app_unit}. Tente de novo.",
             // O {app_unit} que acompanha o {app_amount}: 1 no singular, 0 e o resto no plural.
