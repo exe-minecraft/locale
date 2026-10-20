@@ -141,7 +141,7 @@
         "elo-hover": [
           "&6{player}",
           "&8 ▸ &fElo 1v1: &7{elo_before} &8→ &f{elo_after}",
-          "&8 ▸ &fElo anterior: {from_tag} {from_name}",
+          "&8 ▸ &fELO anterior: {from_name}",
           "&8 ▸ &fPartidas 1v1: &f{matches}",
           "&8 ▸ &fVitórias seguidas: &f{streak}",
           "&eClique para ver o histórico de elo."
@@ -462,7 +462,7 @@
           "title": "Elos do x1",
           "next": {
             "top": "&6Você está no elo mais alto.",
-            "missing": "&7Próximo: {tier_tag} {tier_name}&7, com mais &f{missing} {points}&7."
+            "missing": "&7Próximo: ELO {tier_name}&7, com mais &f{missing} {points}&7."
           },
           // Os pontos de cada degrau: o primeiro não tem piso (quem cai abaixo de 1000 continua nele) e o último não tem teto.
           "ranges": {
@@ -482,14 +482,14 @@
                 "&7O elo vem da ranqueada 1v1 e",
                 "&7aparece como tag no chat.",
                 "",
-                "&8 ▸ &fElo: {tier_tag} {tier_name}",
+                "&8 ▸ &fELO: {tier_name}",
                 "&8 ▸ &fPontos: &b{elo}",
                 "",
                 "{next}"
               ]
             },
             "tier": {
-              "name": "{tier_tag} {tier_name}",
+              "name": "&fELO {tier_name}",
               "lore": [
                 "{range}",
                 "",
@@ -532,9 +532,9 @@
           "failed": "&cNão foi possível ler o histórico de elo agora. Tente de novo em instantes.",
           // A linha do elo em que o jogador ficou depois da partida.
           "tier": {
-            "up": "&aSubiu para o elo {tier_tag} {tier_name}&a.",
-            "down": "&cCaiu para o elo {tier_tag} {tier_name}&c.",
-            "same": "&7Continuou no elo {tier_tag} {tier_name}&7."
+            "up": "&aSubiu para o ELO {tier_name}&a.",
+            "down": "&cCaiu para o ELO {tier_name}&c.",
+            "same": "&7Continuou no ELO {tier_name}&7."
           },
           "items": {
             "summary": {
@@ -543,7 +543,7 @@
                 "&7As ranqueadas 1v1, da mais nova",
                 "&7para a mais velha.",
                 "",
-                "&8 ▸ &fElo: {tier_tag} {tier_name}",
+                "&8 ▸ &fELO: {tier_name}",
                 "&8 ▸ &fPontos: &b{elo}",
                 "&8 ▸ &fPartidas no histórico: &f{count}"
               ]
@@ -1246,7 +1246,7 @@
         "elo": {
           "description": "ver os elos do x1; com um nick, o elo de outro jogador",
           "arguments": { "target": { "name": "jogador", "description": "De quem você quer ver o elo." } },
-          "target": "{target_name_with_color} &7está no elo {tier_tag} {tier_name}&7, com &f{elo} {points} &8(partidas 1v1: {matches})&7.",
+          "target": "{target_name_with_color} &7está no ELO {tier_name}&7, com &f{elo} {points} &8(partidas 1v1: {matches})&7.",
           "failed": "&cNão foi possível ler o elo desse jogador agora. Tente de novo em instantes.",
           "history": {
             "description": "ver o histórico do elo 1v1; com um nick, o de outro jogador",
