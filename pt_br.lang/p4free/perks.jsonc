@@ -14,7 +14,8 @@
         "attack": {
           "name": "Ataque",
           "menu-lore": [
-            "&7Em qualquer golpe, sem precisar pular, pode multiplicar o dano.",
+            "&7Em qualquer golpe, sem precisar pular,",
+            "&7pode multiplicar o dano.",
             "",
             "&7Nível: &f{level}&7/&f{max_level}",
             "&7Próximo nível: &b{next_price}",
@@ -37,7 +38,8 @@
         "resistance": {
           "name": "Resistência",
           "menu-lore": [
-            "&7Ao levar um golpe defendendo, ganha Resistência.",
+            "&7Ao levar um golpe defendendo,",
+            "&7ganha Resistência.",
             "",
             "&7Nível: &f{level}&7/&f{max_level}",
             "&7Próximo nível: &b{next_price}",
@@ -62,7 +64,8 @@
         "regeneration": {
           "name": "Regeneração",
           "menu-lore": [
-            "&7A maçã dourada encantada pode voltar depois de comida.",
+            "&7A maçã dourada encantada pode",
+            "&7voltar depois de comida.",
             "",
             "&7Nível: &f{level}&7/&f{max_level}",
             "&7Próximo nível: &b{next_price}",
@@ -83,7 +86,8 @@
         "repair": {
           "name": "Reparação",
           "menu-lore": [
-            "&7Ao matar alguém, sua armadura e a do seu clã no mundo são reparadas.",
+            "&7Ao matar alguém, sua armadura e a",
+            "&7do seu clã no mundo são reparadas.",
             "",
             "&7Nível: &f{level}&7/&f{max_level}",
             "&7Próximo nível: &b{next_price}",
@@ -104,7 +108,8 @@
         "speed": {
           "name": "Velocidade",
           "menu-lore": [
-            "&7Agachado por alguns segundos, ganha Velocidade.",
+            "&7Agachado por alguns segundos,",
+            "&7ganha Velocidade.",
             "",
             "&7Nível: &f{level}&7/&f{max_level}",
             "&7Próximo nível: &b{next_price}",
@@ -129,8 +134,9 @@
         "suppression": {
           "name": "Supressão",
           "menu-lore": [
-            "&7Agachado por alguns segundos, desliga as perks",
-            "&7dos inimigos por perto.",
+            "&7Agachado por alguns segundos,",
+            "&7desliga as perks dos inimigos",
+            "&7por perto.",
             "",
             "&7Nível: &f{level}&7/&f{max_level}",
             "&7Próximo nível: &b{next_price}",
@@ -157,8 +163,9 @@
         "knockback": {
           "name": "Empurrão",
           "menu-lore": [
-            "&7Defendendo com a espada por alguns segundos,",
-            "&7seus golpes passam a empurrar mais.",
+            "&7Defendendo com a espada por alguns",
+            "&7segundos, seus golpes passam a",
+            "&7empurrar mais.",
             "",
             "&7Nível: &f{level}&7/&f{max_level}",
             "&7Próximo nível: &b{next_price}",
@@ -192,9 +199,9 @@
           // enquanto forem os mesmos, o menu não convida para uma ação que ele recusa.
           "status": {
             "0": "&eClique para desbloquear.",
-            "1": "&cVocê não tem o suficiente para desbloquear.",
-            "2": "&eClique para ativar. &7Use o botão direito para ver os níveis.",
-            "3": "&cSeus slots estão cheios. Desative outra antes.",
+            "1": "&cFalta saldo para desbloquear.",
+            "2": "&eClique para ativar. &7Direito abre os níveis.",
+            "3": "&cSlots cheios. Desative outra antes.",
             "4": "&aAtivada. &7Clique para desativar."
           },
           // Os números da perk no ícone, como nas armas: o de hoje riscado e o do próximo nível.
@@ -211,7 +218,8 @@
               "&7Clique numa perk para ligar ou desligar.",
               "&7Botão direito abre os níveis dela.",
               "",
-              "&7Mais slots vêm do seu grupo e do item de slot."
+              "&7Mais slots vêm do seu grupo",
+              "&7e do item de slot."
             ]
           }
         },
@@ -224,8 +232,8 @@
             "0": "&aVocê já tem este nível.",
             "1": "&eClique para comprar.",
             "2": "&cVocê não tem o suficiente.",
-            "3": "&eClique para comprar todos os níveis até aqui.",
-            "4": "&cVocê não tem o suficiente para chegar até aqui."
+            "3": "&eClique para comprar todos até este nível.",
+            "4": "&cFalta saldo para chegar até aqui."
           },
           "items": {
             "0": {
@@ -252,7 +260,8 @@
           "display-name": "&bSlot de Perk",
           "name": "&bSlot de Perk",
           "lore": [
-            "&7Dá &f+1 &7espaço para manter mais uma perk ativa.",
+            "&7Dá &f+1 &7espaço para manter",
+            "&7mais uma perk ativa.",
             "",
             "&eClique com o botão direito para usar."
           ]
