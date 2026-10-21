@@ -28,7 +28,10 @@
         "chunk-timeout": "&cUm chunk da área não carregou a tempo. Nada foi alterado depois disso; use //undo se precisar.",
         "invalid-direction": "&cDireção inválida. Use north, south, east, west, up ou down.",
         "internal": "&cNão foi possível concluir a operação. A falha foi registrada para a equipe técnica.",
-        "up-blocked": "&cNão há espaço livre nessa altura."
+        "up-blocked": "&cNão há espaço livre nessa altura.",
+        "brush-no-item": "&cSegure na mão o item do pincel.",
+        "brush-block-item": "&cO pincel não pode ficar num bloco, porque o clique direito colocaria o bloco. Use um item, como uma flecha.",
+        "brush-wand": "&cO machado de madeira já marca a seleção. Use outro item para o pincel."
       },
       "commands": {
         "wand": { "help": "//wand: recebe o machado de seleção", "done": "&aMachado de seleção no inventário. Esquerdo marca a pos1, direito a pos2.", "already": "&cVocê já tem o machado de seleção no inventário." },
@@ -57,6 +60,13 @@
         "redo": { "help": "//redo [vezes]: refaz o que foi desfeito", "done": "&aEdições refeitas: {count}.", "nothing": "&7Nada para refazer." },
         "cyl": { "help": "//cyl <padrão> <raio> [altura]: cilindro onde você está", "done": "&aBlocos no cilindro: {count}." },
         "sphere": { "help": "//sphere <padrão> <raio>: esfera onde você está", "done": "&aBlocos na esfera: {count}." },
+        "brush": {
+          "help": "//brush sphere|cyl|smooth|none: pincel no item da mão, usado com o clique direito",
+          "sphere": { "help": "//brush sphere [-h] <padrão> [raio]: esfera no bloco mirado (-h deixa oca)", "done": "&aPincel de esfera com raio {radius} no item &f{item}&a. Clique direito para pintar e //undo para desfazer." },
+          "cyl": { "help": "//brush cyl [-h] <padrão> [raio] [altura]: cilindro que sobe do bloco mirado (-h deixa oco)", "done": "&aPincel de cilindro com raio {radius} e altura {height} no item &f{item}&a. Clique direito para pintar e //undo para desfazer." },
+          "smooth": { "help": "//brush smooth [raio] [iterações]: suaviza o terreno em volta do bloco mirado", "done": "&aPincel de suavizar com raio {radius} no item &f{item}&a (iterações: {iterations}). Clique direito para pintar e //undo para desfazer." },
+          "none": { "help": "//brush none: tira o pincel do item da mão", "done": "&aPincel removido do item &f{item}&a.", "nothing": "&7O item &f{item}&7 não tem pincel." }
+        },
         "setbiome": { "help": "//setbiome <bioma>: muda o bioma da seleção", "done": "&aColunas de bioma alteradas: {count}." },
         "biomelist": { "help": "//biomelist [página]: lista os biomas", "page": "&eBiomas ({page}/{pages}): &f{biomes}" },
         "biomeinfo": { "help": "//biomeinfo: mostra o bioma onde você está", "here": "&eBioma aqui: &f{biome}" },
