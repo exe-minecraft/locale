@@ -1038,7 +1038,7 @@
               "&6• &fTodos os membros do clan receberão a tag &4[Gladiador]",
               "&6• &e{event_myth} &ffoi o maior matador do clan vencedor",
               "&f  com &e{event_myth_kills} {event_myth_kills_unit} &fe receberá a tag &5[Mito]",
-              "",
+              "{top_clans}",
               "&4&l&m      &c&l&m      &r &f&lGLADIADOR &c&l&m      &4&l&m      ",
               ""
             ],
@@ -1053,10 +1053,14 @@
               "",
               "&6• &fTodos os membros do clan receberão a tag &4[Gladiador]",
               "&6• &fNinguém do clan vencedor fez abates que contam, então a tag &5[Mito] &fcontinua com quem já a tinha",
-              "",
+              "{top_clans}",
               "&4&l&m      &c&l&m      &r &f&lGLADIADOR &c&l&m      &4&l&m      ",
               ""
             ],
+            // Os 3 clans que mais abateram, como no fim do exe-gladiator. O {top_clans} dos resumos acima traz o título
+            // e as linhas já com uma linha em branco antes e depois, ou fica vazio quando ninguém abateu.
+            "finish-top-clans": "&fOs clans que mais abateram foram:",
+            "finish-top-clans-entry": "&f{position}º - &7[{clan}&7] com &f{kills}&7 {kills_unit}",
             "border": {
               "eliminated": "&4[Gladiador] &cO clan &7[{clan_tag}&7] &cfoi eliminado do evento! &f{remaining_verb} {remaining_clans} {remaining_clans_unit}.",
               // Quando a borda começa a fechar, depois dos 5 s de aviso no título.
