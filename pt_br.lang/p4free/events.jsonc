@@ -781,10 +781,7 @@
               "yellow": "&e[&7{tag}&e]",
               "red": "&c[&7{tag}&c]",
               "blue": "&9[&7{tag}&9]",
-              "light_purple": "&d[&7{tag}&d]",
-              // Do events-server de antes do 72f31c152. Saem depois de o novo estar no ar.
-              "own": "&a[&7{tag}&a]",
-              "other": "&c[&7{tag}&c]"
+              "light_purple": "&d[&7{tag}&d]"
             },
             // O que o "AQUI" da abertura e da espera diz ao passar o mouse.
             "join-hover": "&eClique para entrar no Gladiador.",
