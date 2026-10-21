@@ -728,41 +728,45 @@
             },
             "success": "&aVocê pôs {target_name_with_tag} &acomo líder do clã &7[{clan_colored_tag}&7] {clan_name}&a."
           },
-          "addpoints": {
-            "description": "somar pontos a um clã",
-            "arguments": {
-              "points": {
-                "name": "pontos",
-                "description": "Quantos pontos somar"
+          // /clan pontos adicionar|remover <tag> <pontos>, como o /points do exe-clans.
+          "points": {
+            "description": "somar ou tirar pontos de um clã",
+            "add": {
+              "description": "somar pontos a um clã",
+              "arguments": {
+                "points": {
+                  "name": "pontos",
+                  "description": "Quantos pontos somar"
+                },
+                "tag": {
+                  "name": "tag",
+                  "description": "Tag do clã que vai receber os pontos"
+                }
               },
-              "tag": {
-                "name": "tag",
-                "description": "Tag do clã que vai receber os pontos"
-              }
-            },
-            "errors": {
-              "invalid-amount": "&cOs pontos precisam ser maiores que zero."
-            },
-            "success": "&aVocê somou &6{points} &a{points_unit} ao clã &7[{clan_colored_tag}&7]&a, que agora tem &6{clan_points}&a."
-          },
-          "removepoints": {
-            "description": "tirar pontos de um clã",
-            "arguments": {
-              "points": {
-                "name": "pontos",
-                "description": "Quantos pontos tirar"
+              "errors": {
+                "invalid-amount": "&cOs pontos precisam ser maiores que zero."
               },
-              "tag": {
-                "name": "tag",
-                "description": "Tag do clã que vai perder os pontos"
-              }
+              "success": "&aVocê somou &6{points} &a{points_unit} ao clã &7[{clan_colored_tag}&7]&a, que agora tem &6{clan_points}&a."
             },
-            "errors": {
-              "invalid-amount": "&cOs pontos precisam ser maiores que zero.",
-              "no-points": "&cO clã &7[{clan_colored_tag}&7] &cnão tem pontos para tirar."
+            "remove": {
+              "description": "tirar pontos de um clã",
+              "arguments": {
+                "points": {
+                  "name": "pontos",
+                  "description": "Quantos pontos tirar"
+                },
+                "tag": {
+                  "name": "tag",
+                  "description": "Tag do clã que vai perder os pontos"
+                }
+              },
+              "errors": {
+                "invalid-amount": "&cOs pontos precisam ser maiores que zero.",
+                "no-points": "&cO clã &7[{clan_colored_tag}&7] &cnão tem pontos para tirar."
+              },
+              // {points} é o que saiu de verdade: com o corte em zero, só o que o clã tinha.
+              "success": "&cVocê tirou &6{points} &c{points_unit} do clã &7[{clan_colored_tag}&7]&c, que agora tem &6{clan_points}&c."
             },
-            // {points} é o que saiu de verdade: com o corte em zero, só o que o clã tinha.
-            "success": "&cVocê tirou &6{points} &c{points_unit} do clã &7[{clan_colored_tag}&7]&c, que agora tem &6{clan_points}&c."
           },
           "maxmembers": {
             "description": "definir o máximo de membros de todos os clãs",
