@@ -17,9 +17,12 @@
           ]
         }
       },
-      // O /glad mapas. Dar nome a um mapa em "names" é o que o põe no menu: o nome é a chave do mundo no P4Free Eventos.
+      // A visita aos mapas: o /glad mapas, o /cf mapa e o /fg mapa. Dar nome a um mapa do Gladiador em "names" é o que
+      // o põe no menu, e o nome é a chave do mundo no P4Free Eventos. O mapa de cada arena tem a chave do evento.
       "gladiator-maps": {
         "names": {
+          "clan-fight": "ClanFight",
+          "fast-glad": "FastGlad",
           "gladiador2": "Mapa 1 (Bússola)",
           "gladiador3": "Mapa 2 (End)",
           "gladiador4": "Mapa 3 (Dragão)",
@@ -632,6 +635,11 @@
           "reviver": {
             "description": "reviver um jogador no ClanFight"
           },
+          "mapa": {
+            "description": "visitar o mapa do ClanFight",
+            "unavailable": "&cO P4Free Eventos não está disponível agora. Tente de novo em instantes.",
+            "failed": "Não foi possível ir ao mapa. Tente novamente."
+          },
           "kit": {
             "description": "arrumar o kit do ClanFight",
             "unavailable": "&cO editor de kit não está disponível neste servidor. Tente de novo em instantes."
@@ -729,6 +737,11 @@
           },
           "deathmatch": {
             "description": "forçar o deathmatch do FastGlad"
+          },
+          "mapa": {
+            "description": "visitar o mapa do FastGlad",
+            "unavailable": "&cO P4Free Eventos não está disponível agora. Tente de novo em instantes.",
+            "failed": "Não foi possível ir ao mapa. Tente novamente."
           },
           "kit": {
             "description": "arrumar o kit do FastGlad",

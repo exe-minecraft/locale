@@ -410,6 +410,13 @@
                 "&7peça do kit do &6{event}&7."
               ]
             },
+            "maps": {
+              "name": "&eMapa",
+              "lore": [
+                "&7Clique com o botão esquerdo para",
+                "&7conhecer o mapa do &6{event}&7."
+              ]
+            },
             "event": {
               "inactive": {
                 "name": "&cNenhum evento rolando",
