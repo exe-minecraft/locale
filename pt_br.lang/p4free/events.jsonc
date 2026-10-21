@@ -1278,7 +1278,7 @@
           "rejoin-already-disabled": "&cA reentrada no evento já está desativada.",
           "revive-success": "&aVocê reviveu o jogador com sucesso!",
           "revive-failure": "&cNão foi possível reviver esse jogador.",
-          "revive-pending": "&cEste jogador já está no processo de revive. Aguarde.",
+          "revive-pending": "&cEste jogador já está sendo revivido por outro membro da equipe.",
           "revive-bringing": "&eO jogador está sendo levado ao Gladiador e será revivido 5 segundos depois de chegar.",
           "revive-not-arrived": "&cO jogador não chegou ao Gladiador a tempo de ser revivido.",
           // As recusas do /glad revive, como as do exe-gladiator.
