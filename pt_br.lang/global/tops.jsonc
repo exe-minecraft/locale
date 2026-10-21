@@ -3,11 +3,12 @@
     "tops": {
       "unavailable": "&cEste ranking não está disponível neste servidor.",
       // A posição de quem abre o menu num ranking de jogador: no hub do /top e nos botões que abrem um ranking
-      // (o {ranking_position} do /elo e do /x1). Fora do top é quem não está nas {limit} linhas que o menu do
-      // ranking mostra, e também a staff, que nenhum ranking lista.
+      // (o {ranking_position} do /elo e do /x1). É a posição exata, por mais longe do topo que esteja. "unranked" é
+      // quem ainda não tem nada naquele ranking, e "staff" é a staff, que nenhum ranking lista.
       "position": {
         "ranked": "{position}º",
-        "unranked": "fora do top {limit}",
+        "unranked": "você ainda não entrou",
+        "staff": "a staff não entra no ranking",
         "loading": "carregando",
         "unavailable": "indisponível"
       },
