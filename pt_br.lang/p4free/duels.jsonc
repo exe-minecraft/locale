@@ -260,6 +260,8 @@
         "entered": "&aVocê está no camarote. Para sair, use &f/x1 camarote sair&a.",
         "entered-cxc": "&aVocê está no camarote. Para sair, use &f/cxc sair&a.",
         "left": "&7Você saiu do camarote.",
+        // Para quem está lutando, quando alguém entra no camarote da luta. A staff em /v só aparece para quem já a vê.
+        "watching": "&7{player} &7está assistindo à sua luta.",
         "not-watching": "&cVocê não está no camarote.",
         "not-fighting": "&c{player}&c não está lutando agora."
       },
