@@ -131,9 +131,13 @@
         "command-blocked": "&cEsse comando não pode ser usado nos duelos.",
         // O /v da staff ligado numa fila ou num duelo (MatchListener.onVanish).
         "vanish-blocked": "&cVocê não pode ativar o /v enquanto estiver numa fila ou num duelo. No camarote ele continua permitido.",
-        // Só na ranqueada, para o servidor inteiro: a cada 5 vitórias seguidas, e a quebra de uma de 10 ou mais.
+        // Só na ranqueada, para o servidor inteiro: a cada 5 vitórias seguidas, e a quebra de uma de 10 ou mais. O
+        // {breaker} é quem venceu a luta que a quebrou (no 2v2, a dupla, ligada pelo "streak-breakers-and"); o
+        // "streak-ended" é a quebra sem vencedor.
         "streak": "&6{player} &7chegou a &e{streak} vitórias seguidas &7na ranqueada.",
-        "streak-broken": "&7A sequência de &e{streak} vitórias &7de &6{player} &7acabou.",
+        "streak-broken": "&7A sequência de &e{streak} vitórias &7de &6{player} &7foi quebrada por &6{breaker}&7.",
+        "streak-breakers-and": " &7e &6",
+        "streak-ended": "&7A sequência de &e{streak} vitórias &7de &6{player} &7acabou.",
         // Quem mudou de elo na ranqueada 1v1, para o servidor inteiro, como no exe-p4free-core.
         "elo-promoted": "&e&lELO &r{player} &asubiu para o elo {tier_tag} {tier_name}&a.",
         "elo-demoted": "&e&lELO &r{player} &ccaiu para o elo {tier_tag} {tier_name}&c.",
