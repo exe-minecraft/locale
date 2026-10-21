@@ -2,6 +2,15 @@
   "plugins": {
     "tops": {
       "unavailable": "&cEste ranking não está disponível neste servidor.",
+      // A posição de quem abre o menu num ranking de jogador: no hub do /top e nos botões que abrem um ranking
+      // (o {ranking_position} do /elo e do /x1). Fora do top é quem não está nas {limit} linhas que o menu do
+      // ranking mostra, e também a staff, que nenhum ranking lista.
+      "position": {
+        "ranked": "{position}º",
+        "unranked": "fora do top {limit}",
+        "loading": "carregando",
+        "unavailable": "indisponível"
+      },
       "views": {
         "hub": {
           "title": "Rankings",
@@ -9,6 +18,13 @@
             "entry": {
               "name": "&e{ranking}",
               "lore": [
+                "",
+                "&7Clique para ver o ranking."
+              ],
+              // O ranking de jogador diz onde quem abre está; o de clã e o histórico fixo usam a lore de cima.
+              "player-lore": [
+                "",
+                "&8 ▸ &fSua posição: &e{position}",
                 "",
                 "&7Clique para ver o ranking."
               ]
