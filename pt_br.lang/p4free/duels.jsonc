@@ -454,7 +454,16 @@
         "alive-all": "&f Vivos: &e{alive} &7de {total}",
         "elo": "&f Seu elo: &c{elo}",
         "hits": "&f Golpes totais: &e{hits}",
-        "combo": "&f Maior combo: &e{combo}"
+        "combo": "&f Maior combo: &e{combo}",
+        // O 2v2 no lugar dos vivos: o seu time (você primeiro) e os adversários, com o ping; quem caiu fica riscado.
+        "duo": {
+          "team": "&f Seu time:",
+          "opponents": "&f Adversários:",
+          "ally": "&a  {name} &7{ping}ms",
+          "ally-dead": "&a  &m{name}",
+          "enemy": "&c  {name} &7{ping}ms",
+          "enemy-dead": "&c  &m{name}"
+        }
       },
       "views": {
         // O /elo (e o clique na cabeça do /x1): o elo 1v1 de quem abre, a escada inteira e o ranking.
