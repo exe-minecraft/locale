@@ -37,6 +37,14 @@
         "chat-description": "&7Elo {tier_name} &7no x1, com &f{elo} {points}&7. &eClique para ver o histórico.",
         // O fim da lore de cada cabeça do ranking de elo 1v1 no /top: o clique abre o histórico dela.
         "ranking-click": ["", "&eClique para ver o histórico."],
+        // A posição de quem abre o menu no ranking de elo 1v1, na lore dos botões que o abrem (o do /elo e o do /x1).
+        // Fora do ranking é quem ainda não jogou a ranqueada 1v1 e a staff, que o /top deixa de fora.
+        "ranking-position": {
+          "ranked": "{position}º",
+          "unranked": "fora do ranking",
+          "loading": "carregando",
+          "unavailable": "indisponível"
+        },
         "tiers": {
           "starter": { "name": "&8Starter", "tag": "&8[-]" },
           "primary": { "name": "&7Primary", "tag": "&7[=]" },
@@ -510,6 +518,8 @@
               "lore": [
                 "&7Os maiores elos da ranqueada 1v1.",
                 "",
+                "&8 ▸ &fSua posição: &e{ranking_position}",
+                "",
                 "&aClique para abrir."
               ]
             },
@@ -975,6 +985,8 @@
               "lore": [
                 "&7Elo 1v1, elo 2v2, vitórias e",
                 "&7maior winstreak.",
+                "",
+                "&8 ▸ &fSua posição no elo 1v1: &e{ranking_position}",
                 "",
                 "&aClique para abrir o /top."
               ]
