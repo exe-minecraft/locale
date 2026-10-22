@@ -780,6 +780,14 @@
           "cabin-ender-chest": "Você não pode abrir o baú enquanto estiver no camarote. Seus itens ficam guardados até você sair."
         },
         "events": {
+          // O ban de quem disputa um evento, para todo o app de eventos (EventFixEchoListener.onPunishment).
+          "banned": [
+            "",
+            "&4&l&m          &r &c&lJOGADOR BANIDO &4&l&m          ",
+            "",
+            "&c  O jogador &f{player_name} &cdo clan &7[{clan_tag}&7] &cfoi banido durante o {event}.",
+            ""
+          ],
           // A espera de um evento na barra de ação de todos no p4free (EventCountdownEchoListener), a cada segundo, como
           // o exe-gladiador fazia no servidor do evento.
           "waiting-bar": "&4[{event}] &aComeçando em {time}... &e/{command} entrar",
