@@ -1,0 +1,193 @@
+{
+  "plugins": {
+    "core": {
+      "commands": {
+        // O /npc: NPCs da staff com skin, texto acima da cabeça e um comando no clique, gravados no banco do servidor
+        // e iguais em todas as instâncias do mesmo tipo (todos os lobbies, por exemplo), como os do /holograma. As
+        // mensagens fora dos subcomandos valem para todos eles.
+        "npc": {
+          "loading": "Os NPCs deste servidor ainda estão carregando. Tente de novo em alguns segundos.",
+          "not-found": "Não existe NPC chamado {npc_name} neste servidor. Veja os que existem com /npc lista.",
+          // {npc_line}: o número digitado; {npc_lines} e {npc_lines_word}: quantas linhas ele tem.
+          "invalid-line": "O NPC {npc_name} não tem a linha {npc_line}. Ele tem {npc_lines} {npc_lines_word}.",
+          "too-many-lines": "O NPC {npc_name} já tem o máximo de {npc_max_lines} linhas.",
+          // {npc_skin}: o nick digitado.
+          "skin-not-found": "Nenhuma skin encontrada para o nick {npc_skin}. Confira se ele está certo.",
+          // O que {npc_skin} mostra num NPC sem skin, e {npc_command} num NPC sem comando.
+          "default-skin": "Steve (padrão)",
+          "no-command": "nenhum",
+          // Quem clica com cargo acima do de quem pôs o comando rodaria, com os próprios poderes, o que quem o pôs não
+          // pode. {npc_command_group}: o cargo de quem pôs.
+          "click-above": "O comando deste NPC foi posto por um {npc_command_group} e só roda para quem tem cargo até esse. Para ele rodar para você também, configure de novo com /npc comando {npc_name}.",
+          "line": {
+            "singular": "linha",
+            "plural": "linhas"
+          },
+          "create": {
+            "description": "criar um NPC onde você está, olhando para onde você olha",
+            "arguments": {
+              "name": {
+                "name": "nome",
+                "description": "Use letras minúsculas, números, - ou _ no nome do NPC"
+              },
+              "skin": {
+                "name": "skin",
+                "description": "Nick do jogador cuja skin o NPC veste. Sem ele, o NPC fica com a skin padrão"
+              }
+            },
+            "invalid-name": "O nome {npc_name} é inválido. Use de 1 a 32 letras minúsculas, números, - ou _.",
+            "already-exists": "Já existe um NPC chamado {npc_name}.",
+            "success": "NPC {npc_name} criado em {npc_world} {npc_x}, {npc_y}, {npc_z}, com a skin {npc_skin}. Para pôr um texto acima dele, use /npc adicionar {npc_name} <texto>, e para o clique rodar um comando, use /npc comando {npc_name} <comando>."
+          },
+          "list": {
+            "description": "ver os NPCs deste servidor",
+            "empty": "Nenhum NPC neste servidor. Crie um com /npc criar <nome> [skin].",
+            "header": "NPCs deste servidor:",
+            "entry": "&e{npc_name}&7: {npc_world} {npc_x}, {npc_y}, {npc_z}, skin {npc_skin}, comando {npc_command}, {npc_lines} {npc_lines_word}"
+          },
+          "info": {
+            "description": "ver a skin, o comando e as linhas de um NPC",
+            "arguments": {
+              "name": {
+                "name": "nome",
+                "description": "Nome do NPC"
+              }
+            },
+            "header": "NPC {npc_name} em {npc_world} {npc_x}, {npc_y}, {npc_z}, com {npc_lines} {npc_lines_word}:",
+            "skin": "&7Skin: &f{npc_skin}",
+            "command": "&7Comando ao clicar: &f{npc_command}&7, para quem tem cargo até {npc_command_group}",
+            "no-command": "&7Comando ao clicar: &f{npc_command}",
+            "no-lines": "&7Sem texto acima da cabeça. Para pôr um, use /npc adicionar {npc_name} <texto>.",
+            // {npc_text}: a linha como foi digitada, com os códigos & à vista.
+            "line": "&e{npc_line}. &f{npc_text}"
+          },
+          "teleport": {
+            "description": "ir até um NPC",
+            "arguments": {
+              "name": {
+                "name": "nome",
+                "description": "Nome do NPC"
+              }
+            },
+            "world-not-loaded": "O mundo {npc_world} do NPC {npc_name} não está carregado neste servidor.",
+            "failed": "Não foi possível levar você até o NPC {npc_name}.",
+            "success": "Você está no NPC {npc_name}."
+          },
+          "move": {
+            "description": "trazer um NPC para onde você está, olhando para onde você olha",
+            "arguments": {
+              "name": {
+                "name": "nome",
+                "description": "Nome do NPC"
+              }
+            },
+            "success": "NPC {npc_name} movido para {npc_world} {npc_x}, {npc_y}, {npc_z}."
+          },
+          "skin": {
+            "description": "vestir um NPC com a skin de um jogador",
+            "arguments": {
+              "name": {
+                "name": "nome",
+                "description": "Nome do NPC"
+              },
+              "player": {
+                "name": "jogador",
+                "description": "Nick do jogador, mesmo de quem nunca entrou na rede"
+              }
+            },
+            "success": "O NPC {npc_name} agora veste a skin de {npc_skin}."
+          },
+          "command": {
+            "description": "escolher o comando que o jogador roda ao clicar no NPC",
+            "arguments": {
+              "name": {
+                "name": "nome",
+                "description": "Nome do NPC"
+              },
+              "command": {
+                "name": "comando",
+                "description": "Comando sem a barra, rodado por quem clica e com as permissões dele. Sem comando, o clique não faz nada"
+              }
+            },
+            "success": "Quem clicar no NPC {npc_name} com o botão direito vai rodar {npc_command}, se não tiver cargo acima do seu ({npc_command_group}).",
+            "cleared": "O clique no NPC {npc_name} não roda mais nenhum comando."
+          },
+          "add": {
+            "description": "adicionar uma linha de texto embaixo das outras, logo acima da cabeça",
+            "arguments": {
+              "name": {
+                "name": "nome",
+                "description": "Nome do NPC"
+              },
+              "text": {
+                "name": "texto",
+                "description": "Texto da linha, com cores por &"
+              }
+            },
+            "success": "Linha {npc_line} adicionada ao NPC {npc_name}."
+          },
+          "insert": {
+            "description": "inserir uma linha no número dado, descendo as de baixo",
+            "arguments": {
+              "name": {
+                "name": "nome",
+                "description": "Nome do NPC"
+              },
+              "line": {
+                "name": "linha",
+                "description": "Número da linha, a de cima é a 1"
+              },
+              "text": {
+                "name": "texto",
+                "description": "Texto da linha, com cores por &"
+              }
+            },
+            "success": "Linha {npc_line} inserida no NPC {npc_name}."
+          },
+          "set": {
+            "description": "trocar o texto de uma linha",
+            "arguments": {
+              "name": {
+                "name": "nome",
+                "description": "Nome do NPC"
+              },
+              "line": {
+                "name": "linha",
+                "description": "Número da linha, a de cima é a 1"
+              },
+              "text": {
+                "name": "texto",
+                "description": "Texto novo da linha, com cores por &"
+              }
+            },
+            "success": "Linha {npc_line} do NPC {npc_name} alterada."
+          },
+          "remove": {
+            "description": "remover uma linha",
+            "arguments": {
+              "name": {
+                "name": "nome",
+                "description": "Nome do NPC"
+              },
+              "line": {
+                "name": "linha",
+                "description": "Número da linha, a de cima é a 1"
+              }
+            },
+            "success": "Linha {npc_line} removida do NPC {npc_name}, que agora tem {npc_lines} {npc_lines_word}."
+          },
+          "delete": {
+            "description": "apagar um NPC de todos os servidores deste tipo",
+            "arguments": {
+              "name": {
+                "name": "nome",
+                "description": "Nome do NPC"
+              }
+            },
+            "success": "NPC {npc_name} apagado."
+          }
+        }
+      }
+    }
+  }
+}
