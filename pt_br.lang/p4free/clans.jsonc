@@ -766,7 +766,7 @@
               },
               // {points} é o que saiu de verdade: com o corte em zero, só o que o clã tinha.
               "success": "&cVocê tirou &6{points} &c{points_unit} do clã &7[{clan_colored_tag}&7]&c, que agora tem &6{clan_points}&c."
-            },
+            }
           },
           "maxmembers": {
             "description": "definir o máximo de membros de todos os clãs",
