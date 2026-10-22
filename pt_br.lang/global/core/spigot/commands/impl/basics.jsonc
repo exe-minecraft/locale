@@ -303,10 +303,18 @@
           "permanent": "Permanente",
           "frozen": "{remaining} &b(congelado)",
           "no-group": "Você não possui nenhum grupo vip!",
+          "no-group-other": "{target_name_with_color}&c não possui nenhum grupo vip.",
           "visualization-format": " {user_group_display_name} &8➠ &7{user_group_expire_in}",
           "visualization": [
             "",
             "&b Tempo dos pacotes VIPs:",
+            "",
+            "  {groups}",
+            ""
+          ],
+          "visualization-other": [
+            "",
+            "&b Tempo dos pacotes VIPs de {target_name_with_color}&b:",
             "",
             "  {groups}",
             ""
