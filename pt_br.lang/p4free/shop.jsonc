@@ -4,6 +4,14 @@
     // próprio item que a loja entrega (o nome e a descrição vêm de quem registra o item);
     // aqui ficam o preço, as dicas de clique, os menus e as mensagens da compra.
     "shop": {
+      // O holograma do NPC da loja no spawn, de cima para baixo, como o do P4Free antigo.
+      "npc": {
+        "hologram": [
+          "&8(/loja)",
+          "&6&lITENS ESPECIAIS",
+          "&eClique para abrir"
+        ]
+      },
       "views": {
         "primary": {
           "title": "Loja",

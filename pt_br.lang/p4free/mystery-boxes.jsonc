@@ -1,6 +1,18 @@
 {
   "plugins": {
     "mystery-boxes": {
+      // O holograma em cima da cabeça de cada caixa no spawn (o display do config.yml),
+      // como no P4Free antigo. O clique mostra os prêmios; com a caixa na mão, abre.
+      "display": {
+        "basic": [
+          "&a&lCAIXA BÁSICA",
+          "&eClique para abrir"
+        ],
+        "advanced": [
+          "&b&lCAIXA AVANÇADA",
+          "&eClique para abrir"
+        ]
+      },
       "types": {
         "basic": "&aCaixa Misteriosa &7(Básica)",
         "advanced": "&bCaixa Misteriosa &7(Avançada)"
