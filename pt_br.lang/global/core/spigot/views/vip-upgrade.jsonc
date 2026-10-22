@@ -85,8 +85,7 @@
       "announce-title": {
         "title": "{target_name_with_color}",
         "subtitle": "&fEvoluiu para {vip_tag}"
-      },
-      "npc-hologram": ["{fn/animate:`&4&l» &c&lUPGRADE DE VIP &4&l«`:`&6&l» » &4&lUPGRADE DE VIP &6&l« «`:`&e&l» » » &f&lUPGRADE DE VIP &e&l« « «`:`&6&l» » &4&lUPGRADE DE VIP &6&l« «`}", "&7Do &a[Samurai] &7para o &4[Imperial]", "{fn/animate:`&eClique para ver o preço`:`&f&nClique para ver o preço`}"]
+      }
     } }
   } }
 }

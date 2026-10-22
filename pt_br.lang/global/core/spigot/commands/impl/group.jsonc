@@ -285,13 +285,7 @@
         },
         // O /upgradevip abre o menu do upgrade do Samurai para o Imperial (o texto do menu está em views/vip-upgrade).
         "vip-upgrade": {
-          "description": "evoluir o seu VIP Samurai para o Imperial",
-          "npc": {
-            "description": "pôr o NPC do upgrade onde você está, com a skin de um jogador se quiser, ou remover",
-            "placed": "O NPC do upgrade de VIP está agora em {x}, {y}, {z}, em todos os servidores do tipo {app_type}.",
-            "removed": "O NPC do upgrade de VIP saiu de todos os servidores do tipo {app_type}.",
-            "error": "A plataforma não gravou a posição do NPC. Tente de novo."
-          }
+          "description": "evoluir o seu VIP Samurai para o Imperial"
         }
       }
     }
