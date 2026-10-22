@@ -61,10 +61,11 @@
         "cyl": { "help": "//cyl <padrão> <raio> [altura]: cilindro onde você está", "done": "&aBlocos no cilindro: {count}." },
         "sphere": { "help": "//sphere <padrão> <raio>: esfera onde você está", "done": "&aBlocos na esfera: {count}." },
         "brush": {
-          "help": "//brush sphere|cyl|smooth|none: pincel no item da mão, usado com o clique direito",
+          "help": "//brush sphere|cyl|smooth|paint|none: pincel no item da mão, usado com o clique direito",
           "sphere": { "help": "//brush sphere [-h] <padrão> [raio]: esfera no bloco mirado (-h deixa oca)", "done": "&aPincel de esfera com raio {radius} no item &f{item}&a. Clique direito para pintar e //undo para desfazer." },
           "cyl": { "help": "//brush cyl [-h] <padrão> [raio] [altura]: cilindro que sobe do bloco mirado (-h deixa oco)", "done": "&aPincel de cilindro com raio {radius} e altura {height} no item &f{item}&a. Clique direito para pintar e //undo para desfazer." },
           "smooth": { "help": "//brush smooth [raio] [iterações]: suaviza o terreno em volta do bloco mirado", "done": "&aPincel de suavizar com raio {radius} no item &f{item}&a (iterações: {iterations}). Clique direito para pintar e //undo para desfazer." },
+          "paint": { "help": "//brush paint <padrão> [raio]: pinta só a superfície em volta do bloco mirado, como a pena do goPaint", "done": "&aPincel de pintar a superfície com raio {radius} no item &f{item}&a. Clique direito para pintar e //undo para desfazer." },
           "none": { "help": "//brush none: tira o pincel do item da mão", "done": "&aPincel removido do item &f{item}&a.", "nothing": "&7O item &f{item}&7 não tem pincel." }
         },
         "setbiome": { "help": "//setbiome <bioma>: muda o bioma da seleção", "done": "&aColunas de bioma alteradas: {count}." },
