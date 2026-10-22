@@ -16,7 +16,8 @@
           "degrees": "&cOs graus precisam estar entre {min} e {max}.",
           "radius": "&cO raio precisa estar entre {min} e {max}.",
           "height": "&cA altura precisa estar entre {min} e {max}.",
-          "page": "&cA página precisa estar entre {min} e {max}."
+          "page": "&cA página precisa estar entre {min} e {max}.",
+          "size": "&cO tamanho precisa estar entre {min} e {max}."
         },
         "rotate-90": "&cGire em múltiplos de 90 graus.",
         "invalid-block": "&cBloco inválido: &f{input}",
@@ -31,7 +32,8 @@
         "up-blocked": "&cNão há espaço livre nessa altura.",
         "brush-no-item": "&cSegure na mão o item do pincel.",
         "brush-block-item": "&cO pincel não pode ficar num bloco, porque o clique direito colocaria o bloco. Use um item, como uma flecha.",
-        "brush-wand": "&cO machado de madeira já marca a seleção. Use outro item para o pincel."
+        "brush-wand": "&cO machado de madeira já marca a seleção. Use outro item para o pincel.",
+        "brush-feather": "&cA pena é a do goPaint. Use outro item para o pincel."
       },
       "commands": {
         "wand": { "help": "//wand: recebe o machado de seleção", "done": "&aMachado de seleção no inventário. Esquerdo marca a pos1, direito a pos2.", "already": "&cVocê já tem o machado de seleção no inventário." },
@@ -61,12 +63,17 @@
         "cyl": { "help": "//cyl <padrão> <raio> [altura]: cilindro onde você está", "done": "&aBlocos no cilindro: {count}." },
         "sphere": { "help": "//sphere <padrão> <raio>: esfera onde você está", "done": "&aBlocos na esfera: {count}." },
         "brush": {
-          "help": "//brush sphere|cyl|smooth|paint|none: pincel no item da mão, usado com o clique direito",
+          "help": "//brush sphere|cyl|smooth|none: pincel no item da mão, usado com o clique direito",
           "sphere": { "help": "//brush sphere [-h] <padrão> [raio]: esfera no bloco mirado (-h deixa oca)", "done": "&aPincel de esfera com raio {radius} no item &f{item}&a. Clique direito para pintar e //undo para desfazer." },
           "cyl": { "help": "//brush cyl [-h] <padrão> [raio] [altura]: cilindro que sobe do bloco mirado (-h deixa oco)", "done": "&aPincel de cilindro com raio {radius} e altura {height} no item &f{item}&a. Clique direito para pintar e //undo para desfazer." },
           "smooth": { "help": "//brush smooth [raio] [iterações]: suaviza o terreno em volta do bloco mirado", "done": "&aPincel de suavizar com raio {radius} no item &f{item}&a (iterações: {iterations}). Clique direito para pintar e //undo para desfazer." },
-          "paint": { "help": "//brush paint <padrão> [raio]: pinta só a superfície em volta do bloco mirado, como a pena do goPaint", "done": "&aPincel de pintar a superfície com raio {radius} no item &f{item}&a. Clique direito para pintar e //undo para desfazer." },
           "none": { "help": "//brush none: tira o pincel do item da mão", "done": "&aPincel removido do item &f{item}&a.", "nothing": "&7O item &f{item}&7 não tem pincel." }
+        },
+        "gp": {
+          "help": "/gp size <tamanho> ou /gp toggle: atalhos da pena do goPaint",
+          "enabled": "&aPena ligada. O clique direito com ela pinta, e //undo desfaz.",
+          "disabled": "&7Pena desligada.",
+          "size": "&aTamanho da pena: &f{size}&a."
         },
         "setbiome": { "help": "//setbiome <bioma>: muda o bioma da seleção", "done": "&aColunas de bioma alteradas: {count}." },
         "biomelist": { "help": "//biomelist [página]: lista os biomas", "page": "&eBiomas ({page}/{pages}): &f{biomes}" },
@@ -81,6 +88,58 @@
         "green": { "help": "//green [raio]: troca terra por grama em volta", "done": "&aBlocos de grama: {count}." },
         "help": { "help": "//help: esta lista", "header": "&eComandos do WorldEdit:" },
         "version": { "help": "//version: versão do plugin", "done": "&eworld-edit &f{version}" }
+      },
+      "paint": {
+        "disabled": "&cSua pena está desligada. Abra o menu com o clique esquerdo e ligue, ou use /gp toggle.",
+        "menu": {
+          "title": "&1goPaint",
+          "types-title": "&1goPaint, pincéis",
+          "filler": "&7",
+          "on": "&a&lLigado",
+          "off": "&c&lDesligado",
+          "items": {
+            "toggle": { "name": "&6Pena do goPaint", "lore": ["{state}", "", "&7Clique para ligar ou desligar", "&7Ligada, o clique direito com ela pinta"] },
+            "type": { "name": "&6Pincel: &e{type}", "lore": ["&8{description}", "", "&7Esquerdo para o próximo", "&7Direito para o anterior", "&7Shift para ver a lista"] },
+            "pick-type": { "name": "&6{type}", "lore": ["&8{description}", "", "&7Clique para escolher"] },
+            "chance": { "name": "&6Chance de pintar: &e{value}%", "lore": ["", "&7Esquerdo aumenta", "&7Direito diminui"] },
+            "axis": { "name": "&6Eixo: &e{value}", "lore": ["", "&7Clique para trocar"] },
+            "thickness": { "name": "&6Espessura da camada: &e{value}", "lore": ["", "&7Esquerdo aumenta", "&7Direito diminui"] },
+            "angle-distance": { "name": "&6Distância da inclinação: &e{value}", "lore": ["", "&7Esquerdo aumenta", "&7Direito diminui"] },
+            "angle": { "name": "&6Inclinação máxima: &e{value}°", "lore": ["", "&7Esquerdo aumenta", "&7Direito diminui", "&7Com shift, de 15 em 15"] },
+            "fracture-distance": { "name": "&6Distância da fenda: &e{value}", "lore": ["", "&7Esquerdo aumenta", "&7Direito diminui"] },
+            "mixing": { "name": "&6Mistura: &e{value}%", "lore": ["", "&7Esquerdo aumenta", "&7Direito diminui"] },
+            "falloff": { "name": "&6Decaimento: &e{value}%", "lore": ["", "&7Esquerdo aumenta", "&7Direito diminui"] },
+            "size": { "name": "&6Tamanho: &e{value}", "lore": ["&8O diâmetro da esfera, até {max}", "", "&7Esquerdo aumenta", "&7Direito diminui", "&7Com shift, de 10 em 10"] },
+            "mask": { "name": "&6Máscara", "lore": ["{state}", "&8Só pinta o bloco da máscara", "", "&7Clique para ligar ou desligar"] },
+            "surface": { "name": "&6Modo superfície", "lore": ["{state}", "&8Só pinta o que você enxerga de onde está", "", "&7Clique para ligar ou desligar"] },
+            "slot": {
+              "name": "&aBloco {slot} &7{percent}%",
+              "lore": ["", "&7Esquerdo escolhe este espaço", "&7Direito esvazia"],
+              "lore-selected": ["", "&e▸ Clique num bloco do seu inventário", "&7Direito esvazia"]
+            },
+            "empty-slot": {
+              "name": "&cEspaço vazio",
+              "lore": ["", "&7Clique para escolher este espaço"],
+              "lore-selected": ["", "&e▸ Clique num bloco do seu inventário"]
+            },
+            "current-mask": {
+              "name": "&6Máscara atual",
+              "lore": ["", "&7Clique para trocar"],
+              "lore-selected": ["", "&e▸ Clique num bloco do seu inventário"]
+            }
+          },
+          "types": {
+            "sphere": { "name": "Esfera", "description": "Pinta a esfera inteira" },
+            "spray": { "name": "Spray", "description": "Pinta cada bloco com a chance escolhida" },
+            "splatter": { "name": "Respingo", "description": "Mais chance perto do bloco clicado" },
+            "disc": { "name": "Disco", "description": "Só o plano do eixo que passa pelo bloco clicado" },
+            "bucket": { "name": "Balde", "description": "Só os blocos iguais ligados ao bloco clicado" },
+            "angle": { "name": "Ângulo", "description": "Só onde a inclinação não passa do ângulo máximo" },
+            "overlay": { "name": "Cobertura", "description": "Só a camada de cima, na espessura escolhida" },
+            "fracture": { "name": "Fenda", "description": "Pinta dentro de fendas e rachaduras" },
+            "gradient": { "name": "Gradiente", "description": "Os blocos em faixas, de baixo para cima" }
+          }
+        }
       }
     }
   }
