@@ -62,6 +62,15 @@
                 "",
                 "&eClique para receber o link."
               ]
+            },
+            "history": {
+              "name": "&eHistórico de transações",
+              "lore": [
+                "&7Veja tudo o que entrou e saiu do",
+                "&7seu &6cash&7, com o motivo e a data.",
+                "",
+                "&eClique para ver."
+              ]
             }
           }
         },
