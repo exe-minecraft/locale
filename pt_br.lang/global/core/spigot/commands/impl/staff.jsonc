@@ -102,6 +102,49 @@
             "no-reason": "&7sem motivo registrado"
           }
         },
+        // O /brand: o cliente que cada jogador da rede anunciou ao entrar, contado e listado pelo proxy.
+        "brand": {
+          "arguments": {
+            "filter": {
+              "name": "cliente ou jogador",
+              "description": "Um pedaço do nome do cliente (? para quem não mandou nenhum) ou o nick de um jogador"
+            }
+          },
+          "no-proxy": "Nenhum proxy está online para dizer os clientes.",
+          "proxy-silent": "Nem todo proxy respondeu a tempo, e os jogadores de quem não respondeu ficaram de fora.",
+          "not-found": "Ninguém online usa um cliente com &f{brand_filter}&c no nome, e nenhum jogador com esse nick está online.",
+          "message": {
+            "players": {
+              "singular": "jogador",
+              "plural": "jogadores"
+            },
+            "empty": "Ninguém está online agora.",
+            "summary-header": [
+              "",
+              " &eClientes conectados: &7{brand_total} {brand_players}",
+              ""
+            ],
+            "summary-entry": "  &e➟ &f{brand_name} &7({brand_count} {brand_players}, {brand_percent}%)",
+            "summary-footer": [
+              "",
+              " &7Clique num cliente para ver quem usa, ou use &f/brand <cliente|jogador>&7.",
+              ""
+            ],
+            "unknown": "sem brand",
+            "hover-name": "&f{brand_name}",
+            "hover-more": "&7e mais {brand_hidden} {brand_players}",
+            "hover-summary": "&eClique para ver quem usa este cliente",
+            "filter-header": [
+              "",
+              " &eResultado para &f{brand_filter}&e: &7{brand_total} {brand_players}",
+              ""
+            ],
+            "filter-entry": "  {brand_name} &8({brand_version}, {brand_server}) &7{brand_client}",
+            "no-server": "trocando de servidor",
+            "hover-filter": "&7Clique para abrir o &f/account {brand_name}",
+            "more": "  &7e mais {brand_hidden} {brand_players}"
+          }
+        },
         "staff-chat": {
           "arguments": {
             "message": {
