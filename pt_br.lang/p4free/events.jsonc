@@ -186,8 +186,8 @@
           "clans": "&f Clans restantes: &6{clans}",
           "kills": "&f Abates no evento: &c{kills}",
           "points": "&f Moedas de abate: &6{points}",
-          "merchant": "&fMercador Sombrio em: &9{time}",
-          "merchant-open": "&fMercador Sombrio &aVIVO"
+          "merchant": "&f Mercador Sombrio em &9{time}",
+          "merchant-open": "&f Mercador Sombrio &aVIVO"
         }
       },
       "stages": {
