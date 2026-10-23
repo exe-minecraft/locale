@@ -100,22 +100,16 @@
               "&fValor: &a1.000 tokens"
             ]
           },
-          "fortune_sword_1": {
-            "name": "&7Evolução de Fortuna para Espada (+10)",
+          "fortune_1": {
+            "name": "&7Evolução de Fortuna (+10)",
             "lore": [
               "&fRaridade: &7Comum",
               "",
-              "&7Evolua &e+10 níveis &7do encantamento",
-              "&aFortuna &7em sua espada."
-            ]
-          },
-          "fortune_axe_1": {
-            "name": "&7Evolução de Fortuna para Machado (+10)",
-            "lore": [
-              "&fRaridade: &7Comum",
+              "&fEspada: &aFortuna &e+10",
+              "&fMachado: &aFortuna &e+10",
               "",
-              "&7Evolua &e+10 níveis &7do encantamento",
-              "&aFortuna &7em seu machado."
+              "&7Arraste o livro até a arma",
+              "&7que você quer evoluir."
             ]
           },
           "tokens_2": {
@@ -130,12 +124,15 @@
             ]
           },
           "repair_1": {
-            "name": "&dEvolução de Reparador (+10)",
+            "name": "&dEvolução de Reparador ou Racha Crânio",
             "lore": [
               "&fRaridade: &dRaro",
               "",
-              "&7Evolua &e+10 níveis &7do encantamento",
-              "&bReparador &7em sua espada."
+              "&fEspada: &bReparador &e+10",
+              "&fMachado: &aRacha Crânio &e+10",
+              "",
+              "&7Arraste o livro até a arma",
+              "&7que você quer evoluir."
             ]
           },
           "itemrepair_1": {
@@ -161,12 +158,15 @@
             ]
           },
           "drainage_1": {
-            "name": "&6Evolução de Drenagem (+5)",
+            "name": "&6Evolução de Drenagem ou Quebra Armadura",
             "lore": [
               "&fRaridade: &6Lendário",
               "",
-              "&7Evolua &e+5 níveis &7do encantamento",
-              "&cDrenagem &7em sua espada."
+              "&fEspada: &cDrenagem &e+5",
+              "&fMachado: &aQuebra Armadura &e+7",
+              "",
+              "&7Arraste o livro até a arma",
+              "&7que você quer evoluir."
             ]
           },
           "mb_1": {
@@ -205,12 +205,15 @@
             ]
           },
           "amplifier_1": {
-            "name": "&bEvolução de Amplificador (+1)",
+            "name": "&bEvolução de Amplificador ou Quebra Armadura",
             "lore": [
               "&fRaridade: &bMítico",
               "",
-              "&7Evolua &e+1 nível &7do encantamento",
-              "&dAmplificador &7em sua espada."
+              "&fEspada: &dAmplificador &e+1",
+              "&fMachado: &aQuebra Armadura &e+15",
+              "",
+              "&7Arraste o livro até a arma",
+              "&7que você quer evoluir."
             ]
           },
           "berserker_1": {
@@ -250,22 +253,16 @@
               "&fValor: &a3.500 tokens"
             ]
           },
-          "fortune_sword_1": {
-            "name": "&7Evolução de Fortuna para Espada (+10)",
+          "fortune_1": {
+            "name": "&7Evolução de Fortuna (+10)",
             "lore": [
               "&fRaridade: &7Comum",
               "",
-              "&7Evolua &e+10 níveis &7do encantamento",
-              "&aFortuna &7em sua espada."
-            ]
-          },
-          "fortune_axe_1": {
-            "name": "&7Evolução de Fortuna para Machado (+10)",
-            "lore": [
-              "&fRaridade: &7Comum",
+              "&fEspada: &aFortuna &e+10",
+              "&fMachado: &aFortuna &e+10",
               "",
-              "&7Evolua &e+10 níveis &7do encantamento",
-              "&aFortuna &7em seu machado."
+              "&7Arraste o livro até a arma",
+              "&7que você quer evoluir."
             ]
           },
           "tokens_2": {
@@ -280,12 +277,15 @@
             ]
           },
           "repair_1": {
-            "name": "&dEvolução de Reparador (+10)",
+            "name": "&dEvolução de Reparador ou Racha Crânio",
             "lore": [
               "&fRaridade: &dRaro",
               "",
-              "&7Evolua &e+10 níveis &7do encantamento",
-              "&bReparador &7em sua espada."
+              "&fEspada: &bReparador &e+10",
+              "&fMachado: &aRacha Crânio &e+10",
+              "",
+              "&7Arraste o livro até a arma",
+              "&7que você quer evoluir."
             ]
           },
           "itemrepair_1": {
@@ -321,40 +321,40 @@
               "&fValor: &6✪ 1.200 cash"
             ]
           },
-          "fortune_sword_2": {
-            "name": "&6Evolução de Fortuna para Espada(+25)",
+          "fortune_2": {
+            "name": "&6Evolução de Fortuna (+25)",
             "lore": [
               "&fRaridade: &6Lendário",
               "",
-              "&7Evolua &e+25 níveis &7do encantamento",
-              "&aFortuna &7em sua espada."
-            ]
-          },
-          "fortune_axe_2": {
-            "name": "&6Evolução de Fortuna para Machado (+25)",
-            "lore": [
-              "&fRaridade: &6Lendário",
+              "&fEspada: &aFortuna &e+25",
+              "&fMachado: &aFortuna &e+25",
               "",
-              "&7Evolua &e+25 níveis &7do encantamento",
-              "&aFortuna &7em sua espada."
+              "&7Arraste o livro até a arma",
+              "&7que você quer evoluir."
             ]
           },
           "repair_2": {
-            "name": "&bEvolução de Reparador (+25)",
+            "name": "&bEvolução de Reparador ou Racha Crânio",
             "lore": [
               "&fRaridade: &bMítico",
               "",
-              "&7Evolua &e+25 níveis &7do encantamento",
-              "&bReparador &7em sua espada."
+              "&fEspada: &bReparador &e+25",
+              "&fMachado: &aRacha Crânio &e+20",
+              "",
+              "&7Arraste o livro até a arma",
+              "&7que você quer evoluir."
             ]
           },
           "drainage_1": {
-            "name": "&6Evolução de Drenagem (+5)",
+            "name": "&6Evolução de Drenagem ou Quebra Armadura",
             "lore": [
               "&fRaridade: &6Lendário",
               "",
-              "&7Evolua &e+5 níveis &7do encantamento",
-              "&cDrenagem &7em sua espada."
+              "&fEspada: &cDrenagem &e+5",
+              "&fMachado: &aQuebra Armadura &e+7",
+              "",
+              "&7Arraste o livro até a arma",
+              "&7que você quer evoluir."
             ]
           },
           "mb_1": {
@@ -370,21 +370,27 @@
             ]
           },
           "amplifier_1": {
-            "name": "&bEvolução de Amplificador (+1)",
+            "name": "&bEvolução de Amplificador ou Quebra Armadura",
             "lore": [
               "&fRaridade: &bMítico",
               "",
-              "&7Evolua &e+1 nível &7do encantamento",
-              "&dAmplificador &7em sua espada."
+              "&fEspada: &dAmplificador &e+1",
+              "&fMachado: &aQuebra Armadura &e+15",
+              "",
+              "&7Arraste o livro até a arma",
+              "&7que você quer evoluir."
             ]
           },
           "drainage_2": {
-            "name": "&bEvolução de Drenagem (+10)",
+            "name": "&bEvolução de Drenagem ou Quebra Armadura",
             "lore": [
               "&fRaridade: &bMítico",
               "",
-              "&7Evolua &e+10 níveis &7do encantamento",
-              "&cDrenagem &7em sua espada."
+              "&fEspada: &cDrenagem &e+10",
+              "&fMachado: &aQuebra Armadura &e+15",
+              "",
+              "&7Arraste o livro até a arma",
+              "&7que você quer evoluir."
             ]
           },
           "mb_2": {
@@ -421,42 +427,6 @@
               "&7o valor de tokens obtidos.",
               "",
               "&fDuração: &71h &8(Esse tempo é acumulativo)"
-            ]
-          },
-          "skull_cracker_1": {
-            "name": "&dEvolução de Racha Crânio (+10)",
-            "lore": [
-              "&fRaridade: &dRaro",
-              "",
-              "&7Evolua &e+10 níveis &7do encantamento",
-              "&aRacha Crânio &7em seu machado."
-            ]
-          },
-          "skull_cracker_2": {
-            "name": "&bEvolução de Racha Crânio (+20)",
-            "lore": [
-              "&fRaridade: &bMítico",
-              "",
-              "&7Evolua &e+20 níveis &7do encantamento",
-              "&aRacha Crânio &7em seu machado."
-            ]
-          },
-          "armor_breaker_1": {
-            "name": "&6Evolução de Quebra Armadura (+7)",
-            "lore": [
-              "&fRaridade: &6Lendário",
-              "",
-              "&7Evolua &e+7 níveis &7do encantamento",
-              "&aQuebra Armadura &7em seu machado."
-            ]
-          },
-          "armor_breaker_2": {
-            "name": "&bEvolução de Quebra Armadura (+15)",
-            "lore": [
-              "&fRaridade: &bMítico",
-              "",
-              "&7Evolua &e+15 níveis &7do encantamento",
-              "&aQuebra Armadura &7em seu machado."
             ]
           }
         }

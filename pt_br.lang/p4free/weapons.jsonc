@@ -630,6 +630,17 @@
             "{weapon_hint_start}",
             "{weapon_hint_end}"
           ]
+        },
+        // O livro das caixas misteriosas (23/10): um encantamento para cada arma, e o jogador escolhe ao arrastar.
+        "dual": {
+          "name": "&bEvolução de Nível &8(Espada ou Machado)",
+          "lore": [
+            "&fEspada: &d{sword_enchant} &e+{sword_levels}",
+            "&fMachado: &d{axe_enchant} &e+{axe_levels}",
+            "",
+            "&eArraste este item até a arma",
+            "&eque você quer evoluir."
+          ]
         }
       },
 
