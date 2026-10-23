@@ -791,6 +791,36 @@
           // A espera de um evento na barra de ação de todos no p4free (EventCountdownEchoListener), a cada segundo, como
           // o exe-gladiador fazia no servidor do evento.
           "waiting-bar": "&4[{event}] &aComeçando em {time}... &e/{command} entrar",
+          // A celebração do fim nos três eventos (EventPodium), 15 s entre a vitória e a fila de saída: o 3º e o 2º lugar
+          // pela ordem de eliminação, o 1º, o destaque de cada evento (o Mito do Gladiador, quem mais deu hits no ClanFight,
+          // quem mais abateu no FastGlad) e a contagem na barra de ação. O "ACABOU" de cada evento abre a cena.
+          "podium": {
+            "title": {
+              "place": {
+                "title": "&f{position}º lugar",
+                "subtitle": "&7[{clan}&7] &fcom &e{kills} {kills_unit}"
+              },
+              "first": {
+                "title": "&6&l1º LUGAR",
+                "subtitle": "&7[{clan}&7] &fcom &e{kills} {kills_unit} &fe a vitória"
+              },
+              "highlight": {
+                "myth": {
+                  "title": "&5&lMITO",
+                  "subtitle": "&f{player} &7fez &e{amount} {amount_unit} &7e leva a tag &5[Mito]"
+                },
+                "top-hits": {
+                  "title": "&b&lMAIS HITS",
+                  "subtitle": "&f{player} &7deu &b{amount} {amount_unit} &7no {event}"
+                },
+                "top-kills": {
+                  "title": "&c&lMAIS ABATES",
+                  "subtitle": "&f{player} &7fez &c{amount} {amount_unit} &7no {event}"
+                }
+              }
+            },
+            "actionbar": "&fVoltando ao P4Free em &e{time}"
+          },
           "gladiator": {
             // A tag de um clan nos abates e nas mortes, pintada para cada um que lê na cor em que ele vê na name-tag o nick
             // de quem luta por esse clan. O nick vem logo depois e fica na mesma cor.
