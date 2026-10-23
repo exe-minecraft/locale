@@ -245,7 +245,7 @@
             },
             "member-format": "{target_role_prefix}&a{target_name_with_color}",
             "member-separator": "&7, ",
-            "no-online-members": "&7Nenhum",
+            "no-online-members": "&7Ninguém online agora.",
             "success": [
               "",
               " &eInformações do clã:",
@@ -259,6 +259,9 @@
               "",
               "  &fMembros: &7{clan_members_size}/{clan_max_members_size} ({clan_online_members_size} online)",
               "  {clan_online_members}",
+              // A lista acima só tem quem está online. O offline só aparece no /clan membros, e a tag vai junto
+              // porque sem ela o comando abre o clã de quem digita, não o consultado.
+              "  &7Para ver todos os membros, use &f/clan membros {clan_tag}&7.",
               "",
               "  &fKDR: &7{clan_kdr}",
               "  &fAbates: &7{clan_kills}",
