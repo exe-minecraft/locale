@@ -31,10 +31,10 @@
         "player": { "singular": "jogador", "plural": "jogadores" }
       },
       // Os elos do exe-p4free-core sobre o elo da ranqueada 1v1 (o EloTier do duels diz onde cada um começa). A tag
-      // entra no chat de todo jogador menos a staff (Moderador para cima), antes das equipadas, e o hover dela é o "chat-description". Os símbolos de
+      // entra no chat de todo jogador menos a staff (Moderador para cima), antes das equipadas, e o hover dela é o "chat-description", uma linha por item. Os símbolos de
       // pictograma do antigo (☮ ☪ ☫ ☬ ☯ ☣) e o travessão do Starter foram trocados, porque não vão em texto do jogador.
       "elo": {
-        "chat-description": "&7Elo {tier_name} &7no x1, com &f{elo} {points}&7. &eClique para ver o histórico.",
+        "chat-description": ["&7Elo {tier_name} &7no x1, com &f{elo} {points}&7.", "&eClique para ver o histórico."],
         // O fim da lore de cada cabeça do ranking de elo 1v1 no /top: o clique abre o histórico dela.
         "ranking-click": ["", "&eClique para ver o histórico."],
         "tiers": {
