@@ -68,6 +68,36 @@
             " &fDiscord. Entre clicando &a&lAQUI&f.",
             ""
           ],
+          // Os sistemas que o jogador precisa conhecer e que não aparecem sozinhos. O AQUI roda o comando de cada um
+          // (/clan listar, /correio, /ec e /conquistas), que existem no P4Free e no P4Free Eventos.
+          "clans": [
+            "",
+            "&e&l DICA: &fSem clã? Veja os clãs clicando &a&lAQUI&f e peça para",
+            " &fentrar com &a/clan pedido <tag>&f. Para montar o seu, use o",
+            " &a/clan criar&f. O líder e os capitães anunciam o clã para",
+            " &ftodo o P4Free no &a/clan recrutar&f.",
+            ""
+          ],
+          "mail": [
+            "",
+            "&e&l DICA: &fInventário cheio? O item que você recebe não cai no",
+            " &fchão. Ele fica guardado no &a/correio&f. Abra clicando &a&lAQUI&f.",
+            ""
+          ],
+          "chests": [
+            "",
+            "&e&l DICA: &fGuarde os seus itens no &a/ec&f, que fica maior com VIP.",
+            " &fPara guardar a espada e o machado, use o &a/cofre&f.",
+            " &fAbra o seu &a/ec&f clicando &a&lAQUI&f.",
+            ""
+          ],
+          "achievements": [
+            "",
+            "&e&l DICA: &fSuas conquistas ficam no &a/conquistas&f e no &a/perfil&f.",
+            " &fAs de outro jogador aparecem no &a/perfil <jogador>&f.",
+            " &fVeja as suas clicando &a&lAQUI&f.",
+            ""
+          ],
           // Os líderes dos rankings, para provocar quem está atrás. O nome e o número vêm do %tops_<ranking>;<campo>[;weekly]%
           // do plugin tops; a entrada do automessage/config.yml leva o "requires" com o nome, e a mensagem só sai quando o
           // ranking tem alguém (sem isso sairia um nome em branco). Número só em rótulo, porque não passa pelo Plural.
