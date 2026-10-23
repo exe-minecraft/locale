@@ -74,13 +74,35 @@
             "success": "Você está no NPC {npc_name}."
           },
           "move": {
-            "description": "trazer um NPC para onde você está, olhando para onde você olha",
+            "description": "mudar um NPC de lugar",
             "arguments": {
               "name": {
                 "name": "nome",
                 "description": "Nome do NPC"
+              },
+              "x": {
+                "name": "x",
+                "description": "Posição X. Sem as coordenadas, o NPC vem para onde você está, olhando para onde você olha"
+              },
+              "y": {
+                "name": "y",
+                "description": "Posição Y"
+              },
+              "z": {
+                "name": "z",
+                "description": "Posição Z. O NPC continua no mundo em que já está"
+              },
+              "yaw": {
+                "name": "yaw",
+                "description": "Para onde o NPC olha na horizontal, de -180 a 180. Sem ele, continua olhando para onde olhava"
+              },
+              "pitch": {
+                "name": "pitch",
+                "description": "Inclinação da cabeça, de -90 (para cima) a 90 (para baixo). Sem ela, fica como estava"
               }
             },
+            // Pelo console, ou com só uma ou duas das três coordenadas.
+            "missing-coordinates": "Informe as três coordenadas, como em /npc mover {npc_name} <x> <y> <z> [yaw] [pitch]. Sem elas o NPC vem para onde você está, e isso só funciona em jogo.",
             "success": "NPC {npc_name} movido para {npc_world} {npc_x}, {npc_y}, {npc_z}."
           },
           "skin": {
