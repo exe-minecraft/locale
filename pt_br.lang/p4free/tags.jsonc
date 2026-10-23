@@ -7,7 +7,10 @@
       // As palavras que acompanham um número montado no código (o Plural do core): 1 no singular.
       "units": {
         "tag": { "singular": "tag", "plural": "tags" },
-        "code": { "singular": "código", "plural": "códigos" }
+        "code": { "singular": "código", "plural": "códigos" },
+        "border": { "singular": "borda", "plural": "bordas" },
+        "duel": { "singular": "duelo", "plural": "duelos" },
+        "hit": { "singular": "golpe", "plural": "golpes" }
       },
       // As tags que os eventos dão, sem slot (EventTag): entram no chat depois das equipadas, nesta ordem, e a
       // descrição sai ao passar o mouse. A de vencedor é de quem estava no clã quando ele venceu, até o próximo.
@@ -15,7 +18,28 @@
         "gladiator": { "name": "&4[Gladiador]", "description": "&7Estava no clã que venceu o último Gladiador." },
         "clanfight": { "name": "&c[ClanFight]", "description": "&7Estava no clã que venceu o último ClanFight." },
         "fastglad": { "name": "&2[FastGlad]", "description": "&7Estava no clã que venceu o último FastGlad." },
-        "myth": { "name": "&5[Mito]", "description": "&7O Mito atual do Gladiador." }
+        "myth": { "name": "&5[Mito]", "description": "&7O Mito atual do Gladiador." },
+        // O que ele fez na partida que deu a tag, nas linhas debaixo da descrição (EventTagResult). Uma chave por linha,
+        // cada uma com a sua cor, porque o 1.8 desenha cada linha do hover do zero. {kills_text} é o kills.none ou o
+        // kills.some, e {time} conta do começo da luta ("40 segundos", "1 minuto", "18 minutos"). A linha das bordas
+        // (Gladiador e FastGlad) ou dos duelos (ClanFight) só sai com pelo menos uma; sem elas sai a dos golpes.
+        // O unknown é a partida que não gravou como ele terminou (o Gladiador de antes de 24/10).
+        "result": {
+          "kills": {
+            "none": "Não matou ninguém",
+            "some": "Matou {kills}"
+          },
+          "survived": "&7{kills_text} e sobreviveu até o fim.",
+          "died": "&7{kills_text} e morreu com {time} de luta.",
+          "left": "&7{kills_text} e saiu do evento com {time} de luta.",
+          "kicked": "&7{kills_text} e foi expulso com {time} de luta.",
+          "unknown": "&7{kills_text}.",
+          "revived": "&7Morreu com {time} de luta e voltou no revive.",
+          "borders": "&7Passou por {borders} e deu {hits}.",
+          "duels": "&7Venceu {won} de {duels} e deu {hits}.",
+          "hits": "&7Deu {hits}.",
+          "myth": "&7Matou {kills} no Gladiador em que virou Mito."
+        }
       },
       "views": {
         "tags": {
