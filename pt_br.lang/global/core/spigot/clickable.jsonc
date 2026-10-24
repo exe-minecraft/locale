@@ -13,8 +13,8 @@
         // e o clique roda o comando da lista com a página.
         "pages": {
           "line": " {previous}&7Página {page} de {pages}{next}",
-          "previous": "&e← Anterior  ",
-          "next": "  &ePróxima →",
+          "previous": "&e« Anterior  ",
+          "next": "  &ePróxima »",
           "hover": "&eClique para ver a página {page}."
         }
       }

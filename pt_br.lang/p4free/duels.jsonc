@@ -144,7 +144,7 @@
         // O hover dos dois de cima. O clique roda o /elo historico de quem mudou de elo.
         "elo-hover": [
           "&6{player}",
-          "&8 ▸ &fElo 1v1: &7{elo_before} &8→ &f{elo_after}",
+          "&8 ▸ &fElo 1v1: &7{elo_before} &8» &f{elo_after}",
           "&8 ▸ &fElo anterior: {from_tag} {from_name}",
           "&8 ▸ &fPartidas 1v1: &f{matches}",
           "&8 ▸ &fVitórias seguidas: &f{streak}",
@@ -579,7 +579,7 @@
               "lost": { "name": "&cDerrota &8(-{amount} {points})" },
               "lore": [
                 "&7Contra &f{opponent}",
-                "&7Elo: &f{before} &8→ &f{after}",
+                "&7Elo: &f{before} &8» &f{after}",
                 "{tier}",
                 "",
                 "&8{date}"
@@ -622,7 +622,7 @@
             "won": "&8(+{amount} {points})",
             "lost": "&8(-{amount} {points})"
           },
-          "elo": "&7Elo 2v2: &f{before} &8→ &f{after}",
+          "elo": "&7Elo 2v2: &f{before} &8» &f{after}",
           "items": {
             "summary": {
               "name": "&6{player}",

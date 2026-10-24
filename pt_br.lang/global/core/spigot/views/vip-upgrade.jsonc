@@ -50,12 +50,12 @@
         }
       },
       // Uma linha por vantagem da loja que muda do Samurai para o Imperial.
-      "benefit": "&8▸ &7{label}: &f{from} &8→ &a{to}",
+      "benefit": "&8▸ &7{label}: &f{from} &8» &a{to}",
       "benefit-new": "&8▸ &7{label}: &a{to}",
       // A vantagem de texto longo (a party) em várias linhas, para a lore não sair da tela.
       "benefit-label": "&8▸ &7{label}:",
       "benefit-from": "&8   &f{from}",
-      "benefit-to": "&8   → &a{to}",
+      "benefit-to": "&8   » &a{to}",
       "status": {
         "available": "&aClique para evoluir!",
         "insufficient": "&cVocê não tem Cash suficiente.",
