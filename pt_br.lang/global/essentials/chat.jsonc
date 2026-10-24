@@ -142,6 +142,12 @@
             ]
           }
         },
+        // A menção com @ no local e no global, como no exe-chats. O nick mencionado sai na cor abaixo para
+        // todos (depois dele a mensagem volta à cor que tinha), e quem foi mencionado recebe o aviso com som.
+        "mention": {
+          "color": "&c",
+          "notification": "&eVocê foi mencionado por {sender_name_with_color}&e em uma mensagem!"
+        },
         // As tags clicáveis da linha de chat. O texto é a âncora que a ação procura na
         // linha, por isso tem de ser igual ao rótulo do formato acima.
         "tags": {
