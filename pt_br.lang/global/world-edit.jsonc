@@ -75,7 +75,7 @@
           "disabled": "&7Pena desligada.",
           "size": "&aTamanho da pena: &f{size}&a."
         },
-        "setbiome": { "help": "//setbiome <bioma>: muda o bioma da seleção", "done": "&aColunas de bioma alteradas: {count}." },
+        "setbiome": { "help": "//setbiome <bioma>: muda o bioma da seleção", "done": "&aColunas de bioma alteradas: {count}. Quem já estava perto vê a cor nova depois de sair da área e voltar." },
         "biomelist": { "help": "//biomelist [página]: lista os biomas", "page": "&eBiomas ({page}/{pages}): &f{biomes}" },
         "biomeinfo": { "help": "//biomeinfo: mostra o bioma onde você está", "here": "&eBioma aqui: &f{biome}" },
         "count": { "help": "//count <bloco>: conta um bloco na seleção", "done": "&aBlocos de &f{input}&a na seleção: {count}." },
