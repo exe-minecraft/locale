@@ -9,19 +9,15 @@
         "format": {
           "local": "&e[L] &9[BOT] &fVasco&e: &e@{player} {answer}",
           "global": "&7[G] &9[BOT] &fVasco&f: &7@{player} {answer}",
-          // A resposta repetida no canal e as dicas de clã vão só para quem escreveu.
+          // A resposta repetida no canal e a dica do /clan recrutar vão só para quem escreveu.
           "private": "&9[BOT] &fVasco &8(só você vê)&f: {answer}"
         },
         "answers": {
-          // O 15 e o 20 são o cps_limit e o right_cps_limit do polar.yml do host, os mesmos do aviso do anticheat.
-          // O repositório não diz quanto tempo a mitigação dura, e a resposta não promete.
-          "cps": "&fO limite é de &a15 CPS&f, ou &a20&f no botão direito. Acima disso o anticheat mitiga, e os seus golpes deixam de contar por um tempo. Quando acontece, aparece &cLimite de CPS excedido!&f na tela.",
-          // O estado de agora, lido da fase de cada evento no Redis. Sem horário, porque a staff abre os eventos na mão.
-          "events": {
-            "open": "&fO &a{event}&f está com as entradas abertas! Para entrar, clique &a&lAQUI&f ou use &a/{command} entrar&f.",
-            "running": "&fO &a{event}&f já começou. Para assistir do camarote, clique &a&lAQUI&f.",
-            "none": "&fNenhum evento está rolando agora. A staff abre os eventos e avisa aqui no chat e no Discord. Para entrar no Discord, clique &a&lAQUI&f."
-          },
+          // O 15 é o cps_limit do polar.yml do host, o mesmo do aviso do anticheat. O botão direito (o right_cps_limit)
+          // ficou de fora a pedido do dono (24/10). O repositório não diz quanto tempo a mitigação dura, e a resposta
+          // não promete.
+          "cps": "&fO limite é de &a15 CPS&f. Acima disso o anticheat mitiga, e os seus golpes deixam de contar por um tempo. Quando acontece, aparece &cLimite de CPS excedido!&f na tela.",
+          // O estado de agora, lido da fase de cada evento no Redis.
           "camarote": {
             "live": "&fO &a{event}&f está rolando. Para assistir do camarote, clique &a&lAQUI&f ou use &a/{command} camarote entrar&f.",
             "none": "&fO camarote abre quando um evento começa. Na hora, use &a/glad camarote entrar&f, e o mesmo vale para o &a/cf&f e o &a/fg&f."
@@ -41,8 +37,6 @@
           // Sem clique: o events-1 não tem o /x1.
           "x1": "&fUse &a/x1&f para abrir o menu, &a/x1 fila 1v1&f ou &a/x1 fila 2v2&f para a fila ranqueada e &a/x1 <nick>&f para desafiar alguém.",
           "lixo": "&fPara jogar itens fora, use &a/lixo&f. O que ficar dentro some quando você fechar. Para abrir agora, clique &a&lAQUI&f.",
-          "clan-authorization": "&fQuem autoriza os clãs para os eventos é a staff. Se o seu ainda não foi autorizado, peça no ticket &aConfirmação de clã&f do Discord. Para entrar, clique &a&lAQUI&f.",
-          "clan-looking": "&fProcurando clã? Quando um clã anunciar com &a/clan recrutar&f, clique no anúncio para pedir para entrar. Para ver os clãs, use &a/clan listar&f.",
           "clan-recruiting": "&fO líder e os capitães podem anunciar o clã para todo o P4Free com &a/clan recrutar&f. O anúncio tem um clique para quem está sem clã pedir para entrar. Para usar, clique &a&lAQUI&f."
         }
       }
