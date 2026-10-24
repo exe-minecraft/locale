@@ -474,7 +474,10 @@
             "description": "ver o ranking de rushes vencidos"
           },
           "topviradas": {
-            "description": "ver o ranking de viradas em rushes"
+            "description": "ver os clans que mais deram virada nos rushes"
+          },
+          "topviradaslevadas": {
+            "description": "ver os clans que mais levaram virada nos rushes"
           },
           "event-force-join": {
             "description": "enviar um jogador ao Gladiador",

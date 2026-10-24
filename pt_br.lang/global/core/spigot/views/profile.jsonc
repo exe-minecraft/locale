@@ -77,6 +77,27 @@
             "&aClique para ver as de {target_name}."
           ]
         },
+        // Os eventos que ele jogou (o dono, 24/10), no menu core/spigot/views/profile/events.
+        "events": {
+          "name": "&6Eventos",
+          "lore": [
+            "&7Gladiador, ClanFight, FastGlad e CxC.",
+            "&7O seu desempenho em cada um e",
+            "&7todas as partidas que você jogou.",
+            "",
+            "&aClique para ver os seus eventos."
+          ]
+        },
+        "events-public": {
+          "name": "&6Eventos",
+          "lore": [
+            "&7Gladiador, ClanFight, FastGlad e CxC.",
+            "&7O desempenho em cada um e todas",
+            "&7as partidas que este jogador jogou.",
+            "",
+            "&aClique para ver os de {target_name}."
+          ]
+        },
         "purchases": {
           "name": "&aSuas compras",
           "lore": [
@@ -123,6 +144,79 @@
       "site-link": "&aLink pronto. &b&nClique para abrir o site&r &8(vale 1 minuto)",
       "site-link-hover": "&7Abre o site já logado. Não mande este link a ninguém.",
       "site-link-unavailable": "Não deu para gerar o link do site agora. Tente de novo em instantes."
+    },
+    // O botão "Eventos" do /perfil (o dono, 24/10): o desempenho somado e as partidas uma a uma, de quem foi aberto.
+    // As partidas canceladas aparecem na lista e não entram em nenhum número do resumo.
+    "player-events": {
+      "title": "Eventos de {target_name}",
+      "unknown": "?",
+      "none": "&7nenhum",
+      "match-link": "&aClique aqui para ver a partida completa no site.",
+      "match-link-hover": "&7Abre a página da partida em rede-exe.com.",
+      "hits": "&8 ▸ &fGolpes acertados: &b{hits}",
+      "top-killer": "&8 ▸ &fMais abates: {player} &7({kills})",
+      // No Gladiador o destaque é o Mito, o que mais abateu no clã vencedor.
+      "top-killer-gladiator": "&8 ▸ &fMito: {player} &7({kills})",
+      "summary-none": ["&7Nenhuma partida ainda.", ""],
+      "summary-event": [
+        "&e{event}",
+        "&8 ▸ &fPartidas: &b{matches} &8| &fVitórias: &a{wins} &7({rate}%)",
+        "&8 ▸ &fAbates: &b{kills} &8| &fMortes: &c{deaths}",
+        ""
+      ],
+      "events": { "all": "Todos", "gladiator": "Gladiador", "clan-fight": "ClanFight", "fast-glad": "FastGlad", "cxc": "CxC" },
+      // Como o jogador terminou a partida, o ParticipantState do jogo, como na página da partida no site.
+      "states": {
+        "ALIVE": "&aSobreviveu",
+        "ELIMINATED": "&cEliminado",
+        "LEFT": "&eSaiu",
+        "WEB_LEFT": "&eSaiu na teia",
+        "KICKED": "&eExpulso",
+        "COMBAT_LOGGED": "&cDeslogou em combate",
+        "WEB_LOGGED": "&cDeslogou na teia",
+        "DISCONNECTED": "&7Caiu",
+        "none": "&7Sem registro"
+      },
+      "filter": { "selected": "&f ▶ {filter}", "unselected": "&7 ▶ {filter}" },
+      "items": {
+        "summary": {
+          "name": "&6Desempenho de {target_name}",
+          "lore": [
+            "&7A soma das partidas que valeram.",
+            "",
+            "{events}",
+            "&7Clique numa partida para abrir",
+            "&7a página dela no site."
+          ],
+          "loading": ["&7Carregando..."],
+          "unavailable": ["&cNão deu para carregar o desempenho agora.", "&7Tente de novo em instantes."]
+        },
+        "match": {
+          "name": {
+            "won": "&a{event} &8» &aVitória",
+            "lost": "&c{event} &8» &cDerrota",
+            "cancelled": "&7{event} &8» &7Cancelado"
+          },
+          "lore": [
+            "&7{date} &8(temporada {season})",
+            "",
+            "&8 ▸ &fComo terminou: {state}",
+            "&8 ▸ &fAbates: &b{kills}",
+            "&8 ▸ &fMortes: &c{deaths}",
+            "{hits}",
+            "",
+            "&8 ▸ &fVencedor: {winner}",
+            "&8 ▸ &fParticipantes: &b{participants} &8| &fClãs: &b{clans}",
+            "{top_killer}",
+            "&8 ▸ &fDuração: &7{duration}",
+            "",
+            "&aClique para ver a partida no site."
+          ]
+        },
+        "previous": { "name": "&ePartidas mais recentes" },
+        "next": { "name": "&ePartidas mais antigas" },
+        "filter": { "name": "&bEscolha qual evento ver", "lore": ["", "{filters}", "", "&bClique para trocar."] }
+      }
     } }
   } }
 }
