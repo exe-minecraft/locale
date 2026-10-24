@@ -273,7 +273,7 @@
           "restarting": "&cO servidor está {action_name_gerund}. Não dá para começar um CxC agora.",
           "no-clan": "&cVocê não está num clã.",
           "not-officer": "&cSó o líder ou um capitão responde pelo clã no CxC.",
-          "not-vip": "&cO CxC é uma vantagem dos VIPs.",
+          "not-vip": "&cDesafiar e aceitar um CxC é uma vantagem dos VIPs.",
           "unknown-clan": "&cNenhum clã com a tag {tag}.",
           "same-clan": "&cVocê não pode desafiar o próprio clã.",
           "in-cxc": "&cSeu clã já está num CxC.",
@@ -286,7 +286,7 @@
           "no-kit": "&cO kit do CxC ainda não foi gravado pela staff.",
           "no-invite": "&cO clã {tag} &cnão desafiou o seu, ou o convite expirou.",
           "arena-gone": "&cO mapa escolhido saiu do ar. O convite foi cancelado.",
-          "empty-side": "&cO CxC não começou porque o clã {tag}&c não tem nenhum VIP livre.",
+          "empty-side": "&cO CxC não começou porque o clã {tag}&c não tem nenhum membro livre.",
           "not-fighting": "&cO clã {tag} &cnão está lutando agora.",
           "kit-busy": "&cSaia dos duelos e do camarote antes de gravar o kit.",
           "kit-empty": "&cSeu inventário está vazio. Monte o kit antes."
@@ -295,14 +295,14 @@
           "sent": [
             "",
             "&eSeu clã acaba de enviar um convite de duelo para o clã {tag}&e.",
-            "&eEles têm &a{time} &epara aceitar o duelo. Apenas &bjogadores VIPs &eserão puxados para a arena.",
+            "&eEles têm &a{time} &epara aceitar o duelo. Todos os membros online e livres serão puxados para a arena.",
             ""
           ],
           "received": [
             "",
             "&eO clã {tag} &eacabou de desafiar o seu clã para um duelo!",
             "&8 ▸ &fMapa: &7{arena}",
-            "&8 ▸ &fVIPs online: &a{challengers} &7contra &a{defenders}",
+            "&8 ▸ &fMembros online: &a{challengers} &7contra &a{defenders}",
             "{accept} {decline}",
             "",
             "&eO convite expira em {time}.",
@@ -314,13 +314,6 @@
           "expired-target": "&7O convite de CxC do clã {tag} &7expirou."
         },
         "left-out": {
-          "not-vip": [
-            "",
-            "&cVocê não foi puxado para o CxC do seu clã.",
-            "&fApenas &cjogadores VIPs &fsão puxados e participam do CxC.",
-            "&fNão perca a próxima batalha. Acesse &ewww.rede-exe.com",
-            ""
-          ],
           "busy": "&cVocê ficou de fora do CxC do seu clã:"
         },
         "kit-saved": "&aKit do CxC gravado com {pieces}. Vale a partir do próximo duelo.",
@@ -756,7 +749,7 @@
                   "&8 ▸ &fOnline: &f{clan_online}",
                   "&8 ▸ &fVIPs online: &b{clan_vips}",
                   "",
-                  "&7Só os VIPs vão para a arena."
+                  "&7Os membros online e livres vão para a arena."
                 ]
               }
             },
@@ -764,7 +757,7 @@
               "name": "&6Desafiar um clã",
               "lore": [
                 "&7O líder ou um capitão VIP escolhe",
-                "&7o clã e o mapa. Os VIPs online",
+                "&7o clã e o mapa. Os membros online",
                 "&7dos dois clãs vão para a arena.",
                 "",
                 "{challenge_action}"
