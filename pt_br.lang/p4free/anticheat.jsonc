@@ -52,8 +52,7 @@
               "page": { "name": "página", "description": "Número da página" }
             },
             "empty": "&4&lAC &c| &7{player} não tem nenhuma log no anticheat.",
-            "header": "&4&lAC &c| &7Logs de &c{player} &8(página {page} de {pages})",
-            "next": "&7Para a próxima página, use &c/shawzyylogs ver {player} {next}&7."
+            "header": "&4&lAC &c| &7Logs de &c{player} &8(página {page} de {pages})"
           },
           "recent": {
             "description": "ver as logs mais recentes dos dois servidores, dos últimos 7 dias",
@@ -61,8 +60,7 @@
               "page": { "name": "página", "description": "Número da página" }
             },
             "empty": "&4&lAC &c| &7Nenhuma log no anticheat nos últimos 7 dias.",
-            "header": "&4&lAC &c| &7Logs recentes &8(página {page} de {pages})",
-            "next": "&7Para a próxima página, use &c/shawzyylogs recentes {next}&7."
+            "header": "&4&lAC &c| &7Logs recentes &8(página {page} de {pages})"
           },
           "info": {
             "description": "ver quantas vezes cada verificação pegou um jogador",

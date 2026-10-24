@@ -346,7 +346,7 @@
             "entry-hover": "&e/clan info {clan_tag}",
             "footer": [
               "",
-              " &8Página {page} de {total_pages}",
+              "{navigation}",
               ""
             ]
           },

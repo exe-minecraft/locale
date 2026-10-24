@@ -107,12 +107,7 @@
             "hover-click": [
               "",
               "&eClique para ver o histórico do jogador."
-            ],
-            "previous": "&e← Anterior  ",
-            "next": "  &ePróxima →",
-            "previous-hover": "&eClique para ver a página anterior.",
-            "next-hover": "&eClique para ver a próxima página.",
-            "footer": " {hpunish_previous}&7Página {hpunish_page} de {hpunish_pages}{hpunish_next}"
+            ]
           }
         },
         "punishment-statistics": {

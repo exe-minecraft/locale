@@ -54,15 +54,7 @@
           "header": "&6&lComandos recentes de &e{player} &6(Página {page}/{pages}):",
           "entry": "&8{index}. &f{command} &7({time} atrás)",
           "copy": "&7Clique para copiar",
-          "navigation": {
-            "separator": "&7&m                                                ",
-            "line": "{previous}  &7|  {next}",
-            "previous": "&a&l« Anterior",
-            "previous-disabled": "&8&l« Anterior",
-            "next": "&a&lPróxima »",
-            "next-disabled": "&8&lPróxima »",
-            "hover": "&7Ir para página {page}"
-          }
+          "separator": "&7&m                                                "
         },
         "target": {
           "arguments": {
