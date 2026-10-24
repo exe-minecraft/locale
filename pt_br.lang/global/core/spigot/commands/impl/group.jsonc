@@ -286,6 +286,11 @@
         // O /upgradevip abre o menu do upgrade do Samurai para o Imperial (o texto do menu está em views/vip-upgrade).
         "vip-upgrade": {
           "description": "evoluir o seu VIP Samurai para o Imperial"
+        },
+        // O /vip manda a linha clicável que abre a loja do site já com o nick de quem digitou.
+        "vip": {
+          "description": "abrir a loja para comprar o seu VIP",
+          "store-link": "&aClique aqui para comprar o seu VIP na loja."
         }
       }
     }
