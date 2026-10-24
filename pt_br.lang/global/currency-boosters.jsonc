@@ -1,0 +1,41 @@
+{
+  "plugins": {
+    // O anúncio do booster global (o GlobalBoosterAnnouncement) vai à rede toda, e os lobbies só recebem o global. Por
+    // isso ele vive aqui, e o resto dos boosters no p4free. Os espaços do título o centram sobre as linhas de baixo, e
+    // cada linha cabe nos 320 px do chat do 1.8 com o booster da loja.
+    "currency-boosters": {
+      "announce": {
+        "activated": {
+          "chat": [
+            "",
+            "              &6&lBOOSTER GLOBAL ATIVADO!",
+            "",
+            " &fO jogador {player_name_with_tag} &fativou um booster de",
+            " &e{multiplier}x {currency} &fpara todo o P4Free",
+            " &fdurante &e{duration} &f({ends_at}).",
+            ""
+          ],
+          "title": "&6&l{multiplier}x {currency}",
+          "subtitle": "&fBooster global ativado por {player_name_with_color}"
+        },
+        "extended": {
+          "chat": [
+            "",
+            "            &6&lBOOSTER GLOBAL ESTENDIDO!",
+            "",
+            " &fO jogador {player_name_with_tag} &fsomou &e{duration}",
+            " &fao booster de &e{multiplier}x {currency}&f, que agora vale",
+            " &fpor &e{remaining} &f({ends_at}).",
+            ""
+          ],
+          "title": "&6&l{multiplier}x {currency}",
+          "subtitle": "&fBooster global estendido por {player_name_with_color}"
+        },
+        "ends": {
+          "today": "até as {time}",
+          "later": "até o dia {date} às {time}"
+        }
+      }
+    }
+  }
+}
