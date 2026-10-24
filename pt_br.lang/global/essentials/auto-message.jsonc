@@ -98,6 +98,15 @@
             " &fVeja as suas clicando &a&lAQUI&f.",
             ""
           ],
+          // A menção com @ no chat (essentials, ChatMentions), no local e no global. Sem AQUI, porque não há comando
+          // para rodar. O TAB do chat sem barra e o do /g completam o nick depois do @.
+          "mention": [
+            "",
+            "&e&l DICA: &fPara chamar alguém, escreva &a@&f e o nick no chat.",
+            " &fO nick sai em destaque, e a pessoa recebe um aviso",
+            " &fcom som. O &aTAB&f completa o nick depois do &a@&f.",
+            ""
+          ],
           // Os líderes dos rankings, para provocar quem está atrás. O nome e o número vêm do %tops_<ranking>;<campo>[;weekly]%
           // do plugin tops; a entrada do automessage/config.yml leva o "requires" com o nome, e a mensagem só sai quando o
           // ranking tem alguém (sem isso sairia um nome em branco). Número só em rótulo, porque não passa pelo Plural.
