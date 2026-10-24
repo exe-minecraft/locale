@@ -1,0 +1,51 @@
+{
+  "plugins": {
+    "essentials": {
+      // O Vasco, o bot que responde no chat do P4Free as perguntas que mais aparecem (essentials, setups/chatbot).
+      // Cada resposta é uma frase só, e o formato do canal põe na frente o canal, o nome do bot e a menção de quem
+      // perguntou. O "AQUI" é o clique da resposta. Texto que cita comando só cita o que existe no p4free-1 e no
+      // events-1, porque a resposta do global chega aos dois.
+      "chatbot": {
+        "format": {
+          "local": "&e[L] &9[BOT] &fVasco&e: &e@{player} {answer}",
+          "global": "&7[G] &9[BOT] &fVasco&f: &7@{player} {answer}",
+          // A resposta repetida no canal e as dicas de clã vão só para quem escreveu.
+          "private": "&9[BOT] &fVasco &8(só você vê)&f: {answer}"
+        },
+        "answers": {
+          // O 15 e o 20 são o cps_limit e o right_cps_limit do polar.yml do host, os mesmos do aviso do anticheat.
+          // O repositório não diz quanto tempo a mitigação dura, e a resposta não promete.
+          "cps": "&fO limite é de &a15 CPS&f, ou &a20&f no botão direito. Acima disso o anticheat mitiga, e os seus golpes deixam de contar por um tempo. Quando acontece, aparece &cLimite de CPS excedido!&f na tela.",
+          // O estado de agora, lido da fase de cada evento no Redis. Sem horário, porque a staff abre os eventos na mão.
+          "events": {
+            "open": "&fO &a{event}&f está com as entradas abertas! Para entrar, clique &a&lAQUI&f ou use &a/{command} entrar&f.",
+            "running": "&fO &a{event}&f já começou. Para assistir do camarote, clique &a&lAQUI&f.",
+            "none": "&fNenhum evento está rolando agora. A staff abre os eventos e avisa aqui no chat e no Discord. Para entrar no Discord, clique &a&lAQUI&f."
+          },
+          "camarote": {
+            "live": "&fO &a{event}&f está rolando. Para assistir do camarote, clique &a&lAQUI&f ou use &a/{command} camarote entrar&f.",
+            "none": "&fO camarote abre quando um evento começa. Na hora, use &a/glad camarote entrar&f, e o mesmo vale para o &a/cf&f e o &a/fg&f."
+          },
+          // O cupom em destaque da loja, o mesmo que o anúncio da plataforma divulga. Sem destaque não quer dizer sem
+          // cupom (o de parceiro não aparece), e o "none" diz só que não há destaque.
+          "cupom": {
+            "featured": "&fO cupom em destaque agora é o &a&l{code}&f. Para usar na loja, clique &a&lAQUI&f.",
+            "none": "&fNenhum cupom está em destaque agora. Quando sai um, ele é anunciado aqui no chat e no Discord. Para entrar no Discord, clique &a&lAQUI&f."
+          },
+          // Sem clique: o events-1 não tem /shop. As caixas só têm preço em cash no shop/config.yml.
+          "caixa": "&fAs caixas são compradas com cash no &a/shop&f do P4Free. Para ver os prêmios, use &a/caixas ver basic&f ou &a/caixas ver advanced&f.",
+          "loja": "&fA loja oficial é &aloja.rede-exe.com&f, com os VIPs e o cash. Para abrir, clique &a&lAQUI&f.",
+          "discord": "&fO nosso Discord é &adiscord.rede-exe.com&f. Lá você abre ticket de dúvida, compra, denúncia ou confirmação de clã. Para entrar, clique &a&lAQUI&f.",
+          // Não existe /report: a denúncia é o ticket de denúncias do Discord.
+          "staff": "&fPara falar com a staff, abra um ticket no Discord, em &adiscord.rede-exe.com&f. As denúncias também são feitas por lá.",
+          // Sem clique: o events-1 não tem o /x1.
+          "x1": "&fUse &a/x1&f para abrir o menu, &a/x1 fila 1v1&f ou &a/x1 fila 2v2&f para a fila ranqueada e &a/x1 <nick>&f para desafiar alguém.",
+          "lixo": "&fPara jogar itens fora, use &a/lixo&f. O que ficar dentro some quando você fechar. Para abrir agora, clique &a&lAQUI&f.",
+          "clan-authorization": "&fQuem autoriza os clãs para os eventos é a staff. Se o seu ainda não foi autorizado, peça no ticket &aConfirmação de clã&f do Discord. Para entrar, clique &a&lAQUI&f.",
+          "clan-looking": "&fProcurando clã? Quando um clã anunciar com &a/clan recrutar&f, clique no anúncio para pedir para entrar. Para ver os clãs, use &a/clan listar&f.",
+          "clan-recruiting": "&fO líder e os capitães podem anunciar o clã para todo o P4Free com &a/clan recrutar&f. O anúncio tem um clique para quem está sem clã pedir para entrar. Para usar, clique &a&lAQUI&f."
+        }
+      }
+    }
+  }
+}
