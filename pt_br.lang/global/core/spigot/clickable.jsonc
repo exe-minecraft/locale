@@ -8,6 +8,14 @@
           "run-command": "&eClique para usar &f{value}&e.",
           "suggest-command": "&eClique para escrever &f{value} &eno chat.",
           "open-url": "&eClique para abrir &f{value}&e."
+        },
+        // O rodapé de toda lista paginada no chat (PageNavigation). {previous} e {next} somem quando não há para onde ir,
+        // e o clique roda o comando da lista com a página.
+        "pages": {
+          "line": " {previous}&7Página {page} de {pages}{next}",
+          "previous": "&e← Anterior  ",
+          "next": "  &ePróxima →",
+          "hover": "&eClique para ver a página {page}."
         }
       }
     }
