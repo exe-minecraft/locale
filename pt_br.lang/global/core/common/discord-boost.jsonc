@@ -3,20 +3,29 @@
     "core": {
       // O boost no Discord da rede, anunciado no chat da rede toda. A plataforma manda quando o bot vê a mensagem de
       // boost do servidor. {name} é o nick do jogo de quem tem o Discord vinculado, e o nome do Discord de quem não tem.
+      // No molde do anúncio do booster global: os espaços do título o centram sobre as linhas de baixo, fora do
+      // negrito, e cada linha cabe nos 320 px do chat do 1.8 com um nick de 16 letras largas e 10 boosts. A Berserker
+      // sai sozinha para quem impulsiona com a conta vinculada (a plataforma, pela lista do bot).
       "discord-boost": {
         "announce": {
           "one": [
             "",
-            "&d&l  BOOSTER",
-            "&f{name} &7impulsionou o nosso Discord! Impulsione você também em &ddiscord.rede-exe.com&7.",
-            " &7Quem impulsiona ganha a &dBerserker de booster&7 no &d/berserker&7. Abra um ticket para liberar.",
+            "                           &d&lBOOSTER",
+            "",
+            " &d{name} &fimpulsionou o nosso Discord!",
+            " &fImpulsione você também em &ddiscord.rede-exe.com",
+            " &fe ganhe a &dBerserker de booster &fno &d/berserker&f.",
+            " &fBasta ter a conta vinculada com &d/discord&f.",
             ""
           ],
           "other": [
             "",
-            "&d&l  BOOSTER",
-            "&f{name} &7impulsionou o nosso Discord &d{count} vezes&7! Impulsione você também em &ddiscord.rede-exe.com&7.",
-            " &7Quem impulsiona ganha a &dBerserker de booster&7 no &d/berserker&7. Abra um ticket para liberar.",
+            "                           &d&lBOOSTER",
+            "",
+            " &d{name} &fimpulsionou o nosso Discord &d{count} vezes&f!",
+            " &fImpulsione você também em &ddiscord.rede-exe.com",
+            " &fe ganhe a &dBerserker de booster &fno &d/berserker&f.",
+            " &fBasta ter a conta vinculada com &d/discord&f.",
             ""
           ]
         }

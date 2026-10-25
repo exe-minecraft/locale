@@ -54,12 +54,12 @@
             " &fmelhora a espada e o machado no &a/espada&f e no &a/machado&f.",
             ""
           ],
-          // A vantagem de quem impulsiona o Discord (o /boostdiscord da staff libera). Sem clique: o ticket é no Discord.
+          // A vantagem de quem impulsiona o Discord, que sai sozinha para quem tem a conta vinculada. Sem clique.
           "booster": [
             "",
             "&d&l BOOSTER: &fImpulsione o Discord da rede e ganhe a &dBerserker",
-            " &fde &a2 minutos&f no &a/berserker&f, com espera própria. Depois de",
-            " &fimpulsionar, abra um ticket em &ddiscord.rede-exe.com&f.",
+            " &fde &a2 minutos&f no &a/berserker&f, com espera própria. Basta ter",
+            " &fa conta vinculada com o &a/discord&f.",
             ""
           ],
           "discord": [

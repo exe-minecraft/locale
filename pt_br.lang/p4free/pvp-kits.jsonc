@@ -33,8 +33,8 @@
           "&7Tem espera própria, separada",
           "&7das outras poções.",
           "",
-          "&cImpulsione o Discord da rede e abra um",
-          "&cticket para liberar: &fdiscord.rede-exe.com"
+          "&cImpulsione o Discord da rede com a",
+          "&cconta vinculada (&f/discord&c) para liberar."
         ],
         "color": {
           "long": "&6",
@@ -135,7 +135,7 @@
         "berserker-denied": "&c&l[EXE] &cVocê não possui permissão para adquirir essa poção.",
         "berserker-cooldown": "&c&l[EXE] &cVocê precisa aguardar mais tempo para pegar outra poção!",
         "berserker-given": "&aVocê adquiriu a Berserker com sucesso!",
-        "booster-denied": "&cEssa Berserker é de quem impulsiona o Discord da rede. Impulsione e abra um ticket para liberar.",
+        "booster-denied": "&cEssa Berserker é de quem impulsiona o Discord da rede com a conta vinculada. Para vincular, use /discord.",
         "berserker-removed": "&cAs Berserker mais longas do que o seu grupo libera foram tiradas do seu inventário.",
         "berserker-pickup-denied": "&cEssa Berserker é exclusiva de quem tem acesso a ela no /berserker ou no kit VIP.",
         "entitlement-owned": "&cVocê já tem essa Berserker no /berserker. Guarde o vale para quando acabar.",
