@@ -107,6 +107,14 @@
             " &fcom som. O &aTAB&f completa o nick depois do &a@&f.",
             ""
           ],
+          // O /cxc mapas (25/10), só na lista do p4free-1, que é onde o CxC roda. O AQUI abre a lista dos mapas.
+          "cxc-maps": [
+            "",
+            "&e&l DICA: &fConheça os mapas do &aCxC&f antes de desafiar outro",
+            " &fclã. Voe por cima de cada um, sem itens, clicando &a&lAQUI&f.",
+            " &fPara sair da visita, use &a/cxc sair&f.",
+            ""
+          ],
           // Os líderes dos rankings, para provocar quem está atrás. O nome e o número vêm do %tops_<ranking>;<campo>[;weekly]%
           // do plugin tops; a entrada do automessage/config.yml leva o "requires" com o nome, e a mensagem só sai quando o
           // ranking tem alguém (sem isso sairia um nome em branco). Número só em rótulo, porque não passa pelo Plural.

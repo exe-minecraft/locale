@@ -265,7 +265,16 @@
         "watching": "&7{player} &7está assistindo à sua luta.",
         "stopped-watching": "&7{player} &7parou de assistir à sua luta.",
         "not-watching": "&cVocê não está no camarote.",
-        "not-fighting": "&c{player}&c não está lutando agora."
+        "not-fighting": "&c{player}&c não está lutando agora.",
+        // O /cxc mapas (pedido do dono, 25/10): o camarote sem partida, voando por cima de um mapa livre do CxC.
+        "visit": {
+          "arrived": "&aVocê está visitando o mapa {map}&a. Para sair, use &f/cxc sair&a.",
+          "already": "&cVocê já está visitando o mapa {map}&c.",
+          "left": "&7Você saiu da visita aos mapas.",
+          "ended": "&cUm CxC vai começar no mapa que você visitava, então a visita acabou.",
+          // Quem visita entra no CxC do próprio clã: a visita acaba logo antes de ele ir para a arena.
+          "clan-fight": "&eSeu clã vai lutar um CxC agora, então a visita acabou e você vai para a arena."
+        }
       },
       // O CxC, duelo de clãs (spec docs/superpowers/specs/2026-10-10-p4free-cxc-design.md no exe).
       "cxc": {
@@ -331,8 +340,23 @@
           "count-3": { "title": "&8➎ &8➍ &6➌ &8➋ &8➊", "subtitle": "" },
           "count-2": { "title": "&8➎ &8➍ &8➌ &e➋ &8➊", "subtitle": "" },
           "count-1": { "title": "&8➎ &8➍ &8➌ &8➋ &a➊", "subtitle": "" },
-          "fight": { "title": "&a&lLUTE!", "subtitle": "" }
+          "fight": { "title": "&a&lLUTE!", "subtitle": "" },
+          // O fim (pedido do dono, 25/10): quem venceu, quem perdeu e o camarote, e aos 3 s o destaque para todos.
+          "victory": { "title": "&6&lVITÓRIA", "subtitle": "&f[&7{winner}&f] &7venceu com &a{alive} &7de pé" },
+          "defeat": { "title": "&c&lDERROTA", "subtitle": "&f[&7{winner}&f] &7venceu o CxC" },
+          "cabin-victory": { "title": "&f[&7{winner}&f] &6&lVENCEU", "subtitle": "&7contra &f[&7{loser}&f]&7, em {duration}" },
+          // O tempo máximo acabou com os dois clãs de pé.
+          "draw-time": { "title": "&e&lEMPATE", "subtitle": "&7O tempo acabou com &f[&7{first}&f] &7e &f[&7{second}&f] &7de pé" },
+          // O empate sem ninguém de pé.
+          "draw": { "title": "&e&lEMPATE", "subtitle": "&7O CxC entre &f[&7{first}&f] &7e &f[&7{second}&f] &7terminou sem vencedor" },
+          "top-kills": { "title": "&c&lMAIS ABATES", "subtitle": "&f{player} &7fez &c{kills} &7pelo &f[&7{tag}&f]" }
         },
+        // A contagem da saída nos 10 s de celebração depois do fim, na barra de ação.
+        "celebration": {
+          "exit": "&fVoltando ao spawn em &e{seconds}s"
+        },
+        // A conta de vitórias do clã vencedor, quando a plataforma confirma a soma.
+        "wins-count": "&7É a &f{wins}ª &7vitória do clã &f[&7{tag}&f] &7no CxC.",
         "strength": {
           "warning": "&e&lAVISO: &eEm &c{time} &etodos os jogadores vivos receberão &c&lForça III&e!",
           "applied": [
@@ -352,7 +376,22 @@
           "win": "&7Vitória do clã {winner} &7contra {loser}&7: &6{winners} &8(abates: {winner_kills}) &7contra &f{losers} &8(abates: {loser_kills})&7. Duração: &f{duration}&7.",
           "draw": "&7O CxC entre {first} &7e {second} &7terminou empatado. Duração: &f{duration}&7.",
           // Um lado inteiro saiu antes do "LUTE!": não houve luta, e a vitória não é gravada.
-          "cancelled": "&7O CxC entre {first} &7e {second} &7acabou antes da luta começar."
+          "cancelled": "&7O CxC entre {first} &7e {second} &7acabou antes da luta começar.",
+          // A vitória em bloco (pedido do dono, 25/10), uma mensagem por linha. {winners} e {losers} viram os nomes, com as
+          // estatísticas no hover e o inventário no clique; {top} é a linha do destaque, e some sem nenhum abate. Os mapas
+          // de hoje se chamam "Arena ...", daí o "na" antes do {map}.
+          "victory": [
+            "",
+            "&6&l VITÓRIA DO CLÃ &f[&7{winner}&f]",
+            "&f [&7{winner}&f] &a{winner_alive}&7/{winner_size} de pé, &f{winner_kills}",
+            "&f [&7{loser}&f] &c{loser_alive}&7/{loser_size} de pé, &f{loser_kills}",
+            "{top}",
+            "&7 Duração: &f{duration} &7na &f{map}",
+            "&7 Vencedores: &6{winners}",
+            "&7 Derrotados: &f{losers}",
+            ""
+          ],
+          "top": "&7 Destaque: &f{player} &7com &c{kills}"
         },
         "broadcast": {
           // Uma linha para o backend local: início da contagem com camarote clicável e término, inclusive cancelamento.
@@ -361,7 +400,9 @@
           "watch-hover": "&eClique para assistir a este CxC do camarote.",
           "win": "&fO clã {winner} &fvenceu o clã {loser} &fno &6CxC&f.",
           "draw": "&fO &6CxC &fentre {first} &fe {second} &fterminou empatado.",
-          "cancelled": "&fO &6CxC &fentre {first} &fe {second} &ffoi cancelado antes de começar."
+          "cancelled": "&fO &6CxC &fentre {first} &fe {second} &ffoi cancelado antes de começar.",
+          // A vitória com quantos ficaram de pé e quanto durou (pedido do dono, 25/10).
+          "victory": "&fO clã &f[&7{winner}&f] &fvenceu o clã &f[&7{loser}&f] &fno &6CxC &7({alive} de {size} de pé, em {duration})&f."
         },
         "scoreboard": {
           "lines": [
@@ -381,7 +422,48 @@
           "side": "&f   &7{tag} &f{alive}",
           "strength-in": "&f Força III em: &c{time}",
           "strength-on": "&f Força III em: &cAtiva",
-          "kills": "&f Abates no duelo: &c{kills}"
+          "kills": "&f Abates no duelo: &c{kills}",
+          // O placar das sugestões que o dono escolheu em 25/10 (P1 a P7, P9 e P10). As linhas de cima são as do jar de
+          // antes e saem depois da troca. A onda do EXE e depois a do CXC, a 600 ms, como nos eventos.
+          "title": [
+            "&c&lEXE", "&4&lE&c&lXE", "&4&lE&4&lX&c&lE", "&4&lEXE", "&4&lEX&c&lE", "&4&lE&c&lXE",
+            "&c&lEXE", "&4&lE&c&lXE", "&c&lE&4&lX&c&lE", "&c&lEX&4&lE", "&c&lE&4&lX&c&lE", "&4&lE&c&lXE",
+            "&c&lCXC", "&4&lC&c&lXC", "&4&lC&4&lX&c&lC", "&4&lCXC", "&4&lCX&c&lC", "&4&lC&c&lXC",
+            "&c&lCXC", "&4&lC&c&lXC", "&c&lC&4&lX&c&lC", "&c&lCX&4&lC", "&c&lC&4&lX&c&lC", "&4&lC&c&lXC"
+          ],
+          // {cxc_personal} e {cxc_footer} são listas que já trazem a linha em branco de cima, e somem na contagem.
+          "board": [
+            "{build_mode_status}",
+            "",
+            "{cxc_status}",
+            "",
+            "{cxc_header}",
+            "{cxc_first}",
+            "{cxc_second}",
+            "{cxc_personal}",
+            "{cxc_footer}",
+            "",
+            "&ewww.rede-exe.com"
+          ],
+          "starts-in": "&f Começa em &a{time}",
+          "duration": "&f Duração: &a{time}",
+          "alive": "&f Vivos:",
+          "victory": "&6 Vitória do &f[&7{tag}&f]",
+          "draw": "&e Empate",
+          // O seu clã em cima com a seta verde e o outro com a vermelha, as cores do chat de abates; no camarote, cinza.
+          "sides": {
+            "ally": "&a ▸ &f[&7{tag}&f] &a{alive}&7/{size}",
+            "enemy": "&c ▸ &f[&7{tag}&f] &c{alive}&7/{size}",
+            "neutral": "&7 ▸ &f[&7{tag}&f] &f{alive}&7/{size}"
+          },
+          "own-kills": "&f Seus abates: &c{kills}",
+          "eliminated": "&7 Você foi eliminado",
+          "watching": "&7 Assistindo do camarote",
+          // Quem mais abateu até agora; no empate, quem chegou primeiro ao número.
+          "top": "&f Destaque: &e{player} &7({kills})",
+          "strength-soon": "&f Força III em &c{time}",
+          "strength-active": "&f Força III &c&lATIVA",
+          "exit-in": "&f Saída em &e{time}"
         }
       },
       // O /x1 arena, só da administração.
@@ -792,6 +874,15 @@
                 ]
               }
             },
+            "maps": {
+              "name": "&6Mapas",
+              "lore": [
+                "&7Voe por cima dos mapas do CxC,",
+                "&7sem itens, para conhecer cada um.",
+                "",
+                "&aClique para escolher o mapa."
+              ]
+            },
             "cabin": {
               "name": "&6Camarote",
               "lore": [
@@ -1142,7 +1233,9 @@
           // O título do inventário no 1.8 cabe em 32 caracteres.
           "title": "Escolha o mapa do CxC",
           "actions": {
-            "challenge": "&aClique para desafiar."
+            "challenge": "&aClique para desafiar.",
+            "visit": "&aClique para visitar.",
+            "visit-busy": "&eTem um CxC neste mapa agora. Clique para assistir."
           },
           "items": {
             "arena": {
@@ -1151,6 +1244,15 @@
                 "&7Desafiar o clã {tag} &7neste mapa.",
                 "",
                 "&8 ▸ &fCópias livres: &f{free}",
+                "",
+                "{action}"
+              ]
+            },
+            // O /cxc mapas: o mesmo ícone, e o clique visita.
+            "visit": {
+              "lore": [
+                "&7Voe por cima deste mapa, sem itens,",
+                "&7para conhecer antes do CxC.",
                 "",
                 "{action}"
               ]
@@ -1437,7 +1539,10 @@
             "arguments": { "tag": { "name": "tag", "description": "A tag de um dos clãs lutando." } }
           },
           "leave": {
-            "description": "sair do camarote do CxC"
+            "description": "sair do camarote do CxC ou da visita aos mapas"
+          },
+          "maps": {
+            "description": "visitar os mapas do CxC, voando por cima sem itens"
           },
           "kit": {
             "description": "gravar o seu inventário e a sua armadura como o kit do CxC"
