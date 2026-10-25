@@ -7,7 +7,9 @@
           "request-sent-silent": "&aSolicitação de limpeza silenciosa enviada com sucesso.",
           // O resultado do -s, só para quem pediu: os jogadores não veem anúncio.
           "cleaned-silent": "&aLimpeza silenciosa concluída com {count} {count_unit} do chão.",
-          "cleaned-silent-nothing": "&aLimpeza silenciosa concluída. Não havia itens no chão."
+          "cleaned-silent-nothing": "&aLimpeza silenciosa concluída. Não havia itens no chão.",
+          // Nenhum servidor respondeu ao pedido (o principal fora, ou sem o limpador).
+          "no-answer": "&cNenhum servidor respondeu ao pedido de limpeza. O chão pode não ter sido limpo."
         }
       },
       "messages": {

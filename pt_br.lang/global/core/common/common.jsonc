@@ -8,6 +8,8 @@
           "not-allowed-self": "Ops! Você não pode utilizar isso em você mesmo.",
           "target-same-or-higher-group": "Você não pode punir {name} porque o grupo desse jogador não está abaixo do seu.",
           "not-online-locally": "O jogador {name} não se encontra online neste servidor.",
+          // O alvo está noutro app do servidor, e esse app não tem o comando (o replay, um módulo desligado).
+          "action-unavailable": "O jogador {name} está num servidor onde esse comando não funciona.",
           "preferences-loading": "Suas preferências ainda estão carregando. Tente de novo em alguns segundos.",
           "preferences-loading-other": "As preferências de {name} ainda estão carregando. Tente de novo em alguns segundos."
         },
