@@ -188,6 +188,31 @@
         "found": "&aPartida encontrada! Preparando a arena.",
         "actionbar": "&7Fila: &f{mode} &8/ &f{waited} &8/ &7procurando &f±{radius} de elo",
         "invalid-mode": "&cA fila é 1v1 ou 2v2.",
+        // O anúncio de quem espera sem par na fila (o dono, 25/10), de vez em quando, quando a procura está baixa. {players}
+        // vem com o nick na cor do cargo (e o "e" entre os dois da dupla), {mode} é o nome do modo e {join} é o clique.
+        "callout": {
+          "solo": [
+            "",
+            "&e&l&m         &6&l&m         &r &e&lX1 &6&l&m         &e&l&m         ",
+            "&e&l PROCURANDO DUELO",
+            "&f {players} &7está procurando duelo na fila &e{mode}&7.",
+            " {join}",
+            "&e&l&m         &6&l&m         &r &e&lX1 &6&l&m         &e&l&m         ",
+            ""
+          ],
+          "duo": [
+            "",
+            "&e&l&m         &6&l&m         &r &e&lX1 &6&l&m         &e&l&m         ",
+            "&e&l PROCURANDO DUELO",
+            "&f {players} &7estão procurando duelo na fila &e{mode}&7.",
+            " {join}",
+            "&e&l&m         &6&l&m         &r &e&lX1 &6&l&m         &e&l&m         ",
+            ""
+          ],
+          "and": " &7e ",
+          "join": "&a[Clique para entrar na fila]",
+          "join-hover": "&aClique para entrar nesta fila agora."
+        },
         "not-queued": "&cVocê não está em nenhuma fila."
       },
       "challenge": {
