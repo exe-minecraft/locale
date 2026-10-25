@@ -151,18 +151,6 @@
       // Só para quem matou, logo depois do anúncio do abate.
       "kills": "&eVocê agora tem &6{kills} &e{kills_unit}.",
       "eliminated": "&4[{event}] &cO clan &7[{clan_tag}&7] &cfoi eliminado do evento! &f{remaining_verb} {remaining_clans} {remaining_clans_unit}.",
-      // O duelo do ClanFight, como o rush do Gladiador: o (N) é quantos de cada clan estão vivos.
-      "round": [
-        "",
-        "&4&l&m      &c&l&m      &r &f&lBATALHA &c&l&m      &4&l&m      ",
-        "",
-        "&e&l UMA BATALHA COMEÇOU!",
-        " &7[{first}&7] &7({first_alive}) &fvs &7[{second}&7] &7({second_alive})",
-        "",
-        "&4&l&m      &c&l&m      &r &f&lBATALHA &c&l&m      &4&l&m      ",
-        ""
-      ],
-      "round-timeout": "&4[{event}] &cOs dois clans da batalha foram eliminados por exceder o tempo limite.",
       // A chave dupla do ClanFight (o dono, 25/10): cada clan tem duas vidas. Quem perde uma batalha cai para a chave dos
       // perdedores, com todos os que caíram de volta, e só enfrenta quem também perdeu. Quem perde duas sai do evento. O
       // campeão de cada chave se encontra na grande final, e se o da chave dos perdedores vence, a final decisiva diz quem
@@ -209,16 +197,12 @@
         "timeout": "&4[{event}] &cO tempo da batalha acabou e os dois perderam."
       },
       // Os titles do exe-clanfight, com o mesmo som de antes. Entre dois duelos: 5 s de pausa, o draw (um par qualquer
-      // dos vivos a cada segundo, para todos na arena e no camarote) 5 vezes, o drawn com o par de verdade, a contagem de
-      // 5 a 1 e o fight só para quem vai lutar. O win-event é dos dois eventos, como o do Gladiador.
+      // dos vivos a cada segundo, para todos na arena e no camarote) 5 vezes, o bracket-drawn com o par de verdade, a
+      // contagem de 5 a 1 e o fight só para quem vai lutar. O win-event é dos dois eventos, como o do Gladiador.
       "title": {
         "draw": {
           "title": "&bSorteando batalha...",
           "subtitle": "&7[{first}&7] &cvs &7[{second}&7]"
-        },
-        "drawn": {
-          "title": "&f",
-          "subtitle": "&7[{first}&7] &fx &7[{second}&7]"
         },
         // O par sorteado com a chave da batalha (bracket.stage), para a arena e o camarote.
         "bracket-drawn": {
