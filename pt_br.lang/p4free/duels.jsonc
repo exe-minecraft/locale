@@ -392,17 +392,12 @@
           ]
         },
         "kill": {
-          "colors": { "ally": "&a", "enemy": "&c", "neutral": "&e" },
-          "by": "{victim_color}[{victim_tag}] {victim} &ffoi &c&lELIMINADO &fpor {killer_color}[{killer_tag}] {killer} &7({kills})&f.",
-          "alone": "{victim_color}[{victim_tag}] {victim} &7foi eliminado.",
-          // Como nos eventos (o dono, 25/10): a tag na cor do clã entre colchetes cinza e o nick na cor do cargo. O by, o
-          // alone e o colors acima saem depois da troca do exe-duels.jar.
+          // Como nos eventos (o dono, 25/10), com a tag na cor do clã entre colchetes cinza e o nick na cor do cargo.
           "eliminated": "&6[CxC] &7[{victim_clan}&7] {victim_name} &7foi &c&lELIMINADO &7por &7[{killer_clan}&7] {killer_name} &7({kills}).",
           "eliminated-alone": "&6[CxC] &7[{victim_clan}&7] {victim_name} &7foi &c&lELIMINADO&7."
         },
-        // O resultado vai a quem lutou e ao camarote; {winners} e {losers} viram os nomes, com as estatísticas no hover.
+        // O resultado vai a quem lutou e ao camarote.
         "result": {
-          "win": "&7Vitória do clã {winner} &7contra {loser}&7: &6{winners} &8(abates: {winner_kills}) &7contra &f{losers} &8(abates: {loser_kills})&7. Duração: &f{duration}&7.",
           "draw": "&7O CxC entre {first} &7e {second} &7terminou empatado. Duração: &f{duration}&7.",
           // Um lado inteiro saiu antes do "LUTE!": não houve luta, e a vitória não é gravada.
           "cancelled": "&7O CxC entre {first} &7e {second} &7acabou antes da luta começar.",
@@ -422,10 +417,9 @@
           ],
           "top": "&7 Destaque: &f{player} &7com &c{kills}"
         },
+        // O anúncio vai só ao backend local.
         "broadcast": {
-          // Uma linha para o backend local: início da contagem com camarote clicável e término, inclusive cancelamento.
-          "start": "&6CxC &fentre os clãs {first} &8({first_size}) &fe {second} &8({second_size})&f. {watch}",
-          // O início em bloco, com mais destaque (o dono, 25/10). O start acima sai depois da troca do exe-duels.jar.
+          // O início em bloco, com mais destaque e o camarote clicável (o dono, 25/10).
           "start-block": [
             "",
             "&6&l&m         &e&l&m         &r &6&lCxC &e&l&m         &6&l&m         ",
@@ -437,7 +431,6 @@
           ],
           "watch": "&e[Assistir no camarote]",
           "watch-hover": "&eClique para assistir a este CxC do camarote.",
-          "win": "&fO clã {winner} &fvenceu o clã {loser} &fno &6CxC&f.",
           "draw": "&fO &6CxC &fentre {first} &fe {second} &fterminou empatado.",
           "cancelled": "&fO &6CxC &fentre {first} &fe {second} &ffoi cancelado antes de começar.",
           // A vitória em bloco, com quantos ficaram de pé e quanto durou (pedido do dono, 25/10).
@@ -451,26 +444,8 @@
           ]
         },
         "scoreboard": {
-          "lines": [
-            "{build_mode_status}",
-            "",
-            "&f Duração: &a{cxc_time}",
-            "{cxc_kills}",
-            "",
-            "&f Jogadores restantes:",
-            "{cxc_first}",
-            "{cxc_second}",
-            "",
-            "{cxc_strength}",
-            "",
-            "&ewww.rede-exe.com"
-          ],
-          "side": "&f   &7{tag} &f{alive}",
-          "strength-in": "&f Força III em: &c{time}",
-          "strength-on": "&f Força III em: &cAtiva",
-          "kills": "&f Abates no duelo: &c{kills}",
-          // O placar das sugestões que o dono escolheu em 25/10 (P1 a P7, P9 e P10). As linhas de cima são as do jar de
-          // antes e saem depois da troca. A onda do EXE e depois a do CXC, a 600 ms, como nos eventos.
+          // O placar das sugestões que o dono escolheu em 25/10 (P1 a P7, P9 e P10). A onda do EXE e depois a do CXC, a
+          // 600 ms, como nos eventos.
           "title": [
             "&c&lEXE", "&4&lE&c&lXE", "&4&lE&4&lX&c&lE", "&4&lEXE", "&4&lEX&c&lE", "&4&lE&c&lXE",
             "&c&lEXE", "&4&lE&c&lXE", "&c&lE&4&lX&c&lE", "&c&lEX&4&lE", "&c&lE&4&lX&c&lE", "&4&lE&c&lXE",
