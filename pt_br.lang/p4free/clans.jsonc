@@ -837,7 +837,7 @@
             "&7[{user_clan_colored_tag}&7] {user_custom_tag}&a{user_role_symbol}{user_name_with_color}&f: &b{user_chat_message}"
           ],
           "on-member-chat-spy": [
-            "&8[espião] &7[{user_clan_colored_tag}&7] {user_custom_tag}&a{user_role_symbol}{user_name}&f: &7{user_chat_message}"
+            "&8[Espião] &7[{user_clan_colored_tag}&7] {user_custom_tag}&a{user_role_symbol}{user_name}&f: &7{user_chat_message}"
           ],
           "on-member-demote": [
             "",
