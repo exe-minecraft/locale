@@ -83,6 +83,15 @@
               "low": "&a"
             }
           }
+        },
+        // O alerta do bot de espionagem do /invsee, para o Admin e acima. Só o ritmo de máquina dispara, porque o scout à mão é
+        // permitido. {seconds} é o tempo típico com vírgula, {count_unit} concorda com o {count}.
+        "invsee-scout": {
+          "relay": "&c[Suspeita de bot] &r{player_name_with_color} &7mandou por tell o que viu no /invsee {count} {count_unit} em 10 minutos, quase sempre {seconds} s depois de abrir o inventário, num ritmo que não é de quem faz à mão. Os repasses foram para {recipients}&7, no {server}.",
+          "cadence": "&c[Suspeita de bot] &r{player_name_with_color} &7usou o /invsee {count} {count_unit} em 10 minutos, quase sempre com {seconds} s de intervalo, num ritmo que não é de quem faz à mão. Servidor: {server}.",
+          "units": {
+            "time": { "singular": "vez", "plural": "vezes" }
+          }
         }
       }
     }
