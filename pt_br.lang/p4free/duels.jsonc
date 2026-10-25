@@ -356,7 +356,7 @@
           "exit": "&fVoltando ao spawn em &e{seconds}s"
         },
         // A conta de vitórias do clã vencedor, quando a plataforma confirma a soma.
-        "wins-count": "&7É a &f{wins}ª &7vitória do clã &f[&7{tag}&f] &7no CxC.",
+        "wins-count": "&7É a &f{wins}ª &7vitória do clã &7[{tag}&7] &7no CxC.",
         "strength": {
           "warning": "&e&lAVISO: &eEm &c{time} &etodos os jogadores vivos receberão &c&lForça III&e!",
           "applied": [
@@ -369,7 +369,11 @@
         "kill": {
           "colors": { "ally": "&a", "enemy": "&c", "neutral": "&e" },
           "by": "{victim_color}[{victim_tag}] {victim} &ffoi &c&lELIMINADO &fpor {killer_color}[{killer_tag}] {killer} &7({kills})&f.",
-          "alone": "{victim_color}[{victim_tag}] {victim} &7foi eliminado."
+          "alone": "{victim_color}[{victim_tag}] {victim} &7foi eliminado.",
+          // Como nos eventos (o dono, 25/10): a tag na cor do clã entre colchetes cinza e o nick na cor do cargo. O by, o
+          // alone e o colors acima saem depois da troca do exe-duels.jar.
+          "eliminated": "&6[CxC] &7[{victim_clan}&7] {victim_name} &7foi &c&lELIMINADO &7por &7[{killer_clan}&7] {killer_name} &7({kills}).",
+          "eliminated-alone": "&6[CxC] &7[{victim_clan}&7] {victim_name} &7foi &c&lELIMINADO&7."
         },
         // O resultado vai a quem lutou e ao camarote; {winners} e {losers} viram os nomes, com as estatísticas no hover.
         "result": {
@@ -382,9 +386,9 @@
           // de hoje se chamam "Arena ...", daí o "na" antes do {map}.
           "victory": [
             "",
-            "&6&l VITÓRIA DO CLÃ &f[&7{winner}&f]",
-            "&f [&7{winner}&f] &a{winner_alive}&7/{winner_size} de pé, &f{winner_kills}",
-            "&f [&7{loser}&f] &c{loser_alive}&7/{loser_size} de pé, &f{loser_kills}",
+            "&6&l VITÓRIA DO CLÃ &7[{winner}&7]",
+            "&7 [{winner}&7] &a{winner_alive}&7/{winner_size} de pé, &f{winner_kills}",
+            "&7 [{loser}&7] &c{loser_alive}&7/{loser_size} de pé, &f{loser_kills}",
             "{top}",
             "&7 Duração: &f{duration} &7na &f{map}",
             "&7 Vencedores: &6{winners}",
@@ -396,13 +400,30 @@
         "broadcast": {
           // Uma linha para o backend local: início da contagem com camarote clicável e término, inclusive cancelamento.
           "start": "&6CxC &fentre os clãs {first} &8({first_size}) &fe {second} &8({second_size})&f. {watch}",
+          // O início em bloco, com mais destaque (o dono, 25/10). O start acima sai depois da troca do exe-duels.jar.
+          "start-block": [
+            "",
+            "&6&l&m         &e&l&m         &r &6&lCxC &e&l&m         &6&l&m         ",
+            "&e&l CxC VAI COMEÇAR",
+            "&7 [{first}&7] &8({first_size}) &fcontra &7[{second}&7] &8({second_size})",
+            " {watch}",
+            "&6&l&m         &e&l&m         &r &6&lCxC &e&l&m         &6&l&m         ",
+            ""
+          ],
           "watch": "&e[Assistir no camarote]",
           "watch-hover": "&eClique para assistir a este CxC do camarote.",
           "win": "&fO clã {winner} &fvenceu o clã {loser} &fno &6CxC&f.",
           "draw": "&fO &6CxC &fentre {first} &fe {second} &fterminou empatado.",
           "cancelled": "&fO &6CxC &fentre {first} &fe {second} &ffoi cancelado antes de começar.",
-          // A vitória com quantos ficaram de pé e quanto durou (pedido do dono, 25/10).
-          "victory": "&fO clã &f[&7{winner}&f] &fvenceu o clã &f[&7{loser}&f] &fno &6CxC &7({alive} de {size} de pé, em {duration})&f."
+          // A vitória em bloco, com quantos ficaram de pé e quanto durou (pedido do dono, 25/10).
+          "victory": [
+            "",
+            "&6&l&m         &e&l&m         &r &6&lCxC &e&l&m         &6&l&m         ",
+            "&6&l VITÓRIA DO CLÃ &7[{winner}&7]",
+            "&7 [{winner}&7] &fvenceu &7[{loser}&7] &fcom &a{alive}&7/{size} de pé, em &f{duration}&7.",
+            "&6&l&m         &e&l&m         &r &6&lCxC &e&l&m         &6&l&m         ",
+            ""
+          ]
         },
         "scoreboard": {
           "lines": [
