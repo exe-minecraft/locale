@@ -163,6 +163,51 @@
         ""
       ],
       "round-timeout": "&4[{event}] &cOs dois clans da batalha foram eliminados por exceder o tempo limite.",
+      // A chave dupla do ClanFight (o dono, 25/10): cada clan tem duas vidas. Quem perde uma batalha cai para a chave dos
+      // perdedores, com todos os que caíram de volta, e só enfrenta quem também perdeu. Quem perde duas sai do evento. O
+      // campeão de cada chave se encontra na grande final, e se o da chave dos perdedores vence, a final decisiva diz quem
+      // leva a tag. A eliminação de quem perde a segunda é o eliminated de sempre.
+      "bracket": {
+        // O nome de cada batalha, no anúncio dela, no title do sorteio (title.bracket-drawn) e no placar.
+        "stage": {
+          "winners": "&aChave dos vencedores",
+          "losers": "&cChave dos perdedores",
+          "grand-final": "&6&lGRANDE FINAL",
+          "decider": "&4&lFINAL DECISIVA"
+        },
+        // O começo da luta no ClanFight, no lugar do fight, com a regra das duas vidas.
+        "fight": [
+          "",
+          "&4&l&m      &c&l&m      &r &f&l{event_title} &c&l&m      &4&l&m      ",
+          "",
+          "&c&lPVP ATIVO!",
+          "&fAs batalhas vão começar e cada clan tem &e2 vidas&f.",
+          "&fQuem perde uma batalha cai para a &cchave",
+          "&cdos perdedores &fe só enfrenta quem também perdeu.",
+          "&fDuas derrotas eliminam o clan do evento.",
+          "",
+          "&4&l&m      &c&l&m      &r &f&l{event_title} &c&l&m      &4&l&m      ",
+          ""
+        ],
+        // A batalha sorteada, como o rush do Gladiador: a chave dela e quantos de cada clan estão vivos.
+        "round": [
+          "",
+          "&4&l&m      &c&l&m      &r &f&lBATALHA &c&l&m      &4&l&m      ",
+          "",
+          "&e&l UMA BATALHA COMEÇOU!",
+          " {stage}",
+          " &7[{first}&7] &7({first_alive}) &fvs &7[{second}&7] &7({second_alive})",
+          "",
+          "&4&l&m      &c&l&m      &r &f&lBATALHA &c&l&m      &4&l&m      ",
+          ""
+        ],
+        // Logo depois do fim da batalha, para o clan que perdeu e ainda tem uma vida.
+        "fell": "&4[{event}] &cO clan &7[{clan_tag}&7] &cperdeu e caiu para a chave dos perdedores! &fMais uma derrota e ele sai do evento.",
+        // O campeão da chave dos vencedores perdeu a grande final, e os dois ficam com uma derrota.
+        "reset": "&4[{event}] &cO clan &7[{clan_tag}&7] &csofreu a primeira derrota na grande final! &fA final decisiva vai dizer quem vence.",
+        // O prazo da batalha acabou sem vencedor, e cada lado perde uma vida.
+        "timeout": "&4[{event}] &cO tempo da batalha acabou e os dois perderam."
+      },
       // Os titles do exe-clanfight, com o mesmo som de antes. Entre dois duelos: 5 s de pausa, o draw (um par qualquer
       // dos vivos a cada segundo, para todos na arena e no camarote) 5 vezes, o drawn com o par de verdade, a contagem de
       // 5 a 1 e o fight só para quem vai lutar. O win-event é dos dois eventos, como o do Gladiador.
@@ -173,6 +218,11 @@
         },
         "drawn": {
           "title": "&f",
+          "subtitle": "&7[{first}&7] &fx &7[{second}&7]"
+        },
+        // O par sorteado com a chave da batalha (bracket.stage), para a arena e o camarote.
+        "bracket-drawn": {
+          "title": "{stage}",
           "subtitle": "&7[{first}&7] &fx &7[{second}&7]"
         },
         // O número da vez em cor e os outros apagados, como os ➎ ➍ ➌ ➋ ➊ do original, em algarismos (o 1.8 desenha

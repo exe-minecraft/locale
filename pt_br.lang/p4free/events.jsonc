@@ -217,6 +217,8 @@
         "clan": " &7[{tag}&7] &f{name}",
         "clan-entered": "&f Inscritos: &7{total}",
         "clan-alive": "&f Vivos: &a{alive}&7/{total}",
+        // No ClanFight, com a chave do clan ao lado (o bracket do arena-scoreboards.clanfight).
+        "clan-alive-bracket": "&f Vivos: &a{alive}&7/{total} {bracket}",
         "border": "&f Borda em &c{time}",
         "border-closing": "&f Borda &4Fechando...",
         "deathmatch": "&f &4&lDEATHMATCH",
@@ -290,6 +292,19 @@
           "versus": " {first} &7{first_alive} &cvs &f{second} &7{second_alive}",
           // Entre dois duelos (a pausa e o sorteio), como no exe-clanfight.
           "drawing": " &eSorteando...",
+          // A chave do duelo em curso, por cima do número dele (a chave dupla, plugins.arena-events.bracket).
+          "stage": {
+            "winners": " &aChave dos vencedores",
+            "losers": " &cChave dos perdedores",
+            "grand-final": " &6&lGRANDE FINAL",
+            "decider": " &4&lFINAL DECISIVA"
+          },
+          // A chave do seu clan, ao lado dos vivos dele no bloco do clan.
+          "bracket": {
+            "winners": "&8(&avencedores&8)",
+            "losers": "&8(&cperdedores&8)",
+            "out": "&8(&celiminado&8)"
+          },
           // A chance de vitória de cada lado, na ordem do "vs", como o winChance do exe-clanfight; quem tem 50% ou mais
           // sai no ahead.
           "odds": " {first} {first_chance} &7- {second} {second_chance}",
