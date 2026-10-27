@@ -106,7 +106,15 @@
         ],
         "received": "&aVocê recebeu um &d&lOvo de Dragão Místico&a! Clique direito com ele para liberar o poder.",
         "dropped": "&eSeu inventário está cheio. O &dOvo de Dragão Místico &ecaiu no chão.",
-        "used": "Você recebeu uma armadura de diamante completa com Proteção III e Inquebrável III!"
+        "used": "Você recebeu uma armadura de diamante completa com Proteção III e Inquebrável III!",
+        // Para quem está perto de quem abriu (o raio é o dragon-egg.announce-radius do fastglad.yml), com destaque.
+        "announce": [
+          "",
+          " &d&lOVO DE DRAGÃO",
+          " {player_name_with_color} &fabriu um &dOvo de Dragão Místico",
+          " &fe vestiu uma armadura de diamante com &bProteção III&f.",
+          ""
+        ]
       },
       "closed": "&cO mercador não está disponível agora.",
       "insufficient": "&cVocê não tem &6moedas de abate &csuficientes. {product} &ccusta &6{cost} {cost_unit}&c.",
