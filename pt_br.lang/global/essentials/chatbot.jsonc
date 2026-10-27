@@ -37,6 +37,8 @@
           // Sem clique: o events-1 não tem o /x1.
           "x1": "&fUse &a/x1&f para abrir o menu, &a/x1 fila 1v1&f ou &a/x1 fila 2v2&f para a fila ranqueada e &a/x1 <nick>&f para desafiar alguém.",
           "lixo": "&fPara jogar itens fora, use &a/lixo&f. O que ficar dentro some quando você fechar. Para abrir agora, clique &a&lAQUI&f.",
+          // O /almas existe no p4free-1 e no events-1 (as almas são moeda nos dois). No /perks desde 27/10.
+          "almas": "&fPara ver quantas almas você tem, use &d/almas&f. Elas também aparecem no &d/perks&f, no item Como funciona. Para ver agora, clique &a&lAQUI&f.",
           "clan-recruiting": "&fO líder e os capitães podem anunciar o clã para todo o P4Free com &a/clan recrutar&f. O anúncio tem um clique para quem está sem clã pedir para entrar. Para usar, clique &a&lAQUI&f."
         }
       }
