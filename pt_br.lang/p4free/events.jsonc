@@ -75,6 +75,68 @@
             "",
             "&e&l DICA: &fVeja os inscritos, o tempo e os clãs no &a/glad info&f.",
             ""
+          ],
+          "mito": [
+            "",
+            "&e&l DICA: &fQuem mais abate no clã vencedor vira o &aMito",
+            " &fe ganha a tag &a[Mito]&f. Veja o atual com &a/mito&f.",
+            ""
+          ],
+          "rush": [
+            "",
+            "&e&l DICA: &fNum &arush&f, dois clãs só lutam entre si, e ninguém",
+            " &fde fora pode atacá-los. Veja os que estão rolando",
+            " &fem &a/glad rush&f.",
+            ""
+          ],
+          "rush-immunity": [
+            "",
+            "&e&l DICA: &fQuando um rush acaba, os dois clãs passam &a60 s",
+            " &fsem poder bater nem apanhar de quem é de fora.",
+            ""
+          ],
+          "rush-drops": [
+            "",
+            "&e&l DICA: &fO que cai de uma morte no rush só os dois clãs",
+            " &fdele veem e pegam, por &a5 minutos&f.",
+            ""
+          ],
+          "web-wear": [
+            "",
+            "&e&l DICA: &fCom metade ou mais do clã na teia, a armadura",
+            " &fde todos gasta mais a cada golpe, e piora com o tempo lá.",
+            ""
+          ],
+          "repairer": [
+            "",
+            "&e&l DICA: &fEspada ou machado com &aReparo&f podem dropar um",
+            " &aReparador&f no abate. O clique direito com ele conserta",
+            " &fa armadura vestida.",
+            ""
+          ],
+          "free-kill": [
+            "",
+            "&e&l DICA: &fMatar o mesmo jogador &a3 vezes&f em uma hora deixa",
+            " &fvocê &a24 horas&f sem recompensa pelos abates dele.",
+            ""
+          ],
+          "batatada": [
+            "",
+            "&e&l DICA: &fMorrer com &a2 sets&f de diamante intactos guardados",
+            " &fno inventário é &cbatatada&f. Veja o ranking em &a/batatadas top&f.",
+            ""
+          ],
+          "rewards": [
+            "",
+            "&e&l DICA: &fCada abate no Gladiador paga &a12 tokens&f, e cada",
+            " &fgolpe &a2&f. As almas do abate vão para todo o clã online.",
+            ""
+          ],
+          "stats": [
+            "",
+            "&e&l DICA: &fCada partida fica gravada, com abates, dano e mais,",
+            " &fem &awww.rede-exe.com/estatisticas&f.",
+            ""
           ]
         },
         "fast-glad": {
@@ -94,6 +156,74 @@
             "",
             "&e&l DICA: &fFicou de fora? Assista à luta pelo &a/fg camarote&f.",
             ""
+          ],
+          "dragon-egg": [
+            "",
+            "&e&l DICA: &fCada abate no FastGlad te dá um &dOvo de Dragão&f.",
+            " &fO clique direito nele veste uma armadura de diamante",
+            " &fcompleta com &bProteção III&f.",
+            ""
+          ],
+          "death-drops": [
+            "",
+            "&e&l DICA: &fQuem morre no FastGlad deixa no chão o kit, as",
+            " &fcompras do Mercador e os ovos. Pegue antes dos outros!",
+            ""
+          ],
+          "merchant-coins": [
+            "",
+            "&e&l DICA: &fCada abate dá &a12 moedas&f a quem matou e &a6&f a cada",
+            " &fcolega vivo. O placar mostra o saldo e quando o",
+            " &fMercador chega.",
+            ""
+          ],
+          "merchant-hits": [
+            "",
+            "&e&l DICA: &fCada golpe no wither do Mercador tira &a1 segundo&f",
+            " &fda visita, e visitas mais curtas abrem espaço para",
+            " &fvisitas extras.",
+            ""
+          ],
+          "golden-head": [
+            "",
+            "&e&l DICA: &fA &aCabeça Dourada&f do Mercador custa &a7 moedas&f e dá",
+            " &fRegeneração VI, Absorção e Resistência.",
+            ""
+          ],
+          "deathmatch": [
+            "",
+            "&e&l DICA: &fAos &a10 minutos&f todos vão para o deathmatch, e o",
+            " &fPvP só volta quando o último clã chegar.",
+            ""
+          ],
+          "border": [
+            "",
+            "&e&l DICA: &fA borda fecha em etapas até &a8 blocos&f, com aviso",
+            " &fna tela antes de cada uma. Encostar nela fere.",
+            ""
+          ],
+          "prize": [
+            "",
+            "&e&l DICA: &fCada jogador do clã vencedor leva &a1000 tokens",
+            " &fe &a100 almas&f. Quem sai com &a/fg sair&f perde o prêmio.",
+            ""
+          ],
+          "batatada": [
+            "",
+            "&e&l DICA: &fNo FastGlad, morrer com qualquer peça de diamante",
+            " &fintacta guardada no inventário já é &cbatatada&f.",
+            ""
+          ],
+          "kit": [
+            "",
+            "&e&l DICA: &fArrume o kit do FastGlad do seu jeito com &a/fg kit&f.",
+            ""
+          ],
+          "stats": [
+            "",
+            "&e&l DICA: &fCada partida fica gravada, com abates, compras",
+            " &fe mais, em &awww.rede-exe.com/estatisticas&f.",
+            ""
           ]
         },
         "clan-fight": {
@@ -105,6 +235,62 @@
           "info": [
             "",
             "&e&l DICA: &fVeja os inscritos e os clãs do ClanFight no &a/cf info&f.",
+            ""
+          ],
+          "bracket": [
+            "",
+            "&e&l DICA: &fNo ClanFight cada clã tem &a2 vidas&f. Quem perde um",
+            " &fduelo vai para a chave dos perdedores, e duas",
+            " &fderrotas tiram o clã.",
+            ""
+          ],
+          "final": [
+            "",
+            "&e&l DICA: &fOs campeões das duas chaves fazem a grande final.",
+            " &fSe o da chave dos perdedores vencer, há uma",
+            " &ffinal decisiva.",
+            ""
+          ],
+          "timeout": [
+            "",
+            "&e&l DICA: &fCada duelo tem &a5 minutos&f. Se o tempo acabar, os",
+            " &fdois clãs perdem uma vida.",
+            ""
+          ],
+          "comeback": [
+            "",
+            "&e&l DICA: &fCada duelo começa com kit novo, e quem morreu volta",
+            " &fno próximo duelo do clã. Quem sai com &a/cf sair",
+            " &fnão volta mais.",
+            ""
+          ],
+          "hits": [
+            "",
+            "&e&l DICA: &fNo fim de cada duelo aparece quem mais acertou,",
+            " &fe no fim do evento sai o top 3 de hits.",
+            ""
+          ],
+          "batatada": [
+            "",
+            "&e&l DICA: &fNo ClanFight, morrer com qualquer peça de diamante",
+            " &fintacta guardada no inventário já é &cbatatada&f.",
+            ""
+          ],
+          "kit": [
+            "",
+            "&e&l DICA: &fArrume o kit do ClanFight do seu jeito com &a/cf kit&f.",
+            ""
+          ],
+          "prize": [
+            "",
+            "&e&l DICA: &fQuem luta pelo clã campeão do ClanFight leva",
+            " &fa tag &a[ClanFight]&f.",
+            ""
+          ],
+          "stats": [
+            "",
+            "&e&l DICA: &fCada partida fica gravada, com abates, hits e mais,",
+            " &fem &awww.rede-exe.com/estatisticas&f.",
             ""
           ]
         }
@@ -1011,7 +1197,7 @@
                 }
               }
             },
-            "actionbar": "&fVoltando ao P4Free em &e{time}"
+            "actionbar": "&8&l» &fVoltando ao &c&lP4FREE &fem &e&l{time} &8&l«"
           },
           "gladiator": {
             // A tag de um clan nos abates e nas mortes, pintada para cada um que lê na cor em que ele vê na name-tag o nick
