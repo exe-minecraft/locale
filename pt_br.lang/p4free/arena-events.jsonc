@@ -241,11 +241,11 @@
           "title": "&c{event_title} ACABOU",
           "subtitle": "&7[{clan}&7] &fvenceu o evento!"
         },
-        // A borda do FastGlad, como a do Gladiador: o número dos 5 s antes de cada redução (com o clique) e o aviso que
-        // fica na tela enquanto ela fecha (com o wither).
+        // A borda do FastGlad, como a do exe-fastgladiator: só o número vermelho no subtítulo, nos 5 s antes de cada
+        // redução (com o clique). O border-change é do jar de antes de 27/10, e sai do locale depois da troca.
         "border-warn": {
-          "title": "&c{seconds}",
-          "subtitle": "&fA borda vai fechar!"
+          "title": "",
+          "subtitle": "&c{seconds}"
         },
         "border-change": {
           "title": "&4Borda fechando!",
@@ -292,7 +292,7 @@
         "separator": "&f, ",
         "hover": "&eClique para ver o inventário de {player}."
       },
-      // A borda do FastGlad, como a do Gladiador.
+      // A borda do FastGlad, como a do exe-fastgladiator (o InGameTask), com a linha do teleporte de quem fica fora.
       "border": [
         "",
         "&4&l&m       &c&l&m       &r &f&lBORDA FECHANDO &c&l&m       &4&l&m       ",
@@ -301,9 +301,10 @@
         "&c  &fA borda está se fechando!",
         "",
         "    &4• &fNovo tamanho da borda: &c{size} x {size}",
-        "    &4• &fTempo para fechar: &c{time}",
+        "    &4• &fTempo restante: &c{time}",
         "",
         "&c  &fPreparem-se e movam-se para dentro da nova área!",
+        "&c  &4Jogadores fora da nova borda serão teleportados para o centro do mapa!",
         "",
         "&4&l&m       &c&l&m       &r &f&lBORDA FECHANDO &c&l&m       &4&l&m       ",
         ""

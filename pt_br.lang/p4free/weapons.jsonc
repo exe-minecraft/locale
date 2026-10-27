@@ -649,18 +649,26 @@
         "item": {
           "name": "&cReparador",
           "lore": [
-            "&7Repara sua armadura do",
-            "&7corpo ao clicar com o botão direito."
+            "&7Clique com o &fbotão direito &7para",
+            "&7deixar a &farmadura vestida &7nova.",
+            "",
+            "&8Some quando você sai do servidor."
           ]
         },
         "announce": [
           "",
-          " &eReparador!",
-          " &f{killer} &aabateu &f{victim} &acom uma arma especial",
+          " &e&lReparador!",
+          " {killer} &aabateu {victim} &acom uma arma especial",
           " &ae recebeu um &lReparador&r&a.",
           ""
         ],
-        "repaired": "Armadura reparada.",
+        // Na action bar de quem ganhou, no canal NOTICE (2,5 s por cima do combate).
+        "received": "&a+1 Reparador! &fClique direito &7com ele para reparar a armadura.",
+        "pieces": {
+          "singular": "peça",
+          "plural": "peças"
+        },
+        "repaired": "Você reparou {pieces} {pieces_unit} da armadura.",
         "nothing-to-repair": "Nenhuma peça da sua armadura está danificada.",
         "cannot-move": "O reparador não sai do seu inventário."
       }

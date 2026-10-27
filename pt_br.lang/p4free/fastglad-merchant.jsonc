@@ -1,8 +1,16 @@
 {
   "plugins": {
     "fastglad-merchant": {
-      "title": "Mercador | {credits} {credits_unit}",
-      "price": "&7Custo: {cost} {cost_unit}",
+      "title": "Mercador | &6{credits} {credits_unit}",
+      // O fim da lore de cada produto na loja, como no DarkMerchantView do exe-fastgladiator: o custo em dourado e, na
+      // última linha, o que o clique faz com o saldo de agora (click-buy ou click-poor).
+      "price": [
+        "",
+        "&fCusto: &6&l{cost} &6{cost_unit} de abate",
+        ""
+      ],
+      "click-buy": "&eClique para comprar!",
+      "click-poor": "&cVocê não tem moedas suficientes.",
       "products": {
         "energy": "&5Energético",
         "berserker": "&5Berserker",
@@ -14,49 +22,95 @@
         "dark_hand": "&5Mão Sombria",
         "neutralizer": "&5Neutralizador",
         "antidote": "&5Antídoto",
-        "switcher": "&5Switcher",
+        "switcher": "&5Inversor",
         "golden_head": "&5Cabeça Dourada"
       },
+      // A categoria do original, a primeira linha da lore.
+      "category": {
+        "energy": "&8Ataque",
+        "berserker": "&8Ataque",
+        "slowness": "&8Magia",
+        "flashbang": "&8Magia",
+        "pearl": "&8Defesa",
+        "web_projectile": "&8Ataque",
+        "armor_forgery": "&8Controle de Recursos",
+        "dark_hand": "&8Controle de Recursos",
+        "neutralizer": "&8Magia",
+        "antidote": "&8Magia",
+        "switcher": "&8Magia",
+        "golden_head": "&8Magia"
+      },
+      // Duas linhas curtas cada, com o que importa em destaque. Os números são os do MerchantTools e do
+      // MerchantProjectiles: mudou lá, muda aqui.
       "description": {
         "energy": [
-          "&7Força III por 10 segundos."
+          "&7Dá &cForça III &7por &f10 segundos&7:",
+          "&7cada golpe seu bate muito mais forte."
         ],
         "berserker": [
-          "&7Força II e velocidade II por 3 minutos."
+          "&7Junta &cForça II &7e &bVelocidade II",
+          "&7numa poção só, por &f3 minutos&7."
         ],
         "slowness": [
-          "&7Arremesse para reduzir a velocidade dos inimigos próximos."
+          "&7Arremesse: quem estiver perto ganha",
+          "&8Lentidão II &7por &f4 segundos&7."
         ],
         "flashbang": [
-          "&7Arremesse para cegar inimigos próximos."
+          "&7Arremesse: quem estiver perto fica",
+          "&fcego &7por &f4 segundos&7."
         ],
         "pearl": [
-          "&7Use para escapar de obstáculos."
+          "&7Arremesse para &fescapar &7das",
+          "&7teias e das situações difíceis."
         ],
         "web_projectile": [
-          "&7Cria uma área de teias por 10 segundos."
+          "&7Arremesse: cria &fteias &7em 3x3",
+          "&7onde cair, por &f10 segundos&7."
         ],
         "armor_forgery": [
-          "&7Repara sua armadura automaticamente após um abate."
+          "&7Conserta a &farmadura vestida",
+          "&7a cada &fabate&7. Gasta uma por abate."
         ],
         "dark_hand": [
-          "&7Clique em um inimigo para roubar um item aleatório."
+          "&7Acerte um inimigo para &froubar",
+          "&7um item aleatório do inventário dele."
         ],
         "neutralizer": [
-          "&7Remove efeitos dos inimigos na área atingida."
+          "&7Arremesse: tira &ftodos os efeitos",
+          "&7de poção de quem estiver na área."
         ],
         "antidote": [
-          "&7Anula automaticamente um neutralizador."
+          "&7No inventário, te protege de um",
+          "&fNeutralizador&7. Gasta um por vez."
         ],
         "switcher": [
-          "&7Acerte um inimigo para trocar de lugar com ele."
+          "&7Arremesse num inimigo para",
+          "&ftrocar de lugar &7com ele."
         ],
         "golden_head": [
-          "&7Concede regeneração, absorção, resistência e proteção contra fogo."
+          "&7Clique direito: &dRegeneração VI &7por &f10 s&7,",
+          "&eAbsorção &7por &f2 minutos&7, e Resistência",
+          "&7e Resistência ao Fogo por &f5 minutos&7."
         ]
       },
+      // O Ovo de Dragão Místico do exe-p4free-core: um por abate no FastGlad, e o clique direito dá a armadura.
+      "dragon-egg": {
+        "name": "&d&lOvo de Dragão Místico",
+        "lore": [
+          "&7Um artefato lendário do &dFastGlad&7.",
+          "",
+          "&7Clique direito: uma &barmadura de diamante",
+          "&7completa, &fProteção III &7e &fInquebrável III&7.",
+          "",
+          "&8Some quando você sai do evento."
+        ],
+        "received": "&aVocê recebeu um &d&lOvo de Dragão Místico&a! Clique direito com ele para liberar o poder.",
+        "dropped": "&eSeu inventário está cheio. O &dOvo de Dragão Místico &ecaiu no chão.",
+        "used": "Você recebeu uma armadura de diamante completa com Proteção III e Inquebrável III!"
+      },
       "closed": "&cO mercador não está disponível agora.",
-      "insufficient": "&cVocê não tem moedas suficientes.",
+      "insufficient": "&cVocê não tem &6moedas de abate &csuficientes. {product} &ccusta &6{cost} {cost_unit}&c.",
+      "bought": "&aVocê comprou &f1x {product} &apor &6{cost} {cost_unit} de abate&a.",
       "full": "&cLibere espaço no inventário.",
       "bought": "&aItem comprado.",
       "repaired": "&aSua forja reparou a armadura.",
