@@ -213,7 +213,8 @@
           "info": {
             "name": "&eComo funciona",
             "lore": [
-              "&7Você tem &f{slots_used}&7/&f{slots_total} &7perks ativas.",
+              "&7Você tem &f{slots_used}&7/&f{slots_total} &7perks ativas",
+              "&7e &d{balance} {balance_unit}&7.",
               "",
               "&7Clique numa perk para ligar ou desligar.",
               "&7Botão direito abre os níveis dela.",
