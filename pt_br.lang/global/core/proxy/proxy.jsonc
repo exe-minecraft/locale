@@ -199,10 +199,10 @@
             ]
           },
           // A entrada e a saída da staff na rede, para quem acompanha (a regra alertas:entrada-staff do editor). Só depois do
-          // login, e a saída só de quem teve a entrada anunciada.
+          // login, e a saída só de quem teve a entrada anunciada. O nick vai com a tag do cargo, como no exe-bungee-core.
           "staff-presence": {
-            "joined": "{player} &fentrou no servidor &b{server}&f. &a({date})",
-            "left": "{player} &fsaiu do servidor &b{server}&f. &c({date})"
+            "joined": "{player_name_with_tag} &fentrou no servidor &b{server}&f. &a({date})",
+            "left": "{player_name_with_tag} &fsaiu do servidor &b{server}&f. &c({date})"
           },
           "teleport": {
             "target-app-not-registered": [
