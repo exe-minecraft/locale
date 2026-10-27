@@ -52,13 +52,13 @@
           "{build_mode_status}",
           "",
           "&f Cash: &6✪ {user_cash_formatted}",
-          "&f Almas: &e✝ {currency_souls_cached_account_value_formatted}",
-          "&f Tokens: &a{currency_tokens_cached_account_value_formatted}",
+          "&f Almas: &e✝ {currency_souls_cached_account_value_formatted}%ranking_currency_souls%",
+          "&f Tokens: &a{currency_tokens_cached_account_value_formatted}%ranking_currency_tokens%",
           "&f Grupo: &c{user_group_name_with_color}",
           "",
           "{clan_scoreboard}",
           "",
-          "&f Abates: &c{weapon_kills}",
+          "&f Abates: &c{weapon_kills}%ranking_weapon_kills%",
           "",
           "&ewww.rede-exe.com"
         ]

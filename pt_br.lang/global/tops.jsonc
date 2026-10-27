@@ -10,6 +10,9 @@
         "unranked": "você ainda não entrou",
         "staff": "a staff não entra no ranking",
         "loading": "carregando",
+        // Ao lado de Almas, Tokens e Abates na scoreboard do P4Free (%ranking_<ranking>%). Fora do ranking, para a
+        // staff e enquanto carrega, o placeholder fica vazio e a linha sai sem o parêntese.
+        "scoreboard": " &7(#{position})",
         "unavailable": "indisponível"
       },
       "views": {
