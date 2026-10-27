@@ -1,6 +1,15 @@
 {
   "plugins": {
     "events": {
+      // O motivo do cancelamento no anúncio "EVENTO CANCELADO!" de todos os eventos (EventCancelReason), no fim da frase
+      // "O evento foi cancelado ...".
+      "cancel-reasons": {
+        "not-enough-players": "por falta de jogadores",
+        "staff": "por um membro da &eStaff",
+        "server": "porque o servidor vai reiniciar",
+        "time-limit": "porque o tempo máximo da partida acabou",
+        "no-winner": "sem um clã vencedor"
+      },
       "preferences": {
         "announcements": {
           "name": "&eAnúncios dos eventos",
@@ -946,6 +955,8 @@
           "vanished": "&cÉ necessário desativar o /v para jogar em eventos. O camarote continua permitido.",
           // O /v da staff ligado por quem está vivo num evento (EventsListener.onVanish).
           "vanish-blocked": "&cVocê não pode ativar o /v enquanto estiver lutando no {event}. No camarote ele continua permitido.",
+          // O /v <jogador> da staff em quem luta, de qualquer app da instância (EventsListener.onVanish).
+          "vanish-blocked-other": "&c{player_name} está lutando no {event} e não pode ficar em vanish. No camarote ele pode.",
           "clan-not-authorized": "&cPara entrar nos eventos o seu clan tem que estar autorizado!",
           "cant-join-event": "O {event} já começou ou não está disponível.",
           "target-in-event-app": "{player_name} já está no P4Free Eventos. Dê o comando de lá para colocá-lo no {event}.",
@@ -954,7 +965,9 @@
           // O /kit, o /berserker, o /espada e o /machado no app de eventos (EventItemCommandListener).
           "item-command-blocked": "No P4Free Eventos os itens vêm só do evento.",
           // O /spawn de quem luta, espera o rejoin ou está no camarote (EventsListener.onSpawnRequest).
-          "spawn-blocked": "Você não pode usar /spawn dentro de um evento. Saia pelo comando do evento, como o /glad sair.",
+          "spawn-blocked": "Você não pode usar /spawn dentro do {event}. Para sair do evento, use o {command}.",
+          // Chegando ao app de eventos, antes de a entrada no evento terminar.
+          "spawn-blocked-arriving": "Você não pode usar /spawn enquanto entra no evento. Espere a entrada terminar.",
           // O /ec (e os apelidos) no camarote ou à espera do rejoin: lá os itens reais estão guardados (EventsListener).
           "cabin-ender-chest": "Você não pode abrir o baú enquanto estiver no camarote. Seus itens ficam guardados até você sair."
         },
@@ -1068,8 +1081,7 @@
               "&4&l&m       &c&l&m       &r &f&lGLADIADOR &c&l&m       &4&l&m       ",
               "",
               "&c&lEVENTO CANCELADO!",
-              "&fO evento foi cancelado por falta de jogadores",
-              "&fou por um membro da &eStaff&f.",
+              "&fO evento foi cancelado {reason}&f.",
               "",
               "&4&l&m       &c&l&m       &r &f&lGLADIADOR &c&l&m       &4&l&m       ",
               ""

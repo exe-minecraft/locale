@@ -33,6 +33,22 @@
         "plural": "Machados"
       },
       "commands": {
+        "repairer-give": {
+          "target-offline": "Esse jogador não está online neste servidor.",
+          "invalid-amount": "A quantidade vai de 1 a {maximum}.",
+          "not-in-match": "{player} não está lutando numa partida de Gladiador ou FastGlad. O reparador só vale dentro dela.",
+          "given": "Você deu {amount} {amount_unit} a {player}.",
+          "arguments": {
+            "target": {
+              "name": "jogador",
+              "description": "Jogador que luta agora numa partida de Gladiador ou FastGlad"
+            },
+            "amount": {
+              "name": "quantidade",
+              "description": "Quantos reparadores, de 1 a 64 (1 se faltar)"
+            }
+          }
+        },
         "enchant-book": {
           "target-offline": "Esse jogador não está online.",
           "target-inventory-full": "O inventário desse jogador está cheio.",
@@ -663,7 +679,11 @@
           ""
         ],
         // Na action bar de quem ganhou, no canal NOTICE (2,5 s por cima do combate).
-        "received": "&a+1 Reparador! &fClique direito &7com ele para reparar a armadura.",
+        "received": "&a+{amount} {amount_unit}! &fClique direito &7com ele para reparar a armadura.",
+        "repairers": {
+          "singular": "Reparador",
+          "plural": "Reparadores"
+        },
         "pieces": {
           "singular": "peça",
           "plural": "peças"

@@ -95,8 +95,7 @@
         "&4&l&m       &c&l&m       &r &f&l{event_title} &c&l&m       &4&l&m       ",
         "",
         "&c&lEVENTO CANCELADO!",
-        "&fO evento foi cancelado por falta de jogadores",
-        "&fou por um membro da &eStaff&f.",
+        "&fO evento foi cancelado {reason}&f.",
         "",
         "&4&l&m       &c&l&m       &r &f&l{event_title} &c&l&m       &4&l&m       ",
         ""

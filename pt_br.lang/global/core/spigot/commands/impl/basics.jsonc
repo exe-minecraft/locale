@@ -282,12 +282,17 @@
         "vanish": {
           "arguments": {
             "action": {
-              "name": "list",
-              "description": "Ver quem está em vanish na rede"
+              "name": "list|jogador",
+              "description": "Ver quem está em vanish na rede, ou ligar e desligar o de outro da staff"
             }
           },
           "success-activated": "&aModo vanish habilitado com sucesso.",
           "success-deactivated": "&cModo vanish desabilitado com sucesso.",
+          "success-activated-other": "&aModo vanish habilitado para {target_name}.",
+          "success-deactivated-other": "&cModo vanish desabilitado para {target_name}.",
+          "only-staff": "&c{target_name} não é da staff. Só a staff pode ficar em vanish.",
+          "higher-group": "&cVocê não pode mexer no vanish de {target_name}, que tem um cargo acima do seu.",
+          "denied": "&cO vanish não pode ser ligado agora.",
           "list-header": [
             "",
             "&eLista de todos os jogadores em vanish:",
