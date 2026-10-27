@@ -9,7 +9,7 @@
           "action-disabled": "&cVocê não pode realizar esta ação neste servidor.",
           "drop-disabled": "&cO drop de itens nesta localização não é permitido!",
           // O alerta do ArmorFilter (o cheat que solta a armadura gasta do inventário a cada 40 ms), para o Admin e acima.
-          "armor-filter-alert": "&c[ArmorFilter] &r{player_name_with_color} &7soltou armadura em {interval} ms no {server}."
+          "armor-filter-alert": "&c[ArmorFilter] &r{player_name_with_color} &7soltou 3 peças de armadura em {previous_interval} e {interval} ms no {server}."
         }
       }
     }
