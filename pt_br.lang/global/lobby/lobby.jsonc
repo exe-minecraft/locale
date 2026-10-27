@@ -135,7 +135,8 @@
           "&c&lE&4&lX&c&lE",
           "&4&lE&c&lXE"
         ],
-        // No desenho da scoreboard do P4Free (plugins.essentials.scoreboards.lines).
+        // No desenho da scoreboard do P4Free (plugins.essentials.scoreboards.lines). O bloco do P4Free tem
+        // quem está jogando lá e a temporada, conferida na plataforma a cada minuto (LobbySeason).
         "lines": [
           "",
           "&f Cash: &6✪ {user_cash_formatted}",
@@ -143,11 +144,18 @@
           "",
           "&f Online: &a%network_online-count%",
           "",
-          "&c O P4FREE",
-          "&c já está no ar!",
+          "&c&l P4FREE &7(Temporada {p4free_season})",
+          "&f Jogando: &a{p4free_online}",
+          "&f Fim em: &e{p4free_season_left}",
           "",
           "&ewww.rede-exe.com"
-        ]
+        ],
+        // Enquanto a plataforma não respondeu, na virada e depois da data marcada até a staff virar.
+        "season": {
+          "none": "-",
+          "turning": "virando",
+          "ending": "acabando"
+        }
       },
       "preferences": {
         "lobby-visibility": {
