@@ -15,10 +15,13 @@
           "cant-find-app": "&cNão foi possível encontrar um servidor de spawn aberto.",
           "void-rescue": "&cVocê caiu no vazio e voltou para o spawn.",
           "teleported": "&aVocê foi teleportado para o spawn.",
+          // A chegada ao spawn (SpawnWelcome): o title se escreve quadro a quadro, um tique de nota por quadro, e fecha no
+          // title com o subtitle e o rugido do dragão. O subtitle tem os placeholders de quem chega.
           "join": {
             "title": {
-              "title": "&5&l????",
-              "subtitle": "&frede-exe.com"
+              "frames": ["&c&lP", "&c&lP4", "&c&lP4F", "&c&lP4FR", "&c&lP4FRE"],
+              "title": "&c&lP4FREE",
+              "subtitle": "&fBem-vindo, {player_name_with_color}&f!"
             },
             "chat": [
               "",

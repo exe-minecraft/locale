@@ -561,6 +561,38 @@
           "merchant-open": "&f Mercador Sombrio &aVIVO"
         }
       },
+      // O aviso de quem chega ao p4free com um evento aberto (EventJoinNoticeListener), logo depois da mensagem de
+      // entrada. Com a inscrição aberta o "AQUI" faz entrar, e com a partida em andamento leva ao camarote.
+      "join-notice": {
+        "open": [
+          "",
+          "&4&l&m      &c&l&m      &r &f&l{event_title} &c&l&m      &4&l&m      ",
+          "",
+          "&fO Evento {event} está com as inscrições &a&lABERTAS&f!",
+          "&6 ► &fUse &e/{command} entrar &fou clique &e&lAQUI&f.",
+          "",
+          "&7 Participantes: &f{players}",
+          "&7 Clans confirmados: &f{clans}",
+          "",
+          "&4&l&m      &c&l&m      &r &f&l{event_title} &c&l&m      &4&l&m      ",
+          ""
+        ],
+        "open-hover": "&eClique para entrar no {event}.",
+        "running": [
+          "",
+          "&4&l&m      &c&l&m      &r &f&l{event_title} &c&l&m      &4&l&m      ",
+          "",
+          "&fO Evento {event} está &c&lACONTECENDO &fagora!",
+          "&6 ► &fClique &e&lAQUI &fpara assistir do camarote.",
+          "",
+          "&7 Jogadores vivos: &f{players}",
+          "&7 Clans na disputa: &f{clans}",
+          "",
+          "&4&l&m      &c&l&m      &r &f&l{event_title} &c&l&m      &4&l&m      ",
+          ""
+        ],
+        "running-hover": "&eClique para assistir ao {event} do camarote (/{command} camarote entrar)."
+      },
       "stages": {
         "waiting_players": "&adisponível para entrar",
         "preparing_time": "&eem preparação",
