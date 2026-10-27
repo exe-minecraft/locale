@@ -144,7 +144,7 @@
           "",
           "&f Online: &a%network_online-count%",
           "",
-          "&c&l P4FREE &7(Temporada {p4free_season})",
+          "&c&l P4FREE &7(Temp. {p4free_season})",
           "&f Jogando: &a{p4free_online}",
           "&f Fim em: &e{p4free_season_left}",
           "",
