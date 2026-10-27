@@ -198,6 +198,12 @@
               "&ee entre de novo para confirmar com o código que o site mostrar."
             ]
           },
+          // A entrada e a saída da staff na rede, para quem acompanha (a regra alertas:entrada-staff do editor). Só depois do
+          // login, e a saída só de quem teve a entrada anunciada.
+          "staff-presence": {
+            "joined": "{player} &fentrou no servidor &b{server}&f. &a({date})",
+            "left": "{player} &fsaiu do servidor &b{server}&f. &c({date})"
+          },
           "teleport": {
             "target-app-not-registered": [
               "&cO servidor requisitado não está registrado!"
