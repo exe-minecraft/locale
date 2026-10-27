@@ -111,6 +111,8 @@
       "closed": "&cO mercador não está disponível agora.",
       "insufficient": "&cVocê não tem &6moedas de abate &csuficientes. {product} &ccusta &6{cost} {cost_unit}&c.",
       "bought": "&aVocê comprou &f1x {product} &apor &6{cost} {cost_unit} de abate&a.",
+      // Para os colegas do clã de quem comprou, os que lutam e os do camarote.
+      "clan-bought": "{player_name_with_color} &7comprou &f1x {product} &7no Mercador por &6{cost} {cost_unit} de abate&7.",
       "full": "&cLibere espaço no inventário.",
       "repaired": "&aSua forja reparou a armadura.",
       "antidote": "&bSeu antídoto bloqueou o neutralizador.",
