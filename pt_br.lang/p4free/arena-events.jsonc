@@ -242,14 +242,10 @@
           "subtitle": "&7[{clan}&7] &fvenceu o evento!"
         },
         // A borda do FastGlad, como a do exe-fastgladiator: só o número vermelho no subtítulo, nos 5 s antes de cada
-        // redução (com o clique). O border-change é do jar de antes de 27/10, e sai do locale depois da troca.
+        // redução (com o clique).
         "border-warn": {
           "title": "",
           "subtitle": "&c{seconds}"
-        },
-        "border-change": {
-          "title": "&4Borda fechando!",
-          "subtitle": "&fMovam-se para dentro da nova área!"
         },
         // A chegada do Mercador Sombrio do FastGlad, com o som do wither, como no exe-fastgladiator.
         "merchant-arrive": {
