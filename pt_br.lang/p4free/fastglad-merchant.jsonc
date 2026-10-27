@@ -112,7 +112,6 @@
       "insufficient": "&cVocê não tem &6moedas de abate &csuficientes. {product} &ccusta &6{cost} {cost_unit}&c.",
       "bought": "&aVocê comprou &f1x {product} &apor &6{cost} {cost_unit} de abate&a.",
       "full": "&cLibere espaço no inventário.",
-      "bought": "&aItem comprado.",
       "repaired": "&aSua forja reparou a armadura.",
       "antidote": "&bSeu antídoto bloqueou o neutralizador.",
       "neutralized": "&cSeus efeitos foram removidos pelo neutralizador.",
