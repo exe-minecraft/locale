@@ -112,6 +112,8 @@
           "locked": "Este cosmético é exclusivo do grupo {cosmetic_group}&c.",
           "not-owned": "Você ainda não possui este cosmético.",
           "profile-unavailable": "Seus cosméticos ainda não foram carregados. Tente novamente em instantes.",
+          // Quem perde o VIP (ou a staff) com o lobby aberto: o que não pode mais usar é removido na hora.
+          "access-lost": "Você perdeu o acesso a cosméticos que estava usando, e eles foram removidos.",
           "gadget-cooldown": "&cAguarde &f{remaining_time}&c para usar o gadget novamente.",
           // Os fogos, a bola de neve, a pérola e o anzol são entidades que todos veem.
           "gadget-vanish": "&cOs gadgets ficam desligados enquanto você está no vanish."
