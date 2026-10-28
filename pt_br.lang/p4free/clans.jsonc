@@ -8,6 +8,13 @@
             "&7Mostra os clãs que estão",
             "&7recrutando membros."
           ]
+        },
+        "seekers": {
+          "name": "&eJogadores procurando clã",
+          "description": [
+            "&7Mostra ao líder e aos capitães",
+            "&7quem está procurando um clã."
+          ]
         }
       },
       "placeholders": {
@@ -409,6 +416,13 @@
               "clan-max-members-exceeded": "&cO clã já está cheio.",
               "in-cooldown": "&cO clã já foi anunciado há pouco. Aguarde {remaining_time} para anunciar de novo."
             }
+          },
+          "seek": {
+            "description": "avisar os líderes e capitães que você procura um clã",
+            "errors": {
+              "in-cooldown": "&cVocê já se anunciou há pouco. Aguarde {remaining_time} para anunciar de novo."
+            },
+            "success": "&aO líder e os capitães online dos clãs com vaga receberam seu anúncio. Se algum te convidar, o convite chega no chat."
           },
           "apply": {
             "description": "pedir para entrar num clã",
@@ -884,7 +898,16 @@
           ],
           // O que cada AQUI do pedido diz ao passar o mouse.
           "on-application-receive-accept-hover": "&aClique para aceitar o pedido de {player}.",
-          "on-application-receive-deny-hover": "&cClique para recusar o pedido de {player}."
+          "on-application-receive-deny-hover": "&cClique para recusar o pedido de {player}.",
+          // O anúncio do /clan procurar, só para o líder e os capitães de clã com vaga.
+          "on-player-seek": [
+            "",
+            " &e&lPROCURANDO CLÃ &8| {seeker_name_with_tag} &festá procurando um clã!",
+            " &7KDR: &f{seeker_kdr} &8| &7Abates: &f{seeker_kills} &8| &7Mortes: &f{seeker_deaths}",
+            " &eClique &a&lAQUI &epara convidar para o seu clã.",
+            ""
+          ],
+          "on-player-seek-hover": "&e/clan convidar {player}"
         },
         "member": {
           "on-invite-receive": [

@@ -78,6 +78,14 @@
             " &ftodo o P4Free no &a/clan recrutar&f.",
             ""
           ],
+          // O /clan procurar: o AQUI anuncia o jogador na hora (o comando tem o próprio prazo).
+          "clans-seek": [
+            "",
+            "&e&l DICA: &fProcurando clã? Clique &a&lAQUI&f ou use &a/clan procurar&f",
+            " &fe o líder e os capitães online dos clãs com vaga recebem",
+            " &fseu anúncio com um clique para te convidar.",
+            ""
+          ],
           "mail": [
             "",
             "&e&l DICA: &fInventário cheio? O item que você recebe não cai no",
