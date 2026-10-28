@@ -1733,7 +1733,7 @@
           "border-failure": "&cNão há mais estágios de borda para avançar, ou já existe um avanço em andamento!",
           "border-manual": "&aA borda vai ser controlada manualmente!",
           "border-automatic": "&aA borda vai ser controlada automaticamente!",
-          "match-ended": "&cA partida já acabou. Nem a borda nem o deathmatch mudam mais.",
+          "match-ended": "&cA partida já acabou. Nenhuma ação da staff muda mais nada nela.",
           "rejoin-enabled": "&aA reentrada no evento foi ativada.",
           "rejoin-disabled": "&eA reentrada no evento foi desativada.",
           "rejoin-failure": "&cNão foi possível alterar a reentrada.",
