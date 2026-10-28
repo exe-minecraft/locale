@@ -126,6 +126,7 @@
           },
           "cracked": {
             "original-error": "A senha de {target_name} foi trocada, mas a conta continua original. Rode o comando de novo.",
+            "higher-group": "Você não pode tornar pirata a conta de {target_name_with_color}. Só dá para fazer isso com quem tem um cargo abaixo do seu.",
             "description": "tornar pirata a conta de um jogador",
             "arguments": {
               "target": {

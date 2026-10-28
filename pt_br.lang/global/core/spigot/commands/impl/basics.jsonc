@@ -95,9 +95,10 @@
           },
           "success-deactivated": "&cModo God desativado.",
           "success-activated": "&aModo God ativado.",
-          "success-activated-other": "&aModo God ativado para {target_name}.",
-          "success-deactivated-other": "&aModo God desativado para {target_name}.",
-          "only-staff": "&c{target_name} não é da staff. Só a staff pode usar o modo God.",
+          "success-activated-other": "&aModo God ativado para {target_name_with_color}&a.",
+          "success-deactivated-other": "&aModo God desativado para {target_name_with_color}&a.",
+          "save-failed-other": "&cO modo God de {target_name_with_color} &cnão foi gravado, e nada mudou. Tente de novo em alguns segundos.",
+          "only-staff": "&c{target_name_with_color} &cnão é da staff. Só a staff pode usar o modo God.",
           "list-header": [
             "",
             "&eLista de todos os jogadores em modo God:",
