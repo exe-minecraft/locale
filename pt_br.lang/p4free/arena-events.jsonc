@@ -395,7 +395,7 @@
       "action-success": "&aAção aplicada ao evento com sucesso!",
       "kick-success": "&aVocê expulsou {player} do {event}.",
       "kick-failed": "&c{player} não está no {event}.",
-      // O expulsar e o expulsar clan com a partida acabando, quando a saída de todos já está em curso.
+      // O expulsar e o expulsar clan com a partida acabando, nas arenas e no Gladiador (o pódio e o cancelamento).
       "kick-ending": "&cO {event} já está acabando. Ninguém pode ser expulso agora.",
       "kick-clan-success": "&aVocê expulsou o clan {clan} do {event}.",
       "kick-clan-failed": "&cO clan {clan} não tem ninguém lutando no {event}.",
