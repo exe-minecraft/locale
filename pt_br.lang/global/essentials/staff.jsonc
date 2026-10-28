@@ -47,6 +47,7 @@
             }
           },
           "offline": "&cJogador não encontrado ou offline.",
+          "higher-group": "&cVocê não pode ver os comandos de {target_name_with_color}&c, que tem um cargo acima do seu.",
           "invalid-page": "&cNúmero da página inválido.",
           "page-not-positive": "&cO número da página deve ser maior que 0.",
           "empty": "&eNenhum comando recente para {player}.",
