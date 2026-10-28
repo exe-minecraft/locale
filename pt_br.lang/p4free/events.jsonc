@@ -142,8 +142,9 @@
         "fast-glad": {
           "merchant": [
             "",
-            "&e&l DICA: &fO &aMercador Sombrio&f aparece no centro do mapa. Clique",
-            " &fnele com o botão direito para gastar as moedas dos seus abates.",
+            "&e&l DICA: &fO &aMercador Sombrio&f aparece no centro do mapa.",
+            " &fClique nele com o botão direito para gastar as moedas",
+            " &fdos seus abates.",
             ""
           ],
           "souls": [
@@ -199,7 +200,8 @@
           "border": [
             "",
             "&e&l DICA: &fA borda fecha em etapas até &a8 blocos&f, com aviso",
-            " &fna tela antes de cada uma. Encostar nela fere.",
+            " &fna tela antes de cada uma. Quem encosta nela não perde",
+            " &fvida e volta ao centro do mapa.",
             ""
           ],
           "prize": [
@@ -1174,7 +1176,7 @@
           // O /v da staff ligado por quem está vivo num evento (EventsListener.onVanish).
           "vanish-blocked": "&cVocê não pode ativar o /v enquanto estiver lutando no {event}. No camarote ele continua permitido.",
           // O /v <jogador> da staff em quem luta, de qualquer app da instância (EventsListener.onVanish).
-          "vanish-blocked-other": "&c{player_name} está lutando no {event} e não pode ficar em vanish. No camarote ele pode.",
+          "vanish-blocked-other": "&c{player_name_with_color}&c está lutando no {event} e não pode ficar em vanish. No camarote ele pode.",
           "clan-not-authorized": "&cPara entrar nos eventos o seu clan tem que estar autorizado!",
           "cant-join-event": "O {event} já começou ou não está disponível.",
           "target-in-event-app": "{player_name} já está no P4Free Eventos. Dê o comando de lá para colocá-lo no {event}.",

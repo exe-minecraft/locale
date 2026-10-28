@@ -31,7 +31,8 @@
           "not-confirmed": "A troca de senha não foi confirmada. Pode repetir o comando sem problema.",
           "current-password-wrong": "A senha atual está errada.",
           "current-password-locked": "Muitas senhas erradas. Espere 10 minutos e tente de novo.",
-          "current-password-required": "Para trocar a sua senha, use /trocarsenha <senha atual> <nova senha> <nova senha>."
+          "current-password-required": "Para trocar a sua senha, use /trocarsenha <senha atual> <nova senha> <nova senha>.",
+          "higher-group": "Você não pode trocar a senha de {target_name_with_color}. Só dá para trocar a de quem tem um cargo abaixo do seu."
         },
         "confirm": {
           "arguments": {

@@ -36,8 +36,9 @@
         "repairer-give": {
           "target-offline": "Esse jogador não está online neste servidor.",
           "invalid-amount": "A quantidade vai de 1 a {maximum}.",
-          "not-in-match": "{player} não está lutando numa partida de Gladiador ou FastGlad. O reparador só vale dentro dela.",
-          "given": "Você deu {amount} {amount_unit} a {player}.",
+          "not-in-match": "{target_name_with_color} &cnão está lutando numa partida de Gladiador ou FastGlad. O reparador só vale dentro dela.",
+          "target-other-app": "{target_name_with_color} &cestá no {app}. O reparador só se dá no app em que o jogador está, então dê o comando de lá.",
+          "given": "Você deu {amount} {amount_unit} a {target_name_with_color}&a.",
           "arguments": {
             "target": {
               "name": "jogador",
@@ -674,7 +675,7 @@
         "announce": [
           "",
           " &e&lReparador!",
-          " {killer} &aabateu {victim} &acom uma arma especial",
+          " {killer_name_with_color} &aabateu {victim_name_with_color} &acom uma arma especial",
           " &ae recebeu um &lReparador&r&a.",
           ""
         ],
