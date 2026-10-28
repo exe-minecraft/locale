@@ -422,7 +422,7 @@
             "errors": {
               "in-cooldown": "&cVocê já se anunciou há pouco. Aguarde {remaining_time} para anunciar de novo."
             },
-            "success": "&aO líder e os capitães online dos clãs com vaga receberam seu anúncio. Se algum te convidar, o convite chega no chat."
+            "success": "&aSeu anúncio foi enviado ao líder e aos capitães online dos clãs com vaga. Se algum te convidar, o convite chega no chat."
           },
           "apply": {
             "description": "pedir para entrar num clã",
