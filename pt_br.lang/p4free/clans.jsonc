@@ -143,6 +143,18 @@
             "",
             "&8Última entrada em {member_last_seen_at}"
           ],
+          // A mesma lore sem o cargo, para quem não tem clã (a cabeça do menu "Sem clã").
+          "lore-without-clan": [
+            "",
+            "&eSuas informações:",
+            " &8▸ &fKDR: &7{member_kdr}",
+            " &8▸ &fAbates: &7{member_kills}",
+            " &8▸ &fMortes: &7{member_deaths}",
+            " &8▸ &fGladiadores: &7{member_gladiator_wins}",
+            " &8▸ &fCxC: &7{member_cxc_wins}",
+            "",
+            "&8Última entrada em {member_last_seen_at}"
+          ],
           // No fim da lore, só no /clan roster e só de quem está jogando um evento agora.
           "event": [
             "",
@@ -715,7 +727,7 @@
               }
             },
             "errors": {
-              "target-always-have-clan": "&cEsse jogador já faz parte de um clã. Use /clan remover primeiro."
+              "target-always-have-clan": "&cEsse jogador já faz parte de um clã. Use /clan remover primeiro, ou, se ele for o líder, transfira a liderança ou apague o clã."
             },
             "success": "&aVocê pôs {target_name_with_tag} &ano clã &7[{clan_colored_tag}&7] {clan_name}&a."
           },
