@@ -131,6 +131,7 @@
       "items": {
         "member-head": {
           "name": "{member_name_with_tag}",
+          // A lore-without-clan logo abaixo repete esta sem o cargo, então mude as duas.
           "lore": [
             "",
             "&eSuas informações:",
