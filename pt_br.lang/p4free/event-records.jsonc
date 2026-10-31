@@ -1,0 +1,44 @@
+{
+  "plugins": {
+    // Os recordes dos eventos de clã (EventRecordNotices do events-server), avisados uns segundos depois de a partida
+    // gravada: o melhor de um jogador ou de um clã numa partida só. Toda mensagem tem o {event} (Gladiador, ClanFight,
+    // FastGlad), o {record} (o nome do recorde, em "boards") e o {value}; as que não são "-first" também o {previous}, o
+    // recorde de antes. O tempo do duelo vem como 0:33.89, minutos, segundos e centésimos.
+    "event-records": {
+      "boards": {
+        "record_player_kills": "Abates numa partida",
+        "record_clan_kills": "Abates do clã numa partida",
+        // Só vale o duelo justo: o mesmo número de cada lado, chance entre 40 e 60 no "LUTEM!", e cada um que perdeu
+        // caiu com a armadura inteira, num golpe de quem venceu (a borda e a lava não contam), depois de tirar ao menos
+        // 2 corações dele. O tempo vai do "LUTEM!" à queda do último que perdeu.
+        "record_player_duel": "Duelo justo mais rápido",
+        "record_clan_duel": "Duelo justo mais rápido"
+      },
+      // Só para quem bateu o próprio recorde, onde estiver. {position} é a posição dele no ranking do recorde, a mesma
+      // do /top.
+      "personal": "&6Novo recorde pessoal no {event}! &7{record}: &e{value} &7(o anterior era {previous}). Você está em &e#{position} &7no ranking.",
+      // Para quem jogou pelo clã. {clan} é a tag com as cores do clã.
+      "clan": "&6Novo recorde do clã &7[{clan}&7] &6no {event}! &7{record}: &e{value} &7(o anterior era {previous}).",
+      // Para todos os servidores, quando o melhor da partida passa o recorde de todos. {names} é quem bateu: um nome, ou
+      // vários, quando empataram no melhor (no duelo, todo o lado que venceu tem o mesmo tempo), e por isso cada frase tem
+      // a do singular e a do plural. {holder} é quem tinha o recorde antes, o jogador ou a tag do clã.
+      "server": {
+        "player": "{names} &7bateu o recorde do servidor no &6{event}&7! {record}: &e{value} &7(o anterior era {previous}, de {holder}).",
+        "players": "{names} &7bateram o recorde do servidor no &6{event}&7! {record}: &e{value} &7(o anterior era {previous}, de {holder}).",
+        "player-first": "{names} &7fez o primeiro recorde do servidor no &6{event}&7! {record}: &e{value}&7.",
+        "players-first": "{names} &7fizeram o primeiro recorde do servidor no &6{event}&7! {record}: &e{value}&7.",
+        "clan": "&7O clã {names} &7bateu o recorde do servidor no &6{event}&7! {record}: &e{value} &7(o anterior era {previous}, do clã [{holder}&7]).",
+        "clans": "&7Os clãs {names} &7bateram o recorde do servidor no &6{event}&7! {record}: &e{value} &7(o anterior era {previous}, do clã [{holder}&7]).",
+        "clan-first": "&7O clã {names} &7fez o primeiro recorde do servidor no &6{event}&7! {record}: &e{value}&7.",
+        "clans-first": "&7Os clãs {names} &7fizeram o primeiro recorde do servidor no &6{event}&7! {record}: &e{value}&7."
+      },
+      // Como cada nome entra no {names}: "Ana", "Ana e Bia", "Ana, Bia e Caio".
+      "names": {
+        "player": "&6{player}",
+        "clan": "&7[{clan}&7]",
+        "separator": "&7, ",
+        "last": " &7e "
+      }
+    }
+  }
+}

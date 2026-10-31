@@ -27,7 +27,16 @@
         "clan_fight_player_kills": "ClanFight: abates",
         "clan_fight_clan_wins": "ClanFight: vitórias de clãs",
         "fast_glad_player_kills": "FastGlad: abates",
-        "fast_glad_clan_wins": "FastGlad: vitórias de clãs"
+        "fast_glad_clan_wins": "FastGlad: vitórias de clãs",
+        // Os recordes: o melhor de cada um numa partida só, sempre no Total (event-records.jsonc).
+        "gladiator_record_player_kills": "Gladiador: recorde de abates",
+        "gladiator_record_clan_kills": "Gladiador: recorde de abates de clã",
+        "clan_fight_record_player_kills": "ClanFight: recorde de abates",
+        "clan_fight_record_clan_kills": "ClanFight: recorde de abates de clã",
+        "clan_fight_record_player_duel": "ClanFight: duelo mais rápido",
+        "clan_fight_record_clan_duel": "ClanFight: duelo mais rápido de clã",
+        "fast_glad_record_player_kills": "FastGlad: recorde de abates",
+        "fast_glad_record_clan_kills": "FastGlad: recorde de abates de clã"
       }
     }
   }
