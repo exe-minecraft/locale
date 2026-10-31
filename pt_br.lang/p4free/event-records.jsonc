@@ -9,10 +9,10 @@
         "record_player_kills": "Abates numa partida",
         "record_clan_kills": "Abates do clã numa partida",
         // Só vale o duelo justo: o mesmo número de cada lado, chance entre 40 e 60 no "LUTEM!", e cada um que perdeu
-        // caiu com a armadura inteira, num golpe de quem venceu (a borda e a lava não contam), depois de tirar ao menos
-        // 2 corações dele. O tempo vai do "LUTEM!" à queda do último que perdeu.
+        // caiu com a armadura inteira, num golpe ou no fogo da espada de quem venceu (a borda e a lava não contam),
+        // depois de tirar ao menos 2 corações dele. O tempo vai do "LUTEM!" à queda do último que perdeu.
         "record_player_duel": "Duelo justo mais rápido",
-        "record_clan_duel": "Duelo justo mais rápido"
+        "record_clan_duel": "Duelo justo mais rápido do clã"
       },
       // Só para quem bateu o próprio recorde, onde estiver. {position} é a posição dele no ranking do recorde, a mesma
       // do /top.
