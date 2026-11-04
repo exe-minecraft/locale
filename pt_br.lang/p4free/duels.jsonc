@@ -154,13 +154,18 @@
         // cor do lado como quem lê os vê, e {kills} é a conta de quem matou nesta luta ("2 abates").
         "kill": {
           "by": "{victim} &7foi eliminado por {killer} &7({health}&c❤&7, {kills}).",
-          "alone": "{victim} &7morreu."
+          "alone": "{victim} &7morreu.",
+          // O ban de quem lutava, com a luta seguindo (o 2v2 com o parceiro de pé). O nick na cor do cargo.
+          "banned": "{player} &7foi &4&lBANIDO &7e saiu da luta."
         },
         // O resultado vai a todos no P4Free local. {winners} e {losers} viram os nomes, cada um com
         // as estatísticas da luta no hover.
         "result": {
           "duel": "&6&lX1 &r&f{winners} &7({health}&c❤&7) &evenceu o duelo contra &f{losers}&e.",
           "team": "&6&lX1 &r&eVitória de &f{winners} &econtra &f{losers} &7({format})&e.",
+          // A luta que o ban decidiu (o dono, 04/11): sem os corações, porque a luta não terminou no braço.
+          "duel-banned": "&6&lX1 &r&f{winners} &evenceu o duelo porque &f{losers} &efoi &4&lBANIDO&e.",
+          "team-banned": "&6&lX1 &r&eVitória de &f{winners} &econtra &f{losers} &7({format})&e, porque um adversário foi &4&lBANIDO&e.",
           "draw": "&7A luta terminou empatada &8({format})&7.",
           "elo-won": "&a+{amount} {points} &8(agora {elo})",
           "elo-lost": "&c-{amount} {points} &8(agora {elo})",
@@ -394,7 +399,9 @@
         "kill": {
           // Como nos eventos (o dono, 25/10), com a tag na cor do clã entre colchetes cinza e o nick na cor do cargo.
           "eliminated": "&6[CxC] &7[{victim_clan}&7] {victim_name} &7foi &c&lELIMINADO &7por &7[{killer_clan}&7] {killer_name} &7({kills}).",
-          "eliminated-alone": "&6[CxC] &7[{victim_clan}&7] {victim_name} &7foi &c&lELIMINADO&7."
+          "eliminated-alone": "&6[CxC] &7[{victim_clan}&7] {victim_name} &7foi &c&lELIMINADO&7.",
+          // O ban de quem lutava (o dono, 04/11), no lugar do abate.
+          "banned": "&6[CxC] &7[{victim_clan}&7] {victim_name} &7foi &4&lBANIDO&7."
         },
         // O resultado vai a quem lutou e ao camarote.
         "result": {
