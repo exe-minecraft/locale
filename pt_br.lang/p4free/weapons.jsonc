@@ -513,6 +513,10 @@
         "delete": {
           "title": "Excluir a arma"
         },
+        // O "Tem certeza?" do prestígio. Até 04/11 a chave não existia e o menu mostrava ela crua.
+        "prestige": {
+          "title": "Prestigiar a arma"
+        },
         // O histórico das duas armas, que a staff abre com /espada historico ou /machado historico.
         // Um item por registro, do mais novo para o mais velho; a data é no horário de Brasília.
         "history": {
