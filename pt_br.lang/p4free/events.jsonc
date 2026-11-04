@@ -127,12 +127,6 @@
             " &fvocê &a24 horas&f sem recompensa pelos abates dele.",
             ""
           ],
-          "batatada": [
-            "",
-            "&e&l DICA: &fMorrer com &a2 sets&f de diamante intactos guardados",
-            " &fno inventário é &cbatatada&f. Veja o ranking em &a/batatadas top&f.",
-            ""
-          ],
           "rewards": [
             "",
             "&e&l DICA: &fCada abate no Gladiador paga &a12 tokens&f, e cada",
@@ -217,12 +211,6 @@
             " &fe &a100 almas&f. Quem sai com &a/fg sair&f perde o prêmio.",
             ""
           ],
-          "batatada": [
-            "",
-            "&e&l DICA: &fNo FastGlad, morrer com o set de reserva inteiro",
-            " &fe intacto guardado no inventário é &cbatatada&f.",
-            ""
-          ],
           "kit": [
             "",
             "&e&l DICA: &fArrume o kit do FastGlad do seu jeito com &a/fg kit&f.",
@@ -277,12 +265,6 @@
             "",
             "&e&l DICA: &fNo fim de cada duelo aparece quem mais acertou,",
             " &fe no fim do evento sai o top 3 de hits.",
-            ""
-          ],
-          "batatada": [
-            "",
-            "&e&l DICA: &fNo ClanFight, morrer com o set de reserva inteiro",
-            " &fe intacto guardado no inventário é &cbatatada&f.",
             ""
           ],
           "kit": [
