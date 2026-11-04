@@ -29,7 +29,8 @@
               "",
               " &cAcompanhe as novidades:",
               " &c▸ &fDiscord: &7discord.rede-exe.com",
-              " &c▸ &fNotícias: &7rede-exe.com/noticias",
+              // As últimas atualizações, o filtro da categoria no /noticias. A linha tem 316 dos 320 px do chat do 1.8.
+              " &c▸ &fAtualizações: &7rede-exe.com/noticias?categoria=atualizacoes",
               "",
               " &crede-exe.com",
               ""
