@@ -10,6 +10,12 @@
         "time-limit": "porque o tempo máximo da partida acabou",
         "no-winner": "sem um clã vencedor"
       },
+      // O corte de rede geral (NetworkPause do events-server, 31/10/2026): quase todos sem pacote no mesmo segundo, em
+      // pelo menos três clãs. Vai a todos no app de eventos, no começo e no fim da pausa. O {silent} é sempre 6 ou mais.
+      "network-pause": {
+        "started": "&cA conexão de {silent} {silent_unit} caiu ao mesmo tempo. O combate está pausado e ninguém toma dano até a rede voltar.",
+        "ended": "&aA rede voltou depois de {seconds} {seconds_unit} e o combate continua. Quem ainda estiver sem conexão segue protegido até voltar."
+      },
       "preferences": {
         "announcements": {
           "name": "&eAnúncios dos eventos",
