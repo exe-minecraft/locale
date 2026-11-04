@@ -21,10 +21,11 @@
       "clan": "&6Novo recorde do clã &7[{clan}&7] &6no {event}! &7{record}: &e{value} &7(o anterior era {previous}).",
       // Para todos os servidores, quando o melhor da partida passa o recorde de todos. {names} é quem bateu: um nome, ou
       // vários, quando empataram no melhor (no duelo, todo o lado que venceu tem o mesmo tempo), e por isso cada frase tem
-      // a do singular e a do plural. {holder} é quem tinha o recorde antes, o jogador ou a tag do clã.
+      // a do singular e a do plural. Quem tinha o recorde antes vem inteiro no de jogador ({holder_name_with_color},
+      // _name, _name_with_tag, _group_name, _group_tag) e como {holder}, a tag, no de clã.
       "server": {
-        "player": "{names} &7bateu o recorde do servidor no &6{event}&7! {record}: &e{value} &7(o anterior era {previous}, de {holder}).",
-        "players": "{names} &7bateram o recorde do servidor no &6{event}&7! {record}: &e{value} &7(o anterior era {previous}, de {holder}).",
+        "player": "{names} &7bateu o recorde do servidor no &6{event}&7! {record}: &e{value} &7(o anterior era {previous}, de {holder_name_with_color}&7).",
+        "players": "{names} &7bateram o recorde do servidor no &6{event}&7! {record}: &e{value} &7(o anterior era {previous}, de {holder_name_with_color}&7).",
         "player-first": "{names} &7fez o primeiro recorde do servidor no &6{event}&7! {record}: &e{value}&7.",
         "players-first": "{names} &7fizeram o primeiro recorde do servidor no &6{event}&7! {record}: &e{value}&7.",
         "clan": "&7O clã {names} &7bateu o recorde do servidor no &6{event}&7! {record}: &e{value} &7(o anterior era {previous}, do clã [{holder}&7]).",
@@ -32,9 +33,10 @@
         "clan-first": "&7O clã {names} &7fez o primeiro recorde do servidor no &6{event}&7! {record}: &e{value}&7.",
         "clans-first": "&7Os clãs {names} &7fizeram o primeiro recorde do servidor no &6{event}&7! {record}: &e{value}&7."
       },
-      // Como cada nome entra no {names}: "Ana", "Ana e Bia", "Ana, Bia e Caio".
+      // Como cada nome entra no {names}: "Ana", "Ana e Bia", "Ana, Bia e Caio". O jogador vem inteiro ({player_name_with_color},
+      // _name, _name_with_tag, _group_name, _group_tag), e o nick sai na cor do cargo.
       "names": {
-        "player": "&6{player}",
+        "player": "{player_name_with_color}",
         "clan": "&7[{clan}&7]",
         "separator": "&7, ",
         "last": " &7e "
