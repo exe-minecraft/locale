@@ -306,7 +306,7 @@
               ]
             },
             // 4: o prestígio. O {prestige_state} é uma lista: os requisitos e a última linha. O Indestrutível
-            // fica na arma desde o exe-weapons.jar do exe 54bbe4303 (04/11): esta linha sobe junto com ele.
+            // fica na arma desde o exe-weapons.jar do exe 77266ce12 (04/11): esta linha sobe junto com ele.
             "4": {
               "name": "{prestige_title}",
               "lore": [
