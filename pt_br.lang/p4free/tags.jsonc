@@ -250,7 +250,7 @@
             "invalid-id": "O id só aceita letras minúsculas, números, - e _, até 32.",
             "invalid-name": "O nome precisa de algo visível e de no máximo {max_name} caracteres, contando as cores.",
             "invalid-description": "A descrição precisa de algo visível e de no máximo {max_description} caracteres, contando as cores.",
-            "invalid-icon": "Material inválido. Exemplos: NAME_TAG, DIAMOND, GOLD_INGOT, NETHER_STAR.",
+            "invalid-icon": "Material inválido. Use o nome do item, e não o do bloco (SKULL_ITEM, e não SKULL). Exemplos: NAME_TAG, DIAMOND, GOLD_INGOT, NETHER_STAR.",
             "exists": "O id &f{id} &cjá é ou já foi de uma tag. Quem ganhou a antiga ainda tem a permissão dela. Escolha outro id.",
             "created": [
               "",
