@@ -149,6 +149,8 @@
         "prestige-maximum": "Esta arma já está no prestígio máximo.",
         "prestige-not-invested": "Você precisa ter {required} tokens investidos nesta arma.",
         "prestige-done": "&aPrestígio &l{prestige}&r&a. Os encantamentos foram zerados, menos o Indestrutível.",
+        // O config da arma não carregou (um reload que falhou no meio), e o prestígio não roda sem ele.
+        "prestige-unavailable": "O prestígio está indisponível agora. Tente de novo daqui a pouco.",
         "book-wrong-weapon": "Este livro não é para esta arma.",
         "deleted": "&cSua arma foi excluída.",
         "free-upgrade": "&aParabéns! &f{enchant} &asubiu para o nível &f{level}&a de graça, pelo seu grupo.",
@@ -311,7 +313,7 @@
                 "&7Resete os encantamentos para",
                 "&7desbloquear mais níveis máximos",
                 "&7e mais encantamentos!",
-                "&7O Indestrutível continua na arma.",
+                "&7O Indestrutível não é zerado.",
                 "",
                 "{prestige_state}"
               ]
