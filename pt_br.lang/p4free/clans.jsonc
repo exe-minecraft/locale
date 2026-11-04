@@ -1010,7 +1010,8 @@
           "on-custom-tag-set": "&aSua tag no clã agora é &7[{custom_tag}&7]&a.",
           "on-custom-tag-removed": "&cSua tag no clã foi tirada.",
           "on-trust-given": "&aO líder do clã confiou em você. Agora você convida jogadores e pode desfazer o clã quando o líder estiver offline.",
-          "on-trust-removed": "&cO líder do clã tirou a sua confiança. Você não pode mais desfazer o clã, e só convida jogadores se for capitão.",
+          // Vale também para a troca de líder, que tira a confiança de todos (o líder novo escolhe os dele).
+          "on-trust-removed": "&cVocê não é mais de confiança do líder do clã. Não pode mais desfazer o clã, e só convida jogadores se for capitão.",
           "pending-invites": " &eVocê tem {invites_size} {invites_unit}. Clique &f&lAQUI&e para ver.",
           "pending-invites-hover": "&e/clan convites"
         },
