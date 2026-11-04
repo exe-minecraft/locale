@@ -278,7 +278,7 @@
               "field": { "name": "nome|descricao|material", "description": "O que trocar" },
               "value": { "name": "valor", "description": "O valor novo, com _ no lugar dos espaços na descrição" }
             },
-            "invalid-value": "Valor inválido. Use até {max_name} caracteres no nome e até {max_description} na descrição. No material, use o nome de um item como DIAMOND ou SKULL_ITEM, e não o de um bloco como SKULL.",
+            "invalid-value": "Valor inválido. O nome e a descrição precisam de algo visível, e vão até {max_name} e {max_description} caracteres, contando as cores. No material, use o nome de um item como DIAMOND ou SKULL_ITEM, e não o de um bloco como SKULL.",
             "unchanged": "A tag &f{id} &cjá está com esse valor. Nada foi gravado.",
             "updated": "A tag &f{id} &afoi atualizada para {tag}&a."
           },
