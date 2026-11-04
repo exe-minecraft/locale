@@ -82,16 +82,18 @@
           "clans-seek": [
             "",
             "&e&l DICA: &fProcurando clã? Clique &a&lAQUI&f ou use &a/clan procurar&f",
-            " &fe o líder e os capitães online dos clãs com vaga recebem",
-            " &fseu anúncio com um clique para te convidar.",
+            " &fe o líder, os capitães e os membros de confiança",
+            " &fonline dos clãs com vaga recebem seu anúncio com",
+            " &fum clique para te convidar.",
             ""
           ],
           // O /clan permissoes (04/11): o AQUI mostra quem é de confiança no clã de quem clica.
           "clans-trust": [
             "",
-            "&e&l DICA: &fLíder de clã? Com &a/clan permissoes adicionar <jogador>&f você",
-            " &fescolhe até 3 membros de confiança, que convidam jogadores e",
-            " &fdesfazem o clã quando você estiver offline. Clique &a&lAQUI&f para ver os seus.",
+            "&e&l DICA: &fLíder de clã? Você escolhe até 3 membros",
+            " &fde confiança, que convidam jogadores e desfazem",
+            " &fo clã quando você estiver offline. Clique &a&lAQUI&f ou",
+            " &fuse &a/clan permissoes&f para ver e escolher.",
             ""
           ],
           "mail": [
