@@ -1687,7 +1687,7 @@
         "gladiator": {
           "rejoin-open": [
             "Você caiu do **Gladiador**. Dá para voltar até {deadline_time} ({deadline}) com `/glad rejoin`.",
-            "Não use /ec, /cofre, /kit nem /cash antes de voltar, pois qualquer um deles tira a sua reentrada."
+            "Não use /ec, /cofre, /kit, /cash, /shop, /berserker nem /correio antes de voltar, pois qualquer um deles tira a sua reentrada."
           ],
           "rejoin-closed": {
             "combat-logged": ["Você saiu do **Gladiador** em combate e foi eliminado. Quem sai em combate não pode reentrar."],
