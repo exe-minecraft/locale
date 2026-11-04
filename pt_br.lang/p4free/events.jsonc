@@ -1758,8 +1758,8 @@
           "revive-clan-changed": "&cEste jogador trocou de clan depois de entrar no Gladiador e não pode voltar pelo clan antigo.",
           "revive-vanished": "&cEste jogador está com o /v ativado e não pode voltar à luta.",
           // O aviso a quem deu o /glad revive (pedido de 04/11). O revivido volta com o inventário real, e com o que estes comandos deram.
-          "revive-commands-used": "&eAtenção! {target_name_with_color} &eusou estes comandos depois de sair da luta, e volta com o que eles deram:",
-          "revive-commands-entry": " &8▸ &f/{command} &7há {time}",
+          "revive-commands-used": "&eAtenção! {target_name_with_color} &evoltou à luta depois de usar, fora dela, {commands}&e. Os itens que esses comandos deram vieram junto.",
+          "revive-commands-entry": "&f/{command} &7(há {time})",
           "kick-player-success": "&aVocê expulsou o jogador do Gladiador com sucesso!",
           "kick-player-failure": "&cEste jogador não está no Gladiador!",
           "leave-success": "&aVocê saiu do {event} com sucesso!",
