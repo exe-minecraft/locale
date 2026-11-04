@@ -148,7 +148,7 @@
         "cannot-move": "Você só pode guardar a arma no seu próprio /cofre.",
         "prestige-maximum": "Esta arma já está no prestígio máximo.",
         "prestige-not-invested": "Você precisa ter {required} tokens investidos nesta arma.",
-        "prestige-done": "&aPrestígio &l{prestige}&r&a. Os encantamentos foram zerados.",
+        "prestige-done": "&aPrestígio &l{prestige}&r&a. Os encantamentos foram zerados, menos o Indestrutível.",
         "book-wrong-weapon": "Este livro não é para esta arma.",
         "deleted": "&cSua arma foi excluída.",
         "free-upgrade": "&aParabéns! &f{enchant} &asubiu para o nível &f{level}&a de graça, pelo seu grupo.",
