@@ -14,7 +14,7 @@
       // segundo, em mais de um clã. Vai a todos no app de eventos, no começo e no fim da pausa. O {silent} é sempre 6 ou
       // mais. A pausa tem teto, então o fim não diz que a rede voltou.
       "network-pause": {
-        "started": "&cA conexão de {silent} {silent_unit} caiu ao mesmo tempo. O combate está pausado e ninguém toma dano até a rede voltar.",
+        "started": "&cA conexão de {silent} {silent_unit} caiu ao mesmo tempo. O combate está pausado, e até a rede voltar quem luta não se mexe, não usa item e não toma dano.",
         "ended": "&aO combate voltou depois de {seconds} {seconds_unit} de pausa. Quem ainda estiver sem conexão segue protegido até voltar."
       },
       "preferences": {
