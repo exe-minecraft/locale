@@ -385,7 +385,7 @@
               }
             },
             "errors": {
-              "need-more-role": "&cSó o líder e os capitães convidam jogadores.",
+              "need-more-role": "&cSó o líder, os capitães e os membros de confiança do líder convidam jogadores.",
               "clan-max-members-exceeded": "&cO clã já está cheio.",
               "target-always-have-clan": "&cEsse jogador já faz parte de um clã.",
               "already-invited": "&cEsse jogador já foi convidado para o seu clã."
@@ -544,7 +544,11 @@
             }
           },
           "disband": {
-            "description": "desfazer o clã"
+            "description": "desfazer o clã",
+            "errors": {
+              // O de confiança do líder (/clan permissoes) desfaz só com o líder offline no P4Free.
+              "leader-online": "&cO líder do clã está online, e só ele desfaz o clã agora. Os membros de confiança desfazem o clã apenas quando o líder está offline."
+            }
           },
           "modtag": {
             "description": "mudar as cores da tag",
@@ -586,6 +590,42 @@
             },
             "success": "&aVocê deu a tag &7[{custom_tag}&7] &aa {target_name_with_tag}&a.",
             "success-removed": "&cVocê tirou a tag de {target_name_with_tag}&c."
+          },
+          // O /clan permissoes (pedido de 04/11): até 3 membros de confiança do líder, que convidam e desfazem o clã com o líder offline.
+          "trust": {
+            "description": "ver quem tem a confiança do líder no clã",
+            "header": "&eMembros de confiança do líder &7({trusted}/{max_trusted})&e. Eles convidam jogadores e desfazem o clã quando o líder está offline.",
+            "entry": " &8▸ {target_name_with_color} &7desde {since}",
+            "empty": "&eO líder ainda não escolheu membros de confiança. Eles convidam jogadores e desfazem o clã quando o líder está offline, e o líder escolhe até {max_trusted} com /clan permissoes adicionar <jogador>.",
+            "add": {
+              "description": "dar a um membro a confiança de convidar e de desfazer o clã com você offline",
+              "arguments": {
+                "target": {
+                  "name": "jogador",
+                  "description": "Membro do seu clã"
+                }
+              },
+              "errors": {
+                "not-same-clan": "&cEsse jogador não faz parte do seu clã.",
+                "already": "&c{target_name_with_tag} &cjá é de confiança.",
+                "full": "&cO clã já tem {max_trusted} membros de confiança. Tire um com /clan permissoes remover <jogador> antes de escolher outro."
+              },
+              "success": "&a{target_name_with_tag} &aagora convida jogadores e pode desfazer o clã quando você estiver offline."
+            },
+            "remove": {
+              "description": "tirar a confiança de um membro",
+              "arguments": {
+                "target": {
+                  "name": "jogador",
+                  "description": "Membro de confiança do seu clã"
+                }
+              },
+              "errors": {
+                "not-same-clan": "&cEsse jogador não faz parte do seu clã.",
+                "already": "&c{target_name_with_tag} &cnão é de confiança."
+              },
+              "success": "&cVocê tirou a confiança de {target_name_with_tag}&c."
+            }
           },
           "authorize": {
             "description": "liberar o clã para os eventos",
@@ -969,6 +1009,8 @@
           ],
           "on-custom-tag-set": "&aSua tag no clã agora é &7[{custom_tag}&7]&a.",
           "on-custom-tag-removed": "&cSua tag no clã foi tirada.",
+          "on-trust-given": "&aO líder do clã confiou em você. Agora você convida jogadores e pode desfazer o clã quando o líder estiver offline.",
+          "on-trust-removed": "&cO líder do clã tirou a sua confiança. Você não pode mais desfazer o clã, e só convida jogadores se for capitão.",
           "pending-invites": " &eVocê tem {invites_size} {invites_unit}. Clique &f&lAQUI&e para ver.",
           "pending-invites-hover": "&e/clan convites"
         },
