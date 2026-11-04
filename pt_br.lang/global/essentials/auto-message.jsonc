@@ -86,6 +86,14 @@
             " &fseu anúncio com um clique para te convidar.",
             ""
           ],
+          // O /clan permissoes (04/11): o AQUI mostra quem é de confiança no clã de quem clica.
+          "clans-trust": [
+            "",
+            "&e&l DICA: &fLíder de clã? Com &a/clan permissoes adicionar <jogador>&f você",
+            " &fescolhe até 3 membros de confiança, que convidam jogadores e",
+            " &fdesfazem o clã quando você estiver offline. Clique &a&lAQUI&f para ver os seus.",
+            ""
+          ],
           "mail": [
             "",
             "&e&l DICA: &fInventário cheio? O item que você recebe não cai no",
