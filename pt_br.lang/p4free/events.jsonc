@@ -1194,7 +1194,8 @@
           // o exe-gladiador fazia no servidor do evento.
           "waiting-bar": "&4[{event}] &aComeçando em {time}... &e/{command} entrar",
           // A celebração do fim nos três eventos (EventPodium), 15 s entre a vitória e a fila de saída: o 3º e o 2º lugar
-          // pela ordem de eliminação, o 1º, o destaque de cada evento (o Mito do Gladiador, quem mais deu hits no ClanFight,
+          // (pela ordem de eliminação nas arenas, e no Gladiador os clãs que mais abateram depois do vencedor, como o resumo
+          // do chat), o 1º, o destaque de cada evento (o Mito do Gladiador, quem mais deu hits no ClanFight,
           // quem mais abateu no FastGlad) e a contagem na barra de ação. O "ACABOU" de cada evento abre a cena.
           "podium": {
             "title": {
