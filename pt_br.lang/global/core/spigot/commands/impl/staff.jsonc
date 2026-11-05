@@ -89,7 +89,7 @@
             },
             // A rede do IP no /alts <ip>, pela base de ASN da plataforma.
             "network": " &7Rede: &f{alts_network} &8(AS{alts_asn})",
-            "network-datacenter": " &cIP de VPN ou ExitLag, as contas podem ser de gente diferente.",
+            "network-datacenter": " &cIP de VPN ou ExitLag, cada conta pode ser de outra pessoa.",
             "entry": "  &f{alts_name}&7: {alts_state}{alts_punishments}",
             // Depois da linha da conta ligada só por IP de VPN ou ExitLag.
             "datacenter": " &8[VPN]",
