@@ -119,6 +119,26 @@
                     "&eClique para selecionar!"
                   ]
                 }
+              },
+              "restarting": {
+                "selected": {
+                  "name": "&e{app_display_name}",
+                  "lore": [
+                    "",
+                    "&eReiniciando. Ele volta sozinho em instantes.",
+                    "",
+                    "&aSelecionado."
+                  ]
+                },
+                "unselected": {
+                  "name": "&e{app_display_name}",
+                  "lore": [
+                    "",
+                    "&eReiniciando. Ele volta sozinho em instantes.",
+                    "",
+                    "&eClique para selecionar!"
+                  ]
+                }
               }
             }
           }
