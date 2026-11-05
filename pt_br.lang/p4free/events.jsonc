@@ -39,13 +39,13 @@
         "names": {
           "clan-fight": "ClanFight",
           "fast-glad": "FastGlad",
-          "gladiador2": "Mapa 1 (Bússola)",
-          "gladiador3": "Mapa 2 (End)",
-          "gladiador4": "Mapa 3 (Dragão)",
-          "gladiador5": "Mapa 4 (Espada)",
-          "gladiador6": "Mapa 5 (Cogumelos)",
-          "gladiador7": "Mapa 6 (Militar)",
-          "gladiador": "Mapa 7 (Helicóptero)"
+          "gladiador": "Mapa 1 (Helicóptero)",
+          "gladiador2": "Mapa 2 (Bússola)",
+          "gladiador3": "Mapa 3 (End)",
+          "gladiador4": "Mapa 4 (Dragão)",
+          "gladiador5": "Mapa 5 (Espada)",
+          "gladiador6": "Mapa 6 (Cogumelos)",
+          "gladiador7": "Mapa 7 (Militar)"
         },
         "visiting": [
           "",
