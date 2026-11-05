@@ -50,6 +50,15 @@
             }
           }
         },
+        "records": {
+          "description": "Mostra os seus recordes nos eventos de clã, ou os de outro jogador.",
+          "arguments": {
+            "name": {
+              "name": "jogador",
+              "description": "Jogador cujos recordes você deseja ver"
+            }
+          }
+        },
         "enchantment": {
           "arguments": {
             "enchantment": {
