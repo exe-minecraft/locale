@@ -87,7 +87,12 @@
               ],
               "empty": "Nenhuma conta usou o IP &f{alts_target}&e."
             },
+            // A rede do IP no /alts <ip>, pela base de ASN da plataforma.
+            "network": " &7Rede: &f{alts_network} &8(AS{alts_asn})",
+            "network-datacenter": " &cIP de VPN ou ExitLag, as contas podem ser de gente diferente.",
             "entry": "  &f{alts_name}&7: {alts_state}{alts_punishments}",
+            // Depois da linha da conta ligada só por IP de VPN ou ExitLag.
+            "datacenter": " &8[VPN]",
             "online": "&aonline agora",
             "seen": "&7visto em {alts_seen}",
             "punishment": " &8[{alts_punishment_type}&8]",
@@ -96,6 +101,7 @@
             "permanent": "permanente",
             "more": "  &7e mais {alts_hidden} {alts_accounts}, de acesso mais antigo",
             "hover": "&7Clique para abrir o &f/account {alts_name}",
+            "hover-datacenter": "&7Ligação só por IP de VPN ou ExitLag, pode ser outra pessoa",
             "hover-addresses": "&7IPs em comum: &f{alts_addresses}",
             "hover-addresses-more": "&7e mais {alts_hidden} {alts_ips}",
             "hover-punishment": "{alts_punishment_type}&7, {alts_punishment_duration}: &f{alts_punishment_reason}",
