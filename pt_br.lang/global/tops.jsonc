@@ -50,10 +50,18 @@
           "items": {
             "entry": {
               "name": "&e{position}º &f{name}",
+              // O pódio: o nome das três primeiras posições (o primeiro também brilha). Do quarto em diante vale o "name".
+              "podium": {
+                "1": "&6&l1º &f{name}",
+                "2": "&7&l2º &f{name}",
+                "3": "&c&l3º &f{name}"
+              },
               "lore": [
                 "",
                 "&7{ranking}: &f{value}"
-              ]
+              ],
+              // Embaixo do valor, só nos rankings em que ele é de um momento (os recordes dos eventos, o fim da partida).
+              "achieved": ["&7Feito em &f{date}"]
             },
             "self": {
               "name": "&eSua posição: {position}º",

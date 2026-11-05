@@ -98,6 +98,27 @@
             "&aClique para ver os de {target_name}."
           ]
         },
+        // Os recordes dele nos eventos de clã (o dono, 05/11), no menu core/spigot/views/profile/records.
+        "records": {
+          "name": "&eRecordes",
+          "lore": [
+            "&7O seu melhor numa partida só no",
+            "&7Gladiador, no ClanFight e no FastGlad,",
+            "&7e a sua posição em cada ranking.",
+            "",
+            "&aClique para ver os seus recordes."
+          ]
+        },
+        "records-public": {
+          "name": "&eRecordes",
+          "lore": [
+            "&7O melhor numa partida só no",
+            "&7Gladiador, no ClanFight e no FastGlad,",
+            "&7e a posição em cada ranking.",
+            "",
+            "&aClique para ver os de {target_name}."
+          ]
+        },
         "purchases": {
           "name": "&aSuas compras",
           "lore": [
@@ -216,6 +237,92 @@
         "previous": { "name": "&ePartidas mais recentes" },
         "next": { "name": "&ePartidas mais antigas" },
         "filter": { "name": "&bEscolha qual evento ver", "lore": ["", "{filters}", "", "&bClique para trocar."] }
+      }
+    },
+    // O botão "Recordes" do /perfil (o dono, 05/11): o melhor do jogador numa partida só em cada recorde de jogador dos
+    // eventos de clã, quando foi, a posição dele no ranking (a do /top, sem a staff) e quem tem o recorde do servidor.
+    // {value} são os abates com a palavra ("1 abate", "12 abates") ou o tempo do duelo (0:33.89). {position} já vem de
+    // "position". {server} são as linhas de "server", e {description} as de "boards.<recorde>.description".
+    "player-records": {
+      "title": "Recordes de {target_name}",
+      "units": { "kill": { "singular": "abate", "plural": "abates" } },
+      "events": { "gladiator": "Gladiador", "clan-fight": "ClanFight", "fast-glad": "FastGlad" },
+      "boards": {
+        "record_player_kills": {
+          "name": "Abates numa partida",
+          "description": ["&7O maior número de abates", "&7numa partida só."]
+        },
+        "record_player_duel": {
+          "name": "Duelo mais rápido",
+          "description": ["&7O duelo justo mais rápido", "&7vencido pelo clã."]
+        }
+      },
+      "position": {
+        "ranked": "&e#{position}",
+        "staff": "&7a staff não entra no ranking",
+        "none": "&7nenhuma ainda"
+      },
+      // A staff tem o recorde dela no perfil, mas nunca o do servidor, que é o primeiro do ranking sem a staff.
+      "server": {
+        "own": ["&6&lÉ o recorde do servidor!"],
+        "none": ["&7Recorde do servidor", "&8 ▸ &7ninguém fez ainda"],
+        "other": ["&7Recorde do servidor", "&8 ▸ {holder_name_with_color} &7com &e{value}", "&8 ▸ &7em {date}"]
+      },
+      "items": {
+        "summary": {
+          "name": "&6Recordes de {target_name_with_color}",
+          "lore": [
+            "&7O melhor numa partida só no",
+            "&7Gladiador, no ClanFight e no FastGlad.",
+            "",
+            "&8 ▸ &fRecordes feitos: &b{set} de {total}",
+            "&8 ▸ &fRecordes do servidor: &6{holding}",
+            "&8 ▸ &fMelhor posição: {best_position}",
+            "",
+            "&7Clique num recorde para ver",
+            "&7a partida no site."
+          ],
+          "loading": ["&7Carregando..."],
+          "unavailable": ["&cNão deu para carregar os recordes agora.", "&7Tente de novo em instantes."]
+        },
+        "record": {
+          "name": {
+            "holding": "&6{event} &8» &e{record}",
+            "set": "&a{event} &8» &f{record}",
+            "none": "&7{event} &8» &7{record}"
+          },
+          "lore": {
+            "holding": [
+              "{description}",
+              "",
+              "&8 ▸ &fRecorde: &e{value}",
+              "&8 ▸ &fFeito em: &7{date}",
+              "&8 ▸ &fPosição: {position}",
+              "",
+              "{server}",
+              "",
+              "&aClique para ver a partida no site."
+            ],
+            "set": [
+              "{description}",
+              "",
+              "&8 ▸ &fRecorde: &e{value}",
+              "&8 ▸ &fFeito em: &7{date}",
+              "&8 ▸ &fPosição: {position}",
+              "",
+              "{server}",
+              "",
+              "&aClique para ver a partida no site."
+            ],
+            "none": [
+              "{description}",
+              "",
+              "&8 ▸ &fRecorde: &7nenhum ainda",
+              "",
+              "{server}"
+            ]
+          }
+        }
       }
     } }
   } }
