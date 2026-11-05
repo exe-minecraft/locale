@@ -13,6 +13,16 @@
             " &fConheça as vantagens clicando &a&lAQUI&f.",
             ""
           ],
+          // O VIP de 15 dias da loja até o fim da Temporada 1 (docs/deploy/vip15-20261104 do exe). Repete várias vezes na
+          // lista do p4free-1 e do events-1, e sai dela sozinha em 21/11 00:00, quando o de 30 volta. O AQUI abre o site.
+          "vip15": [
+            "",
+            "&6&l VIP 15 DIAS: &fAté o fim da &aTemporada 1&f o VIP vem",
+            " &fem pacotes de &a15 dias&f, mais baratos. O &aSamurai&f sai",
+            " &fpor &aR$ 20,75&f e o &4Imperial&f por &aR$ 34,75&f, também em",
+            " &fcombo com Cash. Garanta o seu clicando &a&lAQUI&f.",
+            ""
+          ],
           // O upgrade do Samurai para o Imperial: o AQUI roda o /upgrade, que abre o menu com o preço de agora.
           "vip-upgrade": [
             "",
