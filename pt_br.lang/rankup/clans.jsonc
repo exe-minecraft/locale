@@ -3,6 +3,17 @@
 {
   "plugins": {
     "clans": {
+      // O bloco do clã na scoreboard do rankup, o da scoreboard do spawn do rankup antigo (backup de 03/05): tag e nome
+      // em cinza, membros logo abaixo, e "Sem clã." para quem não tem. A {tag} vem com a cor do clã, como no P4Free.
+      "scoreboard": {
+        "clan": [
+          " &7[{tag}&7] {name}",
+          "  &fMembros: &7{members}/{max_members}"
+        ],
+        "no-clan": [
+          " &7Sem clã."
+        ]
+      },
       "items": {
         "member-head": {
           "lore": [

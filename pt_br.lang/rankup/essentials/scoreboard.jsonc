@@ -1,0 +1,25 @@
+// A scoreboard do rankup (07/11/2026), a do spawn do rankup antigo (build-images/rankup/spawn do backup de 03/05): o
+// título RANKUP PVP, os tokens com o $ e o cash com o ✪, e o bloco do clã. A linha do rank e do prestígio volta quando
+// o rankup tiver os ranks; até lá ela sairia com o placeholder cru. O modo construção aparece no topo só com o /build
+// ligado, no lugar da linha em branco.
+{
+  "plugins": {
+    "essentials": {
+      "scoreboards": {
+        "title": [
+          " &c&lRANKUP PVP"
+        ],
+        "lines": [
+          "{build_mode_status}",
+          "",
+          "  &fTokens: &e${currency_tokens_cached_account_value_formatted}",
+          "  &fCash: &6✪{user_cash_formatted}",
+          "",
+          "{clan_scoreboard}",
+          "",
+          "&erede-exe.com"
+        ]
+      }
+    }
+  }
+}
