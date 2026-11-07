@@ -44,7 +44,8 @@
             "{server_state}"
           ]
         },
-        // Em construção, com a entrada só para Builder e acima (a manutenção do rankup-1).
+        // Em construção, com a entrada só para Builder e acima (a manutenção do rankup-1). O holograma não diz o estado:
+        // o "Em desenvolvimento" já é o estado, e o "Em manutenção" por baixo contradizia (o dono, 07/11).
         "rankup": {
           "name": "&cRankUP",
           "icon": {
@@ -59,8 +60,7 @@
           },
           "hologram": [
             "&c&lRANKUP",
-            "&cEm desenvolvimento...",
-            "{server_state}"
+            "&cEm desenvolvimento..."
           ]
         }
       },
