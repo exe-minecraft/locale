@@ -56,6 +56,26 @@
             ""
           ]
         },
+        // O rankup em construção (07/11): o cabeçalho diz o modo e o estado, o rodapé é o de todos.
+        "rankup": {
+          "header": [
+            "",
+            "&c&lEXE",
+            "&frede-exe.com",
+            "",
+            "&c&lRANKUP &7em desenvolvimento",
+            "&fJogadores online: &a{app_online_player_count}",
+            ""
+          ],
+          "footer": [
+            "",
+            "&cDiscord: &fdiscord.rede-exe.com",
+            "",
+            "    &cAjude o servidor a se manter ativo adquirindo produtos.    ",
+            "&cAdquira no nosso site em &frede-exe.com",
+            ""
+          ]
+        },
         "p4free": {
           "header": [
             "",

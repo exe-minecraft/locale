@@ -1,0 +1,33 @@
+{
+  "plugins": {
+    "essentials": {
+      "messages": {
+        "spawn": {
+          // A chegada ao spawn do P4Free (SpawnWelcome). Cada modo tem a sua, na pasta dele (a do rankup desde 07/11). O
+          // title se escreve quadro a quadro, um tique de nota por quadro, e fecha no title com o subtitle e o rugido do
+          // dragão. O subtitle tem os placeholders de quem chega.
+          "join": {
+            "title": {
+              "frames": ["&c&lP", "&c&lP4", "&c&lP4F", "&c&lP4FR", "&c&lP4FRE"],
+              "title": "&c&lP4FREE",
+              "subtitle": "&fBem-vindo, {player_name_with_color}&f!"
+            },
+            "chat": [
+              "",
+              " &c&lP4FREE &7Disponível nas últimas versões!",
+              "",
+              " &cAcompanhe as novidades:",
+              " &c▸ &fDiscord: &7discord.rede-exe.com",
+              // O AQUI abre as últimas atualizações (o filtro da categoria no /noticias). O [texto](https://...) é o link do
+              // locale (LangLink no core), só no chat; a linha visível tem 244 dos 320 px do chat do 1.8.
+              " &c▸ &fAtualizações: &7Clique [&e&lAQUI](https://www.rede-exe.com/noticias?categoria=atualizacoes) &7para ver as últimas.",
+              "",
+              " &crede-exe.com",
+              ""
+            ]
+          }
+        }
+      }
+    }
+  }
+}

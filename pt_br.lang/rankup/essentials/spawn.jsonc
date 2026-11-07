@@ -1,0 +1,34 @@
+{
+  "plugins": {
+    "essentials": {
+      "messages": {
+        "spawn": {
+          // A chegada ao spawn do rankup (SpawnWelcome), no mesmo desenho da do P4Free: o title se escreve quadro a quadro,
+          // um tique de nota por quadro, e fecha no title com o subtitle e o rugido do dragão. Em construção (07/11), só a
+          // equipe de construção entra; quando abrir, o texto do chat muda.
+          "join": {
+            "title": {
+              "frames": ["&c&lR", "&c&lRA", "&c&lRAN", "&c&lRANK", "&c&lRANKU"],
+              "title": "&c&lRANKUP",
+              "subtitle": "&fBem-vindo, {player_name_with_color}&f!"
+            },
+            "chat": [
+              "",
+              " &c&lRANKUP &7Em desenvolvimento.",
+              "",
+              " &fO novo modo da rede está sendo construído aqui.",
+              " &7Por enquanto, só a equipe de construção entra.",
+              "",
+              " &cAcompanhe as novidades:",
+              " &c▸ &fDiscord: &7discord.rede-exe.com",
+              " &c▸ &fAtualizações: &7Clique [&e&lAQUI](https://www.rede-exe.com/noticias?categoria=atualizacoes) &7para ver as últimas.",
+              "",
+              " &crede-exe.com",
+              ""
+            ]
+          }
+        }
+      }
+    }
+  }
+}
