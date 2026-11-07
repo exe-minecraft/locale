@@ -1,0 +1,147 @@
+// O clã do rankup (07/11/2026): as versões do perfil, do /clan info, da lore e do reset sem o Gladiador, o CxC e a
+// autorização para os eventos, que o rankup não tem. O resto do clã está no global.
+{
+  "plugins": {
+    "clans": {
+      "items": {
+        "member-head": {
+          "lore": [
+            "",
+            "&eSuas informações:",
+            " &8▸ &fCargo: &7{member_role_prefix}{member_role_name}",
+            " &8▸ &fKDR: &7{member_kdr}",
+            " &8▸ &fAbates: &7{member_kills}",
+            " &8▸ &fMortes: &7{member_deaths}",
+            "",
+            "&8Última entrada em {member_last_seen_at}"
+          ],
+          "lore-without-clan": [
+            "",
+            "&eSuas informações:",
+            " &8▸ &fKDR: &7{member_kdr}",
+            " &8▸ &fAbates: &7{member_kills}",
+            " &8▸ &fMortes: &7{member_deaths}",
+            "",
+            "&8Última entrada em {member_last_seen_at}"
+          ]
+        },
+        "clan-banner": {
+          "lore": [
+            "",
+            " &eInformações do clã:",
+            " &8▸ &fLíder: &7{clan_leader_name_with_tag}",
+            " &8▸ &fMembros: &7({clan_members_size}/{clan_max_members_size}) {clan_online_members_size} online",
+            " &8▸ &fPontos: &7{clan_points}",
+            " &8▸ &fKDR: &7{clan_kdr}",
+            " &8▸ &fAbates: &7{clan_kills}",
+            " &8▸ &fMortes: &7{clan_deaths}",
+            "",
+            "&8Criado em {clan_created_at}"
+          ]
+        }
+      },
+      "commands": {
+        "clan": {
+          "info": {
+            "success": [
+              "",
+              " &eInformações do clã:",
+              "",
+              "  &fClã: &7[{clan_colored_tag}&7] {clan_name}",
+              "  &fLíder: {clan_leader_name_with_tag}",
+              "  &fPontos: &7{clan_points}",
+              "",
+              "  &fMembros: &7{clan_members_size}/{clan_max_members_size} ({clan_online_members_size} online)",
+              "  {clan_online_members}",
+              "  {clan_members_hint}",
+              "",
+              "  &fKDR: &7{clan_kdr}",
+              "  &fAbates: &7{clan_kills}",
+              "  &fMortes: &7{clan_deaths}",
+              ""
+            ]
+          },
+          "profile": {
+            "success-with-clan": [
+              "",
+              " &eInformações do jogador:",
+              "",
+              "  &fJogador: {target_name_with_tag}",
+              "  &fClã: {target_clan_label}",
+              "  &fCargo: &7{target_role_prefix}{target_role_name}",
+              "  &fNo clã desde: &7{target_joined_clan_at}",
+              "",
+              "  &fKDR: &7{target_kdr}",
+              "  &fAbates: &7{target_kills}",
+              "  &fMortes: &7{target_deaths}",
+              "",
+              "  &8Última entrada em {target_last_seen_at}",
+              ""
+            ],
+            "success-without-clan": [
+              "",
+              " &eInformações do jogador:",
+              "",
+              "  &fJogador: {target_name_with_tag}",
+              "  &fClã: &7Sem clã.",
+              "",
+              "  &fKDR: &7{target_kdr}",
+              "  &fAbates: &7{target_kills}",
+              "  &fMortes: &7{target_deaths}",
+              "",
+              "  &8Última entrada em {target_last_seen_at}",
+              ""
+            ]
+          },
+          "delete": {
+            "all": {
+              "success": [
+                "",
+                " &fApagados: &a{deleted}",
+                " &fCom falha: &c{failed}",
+                ""
+              ]
+            }
+          },
+          "reset": {
+            "errors": {
+              "already-reset": "&cO clã {clan_label} &cjá está zerado. Não tem pontos, abates, mortes nem boletim."
+            },
+            "confirm-clan": [
+              "",
+              " &cIsto apaga os pontos, abates, mortes e o boletim do clã {clan_label}&c, sem volta. Membros e cargos ficam.",
+              " &cPara zerar, use &f/clan resetar {tag} confirmar &cnos próximos {confirm_seconds} segundos.",
+              ""
+            ],
+            "confirm-tag": [
+              "",
+              " &cNão existe clã com a tag {tag} agora. Isto apaga o que ela guarda de um clã desfeito (pontos, abates e mortes), e quem a criar de novo começa do zero.",
+              " &cPara apagar, use &f/clan resetar {tag} confirmar &cnos próximos {confirm_seconds} segundos.",
+              ""
+            ],
+            "confirm-all": [
+              "",
+              " &cIsto zera {total_clans} {total_clans_unit} (pontos, abates, mortes e boletim) e apaga o que todas as tags guardam de clãs desfeitos, sem volta.",
+              " &cPara zerar, use &f/clan resetar todos confirmar &cnos próximos {confirm_seconds} segundos.",
+              ""
+            ]
+          }
+        }
+      },
+      "messages": {
+        "cards": {
+          "clan": [
+            "{clan_label}",
+            "",
+            "&7Membros: &f{clan_members_size}/{clan_max_members_size}",
+            "&7Vagas: &a{clan_free_slots}",
+            "&7Pontos: &f{clan_points}",
+            "&7KDR: &f{clan_kdr}",
+            "",
+            "&eClique para ver o clã."
+          ]
+        }
+      }
+    }
+  }
+}
