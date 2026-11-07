@@ -196,6 +196,8 @@
         // O anúncio de quem espera sem par na fila (o dono, 25/10), de vez em quando, quando a procura está baixa. {players}
         // vem com o nick na cor do cargo (e o "e" entre os dois da dupla), {mode} é o nome do modo e {join} é o clique.
         "callout": {
+          // Cada um da fila em {players}, com a tag do elo 1v1 (a do chat) na frente do nick.
+          "player": "{tier_tag} {player}",
           "solo": [
             "",
             "&e&l&m         &6&l&m         &r &e&lX1 &6&l&m         &e&l&m         ",

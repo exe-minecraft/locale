@@ -280,8 +280,8 @@
             "farmou aura, 67!",
             "chegou chegando!"
           ],
-          // A fala, sem cor: o chat de cada lugar põe o formato dele.
-          "message": "{phrase} Parabéns pelo {vip_name}, {target_name}!"
+          // A fala, sem cor: o chat de cada lugar põe o formato dele. O @ faz do nick uma menção (cor e som para quem ganhou o VIP).
+          "message": "{phrase} Parabéns pelo {vip_name}, @{target_name}!"
         },
         // O /upgradevip abre o menu do upgrade do Samurai para o Imperial (o texto do menu está em views/vip-upgrade).
         "vip-upgrade": {
