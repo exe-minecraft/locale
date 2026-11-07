@@ -95,10 +95,12 @@
           "nobody": "&cNenhum jogador desse lobby foi adicionado à fila do servidor &f{target_server_display_name}&c."
         },
         "set-p4free": {
-          "success": "&aA entrada do P4Free foi movida para &f{x}, {y}, {z}&a."
+          "success": "&aA entrada do P4Free foi movida para &f{x}, {y}, {z}&a.",
+          "not-configured": "&cO P4Free não está no config.yml deste lobby, então a entrada não teria onde aparecer. Nada foi gravado."
         },
         "set-rankup": {
-          "success": "&aA entrada do RankUP foi movida para &f{x}, {y}, {z}&a."
+          "success": "&aA entrada do RankUP foi movida para &f{x}, {y}, {z}&a.",
+          "not-configured": "&cO RankUP não está no config.yml deste lobby, então a entrada não teria onde aparecer. Nada foi gravado."
         },
         "set-spawn": {
           "success": "&aO spawn do lobby foi movido para &f{x}, {y}, {z}&a e já vale para os próximos joins."
