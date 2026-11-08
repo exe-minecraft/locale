@@ -138,12 +138,12 @@
           }
         }
       },
-      // O title de quem entra num terreno com dono: o dono na cor do cargo, e o nome do terreno ou o ID.
+      // O title de quem entra num terreno com dono: o dono na cor do cargo, e o nome do terreno ou o número dele.
       "titles": {
         "entry": {
           "title": "&eTerreno de {owner_name_with_color}",
-          "subtitle": "&7ID {id}",
-          "subtitle-named": "&f{name} &7(ID {id})"
+          "subtitle": "&7Terreno {id}",
+          "subtitle-named": "&f{name} &7(terreno {id})"
         }
       },
       "notices": {
@@ -216,11 +216,11 @@
             "no-name": "Nenhum",
             "plot": {
               "name": "&aTerreno &l#{index}",
-              "lore": ["&7", "&7 Jogadores: &f{players}", "&7 Nome: &f{name}", "&7 ID: &f{id}", "&7", "&fBotão Esquerdo &7para se teleportar!", "&fBotão Direito &7para configurar o terreno!"]
+              "lore": ["&7", "&7 Jogadores: &f{players}", "&7 Nome: &f{name}", "&7 Número: &f{id}", "&7", "&fBotão Esquerdo &7para se teleportar!", "&fBotão Direito &7para configurar o terreno!"]
             },
             "plot-listed": {
               "name": "&aTerreno &l#{index}",
-              "lore": ["&7", "&7 Jogadores: &f{players}", "&7 Nome: &f{name}", "&7 ID: &f{id}", "&7 Situação: &6À venda", "&7", "&fBotão Esquerdo &7para se teleportar!", "&fBotão Direito &7para configurar o terreno!"]
+              "lore": ["&7", "&7 Jogadores: &f{players}", "&7 Nome: &f{name}", "&7 Número: &f{id}", "&7 Situação: &6À venda", "&7", "&fBotão Esquerdo &7para se teleportar!", "&fBotão Direito &7para configurar o terreno!"]
             },
             "acquire": {
               "low": {
@@ -333,16 +333,16 @@
             "listing": {
               "offers-on": {
                 "name": "&6Terreno de {seller_name}",
-                "lore": ["&7", "&7 Economia: {currency_icon}", "&7 Valor: &f{price}", "&7 ID: &f{id}", "&7 Ofertas: &aLigadas", "&7", "&fBotão Esquerdo &7para visitar esse terreno!", "&fBotão Direito &7para comprar esse terreno!"]
+                "lore": ["&7", "&7 Economia: {currency_icon}", "&7 Valor: &f{price}", "&7 Número: &f{id}", "&7 Ofertas: &aLigadas", "&7", "&fBotão Esquerdo &7para visitar esse terreno!", "&fBotão Direito &7para comprar esse terreno!"]
               },
               "offers-off": {
                 "name": "&6Terreno de {seller_name}",
-                "lore": ["&7", "&7 Economia: {currency_icon}", "&7 Valor: &f{price}", "&7 ID: &f{id}", "&7 Ofertas: &cDesligadas", "&7", "&fBotão Esquerdo &7para visitar esse terreno!", "&fBotão Direito &7para comprar esse terreno!"]
+                "lore": ["&7", "&7 Economia: {currency_icon}", "&7 Valor: &f{price}", "&7 Número: &f{id}", "&7 Ofertas: &cDesligadas", "&7", "&fBotão Esquerdo &7para visitar esse terreno!", "&fBotão Direito &7para comprar esse terreno!"]
               },
               // No alto da confirmação de compra: o valor exato, com o símbolo, e sem as linhas de clique.
               "preview": {
                 "name": "&6Terreno de {seller_name}",
-                "lore": ["&7", "&7 Valor: {price}", "&7 ID: &f{id}"]
+                "lore": ["&7", "&7 Valor: {price}", "&7 Número: &f{id}"]
               }
             },
             "offers": {
