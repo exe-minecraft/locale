@@ -82,10 +82,11 @@
         "target-no-plot": "&c{target_name_with_color} &cnão tem terreno.",
         "target-no-such-plot": "&c{target_name_with_color} &cnão tem o terreno #{index}, porque tem só {count} {unit}.",
         "claim-not-here": "&cFique dentro de um terreno livre, no servidor de terrenos, para pegar ele. Ou use o menu do /plot.",
-        "claim-too-far": "&cEsse terreno fica longe demais do centro. Use o Adquirir, no menu do /plot, para pegar o terreno livre mais perto.",
-        "claim-taken": "&cO terreno {plot} &cjá tem dono.",
-        "claim-own": "&cO terreno {plot} &cjá é seu.",
+        "claim-taken": "&cEsse terreno já tem dono.",
+        "claim-own": "&cEsse terreno já é seu.",
         "claimed": "&aVocê adquiriu o terreno {plot}! Agora você tem {count} de {limit}.",
+        "teleport-own": "&aIndo para o seu terreno {plot}&a.",
+        "teleport": "&aIndo para o terreno {plot} &ade {owner_name_with_color}&a.",
         "limit": "&cVocê já tem {limit} {unit}, que é o limite.",
         "name-invalid": "&cEsse nome não vale. Use até {max} caracteres, entre letras, números, espaço, hífen e sublinhado, com pelo menos uma letra.",
         "not-owner": "&cO terreno {plot} &cnão é mais seu.",
@@ -110,7 +111,7 @@
         "listed": "&aO terreno {plot} &afoi anunciado na Imobiliária por {value}&a.",
         "unlisted": "&aO terreno {plot} &asaiu da Imobiliária, e as ofertas por ele foram canceladas.",
         "trade-busy": "&cHá uma compra do terreno {plot} &cem andamento. Tente de novo em instantes.",
-        "offer-sent": "&aSua oferta de {value} &apelo terreno {plot} &afoi enviada ao vendedor.",
+        "offer-sent": "&aSua oferta de {value} &apelo terreno {plot} &ade {seller_name_with_color} &afoi enviada.",
         "offer-gone": "&cEste terreno não está mais disponível.",
         "offer-busy": "&cHá uma compra deste terreno em andamento. Tente ofertar de novo em instantes.",
         "deny-gone": "&cEssa oferta não está mais de pé.",
@@ -118,7 +119,7 @@
         "offer-own": "&cEste terreno é seu.",
         "offer-too-low": "&cA oferta mínima por este terreno é {minimum}&c.",
         "offer-too-high": "&cSua oferta chega ao preço do terreno ({price}&c). Compre direto pela Imobiliária.",
-        "bought": "&aVocê comprou o terreno {plot} &apor {value}&a!",
+        "bought": "&aVocê comprou o terreno {plot} &ade {seller_name_with_color} &apor {value}&a!",
         "buy-no-funds": "&cVocê não tem saldo suficiente. O terreno custa {value}&c.",
         "buy-gone": "&cEste terreno não está mais disponível.",
         "buy-own": "&cEste terreno é seu.",
@@ -139,32 +140,31 @@
           }
         }
       },
-      // O title de quem entra num terreno com dono: o dono na cor do cargo, e o nome do terreno ou o número dele.
+      // O title de quem entra num terreno com dono: o dono na cor do cargo e, embaixo, o nome do terreno quando ele tem nome.
       "titles": {
         "entry": {
           "title": "&eTerreno de {owner_name_with_color}",
-          "subtitle": "&7Número {id}",
-          "subtitle-named": "&f{name} &7(número {id})"
+          "subtitle": "&f{name}"
         }
       },
       "notices": {
         "offer-received": "&e{player_name_with_color} &efez uma oferta de {value} &epelo terreno {plot}&e. Veja no /plot, em Imobiliária.",
-        "offer-cancelled": "&cSua oferta pelo terreno {plot} &cfoi cancelada, porque o anúncio mudou ou saiu.",
-        "offer-denied": "&cSua oferta de {value} &cpelo terreno {plot} &cfoi recusada.",
-        "offer-sold": "&cO terreno {plot}&c, pelo qual você ofertou, foi vendido para outro jogador.",
+        "offer-cancelled": "&cSua oferta pelo terreno {plot} &cde {player_name_with_color} &cfoi cancelada, porque o anúncio mudou ou saiu.",
+        "offer-denied": "&cSua oferta de {value} &cpelo terreno {plot} &cde {player_name_with_color} &cfoi recusada.",
+        "offer-sold": "&cO terreno {plot} &cde {player_name_with_color}&c, pelo qual você ofertou, foi vendido para outro jogador.",
         "sold": "&aSeu terreno {plot} &afoi vendido para {player_name_with_color} &apor {value}&a.",
-        "offer-accepted": "&aSua oferta de {value} &apelo terreno {plot} &afoi aceita! O terreno agora é seu.",
-        "bought": "&aA compra do terreno {plot} &aterminou. Você pagou {value}&a, e o terreno agora é seu.",
-        "failed": "&cA compra do terreno {plot} &cnão terminou, e nada foi cobrado.",
-        "refunded": "&eA compra do terreno {plot} &enão terminou, e o valor de {value} &efoi devolvido.",
-        "no-funds": "&cA compra do terreno {plot} &cnão terminou, porque faltou saldo para {value}&c.",
-        "offer-no-funds": "&cSua oferta de {value} &cpelo terreno {plot} &cfoi retirada, porque faltou saldo quando o dono aceitou.",
-        "offer-limit": "&cSua oferta pelo terreno {plot} &cfoi retirada, porque você já chegou ao limite de terrenos.",
+        "offer-accepted": "&aSua oferta de {value} &apelo terreno {plot} &ade {player_name_with_color} &afoi aceita! O terreno agora é seu.",
+        "bought": "&aA compra do terreno {plot} &ade {player_name_with_color} &aterminou. Você pagou {value}&a, e o terreno agora é seu.",
+        "failed": "&cA compra do terreno {plot} &cde {player_name_with_color} &cnão terminou, e nada foi cobrado.",
+        "refunded": "&eA compra do terreno {plot} &ede {player_name_with_color} &enão terminou, e o valor de {value} &efoi devolvido.",
+        "no-funds": "&cA compra do terreno {plot} &cde {player_name_with_color} &cnão terminou, porque faltou saldo para {value}&c.",
+        "offer-no-funds": "&cSua oferta de {value} &cpelo terreno {plot} &cde {player_name_with_color} &cfoi retirada, porque faltou saldo quando o dono aceitou.",
+        "offer-limit": "&cSua oferta pelo terreno {plot} &cde {player_name_with_color} &cfoi retirada, porque você já chegou ao limite de terrenos.",
         "offer-withdrawn": "&cA oferta de {value} &cque {player_name_with_color} &cfez pelo terreno {plot} &cfoi retirada, porque faltou saldo ao comprador quando você aceitou.",
         "reset-busy": "&cO terreno {plot} &cjá está sendo limpo, ou tem uma compra em andamento. Tente de novo em instantes.",
-        "reset-not-owner": "&cO terreno {plot} &cnão foi limpo, porque não é mais seu.",
+        "reset-not-owner": "&cA limpeza não foi feita, porque o terreno não é mais seu.",
         "delete-busy": "&cO terreno {plot} &cnão foi excluído, porque está sendo limpo ou tem uma compra em andamento. Tente de novo em instantes.",
-        "delete-not-owner": "&cO terreno {plot} &cnão foi excluído, porque não é mais seu.",
+        "delete-not-owner": "&cA exclusão não foi feita, porque o terreno não é mais seu.",
         "delete-failed": "&cA exclusão do terreno {plot} &cfalhou. A equipe foi avisada, tente de novo mais tarde.",
         "cleared": "&aO terreno {plot} &afoi limpo.",
         "deleted": "&aO terreno {plot} &afoi excluído e está livre de novo.",
@@ -191,7 +191,7 @@
           "cash": "Por quanto cash você quer vender o terreno {plot}?",
           "tokens": "Por quantos tokens você quer vender o terreno {plot}?"
         },
-        "offer": "Quanto você oferece pelo terreno {plot}? O preço é {price}&e, e a oferta mínima é {minimum}&e."
+        "offer": "Quanto você oferece pelo terreno {plot} de {seller_name_with_color}&e? O preço é {price}&e, e a oferta mínima é {minimum}&e."
       },
       "views": {
         "main": {
@@ -217,11 +217,11 @@
             "no-name": "Nenhum",
             "plot": {
               "name": "&aTerreno &l#{index}",
-              "lore": ["&7", "&7 Jogadores: &f{players}", "&7 Nome: &f{name}", "&7 Número: &f{id}", "&7", "&fBotão Esquerdo &7para se teleportar!", "&fBotão Direito &7para configurar o terreno!"]
+              "lore": ["&7", "&7 Jogadores: &f{players}", "&7 Nome: &f{name}", "&7", "&fBotão Esquerdo &7para se teleportar!", "&fBotão Direito &7para configurar o terreno!"]
             },
             "plot-listed": {
               "name": "&aTerreno &l#{index}",
-              "lore": ["&7", "&7 Jogadores: &f{players}", "&7 Nome: &f{name}", "&7 Número: &f{id}", "&7 Situação: &6À venda", "&7", "&fBotão Esquerdo &7para se teleportar!", "&fBotão Direito &7para configurar o terreno!"]
+              "lore": ["&7", "&7 Jogadores: &f{players}", "&7 Nome: &f{name}", "&7 Situação: &6À venda", "&7", "&fBotão Esquerdo &7para se teleportar!", "&fBotão Direito &7para configurar o terreno!"]
             },
             "acquire": {
               "low": {
@@ -333,17 +333,17 @@
           "items": {
             "listing": {
               "offers-on": {
-                "name": "&6Terreno de {seller_name}",
-                "lore": ["&7", "&7 Economia: {currency_icon}", "&7 Valor: &f{price}", "&7 Número: &f{id}", "&7 Ofertas: &aLigadas", "&7", "&fBotão Esquerdo &7para visitar esse terreno!", "&fBotão Direito &7para comprar esse terreno!"]
+                "name": "&6Terreno {plot} &6de {seller_name}",
+                "lore": ["&7", "&7 Economia: {currency_icon}", "&7 Valor: &f{price}", "&7 Ofertas: &aLigadas", "&7", "&fBotão Esquerdo &7para visitar esse terreno!", "&fBotão Direito &7para comprar esse terreno!"]
               },
               "offers-off": {
-                "name": "&6Terreno de {seller_name}",
-                "lore": ["&7", "&7 Economia: {currency_icon}", "&7 Valor: &f{price}", "&7 Número: &f{id}", "&7 Ofertas: &cDesligadas", "&7", "&fBotão Esquerdo &7para visitar esse terreno!", "&fBotão Direito &7para comprar esse terreno!"]
+                "name": "&6Terreno {plot} &6de {seller_name}",
+                "lore": ["&7", "&7 Economia: {currency_icon}", "&7 Valor: &f{price}", "&7 Ofertas: &cDesligadas", "&7", "&fBotão Esquerdo &7para visitar esse terreno!", "&fBotão Direito &7para comprar esse terreno!"]
               },
               // No alto da confirmação de compra: o valor exato, com o símbolo, e sem as linhas de clique.
               "preview": {
-                "name": "&6Terreno de {seller_name}",
-                "lore": ["&7", "&7 Valor: {price}", "&7 Número: &f{id}"]
+                "name": "&6Terreno {plot} &6de {seller_name}",
+                "lore": ["&7", "&7 Valor: {price}"]
               }
             },
             "offers": {
@@ -424,7 +424,7 @@
           },
           "offer-send": {
             "title": "Enviar a oferta?",
-            "name": "&eOfertar pelo terreno {plot}",
+            "name": "&eOfertar pelo terreno {plot} &ede {seller_name_with_color}",
             "lore": ["&7", "&7 Oferta: {value}", "&7 Preço: {price}", "&7", "&7 Confira o valor antes de confirmar.", "&7 Ele é cobrado quando o vendedor", "&7 aceitar a oferta."]
           },
           "unlist": {
