@@ -61,7 +61,7 @@
             "description": "pegar o terreno livre onde você está"
           },
           "dispose": {
-            "description": "excluir o terreno onde você está"
+            "description": "excluir o terreno onde você está, ou o único que você tem"
           },
           "home": {
             "description": "ir até o seu terreno, ou visitar o de outro jogador",
@@ -83,6 +83,7 @@
         "target-no-such-plot": "&c{target_name_with_color} &cnão tem o terreno {index}, porque tem só {count} {unit}.",
         "claim-not-here": "&cFique dentro de um terreno livre, no servidor de terrenos, para pegar ele. Ou use o menu do /plot.",
         "claim-taken": "&cO terreno {plot} &cjá tem dono.",
+        "claim-own": "&cO terreno {plot} &cjá é seu.",
         "claimed": "&aVocê adquiriu o terreno {plot}! Agora você tem {count} de {limit}.",
         "limit": "&cVocê já tem {limit} {unit}, que é o limite.",
         "name-invalid": "&cEsse nome não vale. Use até {max} caracteres, entre letras, números, espaço, hífen e sublinhado.",
