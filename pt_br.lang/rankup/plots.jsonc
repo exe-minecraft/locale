@@ -120,6 +120,7 @@
         "offer-too-low": "&cA oferta mínima por este terreno é {minimum}&c.",
         "offer-too-high": "&cSua oferta chega ao preço do terreno ({price}&c). Compre direto pela Imobiliária.",
         "bought": "&aVocê comprou o terreno {plot} &ade {seller_name_with_color} &apor {value}&a! Agora ele é o seu terreno #{position}.",
+        "bought-unplaced": "&aVocê comprou o terreno {plot} &ade {seller_name_with_color} &apor {value}&a! Ele já está no seu /plot.",
         "buy-no-funds": "&cVocê não tem saldo suficiente. O terreno custa {value}&c.",
         "buy-gone": "&cEste terreno não está mais disponível.",
         "buy-own": "&cEste terreno é seu.",
