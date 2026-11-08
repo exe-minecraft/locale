@@ -146,11 +146,11 @@
         "text": "&a[Terreno {plot} de {owner_name}]",
         "hover": ["&aTerreno {plot} &ade {owner_name_with_color}", "&7 Jogadores: &f{players}", "", "&fClique &7para visitar!"]
       },
-      // O title de quem entra num terreno com dono: o dono na cor do cargo e, embaixo, o nome do terreno quando ele tem nome.
+      // O title de quem entra num terreno com dono. O Java manda o dono inteiro ({owner_*}) e o {name} do terreno, vazio quando ele não tem nome.
       "titles": {
         "entry": {
-          "title": "&eTerreno de {owner_name_with_color}",
-          "subtitle": "&f{name}"
+          "title": "&c&lEXE",
+          "subtitle": "&7Terreno de {owner_name_with_color}"
         }
       },
       "notices": {
