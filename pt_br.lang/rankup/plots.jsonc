@@ -58,15 +58,8 @@
             "description": "abrir o menu de permissões do seu terreno"
           },
           "home": {
-            "description": "ir até o seu terreno, ou até o de outro jogador",
-            "arguments": { "target": { "name": "número ou jogador", "description": "A posição do terreno no menu, ou o nick de quem você quer visitar" } }
-          },
-          "visit": {
-            "description": "visitar o terreno de outro jogador",
-            "arguments": {
-              "target": { "name": "jogador", "description": "Dono do terreno" },
-              "index": { "name": "número", "description": "Qual dos terrenos dele, na ordem do menu" }
-            }
+            "description": "ir até o seu terreno, ou visitar o de outro jogador",
+            "arguments": { "target": { "name": "número ou jogador", "description": "A posição do terreno no menu, o nick de quem você quer visitar, ou o nick com o número (Shawzyy:2)" } }
           }
         }
       },
