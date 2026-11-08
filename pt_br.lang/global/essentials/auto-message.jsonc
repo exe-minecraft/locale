@@ -31,6 +31,14 @@
             " &fconforme o tempo passa. Veja o seu clicando &a&lAQUI&f.",
             ""
           ],
+          // A dica dos terrenos do rankup: o AQUI roda o /plot, que abre o menu.
+          "plots": [
+            "",
+            "&a&l TERRENOS: &fPegue terrenos de graça, construa, chame",
+            " &famigos e venda o seu na &6Imobiliária&f por cash ou tokens.",
+            " &fPegue o seu clicando &a&lAQUI&f.",
+            ""
+          ],
           "souls": [
             "",
             "&e&l DICA: &fAcumule &a5 abates&f, sem morrer, no Gladiador ou no",

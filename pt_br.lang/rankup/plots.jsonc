@@ -1,0 +1,444 @@
+// Os terrenos do rankup (08/11/2026). Os itens dos menus seguem os baús de referência do dono no mundo teste do rankup-1,
+// com o texto passado para o português do Brasil. As texturas das cabeças ficam no plugin (PlotItems).
+{
+  "plugins": {
+    "plots": {
+      "units": {
+        "plot": { "singular": "terreno", "plural": "terrenos" },
+        "player": { "singular": "jogador", "plural": "jogadores" },
+        "notice": { "singular": "aviso", "plural": "avisos" }
+      },
+      "roles": {
+        "none": "Nenhuma",
+        "trusted": "Confiável",
+        "added": "Adicionado",
+        "denied": "Negado"
+      },
+      "commands": {
+        "plot": {
+          "description": "abrir o menu dos terrenos",
+          "add": {
+            "description": "deixar um jogador farmar no seu terreno",
+            "arguments": { "target": { "name": "jogador", "description": "Jogador que vai poder farmar" } }
+          },
+          "remove": {
+            "description": "tirar um jogador da lista do seu terreno",
+            "arguments": { "target": { "name": "jogador", "description": "Jogador que sai da lista" } }
+          },
+          "trust": {
+            "description": "deixar um jogador fazer tudo no seu terreno",
+            "arguments": { "target": { "name": "jogador", "description": "Jogador de confiança" } }
+          },
+          "untrust": {
+            "description": "tirar a confiança de um jogador",
+            "arguments": { "target": { "name": "jogador", "description": "Jogador que deixa de ser confiável" } }
+          },
+          "deny": {
+            "description": "impedir um jogador de entrar no seu terreno",
+            "arguments": { "target": { "name": "jogador", "description": "Jogador que não vai poder entrar" } }
+          },
+          "allow": {
+            "description": "liberar a entrada de um jogador negado",
+            "arguments": { "target": { "name": "jogador", "description": "Jogador que volta a poder entrar" } }
+          },
+          "members": {
+            "description": "ver a lista do seu terreno",
+            "arguments": { "page": { "name": "página", "description": "Página da lista, 10 jogadores por página" } },
+            "header": ["", "&eLista do terreno {plot} &7(página {page}/{pages}, {count} {unit})"],
+            "empty": "&eNinguém está na lista do terreno {plot}&e.",
+            "line": {
+              "none": " &8▸ &f{target_name} &7(Nenhuma)",
+              "trusted": " &8▸ &a{target_name} &7(Confiável)",
+              "added": " &8▸ &e{target_name} &7(Adicionado)",
+              "denied": " &8▸ &c{target_name} &7(Negado)"
+            },
+            "footer": ["", "{navigation}", ""]
+          },
+          "perms": {
+            "description": "abrir o menu de permissões do seu terreno"
+          },
+          "home": {
+            "description": "ir até o seu terreno, ou até o de outro jogador",
+            "arguments": { "target": { "name": "número ou jogador", "description": "A posição do terreno no menu, ou o nick de quem você quer visitar" } }
+          },
+          "visit": {
+            "description": "visitar o terreno de outro jogador",
+            "arguments": {
+              "target": { "name": "jogador", "description": "Dono do terreno" },
+              "index": { "name": "número", "description": "Qual dos terrenos dele, na ordem do menu" }
+            }
+          }
+        }
+      },
+      "messages": {
+        "no-permission": "&cVocê não tem permissão para fazer isto neste terreno.",
+        "loading": "&cOs terrenos ainda estão carregando. Tente de novo em instantes.",
+        "denied-entry": "&cVocê foi impedido de entrar neste terreno.",
+        "resetting-entry": "&cEste terreno está sendo limpo. Espere a limpeza terminar para entrar.",
+        "server-offline": "&cO servidor de terrenos está indisponível agora. Tente de novo daqui a pouco.",
+        "storage-soon": "&eO armazém ainda está em construção e chega junto com as plantações.",
+        "no-plot": "&cVocê ainda não tem terreno. Use /plot para adquirir um.",
+        "choose-plot": "&cVocê tem mais de um terreno. Entre no terreno que você quer, ou use o menu do /plot.",
+        "no-such-plot": "&cVocê não tem o terreno {index}. Você tem {count} {unit}.",
+        "target-no-plot": "&c{target_name_with_color} &cnão tem terreno.",
+        "target-no-such-plot": "&c{target_name_with_color} &cnão tem o terreno {index}, porque tem só {count} {unit}.",
+        "claimed": "&aVocê adquiriu o terreno {plot}! Agora você tem {count} de {limit}.",
+        "limit": "&cVocê já tem {limit} {unit}, que é o limite.",
+        "name-invalid": "&cEsse nome não vale. Use até {max} caracteres, entre letras, números, espaço, hífen e sublinhado.",
+        "not-owner": "&cO terreno {plot} &cnão é mais seu.",
+        "renamed": "&aO terreno agora se chama {plot}&a.",
+        "clear-started": "&eA limpeza do terreno {plot} &ecomeçou. Você recebe um aviso quando ela terminar.",
+        "delete-started": "&eA exclusão do terreno {plot} &ecomeçou. Ele é limpo e sai da sua lista quando terminar.",
+        "clear-requested": "&eA limpeza do terreno {plot} &efoi pedida ao servidor de terrenos. Você recebe um aviso quando ela terminar, ou se não puder começar.",
+        "delete-requested": "&eA exclusão do terreno {plot} &efoi pedida ao servidor de terrenos. Você recebe um aviso quando ela terminar, ou se não puder começar.",
+        "member-already": "&c{target_name_with_color} &cjá está na lista do terreno {plot}&c.",
+        "member-none": "&a{target_name_with_color} &aentrou na lista do terreno {plot}&a, ainda sem permissão. Clique na cabeça dele para mudar.",
+        "member-trusted": "&a{target_name_with_color} &aagora é confiável no terreno {plot}&a.",
+        "member-added": "&a{target_name_with_color} &aagora pode farmar no terreno {plot}&a.",
+        "member-denied": "&a{target_name_with_color} &anão pode mais entrar no terreno {plot}&a.",
+        "member-unchanged": "&c{target_name_with_color} &cjá está com a permissão {role} &cno terreno {plot}&c.",
+        "members-full": "&cA lista do terreno {plot} &cjá tem {max} {unit}, que é o máximo.",
+        "member-absent": "&c{target_name_with_color} &cnão está na lista do terreno {plot}&c.",
+        "member-not-trusted": "&c{target_name_with_color} &cnão é confiável no terreno {plot}&c.",
+        "member-not-denied": "&c{target_name_with_color} &cnão está negado no terreno {plot}&c.",
+        "member-removed": "&a{target_name_with_color} &asaiu da lista do terreno {plot}&a.",
+        "price-too-high": "&cEsse valor passa do máximo desta moeda, que é {max}&c.",
+        "price-invalid": "&c\"{typed}\" não é um valor válido. Digite o número sem pontos, como 1000, ou com a letra do milhar, como 50K ou 2.5M.",
+        "listed": "&aO terreno {plot} &afoi anunciado na Imobiliária por {value}&a.",
+        "unlisted": "&aO terreno {plot} &asaiu da Imobiliária, e as ofertas por ele foram canceladas.",
+        "trade-busy": "&cHá uma compra do terreno {plot} &cem andamento. Tente de novo em instantes.",
+        "offer-sent": "&aSua oferta de {value} &apelo terreno {plot} &afoi enviada ao vendedor.",
+        "offer-gone": "&cEste terreno não está mais disponível.",
+        "offer-busy": "&cHá uma compra deste terreno em andamento. Tente ofertar de novo em instantes.",
+        "deny-gone": "&cEssa oferta não está mais de pé.",
+        "offer-closed": "&cO vendedor não está aceitando ofertas por este terreno.",
+        "offer-own": "&cEste terreno é seu.",
+        "offer-too-low": "&cA oferta mínima por este terreno é {minimum}&c.",
+        "offer-too-high": "&cSua oferta chega ao preço do terreno ({price}&c). Compre direto pela Imobiliária.",
+        "bought": "&aVocê comprou o terreno {plot} &apor {value}&a!",
+        "buy-no-funds": "&cVocê não tem saldo suficiente. O terreno custa {value}&c.",
+        "buy-gone": "&cEste terreno não está mais disponível.",
+        "buy-own": "&cEste terreno é seu.",
+        "buy-limit": "&cVocê já tem {limit} {unit}, que é o limite.",
+        "buy-busy": "&cOutro jogador está comprando este terreno agora.",
+        "buy-processing": "&eO pagamento está demorando para confirmar. A compra termina sozinha, e você recebe um aviso.",
+        "offer-accepted": "&aVocê aceitou a oferta de {value} &apelo terreno {plot}&a.",
+        "accept-no-funds": "&cO comprador não tinha saldo para esta oferta de {value}&c, e a venda não aconteceu.",
+        "accept-processing": "&eO pagamento do comprador está demorando para confirmar. Se a venda passar, você recebe o aviso de venda.",
+        "accept-gone": "&cA oferta não está mais de pé, ou o terreno mudou. Nada foi vendido.",
+        "accept-limit": "&cO comprador já chegou ao limite de terrenos, e a oferta foi retirada.",
+        "offer-denied": "&aOferta recusada. O comprador foi avisado.",
+        "notices": {
+          "header": "&eVocê tem {count} {unit} de terreno.",
+          "more": {
+            "singular": "&7O aviso mais antigo ficou de fora.",
+            "plural": "&7Os {count} avisos mais antigos ficaram de fora."
+          }
+        }
+      },
+      "notices": {
+        "offer-received": "&e{player_name_with_color} &efez uma oferta de {value} &epelo terreno {plot}&e. Veja no /plot, em Imobiliária.",
+        "offer-cancelled": "&cSua oferta pelo terreno {plot} &cfoi cancelada, porque o anúncio mudou ou saiu.",
+        "offer-denied": "&cSua oferta de {value} &cpelo terreno {plot} &cfoi recusada.",
+        "offer-sold": "&cO terreno {plot}&c, pelo qual você ofertou, foi vendido para outro jogador.",
+        "sold": "&aSeu terreno {plot} &afoi vendido para {player_name_with_color} &apor {value}&a.",
+        "offer-accepted": "&aSua oferta de {value} &apelo terreno {plot} &afoi aceita! O terreno agora é seu.",
+        "bought": "&aA compra do terreno {plot} &aterminou. Você pagou {value}&a, e o terreno agora é seu.",
+        "failed": "&cA compra do terreno {plot} &cnão terminou, e nada foi cobrado.",
+        "refunded": "&eA compra do terreno {plot} &enão terminou, e o valor de {value} &efoi devolvido.",
+        "no-funds": "&cA compra do terreno {plot} &cnão terminou, porque faltou saldo para {value}&c.",
+        "offer-no-funds": "&cSua oferta de {value} &cpelo terreno {plot} &cfoi retirada, porque faltou saldo quando o dono aceitou.",
+        "offer-limit": "&cSua oferta pelo terreno {plot} &cfoi retirada, porque você já chegou ao limite de terrenos.",
+        "offer-withdrawn": "&cA oferta de {value} &cque {player_name_with_color} &cfez pelo terreno {plot} &cfoi retirada, porque faltou saldo ao comprador quando você aceitou.",
+        "reset-busy": "&cO terreno {plot} &cjá está sendo limpo, ou tem uma compra em andamento. Tente de novo em instantes.",
+        "reset-not-owner": "&cO terreno {plot} &cnão foi limpo, porque não é mais seu.",
+        "delete-busy": "&cO terreno {plot} &cnão foi excluído, porque está sendo limpo ou tem uma compra em andamento. Tente de novo em instantes.",
+        "delete-not-owner": "&cO terreno {plot} &cnão foi excluído, porque não é mais seu.",
+        "delete-failed": "&cA exclusão do terreno {plot} &cfalhou. A equipe foi avisada, tente de novo mais tarde.",
+        "cleared": "&aO terreno {plot} &afoi limpo.",
+        "deleted": "&aO terreno {plot} &afoi excluído e está livre de novo.",
+        "reset-failed": "&cA limpeza do terreno {plot} &cfalhou. A equipe foi avisada, tente de novo mais tarde."
+      },
+      // O item exclusivo de limpeza: clicar com ele no chão do próprio terreno, no servidor de terrenos, e confirmar.
+      "items": {
+        "clear": {
+          "display-name": "&dLimpeza de Terreno",
+          "name": "&dLimpeza de Terreno",
+          "lore": ["&7", "&7 Clique com ele no chão do seu", "&7 terreno para limpá-lo. O terreno", "&7 volta ao ponto inicial, e o item", "&7 é gasto ao confirmar.", "&7", "&eClique com o botão direito no chão!"],
+          "messages": {
+            "outside": "&cUse a limpeza no chão de um terreno seu, no servidor de terrenos (/plot home).",
+            "not-yours": "&cA limpeza só funciona no chão de um terreno seu.",
+            "missing": "&cA limpeza precisa estar na sua mão ao confirmar.",
+            "returned": "&cA limpeza do terreno {plot} &cnão começou, e o item foi devolvido."
+          }
+        }
+      },
+      "prompts": {
+        "name": "Digite o nome do terreno (até {max} caracteres).",
+        "player": "Digite o nick do jogador.",
+        "price": {
+          "cash": "Por quanto cash você quer vender o terreno {plot}?",
+          "tokens": "Por quantos tokens você quer vender o terreno {plot}?"
+        },
+        "offer": "Quanto você oferece pelo terreno {plot}? O preço é {price}&e, e a oferta mínima é {minimum}&e."
+      },
+      "views": {
+        "main": {
+          "title": "Terrenos",
+          "items": {
+            "my-plots": {
+              "name": "&aMeus Terrenos",
+              "lore": ["&7", "&7 Aqui você acessa seus", "&7 terrenos, configura as", "&7 permissões e muito mais!", "&7", "&eClique para acessar!"]
+            },
+            "real-estate": {
+              "name": "&6Imobiliária",
+              "lore": ["&7", "&7 Consulte os terrenos que estão", "&7 sendo vendidos, com opção de", "&7 comprar, vender e visitar!", "&7", "&6Clique para acessar a imobiliária!"]
+            },
+            "storage": {
+              "name": "&eArmazém",
+              "lore": ["&7", "&7 O armazém guarda todos", "&7 os drops de plantações!", "&7", "&eClique para acessar o armazém!"]
+            }
+          }
+        },
+        "list": {
+          "title": "Meus Terrenos",
+          "items": {
+            "no-name": "Nenhum",
+            "plot": {
+              "name": "&aTerreno &l#{index}",
+              "lore": ["&7", "&7 Jogadores: &f{players}", "&7 Nome: &f{name}", "&7 ID: &f{id}", "&7", "&fBotão Esquerdo &7para se teleportar!", "&fBotão Direito &7para configurar o terreno!"]
+            },
+            "plot-listed": {
+              "name": "&aTerreno &l#{index}",
+              "lore": ["&7", "&7 Jogadores: &f{players}", "&7 Nome: &f{name}", "&7 ID: &f{id}", "&7 Situação: &6À venda", "&7", "&fBotão Esquerdo &7para se teleportar!", "&fBotão Direito &7para configurar o terreno!"]
+            },
+            "acquire": {
+              "low": {
+                "name": "&2Adquirir um Terreno",
+                "lore": ["&7", "&7 Ao clicar, você adquire um", "&7 novo terreno na hora!", "&7", "&fLimite de Terrenos (&a{count}/{limit}&f)"]
+              },
+              "mid": {
+                "name": "&2Adquirir um Terreno",
+                "lore": ["&7", "&7 Ao clicar, você adquire um", "&7 novo terreno na hora!", "&7", "&fLimite de Terrenos (&2{count}/{limit}&f)"]
+              },
+              "high": {
+                "name": "&2Adquirir um Terreno",
+                "lore": ["&7", "&7 Ao clicar, você adquire um", "&7 novo terreno na hora!", "&7", "&fLimite de Terrenos (&e{count}/{limit}&f)"]
+              },
+              "full": {
+                "name": "&2Adquirir um Terreno",
+                "lore": ["&7", "&7 Você chegou ao limite", "&7 de terrenos.", "&7", "&fLimite de Terrenos (&c{count}/{limit}&f)"]
+              }
+            }
+          }
+        },
+        "manage": {
+          "title": "Terreno #{index}",
+          "items": {
+            "manage": {
+              "name": "&9Gerenciar",
+              "lore": ["&7", "&7 Configure os membros que", "&7 podem entrar e construir", "&7 no seu terreno!", "&7", "&eClique para gerenciar!"]
+            },
+            "rename": {
+              "name": "&eRenomear",
+              "lore": ["&7", "&7 Renomeie o terreno do jeito que", "&7 preferir, lembrando que há", "&7 um limite de 15 caracteres!", "&7", "&eClique para renomear!"]
+            },
+            "clear": {
+              "name": "&8Limpar",
+              "lore": ["&7", "&7 Ao confirmar, o seu terreno volta", "&7 ao ponto inicial. Essa ação é", "&7 permanente e irreversível!", "&7", "&eClique para limpar o seu terreno!"]
+            },
+            "sell": {
+              "name": "&2Vender",
+              "lore": ["&7", "&7 Anuncie seu terreno para venda,", "&7 escolha a economia, o valor e", "&7 receba ofertas dos jogadores!", "&7", "&eClique para vender seu terreno!"]
+            },
+            "listed": {
+              "name": "&2À venda",
+              "lore": ["&7", "&7 Seu terreno está anunciado", "&7 na Imobiliária por {value}&7.", "&7", "&eClique para cancelar a venda!"]
+            },
+            "delete": {
+              "name": "&cExcluir o Terreno",
+              "lore": ["&7", "&7 Ao confirmar, você perde", "&7 o seu terreno para sempre.", "&7 Essa ação é irreversível!", "&7", "&cClique para excluir o seu terreno!"]
+            }
+          }
+        },
+        "members": {
+          "title": "Membros do Terreno #{index}",
+          "items": {
+            "add": {
+              "name": "&aAdicionar",
+              "lore": ["&7", "&7 Digite o nick no chat, e o jogador", "&7 entra na lista sem permissão.", "&7", "&eClique para adicionar!"]
+            },
+            "member": {
+              "none": {
+                "name": "&f{target_name}",
+                "lore": ["&7", "&7 Permissão: &fNenhuma", "&7", "&fClique para alterar!", "&7Shift + Botão Esquerdo para remover."]
+              },
+              "trusted": {
+                "name": "&a{target_name}",
+                "lore": ["&7", "&7 Permissão: &aConfiável", "&7", "&aClique para alterar!", "&7Shift + Botão Esquerdo para remover."]
+              },
+              "added": {
+                "name": "&e{target_name}",
+                "lore": ["&7", "&7 Permissão: &eAdicionado", "&7", "&eClique para alterar!", "&7Shift + Botão Esquerdo para remover."]
+              },
+              "denied": {
+                "name": "&c{target_name}",
+                "lore": ["&7", "&7 Permissão: &cNegado", "&7", "&cClique para alterar!", "&7Shift + Botão Esquerdo para remover."]
+              }
+            }
+          }
+        },
+        "sell": {
+          "title": "Vender Terreno #{index}",
+          "items": {
+            "currency": {
+              "cash": {
+                "name": "&6Cash",
+                "lore": ["&7", "&7 Escolha a economia para vender!", "&7 Atual: &6Cash", "&7", "&6Clique para alterar!"]
+              },
+              "tokens": {
+                "name": "&eTokens",
+                "lore": ["&7", "&7 Escolha a economia para vender!", "&7 Atual: &eTokens", "&7", "&eClique para alterar!"]
+              }
+            },
+            "offers": {
+              "on": {
+                "name": "&aOfertas",
+                "lore": ["&7", "&7 Escolha se quer ativar ou desativar", "&7 as ofertas de outros jogadores!", "&7", "&7 Ofertas: &aLigadas"]
+              },
+              "off": {
+                "name": "&cOfertas",
+                "lore": ["&7", "&7 Escolha se quer ativar ou desativar", "&7 as ofertas de outros jogadores!", "&7", "&7 Ofertas: &cDesligadas"]
+              }
+            },
+            "confirm": {
+              "name": "&aConfirmar",
+              "lore": ["&7", "&7 Depois digite o valor no chat e", "&7 confirme, e o terreno entra", "&7 na Imobiliária."]
+            }
+          }
+        },
+        "market": {
+          "title": "Imobiliária",
+          "items": {
+            "listing": {
+              "offers-on": {
+                "name": "&6Terreno de {seller_name}",
+                "lore": ["&7", "&7 Economia: {currency_icon}", "&7 Valor: &f{price}", "&7 ID: &f{id}", "&7 Ofertas: &aLigadas", "&7", "&fBotão Esquerdo &7para visitar esse terreno!", "&fBotão Direito &7para comprar esse terreno!"]
+              },
+              "offers-off": {
+                "name": "&6Terreno de {seller_name}",
+                "lore": ["&7", "&7 Economia: {currency_icon}", "&7 Valor: &f{price}", "&7 ID: &f{id}", "&7 Ofertas: &cDesligadas", "&7", "&fBotão Esquerdo &7para visitar esse terreno!", "&fBotão Direito &7para comprar esse terreno!"]
+              },
+              // No alto da confirmação de compra: o valor exato, com o símbolo, e sem as linhas de clique.
+              "preview": {
+                "name": "&6Terreno de {seller_name}",
+                "lore": ["&7", "&7 Valor: {price}", "&7 ID: &f{id}"]
+              }
+            },
+            "offers": {
+              "name": "&3Ofertas",
+              "lore": ["&7", "&7Clique para ver as ofertas", "&7que deram nos seus terrenos!"]
+            }
+          }
+        },
+        "buy": {
+          "title": "Comprar ou ofertar",
+          "items": {
+            "buy": {
+              "name": "&aComprar",
+              "lore": ["&7", "&7Clique para comprar esse terreno diretamente!"]
+            },
+            "offer": {
+              "name": "&eOfertar",
+              "lore": ["&7", "&7Clique para oferecer uma quantia nesse terreno!", "&7A oferta mínima é {minimum}&7."]
+            }
+          }
+        },
+        "offers": {
+          "title": "Ofertas recebidas",
+          "items": {
+            "offer": {
+              "low": {
+                "name": "&3Oferta de {buyer_name}",
+                "lore": ["&7", "&7 Terreno: &f{plot}", "&7 Economia: {currency_icon}", "&7 Oferta: &f{amount}", "&7 Valor: &c{percent}%", "&7", "&7Clique para avaliar essa oferta!"]
+              },
+              "mid": {
+                "name": "&3Oferta de {buyer_name}",
+                "lore": ["&7", "&7 Terreno: &f{plot}", "&7 Economia: {currency_icon}", "&7 Oferta: &f{amount}", "&7 Valor: &e{percent}%", "&7", "&7Clique para avaliar essa oferta!"]
+              },
+              "high": {
+                "name": "&3Oferta de {buyer_name}",
+                "lore": ["&7", "&7 Terreno: &f{plot}", "&7 Economia: {currency_icon}", "&7 Oferta: &f{amount}", "&7 Valor: &a{percent}%", "&7", "&7Clique para avaliar essa oferta!"]
+              }
+            },
+            // No alto da avaliação: a oferta exata, com o símbolo, e sem a linha de clique.
+            "preview": {
+              "low": {
+                "name": "&3Oferta de {buyer_name}",
+                "lore": ["&7", "&7 Terreno: &f{plot}", "&7 Oferta: {amount}", "&7 Valor: &c{percent}%"]
+              },
+              "mid": {
+                "name": "&3Oferta de {buyer_name}",
+                "lore": ["&7", "&7 Terreno: &f{plot}", "&7 Oferta: {amount}", "&7 Valor: &e{percent}%"]
+              },
+              "high": {
+                "name": "&3Oferta de {buyer_name}",
+                "lore": ["&7", "&7 Terreno: &f{plot}", "&7 Oferta: {amount}", "&7 Valor: &a{percent}%"]
+              }
+            }
+          }
+        },
+        "confirmation": {
+          "items": {
+            "accept": { "name": "&aConfirmar", "lore": [] },
+            "deny": { "name": "&cRecusar", "lore": [] }
+          },
+          "clear": {
+            "title": "Limpar o terreno?",
+            "name": "&8Limpar o terreno {plot}",
+            "lore": ["&7", "&7 Tudo o que está no terreno some,", "&7 e ele volta ao ponto inicial.", "&7 Essa ação é irreversível!"]
+          },
+          "delete": {
+            "title": "Excluir o terreno?",
+            "name": "&cExcluir o terreno {plot}",
+            "lore": ["&7", "&7 O terreno é limpo e deixa de", "&7 ser seu, com tudo o que tem nele.", "&7 Essa ação é irreversível!"]
+          },
+          // O título do inventário no 1.8 tem teto de 32 caracteres, então o valor vai no item, e não no título.
+          "list": {
+            "title": "Anunciar o terreno?",
+            "name": "&2Anunciar o terreno {plot}",
+            "lore": ["&7", "&7 Valor: {value}", "&7 Ofertas: {offers}", "&7", "&7 Confira o valor antes de confirmar.", "&7 O terreno entra na Imobiliária", "&7 exatamente por ele."],
+            "offers-on": "&aLigadas",
+            "offers-off": "&cDesligadas"
+          },
+          "offer-send": {
+            "title": "Enviar a oferta?",
+            "name": "&eOfertar pelo terreno {plot}",
+            "lore": ["&7", "&7 Oferta: {value}", "&7 Preço: {price}", "&7", "&7 Confira o valor antes de confirmar.", "&7 Ele é cobrado quando o vendedor", "&7 aceitar a oferta."]
+          },
+          "unlist": {
+            "title": "Cancelar a venda?",
+            "name": "&2Cancelar a venda do terreno {plot}",
+            "lore": ["&7", "&7 O terreno sai da Imobiliária, e", "&7 as ofertas por ele são canceladas."]
+          },
+          "purchase": {
+            "title": "Comprar o terreno?"
+          },
+          "offer": {
+            "title": "Avaliar a oferta",
+            "items": {
+              "accept": {
+                "name": "&aAceitar",
+                "lore": ["&7", "&7 O comprador paga a oferta,", "&7 e o terreno passa para ele."]
+              },
+              "deny": {
+                "name": "&cRecusar",
+                "lore": ["&7", "&7 A oferta sai, e o comprador", "&7 recebe um aviso."]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
