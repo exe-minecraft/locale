@@ -78,15 +78,16 @@
         "storage-soon": "&eO armazém ainda está em construção e chega junto com as plantações.",
         "no-plot": "&cVocê ainda não tem terreno. Use /plot para adquirir um.",
         "choose-plot": "&cVocê tem mais de um terreno. Entre no terreno que você quer, ou use o menu do /plot.",
-        "no-such-plot": "&cVocê não tem o terreno {index}. Você tem {count} {unit}.",
+        "no-such-plot": "&cVocê não tem o terreno #{index}. Você tem {count} {unit}.",
         "target-no-plot": "&c{target_name_with_color} &cnão tem terreno.",
-        "target-no-such-plot": "&c{target_name_with_color} &cnão tem o terreno {index}, porque tem só {count} {unit}.",
+        "target-no-such-plot": "&c{target_name_with_color} &cnão tem o terreno #{index}, porque tem só {count} {unit}.",
         "claim-not-here": "&cFique dentro de um terreno livre, no servidor de terrenos, para pegar ele. Ou use o menu do /plot.",
+        "claim-too-far": "&cEsse terreno fica longe demais do centro. Use o Adquirir, no menu do /plot, para pegar o terreno livre mais perto.",
         "claim-taken": "&cO terreno {plot} &cjá tem dono.",
         "claim-own": "&cO terreno {plot} &cjá é seu.",
         "claimed": "&aVocê adquiriu o terreno {plot}! Agora você tem {count} de {limit}.",
         "limit": "&cVocê já tem {limit} {unit}, que é o limite.",
-        "name-invalid": "&cEsse nome não vale. Use até {max} caracteres, entre letras, números, espaço, hífen e sublinhado.",
+        "name-invalid": "&cEsse nome não vale. Use até {max} caracteres, entre letras, números, espaço, hífen e sublinhado, com pelo menos uma letra.",
         "not-owner": "&cO terreno {plot} &cnão é mais seu.",
         "renamed": "&aO terreno agora se chama {plot}&a.",
         "clear-started": "&eA limpeza do terreno {plot} &ecomeçou. Você recebe um aviso quando ela terminar.",
@@ -142,8 +143,8 @@
       "titles": {
         "entry": {
           "title": "&eTerreno de {owner_name_with_color}",
-          "subtitle": "&7Terreno {id}",
-          "subtitle-named": "&f{name} &7(terreno {id})"
+          "subtitle": "&7Número {id}",
+          "subtitle-named": "&f{name} &7(número {id})"
         }
       },
       "notices": {
