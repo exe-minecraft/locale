@@ -65,7 +65,7 @@
           },
           "home": {
             "description": "ir até o seu terreno, ou visitar o de outro jogador",
-            "arguments": { "target": { "name": "número ou jogador", "description": "A posição do terreno no menu, o nick de quem você quer visitar, ou o nick com o número (Shawzyy:2)" } }
+            "arguments": { "target": { "name": "posição ou jogador", "description": "A posição do terreno no menu, o nick de quem você quer visitar, ou o nick com a posição (Shawzyy:2)" } }
           }
         }
       },
