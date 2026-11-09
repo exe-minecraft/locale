@@ -1,0 +1,181 @@
+{
+  "plugins": {
+    // Os baús virtuais do rankup: o /ec (também o bloco de ender chest) e o /bau, o menu com o
+    // baú do fim e os baús comprados com cash, como no rankup antigo. Cada baú é guardado à
+    // parte. O P4Free tem o arquivo dele, com o /cofre e o /bau como outro nome do /ec.
+    "virtual-chests": {
+      "messages": {
+        "not-allowed-with-shift": "&cVocê não pode abrir este inventário usando shift.",
+        "not-allowed-while-inventory-open": "&cFeche o inventário atual e tente novamente.",
+        "load-failed": "&cNão foi possível abrir o baú agora. Tente novamente em instantes.",
+        "save-failed": "&cOcorreu um erro ao salvar o baú. Ele fica travado até salvar; se demorar, contate um administrador.",
+        // A compra de um baú do /bau, ou de uma linha dele, em cash. O preço já vem formatado.
+        "purchase": {
+          "bought-chest": "&aVocê comprou o Baú #{number} por &6✪{price}&a. Ele já está no /bau, com 3 linhas.",
+          "bought-line": "&aO Baú #{number} agora tem {rows} linhas. A linha custou &6✪{price}&a.",
+          "not-enough": "&cSeu saldo de cash é insuficiente. Esta compra custa &6✪{price}&c.",
+          "charge-failed": "&cNão deu para confirmar a cobrança, e a compra não foi feita. Se o valor saiu da sua conta, ele volta sozinho.",
+          "checking": "&cA cobrança passou, mas não deu para confirmar a compra agora. Abra o /bau de novo em instantes e, se ela não aparecer, abra um ticket com este horário.",
+          "refunded": "&cA compra não passou, e o valor voltou para a sua conta.",
+          "refund-failed": "&cA compra não passou, e o valor ainda não voltou. Abra um ticket com este horário que a staff devolve.",
+          "locked": "&cCompre o Baú #{previous} antes do Baú #{number}.",
+          "restarting": "&cAs compras ficam paradas enquanto o servidor se prepara para reiniciar ou desligar. Tente de novo quando ele voltar."
+        },
+        "line": {
+          "used": "&aVocê desbloqueou &f{lines} {lines_word} &ano seu baú do fim, que agora tem &f{rows} {rows_word}&a.",
+          "maximum": "&cSeu baú do fim já tem todas as linhas que cabem. A melhoria não foi usada.",
+          "partial": "&eO seu baú do fim tem espaço para mais &f{room} {room_word}&e. A melhoria voltou para o seu inventário. Agache e use de novo para usar só o que couber.",
+          "failed": "&cNão foi possível ativar a melhoria agora. Ela voltou para o seu inventário.",
+          "loading": "&cSeu grupo ainda está carregando. Tente de novo em instantes."
+        }
+      },
+      // A melhoria do baú do fim do P4Free. O rankup não a vende, mas o item existe em todo
+      // servidor com o plugin.
+      "items": {
+        "line": {
+          "display-name": "&5Melhoria do baú do fim",
+          "name": "&5+{lines} {lines_word} no baú do fim",
+          "lore": [
+            "&7Desbloqueia &f{lines} {lines_word} &7a mais no",
+            "&7seu baú do fim &8(/ec)&7, para sempre.",
+            "",
+            "&7As linhas compradas somam por cima",
+            "&7das do seu grupo, até um baú cheio.",
+            "&7Cabem até &f{maximum} {maximum_word} &7extras sem VIP.",
+            "",
+            "&eClique com o botão direito para usar."
+          ],
+          "word": {
+            "singular": "linha",
+            "plural": "linhas"
+          }
+        }
+      },
+      "commands": {
+        "bau": {
+          "usage": {
+            "menu": { "syntax": "", "description": "abrir o menu dos seus baús" },
+            "numero": { "syntax": "<número>", "description": "abrir direto o seu baú com esse número" },
+            "outro": { "syntax": "<jogador> <número>", "description": "abrir o baú de outro jogador" }
+          }
+        }
+      },
+      "views": {
+        "menu": {
+          "title": "Baús virtuais",
+          "items": {
+            "ender-chest": {
+              "name": "&bBaú do Fim",
+              "lore": [
+                "&8/ec",
+                "",
+                "&fLinhas: &a{rows}/6",
+                "",
+                "&eClique para abrir."
+              ]
+            },
+            "chest": {
+              "owned": {
+                "name": "&eBaú #{number}",
+                "lore": [
+                  "&8/bau {number}",
+                  "",
+                  "&fLinhas: &a{rows}/6",
+                  "",
+                  "&fBotão esquerdo: &7abrir o baú",
+                  "&fBotão direito: &7comprar a linha {next} por &6✪{price}"
+                ]
+              },
+              "owned-full": {
+                "name": "&eBaú #{number}",
+                "lore": [
+                  "&8/bau {number}",
+                  "",
+                  "&fLinhas: &a{rows}/6",
+                  "",
+                  "&eClique para abrir."
+                ]
+              },
+              "buy": {
+                "name": "&eBaú #{number}",
+                "lore": [
+                  "&8/bau {number}",
+                  "",
+                  "&fPreço: &6✪{price}",
+                  "",
+                  "&7Compre cash na nossa loja em",
+                  "&floja.rede-exe.com",
+                  "",
+                  "&aClique para comprar."
+                ]
+              },
+              "buy-not-enough": {
+                "name": "&eBaú #{number}",
+                "lore": [
+                  "&8/bau {number}",
+                  "",
+                  "&fPreço: &6✪{price}",
+                  "",
+                  "&7Compre cash na nossa loja em",
+                  "&floja.rede-exe.com",
+                  "",
+                  "&cVocê não tem cash suficiente",
+                  "&cpara comprar este baú."
+                ]
+              },
+              "locked": {
+                "name": "&eBaú #{number}",
+                "lore": [
+                  "&8/bau {number}",
+                  "",
+                  "&fPreço: &6✪{price}",
+                  "",
+                  "&cCompre o Baú #{previous} antes deste."
+                ]
+              }
+            }
+          }
+        },
+        // A confirmação de compra, com o item do que se compra no meio.
+        "purchase": {
+          "title": "Confirmar a compra",
+          "chest": {
+            "name": "&eComprar o Baú #{number}",
+            "lore": [
+              "",
+              "&fPreço: &6✪{price}",
+              "&fLinhas: &a3/6",
+              ""
+            ]
+          },
+          "line": {
+            "name": "&eComprar a linha {rows} do Baú #{number}",
+            "lore": [
+              "",
+              "&fPreço: &6✪{price}",
+              "&fLinhas depois da compra: &a{rows}/6",
+              ""
+            ]
+          }
+        }
+      },
+      "ender-chest": {
+        "title": "Baú do Fim de {owner_name}",
+        "in-use": "&cEste baú do fim está em uso ou sendo salvo. Aguarde um momento.",
+        "cooldown": "&cAguarde {time} depois de entrar para abrir o baú do fim.",
+        "fix-size": "&eSeu baú do fim diminuiu com o grupo atual. O que sobrou foi para o inventário.",
+        "item-not-allowed": "&cVocê não pode guardar esse item no baú do fim."
+      },
+      // Os baús do /bau. {number} é o número do baú.
+      "chest": {
+        "title": "Baú #{number} de {owner_name}",
+        "in-use": "&cEste baú está em uso ou sendo salvo. Aguarde um momento.",
+        "cooldown": "&cAguarde {time} depois de entrar para abrir os baús.",
+        "fix-size": "&eO baú diminuiu. O que sobrou foi para o inventário.",
+        "item-not-allowed": "&cVocê não pode guardar esse item no baú.",
+        "not-owned": "&cVocê ainda não tem o Baú #{number}. Compre no /bau.",
+        "not-owned-other": "{owner_name_with_color} &cnão tem o Baú #{number}."
+      }
+    }
+  }
+}

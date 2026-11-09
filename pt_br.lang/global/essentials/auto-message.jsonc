@@ -39,6 +39,15 @@
             " &fPegue o seu clicando &a&lAQUI&f.",
             ""
           ],
+          // A dica dos baús do rankup: o AQUI roda o /bau, que abre o menu com o baú do fim e os baús comprados com cash.
+          // A do P4Free é a "chests", que fala do /cofre, e o rankup não tem.
+          "chests-rankup": [
+            "",
+            "&e&l BAÚS: &fAlém do &a/ec&f, você pode comprar até &a4 baús",
+            " &fcom cash no &a/bau&f, cada um com até &a6 linhas&f.",
+            " &fAbra o menu clicando &a&lAQUI&f.",
+            ""
+          ],
           "souls": [
             "",
             "&e&l DICA: &fAcumule &a5 abates&f, sem morrer, no Gladiador ou no",
