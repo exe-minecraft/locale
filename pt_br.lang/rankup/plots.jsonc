@@ -83,6 +83,8 @@
             },
             "separator": "&7, ",
             "nobody": "&cninguém",
+            // O /plot deny *: o terreno fechado a quem não está na lista entra entre os Negados.
+            "everyone": "&ctodos de fora da lista",
             "no-name": "Nenhum",
             "sale": {
               "none": "&fNão está à venda",
@@ -158,6 +160,11 @@
         "member-not-trusted": "&c{target_name_with_color} &cnão é confiável no terreno {plot}&c.",
         "member-not-denied": "&c{target_name_with_color} &cnão está negado no terreno {plot}&c.",
         "member-removed": "&a{target_name_with_color} &asaiu da lista do terreno {plot}&a.",
+        // O /plot deny * e o /plot allow * (também all e todos): fechar e abrir o terreno a quem não está na lista.
+        "everyone-denied": "&aAgora só quem está na lista entra no terreno {plot}&a. Para abrir de novo, use /plot allow *.",
+        "everyone-already-denied": "&cO terreno {plot} &cjá está fechado a quem não está na lista.",
+        "everyone-allowed": "&aO terreno {plot} &aestá aberto de novo a quem não está na lista. Os negados pelo nome continuam negados.",
+        "everyone-not-denied": "&cO terreno {plot} &cnão está fechado a quem não está na lista.",
         "price-too-high": "&cEsse valor passa do máximo desta moeda, que é {max}&c.",
         "price-invalid": "&c\"{typed}\" não é um valor válido. Digite o número sem pontos, como 1000, ou com a letra do milhar, como 50K ou 2.5M.",
         "listed": "&aO terreno {plot} &afoi anunciado na Imobiliária por {value}&a.",
@@ -378,6 +385,11 @@
         "members": {
           "title": "Membros do Terreno #{index}",
           "items": {
+            // O terreno fechado pelo /plot deny *, primeiro na lista.
+            "everyone": {
+              "name": "&cTodos",
+              "lore": ["&7", "&7 O terreno está fechado: só quem", "&7 está nesta lista entra nele.", "&7", "&7Shift + Botão Esquerdo para abrir a todos."]
+            },
             "add": {
               "name": "&aAdicionar",
               "lore": ["&7", "&7 Digite o nick no chat, e o jogador", "&7 entra na lista sem permissão.", "&7", "&eClique para adicionar!"]
