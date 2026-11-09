@@ -247,7 +247,9 @@
         "cleaner-done": "&aA limpeza do terreno {plot} &afoi concluída com sucesso!",
         "cleaner-resumed": "&eA limpeza do terreno havia sido pausada devido a um reinício do servidor, a mesma foi retomada com sucesso!",
         "deleted": "&aO terreno {plot} &afoi excluído e está livre de novo.",
-        "reset-failed": "&cA limpeza do terreno {plot} &cfalhou. A equipe foi avisada, tente de novo mais tarde."
+        "reset-failed": "&cA limpeza do terreno {plot} &cfalhou. A equipe foi avisada, tente de novo mais tarde.",
+        // O reset animado leva minutos: um restart no meio deixa o terreno pela metade, e o arranque avisa o dono.
+        "reset-interrupted": "&eA limpeza do terreno {plot} &efoi interrompida porque o servidor reiniciou, e o terreno continua seu. Se quiser, peça de novo pelo menu do terreno."
       },
       // O Limpador de Terrenos (o pedido do dono de 09/11): o clique direito dentro do próprio terreno, no servidor de
       // terrenos, abre a confirmação, e confirmar tira toda a terra e a grama do terreno.
