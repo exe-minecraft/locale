@@ -60,13 +60,52 @@
           "claim": {
             "description": "pegar o terreno livre onde você está"
           },
+          "auto": {
+            "description": "adquirir o terreno livre mais perto do centro"
+          },
+          "clear": {
+            "description": "limpar o terreno onde você está, ou o único que você tem, de volta ao ponto inicial"
+          },
           "dispose": {
             "description": "excluir o terreno onde você está, ou o único que você tem"
           },
           "home": {
             "description": "ir até o seu terreno, ou visitar o de outro jogador",
             "arguments": { "target": { "name": "posição ou jogador", "description": "A posição do terreno no menu, o nick de quem você quer visitar, ou o nick com a posição (Shawzyy:2)" } }
+          },
+          // O /plot info: o terreno onde o jogador está, ou o dele fora de um terreno. Cada nick da lista sai na cor do
+          // papel, como no menu de membros, e os nicks de um papel são separados pelo "separator".
+          "info": {
+            "description": "ver o dono, os membros e a venda do terreno onde você está",
+            "lines": [
+              "",
+              "&eTerreno {plot} &ede {owner_name_with_color}",
+              "&7 Nome: &f{name}",
+              "&7 Confiáveis: {trusted}",
+              "&7 Adicionados: {added}",
+              "&7 Negados: {denied}",
+              "&7 Sem permissão: {none}",
+              "&7 Situação: {sale}",
+              ""
+            ],
+            "member": {
+              "none": "&f{target_name}",
+              "trusted": "&a{target_name}",
+              "added": "&e{target_name}",
+              "denied": "&c{target_name}"
+            },
+            "separator": "&7, ",
+            "nobody": "&7ninguém",
+            "no-name": "Nenhum",
+            "sale": {
+              "none": "&fNão está à venda",
+              "listed": "&6À venda por {value}"
+            },
+            "free": "&eEste terreno está livre. Use /plot claim para pegar ele."
           }
+        },
+        "imobiliaria": {
+          "description": "abrir a Imobiliária dos terrenos"
         },
         // O /clearplot e o /cp, do Limpador de Terrenos.
         "clearplot": {
@@ -118,6 +157,9 @@
         "delete-started": "&eA exclusão do terreno {plot} &ecomeçou. Ele é limpo e sai da sua lista quando terminar.",
         "clear-requested": "&eA limpeza do terreno {plot} &efoi pedida ao servidor de terrenos. Você recebe um aviso quando ela terminar, ou se não puder começar.",
         "delete-requested": "&eA exclusão do terreno {plot} &efoi pedida ao servidor de terrenos. Você recebe um aviso quando ela terminar, ou se não puder começar.",
+        "clear-not-yours": "&cEste terreno não é seu. Para limpar um terreno seu, entre nele ou use o menu do /plot.",
+        "clear-outranked": "&cVocê não pode limpar o terreno de {owner_name_with_color}&c, porque o cargo do dono é igual ou maior que o seu.",
+        "staff-clear-started": "&eA limpeza do terreno {plot} &ede {owner_name_with_color} &ecomeçou. Você recebe um aviso quando ela terminar.",
         "member-already": "&c{target_name_with_color} &cjá está na lista do terreno {plot}&c.",
         "member-none": "&a{target_name_with_color} &aentrou na lista do terreno {plot}&a, ainda sem permissão. Clique na cabeça dele para mudar.",
         "member-trusted": "&a{target_name_with_color} &aagora é confiável no terreno {plot}&a.",
@@ -199,6 +241,14 @@
         "delete-not-owner": "&cA exclusão não foi feita, porque o terreno não é mais seu.",
         "delete-failed": "&cA exclusão do terreno {plot} &cfalhou. A equipe foi avisada, tente de novo mais tarde.",
         "cleared": "&aO terreno {plot} &afoi limpo.",
+        // A limpeza que a equipe pede no terreno de outro (o /plot clear em pé nele): os avisos vão a quem pediu, com o
+        // dono em {player_*}, e o dono recebe o "cleared-by-staff" (o "-listed" quando o terreno estava à venda).
+        "staff-reset-not-owner": "&cA limpeza do terreno de {player_name_with_color} &cnão foi feita, porque o terreno mudou de dono.",
+        "staff-reset-busy": "&cO terreno {plot} &cde {player_name_with_color} &cjá está sendo limpo, ou tem uma compra em andamento. Tente de novo em instantes.",
+        "staff-reset-failed": "&cA limpeza do terreno de {player_name_with_color} &cfalhou, e o erro foi para o painel.",
+        "staff-cleared": "&aO terreno {plot} &ade {player_name_with_color} &afoi limpo.",
+        "cleared-by-staff": "&eSeu terreno {plot} &efoi limpo pela equipe e voltou ao ponto inicial.",
+        "cleared-by-staff-listed": "&eSeu terreno {plot} &efoi limpo pela equipe e voltou ao ponto inicial. O anúncio dele saiu da Imobiliária, e as ofertas foram canceladas.",
         "cleaner-done": "&aA limpeza do terreno {plot} &afoi concluída com sucesso!",
         "cleaner-resumed": "&eA limpeza do terreno havia sido pausada devido a um reinício do servidor, a mesma foi retomada com sucesso!",
         "deleted": "&aO terreno {plot} &afoi excluído e está livre de novo.",
@@ -480,6 +530,12 @@
             "title": "Usar o Limpador de Terrenos?",
             "name": "&eLimpar o terreno {plot}",
             "lore": ["&7", "&7 Toda a terra e a grama do terreno", "&7 somem, da bedrock até o topo.", "&7 O resto fica onde está.", "&7", "&7 O Limpador é gasto ao confirmar."]
+          },
+          // O /plot clear da equipe, em pé no terreno de outro jogador.
+          "staff-clear": {
+            "title": "Limpar o terreno?",
+            "name": "&8Limpar o terreno {plot} &8de {owner_name_with_color}",
+            "lore": ["&7", "&7 Tudo o que está no terreno some,", "&7 e ele volta ao ponto inicial.", "&7 Se estiver à venda, o anúncio sai.", "&7 O dono recebe um aviso.", "&7 Essa ação é irreversível!"]
           },
           "delete": {
             "title": "Excluir o terreno?",
