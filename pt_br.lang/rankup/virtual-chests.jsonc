@@ -136,25 +136,34 @@
             }
           }
         },
-        // A confirmação de compra, com o item do que se compra no meio.
+        // A confirmação de compra, no molde da compra de terreno: o baú em cima, e o Confirmar e o Recusar embaixo, com as
+        // cabeças dos terrenos. O título do 1.8 tem teto de 32 caracteres, e o preço vai no item.
         "purchase": {
+          // O título da confirmação do jar 2eeeb6b6d, que sai depois de o jar novo estar nos dois servidores.
           "title": "Confirmar a compra",
+          "items": {
+            "accept": { "name": "&aConfirmar", "lore": [] },
+            "deny": { "name": "&cRecusar", "lore": [] }
+          },
           "chest": {
-            "name": "&eComprar o Baú #{number}",
+            "title": "Comprar o Baú #{number}?",
+            "name": "&eBaú #{number}",
             "lore": [
-              "",
-              "&fPreço: &6✪{price}",
-              "&fLinhas: &a3/6",
-              ""
+              "&7",
+              "&7 Preço: &6✪{price}",
+              "&7 Linhas: &a3/6",
+              "&7",
+              "&7 Você compra as linhas 4, 5 e 6",
+              "&7 depois, com o botão direito no /bau."
             ]
           },
           "line": {
-            "name": "&eComprar a linha {rows} do Baú #{number}",
+            "title": "Comprar a linha {rows} do Baú #{number}?",
+            "name": "&eBaú #{number}",
             "lore": [
-              "",
-              "&fPreço: &6✪{price}",
-              "&fLinhas depois da compra: &a{rows}/6",
-              ""
+              "&7",
+              "&7 Preço: &6✪{price}",
+              "&7 Linhas depois da compra: &a{rows}/6"
             ]
           }
         }
