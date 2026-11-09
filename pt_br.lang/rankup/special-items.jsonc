@@ -6,6 +6,9 @@
       "commands": {
         "renomeador": {
           "description": "ver os comandos do Renomeador de Itens",
+          "usage": {
+            "usar": { "syntax": "", "description": "arraste o Renomeador para cima de um item no inventário para renomeá-lo" }
+          },
           "give": {
             "description": "entregar Renomeadores de Itens a um jogador",
             "arguments": {
@@ -16,6 +19,9 @@
         },
         "stattrak": {
           "description": "ver os comandos do StatTrak",
+          "usage": {
+            "usar": { "syntax": "", "description": "arraste o StatTrak para cima de uma espada ou de um machado no inventário" }
+          },
           "give": {
             "description": "entregar StatTraks a um jogador",
             "arguments": {
@@ -60,6 +66,7 @@
           "expired": "&cTempo esgotado. A ação foi cancelada e o item não foi consumido.",
           "cancelled": "&cAção cancelada. O item não foi consumido.",
           "refused": {
+            "characters": "&cO nome só pode ter letras, números, espaços e pontuação comum.",
             "empty": "&cO nome não pode estar vazio.",
             "too-long": "&cO nome é muito longo. O limite é de {max} {characters}.",
             "no-color": "&cVocê não tem permissão para usar cores no nome.",
@@ -71,10 +78,11 @@
           "renamed": "&aItem renomeado com sucesso para {name}&a!",
           "improper": "&cEste nome não é permitido. Nomes impróprios podem levar a punição.",
           "blocked-now": "&cVocê está impedido de usar o Renomeador por {time}, por insistir em nomes impróprios.",
-          // Para a staff (regra renomeador:alerta), de qualquer servidor do rankup. {name} sai como foi digitado.
+          // Para a staff (regra renomeador:alerta), de qualquer servidor do rankup. {name} sai como foi digitado, e o nick de
+          // quem tentou vem inteiro ({player_name}, {player_name_with_color}, {player_name_with_tag}).
           "alert": {
-            "renamer": "&c&l[RENOMEADOR] &f{player_name} &7({app_id}) &ftentou o nome &e{name} &7(palavra {word}, tentativa {attempt})",
-            "anvil": "&c&l[RENOMEADOR] &f{player_name} &7({app_id}) &ftentou o nome &e{name} &fna bigorna &7(palavra {word}, tentativa {attempt})"
+            "renamer": "&c&l[RENOMEADOR] {player_name_with_color} &7({app_id}) &ftentou o nome &e{name} &7(palavra {word}, tentativa {attempt})",
+            "anvil": "&c&l[RENOMEADOR] {player_name_with_color} &7({app_id}) &ftentou o nome &e{name} &fna bigorna &7(palavra {word}, tentativa {attempt})"
           }
         }
       },
@@ -84,7 +92,7 @@
           "name": "&6StatTrak",
           "lore": ["&7Arraste este item para a sua espada/machado", "&7para começar a contar as kills ao usá-la/o."]
         },
-        // O contador que vai na frente do nome da arma.
+        // O contador que vai depois do nome da arma.
         "suffix": "&7[&f{kills} {kills_word}&7]",
         "kills": { "singular": "kill", "plural": "kills" },
         // O nome da arma sem nome dado, igual ao do jogo.
@@ -104,7 +112,7 @@
           "no-permission": "&cVocê não tem permissão para usar o StatTrak.",
           "invalid-target": "&cO StatTrak só funciona em espadas e machados.",
           "already": "&cEste item já tem um StatTrak aplicado.",
-          "applied": "&aStatTrak aplicado com sucesso. Esta arma agora conta as kills feitas com a mesma."
+          "applied": "&aStatTrak aplicado com sucesso. Esta arma agora conta as kills feitas com ela."
         }
       }
     }
