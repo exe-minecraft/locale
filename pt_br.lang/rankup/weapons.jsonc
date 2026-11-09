@@ -57,7 +57,7 @@
           "cannot-move": "A Pá Especial não sai do seu inventário.",
           "deleted": "&cSua pá foi excluída.",
           "history": {
-            "empty": "{player} não tem nada no histórico da pá.",
+            "empty": "{player} não tem nada no histórico das armas.",
             "failed": "Não deu para carregar o histórico agora. Tente de novo em instantes."
           }
         },

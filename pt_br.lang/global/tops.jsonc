@@ -315,10 +315,17 @@
           }
         }
       },
-      // Os rankings que os dois modos têm (07/11/2026). Os que só o P4Free tem estão na pasta dele.
+      // Os rankings que os dois modos têm (07/11/2026; a espada e o machado desde 09/11). Os que só um modo tem
+      // estão na pasta dele.
       "rankings": {
         "clan_kills": "Clãs: abates",
-        "clan_points": "Clãs: pontos"
+        "clan_points": "Clãs: pontos",
+        "weapon_sword_kills": "Espadas: abates",
+        "weapon_sword_prestige": "Espadas: prestígio",
+        "weapon_sword_tokens_spent": "Espadas: investimento",
+        "weapon_axe_kills": "Machados: abates",
+        "weapon_axe_prestige": "Machados: prestígio",
+        "weapon_axe_tokens_spent": "Machados: investimento"
       }
     }
   }
