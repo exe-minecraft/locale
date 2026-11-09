@@ -85,8 +85,8 @@
         ],
         "portal-in-combat": "Você não pode sair do mundo de escavação em combate.",
         "portal-failed": "Não deu para levar você de volta ao spawn agora. Tente o portal de novo em instantes.",
-        // O baú do fim no chão abre o baú virtual da rede, que seria uma saída sem portal.
-        "ender-chest": "Você não pode colocar um baú do fim no mundo de escavação.",
+        // Na colocação e na abertura. O baú do fim guardaria o saque fora da queda na saída e da morte.
+        "ender-chest": "Você não pode usar baú do fim no mundo de escavação.",
         // O resumo do que se escavou, quando o jogador para por uns segundos.
         "earnings": [
           "",
