@@ -277,6 +277,18 @@
             "header": "Hologramas de ranking deste servidor:",
             "entry": "&e{hologram_name}&7: {hologram_world} {hologram_x}, {hologram_y}, {hologram_z} ({hologram_rankings})"
           },
+          "teleport": {
+            "description": "ir até um holograma de ranking",
+            "arguments": {
+              "name": {
+                "name": "nome",
+                "description": "Nome do holograma"
+              }
+            },
+            "world-not-loaded": "O mundo {hologram_world} do holograma de ranking {hologram_name} não está carregado neste servidor.",
+            "failed": "Não foi possível levar você até o holograma de ranking {hologram_name}.",
+            "success": "Você está no holograma de ranking {hologram_name}."
+          },
           "move": {
             "description": "trazer um holograma de ranking para onde você está",
             "arguments": {
