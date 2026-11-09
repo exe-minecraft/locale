@@ -510,7 +510,7 @@
           ],
           // /pá historico <jogador>, da staff.
           "historico": {
-            "description": "Mostra o histórico da Pá Especial de um jogador",
+            "description": "Mostra o histórico das armas especiais de um jogador",
             "arguments": {
               "target": {
                 "name": "jogador",

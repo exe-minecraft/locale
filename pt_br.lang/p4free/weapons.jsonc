@@ -125,6 +125,8 @@
         }
       },
       "messages": {
+        // O conserto pago com itens do inventário (repair-item no config), que a espada e o machado não usam hoje.
+        "not-enough-items": "Você precisa de {amount} {item} no inventário para consertar a arma.",
         "profile-loading": "Seu perfil ainda está carregando. Tente de novo em instantes.",
         "duplicates-removed": "Removemos {amount} {amount_unit} do seu inventário.",
         "skull-cracker": "&6Crítico! &eQuebra-Crânio ativado.",
@@ -482,6 +484,8 @@
           // nome do prestígio, com a seta para o próximo só quando ele já dá para fazer.
           "states": {
             "repair": {
+              // O preço do conserto que depende do grupo (repair-cost-by-group), com o perfil ainda chegando.
+              "loading": "&eCarregando o seu perfil...",
               "ready": "&aClique para reparar.",
               "repaired": "&cA arma já está com a durabilidade máxima.",
               "not-enough": "&cVocê não possui {repair_currency} suficientes."
