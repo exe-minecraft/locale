@@ -139,8 +139,6 @@
         // A confirmação de compra, no molde da compra de terreno: o baú em cima, e o Confirmar e o Recusar embaixo, com as
         // cabeças dos terrenos. O título do 1.8 tem teto de 32 caracteres, e o preço vai no item.
         "purchase": {
-          // O título da confirmação do jar 2eeeb6b6d, que sai depois de o jar novo estar nos dois servidores.
-          "title": "Confirmar a compra",
           "items": {
             "accept": { "name": "&aConfirmar", "lore": [] },
             "deny": { "name": "&cRecusar", "lore": [] }
