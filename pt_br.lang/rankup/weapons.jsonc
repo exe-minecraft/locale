@@ -412,7 +412,9 @@
             "repair": {
               "ready": "&aClique para consertar.",
               "repaired": "&cA pá já está com a durabilidade máxima.",
-              "not-enough": "&cVocê não possui {repair_currency} suficientes."
+              "not-enough": "&cVocê não possui {repair_currency} suficientes.",
+              // O preço depende do grupo, e o perfil de quem abriu ainda não chegou.
+              "loading": "&eCarregando o seu perfil..."
             },
             // A pá não tem prestígio: o menu dela não mostra estas linhas, mas o código as lê.
             "prestige": {

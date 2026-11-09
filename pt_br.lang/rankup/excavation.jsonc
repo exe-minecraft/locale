@@ -5,7 +5,6 @@
     // extração. O texto é o de lá, sem os símbolos que o 1.8 não desenha.
     "excavation": {
       "units": {
-        "token": { "singular": "token", "plural": "tokens" },
         "second": { "singular": "segundo", "plural": "segundos" },
         "block": { "singular": "bloco", "plural": "blocos" }
       },
@@ -25,8 +24,7 @@
         "back": "atrás",
         "back-left": "atrás, à esquerda",
         "left": "à esquerda",
-        "front-left": "à frente, à esquerda",
-        "here": "aqui"
+        "front-left": "à frente, à esquerda"
       },
       "time": {
         "day": "Dia",
@@ -86,6 +84,9 @@
           ""
         ],
         "portal-in-combat": "Você não pode sair do mundo de escavação em combate.",
+        "portal-failed": "Não deu para levar você de volta ao spawn agora. Tente o portal de novo em instantes.",
+        // O baú do fim no chão abre o baú virtual da rede, que seria uma saída sem portal.
+        "ender-chest": "Você não pode colocar um baú do fim no mundo de escavação.",
         // O resumo do que se escavou, quando o jogador para por uns segundos.
         "earnings": [
           "",
@@ -120,7 +121,7 @@
           "&fPara evitar jogadores acampando",
           "&fnas áreas dos portais, existe",
           "&fuma explosão que empurra para",
-          "&flonge a cada {seconds} segundos.",
+          "&flonge a cada {seconds} {seconds_unit}.",
           "",
           "{timer}"
         ],
@@ -202,7 +203,10 @@
             }
           },
           "states": {
+            "loading": "&7Carregando...",
             "ready": "&aClique para teleportar.",
+            // Só a equipe com o grupo da manutenção entra; o proxy avisa os outros.
+            "maintenance": "&cEm manutenção no momento.",
             "unavailable": "&7Servidor indisponível no momento."
           }
         }
