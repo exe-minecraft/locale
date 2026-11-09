@@ -82,7 +82,7 @@
               "denied": "&c{target_name}"
             },
             "separator": "&7, ",
-            "nobody": "&7ninguém",
+            "nobody": "&cninguém",
             "no-name": "Nenhum",
             "sale": {
               "none": "&fNão está à venda",
