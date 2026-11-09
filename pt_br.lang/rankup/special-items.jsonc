@@ -1,0 +1,112 @@
+// Os itens especiais do rankup (09/11/2026): o Renomeador e o StatTrak. O nome e a descrição dos itens são os do pedido
+// do dono, com o português corrigido ("Itens", "renomeá-lo"). As mensagens de entrega seguem as do Limpador de Terrenos.
+{
+  "plugins": {
+    "special-items": {
+      "commands": {
+        "renomeador": {
+          "description": "ver os comandos do Renomeador de Itens",
+          "give": {
+            "description": "entregar Renomeadores de Itens a um jogador",
+            "arguments": {
+              "target": { "name": "jogador", "description": "Jogador que recebe, neste servidor" },
+              "amount": { "name": "quantidade", "description": "Quantos Renomeadores, de 1 a 2304" }
+            }
+          }
+        },
+        "stattrak": {
+          "description": "ver os comandos do StatTrak",
+          "give": {
+            "description": "entregar StatTraks a um jogador",
+            "arguments": {
+              "target": { "name": "jogador", "description": "Jogador que recebe, neste servidor" },
+              "amount": { "name": "quantidade", "description": "Quantos StatTraks, de 1 a 2304" }
+            }
+          }
+        }
+      },
+      // O give dos dois itens. {item} é o nome do item, já com a cor.
+      "give": {
+        "given": "&aEntregado {item} &7[&f{amount}x&7] &aao jogador {target_name_with_color}",
+        "received": "&aRecebido {item} &7[&f{amount}x&7] &acom sucesso!",
+        "full": "&cO inventário de {target_name_with_color} &cnão tem espaço para {item} &7[&f{amount}x&7]&c, e nada foi entregue.",
+        "elsewhere": "&c{target_name_with_color} &cnão está neste servidor. O item é entregue no servidor onde o jogador está.",
+        "amount": "&cQuantidade inválida. Use um número inteiro de 1 a {max}!"
+      },
+      "renamer": {
+        "item": {
+          "display-name": "&aRenomeador de Itens",
+          "name": "&aRenomeador de Itens",
+          "lore": ["&7Arraste este item para o item", "&7que quiser, para renomeá-lo."]
+        },
+        "characters": { "singular": "caractere", "plural": "caracteres" },
+        // As regras, antes do pedido do nome. {symbol}, {red} e {bold} são o "&", o "&c" e o "&l" como texto.
+        "explanation": [
+          "",
+          "&a&lRENOMEADOR",
+          "&7Você pode usar cores e formatações com o símbolo &f{symbol}&7, por exemplo &f{red} &7para vermelho e &f{bold} &7para negrito.",
+          "&eO nome pode ter no máximo {max} {characters}, sem contar os códigos de cor.",
+          "&cNomes impróprios ou ofensivos podem levar a punição. Use com moderação!"
+        ],
+        // O pedido do nome. Depois desta linha o core põe o clique para cancelar e o prazo de um minuto.
+        "query": "Digite no chat o novo nome do item. Para desistir sem gastar o Renomeador, digite &ccancelar&e.",
+        "messages": {
+          "no-permission": "&cVocê não tem permissão para usar o Renomeador.",
+          "invalid-target": "&cEste item não pode ser renomeado.",
+          "stacked": "&cSó dá para renomear um item de cada vez. Separe uma unidade da pilha primeiro.",
+          "already": "&cVocê já está renomeando um item. Responda no chat, ou digite cancelar para desistir.",
+          "inventory-full": "&cSeu inventário está cheio. Libere um espaço para o Renomeador e tente de novo.",
+          "blocked": "&cVocê está impedido de usar o Renomeador por mais {time}.",
+          "expired": "&cTempo esgotado. A ação foi cancelada e o item não foi consumido.",
+          "cancelled": "&cAção cancelada. O item não foi consumido.",
+          "refused": {
+            "empty": "&cO nome não pode estar vazio.",
+            "too-long": "&cO nome é muito longo. O limite é de {max} {characters}.",
+            "no-color": "&cVocê não tem permissão para usar cores no nome.",
+            "no-format": "&cVocê não tem permissão para usar formatações no nome.",
+            "counter": "&cO nome não pode ter um contador de kills. O StatTrak põe o dele sozinho."
+          },
+          "moved": "&cO item foi movido durante a ação. A operação foi cancelada e o Renomeador não foi consumido.",
+          "missing": "&cO Renomeador não está mais no seu inventário, e nada foi renomeado.",
+          "renamed": "&aItem renomeado com sucesso para {name}&a!",
+          "improper": "&cEste nome não é permitido. Nomes impróprios podem levar a punição.",
+          "blocked-now": "&cVocê está impedido de usar o Renomeador por {time}, por insistir em nomes impróprios.",
+          // Para a staff (regra renomeador:alerta), de qualquer servidor do rankup. {name} sai como foi digitado.
+          "alert": {
+            "renamer": "&c&l[RENOMEADOR] &f{player_name} &7({app_id}) &ftentou o nome &e{name} &7(palavra {word}, tentativa {attempt})",
+            "anvil": "&c&l[RENOMEADOR] &f{player_name} &7({app_id}) &ftentou o nome &e{name} &fna bigorna &7(palavra {word}, tentativa {attempt})"
+          }
+        }
+      },
+      "stattrak": {
+        "item": {
+          "display-name": "&6StatTrak",
+          "name": "&6StatTrak",
+          "lore": ["&7Arraste este item para a sua espada/machado", "&7para começar a contar as kills ao usá-la/o."]
+        },
+        // O contador que vai na frente do nome da arma.
+        "suffix": "&7[&f{kills} {kills_word}&7]",
+        "kills": { "singular": "kill", "plural": "kills" },
+        // O nome da arma sem nome dado, igual ao do jogo.
+        "materials": {
+          "wood_sword": "Espada de Madeira",
+          "stone_sword": "Espada de Pedra",
+          "iron_sword": "Espada de Ferro",
+          "gold_sword": "Espada de Ouro",
+          "diamond_sword": "Espada de Diamante",
+          "wood_axe": "Machado de Madeira",
+          "stone_axe": "Machado de Pedra",
+          "iron_axe": "Machado de Ferro",
+          "gold_axe": "Machado de Ouro",
+          "diamond_axe": "Machado de Diamante"
+        },
+        "messages": {
+          "no-permission": "&cVocê não tem permissão para usar o StatTrak.",
+          "invalid-target": "&cO StatTrak só funciona em espadas e machados.",
+          "already": "&cEste item já tem um StatTrak aplicado.",
+          "applied": "&aStatTrak aplicado com sucesso. Esta arma agora conta as kills feitas com a mesma."
+        }
+      }
+    }
+  }
+}
