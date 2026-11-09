@@ -6,7 +6,7 @@
         "arguments": {
           "target": {
             "name": "jogador|todos",
-            "description": "O jogador que recebe, ou todos os que estão online no P4Free"
+            "description": "O jogador que recebe, ou todos os que estão online neste modo de jogo"
           },
           "network": {
             "name": "rede",
