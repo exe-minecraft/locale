@@ -42,20 +42,7 @@
             "arguments": { "target": { "name": "jogador", "description": "Jogador que volta a poder entrar" } }
           },
           "members": {
-            "description": "ver a lista do seu terreno",
-            "arguments": { "page": { "name": "página", "description": "Página da lista, 10 jogadores por página" } },
-            "header": ["", "&eLista do terreno {plot} &7(página {page}/{pages}, {count} {unit})"],
-            "empty": "&eNinguém está na lista do terreno {plot}&e.",
-            "line": {
-              "none": " &8▸ &f{target_name} &7(Nenhuma)",
-              "trusted": " &8▸ &a{target_name} &7(Confiável)",
-              "added": " &8▸ &e{target_name} &7(Adicionado)",
-              "denied": " &8▸ &c{target_name} &7(Negado)"
-            },
-            "footer": ["", "{navigation}", ""]
-          },
-          "perms": {
-            "description": "abrir o menu de permissões do seu terreno"
+            "description": "abrir o menu dos membros e das permissões do seu terreno"
           },
           "claim": {
             "description": "pegar o terreno livre onde você está"
@@ -70,7 +57,7 @@
             "description": "excluir o terreno onde você está, ou o único que você tem"
           },
           "home": {
-            "description": "ir até o seu terreno, ou visitar o de outro jogador",
+            "description": "ir até o seu terreno, ou visitar o de outro jogador (o /plot h:2 leva ao seu terreno #2)",
             "arguments": { "target": { "name": "posição ou jogador", "description": "A posição do terreno no menu, o nick de quem você quer visitar, ou o nick com a posição (Shawzyy:2)" } }
           },
           // O /plot info: o terreno onde o jogador está, ou o dele fora de um terreno. Cada nick da lista sai na cor do
