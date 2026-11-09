@@ -1,0 +1,11 @@
+{
+  "plugins": {
+    "tops": {
+      "rankings": {
+        // A Pá Especial (o weapons): os blocos escavados com ela e os tokens investidos nela.
+        "weapon_shovel_blocks": "Pás: blocos escavados",
+        "weapon_shovel_tokens_spent": "Pás: investimento"
+      }
+    }
+  }
+}
