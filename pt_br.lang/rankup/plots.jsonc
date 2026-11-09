@@ -34,12 +34,12 @@
             "arguments": { "target": { "name": "jogador", "description": "Jogador que deixa de ser confiável" } }
           },
           "deny": {
-            "description": "impedir um jogador de entrar no seu terreno",
-            "arguments": { "target": { "name": "jogador", "description": "Jogador que não vai poder entrar" } }
+            "description": "impedir um jogador de entrar no seu terreno, ou todos de fora da lista com *",
+            "arguments": { "target": { "name": "jogador", "description": "Jogador que não vai poder entrar, ou * (ou all) para fechar o terreno a todos de fora da lista" } }
           },
           "allow": {
-            "description": "liberar a entrada de um jogador negado",
-            "arguments": { "target": { "name": "jogador", "description": "Jogador que volta a poder entrar" } }
+            "description": "liberar a entrada de um jogador negado, ou abrir o terreno a todos com *",
+            "arguments": { "target": { "name": "jogador", "description": "Jogador que volta a poder entrar, ou * (ou all) para abrir o terreno a todos" } }
           },
           "members": {
             "description": "abrir o menu dos membros e das permissões do seu terreno"
@@ -57,17 +57,18 @@
             "description": "excluir o terreno onde você está, ou o único que você tem"
           },
           "home": {
-            "description": "ir até o seu terreno, ou visitar o de outro jogador (o /plot h:2 leva ao seu terreno #2)",
+            "description": "ir até o seu terreno, ou visitar o de outro jogador (o /plot h:2 leva ao seu #2, e o /plot h:2 Nick ao #2 dele)",
             "arguments": { "target": { "name": "posição ou jogador", "description": "A posição do terreno no menu, o nick de quem você quer visitar, ou o nick com a posição (Shawzyy:2)" } }
           },
           // O /plot info: o terreno onde o jogador está, ou o dele fora de um terreno. Cada nick da lista sai na cor do
           // papel, como no menu de membros, e os nicks de um papel são separados pelo "separator".
           "info": {
-            "description": "ver o dono, os membros e a venda do terreno onde você está",
+            "description": "ver o dono, desde quando é dele, os membros e a venda do terreno onde você está",
             "lines": [
               "",
               "&eTerreno {plot} &ede {owner_name_with_color}",
               "&7 Nome: &f{name}",
+              "&7 Adquirido em: &f{since}",
               "&7 Confiáveis: {trusted}",
               "&7 Adicionados: {added}",
               "&7 Negados: {denied}",
