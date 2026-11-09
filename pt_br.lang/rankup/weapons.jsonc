@@ -1,8 +1,8 @@
 {
   "plugins": {
-    // A Pá Especial do rankup, o /pá do exe-rankup. É o mesmo plugin da espada e do machado
-    // do P4Free (o weapons), e a diferença vive aqui e na seção shovel do config.yml dele.
-    // O texto é o do exe-rankup, sem os símbolos que o 1.8 não desenha.
+    // As armas do rankup: a espada e o machado da rede, com os textos do P4Free menos o /cofre e os tokens
+    // dos golpes, que o rankup não tem, e a Pá Especial, o /pá do exe-rankup. Os textos da pá que mudam de
+    // um tipo para outro ficam em "pa", com o texto do exe-rankup, sem os símbolos que o 1.8 não desenha.
     "weapons": {
       // A espada e o machado da rede, os mesmos do P4Free (pedido do dono, 09/11/2026).
       "espada": {
@@ -30,7 +30,7 @@
       // As palavras que acompanham um número montado no código (o Plural do core): 1 no singular.
       "units": {
         "kill": { "singular": "abate", "plural": "abates" },
-        "duplicate-weapon": { "singular": "pá duplicada", "plural": "pás duplicadas" },
+        "duplicate-weapon": { "singular": "arma duplicada", "plural": "armas duplicadas" },
         "entry": { "singular": "registro", "plural": "registros" },
         // O item que paga o conserto da pá (repair-item no config).
         "repair-item": {
@@ -48,6 +48,7 @@
           "already-max-level": "Este encantamento já está no nível máximo.",
           "prestige-required": "Este encantamento pede prestígio {prestige}.",
           "not-enough": "Você não tem {currency} suficientes.",
+          // O conserto pago com itens do inventário: "Você precisa de 5 diamantes".
           "not-enough-items": "Você precisa de {amount} {item} no inventário para consertar a pá.",
           "enchant-bought": "&bParabéns! &fO encantamento &6{enchant} &fsubiu para o nível &6{level}&f.",
           "free-upgrade": "&aParabéns! &f{enchant} &asubiu para o nível &f{level}&a de graça, pelo seu grupo.",
@@ -67,6 +68,8 @@
             "plural": "pás duplicadas"
           }
         },
+        // Os nomes e as descrições dos encantamentos da pá, no ícone do menu. O efeito é o rótulo
+        // do número que o nível mexe; o que não tem número não tem efeito.
         "enchants": {
           "unbreakable": {
             "description": [
@@ -124,9 +127,12 @@
           }
         },
         "views": {
+          // O menu da pá, que abre com Shift + botão direito com ela na mão.
           "weapon": {
             "title": "{weapon_name}",
             "items": {
+              // 0: o encantamento que dá para evoluir. As linhas só com uma lista ({enchant_description},
+              // {enchant_effect}, {enchant_shop}, {enchant_drops}) viram uma linha por item, e vazias somem.
               "0": {
                 "name": "&a{enchant_name} &l{enchant_level}",
                 "lore": [
@@ -142,6 +148,7 @@
                   "{enchant_drops}"
                 ]
               },
+              // 2: o encantamento já no máximo.
               "2": {
                 "name": "&a{enchant_name} &l{enchant_level}",
                 "lore": [
@@ -154,6 +161,7 @@
                   "{enchant_drops}"
                 ]
               },
+              // 3: o conserto, pago com diamantes do inventário.
               "3": {
                 "name": "&aReparação",
                 "lore": [
@@ -170,6 +178,7 @@
                   "{repair_state}"
                 ]
               },
+              // 5: o ranking das pás, com a posição de quem abre.
               "5": {
                 "name": "&aRanking de {weapon_plural}",
                 "lore": [
@@ -184,6 +193,7 @@
                   "&aClique para visualizar."
                 ]
               },
+              // 6 e 11: o que se liga e desliga em vez de se comprar. A pá não tem nenhum hoje.
               "6": {
                 "name": "&a{enchant_name} &a&lATIVADA",
                 "lore": [
@@ -204,6 +214,7 @@
                   "&aClique para ativar."
                 ]
               },
+              // 7: a exclusão da pá.
               "7": {
                 "name": "&cExcluir item",
                 "lore": [
@@ -216,6 +227,7 @@
                   "&eClique para excluir a pá."
                 ]
               },
+              // 8: o encantamento que pede prestígio. A pá não tem prestígio hoje.
               "8": {
                 "name": "&c{enchant_name} &l{enchant_level}",
                 "lore": [
@@ -230,6 +242,7 @@
                   "&cNão é possível evoluir este encantamento."
                 ]
               },
+              // 9: o encantamento que dá para evoluir, mas o saldo não chega.
               "9": {
                 "name": "&c{enchant_name} &l{enchant_level}",
                 "lore": [
@@ -245,6 +258,7 @@
                   "{enchant_drops}"
                 ]
               },
+              // 10: o nível que o grupo leva de graça. A pá não tem upgrade de graça hoje.
               "10": {
                 "name": "&a{enchant_name} &l{enchant_level}",
                 "lore": [
@@ -257,6 +271,7 @@
                   "&eClique para adquirir de graça."
                 ]
               },
+              // 12: as informações.
               "12": {
                 "name": "&eInformações",
                 "lore": [
@@ -268,6 +283,7 @@
                   "&7os encantamentos."
                 ]
               },
+              // 13: o saldo de tokens.
               "13": {
                 "name": "&aTokens",
                 "lore": [
@@ -277,6 +293,7 @@
                   "&f Saldo: &a{tokens_balance}"
                 ]
               },
+              // 14: o ranking de tokens, com a posição de quem abre.
               "14": {
                 "name": "&bRanking de Tokens",
                 "lore": [
@@ -304,12 +321,14 @@
               "next": "  &f{effect}: &c&m{from}&7 » &b{to}",
               "current": "  &f{effect}: &7{from}"
             },
+            // O {enchant_shop}: só no que se paga em cash. A linha em branco do fim é dele.
             "shop": [
               "&e Adquira &f&lCASH&e e outros",
               "&e produtos em nossa loja!",
               "&e Acesse &floja.rede-exe.com",
               ""
             ],
+            // O {enchant_drops}: só nos encantamentos de achado, que abrem a lista dos itens.
             "drops": [
               "&fBotão direito: &7Ver os itens"
             ],
@@ -318,8 +337,10 @@
                 "ready": "&aClique para consertar.",
                 "repaired": "&cA pá já está com a durabilidade máxima.",
                 "not-enough": "&cVocê não possui {repair_currency} suficientes.",
+                // O preço depende do grupo, e o perfil de quem abriu ainda não chegou.
                 "loading": "&eCarregando o seu perfil..."
               },
+              // A pá não tem prestígio: o menu dela não mostra estas linhas, mas o código as lê.
               "prestige": {
                 "ready": [
                   "&aClique para prosseguir."
@@ -344,6 +365,8 @@
           "prestige": {
             "title": "Prestigiar a pá"
           },
+          // O histórico da pá, que a staff abre com /pá historico. Um item por registro, do mais
+          // novo para o mais velho; a data é no horário de Brasília.
           "history": {
             "items": {
               "enchant-upgrade": {
@@ -536,22 +559,22 @@
         "prestige-done": "&aPrestígio &l{prestige}&r&a. Os encantamentos foram zerados, menos o Indestrutível.",
         "profile-loading": "Seu perfil ainda está carregando. Tente de novo em instantes.",
         "duplicates-removed": "Removemos {amount} {amount_unit} do seu inventário.",
-        "in-combat": "Você não pode abrir o menu da pá em combate.",
-        "not-in-hand": "Segure a pá na mão para mexer nela.",
+        "in-combat": "Você não pode abrir a bancada em combate.",
+        "not-in-hand": "Segure a arma na mão para mexer nela.",
         "already-max-level": "Este encantamento já está no nível máximo.",
         "prestige-required": "Este encantamento pede prestígio {prestige}.",
         "not-enough": "Você não tem {currency} suficientes.",
-        // O conserto pago com itens do inventário: "Você precisa de 5 diamantes".
-        "not-enough-items": "Você precisa de {amount} {item} no inventário para consertar a pá.",
-        "enchant-bought": "&bParabéns! &fO encantamento &6{enchant} &fsubiu para o nível &6{level}&f.",
+        // O conserto pago com itens do inventário (repair-item no config), que a espada e o machado não usam hoje.
+        "not-enough-items": "Você precisa de {amount} {item} no inventário para consertar a arma.",
+        "enchant-bought": "&a{enchant} &fsubiu para o nível &a{level}&f.",
         "free-upgrade": "&aParabéns! &f{enchant} &asubiu para o nível &f{level}&a de graça, pelo seu grupo.",
-        "already-repaired": "Sua pá não precisa de conserto.",
-        "repaired": "Sua pá foi consertada.",
-        "cannot-drop": "Você não pode largar a Pá Especial no chão.",
-        "cannot-move": "A Pá Especial não sai do seu inventário.",
-        "deleted": "&cSua pá foi excluída.",
+        "already-repaired": "Esta arma não precisa de conserto.",
+        "repaired": "Arma consertada.",
+        "cannot-drop": "A arma não se larga no chão.",
+        "cannot-move": "A arma não sai do seu inventário.",
+        "deleted": "&cSua arma foi excluída.",
         "history": {
-          "empty": "{player} não tem nada no histórico da pá.",
+          "empty": "{player} não tem nada no histórico das armas.",
           "failed": "Não deu para carregar o histórico agora. Tente de novo em instantes."
         }
       },
@@ -619,8 +642,13 @@
           ]
         }
       },
-      // Os nomes e as descrições dos encantamentos da pá, no ícone do menu. O efeito é o rótulo
-      // do número que o nível mexe; o que não tem número não tem efeito.
+      // Os nomes dos encantamentos. Ficam aqui e não no config.yml porque são texto
+      // visível: no config saíam sem acento e sem cor.
+      // A descrição e o efeito saem no ícone da bancada, como no exe-p4free-core. O texto é
+      // o mesmo para a espada e para o machado. O efeito é o rótulo do número que o nível
+      // mexe; o Indestrutível e a Repulsão não têm número, e por isso não têm efeito.
+      // Os nomes não levam cor: cada item e mensagem define a sua, inclusive o dourado
+      // dos adquiridos e o cinza escuro dos ausentes na lore original das armas.
       "enchants": {
         "sharpening": {
           "name": "Afiação",
@@ -657,68 +685,42 @@
         "unbreakable": {
           "name": "Indestrutível",
           "description": [
-            "&7Torna a pá inquebrável, deixando-a",
-            "&7com durabilidade infinita."
+            "&7Torna a arma inquebrável,",
+            "&7deixando-a com durabilidade infinita."
           ]
         },
         "fortune": {
           "name": "Fortuna",
           "description": [
-            "&7Dá a chance de dobrar o número",
-            "&7de itens ao encontrar um recurso."
+            "&7Chance de conseguir tokens",
+            "&7em dobro em cada golpe ou abate."
           ],
           "effect": "Chance"
         },
         "efficiency": {
           "name": "Eficiência",
           "description": [
-            "&7Permite que sua pá quebre",
-            "&7instantaneamente qualquer",
-            "&7bloco compatível."
+            "&7Aumenta a velocidade de",
+            "&7quebrar blocos como teia."
           ]
         },
         "explorer": {
-          "name": "Explorador",
-          "description": [
-            "&7Aumenta a chance de encontrar",
-            "&7itens valiosos."
-          ],
-          "effect": "Chance"
+          "name": "Explorador"
         },
         "cactus": {
-          "name": "Cacto",
-          "description": [
-            "&7Dá a chance de conseguir itens",
-            "&7para criar uma farm de cactos."
-          ]
+          "name": "Cacto"
         },
         "diamond": {
-          "name": "Diamante",
-          "description": [
-            "&7Dá a chance de conseguir",
-            "&7diamantes enquanto escava."
-          ],
-          "effect": "Chance"
+          "name": "Diamante"
         },
         "gold": {
-          "name": "Ouro",
-          "description": [
-            "&7Dá a chance de encontrar",
-            "&7ouro enquanto escava."
-          ],
-          "effect": "Chance"
+          "name": "Ouro"
         },
         "durability": {
-          "name": "Durabilidade",
-          "description": [
-            "&7Dá a chance de não consumir",
-            "&7durabilidade ao quebrar um bloco."
-          ],
-          "effect": "Chance"
+          "name": "Durabilidade"
         }
       },
       "views": {
-        // O menu da pá, que abre com Shift + botão direito com ela na mão.
         "weapon": {
           "title": "{weapon_name}",
           "items": {
@@ -733,8 +735,11 @@
                 "{prestige_state}"
               ]
             },
-            // 0: o encantamento que dá para evoluir. As linhas só com uma lista ({enchant_description},
-            // {enchant_effect}, {enchant_shop}, {enchant_drops}) viram uma linha por item, e vazias somem.
+            // Os ícones dos encantamentos seguem o desenho do exe-p4free-core: o nome na cor
+            // do estado (verde quando dá para evoluir), a descrição, o nível com o próximo, o
+            // número que ele mexe e o que falta. As linhas só com uma lista ({enchant_description},
+            // {enchant_effect}, {enchant_shop}) viram uma linha por item, e vazias somem.
+            // 0: o encantamento que dá para evoluir.
             "0": {
               "name": "&a{enchant_name} &l{enchant_level}",
               "lore": [
@@ -746,56 +751,57 @@
                 " &fPreço: {enchant_currency_color}{enchant_price} {enchant_currency}",
                 "",
                 "{enchant_shop}",
-                "&fBotão esquerdo: &aEvoluir",
-                "{enchant_drops}"
+                "&aClique para adquirir."
               ]
             },
             // 2: o encantamento já no máximo.
             "2": {
-              "name": "&a{enchant_name} &l{enchant_level}",
+              "name": "&c{enchant_name} &l{enchant_level}",
               "lore": [
                 "{enchant_description}",
                 "",
                 "{enchant_progress}",
                 "{enchant_effect}",
                 "",
-                "&eNível máximo atingido!",
-                "{enchant_drops}"
+                "&cEste encantamento já está no nível máximo."
               ]
             },
-            // 3: o conserto, pago com diamantes do inventário.
+            // Os itens fixos (3, 4, 5, 7, 12, 13 e 14) também são os do exe-p4free-core, com
+            // "arma" onde lá era "espada" ou "machado": estes itens são os mesmos para as duas.
+            // 3: o conserto.
             "3": {
               "name": "&aReparação",
               "lore": [
                 "&7Use esta função para",
-                "&7consertar sua pá em 100%.",
+                "&7reparar sua arma",
+                "&7em 100%.",
                 "",
-                "&a Custo:",
-                "   &b{repair_cost} &f{repair_currency}",
+                "&a Custos:",
+                "   {repair_currency_color}{repair_cost} &f{repair_currency}",
                 "",
                 "&dDica: &fTorne a durabilidade",
-                "&fda sua pá infinita ao",
+                "&fda sua arma infinita ao",
                 "&fcomprar Indestrutível.",
                 "",
                 "{repair_state}"
               ]
             },
-            // 5: o ranking das pás, com a posição de quem abre.
+            // 5: o ranking das armas deste tipo, com a posição de quem abre.
             "5": {
               "name": "&aRanking de {weapon_plural}",
               "lore": [
-                "&7Acompanhe o ranking de pás e veja",
-                "&7quem mais escavou e quem mais",
-                "&7investiu tokens nelas!",
+                "&7Acompanhe o ranking e veja",
+                "&7quem possui mais abates",
+                "&7e tokens investidos!",
                 "",
                 "&f Sua posição:",
-                "&f  Blocos escavados: &e{blocks_position}",
-                "&f  Tokens investidos: &e{invested_position}",
+                "&f  Abates: &c{kills_position}",
+                "&f  Tokens gastos: &e{invested_position}",
                 "",
                 "&aClique para visualizar."
               ]
             },
-            // 6 e 11: o que se liga e desliga em vez de se comprar. A pá não tem nenhum hoje.
+            // 6 e 11: o que se liga e desliga em vez de se comprar, ativado e desativado.
             "6": {
               "name": "&a{enchant_name} &a&lATIVADA",
               "lore": [
@@ -816,20 +822,21 @@
                 "&aClique para ativar."
               ]
             },
-            // 7: a exclusão da pá.
+            // 7: a exclusão da arma.
             "7": {
-              "name": "&cExcluir item",
+              "name": "&cExcluir a arma",
               "lore": [
                 "&8Ação irreversível.",
                 "",
-                "&7Ao clicar neste item, sua pá será",
-                "&7excluída, e todo o progresso e os",
-                "&7encantamentos serão perdidos.",
+                "&7Ao clicar neste item, você irá excluir",
+                "&7a sua arma, perdendo todo o progresso",
+                "&7e os encantamentos atuais dela.",
                 "",
-                "&eClique para excluir a pá."
+                "&eClique para excluir a arma."
               ]
             },
-            // 8: o encantamento que pede prestígio. A pá não tem prestígio hoje.
+            // 8: o encantamento que ainda pede prestígio. Sem ele o ícone convidava a
+            // evoluir e só o clique é que dizia que não.
             "8": {
               "name": "&c{enchant_name} &l{enchant_level}",
               "lore": [
@@ -856,11 +863,10 @@
                 " &fPreço: {enchant_currency_color}{enchant_price} {enchant_currency}",
                 "",
                 "{enchant_shop}",
-                "&cVocê não tem saldo suficiente.",
-                "{enchant_drops}"
+                "&cVocê não possui {enchant_currency} suficientes."
               ]
             },
-            // 10: o nível que o grupo leva de graça. A pá não tem upgrade de graça hoje.
+            // 10: o nível que o grupo leva de graça (o upgrade VIP do sistema antigo).
             "10": {
               "name": "&a{enchant_name} &l{enchant_level}",
               "lore": [
@@ -877,22 +883,24 @@
             "12": {
               "name": "&eInformações",
               "lore": [
-                "&7Evolua sua pá com encantamentos",
-                "&7que rendem itens na escavação!",
+                "&7Customize sua arma com",
+                "&7encantamentos únicos!",
                 "",
-                "&7Escave com ela para ganhar tokens,",
-                "&7e use os tokens para evoluir",
-                "&7os encantamentos."
+                "&e Como ganhar tokens?",
+                "  &8- &fEscavar com a Pá Especial",
+                "",
+                "&7Use os tokens para evoluir ou",
+                "&7desbloquear encantamentos."
               ]
             },
             // 13: o saldo de tokens.
             "13": {
-              "name": "&aTokens",
+              "name": "&eTokens",
               "lore": [
                 "&7Acompanhe a quantidade de",
                 "&7tokens que você possui.",
                 "",
-                "&f Saldo: &a{tokens_balance}"
+                "&f Tokens: &a{tokens_balance}"
               ]
             },
             // 14: o ranking de tokens, com a posição de quem abre.
@@ -923,34 +931,38 @@
             "next": "  &f{effect}: &c&m{from}&7 » &b{to}",
             "current": "  &f{effect}: &7{from}"
           },
-          // O {enchant_shop}: só no que se paga em cash. A linha em branco do fim é dele.
+          // O {enchant_shop}: só no que se paga em cash. A linha em branco do fim é dele, para
+          // não sobrar uma no que se paga em tokens.
           "shop": [
             "&e Adquira &f&lCASH&e e outros",
             "&e produtos em nossa loja!",
             "&e Acesse &floja.rede-exe.com",
             ""
           ],
-          // O {enchant_drops}: só nos encantamentos de achado, que abrem a lista dos itens.
-          "drops": [
-            "&fBotão direito: &7Ver os itens"
-          ],
           "states": {
             "repair": {
-              "ready": "&aClique para consertar.",
-              "repaired": "&cA pá já está com a durabilidade máxima.",
+              "ready": "&aClique para reparar.",
+              "repaired": "&cA arma já está com a durabilidade máxima.",
               "not-enough": "&cVocê não possui {repair_currency} suficientes.",
-              // O preço depende do grupo, e o perfil de quem abriu ainda não chegou.
+              // O preço do conserto que depende do grupo (repair-cost-by-group), com o perfil ainda chegando.
               "loading": "&eCarregando o seu perfil..."
             },
-            // A pá não tem prestígio: o menu dela não mostra estas linhas, mas o código as lê.
             "prestige": {
               "ready": [
+                "&a Requisitos:",
+                " {investment_currency_color}{prestige_required} &f{investment_currency} de investimento.",
+                " &7Investido: {investment_currency_color}{weapon_invested}",
+                "",
                 "&aClique para prosseguir."
               ],
               "maximum": [
                 "&cNível máximo de prestígio atingido."
               ],
               "not-invested": [
+                "&c Requisitos:",
+                " {investment_currency_color}{prestige_required} &f{investment_currency} de investimento.",
+                " &7Investido: {investment_currency_color}{weapon_invested}",
+                "",
                 "&cVocê não possui os requisitos necessários."
               ]
             },
@@ -994,33 +1006,33 @@
           }
         },
         "delete": {
-          "title": "Excluir a pá"
+          "title": "Excluir a arma"
         },
         "prestige": {
-          "title": "Prestigiar a pá"
+          "title": "Prestigiar a arma"
         },
-        // O histórico da pá, que a staff abre com /pá historico. Um item por registro, do mais
-        // novo para o mais velho; a data é no horário de Brasília.
+        // O histórico das duas armas, que a staff abre com /espada historico ou /machado historico.
+        // Um item por registro, do mais novo para o mais velho; a data é no horário de Brasília.
         "history": {
           "title": "Histórico de {target}",
           "free": "&anada",
           "cost": "&b{amount} {currency}",
           "sources": {
-            "menu": "o menu da pá",
+            "menu": "a bancada",
             "book": "um livro de encantamento",
             "free": "o upgrade do grupo",
-            "toggle": "o interruptor do menu"
+            "toggle": "o interruptor da bancada"
           },
           "retrieve": {
-            "created": "&aPá nova, sem registro anterior.",
-            "existing": "&eA pá que ele já tinha."
+            "created": "&aArma nova, sem registro anterior.",
+            "existing": "&eA arma que ele já tinha."
           },
           "items": {
             "enchant-upgrade": {
               "name": "&aEncantamento melhorado",
               "lore": [
                 "",
-                "&7Item: {weapon}",
+                "&7Arma: {weapon}",
                 "&7Encantamento: {enchant} &f{level}",
                 "&7Por: &f{source}",
                 "&7Custo: {cost}",
@@ -1032,7 +1044,7 @@
               "name": "&6Prestígio",
               "lore": [
                 "",
-                "&7Item: {weapon}",
+                "&7Arma: {weapon}",
                 "&7Prestígio novo: &f{prestige}",
                 "&7Investido: &b{invested} {invested_currency}",
                 "",
@@ -1040,21 +1052,25 @@
               ]
             },
             "retrieve": {
-              "name": "&ePegou a pá pelo comando",
+              "name": "&ePegou a arma pelo comando",
               "lore": [
                 "",
-                "&7Item: {weapon}",
+                "&7Arma: {weapon}",
                 "{retrieve}",
+                "&7Prestígio: &f{prestige}",
+                "&7Abates: &f{kills}",
                 "",
                 "&8{date}"
               ]
             },
             "delete": {
-              "name": "&4Excluiu a pá",
+              "name": "&4Excluiu a arma",
               "lore": [
                 "",
-                "&7Item: {weapon}",
+                "&7Arma: {weapon}",
+                "&7Prestígio: &f{prestige}",
                 "&7Investido: &b{invested} {invested_currency}",
+                "&7Abates: &f{kills}",
                 "",
                 "&7Encantamentos:",
                 "{enchants}",
@@ -1063,21 +1079,23 @@
               ]
             },
             "repair": {
-              "name": "&dConsertou a pá",
+              "name": "&dConsertou a arma",
               "lore": [
                 "",
-                "&7Item: {weapon}",
+                "&7Arma: {weapon}",
                 "&7Custo: {cost}",
                 "",
                 "&8{date}"
               ]
             },
             "broken": {
-              "name": "&cA pá quebrou",
+              "name": "&cA arma quebrou",
               "lore": [
                 "",
-                "&7Item: {weapon}",
+                "&7Arma: {weapon}",
+                "&7Prestígio: &f{prestige}",
                 "&7Investido: &b{invested} {invested_currency}",
+                "&7Abates: &f{kills}",
                 "",
                 "&7Encantamentos:",
                 "{enchants}",
