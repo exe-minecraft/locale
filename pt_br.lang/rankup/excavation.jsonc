@@ -85,8 +85,9 @@
         ],
         "portal-in-combat": "Você não pode sair do mundo de escavação em combate.",
         "portal-failed": "Não deu para levar você de volta ao spawn agora. Tente o portal de novo em instantes.",
-        // Na colocação e na abertura. O baú do fim guardaria o saque fora da queda na saída e da morte.
-        "ender-chest": "Você não pode usar baú do fim no mundo de escavação.",
+        // Baús, fornalhas, funis, molduras, suportes de armadura e carrinhos com baú: guardariam o saque fora da queda
+        // na saída e da morte.
+        "storage": "Você não pode guardar itens fora do inventário no mundo de escavação.",
         // O resumo do que se escavou, quando o jogador para por uns segundos.
         "earnings": [
           "",
