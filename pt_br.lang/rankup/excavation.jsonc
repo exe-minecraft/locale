@@ -50,6 +50,7 @@
           "  &fHorário: &7{excavation_time}",
           "  &fCombate: {excavation_combat}",
           "  &fBioma: &7{excavation_biome}",
+          "  &fExtração: &e&l{excavation_heading} &7{excavation_distance} {excavation_distance_unit}",
           "",
           "  &fBlocos escavados: &b{excavation_blocks}",
           "  &fTokens: &e${currency_tokens_cached_account_value_formatted}",
