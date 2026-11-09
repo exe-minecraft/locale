@@ -16,15 +16,17 @@
         "snow": "Neve"
       },
       // Para que lado fica o ponto de extração mais perto, em relação para onde o jogador olha.
+      // A seta do lado do ponto de extração, em relação para onde o jogador olha: as do exe-rankup, a pedido do dono
+      // (09/11). Saem pela fonte unicode do cliente 1.8, como saíam lá.
       "headings": {
-        "front": "à frente",
-        "front-right": "à frente, à direita",
-        "right": "à direita",
-        "back-right": "atrás, à direita",
-        "back": "atrás",
-        "back-left": "atrás, à esquerda",
-        "left": "à esquerda",
-        "front-left": "à frente, à esquerda"
+        "front": "⬆",
+        "front-right": "⬈",
+        "right": "➡",
+        "back-right": "⬊",
+        "back": "⬇",
+        "back-left": "⬋",
+        "left": "⬅",
+        "front-left": "⬉"
       },
       "time": {
         "day": "Dia",
@@ -114,7 +116,7 @@
       "action-bar": {
         "portal": "&b&lPonto de Extração! &fEntre no &b&lPortal&f para sair do mundo com segurança.",
         "near": "&bVocê está perto de um ponto de extração!",
-        "far": "&bPonto de extração mais próximo a &f&l{distance} {distance_unit}&b, &e{heading}&b."
+        "far": "&bPonto de extração mais próximo a &f&l{distance} &f{distance_unit}&b de distância! &7(&e&l{heading}&7)"
       },
       "anti-camp": {
         "hologram": [
