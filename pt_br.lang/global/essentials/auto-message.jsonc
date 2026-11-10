@@ -48,6 +48,15 @@
             " &fAbra o menu clicando &a&lAQUI&f.",
             ""
           ],
+          // A dica das perks do rankup, em que o AQUI roda o /perks, que abre o menu. As do P4Free são outro sistema,
+          // compradas com almas, e não têm dica aqui.
+          "perks-rankup": [
+            "",
+            "&b&l PERKS: &fSuas perks sobem de nível com o uso e dão",
+            " &fvantagens no combate. Escolha as que ficam ativas",
+            " &fno &a/perks&f, ou abra o menu clicando &a&lAQUI&f.",
+            ""
+          ],
           "souls": [
             "",
             "&e&l DICA: &fAcumule &a5 abates&f, sem morrer, no Gladiador ou no",

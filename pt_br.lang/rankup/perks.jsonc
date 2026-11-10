@@ -1,0 +1,211 @@
+{
+  "plugins": {
+    // As perks do rankup (10/11/2026). São nove perks com nível e progresso, que evoluem pelo uso. Seis o jogador liga
+    // e desliga até o limite do grupo dele, e três já vêm ligadas. O nome, a cor e a descrição de cada uma são os dos
+    // baús de referência do Kekitoox, com o português corrigido ("necessidade", "itens", "XP"). As perks do P4Free
+    // têm o arquivo delas, e são outro sistema.
+    "perks": {
+      // As palavras que acompanham um número montado no código (o Plural do core), com o 1 no singular.
+      "units": {
+        "active-perk": { "singular": "perk ativa", "plural": "perks ativas" },
+        "enemy": { "singular": "inimigo", "plural": "inimigos" }
+      },
+      // A barra de dez segmentos do menu e da Velocidade carregando. Cada segmento aceso vale 10%.
+      "bar": {
+        "symbol": "▬",
+        "done-color": "&a",
+        "left-color": "&7"
+      },
+      // name é o nome com a cor da perk, e color é só a cor, para o número do nível no menu.
+      "types": {
+        "attack": {
+          "name": "&bAtaque",
+          "color": "&b",
+          "description": ["&7Receba buff de dano em golpes aplicados", "&7no chão, sem necessidade de critar."]
+        },
+        "regeneration": {
+          "name": "&dRegeneração",
+          "color": "&d",
+          "description": ["&7Receba a maçã dourada de", "&7volta ao ser consumida."]
+        },
+        "blacksmith": {
+          "name": "&7Ferreiro",
+          "color": "&7",
+          "description": ["&7Diminua o consumo de diamantes", "&7e de XP ao reparar seus itens."]
+        },
+        "speed": {
+          "name": "&bVelocidade",
+          "color": "&b",
+          "description": ["&7Ao agachar-se por alguns segundos,", "&7receba velocidade extra temporária."]
+        },
+        "suppression": {
+          "name": "&3Supressão",
+          "color": "&3",
+          "description": ["&7Ao defender com a espada/machado,", "&7desligue as perks dos seus inimigos."]
+        },
+        "resistance": {
+          "name": "&9Resistência",
+          "color": "&9",
+          "description": ["&7Receba efeito de resistência temporariamente", "&7ao defender golpes com a espada cruzada."]
+        },
+        "alchemist": {
+          "name": "&5Alquimista",
+          "color": "&5",
+          "description": ["&7Receba buffs ao craftar poções, como,", "&7tempo adicional, efeitos melhores, etc..."]
+        },
+        "farmer": {
+          "name": "&eFazendeiro",
+          "color": "&e",
+          "description": ["&7Diminua o tempo de spawn das plantações,", "&7que estejam plantadas nos seus terrenos."]
+        },
+        "slayer": {
+          "name": "&8Matador",
+          "color": "&8",
+          "description": ["&7Diminua o tempo de spawn dos spawners,", "&7que estejam colocados nos seus terrenos."]
+        }
+      },
+
+      "views": {
+        "perks": {
+          "title": "Perks",
+          // A cabeça do jogador, em cima. {rank} é uma das três linhas de rank abaixo. As linhas em branco são "&7", como
+          // nos baús de referência, para o item sair igual ao de lá.
+          "profile": {
+            "name": "&ePerks de {player_name}",
+            "lore": [
+              "&7",
+              "&f Nível Total: &e&l{total_level}",
+              "&f Rank: {rank}",
+              "&7",
+              "&eVocê tem &f&l{active} &ede &f&l{limit} &e{limit_unit} atualmente!"
+            ]
+          },
+          "rank": {
+            "position": "&c&l#{position}",
+            // A staff não entra no ranking.
+            "unranked": "&7fora do ranking",
+            // O banco não respondeu a tempo.
+            "unknown": "&7indisponível"
+          },
+          // O ícone de cada perk. {description}, {progress} e {status} são listas, e cada uma vira as linhas que tiver.
+          // A {progress} não deixa linha nenhuma no nível máximo.
+          "item": {
+            "name": "{perk}",
+            "lore": [
+              "{description}",
+              "&7",
+              "&f Nível Atual: {color}&l{level}",
+              "{progress}",
+              "&7",
+              "{status}"
+            ],
+            "progress": ["&7 {bar} ({percent}%)"]
+          },
+          // A última parte do ícone, que é sempre a resposta que o clique dá. No nível máximo a "maximum" vem antes
+          // da linha do estado. A trava de troca e o combate têm uma linha para a perk ligada e outra para a
+          // desligada, para o ícone seguir dizendo de que lado ela está.
+          "status": {
+            "standard": ["&8(Essa perk já vem ativada por padrão)"],
+            "active": ["&eClique para desativar essa perk!"],
+            "inactive": ["&aClique para ativar essa perk!"],
+            "limit": ["&cVocê já tem o máximo de perks ativas!"],
+            "locked-active": ["&cAguarde {time} para desativar essa perk!"],
+            "locked-inactive": ["&cAguarde {time} para ativar essa perk!"],
+            "in-combat-active": ["&cVocê não pode desativar essa perk em combate!"],
+            "in-combat-inactive": ["&cVocê não pode ativar essa perk em combate!"],
+            "maximum": ["&cNível máximo atingido!"]
+          }
+        }
+      },
+
+      "messages": {
+        "activated": "&aVocê ativou a perk {perk}&a.",
+        "deactivated": "Você desativou a perk {perk}&e.",
+        // As recusas do clique no menu, uma para cada estado do ícone.
+        "toggle-refused": {
+          "standard": "Essa perk vem ativada por padrão e não pode ser desativada.",
+          "limit": "Você já tem {limit} {limit_unit}, que é o seu máximo. Desative uma antes de ativar outra.",
+          "locked": "Aguarde {time} para trocar essa perk de novo.",
+          "in-combat": "Você não pode trocar de perk enquanto estiver em combate."
+        },
+        // O limite do grupo, conferido na entrada, ao abrir o menu e de tempos em tempos enquanto o jogador está online.
+        "limit-raised": "&aAgora você pode manter &f{limit} &a{limit_unit}.",
+        "limit-lowered": "Seu limite agora é de {limit} {limit_unit}, e o que passava dele foi desativado.",
+
+        "level-up": "&aSua perk {perk} &asubiu para o nível &f{level}&a!",
+        "level-maximum": "&aSua perk {perk} &achegou ao nível &f{level}&a, que é o máximo!",
+        // Outra perk subiu de nível com a Supressão desligada, e ela só ganha XP ligada.
+        "suppression-missed": "A perk {perk} &enão está ativa, por isso não ganhou XP com esta subida de nível.",
+
+        "regeneration-returned": "&aVocê recuperou a sua maçã dourada.",
+        "resistance-activated": "&aResistência ativada por &f{time}&a.",
+        "speed-activated": "&aVelocidade extra ativada por &f{time}&a.",
+        // Na barra de ação, enquanto o jogador segura o agachar.
+        "charging": "{perk} {bar}",
+        // Na barra de ação, para a perk de clique ou de postura que ainda está em recarga.
+        "in-cooldown": "{perk} &cestará disponível novamente em {time}.",
+
+        "suppression-activated": "&aVocê desligou as perks de &f{amount} &a{amount_unit} por &f{time}&a.",
+        // Na barra de ação, só para quem está em combate.
+        "suppression-empty": "&cNão há inimigos por perto para suprimir.",
+        "suppressed": "Suas perks foram desligadas por {time}.",
+        "suppression-ended": "&aSuas perks voltaram a funcionar.",
+
+        // O nome que a staff digitou num comando e não é de perk. {perks} são os nove nomes que o comando aceita.
+        "unknown-perk": "&cA perk {perk} não existe. As perks são {perks}."
+      },
+
+      "commands": {
+        "perks": {
+          "still-loading": "Suas perks ainda estão carregando. Tente de novo em instantes.",
+          "load-failed": "Não foi possível carregar suas perks. Entre de novo no servidor para tentar outra vez.",
+          "usage": {
+            "menu": { "syntax": "", "description": "abrir o menu das suas perks" }
+          },
+          "admin": {
+            "description": "mexer nas perks de um jogador",
+            // O jogador não está neste servidor do rankup, ou as perks dele ainda não carregaram aqui.
+            "elsewhere": "{target_name_with_color} &cnão está neste servidor. O comando só age em quem está aqui.",
+            "level": {
+              "description": "definir o nível de uma perk",
+              "arguments": {
+                "target": { "name": "jogador", "description": "Jogador que está neste servidor" },
+                "perk": { "name": "perk", "description": "O nome da perk, como ataque ou regeneração" },
+                "level": { "name": "nível", "description": "O nível novo, de 1 até o máximo" }
+              },
+              "invalid": "Nível inválido. Use um número entre 1 e {max}.",
+              "success": "&aVocê definiu a perk {perk} &ade {target_name_with_color} &apara o nível &f{level}&a.",
+              "already": "A perk {perk} &cde {target_name_with_color} &cjá está no nível {level}, sem progresso."
+            },
+            "xp": {
+              "description": "dar XP a uma perk",
+              "arguments": {
+                "target": { "name": "jogador", "description": "Jogador que está neste servidor" },
+                "perk": { "name": "perk", "description": "O nome da perk, como ataque ou regeneração" },
+                "percent": { "name": "porcentagem", "description": "Quanto do nível somar, acima de 0 e até 100" }
+              },
+              "invalid": "Porcentagem inválida. Use um número acima de 0 e até {max}.",
+              "maximum": "A perk {perk} &cde {target_name_with_color} &cjá está no nível máximo.",
+              "success": "&aVocê deu &f{percent}% &ade XP à perk {perk} &ade {target_name_with_color}&a. Ela agora está no nível &f{level} &acom &f{progress}%&a."
+            },
+            "reset": {
+              "description": "voltar uma perk, ou todas, ao nível 1",
+              "arguments": {
+                "target": { "name": "jogador", "description": "Jogador que está neste servidor" },
+                "perk": { "name": "perk", "description": "Uma perk só. Sem ela, todas" }
+              },
+              "all": {
+                "success": "&aAs perks de {target_name_with_color} &avoltaram ao nível 1.",
+                "nothing": "As perks de {target_name_with_color} &cjá estão todas no nível 1, sem progresso."
+              },
+              "one": {
+                "success": "&aA perk {perk} &ade {target_name_with_color} &avoltou ao nível 1.",
+                "nothing": "A perk {perk} &cde {target_name_with_color} &cjá está no nível 1, sem progresso."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
