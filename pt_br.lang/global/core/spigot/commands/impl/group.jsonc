@@ -52,8 +52,8 @@
             // Quem não tem o grupo nesse escopo (ou já venceu): nada foi tirado.
             "not-found": "O jogador {target_name} não tem o grupo {group_id} no servidor {server_id}."
           },
-          // O /group tirardias: o contrário da soma do /darvip, só em VIP com prazo. Tirar o que resta (ou mais)
-          // encerra o VIP na hora, e o congelado perde do que resta e segue congelado.
+          // O /group tirardias é o contrário da soma do /darvip, só em VIP com prazo. Tirar o que resta (ou mais)
+          // encerra o VIP na hora, e o congelado perde do que resta e segue congelado. O nick vai na cor do cargo.
           "take-days": {
             "description": "tirar dias do VIP de um jogador (o contrário do /darvip)",
             "arguments": {
@@ -62,8 +62,8 @@
                 "description": "Jogador que vai perder os dias de VIP"
               },
               "group": {
-                "name": "grupo",
-                "description": "Grupo de VIP com prazo"
+                "name": "vip",
+                "description": "O VIP com prazo (samurai ou imperial)"
               },
               "server": {
                 "name": "servidor",
@@ -76,14 +76,15 @@
             },
             "need-highest-group": "Você só pode tirar dias de grupos abaixo do seu nesse servidor!",
             "invalid-days": "Os dias precisam estar entre 1 e {max_days}.",
+            "not-vip": "{group_id} não é um VIP. Escolha entre {vips}.",
             // A resposta pode ter se perdido com os dias já tirados, e repetir tiraria em dobro.
-            "error": "A plataforma não confirmou a mudança no {group_id} de {target_name}. Confira o prazo no painel (Tempo de VIP) antes de repetir, pois os dias podem ter sido tirados.",
-            "conflict": "{target_name} não tem {group_id} com prazo em {server_id}. O grupo é permanente, já venceu ou o jogador não o tem.",
-            "not-vip": "Só grupos de VIP têm dias para tirar. {group_id} é staff ou o grupo padrão.",
-            "success": "Você tirou {days} {days_word} do {group_id} de {target_name} em {server_id}. O VIP vence em {expires_at} (restam {remaining}).",
-            "success-frozen": "Você tirou {days} {days_word} do {group_id} de {target_name} em {server_id}. O VIP segue congelado e restam {remaining}, com o prazo parado até descongelar.",
-            // Quem tinha menos que o pedido: o prazo foi para agora e o VIP acabou.
-            "success-ended": "{target_name} não tinha mais que {days} {days_word} de {group_id} em {server_id}. O VIP acabou agora."
+            "error": "A plataforma não confirmou a mudança no {group_id} de {target_name_with_color}&c. Confira o prazo no painel (Tempo de VIP) antes de repetir, pois os dias podem ter sido tirados.",
+            "conflict": "{target_name_with_color} &cnão tem {group_id} com prazo em {server_id}. O grupo é permanente, já venceu ou o jogador não o tem.",
+            // O "daqui a" entrou no lugar de "restam" porque com 1 dia, 1 hora ou 1 minuto o verbo no plural não concordava.
+            "success": "Você tirou {days} {days_word} do {group_id} de {target_name_with_color} &aem {server_id}. O VIP vence em {expires_at}, daqui a {remaining}.",
+            "success-frozen": "Você tirou {days} {days_word} do {group_id} de {target_name_with_color} &aem {server_id}. O VIP segue congelado com {remaining} pela frente, e o prazo fica parado até descongelar.",
+            // Para quem tinha menos que o pedido, ou exatamente ele. O prazo foi para agora e o VIP acabou, e o {had} é quanto havia.
+            "success-ended": "{target_name_with_color} &asó tinha {had} de {group_id} em {server_id}, e você pediu para tirar {days} {days_word}. O VIP acabou agora."
           },
           "freeze": {
             "description": "congelar o tempo de VIP de um jogador (continua VIP, o prazo para)",
@@ -105,7 +106,7 @@
             "error": "Sua tentativa de congelar o VIP falhou, tente novamente mais tarde!",
             "conflict": "{target_name} não tem {group_id} com prazo correndo em {server_id}. O grupo é permanente, venceu ou já está congelado.",
             "not-vip": "Só grupos de VIP podem ser congelados. {group_id} é staff ou o grupo padrão.",
-            "success": "Você congelou o {group_id} de {target_name} em {server_id}. Restam {remaining}, com o prazo parado até descongelar."
+            "success": "Você congelou o {group_id} de {target_name} em {server_id}. O prazo fica parado com {remaining} pela frente, até descongelar."
           },
           "unfreeze": {
             "description": "descongelar o tempo de VIP de um jogador (o prazo volta a correr)",
@@ -127,7 +128,7 @@
             "error": "Sua tentativa de descongelar o VIP falhou, tente novamente mais tarde!",
             "conflict": "{target_name} não tem {group_id} congelado em {server_id}.",
             "not-vip": "Só grupos de VIP podem ser congelados. {group_id} é staff ou o grupo padrão.",
-            "success": "Você descongelou o {group_id} de {target_name} em {server_id}. O prazo voltou a correr e restam {remaining}."
+            "success": "Você descongelou o {group_id} de {target_name} em {server_id}. O prazo voltou a correr, com {remaining} pela frente."
           },
           "freeze-all": {
             "description": "congelar todos os VIPs; os novos também entram congelados",
@@ -175,8 +176,8 @@
           "self": "Só o master dá VIP para a própria conta.",
           "error": "A plataforma não confirmou o VIP de {target_name}. Confira no painel (Tempo de VIP) antes de repetir, pois ele pode ter sido gravado.",
           "already-permanent": "{target_name} já tem o {vip_tag} &cpermanente. Não há o que somar.",
-          "success": "Você deu {days} {days_word} de {vip_tag} &apara {target_name}. O VIP vence em {expires_at} (restam {remaining}).",
-          "success-frozen": "Você deu {days} {days_word} de {vip_tag} &apara {target_name}. O VIP está congelado e restam {remaining}, com o prazo parado até descongelar.",
+          "success": "Você deu {days} {days_word} de {vip_tag} &apara {target_name}. O VIP vence em {expires_at}, daqui a {remaining}.",
+          "success-frozen": "Você deu {days} {days_word} de {vip_tag} &apara {target_name}. O VIP está congelado com {remaining} pela frente, e o prazo fica parado até descongelar.",
           "success-permanent": "Você deu o {vip_tag} &apermanente para {target_name}.",
           "success-season": "Você deu o {vip_tag} &apara {target_name} até o fim da temporada de {server_id} ({ends_at}).",
           "season-pending": "A temporada de {server_id} está na virada. O {vip_tag} &ade {target_name} ficou gravado e entra quando a próxima abrir.",
