@@ -2,6 +2,9 @@
   "plugins": {
     "tops": {
       "rankings": {
+        // A Enxada Especial: as plantações colhidas com ela e os tokens investidos nela.
+        "weapon_hoe_blocks": "Enxadas: plantações colhidas",
+        "weapon_hoe_tokens_spent": "Enxadas: investimento",
         // A Pá Especial (o weapons): os blocos escavados com ela e os tokens investidos nela.
         "weapon_shovel_blocks": "Pás: blocos escavados",
         "weapon_shovel_tokens_spent": "Pás: investimento"

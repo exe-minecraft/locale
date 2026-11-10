@@ -115,6 +115,8 @@
           "{selector_2}"
         ],
         "titles": {
+          "weapon_hoe_blocks": "&6&lENXADAS &f&lPLANTAÇÕES COLHIDAS",
+          "weapon_hoe_tokens_spent": "&6&lENXADAS &f&lINVESTIMENTO",
           "clan_kills": "&6&lCLÃS &f&lABATES",
           "clan_points": "&6&lTEMPORADA #{season}",
           "clan_gladiator_wins": "&6&lCLÃS &f&lGLADIADOR",
@@ -167,6 +169,8 @@
           "exe_league_origins": "&6&lEXE LEAGUE &f&lORIGINS"
         },
         "labels": {
+          "weapon_hoe_blocks": "Enxadas",
+          "weapon_hoe_tokens_spent": "Investimento",
           "clan_kills": "Clãs",
           "clan_points": "Pontos",
           "clan_gladiator_wins": "Gladiador",

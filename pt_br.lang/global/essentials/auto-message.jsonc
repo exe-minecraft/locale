@@ -6,6 +6,14 @@
         // de cada app). O destaque é o da dica do exe-souls, com o rótulo amarelo em negrito e o número em verde.
         // Na mensagem com clique, o "AQUI" é a âncora do link ou do comando.
         "auto-messages": {
+          // A dica da enxada do rankup, em que o AQUI roda o /enxada. Espera o automessage do rankup, como a das perks.
+          "enxada-rankup": [
+            "",
+            "&b&l ENXADA: &fColha as plantações do seu terreno com a",
+            " &fEnxada Especial e evolua os encantamentos dela.",
+            " &fPegue a sua com &a/enxada&f, ou clicando &a&lAQUI&f.",
+            ""
+          ],
           "vip": [
             "",
             "&6&l VIP: &fCom o &aSamurai&f ou o &4Imperial&f você ganha kit",
