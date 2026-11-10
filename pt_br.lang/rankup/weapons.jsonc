@@ -558,13 +558,6 @@
             ],
             "effect": "Chance"
           },
-          "gold": {
-            "description": [
-              "&7Dá a chance de encontrar",
-              "&7ouro enquanto escava."
-            ],
-            "effect": "Chance"
-          },
           "durability": {
             "description": [
               "&7Aumenta a chance de não perder",
@@ -1150,16 +1143,6 @@
             "&e ferramentas ou armaduras, ou para",
             "&e consertar a sua pá."
           ]
-        },
-        "gold": {
-          "name": "&eOuro",
-          "lore": [
-            "&fRaridade: {rarity}",
-            "",
-            "&e&l Dica: &eUse este item para fabricar",
-            "&e blocos de ouro e, depois, maçãs",
-            "&e douradas encantadas."
-          ]
         }
       },
       // Os nomes dos encantamentos. Ficam aqui e não no config.yml porque são texto
@@ -1499,7 +1482,6 @@
         // Os itens que um encantamento de achado dá, no botão direito do ícone dele.
         "drops": {
           "title": "Recompensas ({enchant_name})",
-          "all-blocks": "Todos",
           "all-day": "O dia todo",
           "and": " e ",
           "names": {
@@ -1515,20 +1497,6 @@
             "times": {
               "day": "Dia",
               "night": "Noite"
-            }
-          },
-          "items": {
-            "drop": {
-              "lore": [
-                "{drop_lore}",
-                "",
-                "&f Chance de encontrar: &b{chance}%",
-                "&f Blocos: &7{blocks}",
-                "&f Horário: &7{times}",
-                "",
-                "&7Este item é encontrado a partir",
-                "&7do nível &a&l{min_level}&r&7 de {enchant_name}."
-              ]
             }
           }
         },
