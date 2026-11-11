@@ -132,6 +132,9 @@
         "limit-raised": "&aAgora você pode manter &f{limit} &a{limit_unit}.",
         "limit-lowered": "Seu limite agora é de {limit} {limit_unit}, e o que passava dele foi desativado.",
 
+        // O XP de uma fabricação de poções, que é sorteado. É a única fonte de XP que diz quanto deu, e sai antes do
+        // aviso de nível novo.
+        "brew-xp": "&7Sua perk {perk} &7ganhou &f{xp}% &7de XP.",
         "level-up": "&aSua perk {perk} &asubiu para o nível &f{level}&a!",
         "level-maximum": "&aSua perk {perk} &achegou ao nível &f{level}&a, que é o máximo!",
         // Outra perk subiu de nível com a Supressão desligada, e ela só ganha XP ligada.

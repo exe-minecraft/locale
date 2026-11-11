@@ -1,0 +1,156 @@
+// As poções do rankup (11/11/2026, o documento "Sistema de Poções" do dono). Os itens são os dos baús "Pots" do
+// terreno do Kekitoox (rankup-plots-1, -74 65 -45 e -44), com o português corrigido ("frasco", "Açúcar" e "até o
+// frasco"). Os números (a chance, a duração, o lote e o grupo) ficam no config das perks, em perks.alchemist.
+{
+  "plugins": {
+    "potions": {
+      "items": {
+        // O frasco que recebe o ingrediente. É uma garrafa de vidro com a marca do item custom.
+        "flask": {
+          "display-name": "Frasco sem efeito",
+          "name": "&bFrasco sem efeito",
+          "lore": [
+            "&7Arraste açúcar ou pó de blaze até",
+            "&7este frasco para fabricar poções."
+          ]
+        },
+        // Os dois ingredientes. O açúcar brilha e o pó de blaze não, como nos baús.
+        "sugar": {
+          "display-name": "Açúcar para poção",
+          "name": "&bAçúcar para poção",
+          "lore": [
+            "&7Use este item para fabricar",
+            "&7uma poção de velocidade.",
+            "",
+            "&aArraste até o frasco."
+          ]
+        },
+        "blaze": {
+          "display-name": "Pó de Blaze para poção",
+          "name": "&bPó de Blaze para poção",
+          "lore": [
+            "&7Use este item para fabricar",
+            "&7uma poção de força.",
+            "",
+            "&aArraste até o frasco."
+          ]
+        },
+        // As três poções. O {level} é I ou II, e o {time} é a duração gravada na poção, como "1:30". O unit é o
+        // nome nas mensagens, no singular e no plural.
+        "potion": {
+          "strength": {
+            "unit": { "singular": "Poção de Força", "plural": "Poções de Força" },
+            "name": "&5Poção de Força",
+            "lore": [
+              "&7Esta poção te dá força ao consumir.",
+              "",
+              "&f Nível: &5&l{level}",
+              "&f Duração: &a{time}",
+              "",
+              "&eClique com o botão direito para consumir."
+            ]
+          },
+          "speed": {
+            "unit": { "singular": "Poção de Velocidade", "plural": "Poções de Velocidade" },
+            "name": "&bPoção de Velocidade",
+            "lore": [
+              "&7Esta poção te dá velocidade ao consumir.",
+              "",
+              "&f Nível: &b&l{level}",
+              "&f Duração: &a{time}",
+              "",
+              "&eClique com o botão direito para consumir."
+            ]
+          },
+          "berserker": {
+            "unit": { "singular": "Poção Berserker", "plural": "Poções Berserker" },
+            "name": "&dBerserker",
+            "lore": [
+              "&7Esta poção te dá força e velocidade ao consumir.",
+              "",
+              "&f Nível: &d&l{level}",
+              "&f Duração: &a{time}",
+              "",
+              "&eClique com o botão direito para consumir."
+            ]
+          }
+        }
+      },
+      "messages": {
+        // A fabricação lê o nível da Alquimista antes de gastar qualquer coisa. Sem as perks carregadas nada sai.
+        "perks-unavailable": "&cSuas perks ainda não carregaram neste servidor. Tente de novo em instantes, e se continuar assim, entre de novo.",
+        "inventory-full": "&cSeu inventário está cheio, e a poção não teria onde ficar. Libere um espaço e tente de novo. Nada foi gasto.",
+        "limited-by-space": "&eO resto do lote ficou de fora porque não caberia no seu inventário. Libere espaço para fazer mais poções de uma vez.",
+        // O {made} e o {potion} concordam ("1 Poção de Força II", "3 Poções de Força II").
+        "made": "&aVocê fez &f{made} {potion} {level}&a.",
+        "made-some": {
+          "one": "&aVocê fez &f{made} {potion} {level}&a. A outra tentativa falhou, e o que foi usado nela se perdeu.",
+          "many": "&aVocê fez &f{made} {potion} {level}&a. As outras {failed} tentativas falharam, e o que foi usado nelas se perdeu."
+        },
+        "failed": {
+          "one": "&cA fabricação falhou, e o que foi usado nela se perdeu. Sua chance de acerto é de {chance}%.",
+          "many": "&cAs {total} tentativas falharam, e o que foi usado nelas se perdeu. Sua chance de acerto é de {chance}%."
+        },
+        "same-ingredient": "&cEsta poção já tem o efeito deste ingrediente. A Berserker se faz com o outro, o açúcar na Poção de Força ou o pó de blaze na Poção de Velocidade.",
+        "already-berserker": "&cEsta poção já é uma Berserker e não aceita mais ingredientes.",
+        "berserker-locked": "&cVocê precisa da perk Alquimista no nível {level} para fazer a Berserker.",
+        "berserker-none": "&cA Berserker não está sendo fabricada no momento.",
+        // Quem tenta com o açúcar, o pó de blaze ou a garrafa comuns lê por que nada aconteceu. O clique segue o do jogo.
+        "plain-ingredient": "&cEsse item é comum e não fabrica poções. O Açúcar para poção sai do Explorador da enxada, na cana, e o Pó de Blaze para poção sai do Explorador da pá, à noite.",
+        "plain-flask": "&cEssa garrafa é comum e não recebe ingredientes. O Frasco sem efeito sai do Explorador da pá e da enxada.",
+        "unknown-item": "&c\"{item}\" não é um item das poções. Os itens são {items}."
+      },
+      // O quadro do /pocoes, que o jogador também lê quando a Alquimista sobe de nível. O {berserker} é uma das três
+      // frases de baixo.
+      "sheet": {
+        "lines": [
+          "",
+          "&5&l ALQUIMISTA &7(nível {level})",
+          "&f Chance de acerto: &a{chance}%",
+          "&f Nível das poções: &a{potion_level}",
+          "&f Duração: &a{time}",
+          "&f Poções por vez: &a{batch}",
+          "&f Poções por espaço: &a{group}",
+          "&f Berserker: {berserker}",
+          ""
+        ],
+        "berserker": {
+          "level": "&anível {level}",
+          "locked": "&cno nível {level} da perk",
+          "none": "&cindisponível"
+        }
+      },
+      "commands": {
+        "potions": {
+          "description": "ver o que a sua perk Alquimista faz na fabricação de poções",
+          "usage": {
+            "menu": { "syntax": "", "description": "ver o que a sua Alquimista faz" }
+          },
+          "admin": {
+            "description": "comandos da equipe para os itens das poções",
+            "give": {
+              "description": "entregar um frasco, um ingrediente ou uma poção pronta a um jogador deste servidor",
+              "arguments": {
+                "target": { "name": "jogador", "description": "Jogador que recebe" },
+                "item": { "name": "item", "description": "frasco, acucar, blaze, forca, velocidade ou berserker" },
+                "amount": { "name": "quantidade", "description": "Quantos itens. As poções saem agrupadas num espaço só, até 64" },
+                "level": { "name": "nível", "description": "O nível da poção, 1 ou 2. Sem ele, 1" },
+                "seconds": { "name": "segundos", "description": "A duração da poção. Sem ela, 90" }
+              },
+              "amount": "&cQuantidade inválida. Use um número inteiro de 1 a {max}!",
+              "level": "&cNível inválido. Use 1 para a poção I ou 2 para a poção II.",
+              "seconds": "&cDuração inválida. Use um número inteiro de 1 a {max} segundos!",
+              "potion-only": "&cO nível e os segundos só valem para as poções (forca, velocidade ou berserker).",
+              // O nome da poção com o nível, como sai no {item} das duas mensagens de baixo ("Poções de Força II").
+              "potion": "{potion} {level}",
+              "elsewhere": "&c{target_name_with_color} &cnão está neste servidor. O item é entregue no servidor onde o jogador está.",
+              "full": "&cO inventário de {target_name_with_color} &cnão tem espaço para &e{item} &7[&f{amount}x&7]&c, e nada foi entregue.",
+              "given": "&aEntregado &e{item} &7[&f{amount}x&7] &aao jogador {target_name_with_color}",
+              "received": "&aRecebido &e{item} &7[&f{amount}x&7] &acom sucesso!"
+            }
+          }
+        }
+      }
+    }
+  }
+}

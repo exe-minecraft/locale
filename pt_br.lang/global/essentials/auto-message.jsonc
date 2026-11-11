@@ -14,6 +14,15 @@
             " &fPegue a sua com &a/enxada&f, ou clicando &a&lAQUI&f.",
             ""
           ],
+          // A dica das poções do rankup, em que o AQUI roda o /pocoes. Espera o automessage do rankup, como a da enxada.
+          "pocoes-rankup": [
+            "",
+            "&5&l POÇÕES: &fO Explorador da pá e da enxada acha o Frasco",
+            " &fsem efeito e os ingredientes de poção. Arraste um",
+            " &fingrediente até o frasco para fabricar. Veja o que a sua",
+            " &fAlquimista faz no &a/pocoes&f, ou clicando &a&lAQUI&f.",
+            ""
+          ],
           // A dica do Armazém do rankup, em que o AQUI roda o /armazem. Espera o automessage do rankup, como a da enxada.
           "armazem-rankup": [
             "",
