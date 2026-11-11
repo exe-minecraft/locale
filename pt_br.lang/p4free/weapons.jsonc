@@ -143,6 +143,7 @@
         "already-max-level": "Este encantamento já está no nível máximo.",
         "prestige-required": "Este encantamento pede prestígio {prestige}.",
         "not-enough": "Você não tem {currency} suficientes.",
+        "charge-failed": "Não deu para confirmar a cobrança, e nada mudou na arma. Se o valor saiu da sua conta, ele volta sozinho.",
         "enchant-bought": "&a{enchant} &fsubiu para o nível &a{level}&f.",
         "already-repaired": "Esta arma não precisa de conserto.",
         "repaired": "Arma consertada.",

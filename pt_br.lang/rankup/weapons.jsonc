@@ -15,6 +15,7 @@
           "already-max-level": "Este encantamento já está no nível máximo.",
           "prestige-required": "Este encantamento pede prestígio {prestige}.",
           "not-enough": "Você não tem {currency} suficientes.",
+          "charge-failed": "Não deu para confirmar a cobrança, e nada mudou na enxada. Se o valor saiu da sua conta, ele volta sozinho.",
           "not-enough-items": "Você precisa de {amount} {item} no inventário para consertar a enxada.",
           "not-purchasable": "Este encantamento não pode ser comprado.",
           "enchant-bought": "&bParabéns! &fO encantamento &6{enchant} &fsubiu para o nível &6{level}&f.",
@@ -521,6 +522,7 @@
           "already-max-level": "Este encantamento já está no nível máximo.",
           "prestige-required": "Este encantamento pede prestígio {prestige}.",
           "not-enough": "Você não tem {currency} suficientes.",
+          "charge-failed": "Não deu para confirmar a cobrança, e nada mudou na pá. Se o valor saiu da sua conta, ele volta sozinho.",
           // O conserto pago com itens do inventário: "Você precisa de 5 diamantes".
           "not-enough-items": "Você precisa de {amount} {item} no inventário para consertar a pá.",
           "enchant-bought": "&bParabéns! &fO encantamento &6{enchant} &fsubiu para o nível &6{level}&f.",
@@ -1093,6 +1095,7 @@
         "already-max-level": "Este encantamento já está no nível máximo.",
         "prestige-required": "Este encantamento pede prestígio {prestige}.",
         "not-enough": "Você não tem {currency} suficientes.",
+        "charge-failed": "Não deu para confirmar a cobrança, e nada mudou na arma. Se o valor saiu da sua conta, ele volta sozinho.",
         // O conserto pago com itens do inventário (repair-item no config), que a espada e o machado não usam hoje.
         "not-enough-items": "Você precisa de {amount} {item} no inventário para consertar a arma.",
         "enchant-bought": "&a{enchant} &fsubiu para o nível &a{level}&f.",
