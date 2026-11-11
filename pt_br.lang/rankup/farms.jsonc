@@ -136,17 +136,17 @@
             ]
           }
         },
-        // O Aumento de Armazém, que era o Capacitor do rankup antigo.
+        // O Limite de Armazém, que era o Capacitor do rankup antigo. O nome e a descrição são os do pedido do dono de
+        // 11/11. O {amount} é o quanto o item soma ao limite, e é o botão direito que o ativa.
         "capacity": {
-          "display-name": "Aumento de Armazém",
-          "name": "&6Aumento de Armazém",
+          "display-name": "Limite de Armazém",
+          "name": "&aLimite de Armazém &7[&f+{amount}&7]",
           "lore": [
-            "&7Use este item para aumentar a",
-            "&7capacidade do seu armazém.",
-            "",
-            "&f Aumento: &a+{amount}",
-            "",
-            "&aUse o botão direito para ativar."
+            "&7Use esse item para aumentar o limite",
+            "&7de armazenamento do seu armazém.",
+            "&7",
+            "&eClique para ativar!",
+            "&8(Ação Irreversível)"
           ],
           "messages": {
             "used": "&aA capacidade do seu armazém aumentou em {amount}. &eNovo limite: {capacity}.",
@@ -444,9 +444,11 @@
               "arguments": {
                 "target": { "name": "jogador", "description": "Jogador que recebe" },
                 "item": { "name": "item", "description": "fungo, cana, cacto, cenoura ou aumento" },
-                "amount": { "name": "quantidade", "description": "Quantos itens" }
+                "amount": { "name": "quantidade", "description": "Quantos itens" },
+                "value": { "name": "valor", "description": "Quanto cada limite de armazém soma. Sem ele, o item soma o padrão" }
               },
               "amount": "&cQuantidade inválida. Use um número inteiro de 1 a {max}!",
+              "value": "&cValor inválido. Só o limite de armazém leva valor, e ele é um número inteiro de 1 a {max}!",
               "elsewhere": "&c{target_name_with_color} &cnão está neste servidor. O item é entregue no servidor onde o jogador está.",
               "full": "&cO inventário de {target_name_with_color} &cnão tem espaço para &e{item} &7[&f{amount}x&7]&c, e nada foi entregue.",
               "given": "&aEntregado &e{item} &7[&f{amount}x&7] &aao jogador {target_name_with_color}",
