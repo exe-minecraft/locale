@@ -1138,20 +1138,6 @@
             "&7Use este item para fabricar os spawners!"
           ]
         },
-        "empty-flask": {
-          "name": "&bFrasco sem efeito",
-          "lore": [
-            "&7Arraste açúcar ou pó de blaze até",
-            "&7este frasco para fabricar poções."
-          ]
-        },
-        "potion-sugar": {
-          "name": "&fAçúcar para poção",
-          "lore": [
-            "&7Arraste este açúcar até um frasco",
-            "&7sem efeito para fabricar poções."
-          ]
-        },
         // O disco era para vender na loja do exe-rankup, que o rankup novo ainda não tem.
         "record": {
           "name": "&bDisco de Música",
