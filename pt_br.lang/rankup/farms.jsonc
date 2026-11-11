@@ -462,7 +462,7 @@
               },
               "amount": "&cValor inválido. Use um número inteiro de 0 a {max}!",
               "failed": "&cNão deu para mexer no armazém de {target_name_with_color} &cagora. Nada mudou.",
-              "success": "&aOs aumentos do armazém de {target_name_with_color} &aagora somam {bonus}. Capacidade: {capacity}."
+              "success": "&aOs aumentos do armazém de {target_name_with_color} &aagora somam {bonus} (antes somavam {previous}). Capacidade: {capacity}."
             },
             "reset": {
               "description": "esvaziar os drops do armazém de um jogador",
