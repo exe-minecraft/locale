@@ -33,6 +33,7 @@
         "cactus-harvests-itself": "&cO cacto entrega sozinho no armazém, sem colheita. Para retirar um cacto, quebre o bloco de baixo dele.",
         "storage-loading": "&cO armazém deste terreno ainda está carregando. Tente de novo em instantes.",
         "only-plantables": "&cSó os plantáveis podem ser plantados num terreno. O item comum não cresce aqui.",
+        "plantable-creative": "&cO plantável não se planta no modo criativo. Volte à sobrevivência para plantar.",
         "one-per-column": "&cCada plantação ocupa uma coluna. Plante esta ao lado, e não em cima de outra.",
         "storage-unavailable": "&cNão deu para carregar o armazém agora. Tente de novo em instantes.",
         "not-allowed": "&cVocê não tem permissão para abrir este armazém.",

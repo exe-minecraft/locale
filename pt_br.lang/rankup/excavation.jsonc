@@ -91,6 +91,8 @@
         // Baús, fornalhas, funis, molduras, suportes de armadura e carrinhos com baú: guardariam o saque fora da queda
         // na saída e da morte.
         "storage": "Você não pode guardar itens fora do inventário no mundo de escavação.",
+        // O item da rede com lote (o plantável das plantações, por exemplo) viraria um bloco comum aqui.
+        "tracked-item": "Este item não pode ser colocado no mundo de escavação.",
         // O resumo do que se escavou, quando o jogador para por uns segundos.
         "earnings": [
           "",
