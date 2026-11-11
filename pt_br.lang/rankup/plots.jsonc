@@ -320,7 +320,7 @@
             },
             "storage": {
               "name": "&eArmazém",
-              "lore": ["&7", "&7 O armazém guarda todos", "&7 os drops de plantações!", "&7", "&eClique para acessar o armazém!"]
+              "lore": ["&7", "&7 O armazém guarda os drops", "&7 dos seus cactos!", "&7", "&eClique para acessar o armazém!"]
             }
           }
         },

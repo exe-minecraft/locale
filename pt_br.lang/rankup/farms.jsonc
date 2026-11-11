@@ -13,11 +13,9 @@
         "trusted": "Confiável",
         "added": "Adicionado"
       },
+      // O nome do que entra no armazém, para o ícone dele no menu. Só o cacto entra.
       "crops": {
-        "wart": { "name": "Fungo" },
-        "cane": { "name": "Cana" },
-        "cactus": { "name": "Cacto" },
-        "carrot": { "name": "Cenoura" }
+        "cactus": { "name": "Cacto" }
       },
       // As duas vantagens do Armazém que se compram com cash, como aparecem nas mensagens da compra.
       "features": {
@@ -31,29 +29,22 @@
         // A plantação nunca sai pela quebra. Sem a enxada o jogador lê como se colhe e como se retira.
         "need-hoe": "&cVocê precisa da Enxada Especial para colher plantações (/enxada). Para retirar uma plantação, quebre o bloco de baixo dela.",
         "cactus-harvests-itself": "&cO cacto entrega sozinho no armazém, sem colheita. Para retirar um cacto, quebre o bloco de baixo dele.",
-        "storage-loading": "&cO armazém deste terreno ainda está carregando. Tente de novo em instantes.",
+        // O que se colhe com a enxada vai ao inventário de quem colheu, e o que não cabe cai na planta colhida.
+        "inventory-full": "&cSeu inventário está cheio. O que não coube da colheita caiu no chão.",
         "only-plantables": "&cSó os plantáveis podem ser plantados num terreno. O item comum não cresce aqui.",
         "plantable-creative": "&cO plantável não se planta no modo criativo. Volte à sobrevivência para plantar.",
         "one-per-column": "&cCada plantação ocupa uma coluna. Plante esta ao lado, e não em cima de outra.",
         "storage-unavailable": "&cNão deu para carregar o armazém agora. Tente de novo em instantes.",
         "not-allowed": "&cVocê não tem permissão para abrir este armazém.",
         "members-not-allowed": "&cVocê não tem permissão para mexer nos membros deste armazém.",
-        // Os dois avisos de quem colhe. O "own" é o do dono do armazém, e o "other" é o de quem colhe no terreno de
-        // outro jogador. O cacto, que entrega sozinho, avisa o dono com o "own".
+        // Os dois avisos do armazém que enche. Só o cacto entra nele, e entrega sozinho, então quem lê é o dono, se
+        // estiver no servidor de terrenos. O "own" é do tempo em que quem colhia no terreno de outro lia um "other".
         "storage-almost-full": {
           "own": [
             "",
             "&a&l ARMAZÉM",
             "&f Seu armazém está com &c&l{percent}% &fda capacidade ocupada.",
-            "&f Libere espaço antes de seguir colhendo!",
-            ""
-          ],
-          "other": [
-            "",
-            "&a&l ARMAZÉM",
-            "&f O armazém do dono deste terreno está",
-            "&f com &c&l{percent}% &fda capacidade ocupada.",
-            "&f O que não couber nele se perde.",
+            "&f Venda os cactos para liberar espaço!",
             ""
           ]
         },
@@ -62,18 +53,11 @@
             "",
             "&a&l ARMAZÉM",
             "&c Seu armazém atingiu o limite ({capacity}).",
-            "&c O que você colher agora se perde até liberar espaço!",
-            ""
-          ],
-          "other": [
-            "",
-            "&a&l ARMAZÉM",
-            "&c O armazém do dono deste terreno atingiu o limite ({capacity}).",
-            "&c O que você colher agora se perde até ele liberar espaço!",
+            "&c O que os cactos entregarem agora se perde!",
             ""
           ]
         },
-        "sell-all-not-owned": "&cVocê ainda não tem o Vender Tudo. Venda uma plantação por vez, clicando nela.",
+        "sell-all-not-owned": "&cVocê ainda não tem o Vender Tudo. Venda clicando no ícone do cacto.",
         "sell-cooldown": "&cAguarde {time} para vender de novo.",
         "nothing-to-sell": "&cNão há nada para vender.",
         "sold": "&aVocê vendeu {amount} {unit} por {value}&a.",
@@ -111,7 +95,7 @@
             "lore": [
               "&7Plante na areia das almas do seu terreno.",
               "&7Ele cresce sozinho, e maduro é colhido com",
-              "&7a Enxada Especial, direto para o armazém.",
+              "&7a Enxada Especial, direto para o inventário.",
               "",
               "&7Para retirar, quebre o bloco de baixo."
             ]
@@ -123,7 +107,7 @@
               "&7Plante na terra, na grama ou na areia do",
               "&7seu terreno, com água ao lado. Ela cresce",
               "&7sozinha, e com três de altura é colhida com",
-              "&7a Enxada Especial, direto para o armazém.",
+              "&7a Enxada Especial, direto para o inventário.",
               "",
               "&7Para retirar, quebre o bloco de baixo."
             ]
@@ -146,7 +130,7 @@
             "lore": [
               "&7Plante na terra lavrada do seu terreno.",
               "&7Ela cresce sozinha, e madura é colhida com",
-              "&7a Enxada Especial, direto para o armazém.",
+              "&7a Enxada Especial, direto para o inventário.",
               "",
               "&7Para retirar, quebre o bloco de baixo."
             ]
@@ -200,7 +184,8 @@
                 ]
               }
             },
-            // Uma plantação. A última parte do ícone é a "action", que diz o que o clique faz agora.
+            // O cacto, a única plantação que entra no armazém. A última parte do ícone é a "action", que diz o que o
+            // clique faz agora.
             "crop": {
               "name": "&2{crop}",
               "lore": [
@@ -212,8 +197,8 @@
                 "&7",
                 "{action}"
               ],
-              // O "sell" é a venda com limite e espera, e o "sell-all", a do dono que tem o Vender Tudo, que leva a
-              // plantação inteira.
+              // O "sell" é a venda com limite e espera, e o "sell-all", a do dono que tem o Vender Tudo, que leva
+              // tudo o que há.
               "actions": {
                 "sell": [
                   "&7Clique com o &fbotão esquerdo &7para",
@@ -224,7 +209,7 @@
                   "&7vender tudo (&f{sale_amount}&7) por {sale_value}&7!"
                 ],
                 "empty": [
-                  "&cNão há nada desta plantação para vender."
+                  "&cNão há cactos para vender."
                 ],
                 "cooldown": [
                   "&cAguarde {time} para vender de novo."
@@ -279,15 +264,15 @@
                 "lore": [
                   "&7O dono deste armazém vende todos",
                   "&7os drops com um toque. Aqui você",
-                  "&7vende uma plantação por vez."
+                  "&7vende com o limite de cada venda."
                 ]
               },
               "owner-only": {
                 "name": "&aVender Tudo",
                 "lore": [
                   "&7Só o dono adquire o Vender Tudo.",
-                  "&7Aqui você vende uma plantação",
-                  "&7por vez."
+                  "&7Aqui você vende com o limite",
+                  "&7de cada venda."
                 ]
               }
             },
@@ -428,7 +413,7 @@
       },
       "commands": {
         "storage": {
-          "description": "abrir o seu armazém de plantações",
+          "description": "abrir o armazém dos seus cactos",
           "usage": {
             "menu": { "syntax": "", "description": "abrir o seu armazém" }
           },
