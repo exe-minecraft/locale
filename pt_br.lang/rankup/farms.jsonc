@@ -86,7 +86,8 @@
           "owned": "&cSeu armazém já tem &f{feature}&c. Nada foi cobrado.",
           "busy": "&cJá há uma compra de &f{feature} &cem andamento. Aguarde ela terminar.",
           "processing": "&eA compra de &f{feature} &eestá sendo confirmada. Se o cash saiu, a vantagem chega em instantes.",
-          "failed": "&cA compra de &f{feature} &cnão foi feita, e nada foi cobrado."
+          "failed": "&cA compra de &f{feature} &cnão foi feita, e nada foi cobrado.",
+          "price-changed": "&cO preço de &f{feature} &cmudou enquanto você confirmava, e nada foi cobrado. Abra o menu de novo para ver o valor."
         },
         "member-is-owner": "&c{target_name_with_color} &cé o dono deste armazém.",
         "member-none": "&a{target_name_with_color} &aentrou na lista do seu armazém, ainda sem permissão. Clique na cabeça dele para mudar.",
