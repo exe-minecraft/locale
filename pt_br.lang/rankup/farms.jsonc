@@ -139,7 +139,7 @@
         // O Limite de Armazém, que era o Capacitor do rankup antigo. O nome e a descrição são os do pedido do dono de
         // 11/11. O {amount} é o quanto o item soma ao limite, e é o botão direito que o ativa.
         "capacity": {
-          "display-name": "Limite de Armazém",
+          "display-name": "Limite de Armazém +{amount}",
           "name": "&aLimite de Armazém &7[&f+{amount}&7]",
           "lore": [
             "&7Use esse item para aumentar o limite",
@@ -440,10 +440,10 @@
           "admin": {
             "description": "comandos da equipe para o armazém e os itens das plantações",
             "item": {
-              "description": "entregar um plantável ou um aumento de armazém a um jogador deste servidor",
+              "description": "entregar um plantável ou um limite de armazém a um jogador deste servidor",
               "arguments": {
                 "target": { "name": "jogador", "description": "Jogador que recebe" },
-                "item": { "name": "item", "description": "fungo, cana, cacto, cenoura ou aumento" },
+                "item": { "name": "item", "description": "fungo, cana, cacto, cenoura ou limite" },
                 "amount": { "name": "quantidade", "description": "Quantos itens" },
                 "value": { "name": "valor", "description": "Quanto cada limite de armazém soma. Sem ele, o item soma o padrão" }
               },
