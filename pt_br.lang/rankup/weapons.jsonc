@@ -109,6 +109,7 @@
                   "",
                   "{enchant_shop}",
                   "&fBotão Esquerdo: &aEvoluir",
+                  "{enchant_attribute}",
                   "{enchant_drops}"
                 ]
               },
@@ -132,6 +133,7 @@
                   "",
                   "{enchant_shop}",
                   "&cVocê não tem saldo suficiente!",
+                  "{enchant_attribute}",
                   "{enchant_drops}"
                 ]
               },
@@ -235,7 +237,8 @@
                   "",
                   "{enchant_levels}",
                   "&aUpgrade VIP disponível!",
-                  "&eClique para adquirir de graça."
+                  "&eClique para adquirir de graça.",
+                  "{enchant_attribute}"
                 ]
               },
               // Os atributos, a segunda forma de evoluir a enxada. De quantos em quantos níveis ela ganha um
