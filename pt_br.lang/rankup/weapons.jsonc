@@ -19,6 +19,10 @@
           "not-purchasable": "Este encantamento não pode ser comprado.",
           "enchant-bought": "&bParabéns! &fO encantamento &6{enchant} &fsubiu para o nível &6{level}&f.",
           "free-upgrade": "&aParabéns! &f{enchant} &asubiu para o nível &f{level}&a de graça, pelo seu grupo.",
+          "attribute-spent": "&bParabéns! &fO encantamento &6{enchant} &fsubiu para o nível &6{level}&f com um atributo.",
+          "attribute-not-accepted": "Este encantamento não sobe com atributo.",
+          "no-attributes": "Sua enxada não tem atributo para gastar. O próximo chega no nível {level} dela.",
+          "no-attributes-maximum": "Sua enxada não tem atributo para gastar, e já ganhou todos os que podia.",
           "already-repaired": "Sua enxada não precisa de conserto.",
           "repaired": "Sua enxada foi consertada.",
           "cannot-drop": "Você não pode largar a Enxada Especial no chão.",
@@ -83,6 +87,15 @@
             "drops": [
               "&fBotão Direito: &eVer chances"
             ],
+            // O {enchant_attribute} só aparece quando a enxada tem atributo para gastar e o encantamento aceita.
+            "attribute": [
+              "&fShift + Botão Esquerdo: &bUsar atributo &7({attributes})"
+            ],
+            // O {attributes_next} do ícone dos atributos: o nível em que chega o próximo, ou que não há mais.
+            "attributes-next": {
+              "level": "no nível {level}",
+              "maximum": "todos já ganhos"
+            },
             "title": "{weapon_name}",
             "items": {
               "0": {
@@ -222,6 +235,24 @@
                   "{enchant_levels}",
                   "&aUpgrade VIP disponível!",
                   "&eClique para adquirir de graça."
+                ]
+              },
+              // Os atributos, a segunda forma de evoluir a enxada. De quantos em quantos níveis ela ganha um
+              // fica no config (attributes), e por isso o texto não diz o número.
+              "attributes": {
+                "name": "&bAtributos",
+                "lore": [
+                  "&7Sua enxada ganha atributos conforme",
+                  "&7sobe de nível. Cada atributo sobe um",
+                  "&7nível de um encantamento à sua",
+                  "&7escolha, sem gastar tokens.",
+                  "",
+                  "&f Disponíveis: &b{attributes_available}",
+                  "&f Usados: &7{attributes_spent}",
+                  "&f Próximo: &e{attributes_next}",
+                  "",
+                  "&7Use com &fShift + Botão Esquerdo",
+                  "&7no encantamento que você quer."
                 ]
               },
               "12": {
@@ -408,7 +439,8 @@
               "menu": "o menu da enxada",
               "book": "um livro de encantamento",
               "free": "o upgrade do grupo",
-              "toggle": "o interruptor do menu"
+              "toggle": "o interruptor do menu",
+              "attribute": "um atributo da enxada"
             },
             "retrieve": {
               "created": "&aEnxada nova, sem registro anterior.",
@@ -1092,8 +1124,8 @@
       // Os itens que os encantamentos de achado dão (drops no config). O {rarity} é a raridade
       // de cada um, com a cor dela.
       "drops": {
-        // Os achados do Explorador da enxada, do baú "Items explorador" do Kekitoox. O terceiro de lá, o Açúcar
-        // para poção, é da cana, e entra quando a enxada colher cana.
+        // Os achados do Explorador da enxada, do baú "Items explorador" do Kekitoox. O Açúcar para poção é o
+        // item especial da cana, e brilha como o do baú.
         "cage": {
           "name": "&8Gaiola",
           "lore": [
@@ -1105,6 +1137,13 @@
           "lore": [
             "&7Arraste açúcar ou pó de blaze até",
             "&7este frasco para fabricar poções."
+          ]
+        },
+        "potion-sugar": {
+          "name": "&fAçúcar para poção",
+          "lore": [
+            "&7Arraste este açúcar até um frasco",
+            "&7sem efeito para fabricar poções."
           ]
         },
         // O disco era para vender na loja do exe-rankup, que o rankup novo ainda não tem.
@@ -1490,6 +1529,7 @@
               "carrot": "Cenoura",
               "potato": "Batata",
               "nether_warts": "Fungo do Nether",
+              "sugar_cane_block": "Cana",
               "sand": "Areia",
               "dirt": "Terra",
               "snow_block": "Neve"

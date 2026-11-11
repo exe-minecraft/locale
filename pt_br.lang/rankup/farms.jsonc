@@ -1,0 +1,489 @@
+// As plantações e o Armazém do rankup (11/11/2026). O menu do Armazém segue os baús "Menu Armazem" do terreno do
+// Kekitoox (rankup-plots-1, -57 e -56, 65, -48), com o texto no padrão da casa. As texturas das cabeças ficam no
+// plugin (StorageView), e os números (tempo, preço, limite) no config.yml dele.
+{
+  "plugins": {
+    "farms": {
+      "units": {
+        "item": { "singular": "item", "plural": "itens" },
+        "player": { "singular": "jogador", "plural": "jogadores" }
+      },
+      "roles": {
+        "none": "Nenhuma",
+        "trusted": "Confiável",
+        "added": "Adicionado"
+      },
+      "crops": {
+        "wart": { "name": "Fungo" },
+        "cane": { "name": "Cana" },
+        "cactus": { "name": "Cacto" },
+        "carrot": { "name": "Cenoura" }
+      },
+      // As duas vantagens do Armazém que se compram com cash, como aparecem nas mensagens da compra.
+      "features": {
+        "sell-all": "Vender Tudo",
+        "farmer": "Fazendeiro"
+      },
+      "prompts": {
+        "player": "Digite o nick do jogador."
+      },
+      "messages": {
+        // A plantação nunca sai pela quebra. Sem a enxada o jogador lê como se colhe e como se retira.
+        "need-hoe": "&cVocê precisa da Enxada Especial para colher plantações (/enxada). Para retirar uma plantação, quebre o bloco de baixo dela.",
+        "cactus-harvests-itself": "&cO cacto entrega sozinho no armazém, sem colheita. Para retirar um cacto, quebre o bloco de baixo dele.",
+        "storage-loading": "&cO armazém deste terreno ainda está carregando. Tente de novo em instantes.",
+        "only-plantables": "&cSó os plantáveis podem ser plantados num terreno. O item comum não cresce aqui.",
+        "one-per-column": "&cCada plantação ocupa uma coluna. Plante esta ao lado, e não em cima de outra.",
+        "storage-unavailable": "&cNão deu para carregar o armazém agora. Tente de novo em instantes.",
+        "not-allowed": "&cVocê não tem permissão para abrir este armazém.",
+        "members-not-allowed": "&cVocê não tem permissão para mexer nos membros deste armazém.",
+        // Os dois avisos de quem colhe. O "own" é o do dono do armazém, e o "other" é o de quem colhe no terreno de
+        // outro jogador. O cacto, que entrega sozinho, avisa o dono com o "own".
+        "storage-almost-full": {
+          "own": [
+            "",
+            "&a&l ARMAZÉM",
+            "&f Seu armazém está com &c&l{percent}% &fda capacidade ocupada.",
+            "&f Libere espaço antes de seguir colhendo!",
+            ""
+          ],
+          "other": [
+            "",
+            "&a&l ARMAZÉM",
+            "&f O armazém do dono deste terreno está",
+            "&f com &c&l{percent}% &fda capacidade ocupada.",
+            "&f O que não couber nele se perde.",
+            ""
+          ]
+        },
+        "storage-full": {
+          "own": [
+            "",
+            "&a&l ARMAZÉM",
+            "&c Seu armazém atingiu o limite ({capacity}).",
+            "&c O que você colher agora se perde até liberar espaço!",
+            ""
+          ],
+          "other": [
+            "",
+            "&a&l ARMAZÉM",
+            "&c O armazém do dono deste terreno atingiu o limite ({capacity}).",
+            "&c O que você colher agora se perde até ele liberar espaço!",
+            ""
+          ]
+        },
+        "sell-all-not-owned": "&cVocê ainda não tem o Vender Tudo. Venda uma plantação por vez, clicando nela.",
+        "sell-cooldown": "&cAguarde {time} para vender de novo.",
+        "nothing-to-sell": "&cNão há nada para vender.",
+        "sold": "&aVocê vendeu {amount} {unit} por {value}&a.",
+        "sold-processing": "&eA venda de {amount} {unit} foi feita. O pagamento de {value} &echega em instantes.",
+        "sale-failed": "&cA venda não foi feita, e nada saiu do armazém. Tente de novo em instantes.",
+        "farmer-sold": "&eO Fazendeiro vendeu {amount} {unit} do seu armazém por {value}&e.",
+        "purchase": {
+          "restarting": "&cO servidor vai reiniciar. Faça a compra depois que ele voltar.",
+          "bought": "&aCompra feita! Agora o seu armazém tem &f{feature}&a.",
+          "not-enough": "&cVocê não tem cash suficiente para adquirir &f{feature}&c.",
+          "owned": "&cSeu armazém já tem &f{feature}&c. Nada foi cobrado.",
+          "busy": "&cJá há uma compra de &f{feature} &cem andamento. Aguarde ela terminar.",
+          "processing": "&eA compra de &f{feature} &eestá sendo confirmada. Se o cash saiu, a vantagem chega em instantes.",
+          "failed": "&cA compra de &f{feature} &cnão foi feita, e nada foi cobrado."
+        },
+        "member-is-owner": "&c{target_name_with_color} &cé o dono deste armazém.",
+        "member-none": "&a{target_name_with_color} &aentrou na lista do seu armazém, ainda sem permissão. Clique na cabeça dele para mudar.",
+        "member-trusted": "&a{target_name_with_color} &aagora é confiável no seu armazém, e pode abrir, vender e adicionar jogadores.",
+        "member-added": "&a{target_name_with_color} &aagora pode abrir este armazém e vender dele.",
+        "member-already": "&c{target_name_with_color} &cjá está na lista deste armazém.",
+        "member-unchanged": "&c{target_name_with_color} &cjá está com a permissão {role} &cneste armazém.",
+        "members-full": "&cA lista deste armazém já tem {max} {unit}, que é o máximo.",
+        "member-not-listed": "&c{target_name_with_color} &cnão está na lista do seu armazém.",
+        "member-removed": "&a{target_name_with_color} &asaiu da lista do seu armazém.",
+        "unknown-item": "&c\"{item}\" não é um item das plantações. Os itens são {items}."
+      },
+      "items": {
+        // Os quatro plantáveis. São o item do jogo com a marca do item custom, brilhando, e só eles viram planta
+        // num terreno.
+        "plantable": {
+          "wart": {
+            "display-name": "Fungo Plantável",
+            "name": "&cFungo Plantável",
+            "lore": [
+              "&7Plante na areia das almas do seu terreno.",
+              "&7Ele cresce sozinho, e maduro é colhido com",
+              "&7a Enxada Especial, direto para o armazém.",
+              "",
+              "&7Para retirar, quebre o bloco de baixo."
+            ]
+          },
+          "cane": {
+            "display-name": "Cana Plantável",
+            "name": "&aCana Plantável",
+            "lore": [
+              "&7Plante na terra, na grama ou na areia do",
+              "&7seu terreno, com água ao lado. Ela cresce",
+              "&7sozinha, e com três de altura é colhida com",
+              "&7a Enxada Especial, direto para o armazém.",
+              "",
+              "&7Para retirar, quebre o bloco de baixo."
+            ]
+          },
+          "cactus": {
+            "display-name": "Cacto Plantável",
+            "name": "&2Cacto Plantável",
+            "lore": [
+              "&7Plante na areia do seu terreno, sem bloco",
+              "&7ao lado e com ar em cima. Ele entrega",
+              "&7sozinho no armazém enquanto alguém do",
+              "&7terreno está nele, sem colheita.",
+              "",
+              "&7Para retirar, quebre o bloco de baixo."
+            ]
+          },
+          "carrot": {
+            "display-name": "Cenoura Plantável",
+            "name": "&6Cenoura Plantável",
+            "lore": [
+              "&7Plante na terra lavrada do seu terreno.",
+              "&7Ela cresce sozinha, e madura é colhida com",
+              "&7a Enxada Especial, direto para o armazém.",
+              "",
+              "&7Para retirar, quebre o bloco de baixo."
+            ]
+          }
+        },
+        // O Aumento de Armazém, que era o Capacitor do rankup antigo.
+        "capacity": {
+          "display-name": "Aumento de Armazém",
+          "name": "&6Aumento de Armazém",
+          "lore": [
+            "&7Use este item para aumentar a",
+            "&7capacidade do seu armazém.",
+            "",
+            "&f Aumento: &a+{amount}",
+            "",
+            "&aUse o botão direito para ativar."
+          ],
+          "messages": {
+            "used": "&aA capacidade do seu armazém aumentou em {amount}. &eNovo limite: {capacity}.",
+            "maximum": "&cSeu armazém já está na capacidade máxima ({capacity})."
+          }
+        }
+      },
+      "views": {
+        "storage": {
+          "title": "Armazém de {owner_name}",
+          "items": {
+            // A cabeça do dono. O "manage" é de quem mexe nos membros (o dono e o Confiável), e o "view", de quem só
+            // abre e vende (o Adicionado).
+            "owner": {
+              "manage": {
+                "name": "&2Armazém de {owner_name_with_color}",
+                "lore": [
+                  "&7",
+                  "&7 Adicionados: &f{members}",
+                  "&7 Drops: &f{drops}",
+                  "&7 Limite: &f{capacity} &a({percent}%)",
+                  "&7",
+                  "&aClique para gerenciar os membros!"
+                ]
+              },
+              "view": {
+                "name": "&2Armazém de {owner_name_with_color}",
+                "lore": [
+                  "&7",
+                  "&7 Adicionados: &f{members}",
+                  "&7 Drops: &f{drops}",
+                  "&7 Limite: &f{capacity} &a({percent}%)",
+                  "&7",
+                  "&cSem permissão para gerenciar!"
+                ]
+              }
+            },
+            // Uma plantação. A última parte do ícone é a "action", que diz o que o clique faz agora.
+            "crop": {
+              "name": "&2{crop}",
+              "lore": [
+                "&7",
+                "&7 Quantidade: &f&l{amount}",
+                "&7 Unidade: {unit_price}",
+                "&7 Total: {total_price}",
+                "&7 Velocidade: &b{speed}% &7({growth_time})",
+                "&7",
+                "{action}"
+              ],
+              // O "sell" é a venda com limite e espera, e o "sell-all", a do dono que tem o Vender Tudo, que leva a
+              // plantação inteira.
+              "actions": {
+                "sell": [
+                  "&7Clique com o &fbotão esquerdo &7para",
+                  "&7vender &f{sale_amount} &7por {sale_value}&7!"
+                ],
+                "sell-all": [
+                  "&7Clique com o &fbotão esquerdo &7para",
+                  "&7vender tudo (&f{sale_amount}&7) por {sale_value}&7!"
+                ],
+                "empty": [
+                  "&cNão há nada desta plantação para vender."
+                ],
+                "cooldown": [
+                  "&cAguarde {time} para vender de novo."
+                ]
+              }
+            },
+            // O bloco da loja, o padrão dos menus que vendem com cash.
+            "shop": [
+              "&e Adquira &f&lCASH&e e outros",
+              "&e produtos em nossa loja!",
+              "&e Acesse &floja.rede-exe.com",
+              ""
+            ],
+            // O Vender Tudo. O "owner-has" e o "owner-only" são os de quem está no armazém de outro jogador, com o dono
+            // tendo a vantagem ou não.
+            "sell-all": {
+              "owned": {
+                "name": "&aVender Tudo",
+                "lore": [
+                  "&7Com esta opção você vende todos",
+                  "&7os seus drops com um toque!",
+                  "&7",
+                  "&aClique para vender tudo!"
+                ]
+              },
+              "buy": {
+                "name": "&aVender Tudo",
+                "lore": [
+                  "&7Com esta opção você vende todos",
+                  "&7os seus drops com um toque!",
+                  "&7",
+                  "&f Preço: &6{price} ✪",
+                  "&7",
+                  "{shop}",
+                  "&aClique para adquirir!"
+                ]
+              },
+              "not-enough": {
+                "name": "&aVender Tudo",
+                "lore": [
+                  "&7Com esta opção você vende todos",
+                  "&7os seus drops com um toque!",
+                  "&7",
+                  "&f Preço: &6{price} ✪",
+                  "&7",
+                  "{shop}",
+                  "&cVocê não tem saldo suficiente!"
+                ]
+              },
+              "owner-has": {
+                "name": "&aVender Tudo",
+                "lore": [
+                  "&7O dono deste armazém vende todos",
+                  "&7os drops com um toque. Aqui você",
+                  "&7vende uma plantação por vez."
+                ]
+              },
+              "owner-only": {
+                "name": "&aVender Tudo",
+                "lore": [
+                  "&7Só o dono adquire o Vender Tudo.",
+                  "&7Aqui você vende uma plantação",
+                  "&7por vez."
+                ]
+              }
+            },
+            // O Fazendeiro, o vendedor automático. O "soon" e os "modes" são pedaços das linhas do "owned" e do
+            // "owner-has".
+            "farmer": {
+              "soon": "em instantes",
+              "modes": {
+                "limited": "no máximo {farmer_limit} por venda",
+                "all": "o armazém inteiro"
+              },
+              "owned": {
+                "name": "&eFazendeiro",
+                "lore": [
+                  "&7O Fazendeiro vende os drops do",
+                  "&7armazém sozinho, de tempos em tempos.",
+                  "&7",
+                  "&f Vende: &7{farmer_mode}",
+                  "&f A cada: &7{farmer_every}",
+                  "&f Próxima venda: &7{farmer_next}",
+                  "&7",
+                  "&aO Fazendeiro já trabalha para você!"
+                ]
+              },
+              "buy": {
+                "name": "&eFazendeiro",
+                "lore": [
+                  "&7Contrate o Fazendeiro para que ele",
+                  "&7venda seus drops automaticamente.",
+                  "&7",
+                  "&f Preço: &6{price} ✪",
+                  "&7",
+                  "{shop}",
+                  "&aClique para adquirir!"
+                ]
+              },
+              "not-enough": {
+                "name": "&eFazendeiro",
+                "lore": [
+                  "&7Contrate o Fazendeiro para que ele",
+                  "&7venda seus drops automaticamente.",
+                  "&7",
+                  "&f Preço: &6{price} ✪",
+                  "&7",
+                  "{shop}",
+                  "&cVocê não tem saldo suficiente!"
+                ]
+              },
+              "owner-has": {
+                "name": "&eFazendeiro",
+                "lore": [
+                  "&7O Fazendeiro trabalha neste armazém",
+                  "&7e vende os drops sozinho, para o dono.",
+                  "&7",
+                  "&f Vende: &7{farmer_mode}",
+                  "&f A cada: &7{farmer_every}",
+                  "&f Próxima venda: &7{farmer_next}"
+                ]
+              },
+              "owner-only": {
+                "name": "&eFazendeiro",
+                "lore": [
+                  "&7Este armazém ainda não tem o",
+                  "&7Fazendeiro, que vende os drops",
+                  "&7sozinho. Só o dono o contrata."
+                ]
+              }
+            }
+          }
+        },
+        // A confirmação da compra, no molde da compra de terreno (o menu plots/purchase).
+        "purchase": {
+          "title": "Adquirir {feature}?",
+          "items": {
+            "sell-all": {
+              "name": "&aVender Tudo",
+              "lore": [
+                "&7",
+                "&7 Venda todos os drops do seu",
+                "&7 armazém com um toque, sem limite",
+                "&7 por venda e sem espera.",
+                "&7",
+                "&f Preço: &6{price} ✪"
+              ]
+            },
+            "farmer": {
+              "name": "&eFazendeiro",
+              "lore": [
+                "&7",
+                "&7 O Fazendeiro vende os drops do seu",
+                "&7 armazém sozinho, de tempos em tempos.",
+                "&7 Os tokens vão para você.",
+                "&7",
+                "&f Preço: &6{price} ✪"
+              ]
+            }
+          }
+        },
+        // A lista de membros, no molde da dos terrenos. O "member" é o que o dono vê, com os cliques, e o "listed", o
+        // que o Confiável vê, que só adiciona.
+        "members": {
+          "title": "Membros do Armazém",
+          "items": {
+            "add": {
+              "name": "&aAdicionar",
+              "lore": ["&7", "&7 Digite o nick no chat para pôr", "&7 um jogador na lista do armazém.", "&7", "&eClique para adicionar!"]
+            },
+            "member": {
+              "none": {
+                "name": "&f{target_name}",
+                "lore": ["&7", "&7 Permissão: &fNenhuma", "&7", "&fClique para alterar!", "&7Shift + Botão Esquerdo para remover."]
+              },
+              "trusted": {
+                "name": "&a{target_name}",
+                "lore": ["&7", "&7 Permissão: &aConfiável", "&7 Abre, vende e adiciona jogadores.", "&7", "&fClique para alterar!", "&7Shift + Botão Esquerdo para remover."]
+              },
+              "added": {
+                "name": "&e{target_name}",
+                "lore": ["&7", "&7 Permissão: &eAdicionado", "&7 Abre e vende.", "&7", "&fClique para alterar!", "&7Shift + Botão Esquerdo para remover."]
+              }
+            },
+            "listed": {
+              "none": {
+                "name": "&f{target_name}",
+                "lore": ["&7", "&7 Permissão: &fNenhuma"]
+              },
+              "trusted": {
+                "name": "&a{target_name}",
+                "lore": ["&7", "&7 Permissão: &aConfiável", "&7 Abre, vende e adiciona jogadores."]
+              },
+              "added": {
+                "name": "&e{target_name}",
+                "lore": ["&7", "&7 Permissão: &eAdicionado", "&7 Abre e vende."]
+              }
+            }
+          }
+        }
+      },
+      "commands": {
+        "storage": {
+          "description": "abrir o seu armazém de plantações",
+          "usage": {
+            "menu": { "syntax": "", "description": "abrir o seu armazém" }
+          },
+          "open": {
+            "description": "abrir o armazém de um jogador que pôs você na lista dele",
+            "arguments": { "target": { "name": "jogador", "description": "Dono do armazém" } }
+          },
+          "trust": {
+            "description": "deixar um jogador abrir, vender e adicionar outros no seu armazém",
+            "arguments": { "target": { "name": "jogador", "description": "Jogador de confiança" } }
+          },
+          "add": {
+            "description": "deixar um jogador abrir o seu armazém e vender dele",
+            "arguments": { "target": { "name": "jogador", "description": "Jogador que vai poder abrir e vender" } }
+          },
+          "remove": {
+            "description": "tirar um jogador da lista do seu armazém",
+            "arguments": { "target": { "name": "jogador", "description": "Jogador que sai da lista" } }
+          },
+          "members": {
+            "description": "abrir o menu dos membros do seu armazém"
+          },
+          "admin": {
+            "description": "comandos da equipe para o armazém e os itens das plantações",
+            "item": {
+              "description": "entregar um plantável ou um aumento de armazém a um jogador deste servidor",
+              "arguments": {
+                "target": { "name": "jogador", "description": "Jogador que recebe" },
+                "item": { "name": "item", "description": "fungo, cana, cacto, cenoura ou aumento" },
+                "amount": { "name": "quantidade", "description": "Quantos itens" }
+              },
+              "amount": "&cQuantidade inválida. Use um número inteiro de 1 a {max}!",
+              "elsewhere": "&c{target_name_with_color} &cnão está neste servidor. O item é entregue no servidor onde o jogador está.",
+              "full": "&cO inventário de {target_name_with_color} &cnão tem espaço para &e{item} &7[&f{amount}x&7]&c, e nada foi entregue.",
+              "given": "&aEntregado &e{item} &7[&f{amount}x&7] &aao jogador {target_name_with_color}",
+              "received": "&aRecebido &e{item} &7[&f{amount}x&7] &acom sucesso!"
+            },
+            "capacity": {
+              "description": "definir quanto os aumentos somam à capacidade do armazém de um jogador",
+              "arguments": {
+                "target": { "name": "jogador", "description": "Dono do armazém" },
+                "amount": { "name": "aumento", "description": "O total dos aumentos, por cima da capacidade inicial" }
+              },
+              "amount": "&cValor inválido. Use um número inteiro de 0 a {max}!",
+              "failed": "&cNão deu para mexer no armazém de {target_name_with_color} &cagora. Nada mudou.",
+              "success": "&aOs aumentos do armazém de {target_name_with_color} &aagora somam {bonus}. Capacidade: {capacity}."
+            },
+            "reset": {
+              "description": "esvaziar os drops do armazém de um jogador",
+              "arguments": { "target": { "name": "jogador", "description": "Dono do armazém" } },
+              "failed": "&cNão deu para esvaziar o armazém de {target_name_with_color} &cagora. Nada mudou.",
+              "success": "&aO armazém de {target_name_with_color} &afoi esvaziado. Drops retirados: {amount}.",
+              "nothing": "&cO armazém de {target_name_with_color} &cjá estava vazio."
+            }
+          }
+        }
+      }
+    }
+  }
+}

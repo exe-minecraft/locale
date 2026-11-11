@@ -128,6 +128,7 @@
         "cleaner-actionbar-failed": "&cNão foi possível salvar a sua escolha agora. Tente de novo em instantes.",
         "server-offline": "&cO servidor de terrenos está indisponível agora. Tente de novo daqui a pouco.",
         "storage-soon": "&eO armazém ainda está em construção e chega junto com as plantações.",
+        "storage-on-plots": "&cO armazém abre no servidor de terrenos. Vá até o seu terreno e use /armazem.",
         "no-plot": "&cVocê ainda não tem terreno. Use /plot para adquirir um.",
         "choose-plot": "&cVocê tem mais de um terreno. Entre no terreno que você quer, ou use o menu do /plot.",
         "no-such-plot": "&cVocê não tem o terreno #{index}. Você tem {count} {unit}.",

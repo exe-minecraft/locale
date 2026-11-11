@@ -14,6 +14,14 @@
             " &fPegue a sua com &a/enxada&f, ou clicando &a&lAQUI&f.",
             ""
           ],
+          // A dica do Armazém do rankup, em que o AQUI roda o /armazem. Espera o automessage do rankup, como a da enxada.
+          "armazem-rankup": [
+            "",
+            "&a&l ARMAZÉM: &fO que você colhe no seu terreno vai para o",
+            " &farmazém, e de lá você vende por tokens. Abra o seu",
+            " &fcom &a/armazem&f, ou clicando &a&lAQUI&f.",
+            ""
+          ],
           "vip": [
             "",
             "&6&l VIP: &fCom o &aSamurai&f ou o &4Imperial&f você ganha kit",
