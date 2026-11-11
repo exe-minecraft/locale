@@ -159,10 +159,11 @@
           "title": "Armazém de {owner_name}",
           "items": {
             // A cabeça do dono. O "manage" é de quem mexe nos membros (o dono e o Confiável), e o "view", de quem só
-            // abre e vende (o Adicionado).
+            // abre e vende (o Adicionado). O nome vai todo em verde, com o nick sem a cor do cargo, como a cabeça do
+            // baú de referência do Kekitoox (pedido do dono em 11/11).
             "owner": {
               "manage": {
-                "name": "&2Armazém de {owner_name_with_color}",
+                "name": "&2Armazém de {owner_name}",
                 "lore": [
                   "&7",
                   "&7 Adicionados: &f{members}",
@@ -173,7 +174,7 @@
                 ]
               },
               "view": {
-                "name": "&2Armazém de {owner_name_with_color}",
+                "name": "&2Armazém de {owner_name}",
                 "lore": [
                   "&7",
                   "&7 Adicionados: &f{members}",
