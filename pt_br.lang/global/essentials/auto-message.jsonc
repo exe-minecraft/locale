@@ -31,6 +31,14 @@
             " &fseu com &a/armazem&f, ou clicando &a&lAQUI&f.",
             ""
           ],
+          // A dica dos spawners do rankup, em que o AQUI roda o /spawners. Espera o automessage do rankup, como a da enxada.
+          "spawners-rankup": [
+            "",
+            "&e&l SPAWNERS: &fCompre o ovo no &a/spawners&f, arraste o ovo até",
+            " &fuma gaiola para fabricar o spawner e coloque no seu",
+            " &fterreno. Abra a loja clicando &a&lAQUI&f.",
+            ""
+          ],
           "vip": [
             "",
             "&6&l VIP: &fCom o &aSamurai&f ou o &4Imperial&f você ganha kit",

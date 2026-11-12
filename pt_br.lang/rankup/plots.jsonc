@@ -171,6 +171,8 @@
         "listed": "&aO terreno {plot} &afoi anunciado na Imobiliária por {value}&a.",
         "unlisted": "&aO terreno {plot} &asaiu da Imobiliária, e as ofertas por ele foram canceladas.",
         "trade-busy": "&cHá uma compra do terreno {plot} &cem andamento. Tente de novo em instantes.",
+        // O terreno com spawner colocado não se anuncia, porque o dono do spawner é sempre o dono do terreno.
+        "list-spawners": "&cO terreno {plot} &ctem spawners colocados. Retire todos pelo menu de cada spawner antes de anunciar.",
         "offer-sent": "&aSua oferta de {value} &apelo terreno {plot} &ade {seller_name_with_color} &afoi enviada.",
         "offer-gone": "&cEste terreno não está mais disponível.",
         "offer-busy": "&cHá uma compra deste terreno em andamento. Tente ofertar de novo em instantes.",
@@ -232,6 +234,9 @@
         "offer-withdrawn": "&cA oferta de {value} &cque {player_name_with_color} &cfez pelo terreno {plot} &cfoi retirada, porque faltou saldo ao comprador quando você aceitou.",
         "reset-busy": "&cO terreno {plot} &cjá está sendo limpo, ou tem uma compra em andamento. Tente de novo em instantes.",
         "reset-not-owner": "&cA limpeza não foi feita, porque o terreno não é mais seu.",
+        // A limpeza e a exclusão apagariam o bloco de um spawner com o que ele guarda, e por isso esperam o dono retirá-los.
+        "reset-spawners": "&cO terreno {plot} &cnão foi limpo, porque tem spawners colocados. Retire todos pelo menu de cada spawner antes de limpar.",
+        "delete-spawners": "&cO terreno {plot} &cnão foi excluído, porque tem spawners colocados. Retire todos pelo menu de cada spawner antes de excluir.",
         "delete-busy": "&cO terreno {plot} &cnão foi excluído, porque está sendo limpo ou tem uma compra em andamento. Tente de novo em instantes.",
         "delete-not-owner": "&cA exclusão não foi feita, porque o terreno não é mais seu.",
         "delete-failed": "&cA exclusão do terreno {plot} &cfalhou. A equipe foi avisada, tente de novo mais tarde.",
@@ -241,6 +246,7 @@
         "staff-reset-not-owner": "&cA limpeza do terreno de {player_name_with_color} &cnão foi feita, porque o terreno mudou de dono.",
         "staff-reset-busy": "&cO terreno {plot} &cde {player_name_with_color} &cjá está sendo limpo, ou tem uma compra em andamento. Tente de novo em instantes.",
         "staff-reset-failed": "&cA limpeza do terreno de {player_name_with_color} &cfalhou, e o erro foi para o painel.",
+        "staff-reset-spawners": "&cO terreno {plot} &cde {player_name_with_color} &cnão foi limpo, porque tem spawners colocados. Só o dono os retira, pelo menu de cada spawner.",
         "staff-cleared": "&aO terreno {plot} &ade {player_name_with_color} &afoi limpo.",
         "cleared-by-staff": "&eSeu terreno {plot} &efoi limpo pela equipe e voltou ao ponto inicial.",
         "cleared-by-staff-listed": "&eSeu terreno {plot} &efoi limpo pela equipe e voltou ao ponto inicial. O anúncio dele saiu da Imobiliária, e as ofertas foram canceladas.",

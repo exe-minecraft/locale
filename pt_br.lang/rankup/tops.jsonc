@@ -7,7 +7,11 @@
         "weapon_hoe_tokens_spent": "Enxadas: investimento",
         // A Pá Especial (o weapons): os blocos escavados com ela e os tokens investidos nela.
         "weapon_shovel_blocks": "Pás: blocos escavados",
-        "weapon_shovel_tokens_spent": "Pás: investimento"
+        "weapon_shovel_tokens_spent": "Pás: investimento",
+        // Os spawners: quantos o jogador tem colocados, somados todos os blocos, e os tokens que já pagou por ovos e
+        // por melhorias.
+        "spawners_placed": "Spawners: colocados",
+        "spawners_invested": "Spawners: investimento"
       }
     }
   }

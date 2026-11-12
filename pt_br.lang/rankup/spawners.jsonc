@@ -1,0 +1,792 @@
+// Os spawners do rankup (12/11/2026). Os itens e os menus seguem os baús de referência do terreno do Kekitoox
+// (rankup-plots-1, de -37 a -33, 65, de -54 a -33: "spawners", "spawner como item", "menu dentro spawner", "menu
+// melhorias", "gaiolas", "menu gaiolas", "cabeças", "menu heads armazenar" e "menu historico"), com o texto no padrão
+// da casa. As texturas das cabeças ficam no plugin, e os números (preço, tempo, limite, chance) no config.yml dele.
+{
+  "plugins": {
+    "spawners": {
+      "units": {
+        "head": { "singular": "cabeça", "plural": "cabeças" },
+        // O nome de uma entrada do histórico, que começa com maiúscula ("+3.000 Cabeças").
+        "head-title": { "singular": "Cabeça", "plural": "Cabeças" },
+        "cage": { "singular": "gaiola", "plural": "gaiolas" },
+        "block": { "singular": "bloco", "plural": "blocos" }
+      },
+      // O nome e a cor de cada mob, que entram no nome do item, do holograma, do mob e das cabeças.
+      "mobs": {
+        "chicken": { "name": "Galinha", "color": "&f" },
+        "cow": { "name": "Vaca", "color": "&8" },
+        "zombie": { "name": "Zombie", "color": "&2" },
+        "skeleton": { "name": "Esqueleto", "color": "&7" },
+        "spider": { "name": "Aranha", "color": "&8" },
+        "blaze": { "name": "Blaze", "color": "&6" },
+        "slime": { "name": "Slime", "color": "&a" },
+        "magma": { "name": "Magma", "color": "&4" },
+        "pigman": { "name": "Pigman", "color": "&d" },
+        "golem": { "name": "Golem", "color": "&f" }
+      },
+      // A raridade de um spawner, que é a da gaiola que o fabrica.
+      "rarities": {
+        "common": "&8Comum",
+        "rare": "&9Raro",
+        "epic": "&5Épico",
+        "legendary": "&6Lendário"
+      },
+      "cages": {
+        "common": "&8Gaiola Comum",
+        "rare": "&9Gaiola Rara",
+        "epic": "&5Gaiola Épica",
+        "legendary": "&6Gaiola Lendária"
+      },
+      // O drop que cada spawner guarda, como aparece no ícone dos drops e na venda.
+      "drops": {
+        "chicken": "&fPena de Galinha",
+        "cow": "&6Couro",
+        "zombie": "&cCarne Podre",
+        "skeleton": "&fOsso",
+        "spider": "&4Olho de Aranha",
+        "blaze": "&6Pó de Blaze",
+        "slime": "&aBola de Slime",
+        "magma": "&eCreme de Magma",
+        "pigman": "&ePepita de Ouro",
+        "golem": "&fBarra de Ferro"
+      },
+      // O nome de um item especial do config. O que é item de outro plugin mostra o nome do próprio item, e este
+      // texto só aparece se o plugin dele não estiver no servidor.
+      "specials": {
+        "potion-blaze": "Pó de Blaze para poção"
+      },
+      // As cinco melhorias. O "label" e o "value" montam a linha do que a melhoria vale no menu ("Multiplicador: 1,02x").
+      // As duas "line" são a linha de cada melhoria no item do spawner e no ícone das melhorias, acesa e apagada.
+      "upgrades": {
+        "line": {
+          "on": "&d {upgrade} &d&l{level}",
+          "off": "&8 {upgrade} &8&l{level}"
+        },
+        "drop-bonus": {
+          "name": "Bônus Drop",
+          "description": ["&7Multiplique os drops recebidos", "&7automaticamente ao matar um mob."],
+          "label": "Multiplicador",
+          "value": "{value}x"
+        },
+        "max-stack": {
+          "name": "Máximo Stack",
+          "description": ["&7Aumente o limite de spawners", "&7agrupados no mesmo bloco."],
+          "label": "Stack",
+          "value": "{value}"
+        },
+        "kill-stack": {
+          "name": "Kill Stack",
+          "description": ["&7Aumente o limite de mobs da stack", "&7que você mata de uma única vez."],
+          "label": "Stack",
+          "value": "{value}"
+        },
+        "treasure": {
+          "name": "Tesouro",
+          "description": ["&7Aumente a chance de encontrar", "&7itens especiais ao matar um mob."],
+          "label": "Chance a mais",
+          "value": "+{value}%"
+        },
+        "experience": {
+          "name": "Experiência",
+          "description": ["&7Multiplique o XP recebido", "&7a cada vez que mata um mob."],
+          "label": "Multiplicador",
+          "value": "{value}x"
+        }
+      },
+      // O holograma em cima do bloco, como os de referência do terreno do Kekitoox, com o dono na cor do cargo.
+      "hologram": [
+        "{mob_color}Spawner de {mob_color}&l{mob_name}",
+        "&fQuantidade: &a{quantity}x",
+        "&fDono: {owner_name_with_color}",
+        "&eClique para abrir"
+      ],
+      // O nome do mob da stack, com a contagem.
+      "mob-name": "{mob_color}{mob_name} &7[&fx{amount}&7]",
+      "owner-loading": "&7...",
+      "prompts": {
+        "eggs": "Digite quantos ovos de {mob_name} você quer comprar. Cada um custa {price}&f.",
+        "remove": "Digite quantos spawners você quer retirar, de 1 a {quantity}, ou \"todos\".",
+        "cages": "Digite quantas gaiolas você quer fabricar. Cada {cage} &fgasta {cost} da {previous}&f.",
+        "heads": "Digite quantas cabeças de {mob_name} você quer retirar. Guardadas: {amount}."
+      },
+      "messages": {
+        "loading": "&cOs spawners ainda estão sendo carregados. Tente de novo em instantes.",
+        "unavailable": "&cNão deu para abrir o spawner agora. Tente de novo em instantes.",
+        "not-yours": "&cEste spawner não é seu.",
+        "busy": "&cEste spawner está terminando outra ação. Tente de novo em instantes.",
+        "far": "&cVocê está longe demais deste spawner para abrir o menu dele. Chegue perto do bloco.",
+        "gone": "&cEste spawner não está mais aqui.",
+        "restarting": "&cO servidor vai reiniciar. Faça isso depois que ele voltar.",
+        // A gravação que ficou sem resposta do banco, e a conferência dela também. O log do servidor tem o registro.
+        "unconfirmed": "&cO servidor não conseguiu confirmar esta ação. Se algo sumiu, avise a equipe, que tem o registro.",
+        "invalid-amount": "&cQuantidade inválida. Digite um número inteiro de 1 a {max}.",
+        "break": "&cO spawner não se quebra. Para retirar, abra o menu dele e use Remover os Spawners.",
+        "unknown-mob": "&c\"{mob}\" não é um spawner. Os spawners são {mobs}.",
+        "unknown-rarity": "&c\"{rarity}\" não é uma raridade de gaiola. As raridades são {rarities}.",
+        "place": {
+          "creative": "&cO spawner não se coloca no modo criativo. Volte à sobrevivência para colocar.",
+          "not-own-plot": "&cVocê só pode colocar spawners dentro do seu terreno.",
+          "plot-busy": "&cEste terreno está sendo limpo ou tem uma compra em andamento. Tente de novo em instantes.",
+          "plot-listed": "&cEste terreno está anunciado na Imobiliária. Tire o anúncio antes de colocar spawners nele.",
+          "no-space": "&cNão há espaço para o spawner neste lugar.",
+          "block-limit": "&cEste bloco já está no limite de spawners agrupados ({limit}).",
+          "plot-limit": "&cEste terreno já está no limite de blocos de spawner ({limit}). Agrupe os spawners iguais no mesmo bloco.",
+          "type-limit": "&cVocê já está no limite de spawners de {mob_name} ({limit}).",
+          "placed": "&aSpawner de {mob_name} colocado com {amount}x.",
+          "placed-part": "&aSpawner de {mob_name} colocado com {amount}x. &eO que passou do limite segue no item ({left}x).",
+          "grouped": "&aVocê agrupou {amount}x neste spawner de {mob_name}. Total: {total}x.",
+          "grouped-part": "&aVocê agrupou {amount}x neste spawner de {mob_name}. Total: {total}x. &eO que passou do limite segue no item ({left}x).",
+          "different-type": "&cVocê só pode agrupar spawners do mesmo tipo.",
+          "different-upgrades": "&cSó é possível agrupar spawners com as mesmas melhorias.",
+          "failed": "&cNão deu para colocar o spawner agora, e o item voltou para você."
+        },
+        "sell": {
+          "all-not-owned": "&cVocê ainda não tem o Vender Tudo. Venda clicando no ícone dos drops.",
+          "all-cooldown": "&cVocê poderá usar o Vender Tudo neste spawner de novo em {time}.",
+          "cooldown": "&cAguarde {time} para vender de novo.",
+          "nothing": "&cEste spawner não tem drops para vender.",
+          "sold": "&aVocê vendeu {amount}x {drop_name} &apor {value}&a.",
+          "processing": "&eA venda de {amount}x {drop_name} &efoi feita. O pagamento de {value} &echega em instantes.",
+          "failed": "&cA venda não foi feita, e nada saiu do spawner. Tente de novo em instantes."
+        },
+        "buy": {
+          "eggs": "&aVocê comprou o Ovo de {mob_name} &7[&fx{amount}&7] &apor {total}&a.",
+          "not-enough": "&cVocê não tem saldo para comprar {amount}x. Você tem {balance}&c e precisa de mais {missing}&c.",
+          "upgrade": "&aVocê evoluiu {upgrade} para o nível {level} por {price}&a.",
+          "upgrade-not-enough": "&cVocê não tem saldo para evoluir {upgrade}. O nível {level} custa {price}&c.",
+          "upgrade-stale": "&cO spawner mudou enquanto a compra era feita. Nada foi cobrado.",
+          "sell-all": "&aCompra feita! Agora você tem o Vender Tudo em todos os seus spawners.",
+          "sell-all-not-enough": "&cVocê não tem cash suficiente para adquirir o Vender Tudo.",
+          "sell-all-owned": "&cVocê já tem o Vender Tudo. Nada foi cobrado.",
+          "busy": "&cVocê já tem uma compra em andamento. Aguarde ela terminar.",
+          "processing": "&eA compra está sendo confirmada. Se o valor saiu, o que você comprou chega em instantes ou o valor volta para você.",
+          "failed": "&cA compra não foi feita, e nada foi cobrado.",
+          "price-changed": "&cO preço mudou enquanto você confirmava, e nada foi cobrado. Abra o menu de novo para ver o valor."
+        },
+        "upgrade": {
+          "maximum": "&cEsta melhoria já está no nível máximo.",
+          "type-limit": "&cEste bloco já comporta todos os spawners de {mob_name} que você pode manter colocados ({limit}). Subir o Máximo Stack não mudaria nada."
+        },
+        "remove": {
+          "sell-first": "&cVenda todos os drops deste spawner antes de retirar.",
+          "new-drops": "&cO spawner recebeu novos drops. Venda todos antes de retirar.",
+          "invalid": "&cQuantidade inválida. Digite um número inteiro de 1 a {max}, ou \"todos\".",
+          "no-room": "&cVocê não tem espaço no inventário para retirar os spawners.",
+          "too-far": "&cVocê está longe demais deste spawner para retirar todos. Chegue perto dele e tente de novo.",
+          "failed": "&cNão deu para retirar os spawners agora. Nada saiu do bloco.",
+          "removed": "&aVocê retirou {amount}x do spawner de {mob_name}. As melhorias seguem no item."
+        },
+        "set-spawn": {
+          "none": "&cNão há nenhum spawner seu a até {distance} {distance_unit} de você.",
+          "other-plot": "&cO ponto de spawn tem de ficar no mesmo terreno do spawner.",
+          "too-far": "&cO ponto de spawn tem de ficar a no máximo {radius} {radius_unit} do spawner.",
+          "invalid": "&cEste lugar não serve de ponto de spawn. Escolha um lugar livre de blocos.",
+          "failed": "&cNão deu para mudar o ponto de spawn agora. Nada mudou.",
+          "changed": "&aO ponto de spawn do spawner de {mob_name} agora é onde você está."
+        },
+        "kill": {
+          // Na barra de ação, a cada abate.
+          "summary": "&7Abate: &f{mobs}x &8| &f+{drops}x {drop_name} &8| &f+{heads} &7{heads_unit} &8| &f+{xp} &7XP",
+          // Quem mata pode ser um membro do terreno, que não vende. Por isso o aviso não diz "até você vender".
+          "full": "&cO spawner está no máximo de drops guardados ({limit}). O que os abates derem agora se perde até os drops serem vendidos.",
+          "special": "&aVocê encontrou {amount}x {item} &aao matar {mob_name}!"
+        },
+        "heads": {
+          "overflow": "&eSeu inventário está cheio. As cabeças que não couberam foram guardadas no /heads armazenar.",
+          "nothing-to-store": "&cVocê não tem nenhuma cabeça de {mob_name} no inventário.",
+          "nothing-stored": "&cVocê não tem nenhuma cabeça de {mob_name} guardada.",
+          "unavailable": "&cNão deu para mexer nas cabeças guardadas agora. Tente de novo em instantes.",
+          "stored": "&aVocê guardou {amount} {unit} de {mob_name}. Guardadas: {balance}.",
+          "no-room": "&cVocê não tem espaço no inventário para retirar {amount} {unit}.",
+          "not-enough": "&cVocê tem menos de {amount} {unit} de {mob_name} entre as guardadas.",
+          "withdrawn": "&aVocê retirou {amount} {unit} de {mob_name}. Guardadas: {balance}.",
+          "busy": "&cAguarde a operação anterior com as suas cabeças terminar."
+        },
+        "cages": {
+          "not-enough": "&cVocê precisa de {needed} {needed_unit} da {previous} &cpara fabricar {made}x {cage}&c. Em falta: {missing}.",
+          "merged": "&aVocê juntou {needed} {needed_unit} da {previous} &ae recebeu {made}x {cage}&a."
+        },
+        "craft": {
+          "creative": "&cO spawner não se fabrica no modo criativo. Volte à sobrevivência para fabricar.",
+          "wrong-cage": "&cO Ovo de {mob_name} precisa de uma {cage}&c.",
+          // Qualquer cabeça que não é uma gaiola dos spawners, e também a "Gaiola" que a enxada dava antes deles.
+          "plain-cage": "&cEssa cabeça é um item comum e não fabrica spawners. As gaiolas que a enxada deu antes da chegada dos spawners não fabricam. As que caem agora do Explorador são a Gaiola Comum.",
+          "no-room": "&cVocê não tem espaço no inventário para o spawner.",
+          "crafted": "&aVocê fabricou o Spawner de {mob_name} &7[&fx{amount}&7]&a."
+        }
+      },
+      "items": {
+        // As quatro gaiolas, com a mesma descrição (o baú "gaiolas").
+        "cage": {
+          "lore": [
+            "&7Use este item para fabricar spawners.",
+            "&7Juntando várias gaiolas melhora a raridade! &8(/gaiolas)"
+          ],
+          "common": { "display-name": "Gaiola Comum", "name": "&8Gaiola Comum" },
+          "rare": { "display-name": "Gaiola Rara", "name": "&9Gaiola Rara" },
+          "epic": { "display-name": "Gaiola Épica", "name": "&5Gaiola Épica" },
+          "legendary": { "display-name": "Gaiola Lendária", "name": "&6Gaiola Lendária" }
+        },
+        // O ovo da loja. Um item vale vários ovos, com a quantidade no nome.
+        "egg": {
+          "display-name": "Ovo de {mob_name}",
+          "name": "{mob_color}Ovo de {mob_name} &7[&fx{amount}&7]",
+          "lore": [
+            "&7",
+            "&7 Drops: {drop_price}",
+            "&7 Cooldown: &f{cooldown}s",
+            "&7 Itens Especiais: &f{specials}",
+            "&7 Raridade: {rarity}",
+            "&7",
+            "&eArraste até uma {cage} &epara fabricar o spawner!"
+          ]
+        },
+        // O spawner como item (o baú "spawner como item"). O "lore-upgraded" é o do spawner com alguma melhoria, que o
+        // baú não tem: sem ele quem recebe o item não saberia o que ele traz.
+        "spawner": {
+          "display-name": "Spawner de {mob_name}",
+          "name": "{mob_color}Spawner de {mob_name} &7[&fx{amount}&7]",
+          "lore": [
+            "&7",
+            "&7 Drops: {drop_price}",
+            "&7 Cooldown: &f{cooldown}s",
+            "&7 Itens Especiais: &f{specials}",
+            "&7 Raridade: {rarity}",
+            "&7 Preço: {price}",
+            "&7",
+            "&eColoque no chão do seu terreno para usar!"
+          ],
+          "lore-upgraded": [
+            "&7",
+            "&7 Drops: {drop_price}",
+            "&7 Cooldown: &f{cooldown}s",
+            "&7 Itens Especiais: &f{specials}",
+            "&7 Raridade: {rarity}",
+            "&7 Preço: {price}",
+            "&7",
+            "{upgrades}",
+            "&7",
+            "&eColoque no chão do seu terreno para usar!"
+          ]
+        },
+        // A cabeça do rankup (o baú "cabeças").
+        "head": {
+          "display-name": "Cabeça de {mob_name}",
+          "name": "{mob_color}Cabeça de {mob_name}",
+          "lore": [
+            "&7Esse item é utilizado e necessário",
+            "&7para a evolução do seu rank!",
+            "&7",
+            "&8(/heads armazenar)"
+          ]
+        }
+      },
+      "views": {
+        // A loja de ovos (o baú "spawners"). O {action} é uma das duas linhas de baixo.
+        "shop": {
+          "title": "Loja de Spawners",
+          "items": {
+            "spawner": {
+              "name": "{mob_color}Spawner de {mob_name}",
+              "lore": [
+                "&7",
+                "&7 Drops: {drop_price}",
+                "&7 Cooldown: &f{cooldown}s",
+                "&7 Itens Especiais: &f{specials}",
+                "&7 Raridade: {rarity}",
+                "&7 Preço: {price}",
+                "&7",
+                "{action}"
+              ],
+              "actions": {
+                "buy": ["&aClique para adquirir esse spawner!"],
+                "not-enough": ["&cVocê não tem saldo suficiente!"]
+              }
+            },
+            "spawner-specials": {
+              "name": "{mob_color}Spawner de {mob_name}",
+              "lore": [
+                "&7",
+                "&7 Drops: {drop_price}",
+                "&7 Cooldown: &f{cooldown}s",
+                "&7 Itens Especiais: &f{specials}",
+                "&7 Raridade: {rarity}",
+                "&7 Preço: {price}",
+                "&7",
+                "{action}",
+                "&8(Clique direito para ver os itens especiais)"
+              ]
+            }
+          }
+        },
+        "specials": {
+          "title": "Itens Especiais de {mob_name}",
+          "items": {
+            "special": {
+              "name": "&e{item}",
+              "lore": [
+                "&7",
+                "&7 Quantidade: &f{amount}",
+                "&7 Chance por abate: &f{chance}%"
+              ]
+            }
+          }
+        },
+        // O menu de um spawner colocado (o baú "menu dentro spawner").
+        "spawner": {
+          "title": "Spawner de {mob_name}",
+          "items": {
+            "info": {
+              "name": "{mob_color}Spawner de {mob_name}",
+              "lore": [
+                "&7",
+                "&7 Quantidade: &f{quantity}x",
+                "&7 Drops: {drop_price}",
+                "&7 Cooldown: &f{cooldown}s",
+                "&7 Itens Especiais: &f{specials}",
+                "&7 Raridade: {rarity}",
+                "&7 Preço: {price}",
+                "&7",
+                "&eEsse é o seu spawner atual!"
+              ]
+            },
+            "info-specials": {
+              "name": "{mob_color}Spawner de {mob_name}",
+              "lore": [
+                "&7",
+                "&7 Quantidade: &f{quantity}x",
+                "&7 Drops: {drop_price}",
+                "&7 Cooldown: &f{cooldown}s",
+                "&7 Itens Especiais: &f{specials}",
+                "&7 Raridade: {rarity}",
+                "&7 Preço: {price}",
+                "&7",
+                "&eEsse é o seu spawner atual!",
+                "&8(Clique direito para ver os itens especiais)"
+              ]
+            },
+            // O {action} é uma das três linhas de baixo, e o {full} só aparece com o spawner cheio.
+            "drops": {
+              "name": "&eDrops",
+              "lore": [
+                "&7Aqui ficam os drops atuais do spawner.",
+                "&7",
+                "&7 Item: {drop_name}",
+                "&7 Quantidade: &f{amount}",
+                "&7 Total: {total}",
+                "&7",
+                "{action}",
+                "{full}"
+              ],
+              "actions": {
+                "sell": ["&aClique para vender {sale_amount}x", "&apor {sale_value}&a!"],
+                "cooldown": ["&cAguarde {time} para vender de novo."],
+                "empty": ["&cNão há drops para vender."]
+              },
+              "full": [
+                "&cMáximo de drops atingido!",
+                "&8(Os próximos drops serão descartados)"
+              ]
+            },
+            "upgrades": {
+              "name": "&dMelhorias do Spawner",
+              "lore": [
+                "&7Aqui ficam as melhorias do spawner.",
+                "&7",
+                "{upgrades}",
+                "&7",
+                "&eClique para acessar as melhorias!"
+              ]
+            },
+            "ranking": {
+              "name": "&6Ranking de Spawners",
+              "lore": [
+                "&7Acompanhe o ranking de spawners.",
+                "&7",
+                "&f Sua posição:",
+                "&f  Spawners colocados: &e{placed_position}",
+                "&f  Tokens investidos: &e{invested_position}",
+                "&7",
+                "&eClique para acessar o ranking!"
+              ]
+            },
+            "remove": {
+              "name": "&cRemover os Spawners",
+              "lore": [
+                "&7Selecione a quantidade de spawners",
+                "&7que deseja retirar, ou retire todos.",
+                "&7",
+                "&eClique para retirar os spawners!"
+              ]
+            },
+            "remove-drops": {
+              "name": "&cRemover os Spawners",
+              "lore": [
+                "&7Selecione a quantidade de spawners",
+                "&7que deseja retirar, ou retire todos.",
+                "&7",
+                "&cVenda todos os drops antes de retirar."
+              ]
+            },
+            // O Vender Tudo. O {shop} são as duas linhas da loja, e o {cooldown} é a espera do config.
+            "sell-all": {
+              "shop": [
+                "&eAdquira &f&lCASH &ee outros produtos",
+                "&eem nossa loja: &frede-exe.com",
+                "&7"
+              ],
+              "use": {
+                "name": "&aVender Tudo",
+                "lore": [
+                  "&7Com esta opção você vende todos os",
+                  "&7drops deste spawner com um toque!",
+                  "&7",
+                  "&aClique para vender {sale_amount}x",
+                  "&apor {sale_value}&a!",
+                  "&8(Espera de {cooldown})"
+                ]
+              },
+              "cooldown": {
+                "name": "&aVender Tudo",
+                "lore": [
+                  "&7Com esta opção você vende todos os",
+                  "&7drops deste spawner com um toque!",
+                  "&7",
+                  "&cAguarde {time}",
+                  "&cpara vender tudo de novo."
+                ]
+              },
+              "empty": {
+                "name": "&aVender Tudo",
+                "lore": [
+                  "&7Com esta opção você vende todos os",
+                  "&7drops deste spawner com um toque!",
+                  "&7",
+                  "&cNão há drops para vender."
+                ]
+              },
+              "buy": {
+                "name": "&aVender Tudo",
+                "lore": [
+                  "&7Com esta opção você vende todos os",
+                  "&7drops de um spawner com um toque!",
+                  "&7",
+                  "&f Preço: &6{price} ✪",
+                  "&7",
+                  "{shop}",
+                  "&aClique para adquirir!",
+                  "&8(Espera de {cooldown})"
+                ]
+              },
+              "not-enough": {
+                "name": "&aVender Tudo",
+                "lore": [
+                  "&7Com esta opção você vende todos os",
+                  "&7drops de um spawner com um toque!",
+                  "&7",
+                  "&f Preço: &6{price} ✪",
+                  "&7",
+                  "{shop}",
+                  "&cVocê não tem saldo suficiente!",
+                  "&8(Espera de {cooldown})"
+                ]
+              }
+            }
+          }
+        },
+        // O menu das melhorias (os baús "menu melhorias" e "opções melhorias").
+        "upgrades": {
+          "title": "Melhorias do Spawner",
+          "items": {
+            "upgrade": {
+              "upgrade": {
+                "name": "&d{upgrade} &d&l{level}",
+                "lore": [
+                  "{description}",
+                  "&7",
+                  "&f Nível &f&l{level} &8» &dNível &d&l{next_level}",
+                  "&f  {label}: &c&m{value}&r &7» &d{next_value}",
+                  "&7",
+                  "&f Preço: {price}",
+                  "&7",
+                  "&aClique para evoluir!"
+                ]
+              },
+              "not-enough": {
+                "name": "&d{upgrade} &d&l{level}",
+                "lore": [
+                  "{description}",
+                  "&7",
+                  "&f Nível &f&l{level} &8» &dNível &d&l{next_level}",
+                  "&f  {label}: &c&m{value}&r &7» &d{next_value}",
+                  "&7",
+                  "&f Preço: {price}",
+                  "&7",
+                  "&cVocê não tem saldo suficiente!"
+                ]
+              },
+              "maximum": {
+                "name": "&d{upgrade} &d&l{level}",
+                "lore": [
+                  "{description}",
+                  "&7",
+                  "&f {label}: &d{value}",
+                  "&7",
+                  "&cNível máximo atingido!"
+                ]
+              },
+              // Só no Máximo Stack: o bloco já comporta o limite de spawners deste tipo do grupo do dono.
+              "type-limit": {
+                "name": "&d{upgrade} &d&l{level}",
+                "lore": [
+                  "{description}",
+                  "&7",
+                  "&f {label}: &d{value}",
+                  "&7",
+                  "&cEste bloco já comporta o seu limite",
+                  "&cde spawners deste tipo ({limit})."
+                ]
+              }
+            }
+          }
+        },
+        // O /gaiolas (o baú "menu gaiolas").
+        "cages": {
+          "title": "Gaiolas",
+          "items": {
+            "cage": {
+              "merge": {
+                "name": "{cage}",
+                "lore": [
+                  "&7Junte {cost} da {previous} &7para",
+                  "&7poder fabricar esta gaiola.",
+                  "&7",
+                  " {previous}: &f{amount}",
+                  "&7",
+                  "&aClique com o botão esquerdo para juntar!",
+                  "&eClique com o botão direito para",
+                  "&eescolher a quantidade!"
+                ]
+              },
+              "not-enough": {
+                "name": "{cage}",
+                "lore": [
+                  "&7Junte {cost} da {previous} &7para",
+                  "&7poder fabricar esta gaiola.",
+                  "&7",
+                  " {previous}: &f{amount}",
+                  "&7",
+                  "&cVocê não tem gaiolas suficientes!"
+                ]
+              }
+            }
+          }
+        },
+        // O /setspawn.
+        "set-spawn": {
+          "title": "Ponto de Spawn",
+          "items": {
+            "spawner": {
+              "name": "{mob_color}Spawner de {mob_name}",
+              "lore": [
+                "&7",
+                "&7 Quantidade: &f{quantity}x",
+                "&7 Distância: &f{distance} {distance_unit}",
+                "&7",
+                "&7O mob deste spawner passa a nascer",
+                "&7no lugar onde você está agora, a até",
+                "&7{radius} {radius_unit} do spawner.",
+                "&7",
+                "&aClique para definir o ponto de spawn!"
+              ]
+            },
+            "spawner-far": {
+              "name": "{mob_color}Spawner de {mob_name}",
+              "lore": [
+                "&7",
+                "&7 Quantidade: &f{quantity}x",
+                "&7 Distância: &f{distance} {distance_unit}",
+                "&7",
+                "&7O ponto de spawn tem de ficar a até",
+                "&7{radius} {radius_unit} do spawner.",
+                "&7",
+                "&cChegue mais perto deste spawner."
+              ]
+            }
+          }
+        },
+        // O /heads armazenar (o baú "menu heads armazenar"). O {action} só aparece no menu do próprio jogador.
+        "heads": {
+          "title": "Cabeças de {target_name}",
+          "items": {
+            "total": {
+              "name": "&9Cabeças de {target_name}",
+              "lore": [
+                "&7As cabeças guardadas de cada tipo.",
+                "&7",
+                "&7 Total: &9{total}",
+                "&7",
+                "&eClique para ver o histórico!"
+              ]
+            },
+            // O total para quem olha as cabeças de outro jogador sem a chave do histórico. O clique não faz nada.
+            "total-view": {
+              "name": "&9Cabeças de {target_name}",
+              "lore": [
+                "&7As cabeças guardadas de cada tipo.",
+                "&7",
+                "&7 Total: &9{total}"
+              ]
+            },
+            "head": {
+              "name": "{mob_color}Cabeça de {mob_name}",
+              "lore": [
+                "&7Esse item é utilizado e necessário",
+                "&7para a evolução do seu rank!",
+                "&7",
+                "&7 Quantidade: &f{amount}",
+                "&7",
+                "{action}"
+              ],
+              "actions": [
+                "&aClique com o botão esquerdo para",
+                "&aguardar as do inventário! &7({held})",
+                "&eClique com o botão direito para retirar!"
+              ]
+            }
+          }
+        },
+        // O histórico das cabeças (os baús "menu historico" e "menu historico 2").
+        "head-history": {
+          "title": "Histórico de {target_name}",
+          "items": {
+            "added": {
+              "name": "&a+{amount} {unit}",
+              "lore": [
+                "&7",
+                "&7Motivo: &f{reason}",
+                "&7Data: &f{date}",
+                "&7Saldo Final: &f{balance}"
+              ]
+            },
+            "removed": {
+              "name": "&c-{amount} {unit}",
+              "lore": [
+                "&7",
+                "&7Motivo: &f{reason}",
+                "&7Data: &f{date}",
+                "&7Saldo Final: &f{balance}"
+              ]
+            },
+            "reasons": {
+              "deposit": "Depósito de {target_name_with_color}",
+              "withdraw": "Retirada de {target_name_with_color}",
+              "overflow": "Sobra do inventário cheio",
+              "returned": "Devolução às guardadas"
+            }
+          }
+        },
+        // A confirmação da compra do Vender Tudo, no molde da dos terrenos.
+        "purchase": {
+          "title": "Adquirir o Vender Tudo?",
+          "items": {
+            "sell-all": {
+              "name": "&aVender Tudo",
+              "lore": [
+                "&7Com esta opção você vende todos os",
+                "&7drops de um spawner com um toque!",
+                "&7Vale para todos os seus spawners.",
+                "&7",
+                "&f Preço: &6{price} ✪"
+              ]
+            }
+          }
+        }
+      },
+      "commands": {
+        "spawners": {
+          "description": "abrir a loja de spawners",
+          "usage": {
+            "menu": { "syntax": "", "description": "abrir a loja de spawners" }
+          },
+          "admin": {
+            "description": "comandos da equipe para os itens dos spawners",
+            "egg": {
+              "description": "entregar ovos de spawner a um jogador deste servidor",
+              "arguments": {
+                "target": { "name": "jogador", "description": "Jogador que recebe" },
+                "mob": { "name": "mob", "description": "galinha, vaca, zombie, esqueleto, aranha, blaze, slime, magma, pigman ou golem" },
+                "amount": { "name": "quantidade", "description": "Quantos ovos o item vale" }
+              }
+            },
+            "cage": {
+              "description": "entregar gaiolas a um jogador deste servidor",
+              "arguments": {
+                "target": { "name": "jogador", "description": "Jogador que recebe" },
+                "rarity": { "name": "raridade", "description": "comum, rara, epica ou lendaria" },
+                "amount": { "name": "quantidade", "description": "Quantas gaiolas" }
+              }
+            },
+            "spawner": {
+              "description": "entregar um spawner pronto a um jogador deste servidor",
+              "arguments": {
+                "target": { "name": "jogador", "description": "Jogador que recebe" },
+                "mob": { "name": "mob", "description": "galinha, vaca, zombie, esqueleto, aranha, blaze, slime, magma, pigman ou golem" },
+                "amount": { "name": "quantidade", "description": "Quantos spawners o item vale" }
+              }
+            },
+            "head": {
+              "description": "entregar cabeças a um jogador deste servidor",
+              "arguments": {
+                "target": { "name": "jogador", "description": "Jogador que recebe" },
+                "mob": { "name": "mob", "description": "galinha, vaca, zombie, esqueleto, aranha, blaze, slime, magma, pigman ou golem" },
+                "amount": { "name": "quantidade", "description": "Quantas cabeças" }
+              }
+            },
+            "give": {
+              "amount": "&cQuantidade inválida. Use um número inteiro de 1 a {max}!",
+              "elsewhere": "&c{target_name_with_color} &cnão está neste servidor. O item é entregue no servidor onde o jogador está.",
+              "full": "&cO inventário de {target_name_with_color} &cnão tem espaço para &e{item} &7[&f{amount}x&7]&c, e nada foi entregue.",
+              "given": "&aEntregado &e{item} &7[&f{amount}x&7] &aao jogador {target_name_with_color}",
+              "received": "&aRecebido &e{item} &7[&f{amount}x&7] &acom sucesso!"
+            }
+          }
+        },
+        "cages": {
+          "description": "abrir o menu que junta gaiolas",
+          "usage": {
+            "menu": { "syntax": "", "description": "abrir o menu das gaiolas" }
+          }
+        },
+        "setspawn": {
+          "description": "escolher onde nasce o mob de um spawner seu que está por perto",
+          "usage": {
+            "menu": { "syntax": "", "description": "abrir o menu dos seus spawners por perto" }
+          }
+        },
+        "heads": {
+          "description": "abrir as suas cabeças guardadas",
+          "usage": {
+            "menu": { "syntax": "", "description": "abrir as suas cabeças guardadas" }
+          },
+          "store": {
+            "description": "abrir as suas cabeças guardadas, para guardar e retirar"
+          },
+          "view": {
+            "description": "ver as cabeças guardadas de um jogador",
+            "arguments": { "target": { "name": "jogador", "description": "Dono das cabeças" } }
+          },
+          "history": {
+            "description": "ver o histórico das cabeças de um jogador",
+            "arguments": { "target": { "name": "jogador", "description": "Dono das cabeças" } }
+          }
+        },
+        "headshistory": {
+          "description": "ver o histórico das cabeças de um jogador",
+          "arguments": { "target": { "name": "jogador", "description": "Dono das cabeças" } }
+        }
+      }
+    }
+  }
+}
