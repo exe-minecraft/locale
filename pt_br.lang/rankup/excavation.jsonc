@@ -11,6 +11,9 @@
       // O nome de cada bioma (world.biomes no config.yml do excavation).
       "biomes": {
         "desert": "Deserto",
+        "forest": "Floresta",
+        "ice": "Gelo",
+        "nether": "Nether",
         "plains": "Planície",
         "mesa": "Mesa",
         "snow": "Neve"
@@ -68,6 +71,8 @@
         "build-limit": "Você não pode mexer em blocos acima da altura {limit}.",
         "extraction-blocked": "Você não pode mexer em blocos num Ponto de Extração.",
         "combat-day": "O combate fica desativado durante o dia.",
+        // O tronco e a folha só vêm das árvores do mundo: postos pelo jogador, dariam outra chance da Maçã Especial.
+        "tree-block": "Você não pode colocar troncos nem folhas no Mundo de Extração.",
         "shovel-tip": [
           "",
           "&b&l DICA! &bUse uma &lPá Especial&r&b para conseguir recursos",
@@ -113,7 +118,17 @@
           "&f Os itens ficaram em &aX: {x} Y: {y} Z: {z}&f.",
           ""
         ],
-        "drop-name": "&6Drop de {player_name_with_color}"
+        "drop-name": "&6Drop de {player_name_with_color}",
+        // A invulnerabilidade de quem voltou ao lugar onde caiu acaba no primeiro golpe dele.
+        "shield-ended": "&eSua invulnerabilidade acabou porque você atacou.",
+        // O que vem por chance ao escavar ou ao quebrar uma árvore da Floresta.
+        "found": {
+          "apple": "&aVocê encontrou uma &lMaçã Especial&r&a nesta árvore!",
+          "dig-drop": {
+            "sand": "&aVocê encontrou &lAreia&r&a para as farms do seu terreno!",
+            "soul_sand": "&aVocê encontrou &lAreia das Almas&r&a para as farms do seu terreno!"
+          }
+        }
       },
       // A barra de ação de quem está no mundo, com o ponto de extração mais perto.
       "action-bar": {
@@ -163,6 +178,8 @@
         "cooldown": "Aguarde um pouco antes de fazer isso de novo.",
         "in-combat": "Você não pode ir ao mundo de escavação em combate.",
         "failed": "Não deu para levar você ao mundo de escavação. Tente de novo em instantes.",
+        // A espera do RTP: 5 minutos entre uma entrada e a seguinte.
+        "waiting": "Você entrou no Mundo de Extração há pouco tempo. Poderá entrar de novo em {time}.",
         "arrived": [
           "",
           "&b&l Mundo de Escavação!",
@@ -170,6 +187,54 @@
           "&f evolua a sua Pá e progrida no servidor!",
           ""
         ]
+      },
+      // A volta de quem caiu dentro do mundo, e a espera do RTP na entrada.
+      "stay": {
+        // A entrada recusada pelo servidor de extração, no aviso do proxy.
+        "cooldown": "&cVocê entrou no Mundo de Extração há pouco tempo. Poderá entrar de novo em {time}.",
+        "unknown": "&cNão deu para conferir sua entrada no Mundo de Extração. Tente de novo em instantes.",
+        "returned": "&aVocê voltou ao lugar onde estava no Mundo de Extração e tem {time} de invulnerabilidade.",
+        // No spawn ou nos terrenos, quem caiu dentro do mundo volta para lá.
+        "returning": "&eVocê saiu do jogo dentro do Mundo de Extração e está voltando ao lugar onde estava...",
+        "locked": "Aguarde enquanto você volta ao Mundo de Extração.",
+        "kick": {
+          "unknown": "&cNão deu para conferir se você estava no Mundo de Extração. Entre de novo em instantes.",
+          // A entrada não gravou: quem ainda não juntou nada sai do jogo.
+          "entry-failed": "&cNão deu para registrar sua entrada no Mundo de Extração. Entre de novo em instantes.",
+          // A viagem ao spawn depois de uma morte no mundo não saiu.
+          "respawn-failed": "&cNão deu para levar você de volta ao spawn depois da sua morte. Entre de novo em instantes.",
+          "send-failed": "&cNão deu para levar você de volta ao Mundo de Extração. Entre de novo em instantes."
+        }
+      },
+      // Os itens do Mundo de Extração. Os nomes e as descrições são os dos baús de referência do Kekitoox (12/11/2026),
+      // com o português corrigido.
+      "items": {
+        "apple": {
+          "display-name": "Maçã Especial",
+          "name": "&bMaçã Especial",
+          "lore": [
+            "&7Use esta maçã junto de ouro para",
+            "&7fabricar a maçã dourada encantada."
+          ]
+        },
+        "inverter": {
+          "display-name": "Inversor",
+          "name": "&bInversor",
+          "lore": [
+            "&7Troque de lugar com outro jogador ao",
+            "&7arremessar o inversor contra ele.",
+            "&7",
+            "&eClique com o botão direito para arremessar!"
+          ],
+          "refused": {
+            "elsewhere": "O Inversor só funciona no Mundo de Extração.",
+            "day": "O Inversor só funciona durante a noite, com o PvP ativo."
+          },
+          "swapped": {
+            "thrower": "&aVocê trocou de lugar com {target_name_with_color}&a.",
+            "target": "&c{thrower_name_with_color} &ctrocou de lugar com você usando um Inversor."
+          }
+        }
       },
       "commands": {
         "escavacao": {
@@ -207,6 +272,12 @@
                 "&aClique para visualizar."
               ]
             }
+          },
+          // A espera do RTP, na descrição do ícone de teleporte.
+          "entry": {
+            "ready": "&aDisponível",
+            "waiting": "&cEm {time}",
+            "unknown": "&7Desconhecida"
           },
           "states": {
             "loading": "&7Carregando...",

@@ -1132,6 +1132,18 @@
       "drops": {
         // Os achados do Explorador da enxada (a gaiola, o frasco e o açúcar) são itens de outros plugins, e o nome
         // e a descrição do ícone de cada um vêm do próprio item. A gaiola é a Gaiola Comum dos spawners.
+        // O gelo comum que o Explorador dá na neve do Mundo de Extração. Cai como o do jogo, sem nome nem lore, e este
+        // texto é só o do ícone no menu dos achados.
+        "ice": {
+          "name": "&fGelo",
+          "lore": [
+            "&fRaridade: {rarity}",
+            "",
+            "&e&l Dica: &eQuebre este gelo no seu",
+            "&e terreno para ter água ao lado",
+            "&e da sua plantação de cana."
+          ]
+        },
         // O disco era para vender na loja do exe-rankup, que o rankup novo ainda não tem.
         "record": {
           "name": "&bDisco de Música",
@@ -1518,7 +1530,9 @@
               "sugar_cane_block": "Cana",
               "sand": "Areia",
               "dirt": "Terra",
-              "snow_block": "Neve"
+              "grass": "Grama",
+              "snow_block": "Neve",
+              "soul_sand": "Areia das Almas"
             },
             "times": {
               "day": "Dia",
