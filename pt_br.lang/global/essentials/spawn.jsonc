@@ -1,11 +1,12 @@
 {
   "plugins": {
     "essentials": {
-      // O /spawn <jogador> da staff (Moderador para cima). Nos eventos o app de eventos recusa: o blocked-other.
+      // O /spawn <jogador> da staff (Moderador para cima). Nos eventos e no Mundo de Extração do rankup o app recusa:
+      // o blocked-other.
       "commands": {
         "spawn": {
           "success-other": "&aVocê mandou {target_name} para o spawn.",
-          "blocked-other": "{target_name} está em um evento, e dentro de um evento não há /spawn."
+          "blocked-other": "{target_name} está num evento ou no Mundo de Extração, e de lá ninguém é mandado ao spawn."
         }
       },
       "messages": {
