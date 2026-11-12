@@ -1130,14 +1130,8 @@
       // Os itens que os encantamentos de achado dão (drops no config). O {rarity} é a raridade
       // de cada um, com a cor dela.
       "drops": {
-        // Os achados do Explorador da enxada, do baú "Items explorador" do Kekitoox. O Açúcar para poção é o
-        // item especial da cana, e brilha como o do baú.
-        "cage": {
-          "name": "&8Gaiola",
-          "lore": [
-            "&7Use este item para fabricar os spawners!"
-          ]
-        },
+        // Os achados do Explorador da enxada (a gaiola, o frasco e o açúcar) são itens de outros plugins, e o nome
+        // e a descrição do ícone de cada um vêm do próprio item. A gaiola é a Gaiola Comum dos spawners.
         // O disco era para vender na loja do exe-rankup, que o rankup novo ainda não tem.
         "record": {
           "name": "&bDisco de Música",
