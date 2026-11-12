@@ -1,8 +1,8 @@
 {
   "plugins": {
-    // O mundo de escavação do rankup, o do exe-rankup: um mundo aberto de areia, terra e neve que se
-    // escava com a Pá Especial, com PvP à noite, e de onde só se sai com os itens por um ponto de
-    // extração. O texto é o de lá, sem os símbolos que o 1.8 não desenha.
+    // O Mundo de Extração do rankup (o documento do dono de 12/11/2026, a próxima versão do mundo de
+    // escavação do exe-rankup): quatro biomas que se escavam com a Pá Especial, com PvP à noite, e de
+    // onde só se sai com os itens por um portal de extração. O comando segue /escavação, com o /mina.
     "excavation": {
       "units": {
         "second": { "singular": "segundo", "plural": "segundos" },
@@ -13,13 +13,9 @@
         "desert": "Deserto",
         "forest": "Floresta",
         "ice": "Gelo",
-        "nether": "Nether",
-        "plains": "Planície",
-        "mesa": "Mesa",
-        "snow": "Neve"
+        "nether": "Nether"
       },
-      // Para que lado fica o ponto de extração mais perto, em relação para onde o jogador olha.
-      // A seta do lado do ponto de extração, em relação para onde o jogador olha: as do exe-rankup, a pedido do dono
+      // A seta do lado do portal de extração mais perto, em relação para onde o jogador olha: as do exe-rankup, a pedido do dono
       // (09/11). Saem pela fonte unicode do cliente 1.8, como saíam lá.
       "headings": {
         "front": "⬆",
@@ -34,7 +30,7 @@
       "time": {
         "day": "Dia",
         "night": "Noite",
-        // O servidor de escavação está fora ou reiniciando, e o menu do /escavação não sabe a hora de lá.
+        // O servidor de extração está fora ou reiniciando, e o menu do /escavação não sabe a hora de lá.
         "unknown": "Desconhecido"
       },
       "combat": {
@@ -42,7 +38,7 @@
         "off": "&aPvP desativado!",
         "unknown": "&7Desconhecido"
       },
-      // A scoreboard do mundo de escavação: a do rankup, com o horário, o combate, o bioma e os
+      // A scoreboard do Mundo de Extração: a do rankup, com o horário, o combate, o bioma e os
       // blocos escavados com a pá, como no exe-rankup.
       "scoreboard": {
         "title": [
@@ -65,11 +61,11 @@
       },
       "world": {
         // O mundo acabou de nascer e os portais ainda estão sendo colados: leva uns segundos.
-        "preparing": "&cO mundo de escavação está sendo preparado. Tente de novo em instantes."
+        "preparing": "&cO Mundo de Extração está sendo preparado. Tente de novo em instantes."
       },
       "messages": {
         "build-limit": "Você não pode mexer em blocos acima da altura {limit}.",
-        "extraction-blocked": "Você não pode mexer em blocos num Ponto de Extração.",
+        "extraction-blocked": "Você não pode mexer em blocos na proteção de um portal de extração.",
         "combat-day": "O combate fica desativado durante o dia.",
         // O tronco e a folha só vêm das árvores do mundo: postos pelo jogador, dariam outra chance da Maçã Especial.
         "tree-block": "Você não pode colocar troncos nem folhas no Mundo de Extração.",
@@ -81,44 +77,36 @@
         ],
         "command-blocked": [
           "",
-          " &cVocê não pode usar este comando no mundo de escavação.",
-          " &cPara sair, procure um &bPonto de Extração&c.",
+          " &cVocê não pode usar este comando no Mundo de Extração.",
+          " &cPara sair, procure um &bPortal de Extração&c.",
           ""
         ],
         "join": [
           "",
           "&b&l Atenção! &fO PvP fica ativo durante a noite.",
-          "&f Procure um &bPonto de Extração &fpara sair do mundo de escavação com segurança!",
+          "&f Procure um &bPortal de Extração &fpara sair do mundo com os seus itens!",
           ""
         ],
-        "portal-in-combat": "Você não pode sair do mundo de escavação em combate.",
+        "portal-in-combat": "Você não pode sair do Mundo de Extração em combate.",
         "portal-failed": "Não deu para levar você de volta ao spawn agora. Tente o portal de novo em instantes.",
         // Baús, fornalhas, funis, molduras, suportes de armadura e carrinhos com baú: guardariam o saque fora da queda
         // na saída e da morte.
-        "storage": "Você não pode guardar itens fora do inventário no mundo de escavação.",
+        "storage": "Você não pode guardar itens fora do inventário no Mundo de Extração.",
         // O item da rede com lote (o plantável das plantações, por exemplo) viraria um bloco comum aqui.
-        "tracked-item": "Este item não pode ser colocado no mundo de escavação.",
+        "tracked-item": "Este item não pode ser colocado no Mundo de Extração.",
         // O resumo do que se escavou, quando o jogador para por uns segundos.
         "earnings": [
           "",
-          " &b[Escavação] &fVocê ganhou &e{tokens} {tokens_unit} &fem {duration} escavando!",
+          " &b[Extração] &fVocê ganhou &e{tokens} {tokens_unit} &fem {duration} escavando!",
           ""
         ],
         // A noite chegou: vai a todo o rankup, com o som do wither.
         "night": [
           "",
-          "&b [Escavação] &fA &lnoite &fchegou no mundo de escavação!",
+          "&b [Extração] &fA &lnoite &fchegou no Mundo de Extração!",
           "&f O PvP está &cativo&f. Fique atento aos perigos!",
           ""
         ],
-        // Quem sai do jogo dentro do mundo deixa os itens no chão: vai a todo o rankup.
-        "logout-drop": [
-          "",
-          "&b [Escavação] &f{player_name_with_color} &fsaiu do jogo no mundo de escavação!",
-          "&f Os itens ficaram em &aX: {x} Y: {y} Z: {z}&f.",
-          ""
-        ],
-        "drop-name": "&6Drop de {player_name_with_color}",
         // A invulnerabilidade de quem voltou ao lugar onde caiu acaba no primeiro golpe dele.
         "shield-ended": "&eSua invulnerabilidade acabou porque você atacou.",
         // O que vem por chance ao escavar ou ao quebrar uma árvore da Floresta.
@@ -130,11 +118,11 @@
           }
         }
       },
-      // A barra de ação de quem está no mundo, com o ponto de extração mais perto.
+      // A barra de ação de quem está no mundo, com o portal de extração mais perto.
       "action-bar": {
-        "portal": "&b&lPonto de Extração! &fEntre no &b&lPortal&f para sair do mundo com segurança.",
-        "near": "&bVocê está perto de um ponto de extração!",
-        "far": "&bPonto de extração mais próximo a &f&l{distance} &f{distance_unit}&b de distância! &7(&e&l{heading}&7)"
+        "portal": "&b&lPortal de Extração! &fEntre no &b&lPortal&f para sair do mundo com os seus itens.",
+        "near": "&bVocê está perto de um portal de extração!",
+        "far": "&bPortal de extração mais próximo a &f&l{distance} &f{distance_unit}&b de distância! &7(&e&l{heading}&7)"
       },
       "anti-camp": {
         "hologram": [
@@ -157,32 +145,32 @@
       "reset": {
         "warning": [
           "",
-          "&e O mundo de &lEscavação&r&e será reiniciado em &l{duration}&r&e!",
+          "&e O &lMundo de Extração&r&e será reiniciado em &l{duration}&r&e!",
           "&e Antes disso, todo mundo volta ao spawn do rankup com os itens.",
           ""
         ],
         // O mundo novo acabou de nascer: vai a todo o rankup.
         "done": [
           "",
-          "&b&l O mundo de Escavação foi reiniciado!",
-          "&e Um novo mundo de escavação foi gerado, e os biomas foram",
-          "&e sorteados de novo, com uma nova distribuição de terrenos",
-          "&e e de oportunidades de achados.",
+          "&b&l O Mundo de Extração foi reiniciado!",
+          "&e Um novo mundo foi gerado, com o relevo, as cavernas",
+          "&e e as árvores sorteados de novo, e novas",
+          "&e oportunidades de achados.",
           ""
         ]
       },
       // O /escavação, no rankup-1 e nos terrenos.
       "connector": {
-        "preparing": "&aPrepare-se para ser teleportado para o mundo de escavação...",
-        "unavailable": "O mundo de escavação está indisponível no momento.",
+        "preparing": "&aPrepare-se para ser teleportado para o Mundo de Extração...",
+        "unavailable": "O Mundo de Extração está indisponível no momento.",
         "cooldown": "Aguarde um pouco antes de fazer isso de novo.",
-        "in-combat": "Você não pode ir ao mundo de escavação em combate.",
-        "failed": "Não deu para levar você ao mundo de escavação. Tente de novo em instantes.",
+        "in-combat": "Você não pode ir ao Mundo de Extração em combate.",
+        "failed": "Não deu para levar você ao Mundo de Extração. Tente de novo em instantes.",
         // A espera do RTP: 5 minutos entre uma entrada e a seguinte.
         "waiting": "Você entrou no Mundo de Extração há pouco tempo. Poderá entrar de novo em {time}.",
         "arrived": [
           "",
-          "&b&l Mundo de Escavação!",
+          "&b&l Mundo de Extração!",
           "&f Explore os diferentes biomas, encontre itens raros,",
           "&f evolua a sua Pá e progrida no servidor!",
           ""
@@ -238,27 +226,28 @@
       },
       "commands": {
         "escavacao": {
-          "description": "Abre o menu do mundo de escavação"
+          "description": "Abre o menu do Mundo de Extração"
         }
       },
       "views": {
         "connector": {
-          "title": "Escavação",
+          "title": "Mundo de Extração",
           "loading": "carregando",
           "items": {
             "teleport": {
               "name": "&aTeleportar",
               "lore": [
-                "&7Vá até o mundo de escavação",
+                "&7Vá até o Mundo de Extração",
                 "&7e use a sua pá!",
                 "",
                 "&f Jogadores no mundo: &7{players}",
                 "&f Horário: &7{time}",
                 "&f Combate: {combat}",
+                "&f Entrada: {entry}",
                 "",
                 "&e &l[!] &eCuidado, você só consegue",
                 "&e sair deste mundo pelos",
-                "&e pontos de extração.",
+                "&e portais de extração.",
                 "",
                 "{state}"
               ]

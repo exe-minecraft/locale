@@ -1144,23 +1144,6 @@
             "&e da sua plantação de cana."
           ]
         },
-        // O disco era para vender na loja do exe-rankup, que o rankup novo ainda não tem.
-        "record": {
-          "name": "&bDisco de Música",
-          "lore": [
-            "&fRaridade: {rarity}"
-          ]
-        },
-        "cactus": {
-          "name": "&aCacto",
-          "lore": [
-            "&fRaridade: {rarity}",
-            "",
-            "&e&l Dica: &eUse este item para",
-            "&e construir sua farm ou fabricar",
-            "&e torres de cacto."
-          ]
-        },
         "string": {
           "name": "&aLinha",
           "lore": [
