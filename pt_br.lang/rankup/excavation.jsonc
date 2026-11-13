@@ -76,6 +76,8 @@
         "pvp-locked-target": "Este jogador ainda não tem a Pá Especial no nível {level} e não pode entrar em combate.",
         // Abaixo do nível, a lava, o fogo e a TNT, que só servem para machucar outro jogador aqui, não entram no mundo.
         "pvp-locked-tool": "Você só pode usar lava, fogo e TNT no Mundo de Extração com a sua Pá Especial no nível {level}.",
+        // A poção boa jogada de noite por quem está abaixo do nível, que não pega em outro jogador (o dono, 13/11/2026).
+        "pvp-locked-support": "De noite, você só pode ajudar outros jogadores com poções no Mundo de Extração com a sua Pá Especial no nível {level}. Em você a poção pega normalmente.",
         // O saque de quem morreu só sai do chão na mão de quem já pode lutar (a resposta do dono de 12/11/2026).
         "death-loot-locked": "Você só pode pegar os itens de quem morreu com a sua Pá Especial no nível {level}.",
         // A pá chegou ao nível que libera o PvP, no molde do aviso das conquistas.
