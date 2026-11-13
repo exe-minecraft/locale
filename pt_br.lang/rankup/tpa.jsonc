@@ -1,0 +1,221 @@
+// O teleporte entre jogadores do rankup, o /tpa (documentos do dono de 12/11/2026 e de 13/11/2026), no spawn e nos
+// terrenos. Sobe antes do tpa-plugin.jar, porque nenhum jar do ar lê estas chaves.
+//
+// O outro jogador de cada mensagem vem inteiro com o prefixo other ({other_name}, {other_name_with_color},
+// {other_name_with_tag}, {other_group_name} e {other_group_tag}), e o locale escolhe o formato. O {time} já vem com a
+// palavra no número certo ("1 segundo", "60 segundos"), e o {limit} e o {stored} também ("5 jogadores"). O {name} das
+// mensagens de "nenhum pedido" é o nick que o jogador digitou.
+{
+  "plugins": {
+    "tpa": {
+      "commands": {
+        "tpa": {
+          "description": "pedir para ir até um jogador",
+          "arguments": { "target": { "name": "jogador", "description": "Jogador até quem você quer ir" } }
+        },
+        "tpahere": {
+          "description": "pedir que um jogador venha até você",
+          "arguments": { "target": { "name": "jogador", "description": "Jogador que você quer chamar" } }
+        },
+        "tpaccept": {
+          "description": "aceitar o pedido de teleporte mais recente, ou o de um jogador",
+          "arguments": { "target": { "name": "jogador", "description": "Jogador que fez o pedido" } }
+        },
+        "tpdeny": {
+          "description": "recusar o pedido de teleporte mais recente, ou o de um jogador",
+          "arguments": { "target": { "name": "jogador", "description": "Jogador que fez o pedido" } }
+        },
+        "tpacancel": {
+          "description": "cancelar o seu pedido de teleporte mais recente, ou o que você fez a um jogador",
+          "arguments": { "target": { "name": "jogador", "description": "Jogador a quem você fez o pedido" } }
+        },
+        "tpatoggle": {
+          "description": "ligar ou desligar os pedidos de teleporte que você recebe"
+        },
+        "tpconfiar": {
+          "description": "pôr um jogador na sua lista de tpa, para ele vir até você sem pedido nos terrenos (só VIP), ou abrir a lista com /tpconfiar lista",
+          "arguments": { "target": { "name": "jogador ou lista", "description": "O nick de quem você quer adicionar, ou lista para abrir o menu" } }
+        },
+        "tpremover": {
+          "description": "tirar um jogador da sua lista de tpa (só VIP)",
+          "arguments": { "target": { "name": "jogador", "description": "Jogador que você quer tirar da lista" } }
+        }
+      },
+      // Os botões do aviso, no molde do desafio do x1. A mensagem os mostra pelos placeholders {accept} e {deny}, e o
+      // clique é ligado ao texto deles: mudar aqui muda nos dois lugares. O comando de cada um fica no plugin, com o
+      // nick de quem pediu e o instante do pedido, para o clique responder a este pedido e não ao mais recente. Os
+      // colchetes ficam, porque nenhum nick os tem e o clique nunca cai no nick.
+      "buttons": {
+        "accept": "&a[Aceitar]",
+        "deny": "&c[Recusar]",
+        "accept-hover": "&aClique para aceitar o pedido de {other_name_with_color}&a.",
+        "deny-hover": "&cClique para recusar o pedido de {other_name_with_color}&c."
+      },
+      "plural": {
+        "player": { "singular": "jogador", "plural": "jogadores" }
+      },
+      "messages": {
+        "failed": "&cNão foi possível concluir agora. Tente de novo em alguns segundos.",
+        "request": {
+          "sent": "&aPedido de teleporte enviado a {other_name_with_color} &8(expira em {time})&a.",
+          "sent-here": "&aPedido enviado a {other_name_with_color} &apara vir até você &8(expira em {time})&a.",
+          // O aviso no app de quem recebe, com os botões. A tag do cargo de quem pediu, como no documento do dono.
+          "received": [
+            "",
+            " {other_name_with_tag} &equer se teleportar até você.",
+            " {accept} {deny} &8(expira em {time})",
+            " &7Ou use &f/tpaceitar {other_name} &7e &f/tprecusar {other_name}&7.",
+            ""
+          ],
+          "received-here": [
+            "",
+            " {other_name_with_tag} &epediu para você ir até onde está.",
+            " {accept} {deny} &8(expira em {time})",
+            " &7Ou use &f/tpaceitar {other_name} &7e &f/tprecusar {other_name}&7.",
+            ""
+          ],
+          // Um pedido ao mesmo jogador só depois de o anterior vencer. O {time} é quanto falta.
+          "duplicate": "&cVocê já tem um pedido de teleporte para {other_name_with_color} &cesperando resposta. Aguarde {time} para enviar outro.",
+          // O anterior foi recusado ou cancelado, e segura a vaga até vencer, para ninguém encher o chat de outro.
+          "wait": "&cVocê pediu teleporte para {other_name_with_color} &chá menos de um minuto. Aguarde {time} para pedir de novo.",
+          "disabled": "&c{other_name_with_color} &cdesligou os pedidos de teleporte.",
+          "excavation": "&c{other_name_with_color} &cestá no Mundo de Extração, onde não chegam pedidos de teleporte.",
+          "outside": "&c{other_name_with_color} &cnão está no RankUP agora.",
+          "expired": "&7O seu pedido de teleporte para {other_name_with_color} &7expirou."
+        },
+        // O /tpaceitar e o /tprecusar sem pedido para responder, e o pedido recebido que venceu.
+        "incoming": {
+          "none": "&cVocê não tem pedidos de teleporte esperando resposta.",
+          "none-from": "&cVocê não tem pedido de teleporte de {name} esperando resposta.",
+          // O botão de um aviso antigo, com um pedido novo do mesmo jogador no lugar.
+          "changed": "&cO pedido de teleporte de {name} mudou. Use o botão do aviso mais novo no chat.",
+          "expired": "&7O pedido de teleporte de {other_name_with_color} &7expirou."
+        },
+        // O /tpcancelar sem pedido para cancelar.
+        "outgoing": {
+          "none": "&cVocê não fez nenhum pedido de teleporte que ainda espera resposta.",
+          "none-to": "&cVocê não tem pedido de teleporte para {name} esperando resposta."
+        },
+        // O aceite. Os dois leem que foi aceito quando a contagem de quem vai começa.
+        "accept": {
+          "accepted": "&aVocê aceitou o pedido de teleporte de {other_name_with_color}&a.",
+          "notice": "&a{other_name_with_color} &aaceitou o seu pedido de teleporte.",
+          // Antes de o pedido sair: ele continua valendo, e quem aceita pode tentar de novo depois.
+          "combat-self": "&cVocê está em combate. Aceite o pedido de {other_name_with_color} &cdepois que o combate acabar.",
+          "vanished": "&cVocê está no vanish, e {other_name_with_color} &cveria você ao chegar. Saia do vanish para aceitar o pedido.",
+          // Depois de o pedido sair: ele foi cancelado.
+          "excavation": "&c{other_name_with_color} &cfoi para o Mundo de Extração, e o pedido de teleporte foi cancelado.",
+          "outside": "&c{other_name_with_color} &csaiu do RankUP, e o pedido de teleporte foi cancelado.",
+          "combat-other": "&c{other_name_with_color} &cestá em combate e não pode ser teleportado. O pedido foi cancelado.",
+          "returning-other": "&c{other_name_with_color} &cestá voltando ao Mundo de Extração e não pode ser teleportado. O pedido foi cancelado.",
+          "busy-other": "&c{other_name_with_color} &cjá está sendo teleportado até outro jogador. O pedido foi cancelado.",
+          "failed": "&cO teleporte com {other_name_with_color} &cnão deu certo, e o pedido foi cancelado. Peça de novo."
+        },
+        "deny": {
+          "denied": "&7Você recusou o pedido de teleporte de {other_name_with_color}&7.",
+          "notice": "&c{other_name_with_color} &crecusou o seu pedido de teleporte."
+        },
+        "cancel": {
+          "cancelled": "&7Você cancelou o pedido de teleporte para {other_name_with_color}&7.",
+          "notice": "&c{other_name_with_color} &ccancelou o pedido de teleporte até você."
+        },
+        "toggle": {
+          "on": "&aAgora você recebe pedidos de teleporte.",
+          "off": "&cAgora você não recebe mais pedidos de teleporte. Para voltar a receber, use /tpatoggle de novo.",
+          "failed": "&cNão foi possível mudar a preferência agora. Tente de novo em alguns segundos."
+        },
+        // A viagem de quem vai. O jogador comum espera 3 segundos parado, com a contagem na barra de ação, e o VIP vai na
+        // hora. Andar, levar dano ou entrar em combate cancela a contagem.
+        "trip": {
+          "countdown": "&cTeleportando até {other_name_with_color} &cem &c&l{time}&c!",
+          "teleported": "&aTeleportado!",
+          "cancelled": {
+            "moved": "&cTeleporte cancelado porque você se moveu.",
+            "damage": "&cTeleporte cancelado porque você levou dano.",
+            "combat": "&cTeleporte cancelado porque você entrou em combate."
+          },
+          "combat-self": "&cVocê está em combate e não pode ser teleportado agora.",
+          "returning-self": "&cVocê está voltando ao Mundo de Extração e não pode ser teleportado agora.",
+          "busy-self": "&cVocê já está sendo teleportado. Espere a contagem acabar.",
+          // No fim da contagem o destino se confere de novo, onde ele está.
+          "combat-other": "&c{other_name_with_color} &centrou em combate, e o teleporte foi cancelado.",
+          "elsewhere": "&c{other_name_with_color} &csaiu do mundo dos terrenos, e o teleporte foi cancelado.",
+          "failed": "&cO teleporte até {other_name_with_color} &cnão deu certo. Tente de novo."
+        },
+        // A lista de confiáveis (só VIP). O confiável vai até o dono da lista com /tpa sem pedido, quando o dono está no
+        // mundo dos terrenos.
+        "trust": {
+          "elsewhere": "&e{other_name_with_color} &enão está no mundo dos terrenos, por isso o pedido precisa ser aceito.",
+          "arrived": "&a{other_name_with_color} &ase teleportou até você automaticamente!",
+          "vip-only": "&cApenas jogadores VIP podem usar a lista de tpa.",
+          "self": "&cVocê não pode adicionar a si mesmo à sua lista de tpa.",
+          "added": "&aVocê adicionou {other_name_with_color} &aà sua lista de tpa!",
+          "already": "&c{other_name_with_color} &cjá está na sua lista de tpa.",
+          "full": "&cVocê atingiu o limite de {limit} na sua lista de tpa.",
+          // Quem desceu de VIP: a lista guarda mais do que o limite de agora, e só os mais antigos valem.
+          "full-stored": "&cSua lista de tpa guarda {stored}, e o seu VIP deixa {limit} valendo. Remova jogadores com /tpremover até a lista ficar abaixo do limite.",
+          "removed": "&eVocê removeu {other_name_with_color} &eda sua lista de tpa.",
+          "removed-unknown": "&eVocê removeu da sua lista de tpa uma conta que não existe mais.",
+          "not-listed": "&c{other_name_with_color} &cnão está na sua lista de tpa."
+        }
+      },
+      "views": {
+        // O /tpconfiar lista, no desenho do baú de referência do Kekitoox (placa "/tpconfiar" no terreno KekitooxTeste).
+        "trusted": {
+          "title": "Lista de tpa",
+          "prompt": "Digite o nick do jogador que você quer adicionar.",
+          "items": {
+            "add": {
+              "name": "&aAdicionar",
+              "lore": [
+                "&7Clique para adicionar um jogador,",
+                "&7ao adicionar o jogador poderá",
+                "&7se teleportar até você sem pedido",
+                "&7quando você estiver nos terrenos.",
+                "&7",
+                "&aClique para adicionar!"
+              ]
+            },
+            "member": {
+              "name": "&e{target_name}",
+              "lore": [
+                "&7Este jogador está adicionado.",
+                "&7",
+                "&eClique para remover!"
+              ]
+            },
+            // Uma conta que a plataforma não acha mais. A vaga só abre tirando-a.
+            "unknown": {
+              "name": "&7Conta inexistente",
+              "lore": [
+                "&7Esta conta não existe mais.",
+                "&7",
+                "&eClique para remover!"
+              ]
+            },
+            // A vaga livre, a caveira branca.
+            "free": {
+              "name": "&7Vaga livre",
+              "lore": [
+                "&7Adicione um jogador para",
+                "&7ocupar esta vaga.",
+                "&7",
+                "&aClique para adicionar!"
+              ]
+            }
+          }
+        }
+      },
+      "preferences": {
+        "requests": {
+          "name": "&ePedidos de teleporte",
+          "description": [
+            "&7Permite receber pedidos de",
+            "&7teleporte de outros jogadores.",
+            "&7O mesmo que o /tpatoggle."
+          ]
+        }
+      }
+    }
+  }
+}
