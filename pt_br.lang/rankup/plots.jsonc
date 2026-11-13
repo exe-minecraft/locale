@@ -97,6 +97,19 @@
         "imobiliaria": {
           "description": "abrir a Imobiliária dos terrenos"
         },
+        "plantacoes": {
+          "description": "abrir o Armazém das plantações"
+        },
+        // Os sistemas que ainda não existem no rankup respondem que chegam em breve (o dono, 12/11/2026).
+        "ranks": {
+          "description": "ver os ranks do servidor"
+        },
+        "shop": {
+          "description": "abrir a loja de itens"
+        },
+        "loja": {
+          "description": "ir à loja do servidor"
+        },
         // O /clearplot e o /cp, do Limpador de Terrenos.
         "clearplot": {
           "description": "ver os comandos do Limpador de Terrenos",
@@ -138,6 +151,8 @@
         "claim-own": "&cEsse terreno já é seu.",
         "claimed": "&aVocê adquiriu o terreno {plot}! Agora você tem {count} de {limit}.",
         "teleport-own": "&aIndo para o seu terreno {plot}&a.",
+        // O /terreno e o /terrenos sem argumento: o cruzamento das estradas, com os primeiros terrenos em volta.
+        "teleport-center": "&aIndo para o centro dos terrenos.",
         "teleport": "&aIndo para o terreno {plot} &ade {owner_name_with_color}&a.",
         "limit": "&cVocê já tem {limit} {unit}, que é o limite.",
         "name-invalid": "&cEsse nome não vale. Use até {max} caracteres, entre letras, números, espaço, hífen e sublinhado, com pelo menos uma letra.",
@@ -202,6 +217,12 @@
             "plural": "&7Os {count} avisos mais antigos ficaram de fora."
           }
         }
+      },
+      // O /ranks, o /shop e a /loja, até o sistema de cada um existir (o dono, 12/11/2026: "o que existe e aviso de em breve").
+      "coming-soon": {
+        "ranks": "&eO sistema de ranks chega em breve ao servidor.",
+        "shop": "&eA loja de itens chega em breve ao servidor.",
+        "loja": "&eA loja do servidor chega em breve."
       },
       // O [plot] do chat: o terreno de quem escreveu, clicável. O texto vai no meio da mensagem e volta à cor dela depois.
       "chat": {

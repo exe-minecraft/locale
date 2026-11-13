@@ -987,6 +987,7 @@
           "already-have": "Você já tem a Enxada Especial no inventário.",
           "in-vault": "Sua Enxada Especial está guardada no seu cofre.",
           "vault-busy": "Seu cofre está aberto ou ainda sendo salvo. Tente de novo em instantes.",
+          "vault-unavailable": "Não dá para conferir o seu cofre neste servidor. Use o comando no spawn ou nos terrenos.",
           "cooldown": "Aguarde para resgatar a enxada de novo.",
           "retrieved": [
             "",
@@ -1010,6 +1011,7 @@
           "already-have": "Você já tem a espada especial na mochila.",
           "in-vault": "Sua espada especial está guardada no seu /cofre.",
           "vault-busy": "Seu cofre está aberto ou ainda sendo salvo. Tente de novo em instantes.",
+          "vault-unavailable": "Não dá para conferir o seu cofre neste servidor. Use o comando no spawn ou nos terrenos.",
           "cooldown": "Aguarde para resgatar a espada de novo.",
           "retrieved": [
             "",
@@ -1058,6 +1060,7 @@
           "already-have": "Você já tem a Pá Especial no inventário.",
           "in-vault": "Sua Pá Especial está guardada no seu cofre.",
           "vault-busy": "Seu cofre está aberto ou ainda sendo salvo. Tente de novo em instantes.",
+          "vault-unavailable": "Não dá para conferir o seu cofre neste servidor. Use o comando no spawn ou nos terrenos.",
           "cooldown": "Aguarde para resgatar a pá de novo.",
           "retrieved": [
             "",
@@ -1093,6 +1096,8 @@
         "prestige-done": "&aPrestígio &l{prestige}&r&a. Os encantamentos foram zerados, menos o Indestrutível.",
         "profile-loading": "Seu perfil ainda está carregando. Tente de novo em instantes.",
         "duplicates-removed": "Removemos {amount} {amount_unit} do seu inventário.",
+        // A arma de um tipo que este servidor não tem mais, tirada do inventário no join (o machado, desde 12/11/2026).
+        "kind-retired": "O Machado Especial não existe mais no rankup e saiu do seu inventário.",
         "in-combat": "Você não pode abrir a bancada em combate.",
         "not-in-hand": "Segure a arma na mão para mexer nela.",
         "already-max-level": "Este encantamento já está no nível máximo.",

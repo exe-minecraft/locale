@@ -80,6 +80,7 @@
           "already-have": "Você já tem a espada especial na mochila.",
           "in-vault": "Sua espada especial está guardada no seu /cofre.",
           "vault-busy": "Seu cofre está aberto ou ainda sendo salvo. Tente de novo em instantes.",
+          "vault-unavailable": "Não dá para conferir o seu cofre neste servidor.",
           "cooldown": "Aguarde para resgatar a espada de novo.",
           "retrieved": [
             "",
@@ -105,6 +106,7 @@
           "already-have": "Você já tem o machado especial na mochila.",
           "in-vault": "Seu machado especial está guardado no seu /cofre.",
           "vault-busy": "Seu cofre está aberto ou ainda sendo salvo. Tente de novo em instantes.",
+          "vault-unavailable": "Não dá para conferir o seu cofre neste servidor.",
           "cooldown": "Aguarde para resgatar o machado de novo.",
           "retrieved": [
             "",
@@ -129,6 +131,8 @@
         "not-enough-items": "Você precisa de {amount} {item} no inventário para consertar a arma.",
         "profile-loading": "Seu perfil ainda está carregando. Tente de novo em instantes.",
         "duplicates-removed": "Removemos {amount} {amount_unit} do seu inventário.",
+        // A arma de um tipo que este servidor não tem, tirada do inventário no join. No P4Free não acontece hoje.
+        "kind-retired": "Uma arma especial que não existe neste servidor saiu do seu inventário.",
         "skull-cracker": "&6Crítico! &eQuebra-Crânio ativado.",
         "armor-breaker": {
           "attacker": "&4Quebra-Armadura ativado.",

@@ -173,6 +173,16 @@
         "fix-size": "&eSeu baú do fim diminuiu com o grupo atual. O que sobrou foi para o inventário.",
         "item-not-allowed": "&cVocê não pode guardar esse item no baú do fim."
       },
+      // O /cofre do rankup, só para os itens especiais, os que os outros baús recusam (o documento do dono de 12/11/2026,
+      // à noite: a Espada, a Enxada e a Pá Especiais).
+      "vault": {
+        "title": "Cofre de {owner_name}",
+        "in-use": "&cEste cofre está em uso ou sendo salvo. Aguarde um momento.",
+        "cooldown": "&cAguarde {time} depois de entrar para abrir o cofre.",
+        "fix-size": "&eSeu cofre foi ajustado. O que sobrou foi para o inventário.",
+        "item-not-allowed": "&cVocê não pode guardar esse item no cofre.",
+        "special-only": "&cO cofre só guarda os itens especiais, como a Espada, a Enxada e a Pá Especiais. Os outros itens vão no /ec e no /bau."
+      },
       // Os baús do /bau. {number} é o número do baú.
       "chest": {
         "title": "Baú #{number} de {owner_name}",

@@ -1,0 +1,45 @@
+{
+  "plugins": {
+    "essentials": {
+      // Os warps do rankup, o /warps do documento do dono de 12/11/2026, à noite. Os nomes e as descrições são os dos baús
+      // de referência do Kekitoox, com o português corrigido. Entram só os lugares que já existem (a resposta do dono no
+      // mesmo dia); a Loja, o Tutorial, a Arena, a MinaPvP, as Caixas e a Pesca entram quando existirem.
+      "warps": {
+        "terrenos": {
+          "name": "&2Terrenos",
+          "description": [
+            "&7Mundo de terrenos onde você pode",
+            "&7construir, farmar e muito mais.",
+            "",
+            "&2Clique para se teleportar!",
+            "&8(/terrenos)"
+          ]
+        },
+        "extracao": {
+          "name": "&5Mundo de Extração",
+          "description": [
+            "&7Mundo de escavação com vários biomas,",
+            "&7diversas mecânicas e muito para explorar.",
+            "",
+            "&5Clique para abrir o menu!",
+            "&8(/extração)"
+          ]
+        }
+      },
+      "views": {
+        "warps": {
+          "title": "Warps",
+          // Um molde para todos os warps: o nome e a descrição de cada um vêm de plugins.essentials.warps.<id>.
+          "items": {
+            "0": {
+              "name": "{warp_name}",
+              "lore": [
+                "{warp_description}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

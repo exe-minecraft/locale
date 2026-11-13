@@ -36,7 +36,11 @@
       "combat": {
         "on": "&cPvP ativo!",
         "off": "&aPvP desativado!",
-        "unknown": "&7Desconhecido"
+        "unknown": "&7Desconhecido",
+        // De noite, para quem ainda não tem a Pá Especial no nível que libera o PvP (o documento do dono de 12/11/2026,
+        // à noite: "a partir do nível 10 da Pá Especial"). Curto: a linha da scoreboard do 1.8 corta em 32 caracteres,
+        // com as cores e o "Combate:" dentro.
+        "locked": "&eSó no nível {level}"
       },
       // A scoreboard do Mundo de Extração: a do rankup, com o horário, o combate, o bioma e os
       // blocos escavados com a pá, como no exe-rankup.
@@ -67,6 +71,15 @@
         "build-limit": "Você não pode mexer em blocos acima da altura {limit}.",
         "extraction-blocked": "Você não pode mexer em blocos na proteção de um portal de extração.",
         "combat-day": "O combate fica desativado durante o dia.",
+        // O PvP da noite só vale entre quem tem a Pá Especial no nível {level}, dos dois lados.
+        "pvp-locked": "Você só pode lutar com outros jogadores com a sua Pá Especial no nível {level}.",
+        "pvp-locked-target": "Este jogador ainda não tem a Pá Especial no nível {level} e não pode entrar em combate.",
+        // Abaixo do nível, a lava, o fogo e a TNT, que só servem para machucar outro jogador aqui, não entram no mundo.
+        "pvp-locked-tool": "Você só pode usar lava, fogo e TNT no Mundo de Extração com a sua Pá Especial no nível {level}.",
+        // O saque de quem morreu só sai do chão na mão de quem já pode lutar (a resposta do dono de 12/11/2026).
+        "death-loot-locked": "Você só pode pegar os itens de quem morreu com a sua Pá Especial no nível {level}.",
+        // A pá chegou ao nível que libera o PvP, no molde do aviso das conquistas.
+        "pvp-unlocked": "&a&lCONQUISTA! &fVocê desbloqueou o &aPvP do Mundo de Extração&f com a sua Pá Especial no nível {level}. A partir de agora, você pode enfrentar outros jogadores nas suas extrações.",
         // O tronco e a folha só vêm das árvores do mundo: postos pelo jogador, dariam outra chance da Maçã Especial.
         "tree-block": "Você não pode colocar troncos nem folhas no Mundo de Extração.",
         "shovel-tip": [
@@ -143,6 +156,8 @@
         "blast": "&c&lBOOM! &fO anti-camp empurrou você para longe do portal."
       },
       "reset": {
+        // Os blocos escavados voltaram ao lugar, sem reiniciar o mundo: vai a quem está nele.
+        "blocks": "&b[Extração] &fOs blocos escavados do Mundo de Extração voltaram ao lugar.",
         "warning": [
           "",
           "&e O &lMundo de Extração&r&e será reiniciado em &l{duration}&r&e!",
@@ -216,7 +231,8 @@
           ],
           "refused": {
             "elsewhere": "O Inversor só funciona no Mundo de Extração.",
-            "day": "O Inversor só funciona durante a noite, com o PvP ativo."
+            "day": "O Inversor só funciona durante a noite, com o PvP ativo.",
+            "pvp-locked": "O Inversor só funciona com a sua Pá Especial no nível {level}, quando o PvP é liberado para você."
           },
           "swapped": {
             "thrower": "&aVocê trocou de lugar com {target_name_with_color}&a.",
