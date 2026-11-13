@@ -81,7 +81,9 @@
           "disabled": "&c{other_name_with_color} &cdesligou os pedidos de teleporte.",
           "excavation": "&c{other_name_with_color} &cestá no Mundo de Extração, onde não chegam pedidos de teleporte.",
           "outside": "&c{other_name_with_color} &cnão está no RankUP agora.",
-          "expired": "&7O seu pedido de teleporte para {other_name_with_color} &7expirou."
+          "expired": "&7O seu pedido de teleporte para {other_name_with_color} &7expirou.",
+          // A equipe no vanish não manda pedido: o aviso diria onde ela está.
+          "vanished": "&cVocê está no vanish, e o pedido mostraria você. Saia do vanish para pedir teleporte."
         },
         // O /tpaceitar e o /tprecusar sem pedido para responder, e o pedido recebido que venceu.
         "incoming": {
@@ -100,16 +102,18 @@
         "accept": {
           "accepted": "&aVocê aceitou o pedido de teleporte de {other_name_with_color}&a.",
           "notice": "&a{other_name_with_color} &aaceitou o seu pedido de teleporte.",
-          // Antes de o pedido sair: ele continua valendo, e quem aceita pode tentar de novo depois.
+          // Antes de o pedido sair: ele continua valendo até vencer, e quem aceita pode tentar de novo.
           "combat-self": "&cVocê está em combate. Aceite o pedido de {other_name_with_color} &cdepois que o combate acabar.",
           "vanished": "&cVocê está no vanish, e {other_name_with_color} &cveria você ao chegar. Saia do vanish para aceitar o pedido.",
+          "excavation": "&c{other_name_with_color} &cestá no Mundo de Extração, onde o teleporte não chega. O pedido segue valendo até vencer.",
+          "outside": "&c{other_name_with_color} &cnão está no RankUP agora. O pedido segue valendo até vencer.",
           // Depois de o pedido sair: ele foi cancelado.
-          "excavation": "&c{other_name_with_color} &cfoi para o Mundo de Extração, e o pedido de teleporte foi cancelado.",
-          "outside": "&c{other_name_with_color} &csaiu do RankUP, e o pedido de teleporte foi cancelado.",
           "combat-other": "&c{other_name_with_color} &cestá em combate e não pode ser teleportado. O pedido foi cancelado.",
           "returning-other": "&c{other_name_with_color} &cestá voltando ao Mundo de Extração e não pode ser teleportado. O pedido foi cancelado.",
           "busy-other": "&c{other_name_with_color} &cjá está sendo teleportado até outro jogador. O pedido foi cancelado.",
-          "failed": "&cO teleporte com {other_name_with_color} &cnão deu certo, e o pedido foi cancelado. Peça de novo."
+          "failed": "&cO teleporte com {other_name_with_color} &cnão deu certo, e o pedido foi cancelado.",
+          // A quem pediu, quando o aceite não deu certo depois de o pedido sair.
+          "failed-notice": "&cO aceite de {other_name_with_color} &cnão deu certo, e o pedido de teleporte foi cancelado. Peça de novo."
         },
         "deny": {
           "denied": "&7Você recusou o pedido de teleporte de {other_name_with_color}&7.",
