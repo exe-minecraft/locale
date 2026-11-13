@@ -123,8 +123,9 @@
                   "{enchant_drops}"
                 ]
               },
+              // 9: o encantamento que dá para evoluir, mas o saldo não chega. O nome sai em vermelho (o dono, 13/11/2026).
               "9": {
-                "name": "&a{enchant_name} &l{enchant_level}",
+                "name": "&c{enchant_name} &l{enchant_level}",
                 "lore": [
                   "{enchant_description}",
                   "",
@@ -309,6 +310,18 @@
                 "  &fChance: &7variadas"
               ]
             },
+            // O {enchant_title} do nome dos ícones, com o nível. O número sai em negrito e o ∞ não, porque em negrito o
+            // 1.8 o desenha borrado (o dono, 13/11/2026).
+            "enchant-title": {
+              "number": "{enchant_name} &l{enchant_level}",
+              "endless": "{enchant_name} {enchant_level}"
+            },
+            // O {enchant_cost} do preço, pela moeda do encantamento. Os tokens com o $ em verde e o cash com o ✪ em
+            // dourado, como nos baús de referência do Kekitoox (o dono, 13/11/2026).
+            "cost": {
+              "tokens": "&a${price}",
+              "cash": "&6{price} ✪"
+            },
             "shop": [
               "&e Adquira &f&lCASH&e e outros",
               "&e produtos em nossa loja!",
@@ -457,6 +470,8 @@
           "counter": "{name} &7[{blocks}]",
           "investment": "&fInvestimento: &a{tokens} Tokens",
           "enchant-owned": "&6 {enchant} &l{level}",
+          // O encantamento sem número de nível, com o ∞ sem negrito, porque em negrito o 1.8 o desenha borrado.
+          "enchant-endless": "&6 {enchant} {level}",
           "enchant-missing": "&8 {enchant}",
           "level": "&fNível: &b&l{level}",
           "progress": "{bar} &7({percent}%)",
@@ -740,9 +755,9 @@
                   "&cNão é possível evoluir este encantamento."
                 ]
               },
-              // 9: o encantamento que dá para evoluir, mas o saldo não chega.
+              // 9: o encantamento que dá para evoluir, mas o saldo não chega. O nome sai em vermelho (o dono, 13/11/2026).
               "9": {
-                "name": "&a{enchant_name} &l{enchant_level}",
+                "name": "&c{enchant_name} &l{enchant_level}",
                 "lore": [
                   "{enchant_description}",
                   "",
@@ -817,6 +832,18 @@
               "varied": [],
               "next": "  &f{effect}: &c&m{from}&7 » &b{to}",
               "current": "  &f{effect}: &7{from}"
+            },
+            // O {enchant_title} do nome dos ícones, com o nível. O número sai em negrito e o ∞ não, porque em negrito o
+            // 1.8 o desenha borrado (o dono, 13/11/2026).
+            "enchant-title": {
+              "number": "{enchant_name} &l{enchant_level}",
+              "endless": "{enchant_name} {enchant_level}"
+            },
+            // O {enchant_cost} do preço, pela moeda do encantamento. Os tokens com o $ em verde e o cash com o ✪ em
+            // dourado, como nos baús de referência do Kekitoox (o dono, 13/11/2026).
+            "cost": {
+              "tokens": "&a${price}",
+              "cash": "&6{price} ✪"
             },
             // O {enchant_shop}: só no que se paga em cash. A linha em branco do fim é dele.
             "shop": [
@@ -962,6 +989,8 @@
           "counter": "{name} &7[{blocks}]",
           "investment": "&fInvestimento: &a{tokens} Tokens",
           "enchant-owned": "&6 {enchant} &l{level}",
+          // O encantamento sem número de nível, com o ∞ sem negrito, porque em negrito o 1.8 o desenha borrado.
+          "enchant-endless": "&6 {enchant} {level}",
           "enchant-missing": "&8 {enchant}",
           "level": "&fNível: &b&l{level}",
           "progress": "{bar} &7({percent}%)",
