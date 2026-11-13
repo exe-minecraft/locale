@@ -132,7 +132,8 @@
           "cancelled": {
             "moved": "&cTeleporte cancelado porque você se moveu.",
             "damage": "&cTeleporte cancelado porque você levou dano.",
-            "combat": "&cTeleporte cancelado porque você entrou em combate."
+            "combat": "&cTeleporte cancelado porque você entrou em combate.",
+            "returning": "&cTeleporte cancelado porque você está voltando ao Mundo de Extração."
           },
           "combat-self": "&cVocê está em combate e não pode ser teleportado agora.",
           "returning-self": "&cVocê está voltando ao Mundo de Extração e não pode ser teleportado agora.",
