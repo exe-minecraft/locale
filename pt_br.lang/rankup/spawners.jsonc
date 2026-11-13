@@ -133,6 +133,7 @@
           "block-limit": "&cEste bloco já está no limite de spawners agrupados ({limit}).",
           "plot-limit": "&cEste terreno já está no limite de blocos de spawner ({limit}). Agrupe os spawners iguais no mesmo bloco.",
           "type-limit": "&cVocê já está no limite de spawners de {mob_name} ({limit}).",
+          "type-in-plot": "&cEste terreno já tem um bloco de spawner de {mob_name}. Clique nele com o item na mão para agrupar.",
           "placed": "&aSpawner de {mob_name} colocado com {amount}x.",
           "placed-part": "&aSpawner de {mob_name} colocado com {amount}x. &eO que passou do limite segue no item ({left}x).",
           "grouped": "&aVocê agrupou {amount}x neste spawner de {mob_name}. Total: {total}x.",
@@ -166,6 +167,7 @@
         },
         "upgrade": {
           "maximum": "&cEsta melhoria já está no nível máximo.",
+          "too-expensive": "&cO preço desta melhoria para todos os spawners do bloco passa do valor máximo de uma compra. Avise a equipe.",
           "type-limit": "&cEste bloco já comporta todos os spawners de {mob_name} que você pode manter colocados ({limit}). Subir o Máximo Stack não mudaria nada."
         },
         "remove": {
@@ -176,6 +178,13 @@
           "too-far": "&cVocê está longe demais deste spawner para retirar todos. Chegue perto dele e tente de novo.",
           "failed": "&cNão deu para retirar os spawners agora. Nada saiu do bloco.",
           "removed": "&aVocê retirou {amount}x do spawner de {mob_name}. As melhorias seguem no item."
+        },
+        // A Picareta de Spawners da equipe, que retira o bloco inteiro de outro jogador. Os drops guardados no bloco
+        // não vão a ninguém, e o {drops} diz quantos eram.
+        "staff": {
+          "removed": "&aVocê retirou {amount}x do spawner de {mob_name} de {owner_name_with_color}&a. As melhorias seguem no item. Drops guardados que se perderam com o bloco: {drops}.",
+          "creative": "&cA Picareta de Spawners não retira no modo criativo. Volte à sobrevivência para usar.",
+          "not-allowed": "&cVocê não tem permissão para usar a Picareta de Spawners."
         },
         "set-spawn": {
           "none": "&cNão há nenhum spawner seu a até {distance} {distance_unit} de você.",
@@ -227,6 +236,16 @@
           "rare": { "display-name": "Gaiola Rara", "name": "&9Gaiola Rara" },
           "epic": { "display-name": "Gaiola Épica", "name": "&5Gaiola Épica" },
           "legendary": { "display-name": "Gaiola Lendária", "name": "&6Gaiola Lendária" }
+        },
+        // A Picareta de Spawners da equipe, com o nome e a descrição que o dono mandou em 12/11/2026.
+        "pickaxe": {
+          "display-name": "Picareta de Spawners",
+          "name": "&6Picareta de Spawners",
+          "lore": [
+            "&7Use esta picareta para retirar os",
+            "&7spawners de outros jogadores.",
+            "&8(Item de Staff)"
+          ]
         },
         // O ovo da loja. Um item vale vários ovos, com a quantidade no nome.
         "egg": {
@@ -742,6 +761,12 @@
                 "target": { "name": "jogador", "description": "Jogador que recebe" },
                 "mob": { "name": "mob", "description": "galinha, vaca, zombie, esqueleto, aranha, blaze, slime, magma, pigman ou golem" },
                 "amount": { "name": "quantidade", "description": "Quantas cabeças" }
+              }
+            },
+            "pickaxe": {
+              "description": "entregar a Picareta de Spawners a um jogador deste servidor",
+              "arguments": {
+                "target": { "name": "jogador", "description": "Jogador que recebe" }
               }
             },
             "give": {

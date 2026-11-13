@@ -1,0 +1,19 @@
+{
+  "plugins": {
+    "spawners": {
+      // O aviso da Picareta de Spawners, que a equipe usa no servidor de terrenos do rankup para retirar o spawner de
+      // outro jogador. Quem tem a regra alertas:picareta-spawners o lê em qualquer servidor da rede, e por isso a
+      // chave mora no global. Os outros textos dos spawners estão em rankup/spawners.jsonc.
+      "staff-alert": {
+        "pickaxe": [
+          " ",
+          " &c[!] {staff_name_with_tag} &cusou a Picareta de Spawners",
+          " &c[!] Retirou: &f{amount}x Spawner de {mob_name}",
+          " &c[!] Dono: {owner_name_with_tag} &7(bloco em {block})",
+          " &c[!] Drops guardados que se perderam: &f{drops}",
+          " "
+        ]
+      }
+    }
+  }
+}
