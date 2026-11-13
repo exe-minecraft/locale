@@ -1,6 +1,6 @@
 {
   "plugins": {
-    // As armas do rankup: a espada e o machado da rede, com os textos do P4Free menos o /cofre e os tokens
+    // As armas do rankup: a espada da rede, com os textos do P4Free menos o /cofre e os tokens
     // dos golpes, que o rankup não tem, e a Pá Especial, o /pá do exe-rankup. Os textos da pá que mudam de
     // um tipo para outro ficam em "pa", com o texto do exe-rankup, sem os símbolos que o 1.8 não desenha.
     "weapons": {
@@ -478,7 +478,8 @@
         "done-color": "&a",
         "left-color": "&7"
       },
-      // A espada e o machado da rede, os mesmos do P4Free (pedido do dono, 09/11/2026).
+      // A espada da rede, a mesma do P4Free (pedido do dono, 09/11/2026). O machado saiu do rankup no documento do
+      // dono de 12/11/2026, à noite.
       "espada": {
         "item": {
           "name": "&cEspada Especial",
@@ -489,17 +490,6 @@
         },
         "broken": "&cA sua espada especial se partiu.",
         "plural": "Espadas"
-      },
-      "machado": {
-        "item": {
-          "name": "&cMachado Especial",
-          "investment": "&fInvestimento: &e{tokens} Tokens",
-          "enchant-owned": "&6 {enchant} &l{level}",
-          "enchant-missing": "&8 {enchant}",
-          "kills": "&fAbates: &c{kills}"
-        },
-        "broken": "&cO seu machado especial se partiu.",
-        "plural": "Machados"
       },
       // As palavras que acompanham um número montado no código (o Plural do core): 1 no singular.
       "units": {
@@ -514,7 +504,7 @@
       "pa": {
         // O que aparece no lugar do número no encantamento sem nível para mostrar (a Eficiência, o Indestrutível).
         "endless": "∞",
-        // Os textos da pá que mudam de um tipo para outro: no rankup ela mora com a espada e o machado, que
+        // Os textos da pá que mudam de um tipo para outro: no rankup ela mora com a espada, que
         // usam os de plugins.weapons. O exe-weapons.jar lê estes pelo tipo (WeaponKind.text).
         "messages": {
           "not-purchasable": "Este encantamento não pode ser comprado. Ele sobe com o nível da sua pá.",
@@ -1018,30 +1008,6 @@
             " &aVocê resgatou a espada especial!",
             " &7Prestígio &f{prestige}&7, &f{kills}&7 {kills_unit}.",
             " &eShift + botão direito com ela na mão abre a bancada.",
-            ""
-          ],
-          "historico": {
-            "description": "Mostra o histórico das armas especiais de um jogador",
-            "arguments": {
-              "target": {
-                "name": "jogador",
-                "description": "O jogador, online ou não, cujo histórico você quer ver"
-              }
-            }
-          }
-        },
-        "machado": {
-          "still-loading": "Seu machado ainda está carregando. Tente de novo em instantes.",
-          "inventory-full": "Libere um espaço no inventário antes de resgatar o machado.",
-          "already-have": "Você já tem o machado especial na mochila.",
-          "in-vault": "Seu machado especial está guardado no seu /cofre.",
-          "vault-busy": "Seu cofre está aberto ou ainda sendo salvo. Tente de novo em instantes.",
-          "cooldown": "Aguarde para resgatar o machado de novo.",
-          "retrieved": [
-            "",
-            " &aVocê resgatou o machado especial!",
-            " &7Prestígio &f{prestige}&7, &f{kills}&7 {kills_unit}.",
-            " &eShift + botão direito com ele na mão abre a bancada.",
             ""
           ],
           "historico": {

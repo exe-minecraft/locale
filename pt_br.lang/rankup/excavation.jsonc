@@ -96,7 +96,8 @@
         ],
         "join": [
           "",
-          "&b&l Atenção! &fO PvP fica ativo durante a noite.",
+          "&b&l Atenção! &fO PvP fica ativo durante a noite, entre quem",
+          "&f tem a Pá Especial no nível {level} ou acima.",
           "&f Procure um &bPortal de Extração &fpara sair do mundo com os seus itens!",
           ""
         ],
@@ -117,7 +118,8 @@
         "night": [
           "",
           "&b [Extração] &fA &lnoite &fchegou no Mundo de Extração!",
-          "&f O PvP está &cativo&f. Fique atento aos perigos!",
+          "&f O PvP está &cativo&f para quem tem a Pá Especial no nível {level}.",
+          "&f Fique atento aos perigos!",
           ""
         ],
         // A invulnerabilidade de quem voltou ao lugar onde caiu acaba no primeiro golpe dele.
@@ -181,7 +183,7 @@
         "cooldown": "Aguarde um pouco antes de fazer isso de novo.",
         "in-combat": "Você não pode ir ao Mundo de Extração em combate.",
         "failed": "Não deu para levar você ao Mundo de Extração. Tente de novo em instantes.",
-        // A espera do RTP: 5 minutos entre uma entrada e a seguinte.
+        // A espera do RTP: 10 minutos entre uma entrada e a seguinte (o documento do dono de 12/11/2026, à noite).
         "waiting": "Você entrou no Mundo de Extração há pouco tempo. Poderá entrar de novo em {time}.",
         "arrived": [
           "",
