@@ -131,8 +131,7 @@
           "plot-listed": "&cEste terreno está anunciado na Imobiliária. Tire o anúncio antes de colocar spawners nele.",
           "no-space": "&cNão há espaço para o spawner neste lugar.",
           "block-limit": "&cEste bloco já está no limite de spawners agrupados ({limit}).",
-          "plot-limit": "&cEste terreno já está no limite de blocos de spawner ({limit}). Agrupe os spawners iguais no mesmo bloco.",
-          "type-limit": "&cVocê já está no limite de spawners de {mob_name} ({limit}).",
+          "plot-limit": "&cEste terreno já está no limite de blocos de spawner ({limit}). Cada tipo de spawner ocupa um bloco, e para colocar outro tipo é preciso retirar um deles.",
           "type-in-plot": "&cEste terreno já tem um bloco de spawner de {mob_name}. Clique nele com o item na mão para agrupar.",
           "placed": "&aSpawner de {mob_name} colocado com {amount}x.",
           "placed-part": "&aSpawner de {mob_name} colocado com {amount}x. &eO que passou do limite segue no item ({left}x).",
@@ -144,7 +143,7 @@
         },
         "sell": {
           "all-not-owned": "&cVocê ainda não tem o Vender Tudo. Venda clicando no ícone dos drops.",
-          "all-cooldown": "&cVocê poderá usar o Vender Tudo neste spawner de novo em {time}.",
+          "all-cooldown": "&cVocê poderá usar o Vender Tudo nos seus spawners de {mob_name} de novo em {time}.",
           "cooldown": "&cAguarde {time} para vender de novo.",
           "nothing": "&cEste spawner não tem drops para vender.",
           "sold": "&aVocê vendeu {amount}x {drop_name} &apor {value}&a.",
@@ -167,8 +166,7 @@
         },
         "upgrade": {
           "maximum": "&cEsta melhoria já está no nível máximo.",
-          "too-expensive": "&cO preço desta melhoria para todos os spawners do bloco passa do valor máximo de uma compra. Avise a equipe.",
-          "type-limit": "&cEste bloco já comporta todos os spawners de {mob_name} que você pode manter colocados ({limit}). Subir o Máximo Stack não mudaria nada."
+          "too-expensive": "&cO preço desta melhoria para todos os spawners do bloco passa do valor máximo de uma compra. Avise a equipe."
         },
         "remove": {
           "sell-first": "&cVenda todos os drops deste spawner antes de retirar.",
@@ -448,7 +446,8 @@
                 "&cVenda todos os drops antes de retirar."
               ]
             },
-            // O Vender Tudo. O {shop} são as duas linhas da loja, e o {cooldown} é a espera do config.
+            // O Vender Tudo. O {shop} são as duas linhas da loja, e o {cooldown} é a espera do config, que é do jogador
+            // em cada tipo de mob.
             "sell-all": {
               "shop": [
                 "&eAdquira &f&lCASH &ee outros produtos",
@@ -463,7 +462,8 @@
                   "&7",
                   "&aClique para vender {sale_amount}x",
                   "&apor {sale_value}&a!",
-                  "&8(Espera de {cooldown})"
+                  "&8(Espera de {cooldown} nos seus",
+                  "&8spawners deste tipo)"
                 ]
               },
               "cooldown": {
@@ -472,8 +472,8 @@
                   "&7Com esta opção você vende todos os",
                   "&7drops deste spawner com um toque!",
                   "&7",
-                  "&cAguarde {time}",
-                  "&cpara vender tudo de novo."
+                  "&cAguarde {time} para vender tudo",
+                  "&cde novo nos seus spawners deste tipo."
                 ]
               },
               "empty": {
@@ -514,7 +514,8 @@
             }
           }
         },
-        // O menu das melhorias (os baús "menu melhorias" e "opções melhorias").
+        // O menu das melhorias (os baús "menu melhorias" e "opções melhorias"). O {price} é o total, que é o
+        // {unit_price} da lista vezes os {quantity} spawners do bloco.
         "upgrades": {
           "title": "Melhorias do Spawner",
           "items": {
@@ -528,6 +529,7 @@
                   "&f  {label}: &c&m{value}&r &7» &d{next_value}",
                   "&7",
                   "&f Preço: {price}",
+                  "&8  {quantity}x {unit_price}",
                   "&7",
                   "&aClique para evoluir!"
                 ]
@@ -541,6 +543,7 @@
                   "&f  {label}: &c&m{value}&r &7» &d{next_value}",
                   "&7",
                   "&f Preço: {price}",
+                  "&8  {quantity}x {unit_price}",
                   "&7",
                   "&cVocê não tem saldo suficiente!"
                 ]
@@ -553,18 +556,6 @@
                   "&f {label}: &d{value}",
                   "&7",
                   "&cNível máximo atingido!"
-                ]
-              },
-              // Só no Máximo Stack: o bloco já comporta o limite de spawners deste tipo do grupo do dono.
-              "type-limit": {
-                "name": "&d{upgrade} &d&l{level}",
-                "lore": [
-                  "{description}",
-                  "&7",
-                  "&f {label}: &d{value}",
-                  "&7",
-                  "&cEste bloco já comporta o seu limite",
-                  "&cde spawners deste tipo ({limit})."
                 ]
               }
             }
