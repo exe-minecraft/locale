@@ -210,7 +210,7 @@
           "no-room": "&cVocê não tem espaço no inventário para retirar {amount} {unit}.",
           "not-enough": "&cVocê tem menos de {amount} {unit} de {mob_name} entre as guardadas.",
           "withdrawn": "&aVocê retirou {amount} {unit} de {mob_name}. Guardadas: {balance}.",
-          "busy": "&cAguarde a operação anterior com as suas cabeças terminar."
+          "busy": "&cAguarde a operação anterior com suas cabeças terminar."
         },
         "cages": {
           "not-enough": "&cVocê precisa de {needed} {needed_unit} da {previous} &cpara fabricar {made}x {cage}&c. Em falta: {missing}.",
@@ -787,12 +787,12 @@
           }
         },
         "heads": {
-          "description": "abrir as suas cabeças guardadas",
+          "description": "abrir suas cabeças guardadas",
           "usage": {
-            "menu": { "syntax": "", "description": "abrir as suas cabeças guardadas" }
+            "menu": { "syntax": "", "description": "abrir suas cabeças guardadas" }
           },
           "store": {
-            "description": "abrir as suas cabeças guardadas, para guardar e retirar"
+            "description": "abrir suas cabeças guardadas, para guardar e retirar"
           },
           "view": {
             "description": "ver as cabeças guardadas de um jogador",
