@@ -39,6 +39,14 @@
             " &fterreno. Abra a loja clicando &a&lAQUI&f.",
             ""
           ],
+          // A dica dos ranks do rankup, em que o AQUI roda o /ranks. Espera o automessage do rankup, como a da enxada.
+          "ranks-rankup": [
+            "",
+            "&b&l RANKS: &fEvolua de rank com as cabeças dos spawners e",
+            " &flibere um spawner novo a cada rank. Veja os ranks e os",
+            " &fbenefícios no &a/ranks&f, ou clicando &a&lAQUI&f.",
+            ""
+          ],
           "vip": [
             "",
             "&6&l VIP: &fCom o &aSamurai&f ou o &4Imperial&f você ganha kit",

@@ -1,0 +1,255 @@
+// Os ranks do rankup (o documento "Sistema de Ranks" do dono, de 14/11/2026), com os itens no desenho dos baús de
+// referência do terreno do Kekitoox (rankup-plots-1, -38, 65, de -50 a -35: "/ranks", "beneficios", "ranks do /rankup",
+// "/rankup" e "menu dentro /ranks"). Sobe antes do ranks-plugin.jar, porque nenhum jar do ar lê estas chaves.
+//
+// O {tag} é a tag do rank ("&f[Galinha I]"), montada pela chave tag. O {rank_name} e o {rank_color} são o nome e a cor
+// do rank, o {tier} é a vertente em número romano, e o {cost} é o custo montado pela chave cost ("&f1.500 Cabeças de
+// &fGalinha"). Um rank novo no config.yml do plugin pede a entrada dele em ranks, com o nome e a cor.
+{
+  "plugins": {
+    "ranks": {
+      "units": {
+        // A unidade do custo nos itens ("1.500 Cabeças"), com maiúscula como nos baús.
+        "head": { "singular": "Cabeça", "plural": "Cabeças" },
+        // A unidade nas mensagens ("1.500 cabeças de Galinha").
+        "head-lower": { "singular": "cabeça", "plural": "cabeças" }
+      },
+      // O nome e a cor de cada rank, pelo id no config.yml do plugin. As cores são as dos mobs dos spawners.
+      "ranks": {
+        "galinha": { "name": "Galinha", "color": "&f" },
+        "vaca": { "name": "Vaca", "color": "&8" },
+        "zombie": { "name": "Zombie", "color": "&2" },
+        "esqueleto": { "name": "Esqueleto", "color": "&7" },
+        "aranha": { "name": "Aranha", "color": "&8" },
+        "blaze": { "name": "Blaze", "color": "&6" },
+        "slime": { "name": "Slime", "color": "&a" },
+        "magma": { "name": "Magma", "color": "&4" },
+        "pigman": { "name": "Pigman", "color": "&d" },
+        "golem": { "name": "Golem", "color": "&f" }
+      },
+      // A tag do rank, no chat (antes do clã), na scoreboard, nos itens e nas mensagens.
+      "tag": "{rank_color}[{rank_name} {tier}]",
+      // O custo de um passo. O mob tem o nome e a cor do rank que tem esse mob no config.yml.
+      "cost": "&f{amount} {unit} de {mob_color}{mob_name}",
+      "commands": {
+        "ranks": {
+          "description": "ver os ranks e os benefícios de cada um",
+          "usage": {
+            "menu": { "syntax": "", "description": "abrir a lista dos ranks" }
+          },
+          "admin": {
+            "description": "comandos da equipe para os ranks",
+            "set": {
+              "description": "pôr um jogador num rank",
+              "arguments": {
+                "target": { "name": "jogador", "description": "Jogador que muda de rank" },
+                "rank": { "name": "rank", "description": "O rank e a vertente, como galinha-1 ou golem-3" }
+              }
+            },
+            "reset": {
+              "description": "voltar um jogador ao rank inicial",
+              "arguments": {
+                "target": { "name": "jogador", "description": "Jogador que volta ao rank inicial" }
+              }
+            },
+            "reload": {
+              "description": "recarregar o config.yml dos ranks"
+            }
+          }
+        },
+        "rankup": {
+          "description": "evoluir para o rank seguinte",
+          "usage": {
+            "menu": { "syntax": "", "description": "abrir a evolução para o rank seguinte" }
+          }
+        },
+        "prestige": {
+          "description": "o prestígio, que ainda não está disponível"
+        }
+      },
+      "messages": {
+        "rankup": {
+          "done": "&aVocê evoluiu para o rank {tag}&a!",
+          // De onde saíram as cabeças do custo. Saem primeiro as guardadas e depois as do inventário.
+          "paid": {
+            "stored": "&7Pago com &f{stored} {stored_unit} de {mob_name} &7das suas guardadas.",
+            "inventory": "&7Pago com &f{inventory} {inventory_unit} de {mob_name} &7do seu inventário.",
+            "both": "&7Pago com &f{stored} {stored_unit} de {mob_name} &7das suas guardadas e &f{inventory} &7do seu inventário."
+          },
+          // Só quando a vertente nova tem benefícios.
+          "benefits": "&aVocê desbloqueou novos benefícios! Use &f/ranks &apara vê-los.",
+          // O anúncio em todos os servidores do modo (announce no config.yml do plugin).
+          "announce": "&e{player_name_with_color} &eevoluiu para o rank {tag}&e!"
+        },
+        "current": "&eEste é seu rank atual!",
+        "done": "&aVocê já passou por este rank!",
+        "not-enough": "&cVocê não tem cabeças suficientes!",
+        "previous-first": "&cVocê precisa upar para {tag} &cantes!",
+        "max": "&cVocê atingiu o rank máximo! &7Não existem mais ranks disponíveis no momento, aguarde novos ranks.",
+        "requirements-changed": "&cOs requisitos mudaram. Tente novamente.",
+        "rank-changed": "&cO seu rank mudou. Abra o menu novamente.",
+        "prestige-disabled": "&cO sistema de prestígio ainda não está disponível.",
+        "not-loaded": "&cNão foi possível carregar o seu rank. Tente entrar novamente.",
+        "heads-unavailable": "&cNão deu para ler as suas cabeças agora. Tente de novo em instantes.",
+        // As cabeças e o item delas ficam no servidor dos terrenos, e só lá o rankup se paga.
+        "elsewhere": "&cO rankup é feito no mundo dos terrenos, onde ficam as suas cabeças. Vá até lá com &f/terrenos&c.",
+        "busy": "&cAguarde a operação anterior com as suas cabeças terminar.",
+        "save-failed": "&cOcorreu um erro ao guardar os dados. A ação foi cancelada para proteger as suas cabeças.",
+        // As cabeças do inventário que já tinham saído quando o banco recusou o rankup.
+        "returned": "&7O que saiu do seu inventário (&f{amount} {unit}&7) foi para as suas guardadas, no &f/heads armazenar&7.",
+        "unconfirmed": "&cO servidor não conseguiu confirmar o seu rankup. Se algo sumiu, avise a equipe, que tem o registro.",
+        "admin": {
+          "set": "&aVocê definiu o rank de {target_name_with_color} &apara {tag}&a.",
+          "set-already": "&cO rank de {target_name_with_color} &cjá é {tag}&c.",
+          "reset": "&aO rank de {target_name_with_color} &afoi reposto para {tag}&a.",
+          "reset-already": "&c{target_name_with_color} &cjá está no rank inicial, {tag}&c.",
+          "failed": "&cNão deu para mudar o rank de {target_name_with_color} &cagora. Tente de novo em instantes.",
+          "reloaded": "&aConfiguração recarregada com sucesso.",
+          "reload-refused": "&cO config.yml dos ranks tem erros e não foi aplicado. O motivo está no console, e segue valendo o de antes.",
+          "unknown-rank": "&cO rank {rank} não existe. Use o rank e a vertente, como {example}."
+        }
+      },
+      "views": {
+        // O /ranks (o baú "/ranks"): as dez cabeças em duas linhas de cinco.
+        "list": {
+          "title": "Ranks",
+          "items": {
+            "rank": {
+              "name": "{rank_color}&l{rank_name}",
+              "lore": [
+                "&7Aqui você pode ver as vertentes desse",
+                "&7rank, os seus custos e benefícios.",
+                "&7",
+                "&7 Ranks: {rank_color}[{rank_name} {tier_1}, {tier_2} e {tier_3}]",
+                "&7",
+                "&eClique para acessar!"
+              ]
+            }
+          }
+        },
+        // As vertentes de um rank (os baús "menu dentro /ranks"), uma lore por estado. O {benefits} é quantos benefícios
+        // a vertente tem, e o {previous_name} e o {previous_tier} são os do passo logo antes dela.
+        "tiers": {
+          "title": "Rank {rank_name}",
+          "items": {
+            "current": {
+              "name": "{rank_color}{rank_name} {rank_color}&l{tier}",
+              "lore": [
+                "&7",
+                "&7 Tag: {tag}",
+                "&7",
+                "&eEste é seu rank atual!"
+              ]
+            },
+            "done": {
+              "name": "{rank_color}{rank_name} {rank_color}&l{tier}",
+              "lore": [
+                "&7",
+                "&7 Tag: {tag}",
+                "&7 Benefícios: &f{benefits}",
+                "&7",
+                "&aVocê já passou por este rank!",
+                "&8(Clique direito para ver os benefícios)"
+              ]
+            },
+            "ready": {
+              "name": "{rank_color}{rank_name} {rank_color}&l{tier}",
+              "lore": [
+                "&7",
+                "&7 Tag: {tag}",
+                "&7 Benefícios: &f{benefits}",
+                "&7 Requisitos: {cost}",
+                "&7",
+                "&aClique para evoluir seu rank!",
+                "&8(Clique direito para ver os benefícios)"
+              ]
+            },
+            "short": {
+              "name": "{rank_color}{rank_name} {rank_color}&l{tier}",
+              "lore": [
+                "&7",
+                "&7 Tag: {tag}",
+                "&7 Benefícios: &f{benefits}",
+                "&7 Requisitos: {cost}",
+                "&7",
+                "&cVocê não tem cabeças suficientes!",
+                "&8(Clique direito para ver os benefícios)"
+              ]
+            },
+            // O passo seguinte no spawn, onde o rankup não se paga.
+            "elsewhere": {
+              "name": "{rank_color}{rank_name} {rank_color}&l{tier}",
+              "lore": [
+                "&7",
+                "&7 Tag: {tag}",
+                "&7 Benefícios: &f{benefits}",
+                "&7 Requisitos: {cost}",
+                "&7",
+                "&eEvolua no mundo dos terrenos!",
+                "&8(Clique direito para ver os benefícios)"
+              ]
+            },
+            "locked": {
+              "name": "{rank_color}{rank_name} {rank_color}&l{tier}",
+              "lore": [
+                "&7",
+                "&7 Tag: {tag}",
+                "&7 Benefícios: &f{benefits}",
+                "&7 Requisitos: {cost}",
+                "&7",
+                "&cVocê precisa upar para &c{previous_name} &c&l{previous_tier} &cantes!",
+                "&8(Clique direito para ver os benefícios)"
+              ]
+            }
+          }
+        },
+        // Os benefícios de uma vertente (o baú "beneficios"). O {benefits} é a lista, uma linha por benefício.
+        "benefits": {
+          "title": "Benefícios de {rank_name} {tier}",
+          "items": {
+            "subject": {
+              "name": "{rank_color}{rank_name} {rank_color}&l{tier}",
+              "lore": [
+                "&7Benefícios do rank {tag}&7:",
+                "&7",
+                "{benefits}",
+                "&7",
+                "&eClique para voltar para trás!"
+              ],
+              "spawner": "&7☛ &fSpawner de {mob_name}",
+              "empty": ["&7Esta vertente ainda não tem benefícios."]
+            }
+          }
+        },
+        // O /rankup (o baú "/rankup", com os itens do baú "ranks do /rankup").
+        "rankup": {
+          "title": "Evoluir Rank",
+          "items": {
+            "subject": {
+              "name": "{rank_color}{rank_name} {rank_color}&l{tier}",
+              "lore": [
+                "&7",
+                "&7 {tag} &8» {next_tag}",
+                "&7",
+                "&7 Custo: {cost}",
+                "&7",
+                "&eClique para ver os benefícios!"
+              ]
+            },
+            "max": {
+              "name": "{rank_color}{rank_name} {rank_color}&l{tier}",
+              "lore": [
+                "&7Não existem mais ranks disponíveis",
+                "&7no momento, aguarde novos ranks.",
+                "&7",
+                "&cVocê atingiu o rank máximo!"
+              ]
+            },
+            "accept": { "name": "&aEvoluir", "lore": [] },
+            "deny": { "name": "&cRetroceder", "lore": [] }
+          }
+        }
+      }
+    }
+  }
+}
