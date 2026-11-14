@@ -90,18 +90,18 @@
         "rank-changed": "&cO seu rank mudou. Abra o menu novamente.",
         "prestige-disabled": "&cO sistema de prestígio ainda não está disponível.",
         "not-loaded": "&cNão foi possível carregar o seu rank. Tente entrar novamente.",
-        "heads-unavailable": "&cNão deu para ler as suas cabeças agora. Tente de novo em instantes.",
+        "heads-unavailable": "&cNão deu para ler suas cabeças agora. Tente de novo em instantes.",
         // As cabeças e o item delas ficam no servidor dos terrenos, e só lá o rankup se paga.
-        "elsewhere": "&cO rankup é feito no mundo dos terrenos, onde ficam as suas cabeças. Vá até lá com &f/terrenos&c.",
-        "busy": "&cAguarde a operação anterior com as suas cabeças terminar.",
-        "save-failed": "&cOcorreu um erro ao guardar os dados. A ação foi cancelada para proteger as suas cabeças.",
+        "elsewhere": "&cO rankup é feito no mundo dos terrenos, onde ficam suas cabeças. Vá até lá com &f/terrenos&c.",
+        "busy": "&cAguarde a operação anterior com suas cabeças terminar.",
+        "save-failed": "&cOcorreu um erro ao salvar os dados. A ação foi cancelada para proteger suas cabeças.",
         // As cabeças do inventário que já tinham saído quando o banco recusou o rankup.
-        "returned": "&7O que saiu do seu inventário (&f{amount} {unit}&7) foi para as suas guardadas, no &f/heads armazenar&7.",
+        "returned": "&7O que saiu do seu inventário (&f{amount} {unit}&7) foi para suas guardadas, no &f/heads armazenar&7.",
         "unconfirmed": "&cO servidor não conseguiu confirmar o seu rankup. Se algo sumiu, avise a equipe, que tem o registro.",
         "admin": {
           "set": "&aVocê definiu o rank de {target_name_with_color} &apara {tag}&a.",
           "set-already": "&cO rank de {target_name_with_color} &cjá é {tag}&c.",
-          "reset": "&aO rank de {target_name_with_color} &afoi reposto para {tag}&a.",
+          "reset": "&aO rank de {target_name_with_color} &avoltou para {tag}&a.",
           "reset-already": "&c{target_name_with_color} &cjá está no rank inicial, {tag}&c.",
           "failed": "&cNão deu para mudar o rank de {target_name_with_color} &cagora. Tente de novo em instantes.",
           // O config.yml é um arquivo por servidor, e o reload relê só o do servidor onde foi digitado.

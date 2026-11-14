@@ -14,7 +14,8 @@
           "chat-locked": "O chat global está mutado no momento.",
           "too-similar": "Essa mensagem é quase igual à anterior. Escreva outra coisa.",
           "dont-have-requirements": "Você precisa ter no mínimo {chat_message_currency_value_formatted_requirement} para enviar uma mensagem no chat!",
-          // {sender_tags}: as tags equipadas do P4Free (/tags), cada uma seguida de um espaço, ou vazio.
+          // {sender_tags}: a tag do rank no rankup (os ranks, %ranks_chat%) e as tags equipadas do P4Free (/tags),
+          // cada uma seguida de um espaço, ou vazio. A staff não leva a tag do rank.
           // Entram antes do clã, como no exe-chats. Vale também para o local, abaixo.
           "message": {
             "with-space": {
