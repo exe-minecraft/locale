@@ -35,6 +35,9 @@
         "plantable-creative": "&cO plantável não se planta no modo criativo. Volte à sobrevivência para plantar.",
         "one-per-column": "&cCada plantação ocupa uma coluna. Plante esta ao lado, e não em cima de outra.",
         "storage-unavailable": "&cNão deu para carregar o armazém agora. Tente de novo em instantes.",
+        // No spawn o armazém responde pelo servidor de terrenos. A venda, a compra ou a mudança na lista que fica sem
+        // resposta pode ter entrado, e por isso o texto pede para conferir em vez de dizer que nada aconteceu.
+        "no-answer": "&cO servidor de terrenos não respondeu a tempo. Abra o armazém de novo para conferir se o pedido entrou.",
         "not-allowed": "&cVocê não tem permissão para abrir este armazém.",
         "members-not-allowed": "&cVocê não tem permissão para mexer nos membros deste armazém.",
         // Os dois avisos do armazém que enche. Só o cacto entra nele, e entrega sozinho, então quem lê é o dono, se
