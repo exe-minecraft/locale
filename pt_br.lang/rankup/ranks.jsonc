@@ -230,7 +230,7 @@
               "name": "{rank_color}{rank_name} {rank_color}&l{tier}",
               "lore": [
                 "&7",
-                "&7 {tag} &8» {next_tag}",
+                "&7 {tag} &8➟ {next_tag}",
                 "&7",
                 "&7 Custo: {cost}",
                 "&7",
