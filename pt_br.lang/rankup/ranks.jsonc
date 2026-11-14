@@ -104,7 +104,8 @@
           "reset": "&aO rank de {target_name_with_color} &afoi reposto para {tag}&a.",
           "reset-already": "&c{target_name_with_color} &cjá está no rank inicial, {tag}&c.",
           "failed": "&cNão deu para mudar o rank de {target_name_with_color} &cagora. Tente de novo em instantes.",
-          "reloaded": "&aConfiguração recarregada com sucesso.",
+          // O config.yml é um arquivo por servidor, e o reload relê só o do servidor onde foi digitado.
+          "reloaded": "&aConfiguração recarregada com sucesso neste servidor. Os outros servidores do modo têm o config deles.",
           "reload-refused": "&cO config.yml dos ranks tem erros e não foi aplicado. O motivo está no console, e segue valendo o de antes.",
           "unknown-rank": "&cO rank {rank} não existe. Use o rank e a vertente, como {example}."
         }
