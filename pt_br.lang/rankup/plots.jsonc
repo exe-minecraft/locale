@@ -218,9 +218,9 @@
           }
         }
       },
-      // O /ranks, o /shop e a /loja, até o sistema de cada um existir (o dono, 12/11/2026: "o que existe e aviso de em breve").
+      // O /shop e a /loja, até o sistema de cada um existir (o dono, 12/11/2026: "o que existe e aviso de em breve"). O
+      // /ranks saiu daqui em 14/11/2026, com o plugin dos ranks.
       "coming-soon": {
-        "ranks": "&eO sistema de ranks chega em breve ao servidor.",
         "shop": "&eA loja de itens chega em breve ao servidor.",
         "loja": "&eA loja do servidor chega em breve."
       },

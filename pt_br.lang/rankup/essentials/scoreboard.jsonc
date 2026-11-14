@@ -1,7 +1,8 @@
 // A scoreboard do rankup (07/11/2026), a do spawn do rankup antigo (build-images/rankup/spawn do backup de 03/05): o
-// título RANKUP PVP, os tokens com o $ e o cash com o ✪, e o bloco do clã. A linha do rank e do prestígio volta quando
-// o rankup tiver os ranks; até lá ela sairia com o placeholder cru. O modo construção aparece no topo só com o /build
-// ligado, no lugar da linha em branco.
+// título RANKUP PVP, o rank, os tokens com o $ e o cash com o ✪, e o bloco do clã. A linha do rank voltou com os ranks
+// (14/11/2026), no lugar onde o rankup antigo tinha a dela, com a tag do plugin dos ranks (%ranks_tag%, vazia enquanto o
+// rank do jogador carrega). O prestígio volta quando existir. O modo construção aparece no topo só com o /build ligado,
+// no lugar da linha em branco.
 {
   "plugins": {
     "essentials": {
@@ -11,6 +12,8 @@
         ],
         "lines": [
           "{build_mode_status}",
+          "",
+          "  &fRank: %ranks_tag%",
           "",
           "  &fTokens: &e${currency_tokens_cached_account_value_formatted}",
           "  &fCash: &6✪{user_cash_formatted}",
