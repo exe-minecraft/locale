@@ -164,7 +164,7 @@
           "failed": "&cA compra não foi feita, e nada foi cobrado.",
           "price-changed": "&cO preço mudou enquanto você confirmava, e nada foi cobrado. Abra o menu de novo para ver o valor.",
           "rank": "&cVocê precisa ser rank {rank_tag} &cpara adquirir esse spawner!",
-          "rank-unknown": "&cNão foi possível carregar o seu rank. Tente entrar novamente."
+          "rank-unknown": "&cNão foi possível carregar seu rank. Tente entrar novamente."
         },
         "upgrade": {
           "maximum": "&cEsta melhoria já está no nível máximo.",

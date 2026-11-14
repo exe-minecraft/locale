@@ -87,9 +87,9 @@
         "previous-first": "&cVocê precisa upar para {tag} &cantes!",
         "max": "&cVocê atingiu o rank máximo! &7Não existem mais ranks disponíveis no momento, aguarde novos ranks.",
         "requirements-changed": "&cOs requisitos mudaram. Tente novamente.",
-        "rank-changed": "&cO seu rank mudou. Abra o menu novamente.",
+        "rank-changed": "&cSeu rank mudou. Abra o menu novamente.",
         "prestige-disabled": "&cO sistema de prestígio ainda não está disponível.",
-        "not-loaded": "&cNão foi possível carregar o seu rank. Tente entrar novamente.",
+        "not-loaded": "&cNão foi possível carregar seu rank. Tente entrar novamente.",
         "heads-unavailable": "&cNão deu para ler suas cabeças agora. Tente de novo em instantes.",
         // As cabeças e o item delas ficam no servidor dos terrenos, e só lá o rankup se paga.
         "elsewhere": "&cO rankup é feito no mundo dos terrenos, onde ficam suas cabeças. Vá até lá com &f/terrenos&c.",
@@ -97,7 +97,7 @@
         "save-failed": "&cOcorreu um erro ao salvar os dados. A ação foi cancelada para proteger suas cabeças.",
         // As cabeças do inventário que já tinham saído quando o banco recusou o rankup.
         "returned": "&7O que saiu do seu inventário (&f{amount} {unit}&7) foi para suas guardadas, no &f/heads armazenar&7.",
-        "unconfirmed": "&cO servidor não conseguiu confirmar o seu rankup. Se algo sumiu, avise a equipe, que tem o registro.",
+        "unconfirmed": "&cO servidor não conseguiu confirmar seu rankup. Se algo sumiu, avise a equipe, que tem o registro.",
         "admin": {
           "set": "&aVocê definiu o rank de {target_name_with_color} &apara {tag}&a.",
           "set-already": "&cO rank de {target_name_with_color} &cjá é {tag}&c.",
