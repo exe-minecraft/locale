@@ -6,7 +6,8 @@
     "excavation": {
       "units": {
         "second": { "singular": "segundo", "plural": "segundos" },
-        "block": { "singular": "bloco", "plural": "blocos" }
+        "block": { "singular": "bloco", "plural": "blocos" },
+        "chunk": { "singular": "chunk", "plural": "chunks" }
       },
       // O nome de cada bioma (world.biomes no config.yml do excavation).
       "biomes": {
@@ -43,7 +44,9 @@
         "locked": "&eSó no nível {level}"
       },
       // A scoreboard do Mundo de Extração: a do rankup, com o horário, o combate, o bioma e os
-      // blocos escavados com a pá, como no exe-rankup.
+      // blocos escavados com a pá, como no exe-rankup. O "Reset em" é o tempo até os blocos
+      // voltarem ao lugar, ou até o reinício do mundo, se ele vier antes (o documento do dono de
+      // 15/11/2026, com o exemplo "Reset em: 01:45:32").
       "scoreboard": {
         "title": [
           " &c&lRANKUP PVP"
@@ -52,6 +55,7 @@
           "",
           "  &fHorário: &7{excavation_time}",
           "  &fCombate: {excavation_combat}",
+          "  &fReset em: &7{excavation_reset}",
           "  &fBioma: &7{excavation_biome}",
           "  &fExtração: &e&l{excavation_heading} &7{excavation_distance} {excavation_distance_unit}",
           "",
@@ -70,6 +74,8 @@
       "messages": {
         "build-limit": "Você não pode mexer em blocos acima da altura {limit}.",
         "extraction-blocked": "Você não pode mexer em blocos na proteção de um portal de extração.",
+        // O buraco do poço é a volta das cavernas pelo slime do fundo, e um bloco posto nele não sai mais.
+        "shaft-blocked": "Você não pode colocar blocos no buraco do poço, porque ele é o caminho de volta das cavernas.",
         "combat-day": "O combate fica desativado durante o dia.",
         // O PvP da noite só vale entre quem tem a Pá Especial no nível {level}, dos dois lados.
         "pvp-locked": "Você só pode lutar com outros jogadores com a sua Pá Especial no nível {level}.",
@@ -116,12 +122,19 @@
           " &b[Extração] &fVocê ganhou &e{tokens} {tokens_unit} &fem {duration} escavando!",
           ""
         ],
-        // A noite chegou: vai a todo o rankup, com o som do wither.
+        // A noite chegou e o PvP foi liberado. Vai a todo o rankup, com o som do wither, no molde
+        // do aviso da borda que fecha nos eventos do P4Free (o documento do dono de 15/11/2026).
         "night": [
           "",
-          "&b [Extração] &fA &lnoite &fchegou no Mundo de Extração!",
-          "&f O PvP está &cativo&f para quem tem a Pá Especial no nível {level}.",
-          "&f Fique atento aos perigos!",
+          "&4&l&m       &c&l&m       &r &f&lPVP LIBERADO &c&l&m       &4&l&m       ",
+          "",
+          "&c  &fA &lnoite&r&f chegou e o PvP foi liberado no Mundo de Extração!",
+          "",
+          "    &4• &fQuem pode lutar: &cPá Especial no nível {level} ou acima",
+          "",
+          "&c  &fFique atento aos perigos!",
+          "",
+          "&4&l&m       &c&l&m       &r &f&lPVP LIBERADO &c&l&m       &4&l&m       ",
           ""
         ],
         // A invulnerabilidade de quem voltou ao lugar onde caiu acaba no primeiro golpe dele.
@@ -142,12 +155,14 @@
         "far": "&bPortal de extração mais próximo a &f&l{distance} &f{distance_unit}&b de distância! &7(&e&l{heading}&7)"
       },
       "anti-camp": {
+        // Quem fica na área do portal é lançado 10 blocos para cima e para fora dela, sem dano
+        // (o documento do dono de 15/11/2026).
         "hologram": [
           "&6&lSISTEMA ANTI-CAMP",
           "&fPara evitar jogadores acampando",
-          "&fnas áreas dos portais, existe",
-          "&fuma explosão que empurra para",
-          "&flonge a cada {seconds} {seconds_unit}.",
+          "&fnas áreas dos portais, quem fica",
+          "&fnelas é lançado para fora depois",
+          "&fde {seconds} {seconds_unit}.",
           "",
           "{timer}"
         ],
@@ -157,7 +172,27 @@
           "counting": "&c{seconds} {seconds_unit}",
           "boom": "&c&lBOOM!"
         },
-        "blast": "&c&lBOOM! &fO anti-camp empurrou você para longe do portal."
+        "blast": "&c&lBOOM! &fO anti-camp lançou você para fora da área do portal."
+      },
+      // A contagem na tela até o PvP da noite, no molde da borda que fecha nos eventos do P4Free (o
+      // documento do dono de 15/11/2026), com o número grande nos últimos segundos do dia e o PvP
+      // liberado na virada. O aviso no chat é o messages.night.
+      "titles": {
+        "countdown": {
+          "title": "&c{seconds}",
+          "subtitle": "&fO PvP vai ser liberado!"
+        },
+        "night": {
+          "unlocked": {
+            "title": "&c&lPVP LIBERADO!",
+            "subtitle": "&fQue comecem as batalhas!"
+          },
+          // Para quem ainda não tem a Pá Especial no nível que libera o PvP.
+          "locked": {
+            "title": "&e&lPVP LIBERADO",
+            "subtitle": "&fPara quem tem a Pá Especial no nível {level}"
+          }
+        }
       },
       "reset": {
         // Os blocos escavados voltaram ao lugar, sem reiniciar o mundo: vai a quem está nele.
@@ -247,6 +282,33 @@
       "commands": {
         "escavacao": {
           "description": "Abre o menu do Mundo de Extração"
+        },
+        // Só no servidor de extração, para o Master (o grupo no editor de permissões), pelo
+        // documento do dono de 15/11/2026.
+        "pvp": {
+          "description": "Troca o dia pela noite no Mundo de Extração, ligando ou desligando o PvP",
+          "arguments": {
+            "state": {
+              "name": "on|off",
+              "description": "Noite com PvP, ou dia sem PvP"
+            }
+          },
+          "already-night": "Já é noite no Mundo de Extração, e o PvP já está liberado.",
+          "counting": "A contagem para a noite já está correndo no Mundo de Extração.",
+          "night": "A noite chega ao Mundo de Extração em {seconds} {seconds_unit}, com a contagem na tela de quem está lá.",
+          "already-day": "Já é dia no Mundo de Extração, e o PvP já está desativado.",
+          "day": "Agora é dia no Mundo de Extração, e o PvP foi desativado."
+        },
+        "reset": {
+          "description": "Devolve agora ao lugar os blocos escavados do Mundo de Extração",
+          "arguments": {
+            "target": {
+              "name": "mundo",
+              "description": "O Mundo de Extração"
+            }
+          },
+          "running": "O reset dos blocos do Mundo de Extração já está em andamento.",
+          "started": "O reset dos blocos do Mundo de Extração começou, com {chunks} {chunks_unit} com blocos escavados. O reset automático segue no horário dele."
         }
       },
       "views": {
