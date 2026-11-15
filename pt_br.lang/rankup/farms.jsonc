@@ -151,9 +151,15 @@
             "&eClique para ativar!",
             "&8(Ação Irreversível)"
           ],
+          // Fora do servidor de terrenos o uso vai até ele pelo Echo (15/11/2026). O "changed" é o item que mostrava um
+          // valor que o config de lá já trocou, e que volta com o novo. O "processing" é a resposta que não chegou, e o
+          // pedido se repete sozinho. O "unconfirmed" é quando as tentativas acabam sem saber, e o caso vai à equipe.
           "messages": {
             "used": "&aA capacidade do seu armazém aumentou em {amount}. &eNovo limite: {capacity}.",
-            "maximum": "&cSeu armazém já está na capacidade máxima ({capacity})."
+            "maximum": "&cSeu armazém já está na capacidade máxima ({capacity}).",
+            "changed": "&cO valor do Limite de Armazém mudou para +{amount}. O item voltou para o seu inventário com o valor novo, e você pode usá-lo de novo.",
+            "processing": "&eO servidor de terrenos ainda não confirmou o seu Limite de Armazém. O pedido é conferido de novo sozinho, e o item volta para o inventário se não entrar.",
+            "unconfirmed": "&cO servidor de terrenos não confirmou o seu Limite de Armazém. A equipe foi avisada e vai conferir se ele entrou."
           }
         }
       },
