@@ -158,7 +158,7 @@
             "used": "&aA capacidade do seu armazém aumentou em {amount}. &eNovo limite: {capacity}.",
             "maximum": "&cSeu armazém já está na capacidade máxima ({capacity}).",
             "changed": "&cO valor do Limite de Armazém mudou para +{amount}. O item voltou para o seu inventário com o valor novo, e você pode usá-lo de novo.",
-            "processing": "&eO servidor de terrenos ainda não confirmou o seu Limite de Armazém. O pedido é conferido de novo sozinho, e o item volta para o inventário se não entrar.",
+            "processing": "&eO servidor de terrenos ainda não confirmou o seu Limite de Armazém. O pedido é conferido de novo sozinho por alguns minutos, e o resultado aparece aqui.",
             "unconfirmed": "&cO servidor de terrenos não confirmou o seu Limite de Armazém. A equipe foi avisada e vai conferir se ele entrou."
           }
         }
