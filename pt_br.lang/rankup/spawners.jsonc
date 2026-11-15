@@ -210,7 +210,9 @@
           "no-room": "&cVocê não tem espaço no inventário para retirar {amount} {unit}.",
           "not-enough": "&cVocê tem menos de {amount} {unit} de {mob_name} entre as guardadas.",
           "withdrawn": "&aVocê retirou {amount} {unit} de {mob_name}. Guardadas: {balance}.",
-          "busy": "&cAguarde a operação anterior com suas cabeças terminar."
+          "busy": "&cAguarde a operação anterior com suas cabeças terminar.",
+          // No criativo quem escreve o inventário é o cliente, e o /heads armazenar não guarda nem retira (15/11/2026).
+          "creative": "&cAs cabeças não se guardam nem se retiram no modo criativo. Volte à sobrevivência para usar o /heads armazenar."
         },
         "cages": {
           "not-enough": "&cVocê precisa de {needed} {needed_unit} da {previous} &cpara fabricar {made}x {cage}&c. Em falta: {missing}.",
