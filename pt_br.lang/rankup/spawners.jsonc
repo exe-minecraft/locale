@@ -289,10 +289,12 @@
             "&eColoque no chão do seu terreno para usar!"
           ]
         },
-        // A cabeça do rankup (o baú "cabeças").
+        // A cabeça do rankup (o baú "cabeças"). A agrupada é a que sai do /heads armazenar, um item que vale várias
+        // cabeças, com a quantidade no nome e a mesma descrição (o pedido do dono de 15/11/2026).
         "head": {
           "display-name": "Cabeça de {mob_name}",
           "name": "{mob_color}Cabeça de {mob_name}",
+          "grouped-name": "{mob_color}Cabeça de {mob_name} &7[&fx{amount}&7]",
           "lore": [
             "&7Esse item é utilizado e necessário",
             "&7para a evolução do seu rank!",
