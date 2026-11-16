@@ -74,8 +74,9 @@
       "messages": {
         "build-limit": "Você não pode mexer em blocos acima da altura {limit}.",
         "extraction-blocked": "Você não pode mexer em blocos na proteção de um portal de extração.",
-        // O buraco do poço é a volta das cavernas pelo slime do fundo, e um bloco posto nele não sai mais.
-        "shaft-blocked": "Você não pode colocar blocos no buraco do poço, porque ele é o caminho de volta das cavernas.",
+        // O buraco do poço e a borda dele são a volta das cavernas pelo slime do fundo, e o que se põe ali não sai mais:
+        // o bloco, a água e a lava do balde, e o barco.
+        "shaft-blocked": "Você não pode colocar nada no buraco do poço nem em volta da boca dele, porque ele é o caminho de volta das cavernas.",
         "combat-day": "O combate fica desativado durante o dia.",
         // O PvP da noite só vale entre quem tem a Pá Especial no nível {level}, dos dois lados.
         "pvp-locked": "Você só pode lutar com outros jogadores com a sua Pá Especial no nível {level}.",
@@ -286,7 +287,7 @@
         // Só no servidor de extração, para o Master (o grupo no editor de permissões), pelo
         // documento do dono de 15/11/2026.
         "pvp": {
-          "description": "Troca o dia pela noite no Mundo de Extração, ligando ou desligando o PvP",
+          "description": "Leva o Mundo de Extração à noite, com PvP, ou ao dia, sem PvP",
           "arguments": {
             "state": {
               "name": "on|off",
@@ -297,7 +298,7 @@
           "counting": "A contagem para a noite já está correndo no Mundo de Extração.",
           "night": "A noite chega ao Mundo de Extração em {seconds} {seconds_unit}, com a contagem na tela de quem está lá.",
           "already-day": "Já é dia no Mundo de Extração, e o PvP já está desativado.",
-          "day": "Agora é dia no Mundo de Extração, e o PvP foi desativado."
+          "day": "Agora é dia no Mundo de Extração, e o PvP fica desativado até a próxima noite."
         },
         "reset": {
           "description": "Devolve agora ao lugar os blocos escavados do Mundo de Extração",
@@ -307,8 +308,8 @@
               "description": "O Mundo de Extração"
             }
           },
-          "running": "O reset dos blocos do Mundo de Extração já está em andamento.",
-          "started": "O reset dos blocos do Mundo de Extração começou, com {chunks} {chunks_unit} com blocos escavados. O reset automático segue no horário dele."
+          "running": "O reset dos blocos do Mundo de Extração já está em andamento, e um outro sai logo depois dele.",
+          "started": "O reset dos blocos do Mundo de Extração começou, conferindo os lugares escavados de {chunks} {chunks_unit}. O reset automático segue no horário dele."
         }
       },
       "views": {
