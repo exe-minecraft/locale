@@ -1,56 +1,8 @@
 {
   "plugins": {
     "essentials": {
-      "kits": {
-        "categories": {
-          "default": {
-            "name": "&aKits Básicos",
-            "description": [
-              "&7Acesse os kits que todos",
-              "&7os jogadores possuem acesso."
-            ]
-          },
-          "vip": {
-            "name": "&aKits VIPs",
-            "description": [
-              "&7Encontre os kits para jogadores",
-              "&7que possuem alguma vantagem."
-            ]
-          }
-        },
-        "types": {
-          "member_1d": {
-            "name": "&7Kit Básico 1d &f"
-          },
-          "member_7d": {
-            "name": "&7Kit Básico 7d &f"
-          },
-          "pro_1d": {
-            "name": "&dKit 1d &f"
-          },
-          "pro_7d": {
-            "name": "&dKit 7d &f"
-          },
-          "mvp_1d": {
-            "name": "&bKit 1d &f"
-          },
-          "mvp_7d": {
-            "name": "&bKit 7d &f"
-          },
-          "elite_1d": {
-            "name": "&4Kit 1d &f"
-          },
-          "elite_7d": {
-            "name": "&4Kit 7d &f"
-          },
-          "EXE_1d": {
-            "name": "&cEXE 1d &f"
-          },
-          "EXE_7d": {
-            "name": "&cEXE 7d &f"
-          }
-        }
-      },
+      // Os nomes das categorias e dos kits (plugins.essentials.kits.categories.<id> e .types.<id>) ficam no bundle do
+      // servidor que tem aqueles kits, ao lado do kits/config.yml dele. Hoje só o rankup tem (rankup/essentials/kits.jsonc).
       "commands": {
         "deletekit": {
           "arguments": {
@@ -71,7 +23,7 @@
               "description": "ID do kit que será editado"
             }
           },
-          "cannot-find-with-id": "Não foi possivel encontrar um kit com esse id!"
+          "cannot-find-with-id": "Não foi possível encontrar um kit com esse id!"
         },
         "givekit": {
           "arguments": {
@@ -84,7 +36,7 @@
               "description": "Jogador que irá receber o kit"
             }
           },
-          "cannot-find-with-id": "Não foi possivel encontrar um kit com esse id!",
+          "cannot-find-with-id": "Não foi possível encontrar um kit com esse id!",
           "success": "Você deu o kit \"{kit_id}\" para o jogador {target_name}!"
         }
       },
@@ -99,81 +51,16 @@
         },
         "views": {
           "kit-edit": {
-            "update-icon": {
-              "conversation": {
-                "query": "Você tem certeza que deseja definir o item em sua mão como o icone?",
-                "responses": {
-                  "need-item-in-hand": "Você precisa segurar o item em sua mão!",
-                  "success": "Icone do kit \"{kit_id}\" alterado com sucesso."
-                }
-              }
-            },
-            "update-groups": {
-              "conversation": {
-                "query": "Digite a permissão que deseja para o kit.",
-                "responses": {
-                  "success": "Grupos do kit \"{kit_id}\" alterados para &f{kit_groups}."
-                }
-              }
-            },
             "update-items": {
-              "conversation": {
-                "query": "Você tem certeza que deseja alterar os items do kit para os items de seu inventário.",
-                "responses": {
-                  "success": "Items do kit \"{kit_id}\" alterados."
-                }
-              },
               "success": "&aOs itens do kit &f{kit_id}&a foram alterados.",
               "unchanged": "&eNada mudou nos itens do kit &f{kit_id}&e."
-            },
-            "update-delay": {
-              "conversation": {
-                "query": "Digite no chat o novo delay para seu kit.",
-                "responses": {
-                  "success": "Delay do kit \"{kit_id}\" alterado para \"&f{kit_cooldown}\"."
-                }
-              }
             }
           }
         }
       },
       "views": {
         "kit-edit": {
-          "title": "Editando - {kit_name}",
-          "items": {
-            "0": {
-              "name": "&aAlterar icon",
-              "lore": [
-                "&7Clique aqui para definir",
-                "&7um novo icon para o kit."
-              ]
-            },
-            "1": {
-              "name": "&aAlterar permissão",
-              "lore": [
-                "&7Clique aqui para definir",
-                "&7uma nome permissão para o kit."
-              ]
-            },
-            "2": {
-              "name": "&aAlterar items",
-              "lore": [
-                "&7Clique aqui para definir",
-                "&7os items do seu kit.",
-                "",
-                "&eOs items serão os que estão em seu inventário."
-              ]
-            },
-            "3": {
-              "name": "&aAlterar segundos",
-              "lore": [
-                "&7Clique aqui para definir",
-                "&7o delay do seu kit.",
-                "",
-                "&eO delay precisa ser em segundos."
-              ]
-            }
-          }
+          "title": "Editando - {kit_name}"
         },
         "kit-visualization": {
           "title": "{kit_name}"
@@ -197,12 +84,34 @@
             "0": {
               "name": "{kit_name}",
               "lore": [
-                "&7Clique direito para &fver o conteúdo&7.",
-                "&7Clique esquerdo para &fcoletar.",
+                "&8➟ &fEspera entre coletas: &7{kit_cooldown}",
                 "",
-                "&8➟ &fTempo p/ coletar: &7{kit_cooldown}"
+                "{kit_status}",
+                "",
+                "&7Clique direito para &fver os itens&7."
               ]
             }
+          },
+          // O que o jogador pode fazer com o kit agora, a mesma resposta que o clique obedece. O menu redesenha a cada
+          // segundo, e a espera que falta desce no ícone.
+          "status": {
+            "ready": [
+              "&aVocê pode coletar este kit.",
+              "&7Clique esquerdo para &fcoletar&7."
+            ],
+            "in-delay": [
+              "&cVocê já coletou este kit.",
+              "&7Pode coletar de novo em &f{kit_cooldown_remaining}&7."
+            ],
+            "no-permission": [
+              "&cVocê não possui permissão para coletar este kit."
+            ],
+            "unavailable": [
+              "&cEste kit ainda não está disponível."
+            ],
+            "loading": [
+              "&7Conferindo as suas coletas, aguarde."
+            ]
           }
         }
       }

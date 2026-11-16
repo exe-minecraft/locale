@@ -39,6 +39,14 @@
             " &fterreno. Abra a loja clicando &a&lAQUI&f.",
             ""
           ],
+          // A dica dos kits do rankup, em que o AQUI roda o /kit. Espera o automessage do rankup, como a da enxada.
+          "kits-rankup": [
+            "",
+            "&a&l KITS: &fTodo dia tem kit de graça no &a/kit&f, e o",
+            " &aSamurai&f e o &4Imperial&f ganham kits próprios, todo",
+            " &fdia e toda semana. Abra os kits clicando &a&lAQUI&f.",
+            ""
+          ],
           // A dica dos ranks do rankup, em que o AQUI roda o /ranks. Espera o automessage do rankup, como a da enxada.
           "ranks-rankup": [
             "",

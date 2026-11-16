@@ -1,0 +1,43 @@
+{
+  "plugins": {
+    "essentials": {
+      // As categorias e os kits do rankup, os do kits/config.yml do rankup-1 e do rankup-plots-1 (o pacote
+      // docs/deploy/rankup-kits-20261116 do exe). Os itens de cada kit a staff define em jogo com o /editkit.
+      "kits": {
+        "categories": {
+          "basicos": {
+            "name": "&aKits Básicos",
+            "description": [
+              "&7Os kits que todos os jogadores",
+              "&7podem coletar."
+            ]
+          },
+          "vip": {
+            "name": "&6Kits VIP",
+            "description": [
+              "&7Os kits do &aSamurai&7 e do &4Imperial&7.",
+              "&7O Imperial coleta os do Samurai também."
+            ]
+          }
+        },
+        "types": {
+          "basico": {
+            "name": "&fKit Básico"
+          },
+          "samurai_diario": {
+            "name": "&aKit Samurai Diário"
+          },
+          "samurai_semanal": {
+            "name": "&aKit Samurai Semanal"
+          },
+          "imperial_diario": {
+            "name": "&4Kit Imperial Diário"
+          },
+          "imperial_semanal": {
+            "name": "&4Kit Imperial Semanal"
+          }
+        }
+      }
+    }
+  }
+}
