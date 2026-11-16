@@ -188,12 +188,6 @@
             "title": "&c&lPVP LIBERADO!",
             "subtitle": "&fQue comecem as batalhas!"
           },
-          // Para quem ainda não tem a Pá Especial no nível que libera o PvP. É o do exe-excavation.jar de
-          // 15/11, que sai quando o de 16/11 estiver no ar.
-          "locked": {
-            "title": "&e&lPVP LIBERADO",
-            "subtitle": "&fPara quem tem a Pá Especial no nível {level}"
-          },
           // Para quem ainda não tem a Pá Especial no nível que libera o PvP, com o nível da pá dele, no
           // lugar da contagem e do PVP LIBERADO (a opção que o dono escolheu em 16/11/2026). O subtítulo
           // sai no dobro do tamanho do chat, e estes 198 px da fonte (o locked tem 202) cabem na tela na
