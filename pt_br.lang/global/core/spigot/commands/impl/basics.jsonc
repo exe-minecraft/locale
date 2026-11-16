@@ -2,6 +2,17 @@
   "plugins": {
     "core": {
       "commands": {
+        // O /actionbar mostra o texto na action bar só de quem digitou, para ver como uma linha do locale fica ali.
+        // A barra é a resposta, sem nada no chat.
+        "actionbar": {
+          "description": "Mostra um texto na sua action bar, só para você, para testar como ele fica.",
+          "arguments": {
+            "message": {
+              "name": "texto",
+              "description": "Texto a mostrar, com as cores em & como no locale"
+            }
+          }
+        },
         "clear-chat": {
           "success-target": "&eChat limpo!",
           "success-sender": "Você limpou o chat com sucesso."
