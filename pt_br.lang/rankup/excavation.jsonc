@@ -9,12 +9,13 @@
         "block": { "singular": "bloco", "plural": "blocos" },
         "chunk": { "singular": "chunk", "plural": "chunks" }
       },
-      // O nome de cada bioma (world.biomes no config.yml do excavation).
+      // O nome de cada bioma (world.biomes no config.yml do excavation), com a cor dele, que a scoreboard mostra no
+      // lugar do cinza da linha (o dono, 16/11/2026: "deve ter cores os biomas, tipo o gelo &bGelo").
       "biomes": {
-        "desert": "Deserto",
-        "forest": "Floresta",
-        "ice": "Gelo",
-        "nether": "Nether"
+        "desert": "&eDeserto",
+        "forest": "&aFloresta",
+        "ice": "&bGelo",
+        "nether": "&cNether"
       },
       // A seta do lado do portal de extração mais perto, em relação para onde o jogador olha: as do exe-rankup, a pedido do dono
       // (09/11). Saem pela fonte unicode do cliente 1.8, como saíam lá.
@@ -46,7 +47,7 @@
       // A scoreboard do Mundo de Extração: a do rankup, com o horário, o combate, o bioma e os
       // blocos escavados com a pá, como no exe-rankup. O "Reset em" é o tempo até os blocos
       // voltarem ao lugar, ou até o reinício do mundo, se ele vier antes (o documento do dono de
-      // 15/11/2026, com o exemplo "Reset em: 01:45:32").
+      // 15/11/2026, com o exemplo "Reset em: 01:45:32"). Sem hora nenhuma, sai só "52:26" (16/11).
       "scoreboard": {
         "title": [
           " &c&lRANKUP PVP"
@@ -91,6 +92,10 @@
         "pvp-unlocked": "&a&lCONQUISTA! &fVocê desbloqueou o &aPvP do Mundo de Extração&f com a sua Pá Especial no nível {level}. A partir de agora, você pode enfrentar outros jogadores nas suas extrações.",
         // O tronco e a folha só vêm das árvores do mundo: postos pelo jogador, dariam outra chance da Maçã Especial.
         "tree-block": "Você não pode colocar troncos nem folhas no Mundo de Extração.",
+        // A estrutura de cada portal, o slime do fundo de cada poço e a lã vermelha da boca só se mexem com o /build,
+        // nem a staff com a liberação (o dono, 16/11/2026). O fixed-block-build vai a quem tem a liberação.
+        "fixed-block": "Você não pode mexer neste bloco, porque ele faz parte de um portal de extração ou de um poço.",
+        "fixed-block-build": "Este bloco faz parte de um portal de extração ou de um poço. Para mexer nele, ligue o /build.",
         "shovel-tip": [
           "",
           "&b&l DICA! &bUse uma &lPá Especial&r&b para conseguir recursos",
@@ -171,7 +176,8 @@
       },
       // A contagem na tela até o PvP da noite, no molde da borda que fecha nos eventos do P4Free (o
       // documento do dono de 15/11/2026), com o número grande nos últimos segundos do dia e o PvP
-      // liberado na virada. O aviso no chat é o messages.night.
+      // liberado na virada. Os dois só vão a quem tem a Pá Especial no nível que libera o PvP, e quem
+      // está abaixo lê o progress na virada (o dono, 16/11/2026). O aviso no chat é o messages.night.
       "titles": {
         "countdown": {
           "title": "&c{seconds}",
@@ -182,10 +188,19 @@
             "title": "&c&lPVP LIBERADO!",
             "subtitle": "&fQue comecem as batalhas!"
           },
-          // Para quem ainda não tem a Pá Especial no nível que libera o PvP.
+          // Para quem ainda não tem a Pá Especial no nível que libera o PvP. É o do exe-excavation.jar de
+          // 15/11, que sai quando o de 16/11 estiver no ar.
           "locked": {
             "title": "&e&lPVP LIBERADO",
             "subtitle": "&fPara quem tem a Pá Especial no nível {level}"
+          },
+          // Para quem ainda não tem a Pá Especial no nível que libera o PvP, com o nível da pá dele, no
+          // lugar da contagem e do PVP LIBERADO (a opção que o dono escolheu em 16/11/2026). O subtítulo
+          // sai no dobro do tamanho do chat, e estes 198 px da fonte (o locked tem 202) cabem na tela na
+          // escala automática de 1920 x 1080.
+          "progress": {
+            "title": "&e&lNOITE",
+            "subtitle": "&fSua pá está no nível &e{shovel_level}&f. PvP no nível &e{level}&f."
           }
         }
       },
