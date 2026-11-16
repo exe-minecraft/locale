@@ -74,8 +74,8 @@
       "messages": {
         "build-limit": "Você não pode mexer em blocos acima da altura {limit}.",
         "extraction-blocked": "Você não pode mexer em blocos na proteção de um portal de extração.",
-        // O buraco do poço e a borda dele são a volta das cavernas pelo slime do fundo, e o que se põe ali não sai mais:
-        // o bloco, a água e a lava do balde, e o barco.
+        // O buraco do poço e a borda dele são a volta das cavernas pelo slime do fundo, e nada se põe ali (o bloco, a
+        // água e a lava do balde, e o barco). O bloco posto não sai mais, e a água, a lava ou o barco tampam a subida.
         "shaft-blocked": "Você não pode colocar nada no buraco do poço nem em volta da boca dele, porque ele é o caminho de volta das cavernas.",
         "combat-day": "O combate fica desativado durante o dia.",
         // O PvP da noite só vale entre quem tem a Pá Especial no nível {level}, dos dois lados.
@@ -308,8 +308,8 @@
               "description": "O Mundo de Extração"
             }
           },
-          "running": "O reset dos blocos do Mundo de Extração já está em andamento, e um outro sai logo depois dele.",
-          "started": "O reset dos blocos do Mundo de Extração começou, conferindo os lugares escavados de {chunks} {chunks_unit}. O reset automático segue no horário dele."
+          "running": "Já há um reset dos blocos do Mundo de Extração em andamento, e o seu pedido sai logo depois dele.",
+          "started": "O reset dos blocos do Mundo de Extração começou, conferindo {chunks} {chunks_unit} onde alguém quebrou ou tentou quebrar blocos. O reset automático segue no horário dele."
         }
       },
       "views": {
