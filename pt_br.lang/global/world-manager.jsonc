@@ -95,6 +95,53 @@
             "plural": "blocos"
           },
           "invalid": "&cInsira um tamanho entre 1 e 60000000 e um tempo entre 0 e 86400 segundos."
+        },
+        "schematics": {
+          "usage": {
+            "visit": { "syntax": "[build]", "description": "abrir o menu das builds ou ir até uma delas" }
+          },
+          "player-only": "&cEntre no servidor para visitar as builds.",
+          "not-found": "&cNão há build com o nome {schematic_id}. Use /schematics para ver a lista.",
+          "world-not-loaded": "&cO mundo {world_name} das builds não está carregado neste servidor.",
+          "teleported": "&aVocê está na build {schematic_name}.",
+          "teleport-failed": "&cO teleporte foi cancelado. Tente novamente.",
+          "paste": {
+            "description": "colar uma build de novo no lugar dela",
+            "arguments": {
+              "id": {
+                "name": "build",
+                "description": "O nome da build no /schematics"
+              }
+            },
+            "pasting": "&7Colando a build &f{schematic_name} &7no mundo {world_name}, em {x}, {y}, {z}...",
+            "pasted": "&aBuild &f{schematic_name} &acolada em {millis} ms.",
+            "busy": "&cJá há uma build sendo colada. Aguarde o fim dela antes de colar outra.",
+            "file-missing": "&cO arquivo {schematic_id}.schematic não está na pasta de schematics do WorldEdit deste servidor.",
+            "invalid-id": "&cO nome {schematic_id} não vale como arquivo de schematic. Use letras minúsculas, números, hífen ou sublinhado.",
+            "failed": "&cNão foi possível colar a build {schematic_name}. A falha foi registrada para a equipe técnica."
+          }
+        }
+      },
+      "views": {
+        "schematics": {
+          "title": "Builds",
+          "items": {
+            "build": {
+              "name": "&a{schematic_name}",
+              "lore": [
+                "&7Tamanho: &f{width} x {height} x {length}",
+                "&7Schematic: &f{schematic_id}",
+                "",
+                "&eClique para visitar."
+              ]
+            }
+          },
+          "empty": {
+            "name": "&cNenhuma build",
+            "lore": [
+              "&7Este servidor não tem builds para visitar."
+            ]
+          }
         }
       }
     }
