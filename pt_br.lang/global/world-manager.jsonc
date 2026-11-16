@@ -99,7 +99,8 @@
         "schematics": {
           "player-only": "&cEntre no servidor para visitar as builds.",
           "not-found": "&cA build {schematic_id} não está na lista. Use /schematics para ver as builds.",
-          "world-not-loaded": "&cO mundo {world_name} das builds não está carregado neste servidor.",
+          // O mundo das builds não está aberto aqui nem em outro servidor do mesmo modo.
+          "world-not-loaded": "&cO mundo {world_name} das builds não está carregado agora.",
           "teleported": "&aVocê está na build {schematic_name}.",
           "teleport-failed": "&cO teleporte foi cancelado. Tente novamente.",
           "visit": {
@@ -121,6 +122,8 @@
             },
             "pasting": "&7Colando a build &f{schematic_name} &7no mundo {world_name}, em {x}, {y}, {z}...",
             "pasted": "&aBuild &f{schematic_name} &acolada em {duration}.",
+            // O mundo das builds está aberto em outro servidor do modo, e só ele escreve no mundo.
+            "elsewhere": "&cO mundo {world_name} das builds fica no servidor {app_id}. Cole a build de lá.",
             "file-missing": "&cO arquivo {schematic_id}.schematic não está na pasta de schematics do WorldEdit deste servidor.",
             "failed": "&cNão foi possível colar a build {schematic_name}. A falha foi registrada para a equipe técnica."
           }
