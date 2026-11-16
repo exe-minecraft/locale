@@ -37,7 +37,10 @@
             }
           },
           "cannot-find-with-id": "Não foi possível encontrar um kit com esse id!",
-          "success": "Você deu o kit {kit_id} para {target_name_with_color}&a."
+          "success": "Você deu o kit {kit_id} para {target_name_with_color}&a.",
+          "target-in-transit": "{target_name_with_color}&c está trocando de servidor. Tente de novo em instantes.",
+          "unavailable": "O kit {kit_id} não tem itens gravados. Monte os itens dele com o /editkit antes de dar.",
+          "target-without-space": "{target_name_with_color}&c não tem espaço no inventário para o kit {kit_id}."
         }
       },
       "messages": {
