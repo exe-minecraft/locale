@@ -12,7 +12,7 @@
             }
           },
           "cannot-find-with-id": "Não foi possível encontrar um kit com esse id!",
-          "success": "O kit {kit_id} foi deletado com sucesso.",
+          "success": "Os itens do kit {kit_id} foram apagados. Ele segue no menu, indisponível até o /editkit.",
           // O kit vem do yml; o que se apaga são os itens gravados. Sem eles não havia nada a deletar.
           "already-empty": "O kit {kit_id} não tem itens gravados. Não havia nada para apagar."
         },
@@ -37,7 +37,7 @@
             }
           },
           "cannot-find-with-id": "Não foi possível encontrar um kit com esse id!",
-          "success": "Você deu o kit \"{kit_id}\" para o jogador {target_name}!"
+          "success": "Você deu o kit {kit_id} para {target_name_with_color}&a."
         }
       },
       "messages": {
@@ -46,7 +46,7 @@
             "unavailable": "Este kit ainda não está disponível.",
             "dont-have-permission": "Você não possui permissão para coletar esse kit.",
             "in-delay": "Você precisa esperar mais {kit_cooldown_remaining} para coletar esse kit.",
-            "success": "Kit \"&f{kit_name}\" coletado!"
+            "success": "Você coletou o {kit_name}&a."
           }
         },
         "views": {
