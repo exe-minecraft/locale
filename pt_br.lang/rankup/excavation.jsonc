@@ -123,19 +123,13 @@
           " &b[Extração] &fVocê ganhou &e{tokens} {tokens_unit} &fem {duration} escavando!",
           ""
         ],
-        // A noite chegou e o PvP foi liberado. Vai a todo o rankup, com o som do wither, no molde
-        // do aviso da borda que fecha nos eventos do P4Free (o documento do dono de 15/11/2026).
+        // A noite chegou: vai a todo o rankup, com o som do wither. O dono preferiu este texto ao bloco
+        // "PVP LIBERADO" do d410b4b (16/11/2026); a contagem e o título da virada seguem nos titles.
         "night": [
           "",
-          "&4&l&m       &c&l&m       &r &f&lPVP LIBERADO &c&l&m       &4&l&m       ",
-          "",
-          "&c  &fA &lnoite&r&f chegou e o PvP foi liberado no Mundo de Extração!",
-          "",
-          "    &4• &fQuem pode lutar: &cPá Especial no nível {level} ou acima",
-          "",
-          "&c  &fFique atento aos perigos!",
-          "",
-          "&4&l&m       &c&l&m       &r &f&lPVP LIBERADO &c&l&m       &4&l&m       ",
+          "&b [Extração] &fA &lnoite &fchegou no Mundo de Extração!",
+          "&f O PvP está &cativo&f para quem tem a Pá Especial no nível {level}.",
+          "&f Fique atento aos perigos!",
           ""
         ],
         // A invulnerabilidade de quem voltou ao lugar onde caiu acaba no primeiro golpe dele.
