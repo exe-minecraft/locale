@@ -103,6 +103,8 @@
           "world-not-loaded": "&cO mundo {world_name} das builds não está carregado agora.",
           "teleported": "&aVocê está na build {schematic_name}.",
           "teleport-failed": "&cO teleporte foi cancelado. Tente novamente.",
+          // A visita de outro servidor confere o grupo do /schematics no servidor do mundo das builds.
+          "denied": "&cVocê não tem o grupo do /schematics no servidor {app_id}, onde ficam as builds.",
           "visit": {
             "description": "ir até uma build",
             "arguments": {
