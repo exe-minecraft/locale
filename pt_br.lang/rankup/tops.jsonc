@@ -8,7 +8,10 @@
         // Os spawners: quantos o jogador tem colocados, somados todos os blocos, e os tokens que já pagou por ovos e
         // por melhorias.
         "spawners_placed": "Spawners: colocados",
-        "spawners_invested": "Spawners: investimento"
+        "spawners_invested": "Spawners: investimento",
+        // O ranking das perks é a soma dos níveis das nove, a mesma conta da linha "Rank" da cabeça do /perks, que o
+        // abre. O nome vai sem dois-pontos porque a linha de cada jogador já escreve "{ranking}: {valor}".
+        "perks_total_level": "Nível total das perks"
       }
     }
   }
