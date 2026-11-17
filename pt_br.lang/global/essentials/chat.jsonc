@@ -182,10 +182,13 @@
             "store-url": "https://loja.rede-exe.com",
             "master": ["{group_tag}", "&7Equipe da rede: direção."],
             "manager": ["{group_tag}", "&7Equipe da rede: gerência."],
-            "developer": ["{group_tag}", "&7Equipe da rede: desenvolvimento."],
             "administrator": ["{group_tag}", "&7Equipe da rede: administração."],
             "moderator": ["{group_tag}", "&7Equipe da rede: moderação do chat e das regras."],
-            "imperial": ["{group_tag}", "&7O VIP mais alto da rede.", "", "&eClique para ver as vantagens na loja."],
+            "ajudante": ["{group_tag}", "&7Equipe da rede: ajuda aos jogadores."],
+            "builder": ["{group_tag}", "&7Equipe da rede: construção."],
+            "partner": ["{group_tag}", "&7Criador de conteúdo parceiro da rede."],
+            "ancestral": ["{group_tag}", "&7O VIP mais alto da rede.", "", "&eClique para ver as vantagens na loja."],
+            "imperial": ["{group_tag}", "&7VIP da rede.", "", "&eClique para ver as vantagens na loja."],
             "samurai": ["{group_tag}", "&7VIP da rede.", "", "&eClique para ver as vantagens na loja."]
           },
           // {sent_at}: a data e a hora no formato de plugins.core.time.date-time-pattern.

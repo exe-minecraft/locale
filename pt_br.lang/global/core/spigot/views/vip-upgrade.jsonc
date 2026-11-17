@@ -63,6 +63,7 @@
         "permanent": "&cSeu {from_tag} &cé permanente, e o upgrade é pelos dias que faltam.",
         "frozen": "&cSeu {from_tag} &cestá congelado. O upgrade volta quando ele voltar a contar.",
         "already": "&cSeu {to_tag} &cjá vai até o fim do {from_tag}&c, então não há dias para evoluir.",
+        "higher": "&cVocê já tem um VIP acima do {to_tag}&c. O upgrade volta quando ele vencer.",
         "error": "&cNão foi possível consultar o preço agora. Tente de novo em instantes."
       },
       "insufficient": "Você precisa de &6{price} Cash &cpara este upgrade.",

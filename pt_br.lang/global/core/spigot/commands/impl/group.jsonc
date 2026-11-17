@@ -63,7 +63,7 @@
               },
               "group": {
                 "name": "vip",
-                "description": "O VIP com prazo (samurai ou imperial)"
+                "description": "O VIP com prazo (samurai, imperial ou ancestral)"
               },
               "server": {
                 "name": "servidor",
@@ -163,7 +163,7 @@
             },
             "vip": {
               "name": "vip",
-              "description": "O VIP a dar (samurai ou imperial)"
+              "description": "O VIP a dar (samurai, imperial ou ancestral)"
             },
             "duration": {
               "name": "dias|permanente|temporada",
