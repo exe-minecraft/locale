@@ -69,7 +69,8 @@
         "perks": {
           "title": "Perks",
           // A cabeça do jogador, em cima. {rank} é uma das três linhas de rank abaixo. As linhas em branco são "&7", como
-          // nos baús de referência, para o item sair igual ao de lá.
+          // nos baús de referência, para o item sair igual ao de lá. O clique abre o ranking do nível total, e a última
+          // linha é a da imagem do dono de 17/11/2026.
           "profile": {
             "name": "&ePerks de {player_name}",
             "lore": [
@@ -77,7 +78,8 @@
               "&f Nível Total: &e&l{total_level}",
               "&f Rank: {rank}",
               "&7",
-              "&eVocê tem &f&l{active} &ede &f&l{limit} &e{limit_unit} atualmente!"
+              "&eVocê tem &f&l{active} &ede &f&l{limit} &e{limit_unit} atualmente!",
+              "&aClique para acessar o ranking!"
             ]
           },
           "rank": {
