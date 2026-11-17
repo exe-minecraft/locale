@@ -281,7 +281,112 @@
             "thrower": "&aVocê trocou de lugar com {target_name_with_color}&a.",
             "target": "&c{thrower_name_with_color} &ctrocou de lugar com você usando um Inversor."
           }
+        },
+        // Os oito itens que os mobs da noite largam (o documento do dono de 17/11/2026, seção 6). Os nomes e as
+        // descrições são os do baú "cosmeticos escavacao" do Kekitoox, com o português corrigido. A flecha não está
+        // no baú. Nenhum deles sai do Mundo de Extração.
+        "mob-healing-potion": {
+          "display-name": "Poção de Cura Instantânea",
+          "name": "&dPoção de Cura Instantânea",
+          "lore": [
+            "&7Esta poção te cura ao arremessar.",
+            "&7",
+            "&f Nível: &d&lII",
+            "&7",
+            "&eClique com o botão direito para arremessar!"
+          ]
+        },
+        "mob-bow": {
+          "display-name": "Arco",
+          "name": "&eArco",
+          "lore": [
+            "&7Arco normal com possibilidade de encantar."
+          ]
+        },
+        "mob-arrow": {
+          "display-name": "Flecha",
+          "name": "&eFlecha",
+          "lore": [
+            "&7Flecha normal, para o seu arco."
+          ]
+        },
+        "mob-trap": {
+          "display-name": "Armadilha",
+          "name": "&bArmadilha",
+          "lore": [
+            "&7Arremesse este item para criar uma plataforma",
+            "&73x3 de teia onde cair e prender seus inimigos.",
+            "&7",
+            "&eClique com o botão direito para arremessar!"
+          ],
+          "refused": {
+            "elsewhere": "A Armadilha só funciona no Mundo de Extração.",
+            "day": "A Armadilha só funciona durante a noite, com o PvP ativo.",
+            "pvp-locked": "A Armadilha só funciona com a sua Pá Especial no nível {level}, quando o PvP é liberado para você.",
+            // A Armadilha caiu a até 3 blocos de um jogador abaixo do nível do PvP. A teia não nasce, e o item se perde.
+            "protected": "A Armadilha se perdeu, porque caiu perto de um jogador que ainda não pode lutar."
+          }
+        },
+        "mob-antidote": {
+          "display-name": "Antídoto",
+          "name": "&cAntídoto",
+          "lore": [
+            "&7Se defenda dos demais efeitos tendo",
+            "&7o antídoto no seu inventário.",
+            "&7",
+            "&8(Uso único e automático)"
+          ],
+          "used": "&aSeu Antídoto barrou a poção que te acertou e foi gasto."
+        },
+        "mob-flashbang": {
+          "display-name": "Poção de Cegueira",
+          "name": "&8Poção de Cegueira",
+          "lore": [
+            "&7Esta poção cega seus inimigos ao arremessar.",
+            "&7",
+            "&f Nível: &8&lI",
+            "&f Duração: &a0:30",
+            "&7",
+            "&eClique com o botão direito para arremessar!"
+          ]
+        },
+        "mob-slowness-potion": {
+          "display-name": "Poção de Lentidão",
+          "name": "&5Poção de Lentidão",
+          "lore": [
+            "&7Esta poção deixa seus inimigos lentos ao arremessar.",
+            "&7",
+            "&f Nível: &5&lI",
+            "&f Duração: &a1:07",
+            "&7",
+            "&eClique com o botão direito para arremessar!"
+          ]
+        },
+        "mob-ender-pearl": {
+          "display-name": "Ender Pearl",
+          "name": "&5Ender Pearl",
+          "lore": [
+            "&7Teleporte-se como um enderman pelos lugares.",
+            "&7",
+            "&eClique com o botão direito para arremessar!",
+            "&8(Cooldown de 30s)"
+          ]
         }
+      },
+      // Os mobs da noite (o documento do dono de 17/11/2026, seção 5). O nome fica em cima da cabeça de cada um, com a
+      // vida que ele tem na hora ({health}). A tabela do documento mostra "20.0", e o dono pediu em 17/11/2026 a vida
+      // inteira sem o ".0" ("20"). A vida quebrada sai com uma casa ("19.1").
+      "mobs": {
+        "name": {
+          "zombie": "&2&lZombie &8- &c{health} ❤",
+          "skeleton": "&7&lEsqueleto &8- &c{health} ❤",
+          "spider": "&8&lAranha &8- &c{health} ❤",
+          "creeper": "&a&lCreeper &8- &c{health} ❤",
+          "witch": "&5&lBruxa &8- &c{health} ❤",
+          "enderman": "&0&lEnderman &8- &c{health} ❤"
+        },
+        // A quem saiu do mundo (pelo portal, pelo /spawn da staff ou com o mundo já nascido de novo) com itens dos mobs.
+        "items-left": "&eOs itens dos mobs ficaram no Mundo de Extração. Só as armaduras saem com você."
       },
       "commands": {
         "escavacao": {
