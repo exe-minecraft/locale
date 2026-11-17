@@ -2,7 +2,8 @@
   "plugins": {
     // O Mundo de Extração do rankup (o documento do dono de 12/11/2026, a próxima versão do mundo de
     // escavação do exe-rankup): quatro biomas que se escavam com a Pá Especial, com PvP à noite, e de
-    // onde só se sai com os itens por um portal de extração. O comando segue /escavação, com o /mina.
+    // onde só se sai com os itens por um portal de extração. O nome do mundo é Extração, e não mais Escavação (o
+    // pedido do dono de 17/11/2026). O comando é o /extração, e o /escavação e o /mina seguem valendo.
     "excavation": {
       "units": {
         "second": { "singular": "segundo", "plural": "segundos" },

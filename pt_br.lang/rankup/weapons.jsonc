@@ -254,7 +254,7 @@
                   "",
                   "&7Colha com ela as plantações maduras",
                   "&7do seu terreno, e use os tokens da",
-                  "&7escavação para evoluir os encantamentos."
+                  "&7extração para evoluir os encantamentos."
                 ]
               },
               "13": {
@@ -772,7 +772,7 @@
                 "name": "&eInformações",
                 "lore": [
                   "&7Evolua sua pá com encantamentos",
-                  "&7que rendem itens na escavação!",
+                  "&7que rendem itens na extração!",
                   "",
                   "&7Escave com ela para ganhar tokens,",
                   "&7e use os tokens para evoluir",
@@ -1102,8 +1102,8 @@
       "shovel": {
         "level-up": "Sua pá subiu para o nível {level}.",
         "worn-out": "Sua pá está gasta. Conserte-a no menu (Shift + botão direito) para continuar escavando.",
-        "found": "&b&lEscavação! &eO encantamento &l{enchant}&r&e te deu um item {rarity}&e!",
-        "fortune": "&b&lEscavação! &eO encantamento &l{enchant}&r&e dobrou o que você achou!"
+        "found": "&b&lExtração! &eO encantamento &l{enchant}&r&e te deu um item {rarity}&e!",
+        "fortune": "&b&lExtração! &eO encantamento &l{enchant}&r&e dobrou o que você achou!"
       },
       "rarities": {
         "common": "&7Comum",
