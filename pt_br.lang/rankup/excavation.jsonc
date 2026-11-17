@@ -322,9 +322,7 @@
           "refused": {
             "elsewhere": "A Armadilha só funciona no Mundo de Extração.",
             "day": "A Armadilha só funciona durante a noite, com o PvP ativo.",
-            "pvp-locked": "A Armadilha só funciona com a sua Pá Especial no nível {level}, quando o PvP é liberado para você.",
-            // A Armadilha caiu a até 3 blocos de um jogador abaixo do nível do PvP. A teia não nasce, e o item se perde.
-            "protected": "A Armadilha se perdeu, porque caiu perto de um jogador que ainda não pode lutar."
+            "pvp-locked": "A Armadilha só funciona com a sua Pá Especial no nível {level}, quando o PvP é liberado para você."
           }
         },
         "mob-antidote": {
@@ -386,7 +384,9 @@
           "enderman": "&0&lEnderman &8- &c{health} ❤"
         },
         // A quem saiu do mundo (pelo portal, pelo /spawn da staff ou com o mundo já nascido de novo) com itens dos mobs.
-        "items-left": "&eOs itens dos mobs ficaram no Mundo de Extração. Só as armaduras saem com você."
+        "items-left": "&eOs itens dos mobs ficaram no Mundo de Extração. Só as armaduras saem com você.",
+        // A quem bateu num mob que já luta com outro jogador. O golpe não tira vida, e o mob também não o machuca.
+        "not-yours": "Este mob já está lutando com outro jogador, e só quem deu o primeiro golpe pode atacá-lo."
       },
       "commands": {
         "escavacao": {
