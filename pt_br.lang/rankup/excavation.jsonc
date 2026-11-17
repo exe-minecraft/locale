@@ -385,9 +385,7 @@
           "enderman": "&0&lEnderman &8- &c{health} ❤"
         },
         // A quem saiu do mundo (pelo portal, pelo /spawn da staff ou com o mundo já nascido de novo) com itens dos mobs.
-        "items-left": "&eOs itens dos mobs ficaram no Mundo de Extração. Só as armaduras saem com você.",
-        // A quem bateu num mob que já luta com outro jogador. O golpe não tira vida, e o mob também não o machuca.
-        "not-yours": "Este mob já está lutando com outro jogador, e só quem deu o primeiro golpe pode atacá-lo."
+        "items-left": "&eOs itens dos mobs ficaram no Mundo de Extração. Só as armaduras saem com você."
       },
       "commands": {
         "escavacao": {
