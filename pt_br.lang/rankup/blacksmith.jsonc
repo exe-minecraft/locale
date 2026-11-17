@@ -7,9 +7,6 @@
   "plugins": {
     "blacksmith": {
       "items": {
-        // A linha de um encantamento acima do nível X, que o cliente 1.8 não escreve, no topo da lore do item. É a cor e
-        // o formato da linha do jogo.
-        "enchant-line": "&7{enchantment} {level}",
         // A Runa de Extração, com o texto do dono (17/11/2026). Algumas junções a pedem.
         "rune": {
           "display-name": "Runa de Extração",
