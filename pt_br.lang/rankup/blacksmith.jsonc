@@ -1,0 +1,475 @@
+// O ferreiro do rankup (17/11/2026, o documento "Sistema de Ferreiro, Removedor de Encantamentos e Reciclador" do dono).
+// Os menus e os itens são os dos baús de referência do terreno do Kekitoox (rankup-plots-1, de -71 a -63, 65 a 67, -51 a
+// -45), com o português corrigido ("Aqui você pode", "falha" no lugar de "falho", "aplicá-lo quando quiser"). Os nomes
+// dos encantamentos são os da lista do dono de 17/11/2026, os mesmos do tooltip de todo item. Os números (os
+// requisitos de cada opção, o conserto e o reciclar) ficam no config do plugin, e os da perk Ferreiro no das perks.
+{
+  "plugins": {
+    "blacksmith": {
+      "items": {
+        // A linha de um encantamento acima do nível X, que o cliente 1.8 não escreve, no topo da lore do item. É a cor e
+        // o formato da linha do jogo.
+        "enchant-line": "&7{enchantment} {level}",
+        // A Runa de Extração, com o texto do dono (17/11/2026). Algumas junções a pedem.
+        "rune": {
+          "display-name": "Runa de Extração",
+          "name": "&bRuna de Extração",
+          "lore": [
+            "&7Use este item para poder juntar suas",
+            "&7ferramentas e armaduras no ferreiro.",
+            "",
+            "&8(/ferreiro)"
+          ]
+        },
+        "remover": {
+          "display-name": "Removedor de Encantamentos",
+          "name": "&5Removedor de Encantamentos",
+          "lore": [
+            "&7Use este item para transformar um",
+            "&7encantamento de qualquer item em",
+            "&7um livro que você pode usar mais tarde.",
+            "",
+            "&5Arraste até o item que deseja para usar!"
+          ]
+        },
+        // O livro que o removedor dá e o /ferreiro admin darlivro entrega. O servidor esconde a linha do encantamento
+        // guardado num livro, e por isso ela vem na lore, no molde dos livros do menu do removedor.
+        "book": {
+          "name": "&eLivro Encantado",
+          "lore": [
+            "&7Esse livro tem as seguintes propriedades:",
+            "",
+            "&7 Encantamento &8- &f{enchantment}",
+            "&7 Nível do Encantamento &8- &f{level}",
+            "",
+            "&eArraste até o item que deseja para aplicar!"
+          ]
+        }
+      },
+      // Os nomes da lista do dono de 17/11/2026, os mesmos do tooltip de todo item (o ItemTooltipFlags do exe-server),
+      // pela chave do encantamento no servidor.
+      "enchantments": {
+        "damage_all": "Afiação",
+        "damage_undead": "Julgamento",
+        "damage_arthropods": "Ruína dos Artrópodes",
+        "knockback": "Repulsão",
+        "fire_aspect": "Aspecto Flamejante",
+        "loot_bonus_mobs": "Pilhagem",
+        "dig_speed": "Eficiência",
+        "silk_touch": "Toque Suave",
+        "loot_bonus_blocks": "Fortuna",
+        "durability": "Inquebrável",
+        "protection_environmental": "Proteção",
+        "protection_fire": "Proteção contra Fogo",
+        "protection_explosions": "Proteção contra Explosões",
+        "protection_projectile": "Proteção contra Projéteis",
+        "protection_fall": "Peso-pena",
+        "oxygen": "Respiração",
+        "water_worker": "Afinidade Aquática",
+        "thorns": "Espinhos",
+        "depth_strider": "Passos Profundos",
+        "arrow_damage": "Força",
+        "arrow_knockback": "Impacto",
+        "arrow_fire": "Chama",
+        "arrow_infinite": "Infinidade",
+        "luck": "Sorte do Mar",
+        "lure": "Isca"
+      },
+      "views": {
+        // O menu principal (/ferreiro e a bigorna). O {level} da cabeça é o nível da perk Ferreiro.
+        "primary": {
+          "title": "Ferreiro",
+          "items": {
+            "head": {
+              "name": "&8Ferreiro &7(&fNível {level}&7)",
+              "lore": [
+                "&7Aqui você pode juntar seus equipamentos,",
+                "&7melhorar o seu nível e desbloquear",
+                "&7itens com encantamentos exclusivos.",
+                "",
+                "&8(A % de falha depende da perk Ferreiro)"
+              ]
+            },
+            "swords": {
+              "name": "&bEspadas",
+              "lore": [
+                "&7Ao acessar esta categoria, você pode ver",
+                "&7os níveis de espada disponíveis para crafting",
+                "&7e os custos necessários para esse encantamento.",
+                "",
+                "&bClique para acessar essa categoria!"
+              ]
+            },
+            "tools": {
+              "name": "&bFerramentas",
+              "lore": [
+                "&7Ao acessar esta categoria, você pode ver",
+                "&7as ferramentas disponíveis para crafting.",
+                "",
+                "&bClique para acessar essa categoria!"
+              ]
+            },
+            "armor": {
+              "name": "&bArmaduras",
+              "lore": [
+                "&7Ao acessar esta categoria, você pode ver",
+                "&7os níveis de armadura disponíveis para crafting",
+                "&7e os custos necessários para esse encantamento.",
+                "",
+                "&bClique para acessar essa categoria!"
+              ]
+            }
+          }
+        },
+        // Os menus das categorias. Cada opção monta a lore com as linhas de requisitos, e a das runas só aparece na
+        // opção que as pede. O {level} é o nível que os encantamentos dos itens têm de ter, e o {target} o que sai.
+        "category": {
+          "swords": {
+            "title": "Ferreiro - Espadas",
+            "items": {
+              "head": {
+                "name": "&8Ferreiro - Espadas &7(&fNível {level}&7)",
+                "lore": [
+                  "&7Aqui você pode juntar suas espadas,",
+                  "&7junte espadas com encantamentos",
+                  "&7iguais para criar o nível seguinte.",
+                  "",
+                  "&7Os encantamentos além do principal,",
+                  "&7como o &fInquebrável&7, precisam ser",
+                  "&7iguais e também sobem de nível.",
+                  "",
+                  "&8(A % de falha depende da perk Ferreiro)"
+                ]
+              }
+            },
+            "option": {
+              "name": "&bEspada &b&lS{target}",
+              "lore-top": [
+                "&7Esta espada apenas aceita encantamentos",
+                "&7que pertençam ao nível &f{level} &7(ex. &fAf {level}, Inq {level}&7)",
+                "",
+                "&f &f&nRequisitos:",
+                ""
+              ],
+              "items": "&f &7 ➭ &bEspada de Diamante &7[&fx{amount}&7]",
+              "diamonds": "&f &7 ➭ &bDiamante &7[&fx{amount}&7]",
+              "runes": "&f &7 ➭ &bRuna de Extração &7[&fx{amount}&7]",
+              "xp": "&f &7 ➭ &aNível de XP &7[&fx{amount}&7]",
+              "lore-bottom": [
+                "",
+                "&bClique para acessar esse crafting!"
+              ]
+            }
+          },
+          "tools": {
+            "title": "Ferreiro - Ferramentas",
+            "items": {
+              "head": {
+                "name": "&8Ferreiro - Ferramentas &7(&fNível {level}&7)",
+                "lore": [
+                  "&7Aqui você pode juntar suas ferramentas,",
+                  "&7junte ferramentas com encantamentos",
+                  "&7iguais para criar o nível seguinte.",
+                  "",
+                  "&7Os encantamentos além do principal,",
+                  "&7como o &fInquebrável&7, precisam ser",
+                  "&7iguais e também sobem de nível.",
+                  "",
+                  "&7Ferramentas: &fPicareta, Machado e Pá",
+                  "",
+                  "&8(A % de falha depende da perk Ferreiro)"
+                ]
+              }
+            },
+            "option": {
+              "name": "&bFerramenta &b&l{target}",
+              "lore-top": [
+                "&7Esta ferramenta apenas aceita encantamentos",
+                "&7que pertençam ao nível &f{level} &7(&7ex. &fEf {level}, Inq {level} e Fort {level}&7)",
+                "",
+                "&f &f&nRequisitos:",
+                ""
+              ],
+              "items": "&f &7 ➭ &bFerramenta de Diamante &7[&fx{amount}&7]",
+              "diamonds": "&f &7 ➭ &bDiamante &7[&fx{amount}&7]",
+              "runes": "&f &7 ➭ &bRuna de Extração &7[&fx{amount}&7]",
+              "xp": "&f &7 ➭ &aNível de XP &7[&fx{amount}&7]",
+              "lore-bottom": [
+                "",
+                "&bClique para acessar esse crafting!"
+              ]
+            }
+          },
+          "armor": {
+            "title": "Ferreiro - Armaduras",
+            "items": {
+              "head": {
+                "name": "&8Ferreiro - Armaduras &7(&fNível {level}&7)",
+                "lore": [
+                  "&7Aqui você pode juntar suas armaduras,",
+                  "&7junte armaduras com encantamentos",
+                  "&7iguais para criar o nível seguinte.",
+                  "",
+                  "&7Os encantamentos além do principal,",
+                  "&7como o &fInquebrável&7, precisam ser",
+                  "&7iguais e também sobem de nível.",
+                  "",
+                  "&7Armaduras: &fCapacete, Peitoral, Calça e Bota",
+                  "",
+                  "&8(A % de falha depende da perk Ferreiro)"
+                ]
+              }
+            },
+            "option": {
+              "name": "&bArmadura &b&l{target}",
+              "lore-top": [
+                "&7Esta armadura apenas aceita encantamentos",
+                "&7que pertençam ao nível &f{level} &7(ex. &fPro {level} e Inq {level}&7)",
+                "",
+                "&f &f&nRequisitos:",
+                ""
+              ],
+              "items": "&f &7 ➭ &bArmadura de Diamante &7[&fx{amount}&7]",
+              "diamonds": "&f &7 ➭ &bDiamante &7[&fx{amount}&7]",
+              "runes": "&f &7 ➭ &bRuna de Extração &7[&fx{amount}&7]",
+              "xp": "&f &7 ➭ &aNível de XP &7[&fx{amount}&7]",
+              "lore-bottom": [
+                "",
+                "&bClique para acessar esse crafting!"
+              ]
+            }
+          }
+        },
+        // O menu de juntar de uma opção. O título é o da categoria com o nível que sai.
+        "merge": {
+          "title": "Ferreiro",
+          "titles": {
+            "swords": "Juntar - Espada S{target}",
+            "tools": "Juntar - Ferramenta {target}",
+            "armor": "Juntar - Armadura {target}"
+          },
+          "items": {
+            // Os itens não combinam. O {problem} é uma das cinco frases de "problems".
+            "mismatch": {
+              "name": "&cErro",
+              "lore": [
+                "&7Os itens que você adicionou não",
+                "&7são compatíveis, ajuste os",
+                "&7itens e tente novamente!",
+                "",
+                "&7Problema: &f{problem}"
+              ]
+            },
+            // Tudo no menu, e o jogador sem os níveis de XP. A última linha não está no baú, e diz o nível necessário.
+            "no-xp": {
+              "name": "&cErro",
+              "lore": [
+                "&7Os itens que você adicionou são",
+                "&7compatíveis, porém, você não",
+                "&7tem XP suficiente para seguir!",
+                "",
+                "&7Nível de XP necessário: &f{xp}"
+              ]
+            },
+            // O item que vai sair, com o nome da opção e os encantamentos novos. Estas linhas vêm embaixo deles.
+            "ready": {
+              "lore": [
+                "",
+                "&7Acerto &a{success}% &8┇ &7Falha &c{failure}%",
+                "&eClique para craftar!"
+              ]
+            }
+          },
+          "problems": {
+            "items": "Itens diferentes",
+            "enchantments": "Encantamentos diferentes",
+            "levels": "Níveis diferentes",
+            // O encantamento que passaria do teto dele no item, como a Afiação do machado, que vai só até a S7 (o dono,
+            // 17/11/2026).
+            "ceiling": "{enchantment} vai só até o nível {max} neste item",
+            // O encantamento bloqueado no servidor, a Repulsão (o dono, 17/11/2026).
+            "blocked": "O encantamento {enchantment} está bloqueado"
+          }
+        },
+        // O menu do removedor, que abre ao largar o removedor em cima de um item encantado.
+        "remover": {
+          "title": "Removedor de Encantamentos",
+          "items": {
+            "info": {
+              "name": "&5Removedor de Encantamentos",
+              "lore": [
+                "&7Escolha o encantamento que deseja remover,",
+                "&7ao escolher, o livro será adicionado ao seu",
+                "&7inventário e você poderá aplicá-lo quando quiser",
+                "&7a qualquer item compatível com o encantamento.",
+                "",
+                "&8(Após o uso, o removedor desaparecerá)"
+              ]
+            },
+            // Um por encantamento do item, na ordem dele. O {index} conta de 1.
+            "entry": {
+              "name": "&cEncantamento &c&l{index}",
+              "lore": [
+                "&7Esse livro tem as seguintes propriedades:",
+                "",
+                "&7 Encantamento &8- &f{enchantment}",
+                "&7 Nível do Encantamento &8- &f{level}",
+                "",
+                "&cClique para escolher esse encantamento!"
+              ]
+            },
+            // O encantamento bloqueado no servidor, que sai do item sem virar livro.
+            "blocked-entry": {
+              "name": "&cEncantamento &c&l{index}",
+              "lore": [
+                "&7Este encantamento está bloqueado no",
+                "&7servidor e não vira livro.",
+                "",
+                "&7 Encantamento &8- &f{enchantment}",
+                "&7 Nível do Encantamento &8- &f{level}",
+                "",
+                "&cClique para tirar esse encantamento do item!"
+              ]
+            }
+          }
+        },
+        "recycle": {
+          "title": "Reciclador",
+          "items": {
+            "summary": {
+              "name": "&aReciclador",
+              "lore": [
+                "&7Ao reciclar você recebe os itens",
+                "&7e uma parte do XP usado de volta.",
+                "",
+                "&7Resumo dos itens a reciclar:",
+                "",
+                "&7 Quantidade: &f{amount}",
+                "&7 XP: &f{xp} {points_word}",
+                "",
+                "&aClique para reciclar os itens!"
+              ]
+            }
+          }
+        }
+      },
+      "messages": {
+        // A junção e o conserto leem a perk Ferreiro antes de gastar qualquer coisa. Sem as perks carregadas nada sai.
+        "perks-unavailable": "&cSuas perks ainda não carregaram neste servidor. Tente de novo em instantes, e se continuar assim, entre de novo.",
+        "creative": "&cO ferreiro não funciona no modo criativo.",
+        "vip-only": "&cO /ferreiro é só para jogadores VIP. Você pode usar o ferreiro clicando numa bigorna.",
+        // A espada, o machado e a pá da rede, e os itens especiais, não entram em nada do ferreiro.
+        "special-item": "&cOs itens especiais e as armas da rede não entram no ferreiro.",
+        "unknown-enchantment": "&c\"{enchantment}\" não é um encantamento. Os que o darlivro entrega são {enchantments}.",
+        // As palavras que concordam com um número nas mensagens ("1 diamante", "5 diamantes").
+        "words": {
+          "diamonds": { "singular": "diamante", "plural": "diamantes" },
+          "runes": { "singular": "runa", "plural": "runas" },
+          "levels": { "singular": "nível", "plural": "níveis" },
+          "items": { "singular": "item", "plural": "itens" },
+          "points": { "singular": "ponto", "plural": "pontos" }
+        },
+        "merge": {
+          "wrong-item": "&cEste menu não aceita este tipo de item.",
+          "no-enchantments": "&cEste item não tem encantamentos para juntar.",
+          "items-full": "&cO menu já tem os {amount} itens que esta opção junta. Tire um para colocar outro.",
+          "diamonds-full": "&cO menu já tem {amount} {word}, que é o que esta opção pede.",
+          "runes-full": "&cO menu já tem {amount} {word}, que é o que esta opção pede.",
+          // A runa de um lote diferente da que já está no menu, que o espaço não junta.
+          "runes-other-lot": "&cEsta runa não junta com a que está no menu. Tire a runa do menu, junte as suas runas numa pilha só no inventário e tente de novo.",
+          // O lote da runa do menu anulado pela equipe com o menu aberto.
+          "runes-void": "&cA runa do menu não vale mais, e a junção não foi feita. Tire a runa e fale com a equipe.",
+          // A runa anulada pela equipe, clicada no inventário.
+          "runes-void-input": "&cEsta runa não vale mais e não entra na junção. Fale com a equipe.",
+          "success": "&aVocê juntou os itens com sucesso e recebeu {option}&a!",
+          "failure": "&cA junção falhou, e os itens foram perdidos. Sua chance de acerto era de {chance}%."
+        },
+        "repair": {
+          "not-worn": "&cEste item não pode ser reparado, porque a durabilidade ainda está muito alta. O conserto começa com {minimum}% de desgaste.",
+          "no-diamonds": "&cVocê não tem diamantes suficientes. O conserto deste item precisa de {amount} {diamonds_word}.",
+          "no-xp": "&cVocê não tem XP suficiente. O conserto deste item precisa de {xp} {levels_word} de XP.",
+          "success": "&aSeu item foi reparado com sucesso! O conserto custou {diamonds} {diamonds_word} e {xp} {levels_word} de XP.",
+          "failure": "&cO conserto falhou, e o item ficou como estava. O conserto custou {diamonds} {diamonds_word} e {xp} {levels_word} de XP, e sua chance de acerto era de {chance}%."
+        },
+        "remover": {
+          "invalid-target": "&cO removedor não pode ser usado neste item.",
+          "no-enchantments": "&cEste item não tem encantamentos para remover.",
+          "item-changed": "&cO item mudou desde que o menu abriu, e nada foi removido. Arraste o removedor até ele de novo.",
+          "no-remover": "&cVocê não tem mais um removedor no inventário, e nada foi removido.",
+          "removed": "&aVocê removeu {enchantment} {level} do item e recebeu um livro com o encantamento.",
+          "removed-blocked": "&aVocê removeu {enchantment} {level} do item. Esse encantamento está bloqueado no servidor e não vira livro."
+        },
+        "book": {
+          "invalid-target": "&cO livro não pode ser usado neste item.",
+          "incompatible": "&cO encantamento {enchantment} não é compatível com este item.",
+          "blocked": "&cO encantamento {enchantment} está bloqueado no servidor e não pode ser aplicado.",
+          "conflict": "&cO encantamento {enchantment} não pode ficar junto com {other}, que o item já tem.",
+          "same": "&cO item já tem {enchantment} {level}.",
+          "lower": "&cO item já tem {enchantment} num nível mais alto ({current_level}).",
+          "too-high": "&cO encantamento {enchantment} vai só até o nível {max} neste item, e o livro é de nível {level}.",
+          "applied": "&aVocê aplicou {enchantment} {level} ao item.",
+          "replaced": "&aO encantamento {enchantment} do item foi substituído do nível {current_level} para o nível {level}."
+        },
+        "recycle": {
+          "invalid-item": "&cEste item não pode ser reciclado. O reciclador aceita espadas, ferramentas e armaduras de diamante.",
+          "no-enchantments": "&cEste item não tem encantamentos para reciclar.",
+          "full": "&cO menu já tem o máximo de {amount} itens.",
+          "empty": "&cColoque itens no menu para reciclar.",
+          "recycled": "&aVocê reciclou {amount} {items_word} e recebeu {xp} {points_word} de XP de volta."
+        }
+      },
+      "commands": {
+        "blacksmith": {
+          "description": "abrir o ferreiro, para juntar itens encantados",
+          "usage": {
+            "menu": { "syntax": "", "description": "abrir o ferreiro (VIP)" }
+          },
+          "admin": {
+            "description": "comandos da equipe para os itens do ferreiro",
+            "give-remover": {
+              "description": "entregar removedores de encantamentos a um jogador deste servidor",
+              "arguments": {
+                "target": { "name": "jogador", "description": "Jogador que recebe" },
+                "amount": { "name": "quantidade", "description": "Quantos removedores" }
+              },
+              "amount": "&cQuantidade inválida. Use um número inteiro de 1 a {max}!",
+              "elsewhere": "&c{target_name_with_color} &cnão está neste servidor. O item é entregue no servidor onde o jogador está.",
+              "full": "&cO inventário de {target_name_with_color} &cnão tem espaço para &e{item} &7[&f{amount}x&7]&c, e nada foi entregue.",
+              "given": "&aEntregue &e{item} &7[&f{amount}x&7] &aao jogador {target_name_with_color}",
+              "received": "&aRecebido &e{item} &7[&f{amount}x&7] &acom sucesso!"
+            },
+            "give-rune": {
+              "description": "entregar Runas de Extração a um jogador deste servidor",
+              "arguments": {
+                "target": { "name": "jogador", "description": "Jogador que recebe" },
+                "amount": { "name": "quantidade", "description": "Quantas runas" }
+              },
+              "amount": "&cQuantidade inválida. Use um número inteiro de 1 a {max}!",
+              "elsewhere": "&c{target_name_with_color} &cnão está neste servidor. O item é entregue no servidor onde o jogador está.",
+              "full": "&cO inventário de {target_name_with_color} &cnão tem espaço para &e{item} &7[&f{amount}x&7]&c, e nada foi entregue.",
+              "given": "&aEntregue &e{item} &7[&f{amount}x&7] &aao jogador {target_name_with_color}",
+              "received": "&aRecebido &e{item} &7[&f{amount}x&7] &acom sucesso!"
+            },
+            "give-book": {
+              "description": "entregar um livro de encantamento a um jogador deste servidor",
+              "arguments": {
+                "target": { "name": "jogador", "description": "Jogador que recebe" },
+                "enchantment": { "name": "encantamento", "description": "O encantamento, sem acento (afiacao, inquebravel, eficiencia...)" },
+                "level": { "name": "nível", "description": "O nível do encantamento" }
+              },
+              "level": "&cNível inválido. Use um número inteiro de 1 a {max}!",
+              "blocked": "&cO encantamento {enchantment} está bloqueado no servidor, e nem a equipe pode entregar o livro.",
+              "elsewhere": "&c{target_name_with_color} &cnão está neste servidor. O item é entregue no servidor onde o jogador está.",
+              "full": "&cO inventário de {target_name_with_color} &cestá cheio, e o livro de &e{enchantment} {level} &cnão foi entregue.",
+              "given": "&aEntregue um livro de &e{enchantment} {level} &aao jogador {target_name_with_color}",
+              "received": "&aRecebido um livro de &e{enchantment} {level}&a!"
+            }
+          }
+        },
+        "recycle": {
+          "description": "abrir o reciclador, para tirar os encantamentos dos itens e receber parte do XP"
+        }
+      }
+    }
+  }
+}

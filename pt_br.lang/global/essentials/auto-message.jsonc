@@ -55,6 +55,16 @@
             " &fbenefícios no &a/ranks&f, ou clicando &a&lAQUI&f.",
             ""
           ],
+          // A dica do ferreiro do rankup, em que o AQUI roda o /reciclar (o /ferreiro é só dos VIPs, e a bigorna é de
+          // todos). Espera o automessage do rankup, como a da enxada.
+          "ferreiro-rankup": [
+            "",
+            "&b&l FERREIRO: &fClique numa bigorna para juntar itens",
+            " &fencantados iguais e evoluir os encantamentos, ou para",
+            " &fconsertar o item da mão. Recicle os seus itens no",
+            " &a/reciclar&f, ou clicando &a&lAQUI&f.",
+            ""
+          ],
           "vip": [
             "",
             "&6&l VIP: &fCom o &aSamurai&f ou o &4Imperial&f você ganha kit",
