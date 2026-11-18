@@ -57,8 +57,6 @@
         // O pedido do nome. Depois desta linha o core põe o clique para cancelar e o prazo de um minuto.
         "query": "Digite no chat o novo nome do item. Para desistir sem gastar o Renomeador, digite &ccancelar&e.",
         "messages": {
-          // A espada ou o machado da rede antes da carga das armas do join.
-          "weapon-loading": "&cSua arma ainda está carregando. Tente de novo em instantes.",
           "no-permission": "&cVocê não tem permissão para usar o Renomeador.",
           // A Espada Especial, a Pá Especial e a Enxada Especial (o documento do dono de 18/11/2026).
           "network-weapon": "&cAs armas especiais já têm o nome delas e não aceitam o Renomeador.",
@@ -113,8 +111,6 @@
           "diamond_axe": "Machado de Diamante"
         },
         "messages": {
-          // A espada ou o machado da rede antes da carga das armas do join.
-          "weapon-loading": "&cSua arma ainda está carregando. Tente de novo em instantes.",
           "no-permission": "&cVocê não tem permissão para usar o StatTrak.",
           // A Espada Especial, a Pá Especial e a Enxada Especial (o documento do dono de 18/11/2026).
           "network-weapon": "&cAs armas especiais já têm o contador delas e não aceitam o StatTrak.",

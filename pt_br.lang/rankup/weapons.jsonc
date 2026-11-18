@@ -1,8 +1,8 @@
 {
   "plugins": {
-    // As armas do rankup: a espada da rede, com os textos do P4Free menos o /cofre e os tokens
-    // dos golpes, que o rankup não tem, e a Pá Especial, o /pá do exe-rankup. Os textos da pá que mudam de
-    // um tipo para outro ficam em "pa", com o texto do exe-rankup, sem os símbolos que o 1.8 não desenha.
+    // As armas do rankup: a Pá Especial (o /pá do exe-rankup), a Enxada Especial e a Espada Especial (a /espada de
+    // mobs, desde 18/11/2026), cada uma com os textos dela em "pa", "enxada" e "espada". Na raiz ficam os nomes dos
+    // encantamentos, o que as três dividem e o que se diz de uma arma que não existe mais no rankup.
     "weapons": {
       // A Enxada Especial, a /enxada, que colhe as plantações dos terrenos (10/11/2026). Os encantamentos e os textos
       // dos ícones são os dos baús de referência do Kekitoox; o resto segue o padrão da pá.
@@ -479,8 +479,8 @@
         "left-color": "&7"
       },
       // A Espada Especial, a /espada de mobs (o documento do dono de 18/11/2026, com o baú "Menu Espada" do Kekitoox).
-      // Até 18/11 a /espada do rankup era a espada da rede, a mesma do P4Free, e o "kills" é dela. O machado saiu do
-      // rankup no documento do dono de 12/11/2026, à noite.
+      // Até 18/11 a /espada do rankup era a espada da rede, a mesma do P4Free. O machado saiu do rankup no documento do
+      // dono de 12/11/2026, à noite.
       "espada": {
         // O que aparece no lugar do número no encantamento sem nível para mostrar (a Afiação, o Indestrutível).
         "endless": "∞",
@@ -843,9 +843,7 @@
           "enchant-owned": "&6 {enchant} &l{level}",
           // O encantamento sem número de nível, com o ∞ sem negrito, porque em negrito o 1.8 o desenha borrado.
           "enchant-endless": "&6 {enchant} {level}",
-          "enchant-missing": "&8 {enchant}",
-          // Os abates da espada da rede que o rankup teve até 18/11/2026. Sai depois da janela da Espada Especial.
-          "kills": "&fAbates: &c{kills}"
+          "enchant-missing": "&8 {enchant}"
         },
         "broken": "&cSua Espada Especial chegou ao fim da durabilidade e foi eliminada.",
         "plural": "Espadas"
@@ -1370,17 +1368,17 @@
         },
         "espada": {
           "still-loading": "Sua espada ainda está carregando. Tente de novo em instantes.",
-          "inventory-full": "Libere um espaço no inventário antes de resgatar a espada.",
-          "already-have": "Você já tem a espada especial na mochila.",
-          "in-vault": "Sua espada especial está guardada no seu /cofre.",
+          "inventory-full": "Libere um espaço no inventário antes de resgatar a Espada Especial.",
+          // O /espada com ela no inventário e fora da mão. Com ela na mão, o comando abre o menu.
+          "already-have": "Você já tem a Espada Especial no inventário. Segure-a na mão e use /espada para abrir o menu.",
+          "in-vault": "Sua Espada Especial está guardada no seu cofre.",
           "vault-busy": "Seu cofre está aberto ou ainda sendo salvo. Tente de novo em instantes.",
           "vault-unavailable": "Não dá para conferir o seu cofre neste servidor. Use o comando no spawn ou nos terrenos.",
           "cooldown": "Aguarde para resgatar a espada de novo.",
           "retrieved": [
             "",
-            " &aVocê resgatou a espada especial!",
-            " &7Prestígio &f{prestige}&7, &f{kills}&7 {kills_unit}.",
-            " &eShift + botão direito com ela na mão abre a bancada.",
+            " &cVocê resgatou a Espada Especial!",
+            " &eUse /espada com ela na mão, ou Shift + botão direito, para abrir o menu.",
             ""
           ],
           "historico": {
@@ -1419,43 +1417,13 @@
           }
         }
       },
+      // O que se diz de uma arma de um tipo que o rankup não tem mais, que o join tira do inventário (o machado, desde
+      // 12/11/2026). A espada da rede que sobrasse sem a migração seria lida como a Espada Especial, e sairia como duplicada.
       "messages": {
-        "skull-cracker": "&6Crítico! &eQuebra-Crânio ativado.",
-        "armor-breaker": {
-          "attacker": "&4Quebra-Armadura ativado.",
-          "victim": "&cSua armadura está se desgastando mais rápido."
-        },
-        "drainage": {
-          "killer": "&eVocê drenou &a{amount}&e tokens de &f{player}&e.",
-          "victim": "&cVocê perdeu &e{amount}&c tokens para &f{player}&c."
-        },
-        "prestige-maximum": "Esta arma já está no prestígio máximo.",
-        "prestige-not-invested": "Você precisa ter {required} tokens investidos nesta arma.",
-        "prestige-unavailable": "O prestígio está indisponível agora. Tente de novo daqui a pouco.",
-        "prestige-done": "&aPrestígio &l{prestige}&r&a. Os encantamentos foram zerados, menos o Indestrutível.",
-        "profile-loading": "Seu perfil ainda está carregando. Tente de novo em instantes.",
-        "duplicates-removed": "Removemos {amount} {amount_unit} do seu inventário.",
-        // A arma de um tipo que este servidor não tem mais, tirada do inventário no join (o machado, desde 12/11/2026).
         "kind-retired": "O Machado Especial não existe mais no rankup e saiu do seu inventário.",
-        "in-combat": "Você não pode abrir a bancada em combate.",
-        "not-in-hand": "Segure a arma na mão para mexer nela.",
-        "already-max-level": "Este encantamento já está no nível máximo.",
-        "prestige-required": "Este encantamento pede prestígio {prestige}.",
-        "not-enough": "Você não tem {currency} suficientes.",
-        "charge-failed": "Não deu para confirmar a cobrança, e nada mudou na arma. Se o valor saiu da sua conta, ele volta sozinho.",
-        // O conserto pago com itens do inventário (repair-item no config), que a espada e o machado não usam hoje.
-        "not-enough-items": "Você precisa de {amount} {item} no inventário para consertar a arma.",
-        "enchant-bought": "&a{enchant} &fsubiu para o nível &a{level}&f.",
-        "free-upgrade": "&aParabéns! &f{enchant} &asubiu para o nível &f{level}&a de graça, pelo seu grupo.",
-        "already-repaired": "Esta arma não precisa de conserto.",
-        "repaired": "Arma consertada.",
+        "duplicates-removed": "Removemos {amount} {amount_unit} do seu inventário.",
         "cannot-drop": "A arma não se larga no chão.",
-        "cannot-move": "A arma não sai do seu inventário.",
-        "deleted": "&cSua arma foi excluída.",
-        "history": {
-          "empty": "{player} não tem nada no histórico das armas.",
-          "failed": "Não deu para carregar o histórico agora. Tente de novo em instantes."
-        }
+        "cannot-move": "A arma não sai do seu inventário."
       },
       // O que a pá diz a cada bloco escavado.
       "shovel": {
@@ -1598,258 +1566,6 @@
         }
       },
       "views": {
-        "weapon": {
-          "title": "{weapon_name}",
-          "items": {
-            "4": {
-              "name": "{prestige_title}",
-              "lore": [
-                "&7Resete os encantamentos para",
-                "&7desbloquear mais níveis máximos",
-                "&7e mais encantamentos!",
-                "&7O Indestrutível não é zerado.",
-                "",
-                "{prestige_state}"
-              ]
-            },
-            // Os ícones dos encantamentos seguem o desenho do exe-p4free-core: o nome na cor
-            // do estado (verde quando dá para evoluir), a descrição, o nível com o próximo, o
-            // número que ele mexe e o que falta. As linhas só com uma lista ({enchant_description},
-            // {enchant_effect}, {enchant_shop}) viram uma linha por item, e vazias somem.
-            // 0: o encantamento que dá para evoluir.
-            "0": {
-              "name": "&a{enchant_name} &l{enchant_level}",
-              "lore": [
-                "{enchant_description}",
-                "",
-                "{enchant_progress}",
-                "{enchant_effect}",
-                "",
-                " &fPreço: {enchant_currency_color}{enchant_price} {enchant_currency}",
-                "",
-                "{enchant_shop}",
-                "&aClique para adquirir."
-              ]
-            },
-            // 2: o encantamento já no máximo.
-            "2": {
-              "name": "&c{enchant_name} &l{enchant_level}",
-              "lore": [
-                "{enchant_description}",
-                "",
-                "{enchant_progress}",
-                "{enchant_effect}",
-                "",
-                "&cEste encantamento já está no nível máximo."
-              ]
-            },
-            // Os itens fixos (3, 4, 5, 7, 12, 13 e 14) também são os do exe-p4free-core, com
-            // "arma" onde lá era "espada" ou "machado": estes itens são os mesmos para as duas.
-            // 3: o conserto.
-            "3": {
-              "name": "&aReparação",
-              "lore": [
-                "&7Use esta função para",
-                "&7reparar sua arma",
-                "&7em 100%.",
-                "",
-                "&a Custos:",
-                "   {repair_currency_color}{repair_cost} &f{repair_currency}",
-                "",
-                "&dDica: &fTorne a durabilidade",
-                "&fda sua arma infinita ao",
-                "&fcomprar Indestrutível.",
-                "",
-                "{repair_state}"
-              ]
-            },
-            // 5: o ranking das armas deste tipo, com a posição de quem abre.
-            "5": {
-              "name": "&aRanking de {weapon_plural}",
-              "lore": [
-                "&7Acompanhe o ranking e veja",
-                "&7quem possui mais abates",
-                "&7e tokens investidos!",
-                "",
-                "&f Sua posição:",
-                "&f  Abates: &c{kills_position}",
-                "&f  Tokens gastos: &e{invested_position}",
-                "",
-                "&aClique para visualizar."
-              ]
-            },
-            // 6 e 11: o que se liga e desliga em vez de se comprar, ativado e desativado.
-            "6": {
-              "name": "&a{enchant_name} &a&lATIVADA",
-              "lore": [
-                "{enchant_description}",
-                "",
-                " &fEstado: &a&lATIVADA",
-                "",
-                "&cClique para desativar."
-              ]
-            },
-            "11": {
-              "name": "&7{enchant_name} &c&lDESATIVADA",
-              "lore": [
-                "{enchant_description}",
-                "",
-                " &fEstado: &c&lDESATIVADA",
-                "",
-                "&aClique para ativar."
-              ]
-            },
-            // 7: a exclusão da arma.
-            "7": {
-              "name": "&cExcluir a arma",
-              "lore": [
-                "&8Ação irreversível.",
-                "",
-                "&7Ao clicar neste item, você irá excluir",
-                "&7a sua arma, perdendo todo o progresso",
-                "&7e os encantamentos atuais dela.",
-                "",
-                "&eClique para excluir a arma."
-              ]
-            },
-            // 8: o encantamento que ainda pede prestígio. Sem ele o ícone convidava a
-            // evoluir e só o clique é que dizia que não.
-            "8": {
-              "name": "&c{enchant_name} &l{enchant_level}",
-              "lore": [
-                "{enchant_description}",
-                "",
-                "{enchant_progress}",
-                "{enchant_effect}",
-                "",
-                " &cRequisitos:",
-                " &fPrestígio &b&l{enchant_prestige} &fnecessário.",
-                "",
-                "&cNão é possível evoluir este encantamento."
-              ]
-            },
-            // 9: o encantamento que dá para evoluir, mas o saldo não chega.
-            "9": {
-              "name": "&c{enchant_name} &l{enchant_level}",
-              "lore": [
-                "{enchant_description}",
-                "",
-                "{enchant_progress}",
-                "{enchant_effect}",
-                "",
-                " &fPreço: {enchant_currency_color}{enchant_price} {enchant_currency}",
-                "",
-                "{enchant_shop}",
-                "&cVocê não possui {enchant_currency} suficientes."
-              ]
-            },
-            // 10: o nível que o grupo leva de graça (o upgrade VIP do sistema antigo).
-            "10": {
-              "name": "&a{enchant_name} &l{enchant_level}",
-              "lore": [
-                "{enchant_description}",
-                "",
-                "{enchant_progress}",
-                "{enchant_effect}",
-                "",
-                "&aUpgrade VIP disponível!",
-                "&eClique para adquirir de graça."
-              ]
-            },
-            // 12: as informações.
-            "12": {
-              "name": "&eInformações",
-              "lore": [
-                "&7Customize sua arma com",
-                "&7encantamentos únicos!",
-                "",
-                "&e Como ganhar tokens?",
-                "  &8- &fEscavar com a Pá Especial",
-                "",
-                "&7Use os tokens para evoluir ou",
-                "&7desbloquear encantamentos."
-              ]
-            },
-            // 13: o saldo de tokens.
-            "13": {
-              "name": "&eTokens",
-              "lore": [
-                "&7Acompanhe a quantidade de",
-                "&7tokens que você possui.",
-                "",
-                "&f Tokens: &a{tokens_balance}"
-              ]
-            },
-            // 14: o ranking de tokens, com a posição de quem abre.
-            "14": {
-              "name": "&bRanking de Tokens",
-              "lore": [
-                "&7Acompanhe o ranking de tokens",
-                "&7e veja os jogadores que mais",
-                "&7possuem essa moeda.",
-                "",
-                "&f Sua posição: &b{tokens_position}",
-                "",
-                "&aClique para visualizar."
-              ]
-            }
-          },
-          "position": {
-            "ranked": "{position}º",
-            "unranked": "fora do ranking",
-            "unavailable": "indisponível"
-          },
-          "loading": "carregando",
-          "progress": {
-            "next": " &fNível &l{level} &8» &bNível &l{next}",
-            "maximum": " &fNível Máximo!"
-          },
-          "effect": {
-            "next": "  &f{effect}: &c&m{from}&7 » &b{to}",
-            "current": "  &f{effect}: &7{from}"
-          },
-          // O {enchant_shop}: só no que se paga em cash. A linha em branco do fim é dele, para
-          // não sobrar uma no que se paga em tokens.
-          "shop": [
-            "&e Adquira &f&lCASH&e e outros",
-            "&e produtos em nossa loja!",
-            "&e Acesse &floja.rede-exe.com",
-            ""
-          ],
-          "states": {
-            "repair": {
-              "ready": "&aClique para reparar.",
-              "repaired": "&cA arma já está com a durabilidade máxima.",
-              "not-enough": "&cVocê não possui {repair_currency} suficientes.",
-              // O preço do conserto que depende do grupo (repair-cost-by-group), com o perfil ainda chegando.
-              "loading": "&eCarregando o seu perfil..."
-            },
-            "prestige": {
-              "ready": [
-                "&a Requisitos:",
-                " {investment_currency_color}{prestige_required} &f{investment_currency} de investimento.",
-                " &7Investido: {investment_currency_color}{weapon_invested}",
-                "",
-                "&aClique para prosseguir."
-              ],
-              "maximum": [
-                "&cNível máximo de prestígio atingido."
-              ],
-              "not-invested": [
-                "&c Requisitos:",
-                " {investment_currency_color}{prestige_required} &f{investment_currency} de investimento.",
-                " &7Investido: {investment_currency_color}{weapon_invested}",
-                "",
-                "&cVocê não possui os requisitos necessários."
-              ]
-            },
-            "prestige-title": {
-              "ready": "&aPrestígio &l{prestige} &r&8» &b&l{next}",
-              "maximum": "&cPrestígio &l{prestige}",
-              "not-invested": "&cPrestígio &l{prestige}"
-            }
-          }
-        },
         // Os itens que um encantamento de achado dá, no botão direito do ícone dele.
         "drops": {
           "title": "Recompensas ({enchant_name})",
@@ -1873,12 +1589,6 @@
               "night": "Noite"
             }
           }
-        },
-        "delete": {
-          "title": "Excluir a arma"
-        },
-        "prestige": {
-          "title": "Prestigiar a arma"
         },
         // O histórico das duas armas, que a staff abre com /espada historico ou /machado historico.
         // Um item por registro, do mais novo para o mais velho; a data é no horário de Brasília.
