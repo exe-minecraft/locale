@@ -195,11 +195,11 @@
           // O /clan reserva (18/11): o AQUI mostra o banco de reservas do clã de quem clica.
           "clans-reserve": [
             "",
-            "&e&l DICA: &fClã cheio? O banco de reservas guarda",
-            " &faté 10 membros além dos titulares, que não jogam",
-            " &fos eventos. Quem está nele joga no lugar do titular",
-            " &foffline há mais tempo com &a/clan reserva entrar&f.",
-            " &fClique &a&lAQUI&f para ver o banco do seu clã.",
+            "&e&l DICA: &fClã cheio? O banco de reservas guarda até",
+            " &f10 membros além dos titulares. Quem está nele não",
+            " &fjoga os eventos, mas entra no lugar do titular offline",
+            " &fhá mais tempo com &a/clan reserva entrar&f. Clique",
+            " &a&lAQUI&f para ver o banco do seu clã.",
             ""
           ],
           "mail": [

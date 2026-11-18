@@ -1744,6 +1744,8 @@
           "revive-not-running": "&cNão há um Gladiador em andamento para reviver alguém.",
           "revive-alive": "&cEste jogador ainda está lutando no Gladiador!",
           "revive-no-clan": "&cEste jogador não está em um clan!",
+          // O revive da staff numa reserva do clan (/clan reserva), que não joga os eventos.
+          "revive-clan-reserve": "&cEste jogador está no banco de reservas do clan e não joga os eventos dele.",
           "revive-clan-changed": "&cEste jogador trocou de clan depois de entrar no Gladiador e não pode voltar pelo clan antigo.",
           "revive-vanished": "&cEste jogador está com o /v ativado e não pode voltar à luta.",
           // O aviso a quem deu o /glad revive (pedido de 04/11). O revivido volta com o inventário real, e com o que estes comandos deram.

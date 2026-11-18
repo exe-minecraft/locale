@@ -343,7 +343,7 @@
             "",
             "&eO clã {tag} &eacabou de desafiar o seu clã para um duelo!",
             "&8 ▸ &fMapa: &7{arena}",
-            "&8 ▸ &fMembros online: &a{challengers} &7contra &a{defenders}",
+            "&8 ▸ &fTitulares online: &a{challengers} &7contra &a{defenders}",
             "{accept} {decline}",
             "",
             "&eO convite expira em {time}.",
@@ -857,11 +857,12 @@
                 "name": "{clan_tag} &f{clan_name}",
                 "lore": [
                   "&8 ▸ &fVitórias de CxC: &a{clan_cxc_wins}",
-                  "&8 ▸ &fMembros: &f{clan_members}",
-                  "&8 ▸ &fOnline: &f{clan_online}",
+                  "&8 ▸ &fTitulares: &f{clan_members}",
+                  "&8 ▸ &fTitulares online: &f{clan_online}",
                   "&8 ▸ &fVIPs online: &b{clan_vips}",
                   "",
-                  "&7Os membros online e livres vão para a arena."
+                  "&7Os titulares online e livres vão para a arena.",
+                  "&7Quem está no banco de reservas fica de fora."
                 ]
               }
             },
