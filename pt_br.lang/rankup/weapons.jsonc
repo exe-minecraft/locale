@@ -478,17 +478,376 @@
         "done-color": "&a",
         "left-color": "&7"
       },
-      // A espada da rede, a mesma do P4Free (pedido do dono, 09/11/2026). O machado saiu do rankup no documento do
-      // dono de 12/11/2026, à noite.
+      // A Espada Especial, a /espada de mobs (o documento do dono de 18/11/2026, com o baú "Menu Espada" do Kekitoox).
+      // Até 18/11 a /espada do rankup era a espada da rede, a mesma do P4Free, e o "kills" é dela. O machado saiu do
+      // rankup no documento do dono de 12/11/2026, à noite.
       "espada": {
+        // O que aparece no lugar do número no encantamento sem nível para mostrar (a Afiação, o Indestrutível).
+        "endless": "∞",
+        "messages": {
+          // O golpe da espada em qualquer coisa que não seja um mob dos spawners (o documento: "bloquear ataque e avisar").
+          "only-spawners": "A Espada Especial só serve para matar os mobs dos spawners.",
+          "still-loading": "Sua espada ainda está carregando. Tente de novo em instantes.",
+          "not-yours": "Esta Espada Especial não é sua.",
+          "profile-loading": "Seu perfil ainda está carregando. Tente de novo em instantes.",
+          "duplicates-removed": "Removemos {amount} {amount_unit} do seu inventário.",
+          "in-combat": "Você não pode abrir o menu da espada em combate.",
+          "not-in-hand": "Segure a espada na mão para mexer nela.",
+          "already-max-level": "Este encantamento já está no nível máximo.",
+          "prestige-required": "Este encantamento pede prestígio {prestige}.",
+          "not-enough": "Você não tem {currency} suficientes.",
+          "charge-failed": "Não deu para confirmar a cobrança, e nada mudou na espada. Se o valor saiu da sua conta, ele volta sozinho.",
+          // O conserto pago com itens do inventário: "Você precisa de 5 diamantes".
+          "not-enough-items": "Você precisa de {amount} {item} no inventário para consertar a espada.",
+          "not-purchasable": "Este encantamento não pode ser comprado. Ele já vem na espada.",
+          "enchant-bought": "&bParabéns! &fO encantamento &6{enchant} &fsubiu para o nível &6{level}&f.",
+          "free-upgrade": "&aParabéns! &f{enchant} &asubiu para o nível &f{level}&a de graça, pelo seu grupo.",
+          "already-repaired": "Sua espada não precisa de conserto.",
+          "repaired": "Sua espada foi consertada.",
+          "cannot-drop": "Você não pode largar a Espada Especial no chão.",
+          "cannot-move": "A Espada Especial não sai do seu inventário.",
+          "deleted": "&cSua Espada Especial foi eliminada.",
+          "history": {
+            "empty": "{player} não tem nada no histórico das armas.",
+            "failed": "Não deu para carregar o histórico agora. Tente de novo em instantes."
+          }
+        },
+        "units": {
+          "duplicate-weapon": {
+            "singular": "espada duplicada",
+            "plural": "espadas duplicadas"
+          }
+        },
+        // As descrições dos encantamentos da espada no ícone do menu, as do baú. O efeito é o rótulo do número que o
+        // nível mexe, e o que não tem número não tem efeito.
+        "enchants": {
+          "sharpening": {
+            "description": [
+              "&7Permite que sua espada mate",
+              "&7instantaneamente qualquer",
+              "&7mob compatível."
+            ]
+          },
+          "looting": {
+            "description": [
+              "&7Aumenta o número de drops",
+              "&7recebidos ao matar mobs."
+            ],
+            "effect": "Drops"
+          },
+          "durability": {
+            "description": [
+              "&7Aumenta a chance de não perder",
+              "&7durabilidade ao matar mobs."
+            ],
+            "effect": "Chance"
+          },
+          "unbreakable": {
+            "description": [
+              "&7Torne a espada inquebrável,",
+              "&7deixando-a com durabilidade infinita."
+            ]
+          },
+          "beheading": {
+            "description": [
+              "&7Aumente a chance de dropar",
+              "&7cabeças ao matar mobs."
+            ],
+            "effect": "Chance"
+          }
+        },
+        "views": {
+          // O menu da espada, que abre com o /espada ou com Shift + botão direito com ela na mão.
+          "weapon": {
+            "title": "{weapon_name}",
+            "items": {
+              // 16: o de um nível só, já adquirido (o Indestrutível), como no baú.
+              "16": {
+                "name": "&a{enchant_title}",
+                "lore": [
+                  "{enchant_description}",
+                  "",
+                  "&cVocê já adquiriu esse encantamento!"
+                ]
+              },
+              // 0: o encantamento que dá para evoluir. As linhas só com uma lista ({enchant_description},
+              // {enchant_levels}, {enchant_shop}) viram uma linha por item, e vazias somem.
+              "0": {
+                "name": "&a{enchant_title}",
+                "lore": [
+                  "{enchant_description}",
+                  "",
+                  "{enchant_levels}",
+                  " &fPreço: {enchant_cost}",
+                  "",
+                  "{enchant_shop}",
+                  "&fBotão Esquerdo: &aEvoluir"
+                ]
+              },
+              // 2: o encantamento já no máximo, e a Afiação, que nasce nele.
+              "2": {
+                "name": "&a{enchant_title}",
+                "lore": [
+                  "{enchant_description}",
+                  "",
+                  "{enchant_effect}",
+                  "&e Nível máximo atingido! &7({enchant_level})"
+                ]
+              },
+              // 3: o conserto, pago com diamantes do inventário (a resposta do dono de 18/11/2026).
+              "3": {
+                "name": "&aReparação",
+                "lore": [
+                  "&7Use esta função para",
+                  "&7consertar sua espada em 100%.",
+                  "",
+                  "&a Custo:",
+                  "   &b{repair_cost} &f{repair_currency}",
+                  "",
+                  "&dDica: &fTorne a durabilidade",
+                  "&fda sua espada infinita ao",
+                  "&fcomprar Indestrutível.",
+                  "",
+                  "{repair_state}"
+                ]
+              },
+              // 7: a eliminação da espada (o documento: o menu serve "para eliminar a espada").
+              "7": {
+                "name": "&cEliminar espada",
+                "lore": [
+                  "&8Ação irreversível.",
+                  "",
+                  "&7Ao clicar neste item, sua espada será",
+                  "&7eliminada, e todo o progresso e os",
+                  "&7encantamentos serão perdidos.",
+                  "",
+                  "&eClique para eliminar a espada."
+                ]
+              },
+              // 8: o encantamento que pede prestígio. A espada não tem prestígio, mas o código lê.
+              "8": {
+                "name": "&c{enchant_title}",
+                "lore": [
+                  "{enchant_description}",
+                  "",
+                  "&cNão é possível evoluir este encantamento."
+                ]
+              },
+              // 9: o encantamento que dá para evoluir, mas o saldo não chega. O nome sai em vermelho.
+              "9": {
+                "name": "&c{enchant_title}",
+                "lore": [
+                  "{enchant_description}",
+                  "",
+                  "{enchant_levels}",
+                  " &fPreço: {enchant_cost}",
+                  "",
+                  "{enchant_shop}",
+                  "&cVocê não tem saldo suficiente!"
+                ]
+              },
+              // 10: o nível que o grupo leva de graça. A espada não tem upgrade de graça hoje.
+              "10": {
+                "name": "&a{enchant_title}",
+                "lore": [
+                  "{enchant_description}",
+                  "",
+                  "{enchant_progress}",
+                  "{enchant_effect}",
+                  "",
+                  "&aUpgrade VIP disponível!",
+                  "&eClique para adquirir de graça."
+                ]
+              },
+              // 6 e 11: o que se liga e desliga em vez de se comprar. A espada não tem nenhum.
+              "6": {
+                "name": "&a{enchant_name} &a&lATIVADA",
+                "lore": [
+                  "{enchant_description}"
+                ]
+              },
+              "11": {
+                "name": "&7{enchant_name} &c&lDESATIVADA",
+                "lore": [
+                  "{enchant_description}"
+                ]
+              },
+              // 15: o que sobe com o nível da ferramenta. A espada não tem nenhum.
+              "15": {
+                "name": "&a{enchant_title}",
+                "lore": [
+                  "{enchant_description}"
+                ]
+              }
+            },
+            "position": {
+              "ranked": "{position}º",
+              "unranked": "fora do ranking",
+              "unavailable": "indisponível"
+            },
+            "loading": "carregando",
+            "progress": {
+              "next": " &fNível &l{level} &8» &bNível &l{next}",
+              "maximum": " &fNível Máximo!"
+            },
+            "effect": {
+              "varied": [],
+              "next": "  &f{effect}: &c&m{from}&7 » &b{to}",
+              "current": "  &f{effect}: &7{from}"
+            },
+            // O {enchant_title} do nome dos ícones, com o nível. O número sai em negrito e o ∞ não, porque em negrito o
+            // 1.8 o desenha borrado.
+            "enchant-title": {
+              "number": "{enchant_name} &l{enchant_level}",
+              "endless": "{enchant_name} {enchant_level}"
+            },
+            // O {enchant_cost} do preço, pela moeda do encantamento: os tokens com o $ em verde e o cash com o ✪ em
+            // dourado, como no baú.
+            "cost": {
+              "tokens": "&a${price}",
+              "cash": "&6{price} ✪"
+            },
+            // O {enchant_shop}: só no que se paga em cash. A linha em branco do fim é dele.
+            "shop": [
+              "&e Adquira &f&lCASH&e e outros",
+              "&e produtos em nossa loja!",
+              "&e Acesse &floja.rede-exe.com",
+              ""
+            ],
+            "drops": [],
+            "states": {
+              "repair": {
+                "ready": "&aClique para consertar.",
+                "repaired": "&cA espada já está com a durabilidade máxima.",
+                "not-enough": "&cVocê não possui {repair_currency} suficientes.",
+                // O preço depende do grupo, e o perfil de quem abriu ainda não chegou.
+                "loading": "&eCarregando o seu perfil..."
+              },
+              // A espada não tem prestígio: o menu dela não mostra estas linhas, mas o código as lê.
+              "prestige": {
+                "ready": [],
+                "maximum": [],
+                "not-invested": []
+              },
+              "prestige-title": {
+                "ready": "",
+                "maximum": "",
+                "not-invested": ""
+              }
+            }
+          },
+          "delete": {
+            "title": "Eliminar a espada"
+          },
+          // O histórico da espada, que a staff abre com /espada historico. Um item por registro, do mais novo para o
+          // mais velho; a data é no horário de Brasília.
+          "history": {
+            "items": {
+              "enchant-upgrade": {
+                "name": "&aEncantamento melhorado",
+                "lore": [
+                  "",
+                  "&7Item: {weapon}",
+                  "&7Encantamento: {enchant} &f{level}",
+                  "&7Por: &f{source}",
+                  "&7Custo: {cost}",
+                  "",
+                  "&8{date}"
+                ]
+              },
+              "prestige": {
+                "name": "&6Prestígio",
+                "lore": [
+                  "",
+                  "&7Item: {weapon}",
+                  "&7Prestígio novo: &f{prestige}",
+                  "&7Investido: &b{invested} {invested_currency}",
+                  "",
+                  "&8{date}"
+                ]
+              },
+              "retrieve": {
+                "name": "&ePegou a espada pelo comando",
+                "lore": [
+                  "",
+                  "&7Item: {weapon}",
+                  "{retrieve}",
+                  "",
+                  "&8{date}"
+                ]
+              },
+              "delete": {
+                "name": "&4Eliminou a espada",
+                "lore": [
+                  "",
+                  "&7Item: {weapon}",
+                  "&7Investido: &b{invested} {invested_currency}",
+                  "",
+                  "&7Encantamentos:",
+                  "{enchants}",
+                  "",
+                  "&8{date}"
+                ]
+              },
+              "repair": {
+                "name": "&dConsertou a espada",
+                "lore": [
+                  "",
+                  "&7Item: {weapon}",
+                  "&7Custo: {cost}",
+                  "",
+                  "&8{date}"
+                ]
+              },
+              "broken": {
+                "name": "&cA espada quebrou",
+                "lore": [
+                  "",
+                  "&7Item: {weapon}",
+                  "&7Investido: &b{invested} {invested_currency}",
+                  "",
+                  "&7Encantamentos:",
+                  "{enchants}",
+                  "",
+                  "&8{date}"
+                ]
+              },
+              "truncated": {
+                "name": "&eSó os mais recentes",
+                "lore": [
+                  "",
+                  "&7Aqui aparecem os {limit} {limit_unit}",
+                  "&7mais recentes. Os anteriores estão",
+                  "&7nos Logs do painel."
+                ]
+              }
+            },
+            "sources": {
+              "menu": "o menu da espada",
+              "book": "um livro de encantamento",
+              "free": "o upgrade do grupo",
+              "toggle": "o interruptor do menu"
+            },
+            "retrieve": {
+              "created": "&aEspada nova, sem registro anterior.",
+              "existing": "&eA espada que ele já tinha."
+            }
+          }
+        },
+        // O item, como o do baú: os mobs mortos no nome ("Espada Especial [3.5K]") e completos na lore.
         "item": {
           "name": "&cEspada Especial",
-          "investment": "&fInvestimento: &e{tokens} Tokens",
+          "counter": "{name} &7[{mobs}]",
+          "investment": "&fInvestimento: &a{tokens} Tokens",
+          "mobs": "&fMobs matados: &c{mobs}",
           "enchant-owned": "&6 {enchant} &l{level}",
+          // O encantamento sem número de nível, com o ∞ sem negrito, porque em negrito o 1.8 o desenha borrado.
+          "enchant-endless": "&6 {enchant} {level}",
           "enchant-missing": "&8 {enchant}",
+          // Os abates da espada da rede que o rankup teve até 18/11/2026. Sai depois da janela da Espada Especial.
           "kills": "&fAbates: &c{kills}"
         },
-        "broken": "&cA sua espada especial se partiu.",
+        "broken": "&cSua Espada Especial chegou ao fim da durabilidade e foi eliminada.",
         "plural": "Espadas"
       },
       // As palavras que acompanham um número montado no código (o Plural do core): 1 no singular.
@@ -1229,6 +1588,13 @@
         },
         "durability": {
           "name": "Durabilidade"
+        },
+        // Os dois da Espada Especial (o documento do dono de 18/11/2026).
+        "looting": {
+          "name": "Pilhagem"
+        },
+        "beheading": {
+          "name": "Decapitador"
         }
       },
       "views": {

@@ -60,6 +60,8 @@
           // A espada ou o machado da rede antes da carga das armas do join.
           "weapon-loading": "&cSua arma ainda está carregando. Tente de novo em instantes.",
           "no-permission": "&cVocê não tem permissão para usar o Renomeador.",
+          // A Espada Especial, a Pá Especial e a Enxada Especial (o documento do dono de 18/11/2026).
+          "network-weapon": "&cAs armas especiais já têm o nome delas e não aceitam o Renomeador.",
           "invalid-target": "&cEste item não pode ser renomeado.",
           "stacked": "&cSó dá para renomear um item de cada vez. Separe uma unidade da pilha primeiro.",
           "already": "&cVocê já está renomeando um item. Responda no chat, ou digite cancelar para desistir.",
@@ -114,6 +116,8 @@
           // A espada ou o machado da rede antes da carga das armas do join.
           "weapon-loading": "&cSua arma ainda está carregando. Tente de novo em instantes.",
           "no-permission": "&cVocê não tem permissão para usar o StatTrak.",
+          // A Espada Especial, a Pá Especial e a Enxada Especial (o documento do dono de 18/11/2026).
+          "network-weapon": "&cAs armas especiais já têm o contador delas e não aceitam o StatTrak.",
           "invalid-target": "&cO StatTrak só funciona em espadas e machados.",
           "already": "&cEste item já tem um StatTrak aplicado.",
           "applied": "&aStatTrak aplicado com sucesso. Esta arma agora conta as kills feitas com ela."
