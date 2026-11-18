@@ -202,7 +202,9 @@
                 "no-slot": "&cNão há vaga para você agora. Os titulares que podiam dar a vaga estão online ou jogando um evento, e o líder nunca vai para a reserva."
               },
               "success": "&aVocê entrou como titular no lugar de {replaced_name_with_tag}&a, que estava offline e foi para o banco de reservas.",
-              "success-free": "&aVocê saiu do banco de reservas e agora é titular."
+              "success-free": "&aVocê saiu do banco de reservas e agora é titular.",
+              // Um titular deu a vaga, mas a plataforma não devolveu quem.
+              "success-unknown": "&aVocê entrou como titular, e o titular offline há mais tempo foi para o banco de reservas."
             },
             "swap": {
               "description": "trocar um titular por uma reserva, de uma vez",
@@ -369,7 +371,7 @@
           ],
           "on-member-reserve-transferred": [
             "",
-            "{user_name_with_tag} &epassou a liderança para {other_name_with_tag}&e, que estava no banco de reservas, e tomou o lugar dele no banco, porque os titulares estão cheios.",
+            "{other_name_with_tag} &esaiu do banco de reservas para ser o novo líder, e {user_name_with_tag} &etomou o lugar dele no banco, porque os titulares estão cheios.",
             ""
           ],
           "on-member-reserve-entered": [
