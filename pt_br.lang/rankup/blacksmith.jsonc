@@ -283,9 +283,7 @@
             "levels": "Níveis diferentes",
             // O encantamento que passaria do teto dele no item, como a Afiação do machado, que vai só até a S7 (o dono,
             // 17/11/2026).
-            "ceiling": "{enchantment} vai só até o nível {max} neste item",
-            // O encantamento bloqueado no servidor, a Repulsão (o dono, 17/11/2026).
-            "blocked": "O encantamento {enchantment} está bloqueado"
+            "ceiling": "{enchantment} vai só até o nível {max} neste item"
           }
         },
         // O menu do removedor, que abre ao largar o removedor em cima de um item encantado.
@@ -313,19 +311,6 @@
                 "&7 Nível do Encantamento &8- &f{level}",
                 "",
                 "&cClique para escolher esse encantamento!"
-              ]
-            },
-            // O encantamento bloqueado no servidor, que sai do item sem virar livro.
-            "blocked-entry": {
-              "name": "&cEncantamento &c&l{index}",
-              "lore": [
-                "&7Este encantamento está bloqueado no",
-                "&7servidor e não vira livro.",
-                "",
-                "&7 Encantamento &8- &f{enchantment}",
-                "&7 Nível do Encantamento &8- &f{level}",
-                "",
-                "&cClique para tirar esse encantamento do item!"
               ]
             }
           }
@@ -393,13 +378,11 @@
           "no-enchantments": "&cEste item não tem encantamentos para remover.",
           "item-changed": "&cO item mudou desde que o menu abriu, e nada foi removido. Arraste o removedor até ele de novo.",
           "no-remover": "&cVocê não tem mais um removedor no inventário, e nada foi removido.",
-          "removed": "&aVocê removeu {enchantment} {level} do item e recebeu um livro com o encantamento.",
-          "removed-blocked": "&aVocê removeu {enchantment} {level} do item. Esse encantamento está bloqueado no servidor e não vira livro."
+          "removed": "&aVocê removeu {enchantment} {level} do item e recebeu um livro com o encantamento."
         },
         "book": {
           "invalid-target": "&cO livro não pode ser usado neste item.",
           "incompatible": "&cO encantamento {enchantment} não é compatível com este item.",
-          "blocked": "&cO encantamento {enchantment} está bloqueado no servidor e não pode ser aplicado.",
           "conflict": "&cO encantamento {enchantment} não pode ficar junto com {other}, que o item já tem.",
           "same": "&cO item já tem {enchantment} {level}.",
           "lower": "&cO item já tem {enchantment} num nível mais alto ({current_level}).",
