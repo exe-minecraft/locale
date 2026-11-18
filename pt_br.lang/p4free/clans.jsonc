@@ -4,14 +4,14 @@
 {
   "plugins": {
     "clans": {
-      // O bloco do exe-scoreboard em Documents: tag e nome juntos, membros logo abaixo. A {tag} já vem com a
+      // O bloco do exe-scoreboard em Documents: tag e nome juntos, titulares logo abaixo. A {tag} já vem com a
       // cor do clã (cinza quando ela não tem cor), desde 17/10, e os colchetes em cinza (o dono, 19/10). O espaço
       // do começo vai sem cor para os colchetes não gastarem mais da linha do protocolo 1.8: com uma cor na tag,
       // até o nome de 15 letras cabe; com duas, 12, e com três, 11.
       "scoreboard": {
         "clan": [
           " &7[{tag}&7] &f{name}",
-          "&f Membros: &7{members}/{max_members}"
+          "&f Titulares: &7{members}/{max_members}"
         ],
         "no-clan": [
           "&f &cVocê não tem um clã"
@@ -72,7 +72,7 @@
               "  &fGladiadores: &7{clan_gladiator_wins}",
               "  &fCxC: &7{clan_cxc_wins}",
               "",
-              "  &fMembros: &7{clan_members_size}/{clan_max_members_size} ({clan_online_members_size} online)",
+              "  &fTitulares: &7{clan_members_size}/{clan_max_members_size} &8| &fReserva: &7{clan_reserves_size}/{clan_max_reserves_size} &7({clan_online_members_size} online)",
               "  {clan_online_members}",
               "  {clan_members_hint}",
               "",
@@ -98,7 +98,7 @@
               "  &fGladiadores: &7{target_gladiator_wins}",
               "  &fCxC: &7{target_cxc_wins}",
               "",
-              "  &8Última entrada em {target_last_seen_at}",
+              "  &8Visto por último em {target_last_seen_at}",
               ""
             ],
             "success-without-clan": [
@@ -114,7 +114,7 @@
               "  &fGladiadores: &7{target_gladiator_wins}",
               "  &fCxC: &7{target_cxc_wins}",
               "",
-              "  &8Última entrada em {target_last_seen_at}",
+              "  &8Visto por último em {target_last_seen_at}",
               ""
             ]
           },
@@ -141,6 +141,76 @@
               "already-reset": "&cO clã {clan_label} &cjá está zerado. Não tem pontos, abates, mortes, vitórias, autorização nem boletim."
             }
           },
+          // O /clan reserva (pedido de 18/11): o banco de reservas, até 10 membros fora das vagas de titular. Quem está nele
+          // continua no clã, mas não joga os eventos dele. Só existe onde há eventos (o ClanFeatures).
+          "reserve": {
+            "description": "ver o banco de reservas do clã",
+            "header": [
+              "",
+              " &eBanco de reservas do clã &7({reserves}/{max_reserves}, com {starters}/{max_starters} titulares)"
+            ],
+            "entry": "  &8▸ {target_name_with_color} &7desde {since}",
+            "footer": [
+              " &7Quem está na reserva continua no clã, mas não joga o Gladiador, as arenas nem o CxC. Para jogar no lugar do titular que está offline há mais tempo, use &f/clan reserva entrar&7.",
+              ""
+            ],
+            "empty": [
+              "",
+              " &eO banco de reservas do clã está vazio &7(0/{max_reserves}, com {starters}/{max_starters} titulares)&e.",
+              " &7O líder e os capitães mandam um membro para a reserva com &f/clan reserva adicionar <jogador>&7. Quem está nela continua no clã, mas não joga o Gladiador, as arenas nem o CxC.",
+              ""
+            ],
+            "add": {
+              "description": "mandar um membro do clã para o banco de reservas",
+              "arguments": {
+                "target": {
+                  "name": "jogador",
+                  "description": "Membro do seu clã"
+                }
+              },
+              "errors": {
+                "not-same-clan": "&cEsse jogador não faz parte do seu clã.",
+                "need-more-role": "&cSó o líder e os capitães mexem na reserva, e o capitão só nos membros.",
+                "leader": "&cO líder do clã é sempre titular.",
+                "already": "{target_name_with_tag} &cjá está no banco de reservas.",
+                "full": "&cO banco de reservas já tem {max_reserves} membros. Tire um com /clan reserva remover <jogador> antes.",
+                "in-event": "{target_name_with_tag} &cestá jogando um evento. Só dá para mandá-lo para a reserva depois que ele sair do evento ou o evento acabar."
+              },
+              "success": "&aVocê mandou {target_name_with_tag} &apara o banco de reservas."
+            },
+            "remove": {
+              "description": "devolver um membro da reserva aos titulares",
+              "arguments": {
+                "target": {
+                  "name": "jogador",
+                  "description": "Membro do banco de reservas do seu clã"
+                }
+              },
+              "errors": {
+                "not-same-clan": "&cEsse jogador não faz parte do seu clã.",
+                "need-more-role": "&cSó o líder e os capitães mexem na reserva, e o capitão só nos membros.",
+                "leader": "&cO líder do clã é sempre titular.",
+                "already": "{target_name_with_tag} &cnão está no banco de reservas.",
+                "full": "&cO clã já tem {max_starters} titulares. Mande alguém para a reserva com /clan reserva adicionar <jogador> antes."
+              },
+              "success": "&aVocê devolveu {target_name_with_tag} &aaos titulares."
+            },
+            "enter": {
+              "description": "jogar como titular no lugar de quem está offline há mais tempo",
+              "errors": {
+                "not-reserve": "&cVocê não está no banco de reservas do clã.",
+                "no-slot": "&cTodos os titulares estão online ou jogando um evento, e não há vaga para você agora."
+              },
+              "success": "&aVocê entrou como titular no lugar de {replaced_name_with_tag}&a, que estava offline e foi para o banco de reservas.",
+              "success-free": "&aVocê saiu do banco de reservas e agora é titular."
+            },
+            "leave": {
+              "description": "sair do clã, estando no banco de reservas",
+              "errors": {
+                "not-reserve": "&cVocê não está no banco de reservas. Para sair do clã, use /clan sair."
+              }
+            }
+          },
           "unauthorize": {
             "description": "tirar o clã dos eventos",
             "arguments": {
@@ -159,13 +229,44 @@
           }
         }
       },
+      "views": {
+        "clan-primary": {
+          "items": {
+            "0": {
+              "lore": [
+                "&7Confira informações sobre todos",
+                "&7membros presentes no seu clã",
+                "",
+                " &8▸ &fTitulares: &7{clan_members_size}/{clan_max_members_size}",
+                " &8▸ &fReserva: &7{clan_reserves_size}/{clan_max_reserves_size}",
+                "",
+                "&aClique para visualizar."
+              ]
+            }
+          }
+        },
+        "clan-leaderboard": {
+          "items": {
+            "0": {
+              "lore": [
+                "",
+                " &8▸ &f{statistic_name}: &a{statistic_value}",
+                " &8▸ &fTitulares: &7{clan_members_size}/{clan_max_members_size}",
+                "",
+                "&8Criado em {clan_created_at}"
+              ]
+            }
+          }
+        }
+      },
       "items": {
         "clan-banner": {
           "lore": [
             "",
             " &eInformações do clã:",
             " &8▸ &fLíder: &7{clan_leader_name_with_tag}",
-            " &8▸ &fMembros: &7({clan_members_size}/{clan_max_members_size}) {clan_online_members_size} online",
+            " &8▸ &fTitulares: &7{clan_members_size}/{clan_max_members_size} &8| &fReserva: &7{clan_reserves_size}/{clan_max_reserves_size}",
+            " &8▸ &fOnline: &7{clan_online_members_size}",
             " &8▸ &fPontos: &7{clan_points}",
             " &8▸ &fGladiadores: &7{clan_gladiator_wins}",
             " &8▸ &fCxC: &7{clan_cxc_wins}",
@@ -183,15 +284,17 @@
           "lore": [
             "",
             "&eSuas informações:",
-            " &8▸ &fCargo: &7{member_role_prefix}{member_role_name}",
+            " &8▸ &fCargo: &7{member_role_prefix}{member_role_name}{member_reserve_mark}",
             " &8▸ &fKDR: &7{member_kdr}",
             " &8▸ &fAbates: &7{member_kills}",
             " &8▸ &fMortes: &7{member_deaths}",
             " &8▸ &fGladiadores: &7{member_gladiator_wins}",
             " &8▸ &fCxC: &7{member_cxc_wins}",
             "",
-            "&8Última entrada em {member_last_seen_at}"
+            "&8Visto por último em {member_last_seen_at}"
           ],
+          // Logo depois do cargo, em quem está no banco de reservas (/clan reserva). No titular sai vazio.
+          "reserve-mark": " &8(reserva)",
           // A mesma lore sem o cargo, para quem não tem clã (a cabeça do menu "Sem clã").
           "lore-without-clan": [
             "",
@@ -202,16 +305,57 @@
             " &8▸ &fGladiadores: &7{member_gladiator_wins}",
             " &8▸ &fCxC: &7{member_cxc_wins}",
             "",
-            "&8Última entrada em {member_last_seen_at}"
+            "&8Visto por último em {member_last_seen_at}"
           ]
         }
       },
       "messages": {
+        "clan": {
+          // O /clan reserva, avisado ao clã inteiro. O other é quem mandou ou devolveu, e no entered é quem deu a vaga.
+          "on-member-reserve-added": [
+            "",
+            "{user_name_with_tag} &efoi para o banco de reservas, mandado por {other_name_with_tag}&e.",
+            ""
+          ],
+          "on-member-reserve-removed": [
+            "",
+            "{user_name_with_tag} &asaiu do banco de reservas e voltou aos titulares, devolvido por {other_name_with_tag}&a.",
+            ""
+          ],
+          "on-member-reserve-entered": [
+            "",
+            "{user_name_with_tag} &aentrou como titular no lugar de {other_name_with_tag}&a, que estava offline e foi para o banco de reservas.",
+            ""
+          ],
+          "on-member-reserve-entered-free": [
+            "",
+            "{user_name_with_tag} &asaiu do banco de reservas e entrou como titular.",
+            ""
+          ]
+        },
+        "member": {
+          // O anúncio do /clan recrutar: com o clique da candidatura para quem não tem clã, sem ele para quem tem. Conta os
+          // titulares, que são as vagas por onde se entra.
+          "on-clan-recruit": [
+            "",
+            " &e&lRECRUTAMENTO &8| &fO clã {clan_label} &festá recrutando!",
+            " &7Titulares: &f{clan_members_size}/{clan_max_members_size} &8| &7Pontos: &f{clan_points} &8| &7KDR: &f{clan_kdr}",
+            ""
+          ],
+          "on-clan-recruit-apply": [
+            "",
+            " &e&lRECRUTAMENTO &8| &fO clã {clan_label} &festá recrutando!",
+            " &7Titulares: &f{clan_members_size}/{clan_max_members_size} &8| &7Pontos: &f{clan_points} &8| &7KDR: &f{clan_kdr}",
+            " &eClique &a&lAQUI &epara pedir para entrar.",
+            ""
+          ]
+        },
         "cards": {
           "clan": [
             "{clan_label}",
             "",
-            "&7Membros: &f{clan_members_size}/{clan_max_members_size}",
+            "&7Titulares: &f{clan_members_size}/{clan_max_members_size}",
+            "&7Reserva: &f{clan_reserves_size}/{clan_max_reserves_size}",
             "&7Vagas: &a{clan_free_slots}",
             "&7Pontos: &f{clan_points}",
             "&7KDR: &f{clan_kdr}",

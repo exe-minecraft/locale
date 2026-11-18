@@ -1162,6 +1162,8 @@
           "map-not-found": "&cO mapa {map} não existe ou não está carregado no P4Free Eventos.",
           "start-failed": "&cNão foi possível abrir o {event}. Confira os pontos gravados com setloc.",
           "need-clan": "Você precisa estar em um clan para participar do evento!",
+          // A reserva do clan (/clan reserva) não joga os eventos dele (EventJoinCommand, o atalho antes da viagem).
+          "clan-reserve": "&cVocê está no banco de reservas do seu clan e não joga os eventos dele. Para jogar, use /clan reserva entrar e entre no lugar do titular que está offline há mais tempo.",
           "vanished": "&cÉ necessário desativar o /v para jogar em eventos. O camarote continua permitido.",
           // O /v da staff ligado por quem está vivo num evento (EventsListener.onVanish).
           "vanish-blocked": "&cVocê não pode ativar o /v enquanto estiver lutando no {event}. No camarote ele continua permitido.",
@@ -1364,6 +1366,8 @@
               "rejoin-pending": "&cVocê já está no processo de reentrada. Aguarde.",
               "rejoin-clan-changed": "&cVocê não pode reentrar, pois trocou de clan depois de cair.",
               "need-clan": "Você precisa estar em um clan para participar do evento Gladiador.",
+              // A reserva do clan (/clan reserva) não joga o Gladiador.
+              "clan-reserve": "Você está no banco de reservas do seu clan e não pode jogar o Gladiador. Para jogar, use /clan reserva entrar e entre no lugar do titular que está offline há mais tempo.",
               "clan-limit": "Seu clan já atingiu o limite de membros neste evento.",
               "removed": "{reason}"
             },

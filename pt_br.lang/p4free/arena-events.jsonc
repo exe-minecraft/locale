@@ -374,6 +374,8 @@
       "kills-ranking-own": "&7 Você ficou em &f{position}º &7com &c{kills} &7{kills_unit}.",
       "kills-ranking-footer": [""],
       "cannot-join": "&cNão foi possível entrar no {event}. Confira o seu clan e o limite de membros do evento.",
+      // A reserva do clan (/clan reserva) não joga as arenas.
+      "clan-reserve": "&cVocê está no banco de reservas do seu clan e não pode jogar o {event}. Para jogar, use /clan reserva entrar e entre no lugar do titular que está offline há mais tempo.",
       "combat-leave": "&cVocê não pode sair do {event} em combate!",
       "command-blocked": "&cVocê não pode usar comandos durante o {event}.",
       "not-in-event": "&cVocê não está no {event}!",
