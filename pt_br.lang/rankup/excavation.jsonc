@@ -93,6 +93,8 @@
         "pvp-unlocked": "&a&lCONQUISTA! &fVocê desbloqueou o &aPvP do Mundo de Extração&f com a sua Pá Especial no nível {level}. A partir de agora, você pode enfrentar outros jogadores nas suas extrações.",
         // O tronco e a folha só vêm das árvores do mundo: postos pelo jogador, dariam outra chance da Maçã Especial.
         "tree-block": "Você não pode colocar troncos nem folhas no Mundo de Extração.",
+        // A tesoura do jogo quebra folha num clique, e a folha de uma vez é só da Leaf Cutter (o dono, 19/11/2026).
+        "shears": "Você não pode cortar folhas com a tesoura comum no Mundo de Extração. Quebre com a mão ou use uma Leaf Cutter.",
         // A estrutura de cada portal, o slime do fundo de cada poço e a lã vermelha da boca só se mexem com o /build,
         // nem a staff com a liberação (o dono, 16/11/2026). O fixed-block-build vai a quem tem a liberação.
         "fixed-block": "Você não pode mexer neste bloco, porque ele faz parte de um portal de extração ou de um poço.",
@@ -281,6 +283,20 @@
           "swapped": {
             "thrower": "&aVocê trocou de lugar com {target_name_with_color}&a.",
             "target": "&c{thrower_name_with_color} &ctrocou de lugar com você usando um Inversor."
+          }
+        },
+        // A tesoura da loja (o pedido do dono de 19/11/2026), com o nome e a descrição da imagem do item do Kekitoox.
+        "leaf-cutter": {
+          "display-name": "Leaf Cutter",
+          "name": "&bLeaf Cutter",
+          "lore": [
+            "&7Esta tesoura quebra as folhas do",
+            "&7mundo de extração instantaneamente.",
+            "&7",
+            "&8(Item Indestrutível)"
+          ],
+          "refused": {
+            "elsewhere": "A Leaf Cutter só funciona no Mundo de Extração."
           }
         },
         // Os oito itens que os mobs da noite largam (o documento do dono de 17/11/2026, seção 6). Os nomes e as
