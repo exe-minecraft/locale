@@ -139,8 +139,8 @@
         "cleaner-full": "&cO inventário de {target_name_with_color} &cnão tem espaço para &eLimpador de Terreno &7[&f{amount}x&7]&c, e nada foi entregue.",
         "cleaner-elsewhere": "&c{target_name_with_color} &cnão está neste servidor. O Limpador é entregue no servidor onde o jogador está.",
         "cleaner-amount": "&cQuantidade inválida. Use um número inteiro de 1 a {max}!",
-        "cleaner-actionbar-on": "&aAs mensagens do limpador e da schematic na actionbar foram ativadas!",
-        "cleaner-actionbar-off": "&cAs mensagens do limpador e da schematic na actionbar foram desativadas!",
+        "cleaner-actionbar-on": "&aAs mensagens do Limpador e da Schematic na actionbar foram ativadas!",
+        "cleaner-actionbar-off": "&cAs mensagens do Limpador e da Schematic na actionbar foram desativadas!",
         "cleaner-actionbar-failed": "&cNão foi possível salvar a sua escolha agora. Tente de novo em instantes.",
         "server-offline": "&cO servidor de terrenos está indisponível agora. Tente de novo daqui a pouco.",
         "storage-on-plots": "&cO armazém abre no servidor de terrenos. Vá até o seu terreno e use /armazem.",
@@ -302,6 +302,10 @@
             "started": "&aLimpeza iniciada com sucesso!",
             "missing": "&cO Limpador precisa estar no seu inventário quando você confirma.",
             "save-failed": "&cOcorreu um erro ao iniciar a limpeza. O item não foi consumido.",
+            // No criativo o cliente clona o item com o mesmo lote (a regra 23 de segurança).
+            "creative": "&cVocê não pode usar o Limpador no modo criativo.",
+            // A resposta do banco se perdeu e ninguém sabe se a limpeza começou: o item não volta sozinho.
+            "unknown": "&cNão deu para confirmar se a limpeza do terreno {plot} &ccomeçou. A equipe foi avisada e vai conferir o seu Limpador.",
             "failed": "&cOcorreu um erro inesperado. Contate um administrador."
           }
         }
@@ -354,7 +358,7 @@
           "name": "&dSchematic do Plot",
           "lore": {
             "open": ["&7Esse item guarda os blocos da Schematic:", "&7", "{sections}", "&dClique com o botão direito para configurar!"],
-            "finished": ["&7Esse item guarda os blocos da Schematic:", "&7", "{sections}", "&dClique botão direito dentro do seu terreno para usar!", "&8(Ação com confirmação e irreversível)"],
+            "finished": ["&7Esse item guarda os blocos da Schematic:", "&7", "{sections}", "&dClique com o botão direito dentro do seu terreno para usar!", "&8(Ação com confirmação e irreversível)"],
             "confirm": ["&7Esse item guarda os blocos da Schematic:", "&7", "{sections}", "&aClique para confirmar a configuração!", "&8(Ação com confirmação e irreversível)"]
           }
         },
@@ -426,11 +430,16 @@
           // O que a construção não destrói barra o começo, e o item fica com o jogador (a resposta do dono, 20/11).
           "blocked-spawner": "&cHá um spawner em {x}, {y}, {z}, onde a Schematic vai construir. Retire-o pelo menu do spawner antes de usá-la.",
           "blocked-container": "&cHá um bloco com itens em {x}, {y}, {z}, onde a Schematic vai construir. Tire os itens dele antes de usá-la.",
+          "blocked-frame": "&cHá uma moldura com item em {x}, {y}, {z}, onde a Schematic vai construir. Tire o item dela antes de usá-la.",
           "spawners": "&cHá um spawner onde a Schematic vai construir. Retire-o pelo menu do spawner antes de usá-la.",
           "empty": "&cSeu terreno já está com essa Schematic, e não há nada para construir.",
           "started": "&aA Schematic está sendo aplicada ao seu terreno.",
           "missing": "&cA Schematic precisa estar no seu inventário quando você confirma.",
           "save-failed": "&cOcorreu um erro ao iniciar a Schematic. O item não foi consumido.",
+          // No criativo o cliente escreve o NBT que quiser e clona o item (a regra 23 de segurança): nem configura nem usa.
+          "creative": "&cVocê não pode configurar nem usar a Schematic no modo criativo.",
+          // A resposta do banco se perdeu e ninguém sabe se a construção começou: o item não volta sozinho.
+          "unknown": "&cNão deu para confirmar se a Schematic do terreno {plot} &ccomeçou. A equipe foi avisada e vai conferir a sua Schematic.",
           "failed": "&cOcorreu um erro inesperado. Contate um administrador."
         },
         // O progresso, com o desenho da imagem do dono: a actionbar do dono, o holograma na entrada do terreno e o title do fim.
@@ -716,7 +725,7 @@
               },
               "dome": {
                 "name": "&9Cúpula",
-                "lore": ["&7A cúpula é a borda do seu plot das", "&7camadas 66 à 256, depois das paredes.", "&7", "&9 Cúpula Atual ({count})", "&7", "{blocks}", "&7", "&9Clique para configurar a cúpula!"]
+                "lore": ["&7A cúpula é a borda do seu plot das", "&7camadas 66 à 255, depois das paredes.", "&7", "&9 Cúpula Atual ({count})", "&7", "{blocks}", "&7", "&9Clique para configurar a cúpula!"]
               }
             }
           },

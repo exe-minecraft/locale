@@ -3,6 +3,8 @@
     "core": {
       "messages": {
         "custom-item": {
+          // O item custom de um plugin que este servidor não tem não vira bloco (a regra 143 de correção).
+          "not-here": "&cEste item não pode ser colocado neste servidor.",
           "dupe-detected": [
             "",
             "&c&l[ANTI-DUPE] &f{player_name} &7({app_id}) &ffoi flagrado com &c{found_amount}/{max_amount} &funidades do item &e{custom_item_key} &7[detalhes]",
