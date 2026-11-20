@@ -278,6 +278,9 @@
         "cleaner-resumed": "&eA limpeza do terreno havia sido pausada devido a um reinício do servidor, a mesma foi retomada com sucesso!",
         "schematic-done": "&aA Schematic do terreno {plot} &afoi aplicada com sucesso!",
         "schematic-resumed": "&eA Schematic do terreno {plot} &efoi pausada por um reinício do servidor e já foi retomada.",
+        // A resposta do banco ao começo se perdeu, e a releitura em segundo plano achou a marca: o trabalho começou.
+        "cleaner-confirmed": "&aO banco confirmou a limpeza do terreno {plot}&a, e ela já começou.",
+        "schematic-confirmed": "&aO banco confirmou a Schematic do terreno {plot}&a, e ela já está sendo aplicada.",
         "schematic-busy": "&cO terreno {plot} &cestá recebendo uma Schematic. Tente de novo quando ela terminar.",
         "deleted": "&aO terreno {plot} &afoi excluído e está livre de novo.",
         "reset-failed": "&cA limpeza do terreno {plot} &cfalhou. A equipe foi avisada, tente de novo mais tarde.",
@@ -305,7 +308,8 @@
             // No criativo o cliente clona o item com o mesmo lote (a regra 23 de segurança).
             "creative": "&cVocê não pode usar o Limpador no modo criativo.",
             // A resposta do banco se perdeu e ninguém sabe se a limpeza começou: o item não volta sozinho.
-            "unknown": "&cNão deu para confirmar se a limpeza do terreno {plot} &ccomeçou. A equipe foi avisada e vai conferir o seu Limpador.",
+            "unknown": "&cNão deu para confirmar se a limpeza do terreno {plot} &ccomeçou. Se ela não tiver começado, o Limpador volta sozinho, e a equipe foi avisada.",
+            "unknown-returned": "&eO banco confirmou que a limpeza do terreno {plot} &enão começou, e o seu Limpador voltou ao inventário.",
             "failed": "&cOcorreu um erro inesperado. Contate um administrador."
           }
         }
@@ -439,7 +443,8 @@
           // No criativo o cliente escreve o NBT que quiser e clona o item (a regra 23 de segurança): nem configura nem usa.
           "creative": "&cVocê não pode configurar nem usar a Schematic no modo criativo.",
           // A resposta do banco se perdeu e ninguém sabe se a construção começou: o item não volta sozinho.
-          "unknown": "&cNão deu para confirmar se a Schematic do terreno {plot} &ccomeçou. A equipe foi avisada e vai conferir a sua Schematic.",
+          "unknown": "&cNão deu para confirmar se a Schematic do terreno {plot} &ccomeçou. Se ela não tiver começado, ela volta sozinha, e a equipe foi avisada.",
+          "unknown-returned": "&eO banco confirmou que a Schematic do terreno {plot} &enão começou, e ela voltou ao seu inventário.",
           "failed": "&cOcorreu um erro inesperado. Contate um administrador."
         },
         // O progresso, com o desenho da imagem do dono: a actionbar do dono, o holograma na entrada do terreno e o title do fim.
