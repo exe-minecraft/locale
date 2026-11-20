@@ -121,7 +121,7 @@
             }
           },
           "actionbar": {
-            "description": "mostrar ou esconder o progresso do Limpador na actionbar"
+            "description": "mostrar ou esconder o progresso do Limpador e da Schematic na actionbar"
           }
         }
       },
@@ -131,13 +131,16 @@
         "denied-entry": "&cVocê foi impedido de entrar neste terreno.",
         "resetting-entry": "&cEste terreno está sendo limpo. Espere a limpeza terminar para entrar.",
         "cleaning": "&cO Limpador está tirando a terra deste terreno. Espere a limpeza terminar para mexer nele.",
+        // A Schematic do Plot construindo: ninguém mexe nem entra no terreno até ela terminar (a resposta do dono, 20/11).
+        "building": "&cA Schematic está sendo aplicada neste terreno. Espere ela terminar para mexer nele.",
+        "building-entry": "&cEste terreno está recebendo uma Schematic. Espere ela terminar para entrar.",
         "cleaner-given": "&aEntregado &eLimpador de Terreno &7[&f{amount}x&7] &aao jogador {target_name_with_color}",
         "cleaner-received": "&aRecebido &eLimpador de Terreno &7[&f{amount}x&7] &acom sucesso!",
         "cleaner-full": "&cO inventário de {target_name_with_color} &cnão tem espaço para &eLimpador de Terreno &7[&f{amount}x&7]&c, e nada foi entregue.",
         "cleaner-elsewhere": "&c{target_name_with_color} &cnão está neste servidor. O Limpador é entregue no servidor onde o jogador está.",
         "cleaner-amount": "&cQuantidade inválida. Use um número inteiro de 1 a {max}!",
-        "cleaner-actionbar-on": "&aAs mensagens do limpador na actionbar foram ativadas!",
-        "cleaner-actionbar-off": "&cAs mensagens do limpador na actionbar foram desativadas!",
+        "cleaner-actionbar-on": "&aAs mensagens do limpador e da schematic na actionbar foram ativadas!",
+        "cleaner-actionbar-off": "&cAs mensagens do limpador e da schematic na actionbar foram desativadas!",
         "cleaner-actionbar-failed": "&cNão foi possível salvar a sua escolha agora. Tente de novo em instantes.",
         "server-offline": "&cO servidor de terrenos está indisponível agora. Tente de novo daqui a pouco.",
         "storage-on-plots": "&cO armazém abre no servidor de terrenos. Vá até o seu terreno e use /armazem.",
@@ -273,6 +276,9 @@
         "cleared-by-staff-listed": "&eSeu terreno {plot} &efoi limpo pela equipe e voltou ao ponto inicial. O anúncio dele saiu da Imobiliária, e as ofertas foram canceladas.",
         "cleaner-done": "&aA limpeza do terreno {plot} &afoi concluída com sucesso!",
         "cleaner-resumed": "&eA limpeza do terreno havia sido pausada devido a um reinício do servidor, a mesma foi retomada com sucesso!",
+        "schematic-done": "&aA Schematic do terreno {plot} &afoi aplicada com sucesso!",
+        "schematic-resumed": "&eA Schematic do terreno {plot} &efoi pausada por um reinício do servidor e já foi retomada.",
+        "schematic-busy": "&cO terreno {plot} &cestá recebendo uma Schematic. Tente de novo quando ela terminar.",
         "deleted": "&aO terreno {plot} &afoi excluído e está livre de novo.",
         "reset-failed": "&cA limpeza do terreno {plot} &cfalhou. A equipe foi avisada, tente de novo mais tarde.",
         // O reset animado leva minutos: um restart no meio deixa o terreno pela metade, e o arranque avisa o dono.
@@ -290,6 +296,7 @@
             "outside": "&cVocê precisa estar dentro de um terreno!",
             "not-yours": "&cEste terreno não é seu!",
             "active": "&cVocê já tem um limpador ativo. Aguarde a conclusão para usar outro!",
+            "schematic-active": "&cVocê tem uma Schematic sendo aplicada. Aguarde a conclusão para usar o limpador!",
             "empty": "&cEste terreno não tem blocos para limpar!",
             "cancelled": "&cLimpeza cancelada!",
             "started": "&aLimpeza iniciada com sucesso!",
@@ -300,28 +307,145 @@
         }
       },
       // O progresso do Limpador: a actionbar do dono, o holograma na entrada do terreno e o title do fim. A barra tem 10
-      // partes, uma verde a cada 10%, e a porcentagem tem a cor da faixa (no limite exato vale a de cima).
+      // partes, uma verde a cada 10%, e a porcentagem tem a cor da faixa (no limite exato vale a de cima). O desenho é o da
+      // Schematic do Plot (o pedido do dono de 20/11: "trocar o holograma e a actionbar do limpador para este novo formato").
       "cleaner": {
-        "actionbar": "&e&lLIMPADOR ATIVO &8({bar}&8) &7- {percent}",
+        "actionbar": "&e&lLIMPADOR ATIVO &8({bar}&8) &f- {percent}",
         "hologram": [
           "&e&lLIMPADOR ATIVO",
           "&7Dono: {owner_name_with_color}",
           "&7B. Quebrados: &f{done}/{total}",
           "&8({bar}&8) &f- {percent}"
         ],
-        "bar": { "done": "&a▍", "left": "&7▍" },
+        "bar": { "done": "&a▬", "left": "&7▬" },
         "colors": { "0": "&4", "10": "&c", "30": "&6", "40": "&e", "60": "&a", "80": "&2" },
         "title": "&e&lLIMPEZA FINALIZADA",
         "subtitle": ""
       },
       "preferences": {
         "cleaner-actionbar": {
-          "name": "&eProgresso do Limpador",
+          "name": "&eProgresso do Limpador e da Schematic",
           "description": [
             "&7Mostra na actionbar o progresso",
-            "&7do seu Limpador de Terrenos.",
+            "&7do seu Limpador de Terrenos e",
+            "&7da sua Schematic do Plot.",
             "&7O mesmo que o /cp actionbar."
           ]
+        }
+      },
+      // A Schematic do Plot (o documento do dono de 20/11/2026, com os baús do Kekitoox no rankup-plots-1): o item, as linhas
+      // dos blocos, os nomes dos blocos (os do baú, em inglês, com o id), as mensagens dos menus e do uso, e o progresso,
+      // no desenho que o dono mandou (o holograma e a actionbar da imagem).
+      "schematic": {
+        "units": {
+          "block": { "singular": "bloco", "plural": "blocos" }
+        },
+        // Cada parte com as preposições das mensagens: "Você adicionou X às paredes", "das paredes", "nas paredes".
+        "parts": {
+          "walls": { "name": "Paredes", "to": "às paredes", "from": "das paredes", "in": "nas paredes" },
+          "floor": { "name": "Chão", "to": "ao chão", "from": "do chão", "in": "no chão" },
+          "ceiling": { "name": "Teto", "to": "ao teto", "from": "do teto", "in": "no teto" },
+          "dome": { "name": "Cúpula", "to": "à cúpula", "from": "da cúpula", "in": "na cúpula" }
+        },
+        // O {sections} são as partes, cada uma com o título, os blocos e uma linha vazia (o "lines" de baixo). O "confirm" é
+        // o item de baixo do menu principal, que finaliza.
+        "item": {
+          "display-name": "&dSchematic do Plot",
+          "name": "&dSchematic do Plot",
+          "lore": {
+            "open": ["&7Esse item guarda os blocos da Schematic:", "&7", "{sections}", "&dClique com o botão direito para configurar!"],
+            "finished": ["&7Esse item guarda os blocos da Schematic:", "&7", "{sections}", "&dClique botão direito dentro do seu terreno para usar!", "&8(Ação com confirmação e irreversível)"],
+            "confirm": ["&7Esse item guarda os blocos da Schematic:", "&7", "{sections}", "&aClique para confirmar a configuração!", "&8(Ação com confirmação e irreversível)"]
+          }
+        },
+        "lines": {
+          "blank": ["&8 ▶ &cSem configuração atualmente", "&7"],
+          "title": "&d {part} ({count})",
+          "space": "&7",
+          "block": "&8 &8 ▶ &f{block} &7({id})",
+          "copy": {
+            "walls": "&8 &8 ▶ &fBlocos da cúpula",
+            "floor": "&8 &8 ▶ &fBlocos das paredes"
+          },
+          "empty": {
+            "walls": "&8 &8 ▶ &cSem paredes",
+            "floor": "&8 &8 ▶ &cSem chão",
+            "ceiling": "&8 &8 ▶ &cSem teto",
+            "dome": "&8 &8 ▶ &cSem cúpula"
+          },
+          "top-closed": "&8 &8 ▶ &fTopo fechado"
+        },
+        // Os nomes dos blocos, pelo id e o dado do config (35-14 é o 35:14). Bloco novo no config precisa do nome aqui.
+        "blocks": {
+          "35-0": "White Wool", "35-1": "Orange Wool", "35-2": "Magenta Wool", "35-3": "Light Blue Wool",
+          "35-4": "Yellow Wool", "35-5": "Lime Wool", "35-6": "Pink Wool", "35-7": "Gray Wool",
+          "35-8": "Light Gray Wool", "35-9": "Cyan Wool", "35-10": "Purple Wool", "35-11": "Blue Wool",
+          "35-12": "Brown Wool", "35-13": "Green Wool", "35-14": "Red Wool", "35-15": "Black Wool",
+          "155-0": "Quartz Block", "87": "Netherrack", "112": "Nether Brick", "80": "Snow Block",
+          "20": "Glass",
+          "95-0": "White Glass", "95-1": "Orange Glass", "95-2": "Magenta Glass", "95-3": "Light Blue Glass",
+          "95-4": "Yellow Glass", "95-5": "Lime Glass", "95-6": "Pink Glass", "95-7": "Gray Glass",
+          "95-8": "Light Gray Glass", "95-9": "Cyan Glass", "95-10": "Purple Glass", "95-11": "Blue Glass",
+          "95-12": "Brown Glass", "95-13": "Green Glass", "95-14": "Red Glass", "95-15": "Black Glass"
+        },
+        "messages": {
+          "added": "&aVocê adicionou {block} {part_to}.",
+          "removed": "&eVocê removeu {block} {part_from}.",
+          "limit": "&cVocê atingiu o limite de {limit} {blocks} {part_in}. Remova um para adicionar outro.",
+          "ceiling-with-dome": "&cNão é possível ter teto e cúpula ao mesmo tempo.",
+          "copy-needs-dome": "&cConfigure a cúpula antes de usar a opção de paredes iguais à cúpula.",
+          "copy-needs-walls": "&cConfigure as paredes antes de usar a opção de chão igual às paredes.",
+          "copy-walls-copying": "&cO chão não pode copiar as paredes enquanto elas usam os blocos da cúpula.",
+          "top-needs-dome": "&cEscolha os vidros da cúpula antes de fechar o topo.",
+          "already-walls": "&eAs paredes já usam os blocos da cúpula.",
+          "already-floor": "&eO chão já usa os blocos das paredes.",
+          "copied-walls": "&aAs paredes agora usam os blocos da cúpula.",
+          "copied-floor": "&aO chão agora usa os blocos das paredes.",
+          "top-closed": "&aA cúpula vai fechar em cima, na última camada.",
+          "top-opened": "&eA cúpula vai ficar aberta em cima.",
+          "finalized-now": "&aSua Schematic do Plot foi finalizada! Use-a dentro do seu terreno.",
+          "needs-structure": "&cÉ preciso ter paredes ou cúpula. Configure pelo menos uma delas.",
+          "part-confirmed": "&aA configuração {part_from} foi confirmada.",
+          "saved": "&7Sua configuração foi guardada no item.",
+          "moved": "&cA Schematic saiu do lugar onde você a abriu. Pegue ela na mão e abra de novo.",
+          "invalid": "&cEsta Schematic tem uma configuração que não vale mais. Contate a staff.",
+          "finalized": "&cEsta Schematic já foi finalizada e não pode mais ser configurada.",
+          // O que saiu junto com uma escolha.
+          "cleared": {
+            "ceiling": "&eO teto foi removido, porque não é possível ter teto e cúpula ao mesmo tempo.",
+            "walls-copy": "&eAs paredes deixaram de usar os blocos da cúpula.",
+            "floor-copy": "&eO chão deixou de usar os blocos das paredes.",
+            "dome-top": "&eSem vidros na cúpula, o topo voltou a ficar aberto."
+          },
+          "world": "&cVocê só pode usar a Schematic no servidor dos terrenos, dentro do seu terreno.",
+          "outside": "&cVocê só pode usar a Schematic dentro do seu terreno.",
+          "not-yours": "&cEste terreno não é seu.",
+          "active": "&cVocê já tem uma Schematic sendo aplicada. Aguarde a conclusão para usar outra!",
+          "cleaner-active": "&cVocê tem um limpador ativo. Aguarde a conclusão para usar a Schematic!",
+          "cancelled": "&eAção cancelada. Sua Schematic não foi usada.",
+          // O que a construção não destrói barra o começo, e o item fica com o jogador (a resposta do dono, 20/11).
+          "blocked-spawner": "&cHá um spawner em {x}, {y}, {z}, onde a Schematic vai construir. Retire-o pelo menu do spawner antes de usá-la.",
+          "blocked-container": "&cHá um bloco com itens em {x}, {y}, {z}, onde a Schematic vai construir. Tire os itens dele antes de usá-la.",
+          "spawners": "&cHá um spawner onde a Schematic vai construir. Retire-o pelo menu do spawner antes de usá-la.",
+          "empty": "&cSeu terreno já está com essa Schematic, e não há nada para construir.",
+          "started": "&aA Schematic está sendo aplicada ao seu terreno.",
+          "missing": "&cA Schematic precisa estar no seu inventário quando você confirma.",
+          "save-failed": "&cOcorreu um erro ao iniciar a Schematic. O item não foi consumido.",
+          "failed": "&cOcorreu um erro inesperado. Contate um administrador."
+        },
+        // O progresso, com o desenho da imagem do dono: a actionbar do dono, o holograma na entrada do terreno e o title do fim.
+        "progress": {
+          "actionbar": "&d&lSCHEMATIC ATIVA &8({bar}&8) &f- {percent}",
+          "hologram": [
+            "&d&lSCHEMATIC ATIVA",
+            "&7Dono: {owner_name_with_color}",
+            "&7B. Colocados: &f{done}/{total}",
+            "&8({bar}&8) &f- {percent}"
+          ],
+          "bar": { "done": "&a▬", "left": "&7▬" },
+          "colors": { "0": "&4", "10": "&c", "30": "&6", "40": "&e", "60": "&a", "80": "&2" },
+          "title": "&d&lSCHEMATIC APLICADA",
+          "subtitle": ""
         }
       },
       "prompts": {
@@ -544,6 +668,121 @@
             }
           }
         },
+        // Os menus da Schematic do Plot, nos desenhos dos baús do Kekitoox. As paredes vão da camada 1 (a resposta do dono:
+        // a bedrock do fundo fica), e a cúpula com paredes começa na 66.
+        "schematic": {
+          "main": {
+            "title": "Schematic do Plot",
+            "items": {
+              "info": {
+                "name": "&eInformações",
+                "lore": [
+                  "&7Aqui vão algumas informações úteis:",
+                  "&7",
+                  "&8 ▶ &f/plot h {demo} &7(Apenas cúpula sem chão)",
+                  "&8 ▶ &f/plot h:2 {demo} &7(Apenas cúpula com chão)",
+                  "&8 ▶ &f/plot h:3 {demo} &7(Paredes e chão com teto)",
+                  "&8 ▶ &f/plot h:4 {demo} &7(Paredes e chão sem teto)",
+                  "&8 ▶ &f/plot h:5 {demo} &7(Paredes e cúpula sem chão)",
+                  "&8 ▶ &f/plot h:6 {demo} &7(Paredes e cúpula com chão)",
+                  "&8 ▶ &f/plot h:7 {demo} &7(Apenas paredes sem chão)",
+                  "&8 ▶ &f/plot h:8 {demo} &7(Paredes e teto sem chão)",
+                  "&7",
+                  "&7Extras:",
+                  "&7",
+                  "&8 ▶ &fNão é possível ter teto e cúpula simultaneamente",
+                  "&8 ▶ &fA cúpula pode tomar o lugar das paredes mas não ao contrário",
+                  "&8 ▶ &fNão é possível não ter paredes e cúpula simultaneamente",
+                  "&8 ▶ &fÉ possível ter apenas paredes e apenas cúpula",
+                  "&7",
+                  "&eQualquer dúvida, contate um staff para suporte!"
+                ]
+              },
+              "walls": {
+                "name": "&9Paredes",
+                "lore": ["&7As paredes são a borda do seu plot", "&7das camadas 1 à 65, antes da cúpula.", "&7", "&9 Paredes Atuais ({count})", "&7", "{blocks}", "&7", "&9Clique para configurar as paredes!"]
+              },
+              "floor": {
+                "name": "&9Chão",
+                "lore": ["&7O chão cobre toda a camada 1 do", "&7seu plot, excluindo as bordas.", "&7", "&9 Chão Atual ({count})", "&7", "{blocks}", "&7", "&9Clique para configurar o chão!"]
+              },
+              "ceiling": {
+                "name": "&9Teto",
+                "lore": ["&7O teto é usado quando não há cúpula e", "&7cobre a camada 65, excluindo as bordas.", "&7", "&9 Teto Atual ({count})", "&7", "{blocks}", "&7", "&9Clique para configurar o teto!"]
+              },
+              "ceiling-unavailable": {
+                "name": "&9Teto",
+                "lore": ["&7O teto é usado quando não há cúpula e", "&7cobre a camada 65, excluindo as bordas.", "&7", "&cCúpula ativada, teto indisponível!"]
+              },
+              "dome": {
+                "name": "&9Cúpula",
+                "lore": ["&7A cúpula é a borda do seu plot das", "&7camadas 66 à 256, depois das paredes.", "&7", "&9 Cúpula Atual ({count})", "&7", "{blocks}", "&7", "&9Clique para configurar a cúpula!"]
+              }
+            }
+          },
+          "walls": {
+            "title": "Paredes",
+            "items": {
+              "free": {
+                "configure": { "name": "&9Paredes", "lore": ["&7Escolha os blocos das paredes", "&7até esgotar o limite predefinido.", "&7", "&eClique para configurar os blocos!"] },
+                "activate": { "name": "&9Paredes", "lore": ["&7Escolha os blocos das paredes", "&7até esgotar o limite predefinido.", "&7", "&aClique para ativar essa configuração!"] }
+              },
+              "copy": {
+                "activate": { "name": "&9Paredes", "lore": ["&7Use a mesma configuração da cúpula.", "&7", "&aClique para ativar essa configuração!"] },
+                "active": { "name": "&9Paredes", "lore": ["&7Use a mesma configuração da cúpula.", "&7", "&eVocê tem essa configuração ativa!"] },
+                "unavailable": { "name": "&9Paredes", "lore": ["&7Use a mesma configuração da cúpula.", "&7", "&cConfigure primeiro a cúpula para ativar!"] }
+              }
+            }
+          },
+          "floor": {
+            "title": "Chão",
+            "items": {
+              "free": {
+                "configure": { "name": "&9Chão", "lore": ["&7Escolha os blocos do chão até", "&7esgotar o limite predefinido.", "&7", "&eClique para configurar os blocos!"] },
+                "activate": { "name": "&9Chão", "lore": ["&7Escolha os blocos do chão até", "&7esgotar o limite predefinido.", "&7", "&aClique para ativar essa configuração!"] }
+              },
+              "copy": {
+                "activate": { "name": "&9Chão", "lore": ["&7Use a mesma configuração das paredes.", "&7", "&aClique para ativar essa configuração!"] },
+                "active": { "name": "&9Chão", "lore": ["&7Use a mesma configuração das paredes.", "&7", "&eVocê tem essa configuração ativa!"] },
+                "unavailable": { "name": "&9Chão", "lore": ["&7Use a mesma configuração das paredes.", "&7", "&cConfigure primeiro as paredes para ativar!"] },
+                // As paredes iguais à cúpula não emprestam os vidros ao chão (o documento).
+                "walls-copying": { "name": "&9Chão", "lore": ["&7Use a mesma configuração das paredes.", "&7", "&cIndisponível com as paredes iguais à cúpula!"] }
+              }
+            }
+          },
+          // As informações de cada parte. O {limit} da cópia é 1, porque ela conta como 1 de 1.
+          "info": {
+            "name": "&eInformações",
+            "lore": ["&7Veja as informações {part_from}:", "&7", "&8 ▶ &7Configuração: &f{mode}", "&8 ▶ &7Blocos: &f{count} de {limit}", "&8 ▶ &7Status: {status}", "&7", "&eClique para confirmar a configuração!"],
+            "modes": { "none": "Nenhuma", "free": "Livre", "only": "Apenas e Livre", "copy-walls": "Cúpula", "copy-floor": "Paredes" },
+            "status": { "inactive": "&cInativo", "building": "&eEm Construção", "complete": "&aCompleto" },
+            "top": { "open": "Aberto", "closed": "Fechado" }
+          },
+          "info-dome": {
+            "name": "&eInformações",
+            "lore": ["&7Veja as informações {part_from}:", "&7", "&8 ▶ &7Configuração: &f{mode}", "&8 ▶ &7Blocos: &f{count} de {limit}", "&8 ▶ &7Topo: &f{top}", "&8 ▶ &7Status: {status}", "&7", "&eClique para confirmar a configuração!"]
+          },
+          "blocks": {
+            "title": "Blocos {part_from}",
+            "items": {
+              // O bloco fica com o nome do jogo; só a descrição diz o estado, e o ativado brilha.
+              "block": {
+                "available": ["&eClique para ativar esse bloco!"],
+                "selected": ["&aVocê tem esse bloco ativado!"],
+                "full": ["&cRemova algum bloco antes para ativar!"]
+              },
+              // O topo da cúpula, a escolha do jogador (a resposta do dono, 20/11).
+              "top": {
+                "open": { "name": "&9Topo da Cúpula", "lore": ["&7Escolha se a cúpula fecha em cima,", "&7na última camada.", "&7", "&8 ▶ &7Topo: &fAberto", "&7", "&eClique para fechar o topo!"] },
+                "closed": { "name": "&9Topo da Cúpula", "lore": ["&7Escolha se a cúpula fecha em cima,", "&7na última camada.", "&7", "&8 ▶ &7Topo: &fFechado", "&7", "&eClique para abrir o topo!"] },
+                "unavailable": { "name": "&9Topo da Cúpula", "lore": ["&7Escolha se a cúpula fecha em cima,", "&7na última camada.", "&7", "&cEscolha os vidros da cúpula antes!"] }
+              }
+            }
+          },
+          "glass": {
+            "title": "Vidros {part_from}"
+          }
+        },
         "confirmation": {
           "items": {
             "accept": { "name": "&aConfirmar", "lore": [] },
@@ -559,6 +798,17 @@
             "title": "Usar o Limpador de Terrenos?",
             "name": "&eLimpar o terreno {plot}",
             "lore": ["&7", "&7 Toda a terra e a grama do terreno", "&7 somem, da bedrock até o topo.", "&7 O resto fica onde está.", "&7", "&7 O Limpador é gasto ao confirmar."]
+          },
+          // A Schematic do Plot: usar no terreno, e o finalizar do menu principal.
+          "schematic": {
+            "title": "Usar a Schematic do Plot?",
+            "name": "&dAplicar a Schematic no terreno {plot}",
+            "lore": ["&7", "&7 As paredes, o chão, o teto e a cúpula", "&7 escolhidos são construídos no terreno.", "&7 Os blocos que estiverem no caminho", "&7 são substituídos e se perdem.", "&7", "&7 A Schematic é gasta ao confirmar.", "&7 Essa ação é irreversível!"]
+          },
+          "schematic-finish": {
+            "title": "Finalizar a Schematic?",
+            "name": "&aFinalizar a Schematic do Plot",
+            "lore": ["&7", "&7 Depois de confirmar, você não pode", "&7 mais configurar esta Schematic.", "&7", "&7 Ela passa a ser usada com o botão", "&7 direito dentro do seu terreno."]
           },
           // O /plot clear da equipe, em pé no terreno de outro jogador.
           "staff-clear": {
