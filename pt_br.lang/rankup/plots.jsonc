@@ -307,8 +307,9 @@
             "save-failed": "&cOcorreu um erro ao iniciar a limpeza. O item não foi consumido.",
             // No criativo o cliente clona o item com o mesmo lote (a regra 23 de segurança).
             "creative": "&cVocê não pode usar o Limpador no modo criativo.",
-            // A resposta do banco se perdeu e ninguém sabe se a limpeza começou: o item não volta sozinho.
-            "unknown": "&cNão deu para confirmar se a limpeza do terreno {plot} &ccomeçou. Se ela não tiver começado, o Limpador volta sozinho, e a equipe foi avisada.",
+            // A resposta do banco se perdeu e ninguém sabe se a limpeza começou. O banco responde depois, e sem o começo o item
+            // volta sozinho a quem está no servidor dos terrenos; senão, a equipe devolve.
+            "unknown": "&cNão deu para confirmar se a limpeza do terreno {plot} &ccomeçou. Se ela não tiver começado, o Limpador volta quando o banco responder, com você no servidor dos terrenos. Se não voltar, a equipe já foi avisada e devolve.",
             "unknown-returned": "&eO banco confirmou que a limpeza do terreno {plot} &enão começou, e o seu Limpador voltou ao inventário.",
             "failed": "&cOcorreu um erro inesperado. Contate um administrador."
           }
@@ -442,8 +443,9 @@
           "save-failed": "&cOcorreu um erro ao iniciar a Schematic. O item não foi consumido.",
           // No criativo o cliente escreve o NBT que quiser e clona o item (a regra 23 de segurança): nem configura nem usa.
           "creative": "&cVocê não pode configurar nem usar a Schematic no modo criativo.",
-          // A resposta do banco se perdeu e ninguém sabe se a construção começou: o item não volta sozinho.
-          "unknown": "&cNão deu para confirmar se a Schematic do terreno {plot} &ccomeçou. Se ela não tiver começado, ela volta sozinha, e a equipe foi avisada.",
+          // A resposta do banco se perdeu e ninguém sabe se a construção começou. O banco responde depois, e sem o começo o
+          // item volta sozinho a quem está no servidor dos terrenos; senão, a equipe devolve.
+          "unknown": "&cNão deu para confirmar se a Schematic do terreno {plot} &ccomeçou. Se ela não tiver começado, ela volta quando o banco responder, com você no servidor dos terrenos. Se não voltar, a equipe já foi avisada e devolve.",
           "unknown-returned": "&eO banco confirmou que a Schematic do terreno {plot} &enão começou, e ela voltou ao seu inventário.",
           "failed": "&cOcorreu um erro inesperado. Contate um administrador."
         },
