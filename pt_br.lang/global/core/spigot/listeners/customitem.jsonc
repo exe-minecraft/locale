@@ -3,7 +3,8 @@
     "core": {
       "messages": {
         "custom-item": {
-          // O item custom de um plugin que este servidor não tem não vira bloco nem entra numa receita (a regra 143 de correção).
+          // O item custom de um plugin que este servidor não tem não vira bloco nem entra na receita de um plugin (a regra 143
+          // de correção).
           "not-here": "&cEste item não pode ser usado neste servidor.",
           "dupe-detected": [
             "",

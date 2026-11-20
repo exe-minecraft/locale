@@ -310,9 +310,8 @@
             // A resposta do banco se perdeu e ninguém sabe se a limpeza começou. O banco responde depois, e sem o começo o item
             // volta sozinho a quem está no servidor dos terrenos; senão, a equipe devolve.
             "unknown": "&cNão deu para confirmar se a limpeza do terreno {plot} &ccomeçou. Se ela não tiver começado, o Limpador volta quando o banco responder, com você no servidor dos terrenos. Se não voltar, a equipe já foi avisada e devolve.",
-            "unknown-returned": "&eO banco confirmou que a limpeza do terreno {plot} &enão começou, e o seu Limpador voltou ao inventário.",
-            // O item ia voltar, mas o inventário estava cheio. Ele não vai ao chão, porque no terreno de outro ninguém pega.
-            "inventory-full": "&cA limpeza do terreno {plot} &cnão começou, e o seu Limpador não coube no inventário. A equipe já foi avisada e devolve.",
+            // O item volta ao inventário, ou ao /correio se ele estiver cheio.
+            "unknown-returned": "&eO banco confirmou que a limpeza do terreno {plot} &enão começou, e o seu Limpador voltou para você.",
             "failed": "&cOcorreu um erro inesperado. Contate um administrador."
           }
         }
@@ -448,9 +447,8 @@
           // A resposta do banco se perdeu e ninguém sabe se a construção começou. O banco responde depois, e sem o começo o
           // item volta sozinho a quem está no servidor dos terrenos; senão, a equipe devolve.
           "unknown": "&cNão deu para confirmar se a Schematic do terreno {plot} &ccomeçou. Se ela não tiver começado, ela volta quando o banco responder, com você no servidor dos terrenos. Se não voltar, a equipe já foi avisada e devolve.",
-          "unknown-returned": "&eO banco confirmou que a Schematic do terreno {plot} &enão começou, e ela voltou ao seu inventário.",
-          // O item ia voltar, mas o inventário estava cheio. Ele não vai ao chão, porque no terreno de outro ninguém pega.
-          "inventory-full": "&cA Schematic do terreno {plot} &cnão começou, e ela não coube no seu inventário. A equipe já foi avisada e devolve.",
+          // O item volta ao inventário, ou ao /correio se ele estiver cheio.
+          "unknown-returned": "&eO banco confirmou que a Schematic do terreno {plot} &enão começou, e ela voltou para você.",
           "failed": "&cOcorreu um erro inesperado. Contate um administrador."
         },
         // O progresso, com o desenho da imagem do dono: a actionbar do dono, o holograma na entrada do terreno e o title do fim.
@@ -699,14 +697,14 @@
                 "lore": [
                   "&7Aqui vão algumas informações úteis:",
                   "&7",
-                  "&8 ▶ &f{example_1} &7(Apenas cúpula sem chão)",
-                  "&8 ▶ &f{example_2} &7(Apenas cúpula com chão)",
-                  "&8 ▶ &f{example_3} &7(Paredes e chão com teto)",
-                  "&8 ▶ &f{example_4} &7(Paredes e chão sem teto)",
-                  "&8 ▶ &f{example_5} &7(Paredes e cúpula sem chão)",
-                  "&8 ▶ &f{example_6} &7(Paredes e cúpula com chão)",
-                  "&8 ▶ &f{example_7} &7(Apenas paredes sem chão)",
-                  "&8 ▶ &f{example_8} &7(Paredes e teto sem chão)",
+                  "&8 ▶ &f{example_1}&7(Apenas cúpula sem chão)",
+                  "&8 ▶ &f{example_2}&7(Apenas cúpula com chão)",
+                  "&8 ▶ &f{example_3}&7(Paredes e chão com teto)",
+                  "&8 ▶ &f{example_4}&7(Paredes e chão sem teto)",
+                  "&8 ▶ &f{example_5}&7(Paredes e cúpula sem chão)",
+                  "&8 ▶ &f{example_6}&7(Paredes e cúpula com chão)",
+                  "&8 ▶ &f{example_7}&7(Apenas paredes sem chão)",
+                  "&8 ▶ &f{example_8}&7(Paredes e teto sem chão)",
                   "&7",
                   "&7Extras:",
                   "&7",
