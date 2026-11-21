@@ -18,8 +18,8 @@
         "ice": "&bGelo",
         "nether": "&cNether"
       },
-      // A seta do lado do portal de extração mais perto, em relação para onde o jogador olha: as do exe-rankup, a pedido do dono
-      // (09/11). Saem pela fonte unicode do cliente 1.8, como saíam lá.
+      // A seta do lado do portal de extração mais perto, e do alvo do Localizador, em relação para onde o jogador olha: as do
+      // exe-rankup, a pedido do dono (09/11). Saem pela fonte unicode do cliente 1.8, como saíam lá.
       "headings": {
         "front": "⬆",
         "front-right": "⬈",
@@ -297,6 +297,54 @@
           ],
           "refused": {
             "elsewhere": "A Leaf Cutter só funciona no Mundo de Extração."
+          }
+        },
+        // O Localizador (o documento do dono de 21/11/2026). O nome e a descrição são os dos dois do baú do Kekitoox ao
+        // lado da placa "Bússola" (o ligado e o desligado), com o português corrigido; o resto segue as sugestões do
+        // documento no padrão da casa. A descrição ligada acompanha o alvo, e o {heading} é a seta das "headings" acima. A
+        // espera é de cada bússola (a resposta do dono de 21/11/2026).
+        "locator": {
+          "display-name": "Localizador",
+          "name": "&3Localizador",
+          "lore": {
+            "on": [
+              "&7Aponta para o jogador mais próximo",
+              "&7de você dentro do mundo de extração.",
+              "&7",
+              "&8 &8 ▶ &7Jogador: {target_name_with_tag}",
+              "&8 &8 ▶ &7Distância: &f{distance} {distance_unit}",
+              "&8 &8 ▶ &7Direção: &f{direction} &7(&b{heading}&7)",
+              "&7",
+              "&eClique com o botão direito para buscar!"
+            ],
+            "off": [
+              "&7Aponta para o jogador mais próximo",
+              "&7de você dentro do mundo de extração.",
+              "&7",
+              "&8 &8 ▶ &cLocalizador desativado",
+              "&7",
+              "&eClique com o botão direito para buscar!"
+            ]
+          },
+          "distance-unit": { "singular": "Bloco", "plural": "Blocos" },
+          "directions": {
+            "north": "Norte",
+            "north-east": "Nordeste",
+            "east": "Leste",
+            "south-east": "Sudeste",
+            "south": "Sul",
+            "south-west": "Sudoeste",
+            "west": "Oeste",
+            "north-west": "Noroeste"
+          },
+          "found": "&aLocalizador ativado! Ele está apontando para {target_name_with_color}&a.",
+          "none": "Nenhum jogador inimigo foi encontrado no Mundo de Extração.",
+          "cooldown": "Aguarde {time} para usar este Localizador de novo.",
+          "lost": "O jogador que você seguia não está mais disponível, e o seu Localizador foi desativado.",
+          "deactivated": "&7O seu Localizador foi desativado porque você está saindo do Mundo de Extração.",
+          "failed": "Não foi possível conferir o seu clã agora, e a busca não aconteceu. Tente de novo em instantes.",
+          "refused": {
+            "elsewhere": "O Localizador só funciona no Mundo de Extração."
           }
         },
         // Os oito itens que os mobs da noite largam (o documento do dono de 17/11/2026, seção 6). Os nomes e as
