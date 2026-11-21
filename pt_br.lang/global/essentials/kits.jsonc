@@ -87,6 +87,23 @@
               "success": "A espera do kit {kit_id} de {target_name_with_color}&a foi zerada.",
               "no-cooldown": "{target_name_with_color}&c não tinha espera no kit {kit_id}. Nada mudou."
             },
+            "lista": {
+              "description": "listar os kits deste servidor, com os itens e a espera de cada um",
+              "arguments": {
+                "pagina": { "name": "página", "description": "A página da lista, a partir de 1" }
+              },
+              "header": "&eKits deste servidor ({count}), página {page} de {pages}:",
+              "entry": "&8 ▸ {kit_name} &8({kit_id})&7, {kit_items}&7, &b{kit_cooldown}",
+              "hover": "&7Categoria &f{category}&7, espaço &f{slot}&7, grupos &f{groups}&7 e rank &f{rank}&7. &eClique para editar este kit.",
+              "items": "&e{count} {unit}",
+              "no-items": "&6sem itens",
+              "no-rank": "nenhum",
+              "empty": "Nenhum kit está carregado neste servidor.",
+              "invalid-page": "A página precisa ser um número de 1 a {pages}.",
+              "units": {
+                "item": { "singular": "item", "plural": "itens" }
+              }
+            },
             "recarregar": {
               "description": "reler os kits do banco neste servidor",
               "success": "Os kits foram relidos do banco ({count})."
@@ -106,7 +123,7 @@
             "loading": "Ainda estamos conferindo as suas coletas. Tente de novo em instantes."
           },
           // O clique no item do site do /kits. O endereço é clicável.
-          "site": "Adquira VIPs e outros produtos em &f{link}&a.",
+          "site": "&aAdquira &6VIPs &ae outros produtos na nossa loja em &e&n{link}&a.",
           "admin": {
             "save-failed": "Não foi possível gravar no banco, e nada mudou. Tente de novo em instantes.",
             "unknown-kit": "O kit {kit_id} não existe.",
@@ -154,9 +171,9 @@
                 "&7Abaixo as informações",
                 "&7dessa categoria:",
                 "&7",
-                "&8 &8 ▶ &7Kits: &f{kit_category_kits}",
-                "&8 &8 ▶ &7Você possui: &f{kit_category_owned}",
-                "&8 &8 ▶ &7Pode coletar: &f{kit_category_collectable}",
+                "&8 &8 ▶ &7Kits: &e{kit_category_kits}",
+                "&8 &8 ▶ &7Você possui: &a{kit_category_owned}",
+                "&8 &8 ▶ &7Pode coletar: &b{kit_category_collectable}",
                 "&7",
                 "&7Clique para abrir essa categoria!"
               ]
@@ -190,9 +207,9 @@
                 "&7Abaixo estão as informações",
                 "&7desse kit:",
                 "&7",
-                "&8 &8 ▶ &7Itens: &f{kit_items}",
+                "&8 &8 ▶ &7Itens: &e{kit_items}",
                 "&8 &8 ▶ &7Status: &aDisponível",
-                "&8 &8 ▶ &7Cooldown: &f{kit_cooldown}",
+                "&8 &8 ▶ &7Cooldown: &b{kit_cooldown}",
                 "&7",
                 "&7Clique com o &fbotão esquerdo &7para coletar",
                 "&7Clique com o &fbotão direito &7para visualizar"
@@ -204,10 +221,10 @@
                 "&7Abaixo estão as informações",
                 "&7desse kit:",
                 "&7",
-                "&8 &8 ▶ &7Itens: &f{kit_items}",
+                "&8 &8 ▶ &7Itens: &e{kit_items}",
                 "&8 &8 ▶ &7Status: &eIndisponível",
-                "&8 &8 ▶ &7Cooldown: &f{kit_cooldown}",
-                "&8 &8 ▶ &7Disponível em: &f{kit_cooldown_remaining}",
+                "&8 &8 ▶ &7Cooldown: &b{kit_cooldown}",
+                "&8 &8 ▶ &7Disponível em: &b{kit_cooldown_remaining}",
                 "&7",
                 "&7Clique com o &fbotão direito &7para visualizar"
               ]
@@ -218,9 +235,9 @@
                 "&7Abaixo estão as informações",
                 "&7desse kit:",
                 "&7",
-                "&8 &8 ▶ &7Itens: &f{kit_items}",
+                "&8 &8 ▶ &7Itens: &e{kit_items}",
                 "&8 &8 ▶ &7Status: &cBloqueado",
-                "&8 &8 ▶ &7Cooldown: &f{kit_cooldown}",
+                "&8 &8 ▶ &7Cooldown: &b{kit_cooldown}",
                 "&7",
                 "&7Clique com o &fbotão direito &7para visualizar"
               ]
@@ -231,10 +248,10 @@
                 "&7Abaixo estão as informações",
                 "&7desse kit:",
                 "&7",
-                "&8 &8 ▶ &7Status: &7Em breve",
-                "&8 &8 ▶ &7Cooldown: &f{kit_cooldown}",
+                "&8 &8 ▶ &7Status: &6Em breve",
+                "&8 &8 ▶ &7Cooldown: &b{kit_cooldown}",
                 "&7",
-                "&7Os itens deste kit ainda não foram definidos."
+                "&6Os itens deste kit ainda não foram definidos."
               ]
             },
             "loading": {
@@ -243,9 +260,9 @@
                 "&7Abaixo estão as informações",
                 "&7desse kit:",
                 "&7",
-                "&8 &8 ▶ &7Itens: &f{kit_items}",
+                "&8 &8 ▶ &7Itens: &e{kit_items}",
                 "&8 &8 ▶ &7Status: &7Carregando",
-                "&8 &8 ▶ &7Cooldown: &f{kit_cooldown}",
+                "&8 &8 ▶ &7Cooldown: &b{kit_cooldown}",
                 "&7",
                 "&7Conferindo as suas coletas, aguarde."
               ]
