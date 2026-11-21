@@ -68,6 +68,9 @@
         }
       },
       "messages": {
+        // O clique direito na cabeça de um rank no /ranks, quando nenhum kit é desse rank (ou os kits não estão neste
+        // servidor).
+        "no-kit": "&cO rank {rank_color}{rank_name}&c ainda não tem kit.",
         "rankup": {
           "done": "&aVocê evoluiu para o rank {tag}&a!",
           // De onde saíram as cabeças do custo. Saem primeiro as guardadas e depois as do inventário.
@@ -203,6 +206,11 @@
               ]
             }
           }
+        },
+        // O kit de um rank (o clique direito no /ranks, o documento dos kits de 21/11/2026): o kit no meio, no desenho dos
+        // kits, e o voltar embaixo.
+        "kit": {
+          "title": "Kit {rank_name}"
         },
         // Os benefícios de uma vertente (o baú "beneficios"). O {benefits} é a lista, uma linha por benefício.
         "benefits": {

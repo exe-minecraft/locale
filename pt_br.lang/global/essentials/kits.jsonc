@@ -4,6 +4,94 @@
       // Os nomes das categorias e dos kits (plugins.essentials.kits.categories.<id> e .types.<id>) ficam no bundle do
       // servidor que tem aqueles kits, ao lado do kits/config.yml dele. Hoje só o rankup tem (rankup/essentials/kits.jsonc).
       "commands": {
+        // O /kits do documento "Sistema de Kits" do dono (21/11/2026). O /kit admin é da equipe, pelo editor do painel.
+        "kit": {
+          "description": "abrir os kits",
+          "usage": {
+            "menu": { "syntax": "", "description": "abrir as categorias de kits" }
+          },
+          "admin": {
+            "description": "comandos da equipe para os kits",
+            "criar": {
+              "description": "criar um kit, sem itens, numa categoria",
+              "arguments": {
+                "kit": { "name": "kit", "description": "O id do kit novo, em minúsculas, como samurai_diario" },
+                "categoria": { "name": "categoria", "description": "A categoria do kits/config.yml" }
+              },
+              "invalid-id": "O id {kit_id} não serve. Use até 32 letras minúsculas, números e _.",
+              "category-full": "A categoria {category} não tem mais espaço livre no menu.",
+              "already-exists": "Já existe um kit com o id {kit_id}.",
+              "success": "O kit {kit_id} nasceu na categoria {category}, no espaço {slot}, sem itens. Defina os itens com o /kit admin definir {kit_id} e ajuste o resto com o /kit admin editar."
+            },
+            "editar": {
+              "description": "mudar o nome, a categoria, o espaço, a espera, os grupos, o rank ou o ícone de um kit",
+              "arguments": {
+                "kit": { "name": "kit", "description": "O kit que muda" },
+                "campo": { "name": "campo", "description": "nome, categoria, espaco, espera, grupos, rank ou icone" },
+                "valor": { "name": "valor", "description": "O valor novo. O ícone é o item na sua mão" }
+              },
+              "success": "O kit {kit_id} mudou o campo {field}.",
+              "invalid-name": "O nome precisa ter de 1 a 64 caracteres.",
+              "category-full": "A categoria {value} não tem mais espaço livre no menu.",
+              "invalid-slot": "O espaço {value} não serve. Ele precisa estar dentro do menu da categoria, fora do voltar e sem outro kit.",
+              "invalid-cooldown": "A espera {value} não se lê. Use dias, horas, minutos e segundos, como 24h, 7d ou 1h30m, até um ano, ou 0 para nenhuma.",
+              "invalid-groups": "Os grupos {value} não se leem. Use os ids exatos, como samurai,imperial, ou default para todos.",
+              "invalid-rank": "O rank {value} não existe. Use o id do rank, como galinha, ou nenhum.",
+              "empty-hand": "Segure o item que vai ser o ícone do kit."
+            },
+            "definir": {
+              "description": "pôr no kit os itens do seu inventário, na ordem em que estão",
+              "arguments": {
+                "kit": { "name": "kit", "description": "O kit que recebe os itens" }
+              },
+              "empty-inventory": "Seu inventário está vazio. Ponha nele os itens do kit, na ordem em que devem sair.",
+              "success": "Os itens do kit {kit_id} são agora os do seu inventário ({items})."
+            },
+            "eliminar": {
+              "description": "apagar um kit e as esperas dele",
+              "arguments": {
+                "kit": { "name": "kit", "description": "O kit que será apagado" }
+              },
+              "success": "O kit {kit_id} foi apagado, com as esperas de todos os jogadores."
+            },
+            "dar": {
+              "description": "dar um kit a um jogador, sem contar para a espera",
+              "arguments": {
+                "target": { "name": "jogador", "description": "Jogador que recebe o kit" },
+                "kit": { "name": "kit", "description": "O kit que será dado" }
+              },
+              "success": "Você deu o kit {kit_name}&a para {target_name_with_color}&a.",
+              "target-in-transit": "{target_name_with_color}&c está trocando de servidor. Tente de novo em instantes.",
+              "target-dead": "{target_name_with_color}&c está morto agora. Tente de novo depois que renascer.",
+              "unavailable": "O kit {kit_id} não tem itens. Defina os itens com o /kit admin definir antes de dar.",
+              "target-without-space": "{target_name_with_color}&c não tem espaço no inventário para o kit {kit_id}."
+            },
+            "ativacao": {
+              "description": "dar o item de ativação de um VIP a um jogador",
+              "arguments": {
+                "target": { "name": "jogador", "description": "Jogador que recebe o item, e que fica como quem ativou" },
+                "vip": { "name": "vip", "description": "O VIP do item, como samurai" }
+              },
+              "unknown-vip": "O VIP {vip} não existe. Os que se vendem são {vips}.",
+              "success": "Você deu o item de ativação do {vip_tag}&a para {target_name_with_color}&a.",
+              "target-in-transit": "{target_name_with_color}&c está trocando de servidor. Tente de novo em instantes.",
+              "target-without-space": "{target_name_with_color}&c não tem espaço no inventário para o item de ativação."
+            },
+            "resetar": {
+              "description": "zerar a espera de um kit de um jogador",
+              "arguments": {
+                "target": { "name": "jogador", "description": "Jogador que pode coletar de novo" },
+                "kit": { "name": "kit", "description": "O kit da espera" }
+              },
+              "success": "A espera do kit {kit_id} de {target_name} foi zerada.",
+              "no-cooldown": "{target_name} não tinha espera no kit {kit_id}. Nada mudou."
+            },
+            "recarregar": {
+              "description": "reler os kits do banco neste servidor",
+              "success": "Os kits foram relidos do banco ({count})."
+            }
+          }
+        },
         "deletekit": {
           "arguments": {
             "id": {
@@ -48,9 +136,16 @@
         "kits": {
           "on-collect": {
             "unavailable": "Este kit ainda não está disponível.",
-            "dont-have-permission": "Você não possui permissão para coletar esse kit.",
-            "in-delay": "Você precisa esperar mais {kit_cooldown_remaining} para coletar esse kit.",
+            "dont-have-permission": "Você não tem permissão para coletar este kit.",
+            "in-delay": "Este kit só estará disponível novamente em {kit_cooldown_remaining}.",
             "success": "Você coletou o {kit_name}&a."
+          },
+          // O clique no item do site do /kits. O endereço é clicável.
+          "site": "Adquira VIPs e outros produtos em &f{link}&a.",
+          "admin": {
+            "save-failed": "Não foi possível gravar no banco, e nada mudou. Tente de novo em instantes.",
+            "unknown-kit": "O kit {kit_id} não existe.",
+            "unknown-category": "A categoria {category} não existe no kits/config.yml deste servidor."
           }
         },
         "views": {
@@ -62,6 +157,31 @@
           }
         }
       },
+      // O item de ativação de VIP (o baú "VIP ATIVAÇÃO" do terreno do Kekitoox). O nome de cada um vem em names, na cor do
+      // VIP, e {activated_by}, {activated_day} e {activated_hour} são de quem ativou e de quando.
+      "kits": {
+        "activation": {
+          "names": {
+            "samurai": "&aAtivação Samurai",
+            "imperial": "&4Ativação Imperial",
+            "ancestral": "&5Ativação Ancestral"
+          },
+          "name": "{activation_name} &7(Botão Direito)",
+          "lore": [
+            "&7Esse item guarda a ativação do {vip_tag}",
+            "&7",
+            "&7Esse VIP foi ativado por &f{activated_by}",
+            "&7no dia &f{activated_day} &7às &f{activated_hour}&7.",
+            "&7",
+            "&aClique com o botão direito para abrir!"
+          ],
+          "wrong-world": "Este item só pode ser aberto no mundo de terrenos.",
+          "invalid": "Este item de ativação não tem um kit para abrir agora. Fale com a equipe.",
+          "without-space": "Você não tem espaço no inventário para o kit inteiro. O item não foi usado.",
+          "opened": "Você abriu a ativação do {vip_tag}&a e recebeu o kit!",
+          "received": "Você recebeu o item de ativação do {vip_tag}&a! Abra com o botão direito no mundo de terrenos."
+        }
+      },
       "views": {
         "kit-edit": {
           "title": "Editando - {kit_name}"
@@ -71,7 +191,35 @@
         },
         "kit-categories": {
           "title": "Categorias de Kits",
+          // O /kits no desenho do baú "/kit": as contas de cada categoria e o item do site.
           "items": {
+            "category": {
+              "name": "{kit_category_name}",
+              "lore": [
+                "&7Abaixo as informações",
+                "&7dessa categoria:",
+                "&7",
+                "&8 &8 ▶ &7Kits: &f{kit_category_kits}",
+                "&8 &8 ▶ &7Você possui: &f{kit_category_owned}",
+                "&8 &8 ▶ &7Pode coletar: &f{kit_category_collectable}",
+                "&7",
+                "&7Clique para abrir essa categoria!"
+              ]
+            },
+            "site": {
+              "name": "&aSite",
+              "lore": [
+                "&7Os Kits VIP são exclusivos dos",
+                "&7jogadores VIPs do servidor.",
+                "&7",
+                "&7Deseja adquirir o seu?",
+                "&7",
+                "&eAdquira &f&lVIPs &ee outros produtos",
+                "&eem nossa loja: &frede-exe.com",
+                "&6",
+                "&aClique para receber o link!"
+              ]
+            },
             "0": {
               "name": "{kit_category_name}",
               "lore": [
@@ -84,7 +232,75 @@
         },
         "kit-category": {
           "title": "{kit_category_name_stripped}",
+          // O ícone de cada kit nos três estados do baú da categoria VIP (Disponível, Indisponível e Bloqueado), e nos dois
+          // que o jogador quase não vê (sem itens e carregando). O mesmo estado que o clique obedece.
           "items": {
+            "ready": {
+              "name": "{kit_name}",
+              "lore": [
+                "&7Abaixo estão as informações",
+                "&7desse kit:",
+                "&7",
+                "&8 &8 ▶ &7Itens: &f{kit_items}",
+                "&8 &8 ▶ &7Status: &aDisponível",
+                "&8 &8 ▶ &7Cooldown: &f{kit_cooldown}",
+                "&7",
+                "&7Clique com o &fbotão esquerdo &7para coletar",
+                "&7Clique com o &fbotão direito &7para visualizar"
+              ]
+            },
+            "in-delay": {
+              "name": "{kit_name}",
+              "lore": [
+                "&7Abaixo estão as informações",
+                "&7desse kit:",
+                "&7",
+                "&8 &8 ▶ &7Itens: &f{kit_items}",
+                "&8 &8 ▶ &7Status: &eIndisponível",
+                "&8 &8 ▶ &7Cooldown: &f{kit_cooldown}",
+                "&8 &8 ▶ &7Disponível em: &f{kit_cooldown_remaining}",
+                "&7",
+                "&7Clique com o &fbotão direito &7para visualizar"
+              ]
+            },
+            "no-permission": {
+              "name": "{kit_name}",
+              "lore": [
+                "&7Abaixo estão as informações",
+                "&7desse kit:",
+                "&7",
+                "&8 &8 ▶ &7Itens: &f{kit_items}",
+                "&8 &8 ▶ &7Status: &cBloqueado",
+                "&8 &8 ▶ &7Cooldown: &f{kit_cooldown}",
+                "&7",
+                "&7Clique com o &fbotão direito &7para visualizar"
+              ]
+            },
+            "unavailable": {
+              "name": "{kit_name}",
+              "lore": [
+                "&7Abaixo estão as informações",
+                "&7desse kit:",
+                "&7",
+                "&8 &8 ▶ &7Status: &7Em breve",
+                "&8 &8 ▶ &7Cooldown: &f{kit_cooldown}",
+                "&7",
+                "&7Os itens deste kit ainda não foram definidos."
+              ]
+            },
+            "loading": {
+              "name": "{kit_name}",
+              "lore": [
+                "&7Abaixo estão as informações",
+                "&7desse kit:",
+                "&7",
+                "&8 &8 ▶ &7Itens: &f{kit_items}",
+                "&8 &8 ▶ &7Status: &7Carregando",
+                "&8 &8 ▶ &7Cooldown: &f{kit_cooldown}",
+                "&7",
+                "&7Conferindo as suas coletas, aguarde."
+              ]
+            },
             "0": {
               "name": "{kit_name}",
               "lore": [

@@ -6,18 +6,26 @@
       "kits": {
         "categories": {
           "basicos": {
-            "name": "&aKits Básicos",
+            "name": "&eKits Básicos",
             "description": [
               "&7Os kits que todos os jogadores",
               "&7podem coletar."
             ]
           },
           "vip": {
-            "name": "&6Kits VIP",
+            "name": "&6Kits VIPs",
             "description": [
               "&7Os kits do &aSamurai&7 e do &4Imperial&7.",
               "&7O Imperial coleta os do Samurai também."
             ]
+          },
+          // As do documento de 21/11/2026 que não aparecem no /kits: a dos ranks abre pelo clique direito do /ranks, e a
+          // de ativação pelo item. O nome de cada kit está no banco, e a equipe o muda com o /kit admin editar.
+          "ranks": {
+            "name": "&fKits dos Ranks"
+          },
+          "ativacao": {
+            "name": "&aKits de Ativação"
           }
         },
         "types": {
