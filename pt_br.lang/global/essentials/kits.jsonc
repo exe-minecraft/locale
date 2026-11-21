@@ -74,6 +74,7 @@
               },
               "unknown-vip": "O VIP {vip} não existe. Os que se vendem são {vips}.",
               "success": "Você deu o item de ativação do {vip_tag}&a para {target_name_with_color}&a.",
+              "target-dead": "{target_name_with_color}&c está morto agora. Tente de novo depois que renascer.",
               "target-in-transit": "{target_name_with_color}&c está trocando de servidor. Tente de novo em instantes.",
               "target-without-space": "{target_name_with_color}&c não tem espaço no inventário para o item de ativação."
             },
@@ -83,8 +84,8 @@
                 "target": { "name": "jogador", "description": "Jogador que pode coletar de novo" },
                 "kit": { "name": "kit", "description": "O kit da espera" }
               },
-              "success": "A espera do kit {kit_id} de {target_name} foi zerada.",
-              "no-cooldown": "{target_name} não tinha espera no kit {kit_id}. Nada mudou."
+              "success": "A espera do kit {kit_id} de {target_name_with_color}&a foi zerada.",
+              "no-cooldown": "{target_name_with_color}&c não tinha espera no kit {kit_id}. Nada mudou."
             },
             "recarregar": {
               "description": "reler os kits do banco neste servidor",
@@ -138,14 +139,18 @@
             "unavailable": "Este kit ainda não está disponível.",
             "dont-have-permission": "Você não tem permissão para coletar este kit.",
             "in-delay": "Este kit só estará disponível novamente em {kit_cooldown_remaining}.",
-            "success": "Você coletou o {kit_name}&a."
+            "success": "Você coletou o {kit_name}&a.",
+            "without-space": "Você não tem espaço suficiente no inventário para coletar este kit.",
+            // As suas esperas ou o seu rank ainda não chegaram do banco, logo depois de entrar.
+            "loading": "Ainda estamos conferindo as suas coletas. Tente de novo em instantes."
           },
           // O clique no item do site do /kits. O endereço é clicável.
           "site": "Adquira VIPs e outros produtos em &f{link}&a.",
           "admin": {
             "save-failed": "Não foi possível gravar no banco, e nada mudou. Tente de novo em instantes.",
             "unknown-kit": "O kit {kit_id} não existe.",
-            "unknown-category": "A categoria {category} não existe no kits/config.yml deste servidor."
+            "unknown-category": "A categoria {category} não existe no kits/config.yml deste servidor.",
+            "saved-not-reloaded": "A mudança foi gravada, mas este servidor não conseguiu reler o kit. Use o /kit admin recarregar."
           }
         },
         "views": {
@@ -232,6 +237,8 @@
         },
         "kit-category": {
           "title": "{kit_category_name_stripped}",
+          // O Cooldown do kit sem espera.
+          "no-cooldown": "nenhum",
           // O ícone de cada kit nos três estados do baú da categoria VIP (Disponível, Indisponível e Bloqueado), e nos dois
           // que o jogador quase não vê (sem itens e carregando). O mesmo estado que o clique obedece.
           "items": {
