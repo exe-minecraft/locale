@@ -276,9 +276,6 @@
         // A subida que passa de um marco de uma vez (a junção do ferreiro, o XP da staff), com o nível em que parou.
         "level-milestone-passed": "&aSua perk {perk} &achegou ao nível &f{level} &ae passou o marco do nível &f{milestone}&a! Veja o que mudou com o clique direito nela, no /perks.",
         "level-maximum": "&aSua perk {perk} &achegou ao nível &f{level}&a, que é o máximo!",
-        // O jar de antes da Atualização Perks ainda manda esta, e ela fica até a janela de 21/11/2026 trocar os três
-        // servidores do rankup. O jar novo não a usa, e ela sai do locale depois da janela.
-        "suppression-missed": "A perk {perk} &enão está ativa, por isso não ganhou XP com esta subida de nível.",
 
         "regeneration-returned": "&aVocê recuperou a sua maçã dourada.",
         "resistance-activated": "&aResistência ativada por &f{time}&a.",
