@@ -122,11 +122,12 @@
               "name": "{rank_color}&l{rank_name}",
               "lore": [
                 "&7Aqui você pode ver as vertentes desse",
-                "&7rank, os seus custos e benefícios.",
+                "&7rank, os seus custos, benefícios e kits.",
                 "&7",
                 "&7 Ranks: {rank_color}[{rank_name} {tier_1}, {tier_2} e {tier_3}]",
                 "&7",
-                "&eClique para acessar!"
+                "&7Clique com o &fbotão esquerdo &7para acessar as vertentes",
+                "&7Clique com o &fbotão direito &7para acessar o kit desse rank"
               ]
             }
           }

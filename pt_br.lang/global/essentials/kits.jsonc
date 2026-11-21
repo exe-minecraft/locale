@@ -1,8 +1,8 @@
 {
   "plugins": {
     "essentials": {
-      // Os nomes das categorias e dos kits (plugins.essentials.kits.categories.<id> e .types.<id>) ficam no bundle do
-      // servidor que tem aqueles kits, ao lado do kits/config.yml dele. Hoje só o rankup tem (rankup/essentials/kits.jsonc).
+      // Os nomes das categorias (plugins.essentials.kits.categories.<id>) ficam no bundle do servidor que tem aqueles kits, ao
+      // lado do kits/config.yml dele. Hoje só o rankup tem (rankup/essentials/kits.jsonc). O nome de cada kit está no banco.
       "commands": {
         // O /kits do documento "Sistema de Kits" do dono (21/11/2026). O /kit admin é da equipe, pelo editor do painel.
         "kit": {
@@ -92,45 +92,6 @@
               "success": "Os kits foram relidos do banco ({count})."
             }
           }
-        },
-        "deletekit": {
-          "arguments": {
-            "id": {
-              "name": "id",
-              "description": "ID do kit que será deletado"
-            }
-          },
-          "cannot-find-with-id": "Não foi possível encontrar um kit com esse id!",
-          "success": "Os itens do kit {kit_id} foram apagados. Ele segue no menu, indisponível até o /editkit.",
-          // O kit vem do yml; o que se apaga são os itens gravados. Sem eles não havia nada a deletar.
-          "already-empty": "O kit {kit_id} não tem itens gravados. Não havia nada para apagar."
-        },
-        "editkit": {
-          "arguments": {
-            "id": {
-              "name": "id",
-              "description": "ID do kit que será editado"
-            }
-          },
-          "cannot-find-with-id": "Não foi possível encontrar um kit com esse id!"
-        },
-        "givekit": {
-          "arguments": {
-            "id": {
-              "name": "id",
-              "description": "ID do kit que será enviado"
-            },
-            "target": {
-              "name": "jogador",
-              "description": "Jogador que irá receber o kit"
-            }
-          },
-          "cannot-find-with-id": "Não foi possível encontrar um kit com esse id!",
-          "success": "Você deu o kit {kit_id} para {target_name_with_color}&a.",
-          "target-in-transit": "{target_name_with_color}&c está trocando de servidor. Tente de novo em instantes.",
-          "target-dead": "{target_name_with_color}&c está morto agora. Tente de novo depois que renascer.",
-          "unavailable": "O kit {kit_id} não tem itens gravados. Monte os itens dele com o /editkit antes de dar.",
-          "target-without-space": "{target_name_with_color}&c não tem espaço no inventário para o kit {kit_id}."
         }
       },
       "messages": {
@@ -151,14 +112,6 @@
             "unknown-kit": "O kit {kit_id} não existe.",
             "unknown-category": "A categoria {category} não existe no kits/config.yml deste servidor.",
             "saved-not-reloaded": "A mudança foi gravada, mas este servidor não conseguiu reler o kit. Use o /kit admin recarregar."
-          }
-        },
-        "views": {
-          "kit-edit": {
-            "update-items": {
-              "success": "&aOs itens do kit &f{kit_id}&a foram alterados.",
-              "unchanged": "&eNada mudou nos itens do kit &f{kit_id}&e."
-            }
           }
         }
       },
@@ -188,9 +141,6 @@
         }
       },
       "views": {
-        "kit-edit": {
-          "title": "Editando - {kit_name}"
-        },
         "kit-visualization": {
           "title": "{kit_name}"
         },
@@ -223,14 +173,6 @@
                 "&eem nossa loja: &frede-exe.com",
                 "&6",
                 "&aClique para receber o link!"
-              ]
-            },
-            "0": {
-              "name": "{kit_category_name}",
-              "lore": [
-                "{kit_category_description}",
-                "",
-                "&aClique para acessar."
               ]
             }
           }
@@ -307,38 +249,7 @@
                 "&7",
                 "&7Conferindo as suas coletas, aguarde."
               ]
-            },
-            "0": {
-              "name": "{kit_name}",
-              "lore": [
-                "&8➟ &fEspera entre coletas: &7{kit_cooldown}",
-                "",
-                "{kit_status}",
-                "",
-                "&7Clique direito para &fver os itens&7."
-              ]
             }
-          },
-          // O que o jogador pode fazer com o kit agora, a mesma resposta que o clique obedece. O menu redesenha a cada
-          // segundo, e a espera que falta desce no ícone.
-          "status": {
-            "ready": [
-              "&aVocê pode coletar este kit.",
-              "&7Clique esquerdo para &fcoletar&7."
-            ],
-            "in-delay": [
-              "&cVocê já coletou este kit.",
-              "&7Pode coletar de novo em &f{kit_cooldown_remaining}&7."
-            ],
-            "no-permission": [
-              "&cVocê não possui permissão para coletar este kit."
-            ],
-            "unavailable": [
-              "&cEste kit ainda não está disponível."
-            ],
-            "loading": [
-              "&7Conferindo as suas coletas, aguarde."
-            ]
           }
         }
       }

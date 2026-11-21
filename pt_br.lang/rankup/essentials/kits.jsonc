@@ -1,23 +1,15 @@
 {
   "plugins": {
     "essentials": {
-      // As categorias e os kits do rankup, os do kits/config.yml do rankup-1 e do rankup-plots-1 (o pacote
-      // docs/deploy/rankup-kits-20261116 do exe). Os itens de cada kit a staff define em jogo com o /editkit.
+      // As categorias do rankup, as do kits/config.yml do rankup-1 e do rankup-plots-1 (o pacote
+      // docs/deploy/rankup-kits-20261121 do exe). Os kits vivem no banco, e a equipe os muda com o /kit admin.
       "kits": {
         "categories": {
           "basicos": {
-            "name": "&eKits Básicos",
-            "description": [
-              "&7Os kits que todos os jogadores",
-              "&7podem coletar."
-            ]
+            "name": "&eKits Básicos"
           },
           "vip": {
-            "name": "&6Kits VIPs",
-            "description": [
-              "&7Os kits do &aSamurai&7 e do &4Imperial&7.",
-              "&7O Imperial coleta os do Samurai também."
-            ]
+            "name": "&6Kits VIPs"
           },
           // As do documento de 21/11/2026 que não aparecem no /kits: a dos ranks abre pelo clique direito do /ranks, e a
           // de ativação pelo item. O nome de cada kit está no banco, e a equipe o muda com o /kit admin editar.
@@ -26,23 +18,6 @@
           },
           "ativacao": {
             "name": "&aKits de Ativação"
-          }
-        },
-        "types": {
-          "basico": {
-            "name": "&fKit Básico"
-          },
-          "samurai_diario": {
-            "name": "&aKit Samurai Diário"
-          },
-          "samurai_semanal": {
-            "name": "&aKit Samurai Semanal"
-          },
-          "imperial_diario": {
-            "name": "&4Kit Imperial Diário"
-          },
-          "imperial_semanal": {
-            "name": "&4Kit Imperial Semanal"
           }
         }
       }
