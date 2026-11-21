@@ -100,22 +100,22 @@
         "plain-flask": "&cEssa garrafa é comum e não recebe ingredientes. O Frasco sem efeito sai do Explorador da pá e da enxada.",
         "unknown-item": "&c\"{item}\" não é um item das poções. Os itens são {items}."
       },
-      // O quadro do /pocoes, que o jogador também lê quando a Alquimista sobe de nível. O {berserker} é uma das três
-      // frases de baixo.
+      // O quadro do /pocoes, que o jogador também lê quando a Alquimista passa de um marco. O {berserker} é uma das três
+      // frases de baixo, e a primeira leva a duração da Berserker no {time}.
       "sheet": {
         "lines": [
           "",
           "&5&l ALQUIMISTA &7(nível {level})",
           "&f Chance de acerto: &a{chance}%",
           "&f Nível das poções: &a{potion_level}",
-          "&f Duração: &a{time}",
+          "&f Duração da Força e da Velocidade: &a{time}",
           "&f Poções por vez: &a{batch}",
           "&f Poções por espaço: &a{group}",
           "&f Berserker: {berserker}",
           ""
         ],
         "berserker": {
-          "level": "&anível {level}",
+          "level": "&anível {level}, por {time}",
           "locked": "&cno nível {level} da perk",
           "none": "&cindisponível"
         }

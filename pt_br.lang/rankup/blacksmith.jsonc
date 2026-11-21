@@ -84,7 +84,7 @@
                 "&7melhorar o seu nível e desbloquear",
                 "&7itens com encantamentos exclusivos.",
                 "",
-                "&8(A % de falha depende da perk Ferreiro)"
+                "&8(A % de falha do conserto depende da perk Ferreiro)"
               ]
             },
             "swords": {
@@ -133,9 +133,7 @@
                   "",
                   "&7Os encantamentos além do principal,",
                   "&7como o &fInquebrável&7, precisam ser",
-                  "&7iguais e também sobem de nível.",
-                  "",
-                  "&8(A % de falha depende da perk Ferreiro)"
+                  "&7iguais e também sobem de nível."
                 ]
               }
             },
@@ -172,9 +170,7 @@
                   "&7como o &fInquebrável&7, precisam ser",
                   "&7iguais e também sobem de nível.",
                   "",
-                  "&7Ferramentas: &fPicareta, Machado e Pá",
-                  "",
-                  "&8(A % de falha depende da perk Ferreiro)"
+                  "&7Ferramentas: &fPicareta, Machado e Pá"
                 ]
               }
             },
@@ -211,9 +207,7 @@
                   "&7como o &fInquebrável&7, precisam ser",
                   "&7iguais e também sobem de nível.",
                   "",
-                  "&7Armaduras: &fCapacete, Peitoral, Calça e Bota",
-                  "",
-                  "&8(A % de falha depende da perk Ferreiro)"
+                  "&7Armaduras: &fCapacete, Peitoral, Calça e Bota"
                 ]
               }
             },

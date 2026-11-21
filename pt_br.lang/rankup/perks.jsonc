@@ -2,13 +2,17 @@
   "plugins": {
     // As perks do rankup (10/11/2026). São nove perks com nível e progresso, que evoluem pelo uso. Seis o jogador liga
     // e desliga até o limite do grupo dele, e três já vêm ligadas. O nome, a cor e a descrição de cada uma são os dos
-    // baús de referência do Kekitoox, com o português corrigido ("necessidade", "itens", "XP"). As perks do P4Free
-    // têm o arquivo delas, e são outro sistema.
+    // baús de referência do Kekitoox, com o português corrigido ("necessidade", "itens", "XP"). Desde a Atualização
+    // Perks de 21/11/2026 cada perk vai do nível 0 ao 50 ou ao 500, com marcos, e tem um menu próprio. As perks do
+    // P4Free têm o arquivo delas, e são outro sistema.
     "perks": {
       // As palavras que acompanham um número montado no código (o Plural do core), com o 1 no singular.
       "units": {
         "active-perk": { "singular": "perk ativa", "plural": "perks ativas" },
-        "enemy": { "singular": "inimigo", "plural": "inimigos" }
+        "enemy": { "singular": "inimigo", "plural": "inimigos" },
+        // O custo do conserto e o alcance da Supressão no menu de cada perk, com a maiúscula dos baús.
+        "diamond": { "singular": "Diamante", "plural": "Diamantes" },
+        "block": { "singular": "Bloco", "plural": "Blocos" }
       },
       // A barra de dez segmentos do menu e da Velocidade carregando. Cada segmento aceso vale 10%.
       "bar": {
@@ -31,7 +35,7 @@
         "blacksmith": {
           "name": "&7Ferreiro",
           "color": "&7",
-          "description": ["&7Diminua o consumo de diamantes", "&7e de XP ao reparar seus itens."]
+          "description": ["&7Diminua a chance de falha e o consumo", "&7de diamantes ao reparar seus itens."]
         },
         "speed": {
           "name": "&bVelocidade",
@@ -90,7 +94,7 @@
             "unknown": "&7indisponível"
           },
           // O ícone de cada perk. {description}, {progress} e {status} são listas, e cada uma vira as linhas que tiver.
-          // A {progress} não deixa linha nenhuma no nível máximo.
+          // A {progress} não deixa linha nenhuma no nível máximo. O clique direito abre o menu da perk.
           "item": {
             "name": "{perk}",
             "lore": [
@@ -99,7 +103,8 @@
               "&f Nível Atual: {color}&l{level}",
               "{progress}",
               "&7",
-              "{status}"
+              "{status}",
+              "&7Clique direito para ver os marcos!"
             ],
             "progress": ["&7 {bar} ({percent}%)"]
           },
@@ -108,14 +113,139 @@
           // desligada, para o ícone seguir dizendo de que lado ela está.
           "status": {
             "standard": ["&8(Essa perk já vem ativada por padrão)"],
-            "active": ["&eClique para desativar essa perk!"],
-            "inactive": ["&aClique para ativar essa perk!"],
+            "active": ["&eClique esquerdo para desativar essa perk!"],
+            "inactive": ["&aClique esquerdo para ativar essa perk!"],
             "limit": ["&cVocê já tem o máximo de perks ativas!"],
             "locked-active": ["&cAguarde {time} para desativar essa perk!"],
             "locked-inactive": ["&cAguarde {time} para ativar essa perk!"],
             "in-combat-active": ["&cVocê não pode desativar essa perk em combate!"],
             "in-combat-inactive": ["&cVocê não pode ativar essa perk em combate!"],
             "maximum": ["&cNível máximo atingido!"]
+          }
+        },
+        // O menu de cada perk, aberto pelo clique direito no /perks (a Atualização Perks de 21/11/2026), no desenho dos
+        // baús de referência do Kekitoox. O título é o types.<perk>.title, que o Java põe no {title}. {stats} são as
+        // linhas da perk (types.<perk>.stats) com os números do marco, na cabeça e em cada marco.
+        "perk": {
+          "title": "{title}",
+          // A cabeça do jogador, com o que a perk dá agora. {progress} é a linha da barra, ou a do nível máximo.
+          "profile": {
+            "lore": [
+              "&7Status atuais da perk:",
+              "&7",
+              "&8 &8 ▶ &7Nível: &f{level}",
+              "{stats}",
+              "&8 &8 ▶ &7Ativa: {active}",
+              "&7",
+              "{progress}"
+            ]
+          },
+          "active": {
+            "yes": "&aSim",
+            "no": "&cNão",
+            // As três padrão.
+            "always": "&eSempre"
+          },
+          // {next} é o nível seguinte, e {percent} o progresso até ele.
+          "progress": ["{bar} {color}Nv. {next} &7({percent}%)"],
+          "maximum": ["&aNível máximo atingido!"],
+          // Os marcos, verdes e brilhando os alcançados e vermelhos os outros. {perk} é o types.<perk>.label.
+          "milestone": {
+            "reached": {
+              "name": "&a{perk} Nv. &a&l{level}",
+              "lore": ["&7", "{stats}", "&7", "&aVocê já alcançou esse nível!"]
+            },
+            "locked": {
+              "name": "&c{perk} Nv. &c&l{level}",
+              "lore": ["&7", "{stats}", "&7", "&cAlcance o nível &c&l{level} &cpara desbloquear!"]
+            }
+          },
+          "words": {
+            // Os efeitos da Alquimista, o das poções de Velocidade e de Força, e o da Berserker.
+            "speed-strength": "&bV &fe &5F",
+            "berserker": "&dBerserker",
+            // A passiva da Velocidade na Soul Sand. {percent} é o que o /speed do mesmo nível soma ao andar.
+            "passive": "&b+{percent}% &7(Soul Sand)",
+            "no-passive": "&7Nenhuma"
+          },
+          // O título, o nome da cabeça, o nome dos marcos e a cor do nível de cada perk, como nos baús.
+          "types": {
+            "attack": {
+              "title": "Perk de Ataque",
+              "name": "&bPerk de Ataque",
+              "label": "Ataque",
+              "color": "&b",
+              "stats": ["&8 &8 ▶ &7Ativação: &f{activation}%", "&8 &8 ▶ &7Multiplicador: &f{multiplier}x"]
+            },
+            "regeneration": {
+              "title": "Perk de Regeneração",
+              "name": "&dPerk de Regeneração",
+              "label": "Regeneração",
+              "color": "&d",
+              "stats": ["&8 &8 ▶ &7Ativação: &f{activation}%"]
+            },
+            "blacksmith": {
+              "title": "Perk de Ferreiro",
+              "name": "&8Perk de Ferreiro",
+              "label": "Ferreiro",
+              "color": "&8",
+              // {cost} são os diamantes do conserto pelo desgaste do item, do mais gasto ao menos gasto ("4/3/2/1").
+              "stats": ["&8 &8 ▶ &7Falho: &f{fail}%", "&8 &8 ▶ &7Custo: &f{cost} {cost_unit}"]
+            },
+            "speed": {
+              "title": "Perk de Velocidade",
+              "name": "&bPerk de Velocidade",
+              "label": "Velocidade",
+              "color": "&b",
+              "stats": ["&8 &8 ▶ &7Duração: &f{duration}", "&8 &8 ▶ &7Cooldown: &f{cooldown}", "&8 &8 ▶ &7Passiva: {passive}"]
+            },
+            "suppression": {
+              "title": "Perk de Supressão",
+              "name": "&3Perk de Supressão",
+              "label": "Supressão",
+              "color": "&3",
+              "stats": [
+                "&8 &8 ▶ &7Alvos: &f{targets}",
+                "&8 &8 ▶ &7Alcance: &f{radius} {radius_unit}",
+                "&8 &8 ▶ &7Duração: &f{duration}",
+                "&8 &8 ▶ &7Cooldown: &f{cooldown}"
+              ]
+            },
+            "resistance": {
+              "title": "Perk de Resistência",
+              "name": "&9Perk de Resistência",
+              "label": "Resistência",
+              "color": "&9",
+              "stats": ["&8 &8 ▶ &7Ativação: &f{activation}%", "&8 &8 ▶ &7Duração: &f{duration}"]
+            },
+            "alchemist": {
+              "title": "Perk de Alquimia",
+              "name": "&5Perk de Alquimia",
+              "label": "Alquimista",
+              "color": "&5",
+              // Do marco da Berserker em diante, a linha dos efeitos, o nível e a duração são os dela.
+              "stats": [
+                "&8 &8 ▶ &7Efeitos: {effects}",
+                "&8 &8 ▶ &7Nv. Efeitos: &f{effect_level}",
+                "&8 &8 ▶ &7Duração: &f{duration}",
+                "&8 &8 ▶ &7Falho: &f{fail}%",
+                "&8 &8 ▶ &7Poções: &f{potions} &7(simultâneas)"
+              ]
+            },
+            "farmer": {
+              "title": "Perk de Fazendeiro",
+              "name": "&ePerk de Fazendeiro",
+              "label": "Fazendeiro",
+              "color": "&e",
+              "stats": ["&8 &8 ▶ &7Velocidade: &a+{speed}%"]
+            },
+            "slayer": {
+              "title": "Perk de Matador",
+              "name": "&8Perk de Matador",
+              "label": "Matador",
+              "color": "&8",
+              "stats": ["&8 &8 ▶ &7Velocidade: &a+{speed}%"]
+            }
           }
         }
       },
@@ -139,9 +269,15 @@
         "brew-xp": "&7Sua perk {perk} &7ganhou &f{xp}% &7de XP.",
         // A junção e o conserto com sucesso do ferreiro, que também dizem ao jogador quanto deram.
         "blacksmith-xp": "&7Sua perk {perk} &7ganhou &f{xp}% &7de XP.",
+        // Na barra de ação, a cada nível. O chat fica para o marco e para o nível máximo.
         "level-up": "&aSua perk {perk} &asubiu para o nível &f{level}&a!",
+        // A subida que para num marco. O que mudou se vê no /perks, com o clique direito na perk.
+        "level-milestone": "&aSua perk {perk} &aalcançou o marco do nível &f{milestone}&a! Veja o que mudou com o clique direito nela, no /perks.",
+        // A subida que passa de um marco de uma vez (a junção do ferreiro, o XP da staff), com o nível em que parou.
+        "level-milestone-passed": "&aSua perk {perk} &achegou ao nível &f{level} &ae passou o marco do nível &f{milestone}&a! Veja o que mudou com o clique direito nela, no /perks.",
         "level-maximum": "&aSua perk {perk} &achegou ao nível &f{level}&a, que é o máximo!",
-        // Outra perk subiu de nível com a Supressão desligada, e ela só ganha XP ligada.
+        // O jar de antes da Atualização Perks ainda manda esta, e ela fica até a janela de 21/11/2026 trocar os três
+        // servidores do rankup. O jar novo não a usa, e ela sai do locale depois da janela.
         "suppression-missed": "A perk {perk} &enão está ativa, por isso não ganhou XP com esta subida de nível.",
 
         "regeneration-returned": "&aVocê recuperou a sua maçã dourada.",
@@ -178,9 +314,9 @@
               "arguments": {
                 "target": { "name": "jogador", "description": "Jogador que está neste servidor" },
                 "perk": { "name": "perk", "description": "O nome da perk, como ataque ou regeneração" },
-                "level": { "name": "nível", "description": "O nível novo, de 1 até o máximo" }
+                "level": { "name": "nível", "description": "O nível novo, de 0 até o máximo da perk" }
               },
-              "invalid": "Nível inválido. Use um número entre 1 e {max}.",
+              "invalid": "Nível inválido. Use um número entre 0 e {max}.",
               "success": "&aVocê definiu a perk {perk} &ade {target_name_with_color} &apara o nível &f{level}&a.",
               "already": "A perk {perk} &cde {target_name_with_color} &cjá está no nível {level}, sem progresso."
             },
@@ -196,18 +332,18 @@
               "success": "&aVocê deu &f{percent}% &ade XP à perk {perk} &ade {target_name_with_color}&a. Ela agora está no nível &f{level} &acom &f{progress}%&a."
             },
             "reset": {
-              "description": "voltar uma perk, ou todas, ao nível 1",
+              "description": "voltar uma perk, ou todas, ao nível 0",
               "arguments": {
                 "target": { "name": "jogador", "description": "Jogador que está neste servidor" },
                 "perk": { "name": "perk", "description": "Uma perk só. Sem ela, todas" }
               },
               "all": {
-                "success": "&aAs perks de {target_name_with_color} &avoltaram ao nível 1.",
-                "nothing": "As perks de {target_name_with_color} &cjá estão todas no nível 1, sem progresso."
+                "success": "&aAs perks de {target_name_with_color} &avoltaram ao nível 0.",
+                "nothing": "As perks de {target_name_with_color} &cjá estão todas no nível 0, sem progresso."
               },
               "one": {
-                "success": "&aA perk {perk} &ade {target_name_with_color} &avoltou ao nível 1.",
-                "nothing": "A perk {perk} &cde {target_name_with_color} &cjá está no nível 1, sem progresso."
+                "success": "&aA perk {perk} &ade {target_name_with_color} &avoltou ao nível 0.",
+                "nothing": "A perk {perk} &cde {target_name_with_color} &cjá está no nível 0, sem progresso."
               }
             }
           }
