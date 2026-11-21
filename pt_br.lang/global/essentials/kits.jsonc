@@ -93,10 +93,12 @@
                 "pagina": { "name": "página", "description": "A página da lista, a partir de 1" }
               },
               "header": "&eKits deste servidor ({count}), página {page} de {pages}:",
-              "entry": "&8 ▸ {kit_name} &8({kit_id})&7, {kit_items}&7, &b{kit_cooldown}",
+              "entry": "&8 ▸ {kit_name} &8({kit_id})&7, {kit_items}&7, {kit_cooldown}",
               "hover": "&7Categoria &f{category}&7, espaço &f{slot}&7, grupos &f{groups}&7 e rank &f{rank}&7. &eClique para editar este kit.",
               "items": "&e{count} {unit}",
               "no-items": "&6sem itens",
+              "cooldown": "espera &b{value}",
+              "no-cooldown": "&bsem espera",
               "no-rank": "nenhum",
               "empty": "Nenhum kit está carregado neste servidor.",
               "invalid-page": "A página precisa ser um número de 1 a {pages}.",
